@@ -1,0 +1,368 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>Action Card Instructions</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/0F405EB1-B25E-4E6E-956D-71FCF6AFAFD0" uiVersion="1" version="3432" name="Action Card Instructions">
+					<not_a_client/>
+					<notification_purpose/>
+					<notification_details>
+						<notification_info/>
+						<client_name/>
+						<family_name/>
+						<mrn/>
+						<age_years/>
+						<village_name/>
+						<local_phone_number/>
+						<paper_file_found/>
+					</notification_details>
+					<registration_instructions/>
+					<other_instructions/>
+					<notification_client_info>
+						<client_name/>
+						<family_name/>
+						<mrn/>
+						<age_years/>
+						<village_name/>
+						<local_phone_number/>
+					</notification_client_info>
+					<end_of_form/>
+				<case_open_client_0><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><create><case_name/><owner_id/><case_type>client</case_type></create><index><parent case_type="notification"/></index><close/></case></case_open_client_0><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="commcaresession" src="jr://instance/session"/><instance id="groups" src="jr://fixture/user-groups"/><instance id="casedb" src="jr://instance/casedb"/>
+			<bind nodeset="/data/not_a_client" required="true()"/>
+			<bind nodeset="/data/notification_purpose"/>
+			<bind nodeset="/data/notification_details"/>
+			<bind nodeset="/data/notification_details/notification_info"/>
+			<bind nodeset="/data/notification_details/client_name" relevant="/data/notification_client_info/client_name != ''"/>
+			<bind nodeset="/data/notification_details/family_name" relevant="/data/notification_client_info/family_name != ''"/>
+			<bind nodeset="/data/notification_details/mrn" relevant="/data/notification_client_info/mrn != ''"/>
+			<bind nodeset="/data/notification_details/age_years" relevant="/data/notification_client_info/age_years != ''"/>
+			<bind nodeset="/data/notification_details/village_name"/>
+			<bind nodeset="/data/notification_details/local_phone_number" relevant="/data/notification_client_info/local_phone_number != ''"/>
+			<bind nodeset="/data/notification_details/paper_file_found" required="true()"/>
+			<bind nodeset="/data/registration_instructions" relevant="/data/notification_details/paper_file_found = 'yes'"/>
+			<bind nodeset="/data/other_instructions" relevant="/data/notification_details/paper_file_found = 'no'"/>
+			<bind nodeset="/data/notification_client_info"/>
+			<bind nodeset="/data/notification_client_info/client_name"/>
+			<bind nodeset="/data/notification_client_info/family_name"/>
+			<bind nodeset="/data/notification_client_info/mrn"/>
+			<bind nodeset="/data/notification_client_info/age_years"/>
+			<bind nodeset="/data/notification_client_info/village_name"/>
+			<bind nodeset="/data/notification_client_info/local_phone_number"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="notification_purpose-label">
+						<value>### Action Cards from the Health Center contain very important information about a client's visit. This information should be added to the relevant client's file.</value>
+						<value form="image">jr://file/commcare/image/help/data/notification_purpose-xqjf0m.png</value>
+						<value form="markdown">### Action Cards from the Health Center contain very important information about a client's visit. This information should be added to the relevant client's file.</value>
+					</text>
+					<text id="notification_details/notification_info-label">
+						<value>This action card contains information about:</value>
+					</text>
+					<text id="notification_details/client_name-label">
+						<value>* Client Name: <output value="/data/notification_client_info/client_name"/></value>
+						<value form="markdown">* Client Name: <output value="/data/notification_client_info/client_name"/></value>
+					</text>
+					<text id="notification_details/family_name-label">
+						<value>* Head of Household: <output value="/data/notification_client_info/family_name"/></value>
+						<value form="markdown">* Head of Household: <output value="/data/notification_client_info/family_name"/></value>
+					</text>
+					<text id="notification_details/mrn-label">
+						<value>* MRN: <output value="/data/notification_client_info/mrn"/></value>
+						<value form="markdown">* MRN: <output value="/data/notification_client_info/mrn"/></value>
+					</text>
+					<text id="notification_details/age_years-label">
+						<value>* Age: <output value="/data/notification_client_info/age_years"/> Years</value>
+						<value form="markdown">* Age: <output value="/data/notification_client_info/age_years"/> Years</value>
+					</text>
+					<text id="notification_details/village_name-label">
+						<value>* Village: <output value="/data/notification_client_info/village_name"/></value>
+						<value form="markdown">* Village: <output value="/data/notification_client_info/village_name"/></value>
+					</text>
+					<text id="notification_details/local_phone_number-label">
+						<value>* Phone Number: <output value="/data/notification_client_info/local_phone_number"/></value>
+						<value form="markdown">* Phone Number: <output value="/data/notification_client_info/local_phone_number"/></value>
+					</text>
+					<text id="notification_details/paper_file_found-label">
+						<value>Do you have the paper file or family folder for this client?</value>
+					</text>
+					<text id="notification_details/paper_file_found-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="notification_details/paper_file_found-no-label">
+						<value>No</value>
+					</text>
+					<text id="registration_instructions-label">
+						<value>Using the paper files:
+
+1. Create a Family Folder
+2. Create a Client File
+3. Add this Action Card to the Client's File</value>
+						<value form="image">jr://file/commcare/image/help/data/registration_instructions-610l0h.png</value>
+						<value form="markdown">Using the paper files:
+
+1. Create a Family Folder
+2. Create a Client File
+3. Add this Action Card to the Client's File</value>
+					</text>
+					<text id="other_instructions-label">
+						<value>1. Call the Health Center for more information
+2. Call the Client for more information
+3. **If you confirm the client is not in your catchment area** you may delete the action card.</value>
+						<value form="image">jr://file/commcare/image/help/data/other_instructions-g2vfhs.png</value>
+						<value form="markdown">1. Call the Health Center for more information
+2. Call the Client for more information
+3. **If you confirm the client is not in your catchment area** you may delete the action card.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="notification_purpose-label">
+						<value>### &#4840;&#4900;&#4755; &#4899;&#4709;&#4843; &#4768;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4840;&#4720;&#4872;&#4621;&#4875;&#4845;&#4811;&#4757; &#4704;&#4899;&#4637; &#4896;&#4675;&#4634; &#4632;&#4648;&#4867;&#4814;&#4733;&#4757; &#4845;&#4845;&#4827;&#4621;. &#4845;&#4613; &#4632;&#4648;&#4867; &#4808;&#4848; &#4634;&#4632;&#4616;&#4776;&#4723;&#4725; &#4720;&#4872;&#4621;&#4875;&#4845; &#4632;&#4877;&#4707;&#4725; &#4768;&#4616;&#4704;&#4725;.</value>
+						<value form="image">jr://file/commcare/image/help/data/notification_purpose-xqjf0m.png</value>
+						<value form="markdown">### &#4840;&#4900;&#4755; &#4899;&#4709;&#4843; &#4768;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4840;&#4720;&#4872;&#4621;&#4875;&#4845;&#4811;&#4757; &#4704;&#4899;&#4637; &#4896;&#4675;&#4634; &#4632;&#4648;&#4867;&#4814;&#4733;&#4757; &#4845;&#4845;&#4827;&#4621;. &#4845;&#4613; &#4632;&#4648;&#4867; &#4808;&#4848; &#4634;&#4632;&#4616;&#4776;&#4723;&#4725; &#4720;&#4872;&#4621;&#4875;&#4845; &#4632;&#4877;&#4707;&#4725; &#4768;&#4616;&#4704;&#4725;.</value>
+					</text>
+					<text id="notification_details/notification_info-label">
+						<value>&#4845;&#4613; &#4768;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4840;&#4843;&#4824;&#4813; &#4632;&#4648;&#4867;</value>
+					</text>
+					<text id="notification_details/client_name-label">
+						<value>* &#4840;&#4723;&#4779;&#4634; &#4661;&#4637;: <output value="/data/notification_client_info/client_name"/></value>
+						<value form="markdown">* &#4840;&#4723;&#4779;&#4634; &#4661;&#4637;: <output value="/data/notification_client_info/client_name"/></value>
+					</text>
+					<text id="notification_details/family_name-label">
+						<value>* &#4840;&#4708;&#4720;&#4656;&#4709; &#4768;&#4707;&#4808;&#4651; &#4661;&#4637;: <output value="/data/notification_client_info/family_name"/></value>
+						<value form="markdown">* &#4840;&#4708;&#4720;&#4656;&#4709; &#4768;&#4707;&#4808;&#4651; &#4661;&#4637;: <output value="/data/notification_client_info/family_name"/></value>
+					</text>
+					<text id="notification_details/mrn-label">
+						<value>* &#4636;&#4850;&#4779;&#4621; &#4650;&#4776;&#4653;&#4853; &#4673;&#4901;&#4653;: <output value="/data/notification_client_info/mrn"/></value>
+						<value form="markdown">* &#4636;&#4850;&#4779;&#4621; &#4650;&#4776;&#4653;&#4853; &#4673;&#4901;&#4653;: <output value="/data/notification_client_info/mrn"/></value>
+					</text>
+					<text id="notification_details/age_years-label">
+						<value>* &#4821;&#4853;&#4636;: <output value="/data/notification_client_info/age_years"/> Years</value>
+						<value form="markdown">* &#4821;&#4853;&#4636;: <output value="/data/notification_client_info/age_years"/> Years</value>
+					</text>
+					<text id="notification_details/village_name-label">
+						<value>* &#4878;&#4901;: <output value="/data/notification_client_info/village_name"/></value>
+						<value form="markdown">* &#4878;&#4901;: <output value="/data/notification_client_info/village_name"/></value>
+					</text>
+					<text id="notification_details/local_phone_number-label">
+						<value>* &#4661;&#4621;&#4781; &#4673;&#4901;&#4653;: <output value="/data/notification_client_info/local_phone_number"/></value>
+						<value form="markdown">* &#4661;&#4621;&#4781; &#4673;&#4901;&#4653;: <output value="/data/notification_client_info/local_phone_number"/></value>
+					</text>
+					<text id="notification_details/paper_file_found-label">
+						<value>&#4840;&#4826;&#4613; &#4723;&#4779;&#4634; &#4840;&#4808;&#4648;&#4672;&#4725; &#4939;&#4845;&#4621; &#4808;&#4845;&#4637; &#4840;&#4708;&#4720;&#4656;&#4709; &#4635;&#4613;&#4848;&#4653; &#4768;&#4616;&#4669;?</value>
+					</text>
+					<text id="notification_details/paper_file_found-yes-label">
+						<value>&#4768;&#4814;</value>
+					</text>
+					<text id="notification_details/paper_file_found-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="registration_instructions-label">
+						<value>&#4845;&#4613; &#4840;&#4808;&#4648;&#4672;&#4725; &#4939;&#4845;&#4621; &#4704;&#4632;&#4896;&#4672;&#4637;:
+1. &#4840;&#4708;&#4720;&#4656;&#4709; &#4635;&#4613;&#4848;&#4653; &#4632;&#4941;&#4896;&#4653;
+2. &#4840;&#4723;&#4779;&#4634; &#4939;&#4845;&#4621; &#4632;&#4941;&#4896;&#4653;
+3. &#4768;&#4781;&#4669;&#4757; &#4779;&#4653;&#4849; &#4808;&#4848; &#4723;&#4779;&#4811; &#4939;&#4845;&#4621; &#4632;&#4904;&#4632;&#4653;.</value>
+						<value form="image">jr://file/commcare/image/help/data/registration_instructions-610l0h.png</value>
+						<value form="markdown">&#4845;&#4613; &#4840;&#4808;&#4648;&#4672;&#4725; &#4939;&#4845;&#4621; &#4704;&#4632;&#4896;&#4672;&#4637;:
+1. &#4840;&#4708;&#4720;&#4656;&#4709; &#4635;&#4613;&#4848;&#4653; &#4632;&#4941;&#4896;&#4653;
+2. &#4840;&#4723;&#4779;&#4634; &#4939;&#4845;&#4621; &#4632;&#4941;&#4896;&#4653;
+3. &#4768;&#4781;&#4669;&#4757; &#4779;&#4653;&#4849; &#4808;&#4848; &#4723;&#4779;&#4811; &#4939;&#4845;&#4621; &#4632;&#4904;&#4632;&#4653;.</value>
+					</text>
+					<text id="other_instructions-label">
+						<value>1. &#4616;&#4720;&#4904;&#4635;&#4650; &#4635;&#4709;&#4651;&#4650;&#4843;/&#4632;&#4648;&#4867; &#4808;&#4848; &#4900;&#4755; &#4899;&#4709;&#4843; &#4632;&#4848;&#4808;&#4621;
+2. &#4616;&#4720;&#4904;&#4635;&#4650; &#4635;&#4709;&#4651;&#4650;&#4843;/&#4632;&#4648;&#4867; &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4632;&#4848;&#4808;&#4621;
+3. **&#4723;&#4779;&#4634;&#4811; &#4704;&#4826;&#4613; &#4781;&#4621;&#4621; &#4768;&#4616;&#4632;&#4614;&#4753;&#4811; &#4776;&#4720;&#4648;&#4875;&#4872;&#4896;** &#4768;&#4781;&#4669;&#4757; &#4779;&#4653;&#4849; &#4635;&#4901;&#4939;&#4725; &#4725;&#4733;&#4843;&#4616;&#4669;.</value>
+						<value form="image">jr://file/commcare/image/help/data/other_instructions-g2vfhs.png</value>
+						<value form="markdown">1. &#4616;&#4720;&#4904;&#4635;&#4650; &#4635;&#4709;&#4651;&#4650;&#4843;/&#4632;&#4648;&#4867; &#4808;&#4848; &#4900;&#4755; &#4899;&#4709;&#4843; &#4632;&#4848;&#4808;&#4621;
+2. &#4616;&#4720;&#4904;&#4635;&#4650; &#4635;&#4709;&#4651;&#4650;&#4843;/&#4632;&#4648;&#4867; &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4632;&#4848;&#4808;&#4621;
+3. **&#4723;&#4779;&#4634;&#4811; &#4704;&#4826;&#4613; &#4781;&#4621;&#4621; &#4768;&#4616;&#4632;&#4614;&#4753;&#4811; &#4776;&#4720;&#4648;&#4875;&#4872;&#4896;** &#4768;&#4781;&#4669;&#4757; &#4779;&#4653;&#4849; &#4635;&#4901;&#4939;&#4725; &#4725;&#4733;&#4843;&#4616;&#4669;.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="notification_purpose-label">
+						<value>### &#4773;&#4722; &#4779;&#4709; &#4899;&#4709;&#4843; &#4901;&#4821;&#4755; &#4829;&#4720;&#4621;&#4768;&#4792; &#4632;&#4621;&#4658; &#4632;&#4621;&#4773;&#4797;&#4722;/&#4768;&#4781;&#4669;&#4757;/ &#4779;&#4653;&#4853;   &#4709;&#4827;&#4821;&#4707; &#4817;&#4848;&#4723;&#4723;&#4725; &#4773;&#4723;  &#4723;&#4627;&#4779;&#4634;&#4725; &#4709;&#4899;&#4821;&#4634; &#4896;&#4691;&#4634;  &#4627;&#4704;&#4652;&#4723; &#4829;&#4627;&#4824; &#4773;&#4841;. &#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4755;&#4709;&#4723; &#4829;&#4637;&#4621;&#4776;&#4723; &#4723;&#4627;&#4779;&#4634;&#4725; &#4781;&#4813;&#4656;&#4797; &#4768;&#4616;&#4814;.</value>
+						<value form="image">jr://file/commcare/image/help/data/notification_purpose-xqjf0m.png</value>
+						<value form="markdown">### &#4773;&#4722; &#4779;&#4709; &#4899;&#4709;&#4843; &#4901;&#4821;&#4755; &#4829;&#4720;&#4621;&#4768;&#4792; &#4632;&#4621;&#4658; &#4632;&#4621;&#4773;&#4797;&#4722;/&#4768;&#4781;&#4669;&#4757;/ &#4779;&#4653;&#4853;   &#4709;&#4827;&#4821;&#4707; &#4817;&#4848;&#4723;&#4723;&#4725; &#4773;&#4723;  &#4723;&#4627;&#4779;&#4634;&#4725; &#4709;&#4899;&#4821;&#4634; &#4896;&#4691;&#4634;  &#4627;&#4704;&#4652;&#4723; &#4829;&#4627;&#4824; &#4773;&#4841;. &#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4755;&#4709;&#4723; &#4829;&#4637;&#4621;&#4776;&#4723; &#4723;&#4627;&#4779;&#4634;&#4725; &#4781;&#4813;&#4656;&#4797; &#4768;&#4616;&#4814;.</value>
+					</text>
+					<text id="notification_details/notification_info-label">
+						<value>&#4773;&#4826; &#4755;&#4845; &#4632;&#4621;&#4658; &#4779;&#4653;&#4853; &#4709;&#4827;&#4773;&#4707; &#4773;&#4726;&#4637; &#4768;&#4709; &#4723;&#4629;&#4722; &#4824;&#4616;&#4813; &#4627;&#4704;&#4652;&#4723;&#4723;&#4725; &#4626;&#4825; &#4768;&#4622;:</value>
+					</text>
+					<text id="notification_details/client_name-label">
+						<value>* &#4669;&#4637; &#4723;&#4627;&#4779;&#4725;: <output value="/data/notification_client_info/client_name"/></value>
+						<value form="markdown">* &#4669;&#4637; &#4723;&#4627;&#4779;&#4725;: <output value="/data/notification_client_info/client_name"/></value>
+					</text>
+					<text id="notification_details/family_name-label">
+						<value>* &#4808;&#4755;&#4754; &#4773;&#4722; &#4872;&#4827;: <output value="/data/notification_client_info/family_name"/></value>
+						<value form="markdown">* &#4808;&#4755;&#4754; &#4773;&#4722; &#4872;&#4827;: <output value="/data/notification_client_info/family_name"/></value>
+					</text>
+					<text id="notification_details/mrn-label">
+						<value>* &#4673;&#4933;&#4650; &#4613;&#4781;&#4637;&#4755; &#4779;&#4653;&#4850; : <output value="/data/notification_client_info/mrn"/></value>
+						<value form="markdown">* &#4673;&#4933;&#4650; &#4613;&#4781;&#4637;&#4755; &#4779;&#4653;&#4850; : <output value="/data/notification_client_info/mrn"/></value>
+					</text>
+					<text id="notification_details/age_years-label">
+						<value>* &#4821;&#4853;&#4632;: <output value="/data/notification_client_info/age_years"/> Years</value>
+						<value form="markdown">* &#4821;&#4853;&#4632;: <output value="/data/notification_client_info/age_years"/> Years</value>
+					</text>
+					<text id="notification_details/village_name-label">
+						<value>* &#4878;&#4901;: <output value="/data/notification_client_info/village_name"/></value>
+						<value form="markdown">* &#4878;&#4901;: <output value="/data/notification_client_info/village_name"/></value>
+					</text>
+					<text id="notification_details/local_phone_number-label">
+						<value>* &#4661;&#4621;&#4778; &#4689;&#4933;&#4650;: <output value="/data/notification_client_info/local_phone_number"/></value>
+						<value form="markdown">* &#4661;&#4621;&#4778; &#4689;&#4933;&#4650;: <output value="/data/notification_client_info/local_phone_number"/></value>
+					</text>
+					<text id="notification_details/paper_file_found-label">
+						<value>&#4755;&#4845;&#4723; &#4723;&#4627;&#4779;&#4634;&#4725; &#4808;&#4648;&#4688;&#4725; &#4939;&#4845;&#4621; &#4808;&#4845; &#4792;&#4819; &#4939;&#4634;&#4618; &#4942;&#4616;&#4848;&#4653; &#4768;&#4616;&#4778; &#4854;   ?</value>
+					</text>
+					<text id="notification_details/paper_file_found-yes-label">
+						<value>&#4773;&#4808;</value>
+					</text>
+					<text id="notification_details/paper_file_found-no-label">
+						<value>&#4768;&#4845;&#4939;&#4617;&#4757;</value>
+					</text>
+					<text id="registration_instructions-label">
+						<value>&#4773;&#4722; &#4755;&#4845; &#4808;&#4648;&#4688;&#4725; &#4939;&#4845;&#4621; &#4709;&#4637;&#4901;&#4675;&#4637;:
+1. &#4939;&#4634;&#4618; &#4942;&#4621;&#4848;&#4653; &#4941;&#4896;&#4650;
+2. &#4755;&#4845;&#4723; &#4723;&#4627;&#4779;&#4725; &#4939;&#4845;&#4621; &#4941;&#4896;&#4650;
+3. &#4773;&#4722; &#4755;&#4845; &#4632;&#4621;&#4658; &#4632;&#4621;&#4768;&#4797;&#4722; &#4779;&#4653;&#4853; &#4755;&#4709;&#4723; &#4723;&#4627;&#4779;&#4725; &#4939;&#4845;&#4621; &#4813;&#4656;&#4853;&#4846;</value>
+						<value form="image">jr://file/commcare/image/help/data/registration_instructions-610l0h.png</value>
+						<value form="markdown">&#4773;&#4722; &#4755;&#4845; &#4808;&#4648;&#4688;&#4725; &#4939;&#4845;&#4621; &#4709;&#4637;&#4901;&#4675;&#4637;:
+1. &#4939;&#4634;&#4618; &#4942;&#4621;&#4848;&#4653; &#4941;&#4896;&#4650;
+2. &#4755;&#4845;&#4723; &#4723;&#4627;&#4779;&#4725; &#4939;&#4845;&#4621; &#4941;&#4896;&#4650;
+3. &#4773;&#4722; &#4755;&#4845; &#4632;&#4621;&#4658; &#4632;&#4621;&#4768;&#4797;&#4722; &#4779;&#4653;&#4853; &#4755;&#4709;&#4723; &#4723;&#4627;&#4779;&#4725; &#4939;&#4845;&#4621; &#4813;&#4656;&#4853;&#4846;</value>
+					</text>
+					<text id="other_instructions-label">
+						<value>1. &#4757;&#4720;&#4808;&#4659;&#4794; &#4627;&#4704;&#4652;&#4723; &#4755;&#4709; &#4899;&#4709;&#4843; &#4901;&#4821;&#4755; &#4848;&#4813;&#4618;
+2. &#4752;&#4723; &#4720;&#4627;&#4779;&#4634;&#4725; &#4757;&#4720;&#4808;&#4659;&#4794; &#4627;&#4704;&#4652;&#4723; &#4848;&#4813;&#4621;&#4619; 
+3. ** &#4773;&#4723; &#4723;&#4627;&#4779;&#4634;&#4725; &#4768;&#4709; &#4825;&#4653;&#4843;&#4794;/&#4779;&#4733;&#4632;&#4757;&#4725;/ &#4773;&#4757;&#4720;&#4824;&#4845;&#4782;&#4845;&#4755;** &#4773;&#4722; &#4755;&#4845; &#4632;&#4621;&#4658; &#4632;&#4621;&#4768;&#4797;&#4722;/&#4768;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853;/ &#4781;&#4720;&#4901;&#4941;&#4773;&#4846; &#4725;&#4797;&#4773;&#4618; &#4773;&#4794;.</value>
+						<value form="image">jr://file/commcare/image/help/data/other_instructions-g2vfhs.png</value>
+						<value form="markdown">1. &#4757;&#4720;&#4808;&#4659;&#4794; &#4627;&#4704;&#4652;&#4723; &#4755;&#4709; &#4899;&#4709;&#4843; &#4901;&#4821;&#4755; &#4848;&#4813;&#4618;
+2. &#4752;&#4723; &#4720;&#4627;&#4779;&#4634;&#4725; &#4757;&#4720;&#4808;&#4659;&#4794; &#4627;&#4704;&#4652;&#4723; &#4848;&#4813;&#4621;&#4619; 
+3. ** &#4773;&#4723; &#4723;&#4627;&#4779;&#4634;&#4725; &#4768;&#4709; &#4825;&#4653;&#4843;&#4794;/&#4779;&#4733;&#4632;&#4757;&#4725;/ &#4773;&#4757;&#4720;&#4824;&#4845;&#4782;&#4845;&#4755;** &#4773;&#4722; &#4755;&#4845; &#4632;&#4621;&#4658; &#4632;&#4621;&#4768;&#4797;&#4722;/&#4768;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853;/ &#4781;&#4720;&#4901;&#4941;&#4773;&#4846; &#4725;&#4797;&#4773;&#4618; &#4773;&#4794;.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4677;&#4901;&#4818; &#4633;&#4617;&#4773; &#4757;&#4633;&#4618;&#4773; &#4720;&#4635;&#4618;&#4769; &#4961;&#4961;
+
+&#4677;&#4901;&#4818; &#4757;&#4637;&#4621;&#4768;&#4781; &#4709;&#4619;&#4821;&#4618; &#4757;&#4840;&#4635;&#4757; &#4872;&#4933; &#4824;&#4622; &#4678;&#4931;&#4621; &#4896;&#4813;&#4677;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="notification_purpose-label">
+						<value>### Akishiin kaaridii'n buufata fayyaatii dhufee oddeefannoo baay'ee barbaachisa waa'ee yaalama yeroo dawwanna waan qabuuf faayili tajaajilamatti yaa dabalamu</value>
+						<value form="image">jr://file/commcare/image/help/data/notification_purpose-xqjf0m.png</value>
+						<value form="markdown">### Akishiin kaaridii'n buufata fayyaatii dhufee oddeefannoo baay'ee barbaachisa waa'ee yaalama yeroo dawwanna waan qabuuf faayili tajaajilamatti yaa dabalamu</value>
+					</text>
+					<text id="notification_details/notification_info-label">
+						<value>Akishiin kaardii odefannoo inni of keessaa qabu</value>
+					</text>
+					<text id="notification_details/client_name-label">
+						<value>* Maqaa tajaajilama: <output value="/data/notification_client_info/client_name"/></value>
+						<value form="markdown">* Maqaa tajaajilama: <output value="/data/notification_client_info/client_name"/></value>
+					</text>
+					<text id="notification_details/family_name-label">
+						<value>* abbaa mana: <output value="/data/notification_client_info/family_name"/></value>
+						<value form="markdown">* abbaa mana: <output value="/data/notification_client_info/family_name"/></value>
+					</text>
+					<text id="notification_details/mrn-label">
+						<value>* lakk.yaala: <output value="/data/notification_client_info/mrn"/></value>
+						<value form="markdown">* lakk.yaala: <output value="/data/notification_client_info/mrn"/></value>
+					</text>
+					<text id="notification_details/age_years-label">
+						<value>* umurii: <output value="/data/notification_client_info/age_years"/> waaggoota</value>
+						<value form="markdown">* umurii: <output value="/data/notification_client_info/age_years"/> waaggoota</value>
+					</text>
+					<text id="notification_details/village_name-label">
+						<value>* Gooxii: <output value="/data/notification_client_info/village_name"/></value>
+						<value form="markdown">* Gooxii: <output value="/data/notification_client_info/village_name"/></value>
+					</text>
+					<text id="notification_details/local_phone_number-label">
+						<value>* lakk. Bilbilaa : <output value="/data/notification_client_info/local_phone_number"/></value>
+						<value form="markdown">* lakk. Bilbilaa : <output value="/data/notification_client_info/local_phone_number"/></value>
+					</text>
+					<text id="notification_details/paper_file_found-label">
+						<value>Tajaajilama kanaaf faayila warqaa moo faayila maatii qabda?</value>
+					</text>
+					<text id="notification_details/paper_file_found-yes-label">
+						<value>eeyyeen</value>
+					</text>
+					<text id="notification_details/paper_file_found-no-label">
+						<value>miti</value>
+					</text>
+					<text id="registration_instructions-label">
+						<value>Faayila waraqaa kan fayyadamitu          1.Faamili foldarii uumuuf 2. Faayila tajaajilama uumuuf                    3.Akishiin kaardii faayila tajaajilamatti dabaluuf</value>
+						<value form="image">jr://file/commcare/image/help/data/registration_instructions-610l0h.png</value>
+						<value form="markdown">Faayila waraqaa kan fayyadamitu          1.Faamili foldarii uumuuf 2. Faayila tajaajilama uumuuf                    3.Akishiin kaardii faayila tajaajilamatti dabaluuf</value>
+					</text>
+					<text id="other_instructions-label">
+						<value>1. buufata fayyaa odeffaannoo dabalataaf waamuuf                             2. tajaajilama odeefannoo dabalataaf waamuuf 3.yoo tajaajilaman naannoo keen ala ta'e haquuf</value>
+						<value form="image">jr://file/commcare/image/help/data/other_instructions-g2vfhs.png</value>
+						<value form="markdown">1. buufata fayyaa odeffaannoo dabalataaf waamuuf                             2. tajaajilama odeefannoo dabalataaf waamuuf 3.yoo tajaajilaman naannoo keen ala ta'e haquuf</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki guutuma guututti guutame unka kan erguuf malattoo magarsaa kan kara bukkee harka mirgaa olii jiru xuqii.</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/notification_client_info/local_phone_number" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/local_phone_number"/><setvalue event="xforms-ready" ref="/data/notification_client_info/village_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/village"/><setvalue event="xforms-ready" ref="/data/notification_client_info/family_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/family_name"/><setvalue event="xforms-ready" ref="/data/notification_client_info/mrn" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/mrn"/><setvalue event="xforms-ready" ref="/data/notification_client_info/age_years" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/age_years"/><setvalue event="xforms-ready" ref="/data/notification_client_info/client_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/client_name"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_open_client_0/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_open_client_0/case/@user_id"/><setvalue event="xforms-ready" ref="/data/case_open_client_0/case/@case_id" value="instance('commcaresession')/session/data/case_id_new_client_0"/><bind calculate="/data/not_a_client" nodeset="/data/case_open_client_0/case/create/case_name"/><setvalue event="xforms-ready" ref="/data/case_open_client_0/case/create/owner_id" value="instance('groups')/groups/group/@id"/><bind calculate="instance('commcaresession')/session/data/case_id_load_notification_0" nodeset="/data/case_open_client_0/case/index/parent"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<trigger ref="/data/notification_purpose" appearance="minimal">
+			<label ref="jr:itext('notification_purpose-label')"/>
+		</trigger>
+		<group ref="/data/notification_details" appearance="field-list">
+			<trigger ref="/data/notification_details/notification_info" appearance="minimal">
+				<label ref="jr:itext('notification_details/notification_info-label')"/>
+			</trigger>
+			<trigger ref="/data/notification_details/client_name" appearance="minimal">
+				<label ref="jr:itext('notification_details/client_name-label')"/>
+			</trigger>
+			<trigger ref="/data/notification_details/family_name" appearance="minimal">
+				<label ref="jr:itext('notification_details/family_name-label')"/>
+			</trigger>
+			<trigger ref="/data/notification_details/mrn" appearance="minimal">
+				<label ref="jr:itext('notification_details/mrn-label')"/>
+			</trigger>
+			<trigger ref="/data/notification_details/age_years" appearance="minimal">
+				<label ref="jr:itext('notification_details/age_years-label')"/>
+			</trigger>
+			<trigger ref="/data/notification_details/village_name" appearance="minimal">
+				<label ref="jr:itext('notification_details/village_name-label')"/>
+			</trigger>
+			<trigger ref="/data/notification_details/local_phone_number" appearance="minimal">
+				<label ref="jr:itext('notification_details/local_phone_number-label')"/>
+			</trigger>
+			<select1 ref="/data/notification_details/paper_file_found">
+				<label ref="jr:itext('notification_details/paper_file_found-label')"/>
+				<item>
+					<label ref="jr:itext('notification_details/paper_file_found-yes-label')"/>
+					<value>yes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('notification_details/paper_file_found-no-label')"/>
+					<value>no</value>
+				</item>
+			</select1>
+		</group>
+		<trigger ref="/data/registration_instructions" appearance="minimal">
+			<label ref="jr:itext('registration_instructions-label')"/>
+		</trigger>
+		<trigger ref="/data/other_instructions" appearance="minimal">
+			<label ref="jr:itext('other_instructions-label')"/>
+		</trigger>
+		<group ref="/data/notification_client_info"/>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

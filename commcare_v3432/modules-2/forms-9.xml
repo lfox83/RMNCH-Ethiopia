@@ -1,0 +1,47 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>(R2) Nutrition Measurements</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/8da590a993e42894d972abe279c7a9adb87d55f1" uiVersion="1" version="3393" name="(R2) Nutrition Measurements">
+					<family_name/>
+					<client_name/>
+					<display/>
+				<orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data></instance><instance id="commcaresession" src="jr://instance/session"/><instance id="casedb" src="jr://instance/casedb"/>
+			<bind nodeset="/data/family_name"/>
+			<bind nodeset="/data/client_name"/>
+			<bind nodeset="/data/display"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="display-label">
+						<value>Family: <output value="/data/family_name"/> 
+
+Client: <output value="/data/client_name"/></value></text>
+				</translation>
+				<translation lang="amh">
+					<text id="display-label">
+						<value>Family: <output value="/data/family_name"/> 
+
+Client: <output value="/data/client_name"/></value></text>
+				</translation>
+				<translation lang="tir">
+					<text id="display-label">
+						<value>Family: <output value="/data/family_name"/> 
+
+Client: <output value="/data/client_name"/></value></text>
+				</translation>
+				<translation lang="orm">
+					<text id="display-label">
+						<value>Family: <output value="/data/family_name"/> 
+
+Client: <output value="/data/client_name"/></value></text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/client_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/case_name"/><setvalue event="xforms-ready" ref="/data/family_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_family_3]/case_name"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<trigger ref="/data/display" appearance="minimal">
+			<label ref="jr:itext('display-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

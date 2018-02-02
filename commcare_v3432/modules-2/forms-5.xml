@@ -1,0 +1,174 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>Reassign Client to Another Family</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/DEB0684D-7A2C-434D-845B-2E91F0ACB4F7" uiVersion="1" version="3432" name="Reassign Client to Another Family">
+					<label/>
+					<change_client_index>
+						<case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id="">
+							<update>
+								<family_name/>
+								<family_number/>
+								<village_name/>
+								<house_gps/>
+							</update>
+							<index>
+								<parent case_type="" relationship="child"/>
+							</index>
+						</case>
+					</change_client_index>
+					<update_grandchild_cases ids="" count="" current_index="">
+						<item id="" index="" jr:template="">
+							<update_case>
+								<case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id="">
+									<update>
+										<family_name/>
+										<family_number/>
+										<village_name/>
+										<house_gps/>
+									</update>
+								</case>
+							</update_case>
+						</item>
+					</update_grandchild_cases>
+					<new_family_info>
+						<new_family_id/>
+						<family_name/>
+						<family_number/>
+						<village_name/>
+						<house_gps/>
+					</new_family_info>
+					<client_info>
+						<client_id/>
+						<client_name/>
+					</client_info>
+					<old_family_info>
+						<old_family_id/>
+					</old_family_info>
+					<locations>
+						<health_post_id/>
+						<health_post/>
+						<health_center_id/>
+						<health_center/>
+						<test_or_real/>
+						<region_id/>
+						<region/>
+						<zone_id/>
+						<zone/>
+						<woreda_id/>
+						<woreda/>
+						<hp_facility_code/>
+						<hc_facility_code/>
+					</locations>
+					<end_of_form/>
+				<case_load_family_5><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><update><hc_facility_code/><health_center/><health_center_id/><health_post/><health_post_id/><hp_facility_code/><region/><region_id/><woreda/><woreda_id/><zone/><zone_id/></update></case></case_load_family_5><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="locations" src="jr://fixture/locations"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<instance src="jr://instance/casedb" id="casedb"/>
+			<bind nodeset="/data/label"/>
+			<bind nodeset="/data/change_client_index/case/update/family_name" calculate="/data/new_family_info/family_name"/>
+			<bind nodeset="/data/change_client_index/case/update/family_number" calculate="/data/new_family_info/family_number"/>
+			<bind nodeset="/data/change_client_index/case/update/village_name" calculate="/data/new_family_info/village_name"/>
+			<bind nodeset="/data/change_client_index/case/update/house_gps" calculate="/data/new_family_info/house_gps"/>
+			<bind nodeset="/data/change_client_index/case/index/parent" calculate="/data/new_family_info/new_family_id"/>
+			<bind nodeset="/data/change_client_index/case/@date_modified" calculate="/data/meta/timeEnd" type="xsd:dateTime"/>
+			<bind nodeset="/data/change_client_index/case/@user_id" calculate="instance('commcaresession')/session/context/userid"/>
+			<bind nodeset="/data/change_client_index/case/@case_id" calculate="/data/client_info/client_id"/>
+			<bind nodeset="/data/update_grandchild_cases/@current_index" calculate="count(/data/update_grandchild_cases/item)"/>
+			<bind nodeset="/data/update_grandchild_cases/item"/>
+			<bind nodeset="/data/update_grandchild_cases/item/update_case/case/update/family_name" calculate="/data/new_family_info/family_name"/>
+			<bind nodeset="/data/update_grandchild_cases/item/update_case/case/update/family_number" calculate="/data/new_family_info/family_number"/>
+			<bind nodeset="/data/update_grandchild_cases/item/update_case/case/update/village_name" calculate="/data/new_family_info/village_name"/>
+			<bind nodeset="/data/update_grandchild_cases/item/update_case/case/update/house_gps" calculate="/data/new_family_info/house_gps"/>
+			<bind nodeset="/data/update_grandchild_cases/item/update_case/case/@date_modified" calculate="/data/meta/timeEnd" type="xsd:dateTime"/>
+			<bind nodeset="/data/update_grandchild_cases/item/update_case/case/@user_id" calculate="instance('commcaresession')/session/context/userid"/>
+			<bind nodeset="/data/update_grandchild_cases/item/update_case/case/@case_id" calculate="current()/../../../@id"/>
+			<bind nodeset="/data/new_family_info"/>
+			<bind nodeset="/data/new_family_info/new_family_id" calculate="instance('commcaresession')/session/data/case_id_load_family_5"/>
+			<bind nodeset="/data/new_family_info/family_name"/>
+			<bind nodeset="/data/new_family_info/family_number"/>
+			<bind nodeset="/data/new_family_info/village_name"/>
+			<bind nodeset="/data/new_family_info/house_gps"/>
+			<bind nodeset="/data/client_info"/>
+			<bind nodeset="/data/client_info/client_id" calculate="instance('commcaresession')/session/data/case_id_load_client_1"/>
+			<bind nodeset="/data/client_info/client_name"/>
+			<bind nodeset="/data/old_family_info"/>
+			<bind nodeset="/data/old_family_info/old_family_id" calculate="instance('casedb')/casedb/case[@case_id = /data/client_info/client_id]/index/parent"/>
+			<bind nodeset="/data/locations"/>
+			<bind nodeset="/data/locations/health_post_id" calculate="instance('commcaresession')/session/user/data/commcare_location_id"/>
+			<bind nodeset="/data/locations/health_post" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/name"/>
+			<bind nodeset="/data/locations/health_center_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/@health-center_id"/>
+			<bind nodeset="/data/locations/health_center" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/name"/>
+			<bind nodeset="/data/locations/test_or_real" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/region_id" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/@region_id"/>
+			<bind nodeset="/data/locations/region" calculate="instance('locations')/locations/location[@id = /data/locations/region_id]/name"/>
+			<bind nodeset="/data/locations/zone_id" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/@zone_id"/>
+			<bind nodeset="/data/locations/zone" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/name"/>
+			<bind nodeset="/data/locations/woreda_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/@woreda_id"/>
+			<bind nodeset="/data/locations/woreda" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/name"/>
+			<bind nodeset="/data/locations/hp_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/hc_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/end_of_form"/>
+			<setvalue event="xforms-ready" ref="/data/update_grandchild_cases/@ids" value="join(' ', instance('casedb')/casedb/case[@status = 'open'][index/host = instance('commcaresession')/session/data/case_id_load_client_1]/@case_id)"/>
+			<setvalue event="xforms-ready" ref="/data/update_grandchild_cases/@count" value="count-selected(/data/update_grandchild_cases/@ids)"/>
+			<setvalue event="jr-insert" ref="/data/update_grandchild_cases/item/@index" value="int(/data/update_grandchild_cases/@current_index)"/>
+			<setvalue event="jr-insert" ref="/data/update_grandchild_cases/item/@id" value="selected-at(/data/update_grandchild_cases/@ids, ../@index)"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="label-label">
+						<value>If you submit this form, Client <output value="/data/client_info/client_name"/> will be assigned to Family <output value="/data/new_family_info/family_name"/>. If this is a mistake, please exit the form without continuing.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="label-label">
+						<value>&#4723;&#4779;&#4634; <output value="/data/client_info/client_name"/> &#4840;&#4637;&#4725;&#4632;&#4848;&#4709;&#4704;&#4725; &#4708;&#4720;&#4656;&#4709; <output value="/data/new_family_info/family_name"/>. &#4845;&#4613; &#4661;&#4613;&#4720;&#4725; &#4776;&#4614;&#4752; &#4773;&#4707;&#4781;&#4814;&#4757; &#4808;&#4848;&#4620;&#4619; &#4659;&#4845;&#4672;&#4901;&#4617;  &#4776;&#4677;&#4929; &#4845;&#4809;&#4897;.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="label-label">
+						<value>&#4629;&#4633;&#4637; <output value="/data/client_info/client_name"/> &#4773;&#4725;&#4637;&#4848;&#4704;&#4617; &#4708;&#4720;&#4656;&#4709; <output value="/data/new_family_info/family_name"/>.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4677;&#4901;&#4818; &#4633;&#4617;&#4773; &#4757;&#4633;&#4617;&#4773; &#4720;&#4635;&#4616;&#4774; &#4773;&#4841;&#4961;&#4961;
+
+&#4677;&#4901;&#4818; &#4757;&#4637;&#4621;&#4768;&#4781; &#4709;&#4619;&#4821;&#4616;&#4811;&#4845; &#4872;&#4933;  &#4757;&#4840;&#4635;&#4757; &#4824;&#4622; &#4678;&#4931;&#4621; &#4637;&#4621;&#4781;&#4725; &#4720;&#4931;&#4819;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="label-label">
+						<value>kan yaalama <output value="/data/client_info/client_name"/> will be assigned to Family <output value="/data/new_family_info/family_name"/>. Yoo dogoggora qabaate maaloo ittii fufu keetindura dhiisii bahi.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki guutuma guututti guutame unka kan erguuf malattoo magarsaa kan kara bukkee harka mirgaa olii jiru xuqii.</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/client_info/client_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/case_name"/><setvalue event="xforms-ready" ref="/data/new_family_info/family_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_family_5]/case_name"/><setvalue event="xforms-ready" ref="/data/new_family_info/house_gps" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_family_5]/house_gps"/><setvalue event="xforms-ready" ref="/data/new_family_info/village_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_family_5]/village_name"/><setvalue event="xforms-ready" ref="/data/new_family_info/family_number" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_family_5]/family_number"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_load_family_5/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_load_family_5/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_load_family_5" nodeset="/data/case_load_family_5/case/@case_id"/><bind calculate="/data/locations/hc_facility_code" nodeset="/data/case_load_family_5/case/update/hc_facility_code" relevant="count(/data/locations/hc_facility_code) &gt; 0"/><bind calculate="/data/locations/health_center" nodeset="/data/case_load_family_5/case/update/health_center" relevant="count(/data/locations/health_center) &gt; 0"/><bind calculate="/data/locations/health_center_id" nodeset="/data/case_load_family_5/case/update/health_center_id" relevant="count(/data/locations/health_center_id) &gt; 0"/><bind calculate="/data/locations/health_post" nodeset="/data/case_load_family_5/case/update/health_post" relevant="count(/data/locations/health_post) &gt; 0"/><bind calculate="/data/locations/health_post_id" nodeset="/data/case_load_family_5/case/update/health_post_id" relevant="count(/data/locations/health_post_id) &gt; 0"/><bind calculate="/data/locations/hp_facility_code" nodeset="/data/case_load_family_5/case/update/hp_facility_code" relevant="count(/data/locations/hp_facility_code) &gt; 0"/><bind calculate="/data/locations/region" nodeset="/data/case_load_family_5/case/update/region" relevant="count(/data/locations/region) &gt; 0"/><bind calculate="/data/locations/region_id" nodeset="/data/case_load_family_5/case/update/region_id" relevant="count(/data/locations/region_id) &gt; 0"/><bind calculate="/data/locations/woreda" nodeset="/data/case_load_family_5/case/update/woreda" relevant="count(/data/locations/woreda) &gt; 0"/><bind calculate="/data/locations/woreda_id" nodeset="/data/case_load_family_5/case/update/woreda_id" relevant="count(/data/locations/woreda_id) &gt; 0"/><bind calculate="/data/locations/zone" nodeset="/data/case_load_family_5/case/update/zone" relevant="count(/data/locations/zone) &gt; 0"/><bind calculate="/data/locations/zone_id" nodeset="/data/case_load_family_5/case/update/zone_id" relevant="count(/data/locations/zone_id) &gt; 0"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<trigger ref="/data/label" appearance="minimal">
+			<label ref="jr:itext('label-label')"/>
+		</trigger>
+		<group>
+			<repeat jr:count="/data/update_grandchild_cases/@count" jr:noAddRemove="true()" nodeset="/data/update_grandchild_cases/item"/>
+		</group>
+		<group ref="/data/new_family_info"/>
+		<group ref="/data/client_info"/>
+		<group ref="/data/old_family_info"/>
+		<group ref="/data/locations"/>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

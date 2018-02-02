@@ -1,0 +1,686 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum" vellum:ignore="richText">
+	<h:head>
+		<h:title>Remove Client</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/27D0EA92-5E3E-4611-85A4-E4FCBBBA9923" uiVersion="1" version="3432" name="Remove Client">
+					<form_info/>
+					<close_reason/>
+					<close_reason_other/>
+					<mistake_info/>
+					<mistake_other/>
+					<client_death>
+						<fill_pnc/>
+						<death_date/>
+						<death_maternal/>
+						<death_location/>
+						<fill_pregnancy_outcome/>
+					</client_death>
+					<confirm_close/>
+					<confirm/>
+					<confirm_not_removed/>
+					<close_case>
+						<soft_close/>
+						<close_client_case/>
+						<close_reason/>
+						<death_date/>
+						<death_maternal/>
+						<death_early_neonatal/>
+						<death_neonatal/>
+						<close_mother_case>
+							<close_mother_case>
+								<case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id="">
+									<close/>
+								</case>
+							</close_mother_case>
+						</close_mother_case>
+					</close_case>
+					<ethiopian_dates>
+						<death_date_eth/>
+						<death_report_month/>
+						<death_report_week/>
+					</ethiopian_dates>
+					<load_family_info>
+						<case_id/>
+						<family_name/>
+						<family_number/>
+						<village_name/>
+						<house_gps/>
+					</load_family_info>
+					<load_client_info>
+						<case_id/>
+						<client_name/>
+						<dob/>
+						<age_days/>
+					</load_client_info>
+					<load_pregnancy_pp_info>
+						<pregnancy_pp_case_open/>
+						<pregnancy_pp_case_id/>
+						<outcome_date/>
+						<pregnancy_status/>
+						<infant_not_yet_open/>
+						<infant_case_open/>
+					</load_pregnancy_pp_info>
+					<load_infant_info>
+						<pregnancy_pp_case_id/>
+						<pregnancy_pp_case_open/>
+						<other_infant_case_open/>
+						<mother_case_id/>
+						<mother_soft_close/>
+					</load_infant_info>
+					<locations>
+						<health_post_id/>
+						<health_post/>
+						<health_center_id/>
+						<health_center/>
+						<test_or_real/>
+						<region_id/>
+						<region/>
+						<zone_id/>
+						<zone/>
+						<woreda_id/>
+						<woreda/>
+						<hp_facility_code/>
+						<hc_facility_code/>
+					</locations>
+					<end_of_form/>
+				<case_load_client_1><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><update><close_reason/><death_date/><death_date_eth/><death_early_neonatal/><death_location/><death_maternal/><death_neonatal/><death_report_month/><death_report_week/><soft_close/></update><close/></case></case_load_client_1><case_autoload_family_3><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><update><hc_facility_code/><health_center/><health_center_id/><health_post/><health_post_id/><hp_facility_code/><region/><region_id/><woreda/><woreda_id/><zone/><zone_id/></update></case></case_autoload_family_3><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="locations" src="jr://fixture/locations"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<instance src="jr://instance/casedb" id="casedb"/>
+			<bind nodeset="/data/form_info"/>
+			<bind nodeset="/data/close_reason" required="true()"/>
+			<bind nodeset="/data/close_reason_other" type="xsd:string" relevant="/data/close_reason = 'other'" required="true()"/>
+			<bind nodeset="/data/mistake_info" relevant="/data/close_reason = 'mistake'" required="true()"/>
+			<bind nodeset="/data/mistake_other" type="xsd:string" relevant="/data/mistake_info = 'other'" required="true()"/>
+			<bind nodeset="/data/client_death" relevant="/data/close_reason = 'died'"/>
+			<bind nodeset="/data/client_death/fill_pnc" relevant="/data/load_pregnancy_pp_info/infant_not_yet_open = &quot;yes&quot;"/>
+			<bind nodeset="/data/client_death/death_date" type="xsd:date" relevant="/data/load_pregnancy_pp_info/infant_not_yet_open != &quot;yes&quot;" required="true()"/>
+			<bind nodeset="/data/client_death/death_maternal" relevant="/data/load_pregnancy_pp_info/pregnancy_status != &quot;not_pregnant&quot; and /data/load_pregnancy_pp_info/infant_not_yet_open != &quot;yes&quot;" required="true()"/>
+			<bind nodeset="/data/client_death/death_location" relevant="/data/load_pregnancy_pp_info/infant_not_yet_open != &quot;yes&quot; and not(/data/client_death/death_maternal = &quot;yes&quot; and /data/load_pregnancy_pp_info/pregnancy_status = &quot;pregnant&quot;)" required="true()"/>
+			<bind nodeset="/data/client_death/fill_pregnancy_outcome" relevant="/data/client_death/death_maternal = &quot;yes&quot; and /data/load_pregnancy_pp_info/pregnancy_status = &quot;pregnant&quot;"/>
+			<bind nodeset="/data/confirm_close" relevant="not(/data/client_death/death_maternal = &quot;yes&quot; and /data/load_pregnancy_pp_info/pregnancy_status = &quot;pregnant&quot;) and not(/data/close_reason = 'died' and /data/load_pregnancy_pp_info/infant_not_yet_open = &quot;yes&quot;)" required="true()"/>
+			<bind nodeset="/data/confirm" relevant="/data/confirm_close = &quot;yes&quot;"/>
+			<bind nodeset="/data/confirm_not_removed" relevant="/data/confirm_close != 'yes'"/>
+			<bind nodeset="/data/close_case" relevant="/data/confirm_close = &quot;yes&quot;"/>
+			<bind nodeset="/data/close_case/soft_close" calculate="if(/data/load_pregnancy_pp_info/infant_case_open = &quot;yes&quot;, &quot;yes&quot;, &quot;&quot;)"/>
+			<bind nodeset="/data/close_case/close_client_case" calculate="if(/data/close_case/soft_close = &quot;yes&quot;, &quot;no&quot;, &quot;yes&quot;)"/>
+			<bind nodeset="/data/close_case/close_reason" calculate="/data/close_reason"/>
+			<bind nodeset="/data/close_case/death_date" calculate="/data/client_death/death_date"/>
+			<bind nodeset="/data/close_case/death_maternal" calculate="/data/client_death/death_maternal"/>
+			<bind nodeset="/data/close_case/death_early_neonatal" relevant="/data/load_client_info/age_days &lt; 365" calculate="if(/data/load_client_info/age_days &lt; 7, &quot;yes&quot;, &quot;no&quot;)"/>
+			<bind nodeset="/data/close_case/death_neonatal" relevant="/data/load_client_info/age_days &lt; 365" calculate="if(/data/load_client_info/age_days &lt; 28, &quot;yes&quot;, &quot;no&quot;)"/>
+			<bind nodeset="/data/close_case/close_mother_case" relevant="/data/load_infant_info/pregnancy_pp_case_open = &quot;yes&quot; and /data/load_infant_info/other_infant_case_open = &quot;no&quot; and /data/load_infant_info/mother_soft_close = &quot;yes&quot;"/>
+			<bind nodeset="/data/close_case/close_mother_case/close_mother_case/case/close"/>
+			<bind nodeset="/data/close_case/close_mother_case/close_mother_case/case/@date_modified" calculate="/data/meta/timeEnd" type="xsd:dateTime"/>
+			<bind nodeset="/data/close_case/close_mother_case/close_mother_case/case/@user_id" calculate="instance('commcaresession')/session/context/userid"/>
+			<bind nodeset="/data/close_case/close_mother_case/close_mother_case/case/@case_id" calculate="/data/load_infant_info/mother_case_id"/>
+			<bind nodeset="/data/ethiopian_dates" relevant="/data/confirm_close = &quot;yes&quot;"/>
+			<bind nodeset="/data/ethiopian_dates/death_date_eth" relevant="/data/client_death/death_date != &quot;&quot;" calculate="if(/data/client_death/death_date = '', '', concat(int((date(/data/client_death/death_date) - 253) div 365.25) + 1963, if(int((date(/data/client_death/death_date) - 253 - (365 * int((date(/data/client_death/death_date) - 253) div 365.25) + 1 + int((int((date(/data/client_death/death_date) - 253) div 365.25) - 1) div 4))) div 30) + 1 &lt; 10, '-0', '-'), int((date(/data/client_death/death_date) - 253 - (365 * (int((date(/data/client_death/death_date) - 253) div 365.25) + 1963 - 1963) + 1 + int((int((date(/data/client_death/death_date) - 253) div 365.25) - 1) div 4))) div 30) + 1, if(((date(/data/client_death/death_date) - 253 - (365 * int((date(/data/client_death/death_date) - 253) div 365.25) + 1 + int((int((date(/data/client_death/death_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1 &lt; 10, '-0', '-'), ((date(/data/client_death/death_date) - 253 - (365 * int((date(/data/client_death/death_date) - 253) div 365.25) + 1 + int((int((date(/data/client_death/death_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1))"/>
+			<bind nodeset="/data/ethiopian_dates/death_report_month" relevant="/data/client_death/death_date != &quot;&quot;" calculate="if(/data/ethiopian_dates/death_date_eth = '', '', date(concat(substr(/data/ethiopian_dates/death_date_eth, 0, 4) - if(substr(/data/ethiopian_dates/death_date_eth, 5, 7) = 1 and substr(/data/ethiopian_dates/death_date_eth, 8, 10) &lt; 21, 1, 0), '-', if(substr(/data/ethiopian_dates/death_date_eth, 8, 10) &gt;= 21, substr(/data/ethiopian_dates/death_date_eth, 5, 7), if(substr(/data/ethiopian_dates/death_date_eth, 5, 7) = 1 or substr(/data/ethiopian_dates/death_date_eth, 5, 7) = 13, 12, substr(/data/ethiopian_dates/death_date_eth, 5, 7) - 1)), '-21')))"/>
+			<bind nodeset="/data/ethiopian_dates/death_report_week" relevant="/data/client_death/death_date != &quot;&quot;" calculate="if(/data/client_death/death_date = '', '', concat(int((date(date(/data/client_death/death_date) - replace(replace(replace(replace(replace(replace(replace(format-date(date(/data/client_death/death_date), '%a'), 'Fri', 0), 'Sat', 1), 'Sun', 2), 'Mon', 3), 'Tue', 4), 'Wed', 5), 'Thu', 6)) - 253) div 365.25) + 1963, if(int((date(date(/data/client_death/death_date) - replace(replace(replace(replace(replace(replace(replace(format-date(date(/data/client_death/death_date), '%a'), 'Fri', 0), 'Sat', 1), 'Sun', 2), 'Mon', 3), 'Tue', 4), 'Wed', 5), 'Thu', 6)) - 253 - (365 * int((date(date(/data/client_death/death_date) - replace(replace(replace(replace(replace(replace(replace(format-date(date(/data/client_death/death_date), '%a'), 'Fri', 0), 'Sat', 1), 'Sun', 2), 'Mon', 3), 'Tue', 4), 'Wed', 5), 'Thu', 6)) - 253) div 365.25) + 1 + int((int((date(date(/data/client_death/death_date) - replace(replace(replace(replace(replace(replace(replace(format-date(date(/data/client_death/death_date), '%a'), 'Fri', 0), 'Sat', 1), 'Sun', 2), 'Mon', 3), 'Tue', 4), 'Wed', 5), 'Thu', 6)) - 253) div 365.25) - 1) div 4))) div 30) + 1 &lt; 10, '-0', '-'), int((date(date(/data/client_death/death_date) - replace(replace(replace(replace(replace(replace(replace(format-date(date(/data/client_death/death_date), '%a'), 'Fri', 0), 'Sat', 1), 'Sun', 2), 'Mon', 3), 'Tue', 4), 'Wed', 5), 'Thu', 6)) - 253 - (365 * int((date(date(/data/client_death/death_date) - replace(replace(replace(replace(replace(replace(replace(format-date(date(/data/client_death/death_date), '%a'), 'Fri', 0), 'Sat', 1), 'Sun', 2), 'Mon', 3), 'Tue', 4), 'Wed', 5), 'Thu', 6)) - 253) div 365.25) + 1 + int((int((date(date(/data/client_death/death_date) - replace(replace(replace(replace(replace(replace(replace(format-date(date(/data/client_death/death_date), '%a'), 'Fri', 0), 'Sat', 1), 'Sun', 2), 'Mon', 3), 'Tue', 4), 'Wed', 5), 'Thu', 6)) - 253) div 365.25) - 1) div 4))) div 30) + 1, if(((date(date(/data/client_death/death_date) - replace(replace(replace(replace(replace(replace(replace(format-date(date(/data/client_death/death_date), '%a'), 'Fri', 0), 'Sat', 1), 'Sun', 2), 'Mon', 3), 'Tue', 4), 'Wed', 5), 'Thu', 6)) - 253 - (365 * int((date(date(/data/client_death/death_date) - replace(replace(replace(replace(replace(replace(replace(format-date(date(/data/client_death/death_date), '%a'), 'Fri', 0), 'Sat', 1), 'Sun', 2), 'Mon', 3), 'Tue', 4), 'Wed', 5), 'Thu', 6)) - 253) div 365.25) + 1 + int((int((date(date(/data/client_death/death_date) - replace(replace(replace(replace(replace(replace(replace(format-date(date(/data/client_death/death_date), '%a'), 'Fri', 0), 'Sat', 1), 'Sun', 2), 'Mon', 3), 'Tue', 4), 'Wed', 5), 'Thu', 6)) - 253) div 365.25) - 1) div 4))) mod 30) + 1 &lt; 10, '-0', '-'), ((date(date(/data/client_death/death_date) - replace(replace(replace(replace(replace(replace(replace(format-date(date(/data/client_death/death_date), '%a'), 'Fri', 0), 'Sat', 1), 'Sun', 2), 'Mon', 3), 'Tue', 4), 'Wed', 5), 'Thu', 6)) - 253 - (365 * int((date(date(/data/client_death/death_date) - replace(replace(replace(replace(replace(replace(replace(format-date(date(/data/client_death/death_date), '%a'), 'Fri', 0), 'Sat', 1), 'Sun', 2), 'Mon', 3), 'Tue', 4), 'Wed', 5), 'Thu', 6)) - 253) div 365.25) + 1 + int((int((date(date(/data/client_death/death_date) - replace(replace(replace(replace(replace(replace(replace(format-date(date(/data/client_death/death_date), '%a'), 'Fri', 0), 'Sat', 1), 'Sun', 2), 'Mon', 3), 'Tue', 4), 'Wed', 5), 'Thu', 6)) - 253) div 365.25) - 1) div 4))) mod 30) + 1))"/>
+			<bind nodeset="/data/load_family_info"/>
+			<bind nodeset="/data/load_family_info/case_id" calculate="instance('commcaresession')/session/data/case_id_autoload_family_3"/>
+			<bind nodeset="/data/load_family_info/family_name"/>
+			<bind nodeset="/data/load_family_info/family_number"/>
+			<bind nodeset="/data/load_family_info/village_name"/>
+			<bind nodeset="/data/load_family_info/house_gps"/>
+			<bind nodeset="/data/load_client_info"/>
+			<bind nodeset="/data/load_client_info/case_id" calculate="instance('commcaresession')/session/data/case_id_load_client_1"/>
+			<bind nodeset="/data/load_client_info/client_name"/>
+			<bind nodeset="/data/load_client_info/dob"/>
+			<bind nodeset="/data/load_client_info/age_days" calculate="today() - date(/data/load_client_info/dob)"/>
+			<bind nodeset="/data/load_pregnancy_pp_info"/>
+			<bind nodeset="/data/load_pregnancy_pp_info/pregnancy_pp_case_open" calculate="if(count(instance('casedb')/casedb/case[@case_type = &quot;pregnancy_pp&quot;][@status = 'open'][index/host = /data/load_client_info/case_id]) = 0, &quot;no&quot;, &quot;yes&quot;)"/>
+			<bind nodeset="/data/load_pregnancy_pp_info/pregnancy_pp_case_id" relevant="/data/load_pregnancy_pp_info/pregnancy_pp_case_open = &quot;yes&quot;" calculate="instance('casedb')/casedb/case[@case_type = &quot;pregnancy_pp&quot;][@status = 'open'][index/host = /data/load_client_info/case_id][1]/@case_id"/>
+			<bind nodeset="/data/load_pregnancy_pp_info/outcome_date" relevant="/data/load_pregnancy_pp_info/pregnancy_pp_case_open = &quot;yes&quot;" calculate="instance('casedb')/casedb/case[@case_id = /data/load_pregnancy_pp_info/pregnancy_pp_case_id]/outcome_date"/>
+			<bind nodeset="/data/load_pregnancy_pp_info/pregnancy_status" calculate="if(/data/load_pregnancy_pp_info/pregnancy_pp_case_open = &quot;no&quot;, &quot;not_pregnant&quot;, if(date(/data/load_pregnancy_pp_info/outcome_date) + 42 &lt; today(), &quot;no_longer_post_partum&quot;, if(/data/load_pregnancy_pp_info/outcome_date != &quot;&quot;, &quot;post_partum&quot;, &quot;pregnant&quot;)))"/>
+			<bind nodeset="/data/load_pregnancy_pp_info/infant_not_yet_open" relevant="/data/load_pregnancy_pp_info/pregnancy_pp_case_open = &quot;yes&quot;" calculate="if(max(instance('casedb')/casedb/case[@case_id = /data/load_pregnancy_pp_info/pregnancy_pp_case_id]/next_visit_num_hc, instance('casedb')/casedb/case[@case_id = /data/load_pregnancy_pp_info/pregnancy_pp_case_id]/next_visit_num_hp) = 6 and instance('casedb')/casedb/case[@case_id = /data/load_pregnancy_pp_info/pregnancy_pp_case_id]/num_live_birth != 0, &quot;yes&quot;, &quot;no&quot;)"/>
+			<bind nodeset="/data/load_pregnancy_pp_info/infant_case_open" relevant="/data/load_pregnancy_pp_info/pregnancy_status = &quot;post_partum&quot;" calculate="if(count(instance('casedb')/casedb/case[@case_type = &quot;client&quot;][@status = 'open'][index/parent = /data/load_family_info/case_id][pregnancy_pp_case_id = /data/load_pregnancy_pp_info/pregnancy_pp_case_id]) = 0, &quot;no&quot;, &quot;yes&quot;)"/>
+			<bind nodeset="/data/load_infant_info"/>
+			<bind nodeset="/data/load_infant_info/pregnancy_pp_case_id"/>
+			<bind nodeset="/data/load_infant_info/pregnancy_pp_case_open" calculate="if(count(instance('casedb')/casedb/case[@case_id = /data/load_infant_info/pregnancy_pp_case_id][@status = 'open'][@case_type = &quot;pregnancy_pp&quot;]) = 0, &quot;no&quot;, &quot;yes&quot;)"/>
+			<bind nodeset="/data/load_infant_info/other_infant_case_open" relevant="/data/load_infant_info/pregnancy_pp_case_open = &quot;yes&quot;" calculate="if(count(instance('casedb')/casedb/case[@case_type = &quot;client&quot;][@status = 'open'][index/parent = /data/load_family_info/case_id][pregnancy_pp_case_id = /data/load_infant_info/pregnancy_pp_case_id]) = 1, &quot;no&quot;, &quot;yes&quot;)"/>
+			<bind nodeset="/data/load_infant_info/mother_case_id" relevant="/data/load_infant_info/pregnancy_pp_case_open = &quot;yes&quot;" calculate="instance('casedb')/casedb/case[@case_id = /data/load_infant_info/pregnancy_pp_case_id]/index/host"/>
+			<bind nodeset="/data/load_infant_info/mother_soft_close" relevant="/data/load_infant_info/pregnancy_pp_case_open = &quot;yes&quot;" calculate="instance('casedb')/casedb/case[@case_id = /data/load_infant_info/mother_case_id]/soft_close"/>
+			<bind nodeset="/data/locations"/>
+			<bind nodeset="/data/locations/health_post_id" calculate="instance('commcaresession')/session/user/data/commcare_location_id"/>
+			<bind nodeset="/data/locations/health_post" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/name"/>
+			<bind nodeset="/data/locations/health_center_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/@health-center_id"/>
+			<bind nodeset="/data/locations/health_center" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/name"/>
+			<bind nodeset="/data/locations/test_or_real" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/region_id" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/@region_id"/>
+			<bind nodeset="/data/locations/region" calculate="instance('locations')/locations/location[@id = /data/locations/region_id]/name"/>
+			<bind nodeset="/data/locations/zone_id" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/@zone_id"/>
+			<bind nodeset="/data/locations/zone" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/name"/>
+			<bind nodeset="/data/locations/woreda_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/@woreda_id"/>
+			<bind nodeset="/data/locations/woreda" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/name"/>
+			<bind nodeset="/data/locations/hp_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/hc_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="form_info-label">
+						<value>#### Filling this form will permanently remove a client from your client list! Remember, you can use the Update Client to change basic information, pregnancy status and next visit dates!</value>
+						<value form="markdown">#### Filling this form will permanently remove a client from your client list! Remember, you can use the Update Client to change basic information, pregnancy status and next visit dates!</value>
+					</text>
+					<text id="close_reason-label">
+						<value>Why do you want to remove this client?</value>
+					</text>
+					<text id="close_reason-mistake-label">
+						<value>I made a mistake</value>
+					</text>
+					<text id="close_reason-died-label">
+						<value>The client has died</value>
+					</text>
+					<text id="close_reason-moved-label">
+						<value>The client moved out of the area</value>
+					</text>
+					<text id="close_reason-other-label">
+						<value>Other</value>
+					</text>
+					<text id="close_reason_other-label">
+						<value>Why are you removing this client?</value>
+					</text>
+					<text id="mistake_info-label">
+						<value>What kind of mistake did you make?</value>
+					</text>
+					<text id="mistake_info-test_client-label">
+						<value>I was testing the app with a client that isn't real</value>
+					</text>
+					<text id="mistake_info-duplicate-label">
+						<value>This is the duplicate of a client already on the list</value>
+					</text>
+					<text id="mistake_info-info_mistake-label">
+						<value>I made a mistake on basic client details</value>
+					</text>
+					<text id="mistake_info-other-label">
+						<value>Other</value>
+					</text>
+					<text id="client_death/fill_pnc-label">
+						<value>Please fill out the PNC form to document both the mother and infant's status.</value>
+					</text>
+					<text id="client_death/death_date-label">
+						<value>What is the client's date of death?</value>
+					</text>
+					<text id="client_death/death_maternal-label">
+						<value>Was the reason for death related to pregnancy or childbirth?</value>
+					</text>
+					<text id="client_death/death_maternal-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="client_death/death_maternal-no-label">
+						<value>No</value>
+					</text>
+					<text id="client_death/death_location-label">
+						<value>What was the death location?</value>
+					</text>
+					<text id="client_death/death_location-hospital-label">
+						<value>Primary Hospital</value>
+					</text>
+					<text id="client_death/death_location-health_center-label">
+						<value>Health Center</value>
+					</text>
+					<text id="client_death/death_location-health_post-label">
+						<value>Health Post</value>
+					</text>
+					<text id="client_death/death_location-community-label">
+						<value>Home / Community</value>
+					</text>
+					<text id="client_death/death_location-en_route_hc-label">
+						<value>Route or on the way to the health center / hospital</value>
+					</text>
+					<text id="client_death/death_location-en_route_hp-label">
+						<value>Route or on the way to the health post</value>
+					</text>
+					<text id="client_death/death_location-other_clinic-label">
+						<value>Clinic</value>
+					</text>
+					<text id="client_death/fill_pregnancy_outcome-label">
+						<value>Please fill out the Pregnancy Outcome form to document the results of this pregnancy.</value>
+					</text>
+					<text id="confirm_close-label">
+						<value>Are you sure you want to remove <output value="/data/load_client_info/client_name"/> from your phone permanently?</value>
+					</text>
+					<text id="confirm_close-no-label">
+						<value>No</value>
+					</text>
+					<text id="confirm-label">
+						<value><output value="/data/load_client_info/client_name"/> will be removed from your phone.</value>
+					</text>
+					<text id="confirm_not_removed-label">
+						<value>The file for <output value="/data/load_client_info/client_name"/> will NOT be deleted and will remain on your phone.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="form_info-label">
+						<value>#### &#4845;&#4613; &#4677;&#4933; &#4632;&#4633;&#4619;&#4725; &#4840;&#4723;&#4779;&#4634;&#4811;&#4757; &#4632;&#4648;&#4867; &#4776;&#4723;&#4779;&#4634; &#4635;&#4613;&#4848;&#4653;  &#4896;&#4677;&#4621;&#4622; &#4843;&#4896;&#4943;&#4621; !&#4632;&#4656;&#4648;&#4723;&#4810; &#4840;&#4723;&#4779;&#4634; &#4632;&#4648;&#4867;&#4963;&#4840;&#4773;&#4653;&#4877;&#4829;&#4755; &#4609;&#4756;&#4723; &#4808;&#4845;&#4637; &#4672;&#4899;&#4845; &#4840;&#4672;&#4896;&#4654; &#4672;&#4757; &#4616;&#4632;&#4672;&#4840;&#4653; &#4840;&#4723;&#4779;&#4634; &#4635;&#4613;&#4848;&#4653; &#4635;&#4667;&#4667;&#4621; &#4840;&#4634;&#4616;&#4813;&#4757; &#4632;&#4896;&#4672;&#4638; &#4768;&#4845;&#4653;&#4657;!</value>
+						<value form="markdown">#### &#4845;&#4613; &#4677;&#4933; &#4632;&#4633;&#4619;&#4725; &#4840;&#4723;&#4779;&#4634;&#4811;&#4757; &#4632;&#4648;&#4867; &#4776;&#4723;&#4779;&#4634; &#4635;&#4613;&#4848;&#4653;  &#4896;&#4677;&#4621;&#4622; &#4843;&#4896;&#4943;&#4621; !&#4632;&#4656;&#4648;&#4723;&#4810; &#4840;&#4723;&#4779;&#4634; &#4632;&#4648;&#4867;&#4963;&#4840;&#4773;&#4653;&#4877;&#4829;&#4755; &#4609;&#4756;&#4723; &#4808;&#4845;&#4637; &#4672;&#4899;&#4845; &#4840;&#4672;&#4896;&#4654; &#4672;&#4757; &#4616;&#4632;&#4672;&#4840;&#4653; &#4840;&#4723;&#4779;&#4634; &#4635;&#4613;&#4848;&#4653; &#4635;&#4667;&#4667;&#4621; &#4840;&#4634;&#4616;&#4813;&#4757; &#4632;&#4896;&#4672;&#4638; &#4768;&#4845;&#4653;&#4657;!</value>
+					</text>
+					<text id="close_reason-label">
+						<value>&#4840;&#4723;&#4779;&#4634;&#4811;&#4757; &#4632;&#4648;&#4867;&#4632;&#4656;&#4648;&#4829; &#4616;&#4637;&#4757; &#4768;&#4661;&#4936;&#4616;&#4872;&#4961;</value>
+					</text>
+					<text id="close_reason-mistake-label">
+						<value>&#4704;&#4661;&#4613;&#4720;&#4725; &#4632;&#4829;&#4877;&#4709;&#4843;&#4723;&#4616;&#4609;</value>
+					</text>
+					<text id="close_reason-died-label">
+						<value>&#4638;&#4723;&#4616;&#4733;</value>
+					</text>
+					<text id="close_reason-moved-label">
+						<value>&#4720;&#4824;&#4811;&#4813;&#4651;&#4616;&#4733;</value>
+					</text>
+					<text id="close_reason-other-label">
+						<value>&#4620;&#4622;&#4733;</value>
+					</text>
+					<text id="close_reason_other-label">
+						<value>&#4616;&#4637;&#4757; &#4845;&#4730; &#4720;&#4872;&#4621;&#4875;&#4845; &#4768;&#4896;&#4939;&#4667;&#4725;?</value>
+					</text>
+					<text id="mistake_info-label">
+						<value>&#4637;&#4757; &#4768;&#4845;&#4752;&#4725; &#4661;&#4613;&#4720;&#4725; &#4752;&#4813; &#4840;&#4656;&#4651;&#4669;&#4813;?</value>
+					</text>
+					<text id="mistake_info-test_client-label">
+						<value>&#4768;&#4949;&#4621;&#4780;&#4669;&#4753; &#4725;&#4781;&#4781;&#4616;&#4763; &#4843;&#4621;&#4614;&#4752;&#4733; &#4723;&#4779;&#4634; &#4704;&#4632;&#4896;&#4672;&#4637;  &#4638;&#4781;&#4652;&#4811;&#4616;&#4609;</value>
+					</text>
+					<text id="mistake_info-duplicate-label">
+						<value>&#4845;&#4613; &#4853;&#4877;&#4877;&#4638;&#4669; &#4829;&#4653;&#4829;&#4653; &#4813;&#4661;&#4901;  &#4843;&#4616;&#4733;&#4813;&#4757; &#4723;&#4779;&#4634; &#4840;&#4634;&#4843;&#4659;&#4845; &#4752;&#4813;</value>
+					</text>
+					<text id="mistake_info-info_mistake-label">
+						<value>&#4704;&#4632;&#4656;&#4651;&#4723;&#4810; &#4840;&#4723;&#4779;&#4634; &#4632;&#4648;&#4867; &#4845;&#4824;&#4725; &#4619;&#4845; &#4661;&#4613;&#4720;&#4725; &#4656;&#4653;&#4731;&#4616;&#4609;</value>
+					</text>
+					<text id="mistake_info-other-label">
+						<value>&#4616;&#4620;&#4619;</value>
+					</text>
+					<text id="client_death/fill_pnc-label">
+						<value>&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4661;&#4616; &#4773;&#4755;&#4725; &#4773;&#4755; &#4621;&#4869; &#4609;&#4756;&#4723; &#4768;&#4661;&#4936;&#4619;&#4874;&#4813;&#4757; &#4632;&#4648;&#4867; &#4616;&#4632;&#4843;&#4829; &#4840;&#4853;&#4613;&#4648;-&#4808;&#4618;&#4853; &#4677;&#4933; &#4845;&#4638;&#4619; &#4961;&#4961;</value>
+					</text>
+					<text id="client_death/death_date-label">
+						<value>&#4723;&#4779;&#4634;&#4811; &#4840;&#4638;&#4720;&#4733;&#4704;&#4725; &#4672;&#4757; ?</value>
+					</text>
+					<text id="client_death/death_maternal-label">
+						<value>&#4840;&#4638;&#4720;&#4733;&#4704;&#4725; &#4637;&#4781;&#4757;&#4843;&#4725; &#4776;&#4773;&#4653;&#4877;&#4829;&#4755; &#4808;&#4845;&#4637; &#4776;&#4808;&#4618;&#4853; &#4875;&#4653; &#4704;&#4720;&#4843;&#4843;&#4824; &#4637;&#4781;&#4757;&#4843;&#4725; &#4752;&#4813;?</value>
+					</text>
+					<text id="client_death/death_maternal-yes-label">
+						<value>&#4768;&#4814;</value>
+					</text>
+					<text id="client_death/death_maternal-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="client_death/death_location-label">
+						<value>&#4840;&#4638;&#4720;&#4733;&#4704;&#4725; &#4710;&#4723; &#4840;&#4725; &#4752;&#4704;&#4653;?</value>
+					</text>
+					<text id="client_death/death_location-hospital-label">
+						<value>&#4840;&#4808;&#4616;&#4848;&#4733;&#4704;&#4725; &#4710;&#4723; &#4840;&#4632;&#4864;&#4632;&#4650;&#4843; &#4848;&#4648;&#4867; &#4614;&#4661;&#4946;&#4723;&#4621;</value>
+					</text>
+					<text id="client_death/death_location-health_center-label">
+						<value>&#4900;&#4755; &#4899;&#4706;&#4843;</value>
+					</text>
+					<text id="client_death/death_location-health_post-label">
+						<value>&#4900;&#4755; &#4780;&#4619;</value>
+					</text>
+					<text id="client_death/death_location-community-label">
+						<value>&#4708;&#4725; &#4813;&#4661;&#4901;</value>
+					</text>
+					<text id="client_death/death_location-en_route_hc-label">
+						<value>&#4808;&#4848; &#4650;&#4936;&#4651;&#4621; &#4900;&#4755; &#4899;&#4706;&#4843; &#4808;&#4845;&#4637; &#4614;&#4661;&#4946;&#4723;&#4621; &#4704;&#4632;&#4612;&#4853; &#4619;&#4845; &#4773;&#4843;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="client_death/death_location-en_route_hp-label">
+						<value>&#4808;&#4848; &#4650;&#4936;&#4651;&#4621; &#4900;&#4755; &#4780;&#4619; &#4704;&#4632;&#4612;&#4853; &#4619;&#4845; &#4773;&#4843;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="client_death/death_location-other_clinic-label">
+						<value>&#4781;&#4618;&#4754;&#4781;</value>
+					</text>
+					<text id="client_death/fill_pregnancy_outcome-label">
+						<value>&#4840;&#4773;&#4653;&#4877;&#4829;&#4755; &#4813;&#4900;&#4721;&#4757; &#4704;&#4656;&#4752;&#4853; &#4635;&#4661;&#4672;&#4632;&#4901; &#4661;&#4616;&#4634;&#4843;&#4661;&#4936;&#4621;&#4877;&#4963; &#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4773;&#4653;&#4877;&#4829;&#4755; &#4813;&#4900;&#4725; &#4677;&#4933; &#4845;&#4638;&#4619; &#4961;&#4961;</value>
+					</text>
+					<text id="confirm_close-label">
+						<value>&#4840;&#4723;&#4779;&#4634;&#4811;&#4757; &#4632;&#4648;&#4867; &#4776;&#4638;&#4707;&#4845;&#4621; &#4619;&#4845; &#4632;&#4656;&#4648;&#4829; &#4725;&#4936;&#4621;&#4874;&#4843;&#4616;&#4669; <output value="/data/load_client_info/client_name"/></value>
+					</text>
+					<text id="confirm_close-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="confirm-label">
+						<value><output value="/data/load_client_info/client_name"/> &#4632;&#4648;&#4867; &#4776;&#4638;&#4707;&#4845;&#4621; &#4619;&#4845; &#4845;&#4656;&#4648;&#4827;&#4621;&#4961;</value>
+					</text>
+					<text id="confirm_not_removed-label">
+						<value>&#4840;&#4723;&#4779;&#4634; &#4632;&#4648;&#4867; <output value="/data/load_client_info/client_name"/> &#4776;&#4638;&#4707;&#4845;&#4621; &#4619;&#4845; &#4845;&#4656;&#4648;&#4829;&#4637;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="form_info-label">
+						<value>#### &#4773;&#4826; &#4677;&#4901;&#4818; &#4637;&#4637;&#4619;&#4773; &#4773;&#4723; &#4723;&#4627;&#4779;&#4634;&#4725; &#4779;&#4709; &#4773;&#4722; &#4755;&#4845; &#4723;&#4627;&#4776;&#4637;&#4722; &#4829;&#4653;&#4829;&#4653; &#4901;&#4941;&#4774; &#4773;&#4841;! &#4768;&#4661;&#4723;&#4813;&#4658;,&#4632;&#4656;&#4648;&#4723;&#4810; &#4755;&#4845; &#4723;&#4627;&#4779;&#4634;&#4725; &#4632;&#4648;&#4851;&#4773;&#4723; , &#4709;&#4827;&#4821;&#4707; &#4901;&#4757;&#4658; &#4848;&#4648;&#4763;  &#4773;&#4755; &#4672;&#4931;&#4618; &#4694;&#4934;&#4654;&#4723;&#4725; &#4627;&#4704;&#4652;&#4723; &#4757;&#4637;&#4677;&#4843;&#4653; &#4773;&#4757;&#4720;&#4848;&#4618;&#4794;  &#4755;&#4845; &#4723;&#4627;&#4779;&#4635;&#4845; &#4632;&#4648;&#4851;&#4773;&#4723; &#4637;&#4637;&#4629;&#4843;&#4669; &#4829;&#4709;&#4621;  &#4781;&#4725;&#4901;&#4672;&#4634; &#4768;&#4616;&#4778; !</value>
+						<value form="markdown">#### &#4773;&#4826; &#4677;&#4901;&#4818; &#4637;&#4637;&#4619;&#4773; &#4773;&#4723; &#4723;&#4627;&#4779;&#4634;&#4725; &#4779;&#4709; &#4773;&#4722; &#4755;&#4845; &#4723;&#4627;&#4776;&#4637;&#4722; &#4829;&#4653;&#4829;&#4653; &#4901;&#4941;&#4774; &#4773;&#4841;! &#4768;&#4661;&#4723;&#4813;&#4658;,&#4632;&#4656;&#4648;&#4723;&#4810; &#4755;&#4845; &#4723;&#4627;&#4779;&#4634;&#4725; &#4632;&#4648;&#4851;&#4773;&#4723; , &#4709;&#4827;&#4821;&#4707; &#4901;&#4757;&#4658; &#4848;&#4648;&#4763;  &#4773;&#4755; &#4672;&#4931;&#4618; &#4694;&#4934;&#4654;&#4723;&#4725; &#4627;&#4704;&#4652;&#4723; &#4757;&#4637;&#4677;&#4843;&#4653; &#4773;&#4757;&#4720;&#4848;&#4618;&#4794;  &#4755;&#4845; &#4723;&#4627;&#4779;&#4635;&#4845; &#4632;&#4648;&#4851;&#4773;&#4723; &#4637;&#4637;&#4629;&#4843;&#4669; &#4829;&#4709;&#4621;  &#4781;&#4725;&#4901;&#4672;&#4634; &#4768;&#4616;&#4778; !</value>
+					</text>
+					<text id="close_reason-label">
+						<value>&#4755;&#4845; &#4629;&#4633;&#4637; &#4632;&#4648;&#4851;&#4773;&#4723; &#4637;&#4901;&#4939;&#4773; &#4757;&#4637;&#4757;&#4723;&#4845; &#4768;&#4853;&#4618;&#4841;</value>
+					</text>
+					<text id="close_reason-mistake-label">
+						<value>&#4876;&#4875; &#4656;&#4650;&#4624;</value>
+					</text>
+					<text id="close_reason-died-label">
+						<value>&#4638;&#4845;&#4723;</value>
+					</text>
+					<text id="close_reason-moved-label">
+						<value>&#4720;&#4827;&#4810;&#4651;</value>
+					</text>
+					<text id="close_reason-other-label">
+						<value>&#4779;&#4618;&#4773;</value>
+					</text>
+					<text id="close_reason_other-label">
+						<value>&#4757;&#4637;&#4757;&#4723;&#4845; &#4770;&#4794; &#4773;&#4827; &#4723;&#4627;&#4779;&#4634;&#4725; &#4768;&#4901;&#4938;&#4770;&#4797;&#4843;?</value>
+					</text>
+					<text id="mistake_info-label">
+						<value>&#4773;&#4757;&#4723;&#4845; &#4819;&#4845;&#4752;&#4725; &#4876;&#4875; &#4773;&#4794; &#4656;&#4653;&#4629;&#4794;?</value>
+					</text>
+					<text id="mistake_info-test_client-label">
+						<value>&#4725;&#4797;&#4776;&#4616;&#4763; &#4709;&#4824;&#4845;&#4782;&#4752;&#4725; &#4723;&#4627;&#4779;&#4634;&#4725; &#4773;&#4722; &#4768;&#4949;&#4621;&#4780;&#4669;&#4757; &#4845;&#4637;&#4781;&#4654; &#4752;&#4845;&#4648;</value>
+					</text>
+					<text id="mistake_info-duplicate-label">
+						<value>&#4773;&#4825;&#4845; &#4768;&#4709;&#4722; &#4829;&#4653;&#4829;&#4653; &#4824;&#4622;  &#4723;&#4627;&#4779;&#4634;&#4722; &#4829;&#4720;&#4848;&#4875;&#4872;&#4632; &#4773;&#4841;.</value>
+					</text>
+					<text id="mistake_info-info_mistake-label">
+						<value>&#4876;&#4875; &#4829;&#4656;&#4653;&#4627;&#4793; &#4768;&#4709; &#4632;&#4656;&#4648;&#4723;&#4810; &#4829;&#4798;&#4752; &#4755;&#4845; &#4723;&#4627;&#4779;&#4634;&#4725; &#4632;&#4648;&#4851;&#4773;&#4723; &#4773;&#4841;.</value>
+					</text>
+					<text id="mistake_info-other-label">
+						<value>&#4795;&#4618;&#4773;</value>
+					</text>
+					<text id="client_death/fill_pnc-label">
+						<value>&#4704;&#4845;&#4824;&#4774;&#4637; &#4709;&#4827;&#4821;&#4707; &#4755;&#4845; &#4768;&#4854;&#4757; &#4678;&#4621;&#4819;&#4757; &#4777;&#4752;&#4723;&#4725; &#4632;&#4648;&#4851;&#4771;&#4723; &#4757;&#4637;&#4627;&#4829; &#4853;&#4613;&#4648; &#4808;&#4618;&#4853; &#4677;&#4901;&#4818; &#4845;&#4637;&#4621;&#4769;</value>
+					</text>
+					<text id="client_death/death_date-label">
+						<value>&#4629;&#4637;&#4637;&#4722; &#4829;&#4638;&#4720;&#4725;&#4617; &#4821;&#4616;&#4725;</value>
+					</text>
+					<text id="client_death/death_maternal-label">
+						<value>&#4637;&#4781;&#4757;&#4843;&#4725; &#4638;&#4725; &#4808;&#4618;&#4853; &#4808;&#4845; &#4637;&#4661;&#4769; &#4829;&#4720;&#4720;&#4627;&#4627;&#4824; &#4853;&#4841;</value>
+					</text>
+					<text id="client_death/death_maternal-yes-label">
+						<value>&#4773;&#4808;</value>
+					</text>
+					<text id="client_death/death_maternal-no-label">
+						<value>&#4768;&#4845;&#4782;&#4752;&#4757;</value>
+					</text>
+					<text id="client_death/death_location-label">
+						<value>&#4829;&#4638;&#4720;&#4725;&#4617; &#4710;&#4723;</value>
+					</text>
+					<text id="client_death/death_location-hospital-label">
+						<value>&#4829;&#4808;&#4616;&#4848;&#4725;&#4617; &#4755;&#4845; &#4632;&#4864;&#4632;&#4653;&#4843; &#4848;&#4648;&#4867; &#4614;&#4661;&#4946;&#4723;&#4621;</value>
+					</text>
+					<text id="client_death/death_location-health_center-label">
+						<value>&#4901;&#4821;&#4755; &#4899;&#4706;&#4843;</value>
+					</text>
+					<text id="client_death/death_location-health_post-label">
+						<value>&#4901;&#4821;&#4755; &#4780;&#4619;</value>
+					</text>
+					<text id="client_death/death_location-community-label">
+						<value>&#4768;&#4709;&#4872;&#4827;</value>
+					</text>
+					<text id="client_death/death_location-en_route_hc-label">
+						<value>&#4650;&#4936;&#4653; &#4720;&#4707;&#4610;&#4619;  &#4755;&#4709; &#4901;&#4821;&#4755; &#4899;&#4706;&#4843; &#4808;&#4845; &#4614;&#4661;&#4946;&#4723;&#4621; &#4768;&#4709; &#4632;&#4757;&#4872;&#4850;</value>
+					</text>
+					<text id="client_death/death_location-en_route_hp-label">
+						<value>&#4650;&#4936;&#4653; &#4720;&#4707;&#4610;&#4619;  &#4755;&#4709; &#4901;&#4821;&#4755; &#4780;&#4619; &#4768;&#4709; &#4632;&#4757;&#4872;&#4850;</value>
+					</text>
+					<text id="client_death/death_location-other_clinic-label">
+						<value>&#4781;&#4618;&#4754;&#4781;</value>
+					</text>
+					<text id="client_death/fill_pregnancy_outcome-label">
+						<value>&#4813;&#4933;&#4770;&#4725; &#4901;&#4757;&#4658; &#4709;&#4656;&#4752;&#4853; &#4781;&#4720;&#4627;&#4829; &#4661;&#4616;&#4824;&#4616;&#4814;&#4963; &#4704;&#4845;&#4824;&#4774;&#4637; &#4963; &#4755;&#4845; &#4901;&#4757;&#4658; &#4813;&#4933;&#4770;&#4725; &#4677;&#4901;&#4818; &#4845;&#4637;&#4621;&#4769;&#4961;&#4961;</value>
+					</text>
+					<text id="confirm_close-label">
+						<value>&#4755;&#4845; &#4720;&#4627;&#4779;&#4634;&#4725; &#4632;&#4648;&#4851;&#4773;&#4723; &#4779;&#4709; &#4638;&#4707;&#4845; &#4781;&#4896;&#4941;&#4773; &#4725;&#4848;&#4618; &#4850;&#4778; <output value="/data/load_client_info/client_name"/></value>
+					</text>
+					<text id="confirm_close-no-label">
+						<value>&#4773;&#4845;&#4848;&#4621;&#4757;</value>
+					</text>
+					<text id="confirm-label">
+						<value><output value="/data/load_client_info/client_name"/>  &#4632;&#4648;&#4851;&#4771; &#4779;&#4709; &#4638;&#4707;&#4845;&#4621; &#4845;&#4901;&#4939;&#4773;&#4961;</value>
+					</text>
+					<text id="confirm_not_removed-label">
+						<value>&#4755;&#4845; &#4629;&#4633;&#4637; &#4632;&#4648;&#4851;&#4773;&#4723; <output value="/data/load_client_info/client_name"/> &#4779;&#4709; &#4638;&#4707;&#4845;&#4621; &#4845;&#4656;&#4648;&#4829;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4677;&#4901;&#4818; &#4633;&#4617;&#4773; &#4757;&#4633;&#4617;&#4773; &#4829;&#4720;&#4635;&#4616;&#4774; &#4961;&#4961;
+
+&#4677;&#4901;&#4818; &#4757;&#4637;&#4621;&#4768;&#4781; &#4709;&#4619;&#4821;&#4616;&#4811;&#4845; &#4872;&#4933;  &#4757;&#4840;&#4635;&#4757; &#4824;&#4622; &#4678;&#4931;&#4621; &#4637;&#4621;&#4781;&#4725; &#4720;&#4931;&#4819;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="form_info-label">
+						<value>#### Filling this form will permanently remove a client from your client list! Remember, you can use the Update Client to change basic information, pregnancy status and next visit dates!</value>
+						<value form="markdown">#### Filling this form will permanently remove a client from your client list! Remember, you can use the Update Client to change basic information, pregnancy status and next visit dates!</value>
+					</text>
+					<text id="close_reason-label">
+						<value>Why do you want to remove this client?</value>
+					</text>
+					<text id="close_reason-mistake-label">
+						<value>I made a mistake</value>
+					</text>
+					<text id="close_reason-died-label">
+						<value>The client has died</value>
+					</text>
+					<text id="close_reason-moved-label">
+						<value>The client moved out of the area</value>
+					</text>
+					<text id="close_reason-other-label">
+						<value>Other</value>
+					</text>
+					<text id="close_reason_other-label">
+						<value>Why are you removing this client?</value>
+					</text>
+					<text id="mistake_info-label">
+						<value>What kind of mistake did you make?</value>
+					</text>
+					<text id="mistake_info-test_client-label">
+						<value>I was testing the app with a client that isn't real</value>
+					</text>
+					<text id="mistake_info-duplicate-label">
+						<value>This is the duplicate of a client already on the list</value>
+					</text>
+					<text id="mistake_info-info_mistake-label">
+						<value>I made a mistake on basic client details</value>
+					</text>
+					<text id="mistake_info-other-label">
+						<value>Other</value>
+					</text>
+					<text id="client_death/fill_pnc-label">
+						<value>Please fill out the PNC form to document both the mother and infant's status.</value>
+					</text>
+					<text id="client_death/death_date-label">
+						<value>What is the client's date of death?</value>
+					</text>
+					<text id="client_death/death_maternal-label">
+						<value>Was the reason for death related to pregnancy or childbirth?</value>
+					</text>
+					<text id="client_death/death_maternal-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="client_death/death_maternal-no-label">
+						<value>No</value>
+					</text>
+					<text id="client_death/death_location-label">
+						<value>What was the death location?</value>
+					</text>
+					<text id="client_death/death_location-hospital-label">
+						<value>Primary Hospital</value>
+					</text>
+					<text id="client_death/death_location-health_center-label">
+						<value>Health Center</value>
+					</text>
+					<text id="client_death/death_location-health_post-label">
+						<value>Health Post</value>
+					</text>
+					<text id="client_death/death_location-community-label">
+						<value>Home / Community</value>
+					</text>
+					<text id="client_death/death_location-en_route_hc-label">
+						<value>Route or on the way to the health center / hospital</value>
+					</text>
+					<text id="client_death/death_location-en_route_hp-label">
+						<value>Route or on the way to the health post</value>
+					</text>
+					<text id="client_death/death_location-other_clinic-label">
+						<value>Clinic</value>
+					</text>
+					<text id="client_death/fill_pregnancy_outcome-label">
+						<value>Please fill out the Pregnancy Outcome form to document the results of this pregnancy.</value>
+					</text>
+					<text id="confirm_close-label">
+						<value>Are you sure you want to remove <output value="/data/load_client_info/client_name"/> from your phone permanently?</value>
+					</text>
+					<text id="confirm_close-no-label">
+						<value>No</value>
+					</text>
+					<text id="confirm-label">
+						<value><output value="/data/load_client_info/client_name"/> will be removed from your phone.</value>
+					</text>
+					<text id="confirm_not_removed-label">
+						<value>The file for <output value="/data/load_client_info/client_name"/> will NOT be deleted and will remain on your phone.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki guutuma guututti guutame unka kan erguuf malattoo magarsaa kan kara bukkee harka mirgaa olii jiru xuqii.</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/load_client_info/client_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/case_name"/><setvalue event="xforms-ready" ref="/data/load_client_info/dob" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/dob"/><setvalue event="xforms-ready" ref="/data/load_infant_info/pregnancy_pp_case_id" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/pregnancy_pp_case_id"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_load_client_1/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_load_client_1/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_load_client_1" nodeset="/data/case_load_client_1/case/@case_id"/><bind calculate="/data/close_case/close_reason" nodeset="/data/case_load_client_1/case/update/close_reason" relevant="count(/data/close_case/close_reason) &gt; 0"/><bind calculate="/data/close_case/death_date" nodeset="/data/case_load_client_1/case/update/death_date" relevant="count(/data/close_case/death_date) &gt; 0"/><bind calculate="/data/ethiopian_dates/death_date_eth" nodeset="/data/case_load_client_1/case/update/death_date_eth" relevant="count(/data/ethiopian_dates/death_date_eth) &gt; 0"/><bind calculate="/data/close_case/death_early_neonatal" nodeset="/data/case_load_client_1/case/update/death_early_neonatal" relevant="count(/data/close_case/death_early_neonatal) &gt; 0"/><bind calculate="/data/client_death/death_location" nodeset="/data/case_load_client_1/case/update/death_location" relevant="count(/data/client_death/death_location) &gt; 0"/><bind calculate="/data/close_case/death_maternal" nodeset="/data/case_load_client_1/case/update/death_maternal" relevant="count(/data/close_case/death_maternal) &gt; 0"/><bind calculate="/data/close_case/death_neonatal" nodeset="/data/case_load_client_1/case/update/death_neonatal" relevant="count(/data/close_case/death_neonatal) &gt; 0"/><bind calculate="/data/ethiopian_dates/death_report_month" nodeset="/data/case_load_client_1/case/update/death_report_month" relevant="count(/data/ethiopian_dates/death_report_month) &gt; 0"/><bind calculate="/data/ethiopian_dates/death_report_week" nodeset="/data/case_load_client_1/case/update/death_report_week" relevant="count(/data/ethiopian_dates/death_report_week) &gt; 0"/><bind calculate="/data/close_case/soft_close" nodeset="/data/case_load_client_1/case/update/soft_close" relevant="count(/data/close_case/soft_close) &gt; 0"/><bind nodeset="/data/case_load_client_1/case/close" relevant="/data/close_case/close_client_case = 'yes'"/><setvalue event="xforms-ready" ref="/data/load_family_info/house_gps" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_family_3]/house_gps"/><setvalue event="xforms-ready" ref="/data/load_family_info/family_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_family_3]/case_name"/><setvalue event="xforms-ready" ref="/data/load_family_info/village_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_family_3]/village_name"/><setvalue event="xforms-ready" ref="/data/load_family_info/family_number" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_family_3]/family_number"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_autoload_family_3/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_autoload_family_3/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_autoload_family_3" nodeset="/data/case_autoload_family_3/case/@case_id"/><bind calculate="/data/locations/hc_facility_code" nodeset="/data/case_autoload_family_3/case/update/hc_facility_code" relevant="count(/data/locations/hc_facility_code) &gt; 0"/><bind calculate="/data/locations/health_center" nodeset="/data/case_autoload_family_3/case/update/health_center" relevant="count(/data/locations/health_center) &gt; 0"/><bind calculate="/data/locations/health_center_id" nodeset="/data/case_autoload_family_3/case/update/health_center_id" relevant="count(/data/locations/health_center_id) &gt; 0"/><bind calculate="/data/locations/health_post" nodeset="/data/case_autoload_family_3/case/update/health_post" relevant="count(/data/locations/health_post) &gt; 0"/><bind calculate="/data/locations/health_post_id" nodeset="/data/case_autoload_family_3/case/update/health_post_id" relevant="count(/data/locations/health_post_id) &gt; 0"/><bind calculate="/data/locations/hp_facility_code" nodeset="/data/case_autoload_family_3/case/update/hp_facility_code" relevant="count(/data/locations/hp_facility_code) &gt; 0"/><bind calculate="/data/locations/region" nodeset="/data/case_autoload_family_3/case/update/region" relevant="count(/data/locations/region) &gt; 0"/><bind calculate="/data/locations/region_id" nodeset="/data/case_autoload_family_3/case/update/region_id" relevant="count(/data/locations/region_id) &gt; 0"/><bind calculate="/data/locations/woreda" nodeset="/data/case_autoload_family_3/case/update/woreda" relevant="count(/data/locations/woreda) &gt; 0"/><bind calculate="/data/locations/woreda_id" nodeset="/data/case_autoload_family_3/case/update/woreda_id" relevant="count(/data/locations/woreda_id) &gt; 0"/><bind calculate="/data/locations/zone" nodeset="/data/case_autoload_family_3/case/update/zone" relevant="count(/data/locations/zone) &gt; 0"/><bind calculate="/data/locations/zone_id" nodeset="/data/case_autoload_family_3/case/update/zone_id" relevant="count(/data/locations/zone_id) &gt; 0"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<trigger ref="/data/form_info" appearance="minimal">
+			<label ref="jr:itext('form_info-label')"/>
+		</trigger>
+		<select1 ref="/data/close_reason">
+			<label ref="jr:itext('close_reason-label')"/>
+			<item>
+				<label ref="jr:itext('close_reason-mistake-label')"/>
+				<value>mistake</value>
+			</item>
+			<item>
+				<label ref="jr:itext('close_reason-died-label')"/>
+				<value>died</value>
+			</item>
+			<item>
+				<label ref="jr:itext('close_reason-moved-label')"/>
+				<value>moved</value>
+			</item>
+			<item>
+				<label ref="jr:itext('close_reason-other-label')"/>
+				<value>other</value>
+			</item>
+		</select1>
+		<input ref="/data/close_reason_other">
+			<label ref="jr:itext('close_reason_other-label')"/>
+		</input>
+		<select1 ref="/data/mistake_info">
+			<label ref="jr:itext('mistake_info-label')"/>
+			<item>
+				<label ref="jr:itext('mistake_info-test_client-label')"/>
+				<value>test_client</value>
+			</item>
+			<item>
+				<label ref="jr:itext('mistake_info-duplicate-label')"/>
+				<value>duplicate</value>
+			</item>
+			<item>
+				<label ref="jr:itext('mistake_info-info_mistake-label')"/>
+				<value>info_mistake</value>
+			</item>
+			<item>
+				<label ref="jr:itext('mistake_info-other-label')"/>
+				<value>other</value>
+			</item>
+		</select1>
+		<input ref="/data/mistake_other">
+			<label ref="jr:itext('mistake_info-label')"/>
+		</input>
+		<group ref="/data/client_death">
+			<trigger ref="/data/client_death/fill_pnc" appearance="minimal">
+				<label ref="jr:itext('client_death/fill_pnc-label')"/>
+			</trigger>
+			<input ref="/data/client_death/death_date" appearance="ethiopian">
+				<label ref="jr:itext('client_death/death_date-label')"/>
+			</input>
+			<select1 ref="/data/client_death/death_maternal">
+				<label ref="jr:itext('client_death/death_maternal-label')"/>
+				<item>
+					<label ref="jr:itext('client_death/death_maternal-yes-label')"/>
+					<value>yes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('client_death/death_maternal-no-label')"/>
+					<value>no</value>
+				</item>
+			</select1>
+			<select1 ref="/data/client_death/death_location">
+				<label ref="jr:itext('client_death/death_location-label')"/>
+				<item>
+					<label ref="jr:itext('client_death/death_location-hospital-label')"/>
+					<value>hospital</value>
+				</item>
+				<item>
+					<label ref="jr:itext('client_death/death_location-health_center-label')"/>
+					<value>health_center</value>
+				</item>
+				<item>
+					<label ref="jr:itext('client_death/death_location-health_post-label')"/>
+					<value>health_post</value>
+				</item>
+				<item>
+					<label ref="jr:itext('client_death/death_location-community-label')"/>
+					<value>community</value>
+				</item>
+				<item>
+					<label ref="jr:itext('client_death/death_location-en_route_hc-label')"/>
+					<value>en_route_hc</value>
+				</item>
+				<item>
+					<label ref="jr:itext('client_death/death_location-en_route_hp-label')"/>
+					<value>en_route_hp</value>
+				</item>
+				<item>
+					<label ref="jr:itext('client_death/death_location-other_clinic-label')"/>
+					<value>other_clinic</value>
+				</item>
+			</select1>
+			<trigger ref="/data/client_death/fill_pregnancy_outcome" appearance="minimal">
+				<label ref="jr:itext('client_death/fill_pregnancy_outcome-label')"/>
+			</trigger>
+		</group>
+		<select1 ref="/data/confirm_close">
+			<label ref="jr:itext('confirm_close-label')"/>
+			<item>
+				<label ref="jr:itext('client_death/death_maternal-yes-label')"/>
+				<value>yes</value>
+			</item>
+			<item>
+				<label ref="jr:itext('confirm_close-no-label')"/>
+				<value>no</value>
+			</item>
+		</select1>
+		<trigger ref="/data/confirm" appearance="minimal">
+			<label ref="jr:itext('confirm-label')"/>
+		</trigger>
+		<trigger ref="/data/confirm_not_removed" appearance="minimal">
+			<label ref="jr:itext('confirm_not_removed-label')"/>
+		</trigger>
+		<group ref="/data/close_case">
+			<group ref="/data/close_case/close_mother_case"/>
+		</group>
+		<group ref="/data/ethiopian_dates"/>
+		<group ref="/data/load_family_info"/>
+		<group ref="/data/load_client_info"/>
+		<group ref="/data/load_pregnancy_pp_info"/>
+		<group ref="/data/load_infant_info"/>
+		<group ref="/data/locations"/>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

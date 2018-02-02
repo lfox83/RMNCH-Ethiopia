@@ -1,0 +1,196 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>Remove Family</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/B4D11EC4-658C-4A5F-BC02-922304DA71E3" uiVersion="1" version="3432" name="Remove Family">
+					<num_clients/>
+					<removal_not_allowed/>
+					<confirm_close/>
+					<confirm/>
+					<confirm_not_removed/>
+					<load_family_info>
+						<family_name/>
+						<family_number/>
+						<village_name/>
+						<house_gps/>
+					</load_family_info>
+					<locations>
+						<health_post_id/>
+						<health_post/>
+						<health_center_id/>
+						<health_center/>
+						<test_or_real/>
+						<region_id/>
+						<region/>
+						<zone_id/>
+						<zone/>
+						<woreda_id/>
+						<woreda/>
+						<hp_facility_code/>
+						<hc_facility_code/>
+					</locations>
+					<end_of_form/>
+				<case_load_family_0><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><update><hc_facility_code/><health_center/><health_center_id/><health_post/><health_post_id/><hp_facility_code/><region/><region_id/><woreda/><woreda_id/><zone/><zone_id/></update><close/></case></case_load_family_0><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="locations" src="jr://fixture/locations"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<instance src="jr://instance/casedb" id="casedb"/>
+			<bind nodeset="/data/num_clients" calculate="count(instance('casedb')/casedb/case[index/parent = instance('commcaresession')/session/data/case_id_load_family_0][@status = 'open'])"/>
+			<bind nodeset="/data/removal_not_allowed" relevant="/data/num_clients &gt; 0"/>
+			<bind nodeset="/data/confirm_close" relevant="not(/data/num_clients &gt; 0)" required="true()"/>
+			<bind nodeset="/data/confirm" relevant="/data/confirm_close = &quot;yes&quot;"/>
+			<bind nodeset="/data/confirm_not_removed" relevant="/data/confirm_close = 'no' or /data/num_clients &gt; 0"/>
+			<bind nodeset="/data/load_family_info"/>
+			<bind nodeset="/data/load_family_info/family_name"/>
+			<bind nodeset="/data/load_family_info/family_number"/>
+			<bind nodeset="/data/load_family_info/village_name"/>
+			<bind nodeset="/data/load_family_info/house_gps"/>
+			<bind nodeset="/data/locations"/>
+			<bind nodeset="/data/locations/health_post_id" calculate="instance('commcaresession')/session/user/data/commcare_location_id"/>
+			<bind nodeset="/data/locations/health_post" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/name"/>
+			<bind nodeset="/data/locations/health_center_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/@health-center_id"/>
+			<bind nodeset="/data/locations/health_center" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/name"/>
+			<bind nodeset="/data/locations/test_or_real" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/region_id" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/@region_id"/>
+			<bind nodeset="/data/locations/region" calculate="instance('locations')/locations/location[@id = /data/locations/region_id]/name"/>
+			<bind nodeset="/data/locations/zone_id" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/@zone_id"/>
+			<bind nodeset="/data/locations/zone" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/name"/>
+			<bind nodeset="/data/locations/woreda_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/@woreda_id"/>
+			<bind nodeset="/data/locations/woreda" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/name"/>
+			<bind nodeset="/data/locations/hp_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/hc_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="removal_not_allowed-label">
+						<value><output value="/data/load_family_info/family_name"/> still has <output value="/data/num_clients"/> clients assigned to it!  You may only remove families that have no patients.  You can move the current clients into another family using the **Reassign Client to Another Family** form.</value>
+						<value form="markdown"><output value="/data/load_family_info/family_name"/> still has <output value="/data/num_clients"/> clients assigned to it!  You may only remove families that have no patients.  You can move the current clients into another family using the **Reassign Client to Another Family** form.</value>
+					</text>
+					<text id="confirm_close-label">
+						<value>Are you sure you want to remove the family of <output value="/data/load_family_info/family_name"/> from your phone?</value>
+					</text>
+					<text id="confirm_close-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="confirm_close-no-label">
+						<value>No</value>
+					</text>
+					<text id="confirm-label">
+						<value><output value="/data/load_family_info/family_name"/> will be removed from your phone.</value>
+					</text>
+					<text id="confirm_not_removed-label">
+						<value>The file for <output value="/data/load_family_info/family_name"/> will NOT be deleted and will remain on your phone.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="removal_not_allowed-label">
+						<value><output value="/data/load_family_info/family_name"/> &#4773;&#4661;&#4776; &#4768;&#4609;&#4757; &#4768;&#4616; <output value="/data/num_clients"/> &#4723;&#4779;&#4634; &#4808;&#4848; &#4773;&#4826; &#4720;&#4632;&#4853;&#4707;&#4616;&#4733;!  &#4708;&#4720;&#4656;&#4709; &#4840;&#4620;&#4619;&#4728;&#4813; &#4708;&#4720;&#4656;&#4710;&#4733; &#4709;&#4731; &#4752;&#4813; &#4840;&#4637;&#4723;&#4896;&#4938;&#4813;&#4961;&#4961;  &#4768;&#4609;&#4757; &#4843;&#4616;&#4733;&#4813;&#4757; &#4723;&#4779;&#4634; **&#4723;&#4779;&#4634;&#4757; &#4808;&#4848; &#4620;&#4619; &#4708;&#4720;&#4656;&#4709; &#4635;&#4827;&#4808;&#4653;** &#4677;&#4933; &#4704;&#4632;&#4896;&#4672;&#4637; &#4808;&#4848; &#4620;&#4619; &#4708;&#4720;&#4656;&#4709; &#4635;&#4827;&#4808;&#4653;&#4961;&#4961;</value>
+						<value form="markdown"><output value="/data/load_family_info/family_name"/> &#4773;&#4661;&#4776; &#4768;&#4609;&#4757; &#4768;&#4616; <output value="/data/num_clients"/> &#4723;&#4779;&#4634; &#4808;&#4848; &#4773;&#4826; &#4720;&#4632;&#4853;&#4707;&#4616;&#4733;!  &#4708;&#4720;&#4656;&#4709; &#4840;&#4620;&#4619;&#4728;&#4813; &#4708;&#4720;&#4656;&#4710;&#4733; &#4709;&#4731; &#4752;&#4813; &#4840;&#4637;&#4723;&#4896;&#4938;&#4813;&#4961;&#4961;  &#4768;&#4609;&#4757; &#4843;&#4616;&#4733;&#4813;&#4757; &#4723;&#4779;&#4634; **&#4723;&#4779;&#4634;&#4757; &#4808;&#4848; &#4620;&#4619; &#4708;&#4720;&#4656;&#4709; &#4635;&#4827;&#4808;&#4653;** &#4677;&#4933; &#4704;&#4632;&#4896;&#4672;&#4637; &#4808;&#4848; &#4620;&#4619; &#4708;&#4720;&#4656;&#4709; &#4635;&#4827;&#4808;&#4653;&#4961;&#4961;</value>
+					</text>
+					<text id="confirm_close-label">
+						<value>&#4840;&#4708;&#4720;&#4656;&#4705;&#4757; &#4632;&#4648;&#4867; &#4776;&#4638;&#4707;&#4845;&#4621; &#4619;&#4845; &#4632;&#4656;&#4648;&#4829; &#4725;&#4936;&#4621;&#4874;&#4843;&#4616;&#4669; <output value="/data/load_family_info/family_name"/></value>
+					</text>
+					<text id="confirm_close-yes-label">
+						<value>&#4768;&#4814;</value>
+					</text>
+					<text id="confirm_close-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="confirm-label">
+						<value><output value="/data/load_family_info/family_name"/> &#4632;&#4648;&#4867; &#4776;&#4638;&#4707;&#4845;&#4621; &#4619;&#4845; &#4845;&#4656;&#4648;&#4827;&#4621;&#4961;</value>
+					</text>
+					<text id="confirm_not_removed-label">
+						<value>&#4840;&#4708;&#4720;&#4656;&#4705;&#4757; &#4632;&#4648;&#4867; <output value="/data/load_family_info/family_name"/> &#4776;&#4638;&#4707;&#4845;&#4621; &#4619;&#4845; &#4768;&#4845;&#4656;&#4648;&#4829;&#4637;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="removal_not_allowed-label">
+						<value><output value="/data/load_family_info/family_name"/> &#4773;&#4661;&#4776; &#4768;&#4609;&#4757; &#4768;&#4616; <output value="/data/num_clients"/> &#4629;&#4637;&#4637;&#4722; &#4755;&#4709;&#4826; &#4720;&#4632;&#4850;&#4707; &#4768;&#4619; &#4853;&#4843;!  &#4661;&#4853;&#4651; &#4824;&#4845;&#4709;&#4622;&#4637; &#4661;&#4853;&#4651; &#4850;&#4778; &#4720;&#4901;&#4941;&#4770;&#4961;&#4961;  &#4613;&#4826; &#4824;&#4619; &#4629;&#4637;&#4637;&#4722; **&#4629;&#4637;&#4637;&#4722; &#4755;&#4709; &#4779;&#4618;&#4773; &#4661;&#4853;&#4651; &#4637;&#4829;&#4811;&#4653;** &#4677;&#4901;&#4818; &#4709;&#4637;&#4901;&#4675;&#4637; &#4755;&#4709; &#4779;&#4618;&#4773; &#4661;&#4853;&#4651; &#4637;&#4829;&#4811;&#4653;&#4961;&#4961;</value>
+						<value form="markdown"><output value="/data/load_family_info/family_name"/> &#4773;&#4661;&#4776; &#4768;&#4609;&#4757; &#4768;&#4616; <output value="/data/num_clients"/> &#4629;&#4637;&#4637;&#4722; &#4755;&#4709;&#4826; &#4720;&#4632;&#4850;&#4707; &#4768;&#4619; &#4853;&#4843;!  &#4661;&#4853;&#4651; &#4824;&#4845;&#4709;&#4622;&#4637; &#4661;&#4853;&#4651; &#4850;&#4778; &#4720;&#4901;&#4941;&#4770;&#4961;&#4961;  &#4613;&#4826; &#4824;&#4619; &#4629;&#4637;&#4637;&#4722; **&#4629;&#4637;&#4637;&#4722; &#4755;&#4709; &#4779;&#4618;&#4773; &#4661;&#4853;&#4651; &#4637;&#4829;&#4811;&#4653;** &#4677;&#4901;&#4818; &#4709;&#4637;&#4901;&#4675;&#4637; &#4755;&#4709; &#4779;&#4618;&#4773; &#4661;&#4853;&#4651; &#4637;&#4829;&#4811;&#4653;&#4961;&#4961;</value>
+					</text>
+					<text id="confirm_close-label">
+						<value>&#4755;&#4845; &#4661;&#4853;&#4651; &#4632;&#4648;&#4851;&#4773;&#4723; &#4779;&#4709; &#4638;&#4707;&#4845;&#4621; &#4781;&#4661;&#4648;&#4829; &#4725;&#4848;&#4618; &#4850;&#4778; <output value="/data/load_family_info/family_name"/></value>
+					</text>
+					<text id="confirm_close-yes-label">
+						<value>&#4773;&#4808;</value>
+					</text>
+					<text id="confirm_close-no-label">
+						<value>&#4768;&#4845;&#4782;&#4752;&#4757;</value>
+					</text>
+					<text id="confirm-label">
+						<value><output value="/data/load_family_info/family_name"/> &#4632;&#4648;&#4851;&#4773;&#4723; &#4779;&#4709; &#4638;&#4707;&#4845;&#4621; &#4845;&#4656;&#4648;&#4829;&#4961;</value>
+					</text>
+					<text id="confirm_not_removed-label">
+						<value>&#4755;&#4845; &#4661;&#4853;&#4651; &#4632;&#4648;&#4851;&#4771; <output value="/data/load_family_info/family_name"/> &#4776;&#4709; &#4638;&#4707;&#4845;&#4621; &#4768;&#4845;&#4661;&#4648;&#4829;&#4757;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4677;&#4901;&#4818; &#4633;&#4617;&#4773; &#4757;&#4633;&#4617;&#4773; &#4829;&#4720;&#4635;&#4616;&#4774; &#4961;&#4961;
+
+&#4677;&#4901;&#4818; &#4757;&#4637;&#4621;&#4768;&#4781; &#4709;&#4619;&#4821;&#4616;&#4811;&#4845; &#4872;&#4933;  &#4757;&#4840;&#4635;&#4757; &#4824;&#4622; &#4678;&#4931;&#4621; &#4637;&#4621;&#4781;&#4725; &#4720;&#4931;&#4819;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="removal_not_allowed-label">
+						<value><output value="/data/load_family_info/family_name"/> still has <output value="/data/num_clients"/> clients assigned to it!  You may only remove families that have no patients.  You can move the current clients into another family using the **Reassign Client to Another Family** form.</value>
+						<value form="markdown"><output value="/data/load_family_info/family_name"/> still has <output value="/data/num_clients"/> clients assigned to it!  You may only remove families that have no patients.  You can move the current clients into another family using the **Reassign Client to Another Family** form.</value>
+					</text>
+					<text id="confirm_close-label">
+						<value>Are you sure you want to remove the family of <output value="/data/load_family_info/family_name"/> from your phone?</value>
+					</text>
+					<text id="confirm_close-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="confirm_close-no-label">
+						<value>No</value>
+					</text>
+					<text id="confirm-label">
+						<value><output value="/data/load_family_info/family_name"/> will be removed from your phone.</value>
+					</text>
+					<text id="confirm_not_removed-label">
+						<value>Faayiliin maatii <output value="/data/load_family_info/family_name"/> bilbilaa kee irraa baduu hin qabu.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki guutuma guututti guutame unka kan erguuf malattoo magarsaa kan kara bukkee harka mirgaa olii jiru xuqii.</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/load_family_info/house_gps" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_family_0]/house_gps"/><setvalue event="xforms-ready" ref="/data/load_family_info/family_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_family_0]/case_name"/><setvalue event="xforms-ready" ref="/data/load_family_info/village_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_family_0]/village_name"/><setvalue event="xforms-ready" ref="/data/load_family_info/family_number" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_family_0]/family_number"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_load_family_0/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_load_family_0/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_load_family_0" nodeset="/data/case_load_family_0/case/@case_id"/><bind calculate="/data/locations/hc_facility_code" nodeset="/data/case_load_family_0/case/update/hc_facility_code" relevant="count(/data/locations/hc_facility_code) &gt; 0"/><bind calculate="/data/locations/health_center" nodeset="/data/case_load_family_0/case/update/health_center" relevant="count(/data/locations/health_center) &gt; 0"/><bind calculate="/data/locations/health_center_id" nodeset="/data/case_load_family_0/case/update/health_center_id" relevant="count(/data/locations/health_center_id) &gt; 0"/><bind calculate="/data/locations/health_post" nodeset="/data/case_load_family_0/case/update/health_post" relevant="count(/data/locations/health_post) &gt; 0"/><bind calculate="/data/locations/health_post_id" nodeset="/data/case_load_family_0/case/update/health_post_id" relevant="count(/data/locations/health_post_id) &gt; 0"/><bind calculate="/data/locations/hp_facility_code" nodeset="/data/case_load_family_0/case/update/hp_facility_code" relevant="count(/data/locations/hp_facility_code) &gt; 0"/><bind calculate="/data/locations/region" nodeset="/data/case_load_family_0/case/update/region" relevant="count(/data/locations/region) &gt; 0"/><bind calculate="/data/locations/region_id" nodeset="/data/case_load_family_0/case/update/region_id" relevant="count(/data/locations/region_id) &gt; 0"/><bind calculate="/data/locations/woreda" nodeset="/data/case_load_family_0/case/update/woreda" relevant="count(/data/locations/woreda) &gt; 0"/><bind calculate="/data/locations/woreda_id" nodeset="/data/case_load_family_0/case/update/woreda_id" relevant="count(/data/locations/woreda_id) &gt; 0"/><bind calculate="/data/locations/zone" nodeset="/data/case_load_family_0/case/update/zone" relevant="count(/data/locations/zone) &gt; 0"/><bind calculate="/data/locations/zone_id" nodeset="/data/case_load_family_0/case/update/zone_id" relevant="count(/data/locations/zone_id) &gt; 0"/><bind nodeset="/data/case_load_family_0/case/close" relevant="/data/confirm_close = 'yes'"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<trigger ref="/data/removal_not_allowed" appearance="minimal">
+			<label ref="jr:itext('removal_not_allowed-label')"/>
+		</trigger>
+		<select1 ref="/data/confirm_close">
+			<label ref="jr:itext('confirm_close-label')"/>
+			<item>
+				<label ref="jr:itext('confirm_close-yes-label')"/>
+				<value>yes</value>
+			</item>
+			<item>
+				<label ref="jr:itext('confirm_close-no-label')"/>
+				<value>no</value>
+			</item>
+		</select1>
+		<trigger ref="/data/confirm" appearance="minimal">
+			<label ref="jr:itext('confirm-label')"/>
+		</trigger>
+		<trigger ref="/data/confirm_not_removed" appearance="minimal">
+			<label ref="jr:itext('confirm_not_removed-label')"/>
+		</trigger>
+		<group ref="/data/load_family_info"/>
+		<group ref="/data/locations"/>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

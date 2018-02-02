@@ -1,0 +1,1065 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<suite version="3432" descriptor="Media Suite File">
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: bed_nets-o1n1fy.mp3" id="media-5674e574dab366c38bf776c8ae7626fe-bed_nets-o1n1fy.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/anc_counselling/bed_nets-o1n1fy.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/3258a8bf336e394148344615da6d6add/bed_nets-o1n1fy.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: birth_preparedness-3ecw69.mp3" id="media-be512caaa031c598e196c798155ff3c8-birth_preparedness-3ecw69.mp3" version="2">
+      <location authority="local">./commcare/audio/data/anc_counselling/birth_preparedness-3ecw69.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/9a1249c62fbf4b66827649a0d9bb62f7/birth_preparedness-3ecw69.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: birth_preparedness-cnpyv0.mp3" id="media-1cce77bc608880d538133ca07bfa9b4e-birth_preparedness-cnpyv0.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/anc_counselling/birth_preparedness-cnpyv0.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/5a731676b594a885d78b05b6c365a7d4/birth_preparedness-cnpyv0.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: complication_readiness-20cc22.mp3" id="media-e78225e224b1ae3f425824fb4849846a-complication_readiness-20cc22.mp3" version="2">
+      <location authority="local">./commcare/audio/data/anc_counselling/complication_readiness-20cc22.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/9a1249c62fbf4b66827649a0d999da78/complication_readiness-20cc22.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: danger_signs-2b2t8w.mp3" id="media-1ed3a166ef03653d2aedf23f02665cc1-danger_signs-2b2t8w.mp3" version="2">
+      <location authority="local">./commcare/audio/data/anc_counselling/danger_signs-2b2t8w.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/953e2c611edf6e0cf4213f6871128132/danger_signs-2b2t8w.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: danger_signs-ley7c3.mp3" id="media-df2b20d07e1a7de81fedb9a53804e56c-danger_signs-ley7c3.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/anc_counselling/danger_signs-ley7c3.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/eb8d5df3055091d9accc6ea0af5244ce/danger_signs-ley7c3.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: family_planning-1lnv5t.mp3" id="media-1668efa6bb108c1b5df4d317a2266cc7-family_planning-1lnv5t.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/anc_counselling/family_planning-1lnv5t.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/16ea7ed416dfe9bfc3febe300a9c44f7/family_planning-1lnv5t.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: four_anc_visits-j0zgyq.mp3" id="media-711ae8a7f0fcbf1ecee4f1f91953f039-four_anc_visits-j0zgyq.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/anc_counselling/four_anc_visits-j0zgyq.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/808ca51391e383e4b7394452a0c2de00/four_anc_visits-j0zgyq.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: four_anc_visits-u852pz.mp3" id="media-9a83f6d490a6a208d97912a18838471e-four_anc_visits-u852pz.mp3" version="2">
+      <location authority="local">./commcare/audio/data/anc_counselling/four_anc_visits-u852pz.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/0d6c52ea9af530507798392de2d030ea/four_anc_visits-u852pz.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: four_anc_visits-wtl8sd.mp3" id="media-fd1ce4b976282c7c581bcdf2feefe8f2-four_anc_visits-wtl8sd.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/anc_counselling/four_anc_visits-wtl8sd.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/8902013f65adbd9c153c8d0078f83a80/four_anc_visits-wtl8sd.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: hiv_aids-3tmn7j.mp3" id="media-0f81f84f32e18170e471975fe0bb2003-hiv_aids-3tmn7j.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/anc_counselling/hiv_aids-3tmn7j.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/cf771b060691f0405162540d36b6c889/hiv_aids-3tmn7j.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: hiv_aids-fgcegd.mp3" id="media-0d5470c7a4572ee01a74c332b4e7758e-hiv_aids-fgcegd.mp3" version="2">
+      <location authority="local">./commcare/audio/data/anc_counselling/hiv_aids-fgcegd.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/8411fc0525db3eac341ae6891be6560f/hiv_aids-fgcegd.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: nutrition-cvjd99.mp3" id="media-119a71b8fec625dba6be414001ffa78a-nutrition-cvjd99.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/anc_counselling/nutrition-cvjd99.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/3ce54632f9fd28864bc7db4e6dfd072a/nutrition-cvjd99.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/anc_counselling">
+    <resource descriptor="Audio File: tt_immunizations-l4ear9.mp3" id="media-d5d0a641be3995430f951eec2d59f723-tt_immunizations-l4ear9.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/anc_counselling/tt_immunizations-l4ear9.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/8b9b79f791fb810e25444efdcb3de6e2/tt_immunizations-l4ear9.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: breastfeeding_counsel-6x3htt.mp3" id="media-4821f927396cb410a061a7404febf282-breastfeeding_counsel-6x3htt.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/counseling/breastfeeding_counsel-6x3htt.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/02db269cf5b63d525afae16033faca18/breastfeeding_counsel-6x3htt.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: exclusive_breastfeeding_counsel-7cixz3.mp3" id="media-0328eed1d8ff825d6639ae7fe10312af-exclusive_breastfeeding_counsel-7cixz3.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/counseling/exclusive_breastfeeding_counsel-7cixz3.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/ff63f20121b9396901e9bf6a9bc4a8ad/exclusive_breastfeeding_counsel-7cixz3.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: exclusive_breastfeeding_counsel-vnd7h4.mp3" id="media-08543d9406f4e5d1667411b85bc50010-exclusive_breastfeeding_counsel-vnd7h4.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/counseling/exclusive_breastfeeding_counsel-vnd7h4.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/5152f82f7aae875113eaa81e768ef0e7/exclusive_breastfeeding_counsel-vnd7h4.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: fp_counsel-bml1jk.mp3" id="media-d6b5152b228dbfef7657ae3f25057d06-fp_counsel-bml1jk.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/counseling/fp_counsel-bml1jk.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/16ea7ed416dfe9bfc3febe300a9c44f7/fp_counsel-bml1jk.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: hiv_counsel-4g943o.mp3" id="media-a83684dae41fbdbb4f5bb43f48ca1ab8-hiv_counsel-4g943o.mp3" version="2">
+      <location authority="local">./commcare/audio/data/counseling/hiv_counsel-4g943o.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/9a1249c62fbf4b66827649a0d999d918/hiv_counsel-4g943o.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: immunization_counsel-hu3te0.mp3" id="media-87dcad8706a624fd3aa3e43e03545776-immunization_counsel-hu3te0.mp3" version="2">
+      <location authority="local">./commcare/audio/data/counseling/immunization_counsel-hu3te0.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/02d4db861303595190cbccb758d37829/immunization_counsel-hu3te0.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: immunization_counsel-wabqje.mp3" id="media-4c3fbcb0e8674e27c333a86e78e1a544-immunization_counsel-wabqje.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/counseling/immunization_counsel-wabqje.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/d7b4b010272bbc63f0990d7215c877df/immunization_counsel-wabqje.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: meals_counsel_2-kp03ap.mp3" id="media-8d99f92d723685004f81ac955aff09f4-meals_counsel_2-kp03ap.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/counseling/meals_counsel_2-kp03ap.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/fabd2c6b31848f3a71a28cc508f6a75a/meals_counsel_2-kp03ap.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: mother_ds_counsel-7l3atd.mp3" id="media-ed7e98e57b056752643b7cbc12de7afe-mother_ds_counsel-7l3atd.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/counseling/mother_ds_counsel-7l3atd.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/d2e15103153b904a34a53a742e663484/mother_ds_counsel-7l3atd.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: mother_ds_counsel-8a827c.mp3" id="media-89a756e9b273e76d2c1e71e955fceebd-mother_ds_counsel-8a827c.mp3" version="2">
+      <location authority="local">./commcare/audio/data/counseling/mother_ds_counsel-8a827c.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/49fa21d9b0d0f713f2652363056a2b34/mother_ds_counsel-8a827c.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: newborn_ds_counsel-j0zk9v.mp3" id="media-981325777d0472b4074839ecb580068a-newborn_ds_counsel-j0zk9v.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/counseling/newborn_ds_counsel-j0zk9v.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/f9bcda46790986a59fea2fa982c567d7/newborn_ds_counsel-j0zk9v.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: newborn_ds_counsel-yhptay.mp3" id="media-182c6961c178ad3b8aa4138141a89f60-newborn_ds_counsel-yhptay.mp3" version="2">
+      <location authority="local">./commcare/audio/data/counseling/newborn_ds_counsel-yhptay.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/9329f16ddb25b9f1babdebd579b64dff/newborn_ds_counsel-yhptay.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: not_washing_counsel-6mekha.mp3" id="media-2cab563af7be6f7197a66469dbd87604-not_washing_counsel-6mekha.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/counseling/not_washing_counsel-6mekha.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/ff63f20121b9396901e9bf6a9bc4a877/not_washing_counsel-6mekha.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: skin_to_skin_counsel-82437l.mp3" id="media-6834de3fd1ce71189354badfefd1d30b-skin_to_skin_counsel-82437l.mp3" version="2">
+      <location authority="local">./commcare/audio/data/counseling/skin_to_skin_counsel-82437l.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/3be3ecf3844e50a13dd9efc60e727584/skin_to_skin_counsel-82437l.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: treated_bed_nets_counsel-b9he1q.mp3" id="media-623db7a9676fc9950fb44dd392213460-treated_bed_nets_counsel-b9he1q.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/counseling/treated_bed_nets_counsel-b9he1q.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/3258a8bf336e394148344615da6d6add/treated_bed_nets_counsel-b9he1q.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/counseling">
+    <resource descriptor="Audio File: wrapping_counsel-ygcn1g.mp3" id="media-21cf935f8aca05de47f78fb7208183b4-wrapping_counsel-ygcn1g.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/counseling/wrapping_counsel-ygcn1g.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/2ad4ff2354bdd518374dc30bf4ef2151/wrapping_counsel-ygcn1g.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/danger_signs/maternal">
+    <resource descriptor="Audio File: danger_signs-x0qzn7.mp3" id="media-327e422a68e369d3b05f3fda8c060e4e-danger_signs-x0qzn7.mp3" version="2">
+      <location authority="local">./commcare/audio/data/danger_signs/maternal/danger_signs-x0qzn7.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/49fa21d9b0d0f713f2652363056a2b34/danger_signs-x0qzn7.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/danger_signs/maternal/treatment">
+    <resource descriptor="Audio File: convulsions-cvmzh8.mp3" id="media-3ca74bc75242acb108e897038e13b047-convulsions-cvmzh8.mp3" version="2">
+      <location authority="local">./commcare/audio/data/danger_signs/maternal/treatment/convulsions-cvmzh8.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/49fa21d9b0d0f713f2652363056a2b34/convulsions-cvmzh8.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/danger_signs/newborn/enforce_repeat_num/treatment">
+    <resource descriptor="Audio File: convulsions_label-tir0m3.mp3" id="media-cf1f2c77fea162f976fdf121ac0618f6-convulsions_label-tir0m3.mp3" version="2">
+      <location authority="local">./commcare/audio/data/danger_signs/newborn/enforce_repeat_num/treatment/convulsions_label-tir0m3.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/9329f16ddb25b9f1babdebd579b64dff/convulsions_label-tir0m3.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/no_audio">
+    <resource descriptor="Audio File: amh-lk1tq6.mp3" id="media-30e6ca7265be72faa6ee71c9da07d242-amh-lk1tq6.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/no_audio/amh-lk1tq6.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/ed5357b3195991197b3bb02a1633dd8b/amh-lk1tq6.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/no_audio">
+    <resource descriptor="Audio File: orm-8x8che.mp3" id="media-f221b07c5bac5b249a64afed4aca9b51-orm-8x8che.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/no_audio/orm-8x8che.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/808ca51391e383e4b7394452a0c2de00/orm-8x8che.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/audio/data/no_audio">
+    <resource descriptor="Audio File: tir-bqanwy.mp3" id="media-54d0d0ec3f58528db2d3b2fa39ebb56a-tir-bqanwy.mp3" version="2230">
+      <location authority="local">./commcare/audio/data/no_audio/tir-bqanwy.mp3</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareAudio/16e5864446434beb3b4112ee1c1ec9ce/tir-bqanwy.mp3</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: anc.png" id="media-877dbf1955cfb237c9cf56c08652d44f-anc.png" version="2">
+      <location authority="local">./commcare/image/anc.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/a35a75994dcdf8ecf8be4a1bca9ee436/anc.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: anc1.png" id="media-865f06de648f0ab38859003907d66e4e-anc1.png" version="2">
+      <location authority="local">./commcare/image/anc1.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/c1c8b9c7add1ffff749cd7ccf74ae9aa/anc1.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: anc2.png" id="media-ea06dccda3d1a6b2f553c72a69c707ae-anc2.png" version="2">
+      <location authority="local">./commcare/image/anc2.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/e1589cda85bf737f3e5fe9d63c1ac958/anc2.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: anc3.png" id="media-2c558e6a61288f10e27c5d1c59fc339e-anc3.png" version="2">
+      <location authority="local">./commcare/image/anc3.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/204aa6ac80cd30a73a409b08a6a4725f/anc3.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: anc4.png" id="media-b37d5561c1d039cc238b81eeb73c2802-anc4.png" version="3393">
+      <location authority="local">./commcare/image/anc4.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/df0860b205baeb76912d295ff7166b14/anc4.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: client.png" id="media-f111240ef4d7555d340111159fa1014b-client.png" version="2">
+      <location authority="local">./commcare/image/client.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/f718806ef19cbf2e99b4ddac59851f06/client.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: client_add.png" id="media-4903b3b7d5ab33f149e0b3e24383c029-client_add.png" version="2">
+      <location authority="local">./commcare/image/client_add.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/f44e10d477ac23d0ab729b6e21661629/client_add.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: client_edit.png" id="media-cfb05e58fac32f60e6dfc812511fe120-client_edit.png" version="2">
+      <location authority="local">./commcare/image/client_edit.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/6a7780e5cf0f9fac5e1f4e1ca5b00172/client_edit.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: client_remove.png" id="media-26f2da0309a526ce9f724718c8a59420-client_remove.png" version="2">
+      <location authority="local">./commcare/image/client_remove.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/1f843ea68fd7a70d954029e9623c4d00/client_remove.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: create_referral.png" id="media-cf2a4a84d9c1f8b052bb2b706da24b9d-create_referral.png" version="2230">
+      <location authority="local">./commcare/image/create_referral.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/97a1ae853db4da968247ba433953f858/create_referral.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/anc_counselling">
+    <resource descriptor="Image File: bed_nets-da85rk.png" id="media-86d0c829bbe0b50df40a763f42d7e06b-bed_nets-da85rk.png" version="2">
+      <location authority="local">./commcare/image/data/anc_counselling/bed_nets-da85rk.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/f3dfa7c16e9e4edeb162d260ebdb318c/bed_nets-da85rk.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/anc_counselling">
+    <resource descriptor="Image File: birth_preparedness-5pywlq.png" id="media-b3349733b9c60739abc11ef94b67ddf1-birth_preparedness-5pywlq.png" version="2">
+      <location authority="local">./commcare/image/data/anc_counselling/birth_preparedness-5pywlq.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/4a81cfe616a65ce5855a15d9984b23a0/birth_preparedness-5pywlq.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/anc_counselling">
+    <resource descriptor="Image File: complication_readiness-07exp0.png" id="media-88c0f7d0e349277b731bab3868e54869-complication_readiness-07exp0.png" version="2">
+      <location authority="local">./commcare/image/data/anc_counselling/complication_readiness-07exp0.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/af16cd05b618cc502d4f3e603967cfd8/complication_readiness-07exp0.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/anc_counselling">
+    <resource descriptor="Image File: counselling_topics-bztzpp.png" id="media-b7354369f05bf1ce86262b3cbc9e380d-counselling_topics-bztzpp.png" version="2">
+      <location authority="local">./commcare/image/data/anc_counselling/counselling_topics-bztzpp.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/4aed623a8fb1b22f7f6d7aff1bfa7800/counselling_topics-bztzpp.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/anc_counselling">
+    <resource descriptor="Image File: danger_signs-tfetco.png" id="media-ab18a69b66e91ecf74b2f01c47876f14-danger_signs-tfetco.png" version="2">
+      <location authority="local">./commcare/image/data/anc_counselling/danger_signs-tfetco.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/bb19fc9e71f1ffdf56faae8c8c122601/danger_signs-tfetco.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/anc_counselling">
+    <resource descriptor="Image File: family_planning-y0x25v.png" id="media-489f9436e10fdfecf6961a89c02db26b-family_planning-y0x25v.png" version="2">
+      <location authority="local">./commcare/image/data/anc_counselling/family_planning-y0x25v.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/1a5f27c547b66ff6e7635855185112c5/family_planning-y0x25v.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/anc_counselling">
+    <resource descriptor="Image File: hiv_aids-5qtipr.png" id="media-5dad67f0e30443718e4b2cfa8ce076f5-hiv_aids-5qtipr.png" version="2">
+      <location authority="local">./commcare/image/data/anc_counselling/hiv_aids-5qtipr.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/4aed623a8fb1b22f7f6d7aff1bfa7800/hiv_aids-5qtipr.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/anc_counselling">
+    <resource descriptor="Image File: iron_supplement-8z8tuc.png" id="media-bb40c6454601549856e437ebf15af188-iron_supplement-8z8tuc.png" version="2">
+      <location authority="local">./commcare/image/data/anc_counselling/iron_supplement-8z8tuc.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/425fb55bc423c12fdfe251f6f8786ed7/iron_supplement-8z8tuc.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/anc_counselling">
+    <resource descriptor="Image File: nutrition-ommruv.png" id="media-236d5d8f594389b94fdf20e6c92f0435-nutrition-ommruv.png" version="2">
+      <location authority="local">./commcare/image/data/anc_counselling/nutrition-ommruv.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/661b57f317dcc2cbab31be2c1ba31155/nutrition-ommruv.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/anc_counselling">
+    <resource descriptor="Image File: tt_immunizations-5omr8c.png" id="media-dd6a786db75a3dd944f0dcf3f2c58cfe-tt_immunizations-5omr8c.png" version="2">
+      <location authority="local">./commcare/image/data/anc_counselling/tt_immunizations-5omr8c.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/d0e59a48001dd6455957c194823dce94/tt_immunizations-5omr8c.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/client_starting_info/newborn_basic_info/enforce_repeat_num/check_status">
+    <resource descriptor="Image File: still_alive-brv3tp.png" id="media-a091fb1da111c0bbdbc56d06eba7dd57-still_alive-brv3tp.png" version="2">
+      <location authority="local">./commcare/image/data/client_starting_info/newborn_basic_info/enforce_repeat_num/check_status/still_alive-brv3tp.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/343222e11b78f1ec25bd37715f18238b/still_alive-brv3tp.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/client_starting_info/newborn_basic_info/enforce_repeat_num/new_alive_newborns/weight">
+    <resource descriptor="Image File: birth_weight-dfud2s.png" id="media-385b0633e8270a0f9146be44d8b9ffa8-birth_weight-dfud2s.png" version="2">
+      <location authority="local">./commcare/image/data/client_starting_info/newborn_basic_info/enforce_repeat_num/new_alive_newborns/weight/birth_weight-dfud2s.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7592267fd18d383f687da69b10bf8d59/birth_weight-dfud2s.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/client_starting_info/outcome">
+    <resource descriptor="Image File: confirm_outcome_maternal-cjf6h1.png" id="media-eb599604049fb68f5dd82f191104cf4a-confirm_outcome_maternal-cjf6h1.png" version="2">
+      <location authority="local">./commcare/image/data/client_starting_info/outcome/confirm_outcome_maternal-cjf6h1.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/75b53e73fe37ea8756481095b7cb3748/confirm_outcome_maternal-cjf6h1.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/counseling">
+    <resource descriptor="Image File: breastfeeding_counsel-z2m7l5.png" id="media-8c048aae9f77cd8d948c0a15bf8ee885-breastfeeding_counsel-z2m7l5.png" version="2">
+      <location authority="local">./commcare/image/data/counseling/breastfeeding_counsel-z2m7l5.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/dd0b678709caeb5ece340b50fed4ab89/breastfeeding_counsel-z2m7l5.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/counseling">
+    <resource descriptor="Image File: counseling_selection-sx48ef.png" id="media-04eade109d59665c45c0f48c06d5e997-counseling_selection-sx48ef.png" version="2">
+      <location authority="local">./commcare/image/data/counseling/counseling_selection-sx48ef.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/dd0b678709caeb5ece340b50fed4b9e0/counseling_selection-sx48ef.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/counseling">
+    <resource descriptor="Image File: exclusive_breastfeeding_counsel-z11lci.png" id="media-e632fdc9149c1fdffdb50335fbe93f1f-exclusive_breastfeeding_counsel-z11lci.png" version="2">
+      <location authority="local">./commcare/image/data/counseling/exclusive_breastfeeding_counsel-z11lci.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/bde1640e9bf19015a61b6f6bd3fadb90/exclusive_breastfeeding_counsel-z11lci.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/counseling">
+    <resource descriptor="Image File: fp_counsel-48x7dx.png" id="media-36570a76718d8aea61fcf4d6e3d19330-fp_counsel-48x7dx.png" version="2">
+      <location authority="local">./commcare/image/data/counseling/fp_counsel-48x7dx.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/bde1640e9bf19015a61b6f6bd366bc3a/fp_counsel-48x7dx.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/counseling">
+    <resource descriptor="Image File: hiv_counsel-ttbwt8.png" id="media-744b0e6fbaae38c89b62bed61e6e7929-hiv_counsel-ttbwt8.png" version="2">
+      <location authority="local">./commcare/image/data/counseling/hiv_counsel-ttbwt8.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/3605601792cf2c51e1171a04511ae81e/hiv_counsel-ttbwt8.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/counseling">
+    <resource descriptor="Image File: hygiene_counsel-pn9szl.png" id="media-572d5f22e0cc3f6903696d65e26975da-hygiene_counsel-pn9szl.png" version="2">
+      <location authority="local">./commcare/image/data/counseling/hygiene_counsel-pn9szl.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/bde1640e9bf19015a61b6f6bd392f741/hygiene_counsel-pn9szl.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/counseling">
+    <resource descriptor="Image File: immunization_counsel-t76sln.png" id="media-cdca1d08999aaddbef5a86739f7f2a3c-immunization_counsel-t76sln.png" version="2">
+      <location authority="local">./commcare/image/data/counseling/immunization_counsel-t76sln.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7fff5fe29dfcc14adf8657faab9fe179/immunization_counsel-t76sln.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/counseling">
+    <resource descriptor="Image File: meals_counsel-60v1by.png" id="media-5df6d686eaed9fccf1f3961b29253e6b-meals_counsel-60v1by.png" version="2">
+      <location authority="local">./commcare/image/data/counseling/meals_counsel-60v1by.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/6227f6ff43e33ea5c11dfca665451437/meals_counsel-60v1by.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/counseling">
+    <resource descriptor="Image File: not_washing_counsel-rk6kyk.png" id="media-0d11fdf2ce3184186a06e3c8de5b640f-not_washing_counsel-rk6kyk.png" version="2">
+      <location authority="local">./commcare/image/data/counseling/not_washing_counsel-rk6kyk.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/3605601792cf2c51e1171a04511af13f/not_washing_counsel-rk6kyk.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/counseling">
+    <resource descriptor="Image File: skin_to_skin_counsel-5pn8rd.png" id="media-ec08f788126a27f247e8b7818e4e4271-skin_to_skin_counsel-5pn8rd.png" version="2">
+      <location authority="local">./commcare/image/data/counseling/skin_to_skin_counsel-5pn8rd.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/6227f6ff43e33ea5c11dfca665c823c9/skin_to_skin_counsel-5pn8rd.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/counseling">
+    <resource descriptor="Image File: treated_bed_nets_counsel-nl011c.png" id="media-e00fd9fd587caaa31a84bec98e1fdb3b-treated_bed_nets_counsel-nl011c.png" version="2">
+      <location authority="local">./commcare/image/data/counseling/treated_bed_nets_counsel-nl011c.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/6227f6ff43e33ea5c11dfca66520a489/treated_bed_nets_counsel-nl011c.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/counseling">
+    <resource descriptor="Image File: wrapping_counsel-7hxrt0.png" id="media-c2ea10b404d7716ef0a4239eba09e794-wrapping_counsel-7hxrt0.png" version="2">
+      <location authority="local">./commcare/image/data/counseling/wrapping_counsel-7hxrt0.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/d0e59a48001dd6455957c194823dc613/wrapping_counsel-7hxrt0.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs">
+    <resource descriptor="Image File: danger_signs-abdominal_pain-r62twx.png" id="media-0bcdece0ef6995ca160e9d83e6616b72-danger_signs-abdominal_pain-r62twx.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/danger_signs-abdominal_pain-r62twx.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/4aed623a8fb1b22f7f6d7aff1bcd4670/danger_signs-abdominal_pain-r62twx.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs">
+    <resource descriptor="Image File: danger_signs-breaking_water-izy252.png" id="media-b158c55a1454cd430eda68e0afe0d141-danger_signs-breaking_water-izy252.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/danger_signs-breaking_water-izy252.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/419ca7824b3ef583439bf6d4539b7a69/danger_signs-breaking_water-izy252.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs">
+    <resource descriptor="Image File: danger_signs-convulsions_unconsciousness-9o6vng.png" id="media-e297ceb7363ec9e14530152257d9a069-danger_signs-convulsions_unconsciousness-9o6vng.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/danger_signs-convulsions_unconsciousness-9o6vng.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/bb19fc9e71f1ffdf56faae8c8cbcfa37/danger_signs-convulsions_unconsciousness-9o6vng.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs">
+    <resource descriptor="Image File: danger_signs-fever-2bkphl.png" id="media-5a60e6c580a011eb758b7ae394c415f6-danger_signs-fever-2bkphl.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/danger_signs-fever-2bkphl.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7afd708fdc0981cf0732379841710136/danger_signs-fever-2bkphl.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs">
+    <resource descriptor="Image File: danger_signs-headaches_vision-91lgpk.png" id="media-18005c4e0681809a5e4fafd0a5754cfb-danger_signs-headaches_vision-91lgpk.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/danger_signs-headaches_vision-91lgpk.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/3e6feb458b84ef9bff0442b4b7c46569/danger_signs-headaches_vision-91lgpk.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs">
+    <resource descriptor="Image File: danger_signs-swelling_face_hands-l5jxah.png" id="media-9e7c52bafe940dc0a737f70f0101dae2-danger_signs-swelling_face_hands-l5jxah.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/danger_signs-swelling_face_hands-l5jxah.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/9d7bdbc32d87e3b3f38230e98675ca42/danger_signs-swelling_face_hands-l5jxah.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs">
+    <resource descriptor="Image File: danger_signs-vaginal_bleeding-7mtrra.png" id="media-81f4f55e86ae1dcacfea7cd5a5e945ec-danger_signs-vaginal_bleeding-7mtrra.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/danger_signs-vaginal_bleeding-7mtrra.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/74015bd3dc67a72b27cde5593befd009/danger_signs-vaginal_bleeding-7mtrra.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs">
+    <resource descriptor="Image File: danger_signs-vaginal_discharge-2tm0dt.png" id="media-73e012aba2cb4590235acccc4c715759-danger_signs-vaginal_discharge-2tm0dt.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/danger_signs-vaginal_discharge-2tm0dt.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/1a5f27c547b66ff6e763585518511a2d/danger_signs-vaginal_discharge-2tm0dt.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/maternal">
+    <resource descriptor="Image File: danger_signs-rzcmr6.png" id="media-4caa32e8ac4498a9e35e7bbf24bfb4c4-danger_signs-rzcmr6.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/maternal/danger_signs-rzcmr6.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/75b53e73fe37ea8756481095b7cb3748/danger_signs-rzcmr6.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/maternal/treatment">
+    <resource descriptor="Image File: abdominal_pain-uwvgjn.png" id="media-495f132b03d88046faff3431301942f8-abdominal_pain-uwvgjn.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/maternal/treatment/abdominal_pain-uwvgjn.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/98c4be48683a7f5717e2308b596ac80c/abdominal_pain-uwvgjn.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/maternal/treatment">
+    <resource descriptor="Image File: bleeding-xw1vjd.png" id="media-a483cd9b0b6d1342ec5498b5ef4d27a7-bleeding-xw1vjd.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/maternal/treatment/bleeding-xw1vjd.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/5b02ae46c577486807f32ff7e96a5602/bleeding-xw1vjd.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/maternal/treatment">
+    <resource descriptor="Image File: discharge-gutfa7.png" id="media-45041a2b5de1457c5ce4165092bda5e0-discharge-gutfa7.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/maternal/treatment/discharge-gutfa7.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/e4d96ed6d44ef3f9852b183294f6eae9/discharge-gutfa7.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/maternal/treatment">
+    <resource descriptor="Image File: fever-wzrnu5.png" id="media-f87128daf0bc757e4c7cd3a28358c72e-fever-wzrnu5.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/maternal/treatment/fever-wzrnu5.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/75b53e73fe37ea8756481095b7cb3748/fever-wzrnu5.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/maternal/treatment">
+    <resource descriptor="Image File: severe_headache_or_visual-tygonv.png" id="media-1c8e7a386389375ed6e880688b7225de-severe_headache_or_visual-tygonv.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/maternal/treatment/severe_headache_or_visual-tygonv.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/98c4be48683a7f5717e2308b59147570/severe_headache_or_visual-tygonv.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/newborn/enforce_repeat_num">
+    <resource descriptor="Image File: danger_signs-egc085.png" id="media-e5d0fd6005dfc56eaa6938f69d8ee917-danger_signs-egc085.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/newborn/enforce_repeat_num/danger_signs-egc085.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/63c9f03584c63415c022ea7e125b743c/danger_signs-egc085.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment">
+    <resource descriptor="Image File: breathing_poorly_label-csfxav.png" id="media-783075e8f8dbbbf8db55e32dbcb1adcb-breathing_poorly_label-csfxav.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment/breathing_poorly_label-csfxav.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/98c4be48683a7f5717e2308b59d734b7/breathing_poorly_label-csfxav.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment">
+    <resource descriptor="Image File: convulsions_label-3nijko.png" id="media-cb8a4fb134deaaade05b753468f32707-convulsions_label-3nijko.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment/convulsions_label-3nijko.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/77c4584713f9001c909af27d16c92f1b/convulsions_label-3nijko.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment">
+    <resource descriptor="Image File: fast_breathing_label-tdlkot.png" id="media-2bed25e1cdeae9200216b29194af9d7c-fast_breathing_label-tdlkot.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment/fast_breathing_label-tdlkot.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/98c4be48683a7f5717e2308b59d734b7/fast_breathing_label-tdlkot.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment">
+    <resource descriptor="Image File: fever_label-15utai.png" id="media-3a763b59d8ab25cfa16e1eed1c2f20dc-fever_label-15utai.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment/fever_label-15utai.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/63c9f03584c63415c022ea7e125b743c/fever_label-15utai.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment">
+    <resource descriptor="Image File: low_body_temp_label-42u4m2.png" id="media-db958732dc4b9d24d8e039ebdef9d6e4-low_body_temp_label-42u4m2.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment/low_body_temp_label-42u4m2.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/63c9f03584c63415c022ea7e125b743c/low_body_temp_label-42u4m2.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment">
+    <resource descriptor="Image File: low_movement_label-7yfrqw.png" id="media-86d1628afaf720bf555b5aacb979d712-low_movement_label-7yfrqw.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment/low_movement_label-7yfrqw.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/98c4be48683a7f5717e2308b5994538a/low_movement_label-7yfrqw.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment">
+    <resource descriptor="Image File: unable_to_feed_label-ol0rtu.png" id="media-32c7c1345870e8f2d9b9c1b6a0322192-unable_to_feed_label-ol0rtu.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/newborn/enforce_repeat_num/treatment/unable_to_feed_label-ol0rtu.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/76c46dcbaa8ddfe5682c9aaf6f221210/unable_to_feed_label-ol0rtu.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/danger_signs">
+    <resource descriptor="Image File: rapid_assessment_label-asg9by.png" id="media-53cd8d3d117638d72a0a6ba4e7303a8c-rapid_assessment_label-asg9by.png" version="2">
+      <location authority="local">./commcare/image/data/danger_signs/rapid_assessment_label-asg9by.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/bb19fc9e71f1ffdf56faae8c8c123540/rapid_assessment_label-asg9by.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/delivery_services">
+    <resource descriptor="Image File: outcome_maternal-kldz1q.png" id="media-650c838a4b074bf316b037f8eb7521b6-outcome_maternal-kldz1q.png" version="2">
+      <location authority="local">./commcare/image/data/delivery_services/outcome_maternal-kldz1q.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/913b4009e34bce1484cd89821fb758af/outcome_maternal-kldz1q.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data">
+    <resource descriptor="Image File: existing_notification-8nqjmo.png" id="media-0e1906710d6cef4ca74ef507a83069a0-existing_notification-8nqjmo.png" version="2230">
+      <location authority="local">./commcare/image/data/existing_notification-8nqjmo.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/054c5266e8208c655822ce7e5784bb9b/existing_notification-8nqjmo.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/family_identification">
+    <resource descriptor="Image File: family_name.png" id="media-a41631f88065e00e9e09d667a60043da-family_name.png" version="2">
+      <location authority="local">./commcare/image/data/family_identification/family_name.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/1964fc2b4254b4e8d1497bef25290fc4/family_name.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/family_identification">
+    <resource descriptor="Image File: family_phone_number.png" id="media-65dbc62d9ad74f01440ce3db95824777-family_phone_number.png" version="2">
+      <location authority="local">./commcare/image/data/family_identification/family_phone_number.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/1964fc2b4254b4e8d1497bef25290fc4/family_phone_number.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/family_identification">
+    <resource descriptor="Image File: household_number.png" id="media-4a0068745a27e528bab3e2aba8110078-household_number.png" version="2">
+      <location authority="local">./commcare/image/data/family_identification/household_number.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/1964fc2b4254b4e8d1497bef25290fc4/household_number.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/family_status">
+    <resource descriptor="Image File: family_status.png" id="media-d5968d45b4a128e4e50561b6db8a1adc-family_status.png" version="2">
+      <location authority="local">./commcare/image/data/family_status/family_status.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/05b14508db7b429c6203ae8b8f167be8/family_status.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/family_status">
+    <resource descriptor="Image File: follow_up.png" id="media-3ca4b695b241cba7a3dd6bfcf0530da1-follow_up.png" version="2">
+      <location authority="local">./commcare/image/data/family_status/follow_up.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/3814e063e5bec6771831d036d6c1270c/follow_up.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/instructions">
+    <resource descriptor="Image File: anc1_instructions.png" id="media-b65bf81b7163d2d7d53f39b45d435658-anc1_instructions.png" version="2">
+      <location authority="local">./commcare/image/data/instructions/anc1_instructions.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/6187a766e4fc6ccdc5f68df630026967/anc1_instructions.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/maternal_services/medications/folic_acid_tablets/folic_acid_labels">
+    <resource descriptor="Image File: label_folic_acid_total_180-tfxmop.png" id="media-ddc43419d1daf3a20bc3f04d71b27ddd-label_folic_acid_total_180-tfxmop.png" version="2">
+      <location authority="local">./commcare/image/data/maternal_services/medications/folic_acid_tablets/folic_acid_labels/label_folic_acid_total_180-tfxmop.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/e819af925568cae2453d7532bfd2e1c8/label_folic_acid_total_180-tfxmop.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/maternal_services/medications/tt_vaccinations">
+    <resource descriptor="Image File: completed_all_tt_doses-fh31t8.png" id="media-59b098aeb95de34702f1cf8f408ca34e-completed_all_tt_doses-fh31t8.png" version="2">
+      <location authority="local">./commcare/image/data/maternal_services/medications/tt_vaccinations/completed_all_tt_doses-fh31t8.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/d0e59a48001dd6455957c194823dce94/completed_all_tt_doses-fh31t8.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/maternal_services/physical_exam_1">
+    <resource descriptor="Image File: bp_diastolic-u2bws2.png" id="media-5152366624613a71899ac8b899aa2ecf-bp_diastolic-u2bws2.png" version="2">
+      <location authority="local">./commcare/image/data/maternal_services/physical_exam_1/bp_diastolic-u2bws2.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/63c9f03584c63415c022ea7e125b6dbe/bp_diastolic-u2bws2.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/methodology_labels">
+    <resource descriptor="Image File: compassionate_workforce-hrqqec.png" id="media-d349b0a8b85297349dadcc1ce0158ed5-compassionate_workforce-hrqqec.png" version="2">
+      <location authority="local">./commcare/image/data/methodology_labels/compassionate_workforce-hrqqec.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/425fb55bc423c12fdfe251f6f8786ed7/compassionate_workforce-hrqqec.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/methodology_labels">
+    <resource descriptor="Image File: compassionate_workforce-qsezcc.png" id="media-f354e71d1ea6403b00cc2bc707e89249-compassionate_workforce-qsezcc.png" version="2">
+      <location authority="local">./commcare/image/data/methodology_labels/compassionate_workforce-qsezcc.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/2d5ea4c291b84f9409edd844c02de8d5/compassionate_workforce-qsezcc.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/methodology_labels">
+    <resource descriptor="Image File: galidraa_orpa-lk1dtl.png" id="media-a12a60d5b1a9848d520905f7cb20da1e-galidraa_orpa-lk1dtl.png" version="2">
+      <location authority="local">./commcare/image/data/methodology_labels/galidraa_orpa-lk1dtl.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/5f79784c086485440bce54e279137314/galidraa_orpa-lk1dtl.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/name">
+    <resource descriptor="Image File: client_name.png" id="media-752424830777da99cd22fa78ec9c85ab-client_name.png" version="2">
+      <location authority="local">./commcare/image/data/name/client_name.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7acc5f2e5f8cae64af501f07a39be83e/client_name.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/newborn_details/babies/enforce_repeat_num">
+    <resource descriptor="Image File: outcome_baby-gpfxjz.png" id="media-c2d9529d811ca617deafb5180e2194c9-outcome_baby-gpfxjz.png" version="2">
+      <location authority="local">./commcare/image/data/newborn_details/babies/enforce_repeat_num/outcome_baby-gpfxjz.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/14952ce031871e8642e932d96d3e4da1/outcome_baby-gpfxjz.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/newborn_services/enforce_repeat_num/medications/bcg">
+    <resource descriptor="Image File: completed-do3bky.png" id="media-3e5e28f5c579b07d659a0754d83d9722-completed-do3bky.png" version="2">
+      <location authority="local">./commcare/image/data/newborn_services/enforce_repeat_num/medications/bcg/completed-do3bky.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7fff5fe29dfcc14adf8657faab9fe179/completed-do3bky.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/newborn_services/enforce_repeat_num/medications/chlorhexidine">
+    <resource descriptor="Image File: chlorhexidine-nhthyl.png" id="media-d67e60c06ce85f8173316c556fe6d357-chlorhexidine-nhthyl.png" version="2">
+      <location authority="local">./commcare/image/data/newborn_services/enforce_repeat_num/medications/chlorhexidine/chlorhexidine-nhthyl.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7fff5fe29dfcc14adf8657faab2a0ce4/chlorhexidine-nhthyl.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/newborn_services/enforce_repeat_num/medications/opv0">
+    <resource descriptor="Image File: completed-yrl521.png" id="media-ed08d07fde91b6ee0999170ba7fed9f6-completed-yrl521.png" version="2">
+      <location authority="local">./commcare/image/data/newborn_services/enforce_repeat_num/medications/opv0/completed-yrl521.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7fff5fe29dfcc14adf8657faab4c8525/completed-yrl521.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/newborn_services/enforce_repeat_num/medications/penta1">
+    <resource descriptor="Image File: completed-jjee4y.png" id="media-d344210357d05a7ee364f69cef25e6fe-completed-jjee4y.png" version="2">
+      <location authority="local">./commcare/image/data/newborn_services/enforce_repeat_num/medications/penta1/completed-jjee4y.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/c91ff2c91f3307b156e4b4c421a8da57/completed-jjee4y.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/newborn_services/enforce_repeat_num/medications/tetracycline">
+    <resource descriptor="Image File: tetracycline-c1w0b5.png" id="media-3dcb577232e81adbfe67c9beb192f50b-tetracycline-c1w0b5.png" version="2">
+      <location authority="local">./commcare/image/data/newborn_services/enforce_repeat_num/medications/tetracycline/tetracycline-c1w0b5.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7fff5fe29dfcc14adf8657faab4c8525/tetracycline-c1w0b5.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/newborn_services/enforce_repeat_num/physical_exam_1">
+    <resource descriptor="Image File: weight-15rzhn.png" id="media-e80192a1b471cf5c449389f8e5f21a56-weight-15rzhn.png" version="2">
+      <location authority="local">./commcare/image/data/newborn_services/enforce_repeat_num/physical_exam_1/weight-15rzhn.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7592267fd18d383f687da69b10bf8d59/weight-15rzhn.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/newborn_services/enforce_repeat_num/referral">
+    <resource descriptor="Image File: create_referral-lte9wk.png" id="media-e479a68c1fbc845030daafe6d2501d42-create_referral-lte9wk.png" version="2">
+      <location authority="local">./commcare/image/data/newborn_services/enforce_repeat_num/referral/create_referral-lte9wk.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/fe511d30425ea271256d697eb16af336/create_referral-lte9wk.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/newborn_services/enforce_repeat_num/referral/display_recommendation">
+    <resource descriptor="Image File: title-2ds75z.png" id="media-c9377311bfb21e65a0df99bfb6a62283-title-2ds75z.png" version="2">
+      <location authority="local">./commcare/image/data/newborn_services/enforce_repeat_num/referral/display_recommendation/title-2ds75z.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/fe511d30425ea271256d697eb16af336/title-2ds75z.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data">
+    <resource descriptor="Image File: notification_info-2l9v69.png" id="media-837f1125da41754780664e546c6bd0e4-notification_info-2l9v69.png" version="2230">
+      <location authority="local">./commcare/image/data/notification_info-2l9v69.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/61676188ccf32c1f0f8295f5344a3f10/notification_info-2l9v69.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data">
+    <resource descriptor="Image File: notification_info-2tprq6.png" id="media-84781c1da3d40b195995c1ba35a8ac82-notification_info-2tprq6.png" version="2230">
+      <location authority="local">./commcare/image/data/notification_info-2tprq6.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/cf8cf046ee72f7437ca628485b8993c0/notification_info-2tprq6.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data">
+    <resource descriptor="Image File: notification_info-39tuoc.png" id="media-e3b8004aca79fb4482d60931ddcd08d9-notification_info-39tuoc.png" version="2230">
+      <location authority="local">./commcare/image/data/notification_info-39tuoc.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/cf8cf046ee72f7437ca628485b8993c0/notification_info-39tuoc.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data">
+    <resource descriptor="Image File: notification_info-4dez5j.png" id="media-5ed783854668a493ca1a22f8be2a410a-notification_info-4dez5j.png" version="2230">
+      <location authority="local">./commcare/image/data/notification_info-4dez5j.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/14a1db0bfa955767304b8c8136f96def/notification_info-4dez5j.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data">
+    <resource descriptor="Image File: notification_info-5qvtf0.png" id="media-f33596d82b501d90dc662c312f8de73a-notification_info-5qvtf0.png" version="2230">
+      <location authority="local">./commcare/image/data/notification_info-5qvtf0.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/14a1db0bfa955767304b8c8136f96def/notification_info-5qvtf0.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data">
+    <resource descriptor="Image File: notification_info-kzdv91.png" id="media-18c888cc65926f1209b098c3f54e3067-notification_info-kzdv91.png" version="2230">
+      <location authority="local">./commcare/image/data/notification_info-kzdv91.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/61676188ccf32c1f0f8295f5344a4e3f/notification_info-kzdv91.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data">
+    <resource descriptor="Image File: notification_info-lrvbbe.png" id="media-599fc951858b17ca15f44e4996aaaf83-notification_info-lrvbbe.png" version="2230">
+      <location authority="local">./commcare/image/data/notification_info-lrvbbe.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/cf8cf046ee72f7437ca628485b8993c0/notification_info-lrvbbe.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data">
+    <resource descriptor="Image File: notification_info-sg2t3f.png" id="media-fbc79329f0892e382aa87e0719588a1b-notification_info-sg2t3f.png" version="2230">
+      <location authority="local">./commcare/image/data/notification_info-sg2t3f.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/61676188ccf32c1f0f8295f5344a3f10/notification_info-sg2t3f.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/pregnancy_outcome/outcome">
+    <resource descriptor="Image File: pregnancy_outcome-6q1e74.png" id="media-af27b19dbcbcfb3c9df540d0fe854995-pregnancy_outcome-6q1e74.png" version="2">
+      <location authority="local">./commcare/image/data/pregnancy_outcome/outcome/pregnancy_outcome-6q1e74.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/14952ce031871e8642e932d96da55f3a/pregnancy_outcome-6q1e74.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/question1">
+    <resource descriptor="Image File: notification_purpose-mruzd4.png" id="media-5a74cd6ad43c89106126aa0a2f176876-notification_purpose-mruzd4.png" version="2230">
+      <location authority="local">./commcare/image/data/question1/notification_purpose-mruzd4.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/94238795b6916e5fd1e47b7fd1b5f0d5/notification_purpose-mruzd4.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data">
+    <resource descriptor="Image File: registration_warning-ewwu3c.png" id="media-a4e086f6b1649d2b7a3d46f6a6672600-registration_warning-ewwu3c.png" version="2230">
+      <location authority="local">./commcare/image/data/registration_warning-ewwu3c.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/ca12f83d99a8581979712475e913cf5c/registration_warning-ewwu3c.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data">
+    <resource descriptor="Image File: registration_warning-ft2n1n.png" id="media-0da1b5aeff37b37e55aa63372a71628e-registration_warning-ft2n1n.png" version="2230">
+      <location authority="local">./commcare/image/data/registration_warning-ft2n1n.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/b51cc2d1cc400202d6d75e04a0d2870a/registration_warning-ft2n1n.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data">
+    <resource descriptor="Image File: registration_warning-ocm0u0.png" id="media-7c87334d9cc8aff191ef37a79e16723b-registration_warning-ocm0u0.png" version="2230">
+      <location authority="local">./commcare/image/data/registration_warning-ocm0u0.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/a085b54da0bb1a80505d1207d54f11bf/registration_warning-ocm0u0.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data">
+    <resource descriptor="Image File: registration_warning-q8976n.png" id="media-7c6bc690e74b52203a4a54a139e49d0d-registration_warning-q8976n.png" version="2230">
+      <location authority="local">./commcare/image/data/registration_warning-q8976n.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/0cd5a30976cb9a13c51b5ea8186cad71/registration_warning-q8976n.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: emergency.png" id="media-b164691fc274a93f430a98ddf7db0740-emergency.png" version="3393">
+      <location authority="local">./commcare/image/emergency.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/ff08dcf63b6f910b1c1cb24c6f50f104/emergency.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: family.png" id="media-a603dea57e0759167d58ee5af16317cc-family.png" version="2">
+      <location authority="local">./commcare/image/family.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/c946053593577e4546c126a5373e4cfb/family.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: family_add.png" id="media-17733e74c93c5ca597270e8ece09305c-family_add.png" version="2">
+      <location authority="local">./commcare/image/family_add.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/10a21385aca589099b686f86e0688ce8/family_add.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: family_edit.png" id="media-f119c837af84271baf7f7cedd6f0d46c-family_edit.png" version="2">
+      <location authority="local">./commcare/image/family_edit.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/10a21385aca589099b686f86e0688fdc/family_edit.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: family_members.png" id="media-48095a0883ba7b57d009e24fa7b3a9cb-family_members.png" version="2">
+      <location authority="local">./commcare/image/family_members.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/04855b921b76f9c8af3f796da5affc33/family_members.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: family_members_child.png" id="media-8d35c9b94a02d744519975be33b3e23b-family_members_child.png" version="2">
+      <location authority="local">./commcare/image/family_members_child.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/48da57c4e8908bcb89ae9d48803fe04f/family_members_child.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: family_members_newborn.png" id="media-29527125225cb68c5a4f6944ab52b9f0-family_members_newborn.png" version="2">
+      <location authority="local">./commcare/image/family_members_newborn.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/5d0f6141166c280e8645cb34651348c8/family_members_newborn.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: family_members_woman.png" id="media-cc1919886d9ffd39e1cd3f15a52101f5-family_members_woman.png" version="2">
+      <location authority="local">./commcare/image/family_members_woman.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/b7340b7bbe5fc38092ad1a31d6707911/family_members_woman.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: family_remove.png" id="media-83c1502bb0446d9167682802405e7ef7-family_remove.png" version="2">
+      <location authority="local">./commcare/image/family_remove.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/26c2400a34f00037eb53ee4348947baa/family_remove.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: hda.png" id="media-2d3f642112ad8bfd4d9710ebcfbad5e3-hda.png" version="2">
+      <location authority="local">./commcare/image/hda.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/6e50023ae4d783812d89988cda7215a2/hda.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/help/data">
+    <resource descriptor="Image File: equipment_available-p0iz1g.png" id="media-df8c9c05bb77d52ee3a5cae8132c4a5d-equipment_available-p0iz1g.png" version="2">
+      <location authority="local">./commcare/image/help/data/equipment_available-p0iz1g.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/913b4009e34bce1484cd89821fb758af/equipment_available-p0iz1g.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/help/data">
+    <resource descriptor="Image File: notification_purpose-xqjf0m.png" id="media-6f622c4928c55bf232c72e353b277a28-notification_purpose-xqjf0m.png" version="2230">
+      <location authority="local">./commcare/image/help/data/notification_purpose-xqjf0m.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/14a1db0bfa955767304b8c8136f96def/notification_purpose-xqjf0m.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/help/data">
+    <resource descriptor="Image File: other_instructions-g2vfhs.png" id="media-7d9de6e79d75c07ae3333edc4779f12f-other_instructions-g2vfhs.png" version="2230">
+      <location authority="local">./commcare/image/help/data/other_instructions-g2vfhs.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/d46ede7fada79f38614ebe29a990f449/other_instructions-g2vfhs.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/help/data">
+    <resource descriptor="Image File: registration_instructions-610l0h.png" id="media-817be8dbefc34f3c61410cd138da911c-registration_instructions-610l0h.png" version="2230">
+      <location authority="local">./commcare/image/help/data/registration_instructions-610l0h.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/3a1a326b3b351fed4f276b2bd3c09e8a/registration_instructions-610l0h.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: indicators.png" id="media-fdd2273534239b193ce61fc8e5252398-indicators.png" version="2">
+      <location authority="local">./commcare/image/indicators.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/929eabad9d5097d00fd0a6dd6c30981a/indicators.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: ivr.png" id="media-ce4786af0d34d27565b2e75e27a852c9-ivr.png" version="2">
+      <location authority="local">./commcare/image/ivr.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/edc76f2653fc18169c7c34ef6fd6705f/ivr.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: location_community.png" id="media-cc1f282eb06a5c9706e793cafbd9ef5c-location_community.png" version="2">
+      <location authority="local">./commcare/image/location_community.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/df0ef2bc5493f41ab40ece9162b533d9/location_community.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: location_hc.png" id="media-1db9e9398b5ff5452f7a3891880d7a9b-location_hc.png" version="2">
+      <location authority="local">./commcare/image/location_hc.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/a33ad1f19451035bf25c59b3c0bb0133/location_hc.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: location_hp.png" id="media-95b61cdb3e95ea19431cb7d6b882a721-location_hp.png" version="2">
+      <location authority="local">./commcare/image/location_hp.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/c1c8b9c7add1ffff749cd7ccf7b05803/location_hp.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: no_priority.png" id="media-4999a41125af8ce48de14c59173fd998-no_priority.png" version="3393">
+      <location authority="local">./commcare/image/no_priority.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/8acf87d9ece92838308bc9cd951a5847/no_priority.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: notification.png" id="media-e70551e6baa1d87177e9fdde46f0fe70-notification.png" version="2">
+      <location authority="local">./commcare/image/notification.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/054c5266e8208c655822ce7e5784bb9b/notification.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: notification_anc1.png" id="media-364b5bfdf80598d34ec6dea2f545bc08-notification_anc1.png" version="2">
+      <location authority="local">./commcare/image/notification_anc1.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/d7b751dc2fc8d25b40cb482f27c8d4a8/notification_anc1.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: notification_anc_medications.jpg" id="media-026c5a5098acc04489c67a3f898a7ab2-notification_anc_medications.jpg" version="2230">
+      <location authority="local">./commcare/image/notification_anc_medications.jpg</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/061aa2f65da8d7aa19adca4646c72595/notification_anc_medications.jpg</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: notification_apply.png" id="media-b6c46c1dcb81786f6741d2beac2faa19-notification_apply.png" version="2">
+      <location authority="local">./commcare/image/notification_apply.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/16c644b505c64b5df1005811c7f82da5/notification_apply.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: notification_preg_outcome.png" id="media-03d90b01a1c8ffe90178589341357325-notification_preg_outcome.png" version="2">
+      <location authority="local">./commcare/image/notification_preg_outcome.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/dcfecbd9d698418494060c4ad14812d6/notification_preg_outcome.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: notification_referrals.jpg" id="media-c90740c15ca93411cac07f544f17744c-notification_referrals.jpg" version="2230">
+      <location authority="local">./commcare/image/notification_referrals.jpg</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/9fa053d4154cbf5c83f569fbb53aae88/notification_referrals.jpg</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: notification_remove.png" id="media-44369c30bab43e1585a0144b79fc23eb-notification_remove.png" version="2">
+      <location authority="local">./commcare/image/notification_remove.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/94238795b6916e5fd1e47b7fd1b5f0d5/notification_remove.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: pnc.png" id="media-095a47b52ceb1cada99cafdba6d26c8c-pnc.png" version="2">
+      <location authority="local">./commcare/image/pnc.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/f718806ef19cbf2e99b4ddac59851685/pnc.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: pnc1.png" id="media-a09ed2b50fb2980204fc25153848fa7c-pnc1.png" version="2">
+      <location authority="local">./commcare/image/pnc1.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/5cda7c75152562fcb64ee501c784c375/pnc1.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: pnc2.png" id="media-0d1f5a846908dd200e3ef0c30dca5bef-pnc2.png" version="2">
+      <location authority="local">./commcare/image/pnc2.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/c5298d97f401278a29a44234a713383d/pnc2.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: pnc3.png" id="media-9deb9c437e3a475b75cdf569f7f4f873-pnc3.png" version="2">
+      <location authority="local">./commcare/image/pnc3.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/f249051ac0979b58b1781eb846729f8a/pnc3.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: pnc4.png" id="media-42738bf2e02b5b85d47e0361ad4e6f98-pnc4.png" version="2">
+      <location authority="local">./commcare/image/pnc4.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/f249051ac0979b58b1781eb84672902c/pnc4.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: pnc5.png" id="media-5dad3edb91606d4af324fe6d0adb556b-pnc5.png" version="2">
+      <location authority="local">./commcare/image/pnc5.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/1f843ea68fd7a70d954029e9623c4621/pnc5.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: preg_outcome.png" id="media-d4488d32347b8411c98fe1aad3363cd2-preg_outcome.png" version="2">
+      <location authority="local">./commcare/image/preg_outcome.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/dcfecbd9d698418494060c4ad18a17fd/preg_outcome.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: preg_outcome_case_list.png" id="media-81482b3bfb6f5b7f2aeaeed5cdd944f7-preg_outcome_case_list.png" version="2230">
+      <location authority="local">./commcare/image/preg_outcome_case_list.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/eb56bc79d11c62d1952b9aeb68357e20/preg_outcome_case_list.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: priority0.png" id="media-5219717f90239877da04ef76ebe2dbc0-priority0.png" version="3393">
+      <location authority="local">./commcare/image/priority0.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/8acf87d9ece92838308bc9cd951a5847/priority0.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: priority1.png" id="media-e41c9c95c75579da88d9f38a1852f6c3-priority1.png" version="2">
+      <location authority="local">./commcare/image/priority1.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/88842efca98df4674a69497bd0f3fdda/priority1.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: priority2.png" id="media-0c336473f2a78571db95764df2db8fcd-priority2.png" version="2">
+      <location authority="local">./commcare/image/priority2.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/88842efca98df4674a69497bd0f3fdda/priority2.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: priority3.png" id="media-556b56abfceaa7dffcb2772b45872d3a-priority3.png" version="2">
+      <location authority="local">./commcare/image/priority3.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/857bd79e6e7e30f882b169e77ea051b1/priority3.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: priority4.png" id="media-9091a29b107f798fc13333dbc060e26a-priority4.png" version="2">
+      <location authority="local">./commcare/image/priority4.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/857bd79e6e7e30f882b169e77ec3cde0/priority4.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: priority5.png" id="media-3da9bdc4cc4043f20e8477460c0c9cf5-priority5.png" version="2230">
+      <location authority="local">./commcare/image/priority5.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/e7c9fd2d7953a80a9107a5db5370810d/priority5.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: reassign_client.png" id="media-7c412ea106876abbd4bd55c931e6dc9c-reassign_client.png" version="2">
+      <location authority="local">./commcare/image/reassign_client.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/c946053593577e4546c126a5373e4b1f/reassign_client.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: referrals.png" id="media-c3d993318c0fccb308497d0e7902687f-referrals.png" version="2">
+      <location authority="local">./commcare/image/referrals.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/f0ee783fb676f86a56ec867627252b16/referrals.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: referrals_remove.png" id="media-faa44fdab8b469980a71357275fd8a4f-referrals_remove.png" version="2">
+      <location authority="local">./commcare/image/referrals_remove.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/bb6b7d3b097ed481ad2e04d0b5ca1a61/referrals_remove.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: settings.png" id="media-5aa268406df430116fc6fd67f90f978b-settings.png" version="2">
+      <location authority="local">./commcare/image/settings.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/9baa6f45fb98257027c3c98bfa96f4ef/settings.png</location>
+    </resource>
+  </media>
+</suite>

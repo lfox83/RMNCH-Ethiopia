@@ -1,0 +1,57 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>Family Members</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/08D265F1-112A-4B1E-A711-DE383715C702" uiVersion="1" version="3432" name="Family Members">
+					<instruction/>
+					<return/>
+				<orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="commcaresession" src="jr://instance/session"/>
+			<bind nodeset="/data/instruction"/>
+			<bind nodeset="/data/return"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="instruction-label">
+						<value>To record a visit with this client or edit their details, go to the Client Files part of the app.</value>
+					</text>
+					<text id="return-label">
+						<value>Return to App Menu</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="instruction-label">
+						<value>&#4840;&#4826;&#4733; &#4723;&#4779;&#4634; &#4873;&#4709;&#4765;&#4725; &#4616;&#4632;&#4632;&#4829;&#4872;&#4709; &#4808;&#4845;&#4637; &#4616;&#4632;&#4672;&#4840;&#4653; &#4808;&#4848; &#4723;&#4779;&#4634; &#4635;&#4613;&#4848;&#4653; &#4840;&#4768;&#4949;&#4618;&#4780;&#4669;&#4753; &#4781;&#4941;&#4621; &#4845;&#4610;&#4849;.</value>
+					</text>
+					<text id="return-label">
+						<value>&#4632;&#4632;&#4616;&#4661; &#4808;&#4848; &#4768;&#4949; &#4829;&#4653;&#4829;&#4653;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="instruction-label">
+						<value>&#4755;&#4845;&#4723; &#4723;&#4627;&#4779;&#4634;&#4725; &#4817;&#4848;&#4725; &#4757;&#4637;&#4637;&#4829;&#4875;&#4709; &#4808;&#4845; &#4792;&#4819; &#4829;&#4653;&#4829;&#4653; &#4632;&#4648;&#4867; &#4757;&#4637;&#4661;&#4725;&#4797;&#4795;&#4621; , &#4755;&#4709;&#4722; &#4755;&#4845; &#4768;&#4949;&#4621;&#4780;&#4669;&#4757; &#4797;&#4941;&#4618; &#4829;&#4798;&#4752; &#4755;&#4845; &#4723;&#4627;&#4779;&#4634;&#4725; &#4939;&#4845;&#4621; &#4845;&#4797;&#4849;.</value>
+					</text>
+					<text id="return-label">
+						<value>&#4637;&#4637;&#4619;&#4661; &#4755;&#4709;&#4722; &#4774;&#4949;&#4618;&#4780;&#4669;&#4757; &#4829;&#4653;&#4829;&#4653;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="instruction-label">
+						<value>dawwaan kan galmeesuuf ykn sireessuuf karaa appilikeeshiin faayilaa tajaajilama deemi</value>
+					</text>
+					<text id="return-label">
+						<value>karaa appilikeeshin deebi'i</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<trigger ref="/data/instruction" appearance="minimal">
+			<label ref="jr:itext('instruction-label')"/>
+		</trigger>
+		<trigger ref="/data/return" appearance="minimal">
+			<label ref="jr:itext('return-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

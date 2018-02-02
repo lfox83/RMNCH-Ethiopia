@@ -1,0 +1,334 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>Delete Action Card</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/42195C62-7788-436B-9DD9-00266164FD5B" uiVersion="1" version="3432" name="Delete Action Card">
+					<warning>
+						<notification_purpose/>
+					</warning>
+					<delete_reason/>
+					<client_not_in_catchment/>
+					<verify_client_not_in_catchment/>
+					<client_dead/>
+					<do_not_delete/>
+					<confirm_delete/>
+					<end_of_form/>
+				<case_load_notification_0><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><close/></case></case_load_notification_0><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="commcaresession" src="jr://instance/session"/>
+			<bind nodeset="/data/warning"/>
+			<bind nodeset="/data/warning/notification_purpose"/>
+			<bind nodeset="/data/delete_reason" required="true()"/>
+			<bind nodeset="/data/client_not_in_catchment" relevant="/data/delete_reason = 'client_not_in_catchment'" required="true()"/>
+			<bind nodeset="/data/verify_client_not_in_catchment" relevant="/data/client_not_in_catchment = 'no'"/>
+			<bind nodeset="/data/client_dead" relevant="/data/delete_reason = 'client_dead'"/>
+			<bind nodeset="/data/do_not_delete" relevant="/data/delete_reason = 'none'"/>
+			<bind nodeset="/data/confirm_delete" relevant="/data/delete_reason != 'none' and /data/client_not_in_catchment != 'no'" required="true()"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="warning-label">
+						<value>Warning</value>
+					</text>
+					<text id="warning/notification_purpose-label">
+						<value>#### This Action Card contains important information from the Health Center about a client. Normally, this information should be added to a client's file.</value>
+						<value form="image">jr://file/commcare/image/data/question1/notification_purpose-mruzd4.png</value>
+						<value form="markdown">#### This Action Card contains important information from the Health Center about a client. Normally, this information should be added to a client's file.</value>
+					</text>
+					<text id="delete_reason-label">
+						<value>Why are you deleting this Action Card?</value>
+					</text>
+					<text id="delete_reason-client_not_in_catchment-label">
+						<value>Client is not in catchment area for Health Post</value>
+					</text>
+					<text id="delete_reason-duplicate-label">
+						<value>This Action Card is a duplicate. It was sent twice.</value>
+					</text>
+					<text id="delete_reason-info_outdated-label">
+						<value>This Action Card was sent too late, the information is outdated.</value>
+					</text>
+					<text id="delete_reason-client_dead-label">
+						<value>This client is dead</value>
+					</text>
+					<text id="delete_reason-none-label">
+						<value>None of the above</value>
+					</text>
+					<text id="client_not_in_catchment-label">
+						<value>Have you called the Health Center to make sure that this client is not in your catchment area?</value>
+					</text>
+					<text id="client_not_in_catchment-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="client_not_in_catchment-no-label">
+						<value>No</value>
+					</text>
+					<text id="verify_client_not_in_catchment-label">
+						<value>### Make sure you verify with the Health Center that this client is not in your catchment area. You can exit this form and return once you have confirmed.</value>
+						<value form="markdown">### Make sure you verify with the Health Center that this client is not in your catchment area. You can exit this form and return once you have confirmed.</value>
+					</text>
+					<text id="client_dead-label">
+						<value>### If the client is dead, make sure that you remove the client from your client files.</value>
+						<value form="markdown">### If the client is dead, make sure that you remove the client from your client files.</value>
+					</text>
+					<text id="do_not_delete-label">
+						<value>### There is no good reason to delete this Action Card. Please add Action Card to the relevant client's file.</value>
+						<value form="markdown">### There is no good reason to delete this Action Card. Please add Action Card to the relevant client's file.</value>
+					</text>
+					<text id="confirm_delete-label">
+						<value>Are you sure you want to permanently delete this Action Card?</value>
+					</text>
+					<text id="confirm_delete-no-label">
+						<value>No</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="warning-label">
+						<value>&#4635;&#4661;&#4896;&#4757;&#4672;&#4674;&#4843;</value>
+					</text>
+					<text id="warning/notification_purpose-label">
+						<value>### &#4845;&#4613; &#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4704;&#4900;&#4755; &#4899;&#4709;&#4843; &#4723;&#4779;&#4634;&#4811; &#4877;&#4705;&#4765;&#4725; &#4707;&#4848;&#4648;&#4872;&#4733;&#4704;&#4725; &#4877;&#4828;  &#4704;&#4899;&#4637; &#4896;&#4675;&#4634; &#4632;&#4648;&#4867;&#4814;&#4733;&#4757; &#4840;&#4843;&#4824; &#4752;&#4813;. &#4845;&#4613; &#4704;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853;&#4843;&#4616;&#4813;&#4757; &#4632;&#4648;&#4867; &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4632;&#4904;&#4632;&#4653; &#4768;&#4616;&#4704;&#4725;.</value>
+						<value form="image">jr://file/commcare/image/data/question1/notification_purpose-mruzd4.png</value>
+						<value form="markdown">### &#4845;&#4613; &#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4704;&#4900;&#4755; &#4899;&#4709;&#4843; &#4723;&#4779;&#4634;&#4811; &#4877;&#4705;&#4765;&#4725; &#4707;&#4848;&#4648;&#4872;&#4733;&#4704;&#4725; &#4877;&#4828;  &#4704;&#4899;&#4637; &#4896;&#4675;&#4634; &#4632;&#4648;&#4867;&#4814;&#4733;&#4757; &#4840;&#4843;&#4824; &#4752;&#4813;. &#4845;&#4613; &#4704;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853;&#4843;&#4616;&#4813;&#4757; &#4632;&#4648;&#4867; &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4632;&#4904;&#4632;&#4653; &#4768;&#4616;&#4704;&#4725;.</value>
+					</text>
+					<text id="delete_reason-label">
+						<value>&#4616;&#4637;&#4757;&#4853;&#4752;&#4813; &#4845;&#4613; &#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4632;&#4621;&#4773;&#4781;&#4725; &#4779;&#4653;&#4853; &#4773;&#4843;&#4896;&#4939;&#4669; &#4843;&#4616;&#4669;&#4813; ?</value>
+					</text>
+					<text id="delete_reason-client_not_in_catchment-label">
+						<value>&#4723;&#4779;&#4634;&#4811; &#4704;&#4826;&#4613; &#4900;&#4755; &#4780;&#4619; &#4781;&#4621;&#4621; &#4813;&#4661;&#4901; &#4768;&#4845;&#4848;&#4616;&#4733;&#4637;.</value>
+					</text>
+					<text id="delete_reason-duplicate-label">
+						<value>&#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4637;&#4621;&#4773;&#4781;&#4725; &#4779;&#4653;&#4853; &#4720;&#4848;&#4877;&#4639;&#4621;. &#4609;&#4616;&#4725; &#4877;&#4828; &#4752;&#4813; &#4840;&#4720;&#4619;&#4776;&#4813;.</value>
+					</text>
+					<text id="delete_reason-info_outdated-label">
+						<value>&#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4632;&#4621;&#4773;&#4781;&#4725; &#4779;&#4653;&#4849; &#4776;&#4720;&#4619;&#4776; &#4678;&#4845;&#4727;&#4621;, &#4632;&#4648;&#4867; &#4877;&#4828;&#4813; &#4843;&#4616;&#4936;&#4704;&#4725; &#4752;&#4813;.</value>
+					</text>
+					<text id="delete_reason-client_dead-label">
+						<value>&#4723;&#4779;&#4634;&#4811; &#4638;&#4723;&#4616;&#4733;.</value>
+					</text>
+					<text id="delete_reason-none-label">
+						<value>&#4776;&#4619;&#4845; &#4779;&#4617;&#4725; &#4768;&#4635;&#4651;&#4910;&#4733; &#4813;&#4906; &#4752;&#4813;</value>
+					</text>
+					<text id="client_not_in_catchment-label">
+						<value>&#4723;&#4779;&#4634;&#4811; &#4704;&#4826;&#4613; &#4900;&#4755; &#4780;&#4619; &#4781;&#4621;&#4621; &#4768;&#4616;&#4632;&#4614;&#4757;&#4811; &#4808;&#4848; &#4900;&#4755; &#4899;&#4709;&#4843; &#4848;&#4813;&#4616;&#4669; &#4768;&#4648;&#4875;&#4877;&#4896;&#4664;&#4621;?</value>
+					</text>
+					<text id="client_not_in_catchment-yes-label">
+						<value>&#4768;&#4814;</value>
+					</text>
+					<text id="client_not_in_catchment-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="verify_client_not_in_catchment-label">
+						<value>&#4723;&#4779;&#4634;&#4811; &#4704;&#4826;&#4613; &#4900;&#4755; &#4780;&#4619; &#4781;&#4621;&#4621; &#4813;&#4661;&#4901; &#4768;&#4616;&#4632;&#4614;&#4757;&#4811; &#4776;&#4900;&#4755; &#4899;&#4709;&#4843; &#4635;&#4648;&#4875;&#4872;&#4901;&#4669; &#4773;&#4653;&#4877;&#4896;&#4763; &#4609;&#4762;. &#4776;&#4826;&#4613; &#4677;&#4933; &#4632;&#4813;&#4899;&#4725; &#4773;&#4757;&#4850;&#4609;&#4637;  &#4768;&#4757;&#4852; &#4779;&#4648;&#4875;&#4872;&#4901;&#4669; &#4632;&#4632;&#4616;&#4661; &#4725;&#4733;&#4843;&#4616;&#4669;.</value>
+						<value form="markdown">&#4723;&#4779;&#4634;&#4811; &#4704;&#4826;&#4613; &#4900;&#4755; &#4780;&#4619; &#4781;&#4621;&#4621; &#4813;&#4661;&#4901; &#4768;&#4616;&#4632;&#4614;&#4757;&#4811; &#4776;&#4900;&#4755; &#4899;&#4709;&#4843; &#4635;&#4648;&#4875;&#4872;&#4901;&#4669; &#4773;&#4653;&#4877;&#4896;&#4763; &#4609;&#4762;. &#4776;&#4826;&#4613; &#4677;&#4933; &#4632;&#4813;&#4899;&#4725; &#4773;&#4757;&#4850;&#4609;&#4637;  &#4768;&#4757;&#4852; &#4779;&#4648;&#4875;&#4872;&#4901;&#4669; &#4632;&#4632;&#4616;&#4661; &#4725;&#4733;&#4843;&#4616;&#4669;.</value>
+					</text>
+					<text id="client_dead-label">
+						<value>&#4723;&#4779;&#4634;&#4811; &#4776;&#4638;&#4720;&#4733;, &#4723;&#4779;&#4634;&#4811; &#4776;&#4723;&#4779;&#4634;&#4814;&#4733; &#4829;&#4653;&#4829;&#4653; &#4635;&#4901;&#4939;&#4725;&#4669;&#4757; &#4768;&#4648;&#4875;&#4877;&#4906;.</value>
+						<value form="markdown">&#4723;&#4779;&#4634;&#4811; &#4776;&#4638;&#4720;&#4733;, &#4723;&#4779;&#4634;&#4811; &#4776;&#4723;&#4779;&#4634;&#4814;&#4733; &#4829;&#4653;&#4829;&#4653; &#4635;&#4901;&#4939;&#4725;&#4669;&#4757; &#4768;&#4648;&#4875;&#4877;&#4906;.</value>
+					</text>
+					<text id="do_not_delete-label">
+						<value>&#4845;&#4613; &#4632;&#4621;&#4773;&#4781;&#4725; &#4840;&#4635;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4616;&#4635;&#4901;&#4939;&#4725; &#4637;&#4757;&#4637; &#4637;&#4781;&#4757;&#4843;&#4725; &#4840;&#4616;&#4669;&#4637; &#4773;&#4707;&#4781;&#4669; &#4845;&#4613; &#4840;&#4632;&#4621;&#4773;&#4776;&#4725; &#4635;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4904;&#4637;&#4650;&#4813;.</value>
+						<value form="markdown">&#4845;&#4613; &#4632;&#4621;&#4773;&#4781;&#4725; &#4840;&#4635;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4616;&#4635;&#4901;&#4939;&#4725; &#4637;&#4757;&#4637; &#4637;&#4781;&#4757;&#4843;&#4725; &#4840;&#4616;&#4669;&#4637; &#4773;&#4707;&#4781;&#4669; &#4845;&#4613; &#4840;&#4632;&#4621;&#4773;&#4776;&#4725; &#4635;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4904;&#4637;&#4650;&#4813;.</value>
+					</text>
+					<text id="confirm_delete-label">
+						<value>&#4845;&#4613;&#4757; &#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4632;&#4621;&#4821;&#4781;&#4725; &#4704;&#4683;&#4634;&#4752;&#4725; &#4616;&#4635;&#4901;&#4939;&#4725; &#4725;&#4936;&#4621;&#4874;&#4843;&#4616;&#4669;?</value>
+					</text>
+					<text id="confirm_delete-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="warning-label">
+						<value>&#4632;&#4896;&#4757;&#4672;&#4693;&#4723;</value>
+					</text>
+					<text id="warning/notification_purpose-label">
+						<value>#### &#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4824;&#4896;&#4691;&#4616;&#4622; (&#4829;&#4627;&#4830;) &#4709;&#4899;&#4821;&#4634; &#4896;&#4691;&#4634; &#4627;&#4704;&#4652;&#4723; &#4771;&#4709; &#4901;&#4821;&#4755; &#4899;&#4706;&#4843;  &#4709;&#4827;&#4821;&#4707;  &#4755;&#4845; &#4720;&#4627;&#4779;&#4635;&#4845; &#4773;&#4841;&#4964;&#4961;&#4961; &#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4773;&#4825;&#4845; &#4755;&#4709;&#4726;&#4637; &#4829;&#4720;&#4632;&#4648;&#4929; &#4720;&#4872;&#4621;&#4872;&#4621;&#4722; &#4939;&#4845;&#4621; &#4829;&#4813;&#4656;&#4797; &#4773;&#4841;</value>
+						<value form="image">jr://file/commcare/image/data/question1/notification_purpose-mruzd4.png</value>
+						<value form="markdown">#### &#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4824;&#4896;&#4691;&#4616;&#4622; (&#4829;&#4627;&#4830;) &#4709;&#4899;&#4821;&#4634; &#4896;&#4691;&#4634; &#4627;&#4704;&#4652;&#4723; &#4771;&#4709; &#4901;&#4821;&#4755; &#4899;&#4706;&#4843;  &#4709;&#4827;&#4821;&#4707;  &#4755;&#4845; &#4720;&#4627;&#4779;&#4635;&#4845; &#4773;&#4841;&#4964;&#4961;&#4961; &#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4773;&#4825;&#4845; &#4755;&#4709;&#4726;&#4637; &#4829;&#4720;&#4632;&#4648;&#4929; &#4720;&#4872;&#4621;&#4872;&#4621;&#4722; &#4939;&#4845;&#4621; &#4829;&#4813;&#4656;&#4797; &#4773;&#4841;</value>
+					</text>
+					<text id="delete_reason-label">
+						<value>&#4757;&#4637;&#4757;&#4723;&#4845; &#4770;&#4794; &#4773;&#4826; &#4771;&#4781;&#4669; &#4779;&#4653;&#4850; &#4720;&#4725;&#4941;&#4773;&#4846; &#4824;&#4616;&#4794;?</value>
+					</text>
+					<text id="delete_reason-client_not_in_catchment-label">
+						<value>&#4773;&#4827; &#4720;&#4627;&#4779;&#4634;&#4725; &#4779;&#4709;&#4826; &#4780;&#4619; &#4901;&#4821;&#4755; &#4776;&#4707;&#4706; &#4808;&#4931;&#4770; &#4773;&#4843;</value>
+					</text>
+					<text id="delete_reason-duplicate-label">
+						<value>&#4829;&#4720;&#4848;&#4872;&#4632; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4773;&#4841;&#4961;&#4961;&#4781;&#4621;&#4720; &#4877;&#4824; &#4720;&#4619;&#4770;&#4793; &#4752;&#4845;&#4649;&#4961;&#4961;</value>
+					</text>
+					<text id="delete_reason-info_outdated-label">
+						<value>&#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4853;&#4626;&#4649; ( &#4848;&#4757;&#4873;&#4841;) &#4773;&#4841; &#4720;&#4619;&#4770;&#4793;&#4963;&#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4877;&#4826;&#4769; &#4829;&#4627;&#4616;&#4942; &#4773;&#4841;&#4961;&#4961;</value>
+					</text>
+					<text id="delete_reason-client_dead-label">
+						<value>&#4720;&#4627;&#4779;&#4635;&#4845; &#4638;&#4845;&#4721;</value>
+					</text>
+					<text id="delete_reason-none-label">
+						<value>&#4811;&#4619; &#4627;&#4848; ( &#4637;&#4757;&#4637; &#4632;&#4621;&#4658; &#4840;&#4616;&#4757;)</value>
+					</text>
+					<text id="client_not_in_catchment-label">
+						<value>&#4768;&#4773;&#4826; &#4720;&#4627;&#4779;&#4635;&#4845; &#4771;&#4709; &#4781;&#4618;&#4794; &#4824;&#4845;&#4637;&#4795;&#4753; &#4757;&#4637;&#4653;&#4877;&#4875;&#4933; &#4755;&#4709; &#4901;&#4821;&#4755; &#4899;&#4709;&#4843; &#4848;&#4810;&#4621;&#4778; &#4854;</value>
+					</text>
+					<text id="client_not_in_catchment-yes-label">
+						<value>&#4773;&#4808;</value>
+					</text>
+					<text id="client_not_in_catchment-no-label">
+						<value>&#4771;&#4845;&#4939;&#4621;</value>
+					</text>
+					<text id="verify_client_not_in_catchment-label">
+						<value>### &#4773;&#4826; &#4720;&#4627;&#4779;&#4635;&#4845; &#4771;&#4709; &#4776;&#4707;&#4706;&#4793;&#4637; &#4824;&#4845;&#4637;&#4795;&#4753; &#4637;&#4661; &#4901;&#4821;&#4755; &#4899;&#4709;&#4843; &#4782;&#4845;&#4757;&#4778; &#4771;&#4648;&#4875;&#4872;&#4930; &#4779;&#4709;&#4826; &#4677;&#4901;&#4818; &#4781;&#4725;&#4808;&#4930; &#4725;&#4797;&#4773;&#4618; &#4770;&#4794; &#4773;&#4755; &#4637;&#4661; &#4771;&#4648;&#4875;&#4872;&#4933;&#4778; &#4720;&#4632;&#4618;&#4661;&#4778; &#4781;&#4725;&#4771;&#4725;&#4810; &#4725;&#4797;&#4773;&#4618; &#4770;&#4794;</value>
+						<value form="markdown">### &#4773;&#4826; &#4720;&#4627;&#4779;&#4635;&#4845; &#4771;&#4709; &#4776;&#4707;&#4706;&#4793;&#4637; &#4824;&#4845;&#4637;&#4795;&#4753; &#4637;&#4661; &#4901;&#4821;&#4755; &#4899;&#4709;&#4843; &#4782;&#4845;&#4757;&#4778; &#4771;&#4648;&#4875;&#4872;&#4930; &#4779;&#4709;&#4826; &#4677;&#4901;&#4818; &#4781;&#4725;&#4808;&#4930; &#4725;&#4797;&#4773;&#4618; &#4770;&#4794; &#4773;&#4755; &#4637;&#4661; &#4771;&#4648;&#4875;&#4872;&#4933;&#4778; &#4720;&#4632;&#4618;&#4661;&#4778; &#4781;&#4725;&#4771;&#4725;&#4810; &#4725;&#4797;&#4773;&#4618; &#4770;&#4794;</value>
+					</text>
+					<text id="client_dead-label">
+						<value>&#4773;&#4757;&#4853;&#4629;&#4653; &#4773;&#4826; &#4848;&#4757;&#4704;&#4763; &#4638;&#4845;&#4721; &#4782;&#4845;&#4753; &#4779;&#4709; &#4829;&#4653;&#4829;&#4648; &#4848;&#4757;&#4704;&#4763; &#4637;&#4813;&#4875;&#4849; &#4771;&#4648;&#4875;&#4877;&#4930;</value>
+						<value form="markdown">&#4773;&#4757;&#4853;&#4629;&#4653; &#4773;&#4826; &#4848;&#4757;&#4704;&#4763; &#4638;&#4845;&#4721; &#4782;&#4845;&#4753; &#4779;&#4709; &#4829;&#4653;&#4829;&#4648; &#4848;&#4757;&#4704;&#4763; &#4637;&#4813;&#4875;&#4849; &#4771;&#4648;&#4875;&#4877;&#4930;</value>
+					</text>
+					<text id="do_not_delete-label">
+						<value>&#4752;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4757;&#4637;&#4813;&#4875;&#4853; &#4704;&#4674; &#4829;&#4798;&#4752; &#4637;&#4797;&#4757;&#4843;&#4725; &#4840;&#4709;&#4621;&#4781;&#4757;.&#4704;&#4845;&#4827;&#4794; &#4755;&#4709;&#4722; &#4725;&#4781;&#4781;&#4616;&#4763; &#4829;&#4798;&#4752; &#4848;&#4757;&#4704;&#4763; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4808;&#4658;&#4778;</value>
+						<value form="markdown">&#4752;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4757;&#4637;&#4813;&#4875;&#4853; &#4704;&#4674; &#4829;&#4798;&#4752; &#4637;&#4797;&#4757;&#4843;&#4725; &#4840;&#4709;&#4621;&#4781;&#4757;.&#4704;&#4845;&#4827;&#4794; &#4755;&#4709;&#4722; &#4725;&#4781;&#4781;&#4616;&#4763; &#4829;&#4798;&#4752; &#4848;&#4757;&#4704;&#4763; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4808;&#4658;&#4778;</value>
+					</text>
+					<text id="confirm_delete-label">
+						<value>&#4773;&#4826; &#4755;&#4845; &#4632;&#4621;&#4773;&#4781;&#4722; &#4632;&#4941;&#4616;&#4898; &#4757;&#4627;&#4811;&#4649; &#4781;&#4896;&#4941;&#4773; &#4725;&#4848;&#4621;&#4842; &#4850;&#4778;?</value>
+					</text>
+					<text id="confirm_delete-no-label">
+						<value>&#4768;&#4941;&#4617;&#4757; &#4808;&#4840; &#4773;&#4637;&#4706;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4677;&#4901;&#4818; &#4633;&#4617;&#4773; &#4757;&#4633;&#4617;&#4773; &#4829;&#4720;&#4635;&#4616;&#4768; &#4773;&#4841;   &#4961;&#4961;
+&#4773;&#4722; &#4677;&#4901;&#4818; &#4757;&#4637;&#4621;&#4768;&#4781; &#4709;&#4619;&#4821;&#4618; &#4709;&#4840;&#4635;&#4757; &#4872;&#4933; &#4824;&#4622; &#4678;&#4931;&#4621; &#4629;&#4709;&#4650; &#4896;&#4809;&#4677;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="warning-label">
+						<value>Warning</value>
+					</text>
+					<text id="warning/notification_purpose-label">
+						<value>#### kaardiin Ergaa dabarsituun kun oddefannoo  barbaachisaa buufata fayyaa irraayi.odefannoo kun  faayilii tajaajilamatti dabali qaba.</value>
+						<value form="image">jr://file/commcare/image/data/question1/notification_purpose-mruzd4.png</value>
+						<value form="markdown">#### kaardiin Ergaa dabarsituun kun oddefannoo  barbaachisaa buufata fayyaa irraayi.odefannoo kun  faayilii tajaajilamatti dabali qaba.</value>
+					</text>
+					<text id="delete_reason-label">
+						<value>maaliif 'action card' balleesite?</value>
+					</text>
+					<text id="delete_reason-client_not_in_catchment-label">
+						<value>yaalamaan waan jiraata naannoo keellaa fayyaa hin taaneef</value>
+					</text>
+					<text id="delete_reason-duplicate-label">
+						<value>"action card'n waan kanani dura tureef/irraa deebi'ameef</value>
+					</text>
+					<text id="delete_reason-info_outdated-label">
+						<value>akishiin cardiin waan dubatti hafeef/waan yeroon darbeef</value>
+					</text>
+					<text id="delete_reason-client_dead-label">
+						<value>Yaalaman waan du'eef</value>
+					</text>
+					<text id="delete_reason-none-label">
+						<value>kan armaan oli hundu hin ta'an</value>
+					</text>
+					<text id="client_not_in_catchment-label">
+						<value>yaalaman kun jiraata naannoo keellaa fayyaa ta'u dhiisu isaa beekuuf buufata fayyaa waliin dubatanii</value>
+					</text>
+					<text id="client_not_in_catchment-yes-label">
+						<value>eeyyeen</value>
+					</text>
+					<text id="client_not_in_catchment-no-label">
+						<value>miti</value>
+					</text>
+					<text id="verify_client_not_in_catchment-label">
+						<value>Ergaa tajaajilaman kun Jiraata naannoo sana ta'u isaa buufata fayyaa waliin dubachuun beekiteen booda unka kaan dhiisi bahi</value>
+						<value form="markdown">Ergaa tajaajilaman kun Jiraata naannoo sana ta'u isaa buufata fayyaa waliin dubachuun beekiteen booda unka kaan dhiisi bahi</value>
+					</text>
+					<text id="client_dead-label">
+						<value>Ergaa tajaajilaman du'u isaa beekiteen booda tajaajilama faayilaa tajaajilama keessa baasuu kee mirkaanessi</value>
+						<value form="markdown">Ergaa tajaajilaman du'u isaa beekiteen booda tajaajilama faayilaa tajaajilama keessa baasuu kee mirkaanessi</value>
+					</text>
+					<text id="do_not_delete-label">
+						<value>akiishin kaardii kan haquuf sababa ga'a waan hin qabneef faayili barbaachisaa tajaajilama ta'eetti dabali</value>
+						<value form="markdown">akiishin kaardii kan haquuf sababa ga'a waan hin qabneef faayili barbaachisaa tajaajilama ta'eetti dabali</value>
+					</text>
+					<text id="confirm_delete-label">
+						<value>Guutuuma guutuutti akishiin kardii kan haquuf ni barbaada?</value>
+					</text>
+					<text id="confirm_delete-no-label">
+						<value>miti</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki guutuma guututti guutame unka kan erguuf malattoo magarsaa kan kara bukkee harka mirgaa olii jiru xuqii.</value>
+					</text>
+				</translation>
+			</itext>
+		<bind calculate="/data/meta/timeEnd" nodeset="/data/case_load_notification_0/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_load_notification_0/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_load_notification_0" nodeset="/data/case_load_notification_0/case/@case_id"/><bind nodeset="/data/case_load_notification_0/case/close" relevant="/data/confirm_delete = 'yes'"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<group ref="/data/warning" appearance="field-list">
+			<label ref="jr:itext('warning-label')"/>
+			<trigger ref="/data/warning/notification_purpose" appearance="minimal">
+				<label ref="jr:itext('warning/notification_purpose-label')"/>
+			</trigger>
+		</group>
+		<select1 ref="/data/delete_reason">
+			<label ref="jr:itext('delete_reason-label')"/>
+			<item>
+				<label ref="jr:itext('delete_reason-client_not_in_catchment-label')"/>
+				<value>client_not_in_catchment</value>
+			</item>
+			<item>
+				<label ref="jr:itext('delete_reason-duplicate-label')"/>
+				<value>duplicate</value>
+			</item>
+			<item>
+				<label ref="jr:itext('delete_reason-info_outdated-label')"/>
+				<value>info_outdated</value>
+			</item>
+			<item>
+				<label ref="jr:itext('delete_reason-client_dead-label')"/>
+				<value>client_dead</value>
+			</item>
+			<item>
+				<label ref="jr:itext('delete_reason-none-label')"/>
+				<value>none</value>
+			</item>
+		</select1>
+		<select1 ref="/data/client_not_in_catchment">
+			<label ref="jr:itext('client_not_in_catchment-label')"/>
+			<item>
+				<label ref="jr:itext('client_not_in_catchment-yes-label')"/>
+				<value>yes</value>
+			</item>
+			<item>
+				<label ref="jr:itext('client_not_in_catchment-no-label')"/>
+				<value>no</value>
+			</item>
+		</select1>
+		<trigger ref="/data/verify_client_not_in_catchment" appearance="minimal">
+			<label ref="jr:itext('verify_client_not_in_catchment-label')"/>
+		</trigger>
+		<trigger ref="/data/client_dead" appearance="minimal">
+			<label ref="jr:itext('client_dead-label')"/>
+		</trigger>
+		<trigger ref="/data/do_not_delete" appearance="minimal">
+			<label ref="jr:itext('do_not_delete-label')"/>
+		</trigger>
+		<select1 ref="/data/confirm_delete">
+			<label ref="jr:itext('confirm_delete-label')"/>
+			<item>
+				<label ref="jr:itext('client_not_in_catchment-yes-label')"/>
+				<value>yes</value>
+			</item>
+			<item>
+				<label ref="jr:itext('confirm_delete-no-label')"/>
+				<value>no</value>
+			</item>
+		</select1>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

@@ -1,0 +1,246 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum" vellum:ignore="richText">
+	<h:head>
+		<h:title>Initial Application Setup</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/5d5053a19d8010c30b9a365648e74349589df536" uiVersion="1" version="3432" name="Initial Application Setup">
+					<create_supervision_case_for_this_hew>
+						<create_supervision_case/>
+						<name/>
+						<hew_user_id/>
+						<full_name/>
+						<phone_number/>
+					</create_supervision_case_for_this_hew>
+					<create_supervision_case_for_this_hp>
+						<create_supervision_case/>
+						<ambulance_phones>
+							<num_ambulances/>
+							<ambulances jr:template="">
+								<enforce_repeat_number>
+									<ambulance_phone/>
+								</enforce_repeat_number>
+							</ambulances>
+							<ambulance_phones/>
+						</ambulance_phones>
+						<villages>
+							<num_villages/>
+							<villages jr:template="">
+								<enforce_repeat_number>
+									<village_name/>
+									<name_no_spaces/>
+								</enforce_repeat_number>
+							</villages>
+							<village_names/>
+						</villages>
+					</create_supervision_case_for_this_hp>
+					<locations>
+						<health_post_id/>
+						<health_post/>
+						<health_center_id/>
+						<health_center/>
+						<region_id/>
+						<region/>
+						<zone_id/>
+						<zone/>
+						<woreda_id/>
+						<woreda/>
+						<hp_facility_code/>
+						<hc_facility_code/>
+						<test_or_real/>
+					</locations>
+					<end_of_form/>
+				<case_open_hew_supervision_1><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><create><case_name/><owner_id/><case_type>hew_supervision</case_type></create><update><full_name/><hc_facility_code/><health_center/><health_center_id/><health_post/><health_post_id/><hew_user_id/><hp_facility_code/><phone_number/><region/><region_id/><test_or_real/><woreda/><woreda_id/><zone/><zone_id/></update></case></case_open_hew_supervision_1><case_open_delegation_2><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><create><case_name/><owner_id>-</owner_id><case_type>supervision_delegation</case_type></create><update><owner_id/></update><index><parent case_type="hew_supervision"/></index></case></case_open_delegation_2><case_open_hp_supervision_4><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><create><case_name/><owner_id/><case_type>hp_supervision</case_type></create><update><ambulance_phones/><hc_facility_code/><health_center/><health_center_id/><health_post/><health_post_id/><hp_facility_code/><region/><region_id/><test_or_real/><village_names/><woreda/><woreda_id/><zone/><zone_id/></update></case></case_open_hp_supervision_4><case_open_delegation_5><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><create><case_name/><owner_id>-</owner_id><case_type>supervision_delegation</case_type></create><update><owner_id/></update><index><parent case_type="hp_supervision"/></index></case></case_open_delegation_5><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="groups" src="jr://fixture/user-groups"/><instance id="locations" src="jr://fixture/locations"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<instance src="jr://instance/casedb" id="casedb"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hew"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hew/create_supervision_case" calculate="if(count(instance('casedb')/casedb/case[@case_type = &quot;hew_supervision&quot;][@status = 'open'][hew_user_id = /data/meta/userID]) = 0, &quot;yes&quot;, &quot;no&quot;)"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hew/name" relevant="/data/create_supervision_case_for_this_hew/create_supervision_case = &quot;yes&quot;" calculate="/data/meta/username" required="true()"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hew/hew_user_id" relevant="/data/create_supervision_case_for_this_hew/create_supervision_case = &quot;yes&quot;" calculate="/data/meta/userID"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hew/full_name" relevant="/data/create_supervision_case_for_this_hew/create_supervision_case = &quot;yes&quot;" calculate="if(concat(instance('commcaresession')/session/user/data/commcare_first_name, &quot; &quot;, instance('commcaresession')/session/user/data/commcare_last_name) != &quot; &quot;, concat(instance('commcaresession')/session/user/data/commcare_first_name, &quot; &quot;, instance('commcaresession')/session/user/data/commcare_last_name), /data/create_supervision_case_for_this_hew/name)"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hew/phone_number" relevant="/data/create_supervision_case_for_this_hew/create_supervision_case = &quot;yes&quot;" calculate="if(instance('commcaresession')/session/user/data/commcare_phone_number != '', instance('commcaresession')/session/user/data/commcare_phone_number, &quot;&quot;)"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/create_supervision_case" calculate="if(count(instance('casedb')/casedb/case[@case_type = &quot;hp_supervision&quot;][@status = 'open'][health_post_id = /data/locations/health_post_id]) = 0, &quot;yes&quot;, &quot;no&quot;)"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/ambulance_phones" relevant="/data/create_supervision_case_for_this_hp/create_supervision_case = &quot;yes&quot;"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/ambulance_phones/num_ambulances" type="xsd:int" constraint=". &gt; 0 and . &lt;= 10" jr:constraintMsg="jr:itext('create_supervision_case_for_this_hp/ambulance_phones/num_ambulances-constraintMsg')" required="true()"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/ambulance_phones/ambulances"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number" relevant="(position(current()/..) + 1) &lt;= /data/create_supervision_case_for_this_hp/ambulance_phones/num_ambulances"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone" type="xsd:string" constraint="regex(., '^0[0-9]{9}$')" jr:constraintMsg="jr:itext('create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone-constraintMsg')" required="true()"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/ambulance_phones/ambulance_phones" calculate="join(&quot; &quot;, /data/create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone)"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/villages" relevant="/data/create_supervision_case_for_this_hp/create_supervision_case = &quot;yes&quot;"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/villages/num_villages" type="xsd:int" constraint=". &gt; 0 and . &lt;= 15" jr:constraintMsg="jr:itext('create_supervision_case_for_this_hp/villages/num_villages-constraintMsg')" required="true()"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/villages/villages"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/villages/villages/enforce_repeat_number" relevant="position(current()/..) + 1 &lt;= /data/create_supervision_case_for_this_hp/villages/num_villages"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/villages/villages/enforce_repeat_number/village_name" type="xsd:string" required="true()"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/villages/villages/enforce_repeat_number/name_no_spaces" calculate="replace(current()/../village_name, &quot; &quot;, &quot;_&quot;)"/>
+			<bind nodeset="/data/create_supervision_case_for_this_hp/villages/village_names" calculate="join(&quot; &quot;, /data/create_supervision_case_for_this_hp/villages/villages/enforce_repeat_number/name_no_spaces)"/>
+			<bind nodeset="/data/locations"/>
+			<bind nodeset="/data/locations/health_post_id" calculate="instance('commcaresession')/session/user/data/commcare_location_id"/>
+			<bind nodeset="/data/locations/health_post" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/name" required="true()"/>
+			<bind nodeset="/data/locations/health_center_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/@health-center_id"/>
+			<bind nodeset="/data/locations/health_center" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/name"/>
+			<bind nodeset="/data/locations/region_id" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/@region_id"/>
+			<bind nodeset="/data/locations/region" calculate="instance('locations')/locations/location[@id = /data/locations/region_id]/name"/>
+			<bind nodeset="/data/locations/zone_id" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/@zone_id"/>
+			<bind nodeset="/data/locations/zone" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/name"/>
+			<bind nodeset="/data/locations/woreda_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/@woreda_id"/>
+			<bind nodeset="/data/locations/woreda" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/name"/>
+			<bind nodeset="/data/locations/hp_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/hc_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/test_or_real" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/num_ambulances-label">
+						<value>How many Ambulance Numbers are used in this Health Post?</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/num_ambulances-constraintMsg">
+						<value>You must have between 1 and 10 ambulance numbers.</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone-label">
+						<value>Ambulance Phone number <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone-constraintMsg">
+						<value>The phone number must start with 0 and cannot be longer than 10 digits</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/villages/num_villages-label">
+						<value>How many Villages are under this Health Post?</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/villages/num_villages-constraintMsg">
+						<value>You must have between 1 and 15 villages.</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/villages/villages/enforce_repeat_number/village_name-label">
+						<value>Name of Village <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/num_ambulances-label">
+						<value>&#4704;&#4826;&#4613; &#4900;&#4755; &#4780;&#4619; &#4661;&#4757;&#4725; &#4840;&#4768;&#4637;&#4705;&#4619;&#4757;&#4661; &#4661;&#4621;&#4781; &#4673;&#4901;&#4654;&#4733; &#4725;&#4896;&#4672;&#4635;&#4619;&#4733;&#4609;?</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/num_ambulances-constraintMsg">
+						<value>&#4840;&#4768;&#4637;&#4705;&#4619;&#4661; &#4673;&#4901;&#4654;&#4733; &#4776;1 &#4773;&#4661;&#4776; 10 &#4632;&#4614;&#4757; &#4768;&#4616;&#4704;&#4725;</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone-label">
+						<value>&#4840;&#4768;&#4637;&#4705;&#4619;&#4661; &#4661;&#4621;&#4781; &#4673;&#4901;&#4653; <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone-constraintMsg">
+						<value>&#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4777; &#4776;0 &#4632;&#4864;&#4632;&#4653; &#4768;&#4616;&#4704;&#4725; &#4773;&#4755; &#4776;10 &#4673;&#4901;&#4654;&#4733; &#4632;&#4709;&#4616;&#4901; &#4840;&#4616;&#4704;&#4725;&#4637;</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/villages/num_villages-label">
+						<value>&#4704;&#4826;&#4613; &#4900;&#4755; &#4780;&#4619; &#4661;&#4653; &#4661;&#4757;&#4725; &#4878;&#4902;&#4733; &#4768;&#4617; ?</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/villages/num_villages-constraintMsg">
+						<value>&#4840;&#4878;&#4902;&#4733; &#4709;&#4827;&#4725; &#4776;1-15 &#4632;&#4779;&#4776;&#4621; &#4632;&#4614;&#4757; &#4768;&#4616;&#4704;&#4725;&#4961;&#4961;</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/villages/villages/enforce_repeat_number/village_name-label">
+						<value>&#4840;&#4878;&#4901; &#4661;&#4637;&#4961;  <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/num_ambulances-label">
+						<value>&#4771;&#4709;&#4826; &#4901;&#4821;&#4755; &#4780;&#4619; &#4781;&#4757;&#4848;&#4845; &#4755;&#4845; &#4771;&#4637;&#4705;&#4619;&#4757;&#4661; &#4661;&#4621;&#4781; &#4689;&#4933;&#4650; &#4725;&#4901;&#4672;&#4633;?</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/num_ambulances-constraintMsg">
+						<value>&#4755;&#4845; &#4771;&#4637;&#4705;&#4619;&#4757;&#4661; &#4689;&#4933;&#4650;&#4723;&#4725; &#4779;&#4709; 1 &#4661;&#4875;&#4709; 10 &#4781;&#4792;&#4813;&#4757; &#4771;&#4616;&#4814;</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone-label">
+						<value>&#4755;&#4845; &#4771;&#4637;&#4705;&#4619;&#4661; &#4661;&#4621;&#4778; &#4673;&#4933;&#4650; <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone-constraintMsg">
+						<value>&#4755;&#4845; &#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4778; &#4779;&#4709; 0 &#4864;&#4634;&#4649; &#4779;&#4709; 10 &#4673;&#4933;&#4650; &#4781;&#4704;&#4621;&#4933; &#4840;&#4709;&#4617;&#4757;</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/villages/num_villages-label">
+						<value>&#4768;&#4709; &#4901;&#4821;&#4755; &#4780;&#4619; &#4781;&#4757;&#4848;&#4845; &#4878;&#4901; &#4808;&#4845; &#4673;&#4664;&#4725; &#4768;&#4619;&#4811;</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/villages/num_villages-constraintMsg">
+						<value>&#4704;&#4829;&#4626; &#4673;&#4664;&#4725; &#4768;&#4709; &#4632;&#4757;&#4878; 1 &#4781;&#4659;&#4821; 15 &#4781;&#4776;&#4809;&#4757; &#4768;&#4616;&#4814;</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/villages/villages/enforce_repeat_number/village_name-label">
+						<value>&#4673;&#4664;&#4725; &#4661;&#4637;&#4961;  <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4773;&#4722; &#4677;&#4901;&#4818; &#4633;&#4617;&#4773; &#4757;&#4633;&#4617;&#4773; &#4720;&#4632;&#4617;&#4769; &#4773;&#4841;  &#4773;&#4722; &#4677;&#4901;&#4818; &#4757;&#4637;&#4621;&#4768;&#4781; &#4709;&#4619;&#4821;&#4618; &#4709;&#4840;&#4635;&#4757; &#4872;&#4933; &#4824;&#4622; &#4678;&#4931;&#4621; &#4629;&#4709;&#4650; &#4896;&#4809;&#4677;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/num_ambulances-label">
+						<value>Lakkofsa bilbilaa ambuulansii meeqattu keellaa fayyaa kanatti fayidaa irra oola</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/num_ambulances-constraintMsg">
+						<value>Lakkofsa bilbilaa ambuulansii 1 hanga 10 qabaachuu qabda</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone-label">
+						<value>Lakkofsa bilbilaa ambuulansii <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone-constraintMsg">
+						<value>Lakkofsi bilbilaa 0 irraa jalqabuu qaba fi dijitii 10 caaluu hin qabu</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/villages/num_villages-label">
+						<value>Gooxii meeqattu keellaa fayyaa kan jala jira?</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/villages/num_villages-constraintMsg">
+						<value>Gooxii 1 hanga 10 qabaachuu qabda</value>
+					</text>
+					<text id="create_supervision_case_for_this_hp/villages/villages/enforce_repeat_number/village_name-label">
+						<value>Maqaa Gooxii <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Unkaan sirriitti guutamera.
+
+Unkaa erguudhaaf aroo magariisa koornarii gubbaa gama mirgaatti argamu tuqi</value>
+					</text>
+				</translation>
+			</itext>
+		<bind calculate="/data/meta/timeEnd" nodeset="/data/case_open_hew_supervision_1/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_open_hew_supervision_1/case/@user_id"/><bind nodeset="/data/case_open_hew_supervision_1/case" relevant="/data/create_supervision_case_for_this_hew/create_supervision_case = 'yes'"/><setvalue event="xforms-ready" ref="/data/case_open_hew_supervision_1/case/@case_id" value="instance('commcaresession')/session/data/case_id_new_hew_supervision_0"/><bind calculate="/data/create_supervision_case_for_this_hew/name" nodeset="/data/case_open_hew_supervision_1/case/create/case_name"/><setvalue event="xforms-ready" ref="/data/case_open_hew_supervision_1/case/create/owner_id" value="instance('groups')/groups/group/@id"/><bind calculate="/data/create_supervision_case_for_this_hew/full_name" nodeset="/data/case_open_hew_supervision_1/case/update/full_name" relevant="count(/data/create_supervision_case_for_this_hew/full_name) &gt; 0"/><bind calculate="/data/locations/hc_facility_code" nodeset="/data/case_open_hew_supervision_1/case/update/hc_facility_code" relevant="count(/data/locations/hc_facility_code) &gt; 0"/><bind calculate="/data/locations/health_center" nodeset="/data/case_open_hew_supervision_1/case/update/health_center" relevant="count(/data/locations/health_center) &gt; 0"/><bind calculate="/data/locations/health_center_id" nodeset="/data/case_open_hew_supervision_1/case/update/health_center_id" relevant="count(/data/locations/health_center_id) &gt; 0"/><bind calculate="/data/locations/health_post" nodeset="/data/case_open_hew_supervision_1/case/update/health_post" relevant="count(/data/locations/health_post) &gt; 0"/><bind calculate="/data/locations/health_post_id" nodeset="/data/case_open_hew_supervision_1/case/update/health_post_id" relevant="count(/data/locations/health_post_id) &gt; 0"/><bind calculate="/data/create_supervision_case_for_this_hew/hew_user_id" nodeset="/data/case_open_hew_supervision_1/case/update/hew_user_id" relevant="count(/data/create_supervision_case_for_this_hew/hew_user_id) &gt; 0"/><bind calculate="/data/locations/hp_facility_code" nodeset="/data/case_open_hew_supervision_1/case/update/hp_facility_code" relevant="count(/data/locations/hp_facility_code) &gt; 0"/><bind calculate="/data/create_supervision_case_for_this_hew/phone_number" nodeset="/data/case_open_hew_supervision_1/case/update/phone_number" relevant="count(/data/create_supervision_case_for_this_hew/phone_number) &gt; 0"/><bind calculate="/data/locations/region" nodeset="/data/case_open_hew_supervision_1/case/update/region" relevant="count(/data/locations/region) &gt; 0"/><bind calculate="/data/locations/region_id" nodeset="/data/case_open_hew_supervision_1/case/update/region_id" relevant="count(/data/locations/region_id) &gt; 0"/><bind calculate="/data/locations/test_or_real" nodeset="/data/case_open_hew_supervision_1/case/update/test_or_real" relevant="count(/data/locations/test_or_real) &gt; 0"/><bind calculate="/data/locations/woreda" nodeset="/data/case_open_hew_supervision_1/case/update/woreda" relevant="count(/data/locations/woreda) &gt; 0"/><bind calculate="/data/locations/woreda_id" nodeset="/data/case_open_hew_supervision_1/case/update/woreda_id" relevant="count(/data/locations/woreda_id) &gt; 0"/><bind calculate="/data/locations/zone" nodeset="/data/case_open_hew_supervision_1/case/update/zone" relevant="count(/data/locations/zone) &gt; 0"/><bind calculate="/data/locations/zone_id" nodeset="/data/case_open_hew_supervision_1/case/update/zone_id" relevant="count(/data/locations/zone_id) &gt; 0"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_open_delegation_2/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_open_delegation_2/case/@user_id"/><bind nodeset="/data/case_open_delegation_2/case" relevant="/data/create_supervision_case_for_this_hew/create_supervision_case = 'yes'"/><setvalue event="xforms-ready" ref="/data/case_open_delegation_2/case/@case_id" value="instance('commcaresession')/session/data/case_id_new_supervision_delegation_1"/><bind calculate="/data/create_supervision_case_for_this_hew/name" nodeset="/data/case_open_delegation_2/case/create/case_name"/><bind calculate="/data/locations/health_center_id" nodeset="/data/case_open_delegation_2/case/update/owner_id" relevant="count(/data/locations/health_center_id) &gt; 0"/><bind calculate="/data/case_open_hew_supervision_1/case/@case_id" nodeset="/data/case_open_delegation_2/case/index/parent"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_open_hp_supervision_4/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_open_hp_supervision_4/case/@user_id"/><bind nodeset="/data/case_open_hp_supervision_4/case" relevant="/data/create_supervision_case_for_this_hp/create_supervision_case = 'yes'"/><setvalue event="xforms-ready" ref="/data/case_open_hp_supervision_4/case/@case_id" value="instance('commcaresession')/session/data/case_id_new_hp_supervision_2"/><bind calculate="/data/locations/health_post" nodeset="/data/case_open_hp_supervision_4/case/create/case_name"/><setvalue event="xforms-ready" ref="/data/case_open_hp_supervision_4/case/create/owner_id" value="instance('groups')/groups/group/@id"/><bind calculate="/data/create_supervision_case_for_this_hp/ambulance_phones/ambulance_phones" nodeset="/data/case_open_hp_supervision_4/case/update/ambulance_phones" relevant="count(/data/create_supervision_case_for_this_hp/ambulance_phones/ambulance_phones) &gt; 0"/><bind calculate="/data/locations/hc_facility_code" nodeset="/data/case_open_hp_supervision_4/case/update/hc_facility_code" relevant="count(/data/locations/hc_facility_code) &gt; 0"/><bind calculate="/data/locations/health_center" nodeset="/data/case_open_hp_supervision_4/case/update/health_center" relevant="count(/data/locations/health_center) &gt; 0"/><bind calculate="/data/locations/health_center_id" nodeset="/data/case_open_hp_supervision_4/case/update/health_center_id" relevant="count(/data/locations/health_center_id) &gt; 0"/><bind calculate="/data/locations/health_post" nodeset="/data/case_open_hp_supervision_4/case/update/health_post" relevant="count(/data/locations/health_post) &gt; 0"/><bind calculate="/data/locations/health_post_id" nodeset="/data/case_open_hp_supervision_4/case/update/health_post_id" relevant="count(/data/locations/health_post_id) &gt; 0"/><bind calculate="/data/locations/hp_facility_code" nodeset="/data/case_open_hp_supervision_4/case/update/hp_facility_code" relevant="count(/data/locations/hp_facility_code) &gt; 0"/><bind calculate="/data/locations/region" nodeset="/data/case_open_hp_supervision_4/case/update/region" relevant="count(/data/locations/region) &gt; 0"/><bind calculate="/data/locations/region_id" nodeset="/data/case_open_hp_supervision_4/case/update/region_id" relevant="count(/data/locations/region_id) &gt; 0"/><bind calculate="/data/locations/test_or_real" nodeset="/data/case_open_hp_supervision_4/case/update/test_or_real" relevant="count(/data/locations/test_or_real) &gt; 0"/><bind calculate="/data/create_supervision_case_for_this_hp/villages/village_names" nodeset="/data/case_open_hp_supervision_4/case/update/village_names" relevant="count(/data/create_supervision_case_for_this_hp/villages/village_names) &gt; 0"/><bind calculate="/data/locations/woreda" nodeset="/data/case_open_hp_supervision_4/case/update/woreda" relevant="count(/data/locations/woreda) &gt; 0"/><bind calculate="/data/locations/woreda_id" nodeset="/data/case_open_hp_supervision_4/case/update/woreda_id" relevant="count(/data/locations/woreda_id) &gt; 0"/><bind calculate="/data/locations/zone" nodeset="/data/case_open_hp_supervision_4/case/update/zone" relevant="count(/data/locations/zone) &gt; 0"/><bind calculate="/data/locations/zone_id" nodeset="/data/case_open_hp_supervision_4/case/update/zone_id" relevant="count(/data/locations/zone_id) &gt; 0"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_open_delegation_5/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_open_delegation_5/case/@user_id"/><bind nodeset="/data/case_open_delegation_5/case" relevant="/data/create_supervision_case_for_this_hp/create_supervision_case = 'yes'"/><setvalue event="xforms-ready" ref="/data/case_open_delegation_5/case/@case_id" value="instance('commcaresession')/session/data/case_id_new_supervision_delegation_3"/><bind calculate="/data/locations/health_post" nodeset="/data/case_open_delegation_5/case/create/case_name"/><bind calculate="/data/locations/health_center_id" nodeset="/data/case_open_delegation_5/case/update/owner_id" relevant="count(/data/locations/health_center_id) &gt; 0"/><bind calculate="/data/case_open_hp_supervision_4/case/@case_id" nodeset="/data/case_open_delegation_5/case/index/parent"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<group ref="/data/create_supervision_case_for_this_hew"/>
+		<group ref="/data/create_supervision_case_for_this_hp">
+			<group ref="/data/create_supervision_case_for_this_hp/ambulance_phones">
+				<input ref="/data/create_supervision_case_for_this_hp/ambulance_phones/num_ambulances">
+					<label ref="jr:itext('create_supervision_case_for_this_hp/ambulance_phones/num_ambulances-label')"/>
+					<alert ref="jr:itext('create_supervision_case_for_this_hp/ambulance_phones/num_ambulances-constraintMsg')"/>
+				</input>
+				<group>
+					<repeat jr:count="/data/create_supervision_case_for_this_hp/ambulance_phones/num_ambulances" jr:noAddRemove="true()" nodeset="/data/create_supervision_case_for_this_hp/ambulance_phones/ambulances">
+						<group ref="/data/create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number">
+							<input ref="/data/create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone" appearance="numeric">
+								<label ref="jr:itext('create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone-label')"/>
+								<alert ref="jr:itext('create_supervision_case_for_this_hp/ambulance_phones/ambulances/enforce_repeat_number/ambulance_phone-constraintMsg')"/>
+							</input>
+						</group>
+					</repeat>
+				</group>
+			</group>
+			<group ref="/data/create_supervision_case_for_this_hp/villages">
+				<input ref="/data/create_supervision_case_for_this_hp/villages/num_villages">
+					<label ref="jr:itext('create_supervision_case_for_this_hp/villages/num_villages-label')"/>
+					<alert ref="jr:itext('create_supervision_case_for_this_hp/villages/num_villages-constraintMsg')"/>
+				</input>
+				<group>
+					<repeat jr:count="/data/create_supervision_case_for_this_hp/villages/num_villages" jr:noAddRemove="true()" nodeset="/data/create_supervision_case_for_this_hp/villages/villages">
+						<group ref="/data/create_supervision_case_for_this_hp/villages/villages/enforce_repeat_number">
+							<input ref="/data/create_supervision_case_for_this_hp/villages/villages/enforce_repeat_number/village_name">
+								<label ref="jr:itext('create_supervision_case_for_this_hp/villages/villages/enforce_repeat_number/village_name-label')"/>
+							</input>
+						</group>
+					</repeat>
+				</group>
+			</group>
+		</group>
+		<group ref="/data/locations"/>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

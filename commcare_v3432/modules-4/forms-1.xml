@@ -1,0 +1,167 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>Remove Referral from List</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/60159b48a3f0a5f6288416a757e74c9193cf9ed1" uiVersion="1" version="3432" name="Remove Referral from List">
+					<close_incomplete_referral_case/>
+					<close_complete_referral_case/>
+					<close_referral/>
+					<load_referral_info>
+						<referral_complete/>
+						<follow_up_date_eth/>
+					</load_referral_info>
+					<load_client_info>
+						<client_name/>
+					</load_client_info>
+					<locations>
+						<health_post_id/>
+						<health_post/>
+						<health_center_id/>
+						<health_center/>
+						<test_or_real/>
+						<region_id/>
+						<region/>
+						<zone_id/>
+						<zone/>
+						<woreda_id/>
+						<woreda/>
+						<hp_facility_code/>
+						<hc_facility_code/>
+					</locations>
+					<end_of_form/>
+				<case_load_referral_1><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><close/></case></case_load_referral_1><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="casedb" src="jr://instance/casedb"/><instance id="locations" src="jr://fixture/locations"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<bind nodeset="/data/close_incomplete_referral_case" relevant="/data/load_referral_info/referral_complete != &quot;yes&quot;" required="true()"/>
+			<bind nodeset="/data/close_complete_referral_case" relevant="/data/load_referral_info/referral_complete = &quot;yes&quot;" required="true()"/>
+			<bind nodeset="/data/close_referral" calculate="if(/data/close_incomplete_referral_case = &quot;yes&quot; or /data/close_complete_referral_case = &quot;yes&quot;, &quot;yes&quot;, &quot;no&quot;)"/>
+			<bind nodeset="/data/load_referral_info"/>
+			<bind nodeset="/data/load_referral_info/referral_complete"/>
+			<bind nodeset="/data/load_referral_info/follow_up_date_eth"/>
+			<bind nodeset="/data/load_client_info"/>
+			<bind nodeset="/data/load_client_info/client_name"/>
+			<bind nodeset="/data/locations"/>
+			<bind nodeset="/data/locations/health_post_id" calculate="instance('commcaresession')/session/user/data/commcare_location_id"/>
+			<bind nodeset="/data/locations/health_post" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/name"/>
+			<bind nodeset="/data/locations/health_center_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/@health-center_id"/>
+			<bind nodeset="/data/locations/health_center" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/name"/>
+			<bind nodeset="/data/locations/test_or_real" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/region_id" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/@region_id"/>
+			<bind nodeset="/data/locations/region" calculate="instance('locations')/locations/location[@id = /data/locations/region_id]/name"/>
+			<bind nodeset="/data/locations/zone_id" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/@zone_id"/>
+			<bind nodeset="/data/locations/zone" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/name"/>
+			<bind nodeset="/data/locations/woreda_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/@woreda_id"/>
+			<bind nodeset="/data/locations/woreda" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/name"/>
+			<bind nodeset="/data/locations/hp_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/hc_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="close_incomplete_referral_case-label">
+						<value>This referral for <output value="/data/load_client_info/client_name"/> has not yet been completed at the HC. Do you want to cancel this referral?</value>
+					</text>
+					<text id="close_complete_referral_case-label">
+						<value>The referral for <output value="/data/load_client_info/client_name"/> was completed on <output value="/data/load_referral_info/follow_up_date_eth"/>.  Would you like to close this referral?</value>
+					</text>
+					<text id="close_complete_referral_case-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="close_complete_referral_case-no-label">
+						<value>No</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="close_incomplete_referral_case-label">
+						<value>&#4845;&#4613; &#4840;&#4723;&#4779;&#4634;  <output value="/data/load_client_info/client_name"/> &#4650;&#4936;&#4651;&#4621; &#4704;&#4900;&#4755; &#4899;&#4706;&#4843; &#4768;&#4619;&#4616;&#4672;&#4637;&#4961;&#4961; &#4845;&#4613;&#4757; &#4650;&#4936;&#4651;&#4621; &#4873;&#4851;&#4845; &#4632;&#4829;&#4875;&#4725; &#4725;&#4936;&#4621;&#4874;&#4843;&#4616;&#4669; ?</value>
+					</text>
+					<text id="close_complete_referral_case-label">
+						<value>&#4840;&#4723;&#4779;&#4634;  <output value="/data/load_client_info/client_name"/>  &#4650;&#4936;&#4651;&#4621; &#4840;&#4720;&#4896;&#4755;&#4672;&#4672;&#4813; &#4704;<output value="/data/load_referral_info/follow_up_date_eth"/> &#4672;&#4757; &#4752;&#4813;&#4961;&#4961;   &#4845;&#4613;&#4757; &#4650;&#4936;&#4651;&#4621; &#4632;&#4829;&#4875;&#4725; &#4725;&#4936;&#4621;&#4874;&#4843;&#4616;&#4669; ?</value>
+					</text>
+					<text id="close_complete_referral_case-yes-label">
+						<value>&#4768;&#4814;</value>
+					</text>
+					<text id="close_complete_referral_case-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="close_incomplete_referral_case-label">
+						<value>&#4773;&#4826; &#4755;&#4845; &#4629;&#4633;&#4637; <output value="/data/load_client_info/client_name"/>  &#4650;&#4936;&#4651;&#4621; &#4768;&#4709; &#4901;&#4821;&#4755; &#4899;&#4706;&#4843; &#4768;&#4840;&#4709;&#4672;&#4816;&#4757;&#4961;&#4961; &#4773;&#4826; &#4650;&#4936;&#4651;&#4621; &#4637;&#4821;&#4931;&#4813; &#4725;&#4848;&#4618;&#4854; ?</value>
+					</text>
+					<text id="close_complete_referral_case-label">
+						<value>&#4755;&#4845;&#4629;&#4633;&#4637;&#4845;  <output value="/data/load_client_info/client_name"/>  &#4650;&#4936;&#4651;&#4621; &#4840;&#4720;&#4896;&#4755;&#4672;&#4672;&#4813; &#4704; <output value="/data/load_referral_info/follow_up_date_eth"/> &#4821;&#4616;&#4725; &#4773;&#4841;&#4961;&#4961;   &#4773;&#4826; &#4650;&#4936;&#4651;&#4621; &#4637;&#4821;&#4931;&#4813; &#4725;&#4848;&#4618;&#4854; ?</value>
+					</text>
+					<text id="close_complete_referral_case-yes-label">
+						<value>&#4773;&#4808;</value>
+					</text>
+					<text id="close_complete_referral_case-no-label">
+						<value>&#4768;&#4845;&#4782;&#4752;&#4757;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4677;&#4901;&#4818; &#4633;&#4617;&#4773; &#4757;&#4633;&#4618;&#4773; &#4720;&#4635;&#4618;&#4769; &#4961;&#4961;
+
+&#4677;&#4901;&#4818; &#4757;&#4637;&#4621;&#4768;&#4781; &#4709;&#4619;&#4821;&#4618; &#4757;&#4840;&#4635;&#4757; &#4872;&#4933; &#4824;&#4622; &#4678;&#4931;&#4621; &#4896;&#4813;&#4677;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="close_incomplete_referral_case-label">
+						<value>yaalaman kun <output value="/data/load_client_info/client_name"/> amma hoona rafariin buufata fayyatii hin dhumnee. Addaan kutu barbaada?</value>
+					</text>
+					<text id="close_complete_referral_case-label">
+						<value>yaalaman kun <output value="/data/load_client_info/client_name"/> rifariin kan dhuumeef <output value="/data/load_referral_info/follow_up_date_eth"/>.  Fifarii can cufuu barbaada?</value>
+					</text>
+					<text id="close_complete_referral_case-yes-label">
+						<value>eeyyeen</value>
+					</text>
+					<text id="close_complete_referral_case-no-label">
+						<value>miti</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki guutuma guututti guutame unka kan erguuf malattoo magarsaa kan kara bukkee harka mirgaa olii jiru xuqii.</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/load_referral_info/referral_complete" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_referral_1]/referral_complete"/><setvalue event="xforms-ready" ref="/data/load_referral_info/follow_up_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_referral_1]/follow_up_date_eth"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_load_referral_1/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_load_referral_1/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_load_referral_1" nodeset="/data/case_load_referral_1/case/@case_id"/><bind nodeset="/data/case_load_referral_1/case/close" relevant="/data/close_referral = 'yes'"/><setvalue event="xforms-ready" ref="/data/load_client_info/client_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_2]/case_name"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<select1 ref="/data/close_incomplete_referral_case">
+			<label ref="jr:itext('close_incomplete_referral_case-label')"/>
+			<item>
+				<label ref="jr:itext('close_complete_referral_case-yes-label')"/>
+				<value>yes</value>
+			</item>
+			<item>
+				<label ref="jr:itext('close_complete_referral_case-no-label')"/>
+				<value>no</value>
+			</item>
+		</select1>
+		<select1 ref="/data/close_complete_referral_case">
+			<label ref="jr:itext('close_complete_referral_case-label')"/>
+			<item>
+				<label ref="jr:itext('close_complete_referral_case-yes-label')"/>
+				<value>yes</value>
+			</item>
+			<item>
+				<label ref="jr:itext('close_complete_referral_case-no-label')"/>
+				<value>no</value>
+			</item>
+		</select1>
+		<group ref="/data/load_referral_info"/>
+		<group ref="/data/load_client_info"/>
+		<group ref="/data/locations"/>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

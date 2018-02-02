@@ -1,0 +1,550 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum" vellum:ignore="richText">
+	<h:head>
+		<h:title>Register New Family</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/0551E68C-9345-4C41-846D-AE0A7D988291" uiVersion="1" version="3432" name="Register New Family">
+					<no_audio>
+						<tir/>
+						<orm/>
+						<amh/>
+					</no_audio>
+					<family_identification>
+						<family_name/>
+						<family_phone_number/>
+					</family_identification>
+					<household_locations>
+						<village>
+							<list_length/>
+							<repeat jr:template="">
+								<element/>
+								<element_id/>
+							</repeat>
+							<choose_element/>
+							<village_name/>
+							<village_number/>
+						</village>
+						<hew_phone_number/>
+						<family_number>
+							<family_number/>
+							<family_number_entered/>
+							<family_number_validation/>
+							<display_family_number/>
+							<family_number_validation_failed/>
+						</family_number>
+					</household_locations>
+					<hda_network>
+						<hda_1-30>
+							<list_length/>
+							<repeat jr:template="">
+								<element/>
+								<phone/>
+								<element_id/>
+							</repeat>
+							<choose_element/>
+							<hda_1to30_name/>
+							<hda_1to30_phone_number/>
+							<display_hda_1-30/>
+						</hda_1-30>
+					</hda_network>
+					<family_status>
+						<family_status/>
+						<follow_up/>
+					</family_status>
+					<locations>
+						<health_post_id/>
+						<health_post/>
+						<health_center_id/>
+						<health_center/>
+						<region_id/>
+						<region/>
+						<zone_id/>
+						<zone/>
+						<woreda_id/>
+						<woreda/>
+						<hp_facility_code/>
+						<hc_facility_code/>
+						<test_or_real/>
+					</locations>
+					<end_of_form/>
+				<case_open_family_0><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><create><case_name/><owner_id/><case_type>family</case_type></create><update><family_number/><family_phone_number/><family_status/><hc_facility_code/><hda_1to30_name/><hda_1to30_phone_number/><health_center/><health_center_id/><health_post/><health_post_id/><hew_phone_number/><hp_facility_code/><region/><region_id/><test_or_real/><village_name/><woreda/><woreda_id/><zone/><zone_id/></update></case></case_open_family_0><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="groups" src="jr://fixture/user-groups"/><instance id="locations" src="jr://fixture/locations"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<instance src="jr://instance/casedb" id="casedb"/>
+			<bind nodeset="/data/no_audio" relevant="false()"/>
+			<bind nodeset="/data/no_audio/tir"/>
+			<bind nodeset="/data/no_audio/orm"/>
+			<bind nodeset="/data/no_audio/amh"/>
+			<bind nodeset="/data/family_identification"/>
+			<bind nodeset="/data/family_identification/family_name" type="xsd:string" required="true()"/>
+			<bind nodeset="/data/family_identification/family_phone_number" type="xsd:string" constraint="regex(., '^0[0-9]{9}$')" jr:constraintMsg="jr:itext('family_identification/family_phone_number-constraintMsg')"/>
+			<bind nodeset="/data/household_locations"/>
+			<bind nodeset="/data/household_locations/village"/>
+			<bind nodeset="/data/household_locations/village/list_length" calculate="count-selected(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][1]/village_names)"/>
+			<bind nodeset="/data/household_locations/village/repeat"/>
+			<bind nodeset="/data/household_locations/village/repeat/element" calculate="concat(if(position(current()/..) + 1 &lt; 10, &quot;0&quot;, &quot;&quot;), position(current()/..) + 1, &quot;: &quot;, replace(selected-at(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][1]/village_names, position(current()/..)), &quot;_&quot;, &quot; &quot;))"/>
+			<bind nodeset="/data/household_locations/village/repeat/element_id" calculate="lower-case(selected-at(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][1]/village_names, position(current()/..)))"/>
+			<bind nodeset="/data/household_locations/village/choose_element" required="true()"/>
+			<bind nodeset="/data/household_locations/village/village_name" calculate="/data/household_locations/village/repeat[element_id = /data/household_locations/village/choose_element]/element"/>
+			<bind nodeset="/data/household_locations/village/village_number" calculate="substr(/data/household_locations/village/village_name, 0, 2)"/>
+			<bind nodeset="/data/household_locations/hew_phone_number" calculate="if(instance('commcaresession')/session/user/data/commcare_phone_number != '', concat(0, substr(instance('commcaresession')/session/user/data/commcare_phone_number, 3, 12)), &quot;&quot;)"/>
+			<bind nodeset="/data/household_locations/family_number"/>
+			<bind nodeset="/data/household_locations/family_number/family_number" calculate="concat(/data/household_locations/village/village_number, &quot;/&quot;, /data/household_locations/family_number/family_number_entered)"/>
+			<bind nodeset="/data/household_locations/family_number/family_number_entered" type="xsd:string" constraint="string-length(.) = 3" jr:constraintMsg="jr:itext('household_locations/family_number/family_number_entered-constraintMsg')" required="true()"/>
+			<bind nodeset="/data/household_locations/family_number/family_number_validation" calculate="if((count(instance('casedb')/casedb/case[@case_type = 'family'][@status = &quot;open&quot;][family_number = /data/household_locations/family_number/family_number]) = 0), 1, 0)"/>
+			<bind nodeset="/data/household_locations/family_number/display_family_number"/>
+			<bind nodeset="/data/household_locations/family_number/family_number_validation_failed" constraint="false()" jr:constraintMsg="jr:itext('household_locations/family_number/family_number_validation_failed-constraintMsg')" relevant="/data/household_locations/family_number/family_number_validation = 0"/>
+			<bind nodeset="/data/hda_network"/>
+			<bind nodeset="/data/hda_network/hda_1-30"/>
+			<bind nodeset="/data/hda_network/hda_1-30/list_length" calculate="count-selected(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][1]/hda_1-30_names)"/>
+			<bind nodeset="/data/hda_network/hda_1-30/repeat"/>
+			<bind nodeset="/data/hda_network/hda_1-30/repeat/element" calculate="replace(selected-at(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][1]/hda_1-30_names, position(current()/..)), &quot;_&quot;, &quot; &quot;)"/>
+			<bind nodeset="/data/hda_network/hda_1-30/repeat/phone" calculate="replace(selected-at(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][1]/hda_1-30_phones, position(current()/..)), &quot;_&quot;, &quot; &quot;)"/>
+			<bind nodeset="/data/hda_network/hda_1-30/repeat/element_id" calculate="lower-case(selected-at(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][1]/hda_1-30_names, position(current()/..)))"/>
+			<bind nodeset="/data/hda_network/hda_1-30/choose_element" relevant="/data/hda_network/hda_1-30/list_length &gt; 0" required="true()"/>
+			<bind nodeset="/data/hda_network/hda_1-30/hda_1to30_name" calculate="/data/hda_network/hda_1-30/repeat[element_id = /data/hda_network/hda_1-30/choose_element]/element"/>
+			<bind nodeset="/data/hda_network/hda_1-30/hda_1to30_phone_number" calculate="replace(/data/hda_network/hda_1-30/repeat[element_id = /data/hda_network/hda_1-30/choose_element]/phone, &quot;-&quot;, &quot;&quot;)"/>
+			<bind nodeset="/data/hda_network/hda_1-30/display_hda_1-30" relevant="/data/hda_network/hda_1-30/choose_element != &quot;&quot;"/>
+			<bind nodeset="/data/family_status"/>
+			<bind nodeset="/data/family_status/family_status" required="false()"/>
+			<bind nodeset="/data/family_status/follow_up" relevant="/data/family_status/family_status = 'not_model_family'"/>
+			<bind nodeset="/data/locations"/>
+			<bind nodeset="/data/locations/health_post_id" calculate="instance('commcaresession')/session/user/data/commcare_location_id"/>
+			<bind nodeset="/data/locations/health_post" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/name"/>
+			<bind nodeset="/data/locations/health_center_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/@health-center_id"/>
+			<bind nodeset="/data/locations/health_center" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/name"/>
+			<bind nodeset="/data/locations/region_id" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/@region_id"/>
+			<bind nodeset="/data/locations/region" calculate="instance('locations')/locations/location[@id = /data/locations/region_id]/name"/>
+			<bind nodeset="/data/locations/zone_id" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/@zone_id"/>
+			<bind nodeset="/data/locations/zone" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/name"/>
+			<bind nodeset="/data/locations/woreda_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/@woreda_id"/>
+			<bind nodeset="/data/locations/woreda" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/name"/>
+			<bind nodeset="/data/locations/hp_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/hc_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/test_or_real" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="no_audio/tir-label">
+						<value/>
+						<value form="audio">jr://file/commcare/audio/data/no_audio/tir-bqanwy.mp3</value>
+					</text>
+					<text id="no_audio/orm-label">
+						<value/>
+						<value form="audio">jr://file/commcare/audio/data/no_audio/orm-8x8che.mp3</value>
+					</text>
+					<text id="no_audio/amh-label">
+						<value/>
+						<value form="audio">jr://file/commcare/audio/data/no_audio/amh-lk1tq6.mp3</value>
+					</text>
+					<text id="family_identification-label">
+						<value>Family Identification</value>
+					</text>
+					<text id="family_identification/family_name-label">
+						<value>Family Name of Head of Household</value>
+						<value form="image">jr://file/commcare/image/data/family_identification/family_name.png</value>
+					</text>
+					<text id="family_identification/family_phone_number-label">
+						<value>Family Phone Number</value>
+						<value form="image">jr://file/commcare/image/data/family_identification/family_phone_number.png</value>
+					</text>
+					<text id="family_identification/family_phone_number-constraintMsg">
+						<value>The phone number must start with 0 and cannot be longer than 10 digits</value>
+					</text>
+					<text id="household_locations-label">
+						<value>Household Locations</value>
+					</text>
+					<text id="household_locations/village/choose_element-label">
+						<value>Village Name</value>
+					</text>
+					<text id="household_locations/family_number-label">
+						<value>Family number</value>
+					</text>
+					<text id="household_locations/family_number/family_number_entered-label">
+						<value>House/Family Number (<output value="/data/household_locations/village/village_number"/>/_ _ _)  Fill in the blanks.</value>
+						<value form="image">jr://file/commcare/image/data/family_identification/household_number.png</value>
+					</text>
+					<text id="household_locations/family_number/family_number_entered-constraintMsg">
+						<value>Family Number must be 3 digits</value>
+					</text>
+					<text id="household_locations/family_number/display_family_number-label">
+						<value>Full Family/House Number: <output value="/data/household_locations/family_number/family_number"/></value>
+					</text>
+					<text id="household_locations/family_number/family_number_validation_failed-constraintMsg">
+						<value>This House/Family Number has already been used for another family.</value>
+					</text>
+					<text id="hda_network-label">
+						<value>HDA Network</value>
+					</text>
+					<text id="hda_network/hda_1-30/choose_element-label">
+						<value>What is the HDA 1:30 Leader's Name?</value>
+					</text>
+					<text id="hda_network/hda_1-30/display_hda_1-30-label">
+						<value>HDA 1:30 Selected:  <output value="/data/hda_network/hda_1-30/hda_1to30_name"/>
+
+Phone Number: <output value="/data/hda_network/hda_1-30/hda_1to30_phone_number"/></value>
+					</text>
+					<text id="family_status-label">
+						<value>Family Status</value>
+					</text>
+					<text id="family_status/family_status-label">
+						<value>Is the family a Model Family?</value>
+						<value form="image">jr://file/commcare/image/data/family_status/family_status.png</value>
+					</text>
+					<text id="family_status/family_status-model_family-label">
+						<value>Model Family</value>
+					</text>
+					<text id="family_status/family_status-not_model_family-label">
+						<value>Not a Model Family</value>
+					</text>
+					<text id="family_status/follow_up-label">
+						<value>The family needs close follow up and trainings on HEP in order to become a model family.</value>
+						<value form="image">jr://file/commcare/image/data/family_status/follow_up.png</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="no_audio/tir-label">
+						<value/>
+						<value form="audio">jr://file/commcare/audio/data/no_audio/tir-bqanwy.mp3</value>
+					</text>
+					<text id="no_audio/orm-label">
+						<value/>
+						<value form="audio">jr://file/commcare/audio/data/no_audio/orm-8x8che.mp3</value>
+					</text>
+					<text id="no_audio/amh-label">
+						<value/>
+						<value form="audio">jr://file/commcare/audio/data/no_audio/amh-lk1tq6.mp3</value>
+					</text>
+					<text id="family_identification-label">
+						<value>&#4840;&#4708;&#4720;&#4656;&#4709; &#4632;&#4616;&#4843;</value>
+					</text>
+					<text id="family_identification/family_name-label">
+						<value>&#4840;&#4768;&#4707;&#4808;&#4651; &#4633;&#4617; &#4661;&#4637;</value>
+						<value form="image">jr://file/commcare/image/data/family_identification/family_name.png</value>
+					</text>
+					<text id="family_identification/family_phone_number-label">
+						<value>&#4840;&#4708;&#4720;&#4656;&#4709; &#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4781; &#4673;&#4901;&#4653;</value>
+						<value form="image">jr://file/commcare/image/data/family_identification/family_phone_number.png</value>
+					</text>
+					<text id="family_identification/family_phone_number-constraintMsg">
+						<value>&#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4781; &#4673;&#4901;&#4649; &#4776;0 &#4632;&#4864;&#4632;&#4653; &#4768;&#4616;&#4704;&#4720;&#4725; &#4773;&#4755; &#4776; 10 &#4673;&#4901;&#4654;&#4733; &#4632;&#4709;&#4616;&#4901; &#4840;&#4616;&#4704;&#4725;&#4637;&#4961;&#4961;</value>
+					</text>
+					<text id="household_locations-label">
+						<value>&#4840;&#4708;&#4721; &#4632;&#4872;&#4763; &#4710;&#4723;</value>
+					</text>
+					<text id="household_locations/village/choose_element-label">
+						<value>&#4840;&#4878;&#4901; &#4661;&#4637;</value>
+					</text>
+					<text id="household_locations/family_number-label">
+						<value>&#4840;&#4708;&#4720;&#4656;&#4709; &#4673;&#4901;&#4653;</value>
+					</text>
+					<text id="household_locations/family_number/family_number_entered-label">
+						<value>&#4708;&#4725;/ &#4840;&#4708;&#4720;&#4656;&#4709; &#4673;&#4901;&#4653; (<output value="/data/household_locations/village/village_number"/>/_ _ _) &#4704;&#4707;&#4854; &#4710;&#4723;&#4813; &#4845;&#4637;&#4617;.</value>
+						<value form="image">jr://file/commcare/image/data/family_identification/household_number.png</value>
+					</text>
+					<text id="household_locations/family_number/family_number_entered-constraintMsg">
+						<value>&#4840;&#4708;&#4720;&#4656;&#4709; &#4673;&#4901;&#4653; &#4632;&#4614;&#4757; &#4843;&#4616;&#4704;&#4725; 3 &#4614;&#4612; &#4709;&#4731; &#4752;&#4813;&#4961;&#4961;</value>
+					</text>
+					<text id="household_locations/family_number/display_family_number-label">
+						<value>&#4633;&#4617; &#4708;&#4720;&#4656;&#4709;/&#4840;&#4708;&#4725; &#4673;&#4901;&#4653;: <output value="/data/household_locations/family_number/family_number"/></value>
+					</text>
+					<text id="household_locations/family_number/family_number_validation_failed-constraintMsg">
+						<value>&#4845;&#4613; &#4708;&#4725;/&#4840;&#4708;&#4720;&#4656;&#4709; &#4673;&#4901;&#4653; &#4704;&#4620;&#4619; &#4708;&#4720;&#4656;&#4709; &#4768;&#4872;&#4621;&#4877;&#4622;&#4725; &#4619;&#4845; &#4809;&#4616;&#4811;&#4621;</value>
+					</text>
+					<text id="hda_network-label">
+						<value>&#4840;&#4900;&#4755; &#4621;&#4635;&#4725; &#4656;&#4651;&#4810;&#4725; &#4725;&#4661;&#4661;&#4653;</value>
+					</text>
+					<text id="hda_network/hda_1-30/choose_element-label">
+						<value>&#4840;1&#4961;30 &#4705;&#4853;&#4757; &#4632;&#4650; &#4661;&#4637; &#4635;&#4752;&#4813;</value>
+					</text>
+					<text id="hda_network/hda_1-30/display_hda_1-30-label">
+						<value>&#4840;&#4900;.&#4621;.&#4656; 1-30 &#4720;&#4632;&#4653;&#4903;&#4621;:  <output value="/data/hda_network/hda_1-30/hda_1to30_name"/>
+
+&#4661;&#4621;&#4781; &#4673;&#4901;&#4653;: <output value="/data/hda_network/hda_1-30/hda_1to30_phone_number"/></value>
+					</text>
+					<text id="family_status-label">
+						<value>&#4840;&#4708;&#4720;&#4656;&#4709; &#4609;&#4756;&#4723;</value>
+					</text>
+					<text id="family_status/family_status-label">
+						<value>&#4845;&#4613; &#4708;&#4720;&#4656;&#4705; &#4638;&#4852;&#4621; &#4708;&#4720;&#4656;&#4709; &#4752;&#4813; &#4808;&#4845;&#4661; &#4768;&#4845;&#4848;&#4616;&#4637;</value>
+						<value form="image">jr://file/commcare/image/data/family_status/family_status.png</value>
+					</text>
+					<text id="family_status/family_status-model_family-label">
+						<value>&#4638;&#4852;&#4621; &#4708;&#4720;&#4656;&#4709;</value>
+					</text>
+					<text id="family_status/family_status-not_model_family-label">
+						<value>&#4638;&#4852;&#4621; &#4708;&#4720;&#4656;&#4709; &#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="family_status/follow_up-label">
+						<value>&#4845;&#4613;&#4757; &#4708;&#4720;&#4656;&#4709; &#4638;&#4852;&#4621; &#4708;&#4720;&#4656;&#4709; &#4616;&#4635;&#4853;&#4648;&#4877; &#4901;&#4709;&#4677; &#4840;&#4614;&#4752; &#4781;&#4725;&#4725;&#4621;&#4755; &#4853;&#4875;&#4941; &#4635;&#4853;&#4648;&#4877; &#4768;&#4616;&#4709;&#4669;</value>
+						<value form="image">jr://file/commcare/image/data/family_status/follow_up.png</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="no_audio/tir-label">
+						<value/>
+						<value form="audio">jr://file/commcare/audio/data/no_audio/tir-bqanwy.mp3</value>
+					</text>
+					<text id="no_audio/orm-label">
+						<value/>
+						<value form="audio">jr://file/commcare/audio/data/no_audio/orm-8x8che.mp3</value>
+					</text>
+					<text id="no_audio/amh-label">
+						<value/>
+						<value form="audio">jr://file/commcare/audio/data/no_audio/amh-lk1tq6.mp3</value>
+					</text>
+					<text id="family_identification-label">
+						<value>&#4755;&#4845; &#4661;&#4853;&#4649; &#4632;&#4941;&#4616;&#4845;</value>
+					</text>
+					<text id="family_identification/family_name-label">
+						<value>&#4755;&#4845; &#4632;&#4651;&#4626; &#4661;&#4853;&#4651; &#4633;&#4617;&#4773; &#4665;&#4637;</value>
+						<value form="image">jr://file/commcare/image/data/family_identification/family_name.png</value>
+					</text>
+					<text id="family_identification/family_phone_number-label">
+						<value>&#4755;&#4845; &#4661;&#4853;&#4651; &#4638;&#4707;&#4845;&#4621; &#4673;&#4933;&#4650; &#4661;&#4621;&#4778;</value>
+						<value form="image">jr://file/commcare/image/data/family_identification/family_phone_number.png</value>
+					</text>
+					<text id="family_identification/family_phone_number-constraintMsg">
+						<value>&#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4778; &#4673;&#4933;&#4650; &#4779;&#4709; 0 &#4864;&#4634;&#4649; &#4779;&#4709; 10 &#4781;&#4704;&#4621;&#4933; &#4840;&#4709;&#4617;&#4757; &#4961;&#4961;</value>
+					</text>
+					<text id="household_locations-label">
+						<value>&#4755;&#4845; &#4773;&#4722; &#4872;&#4827; &#4632;&#4653;&#4776;&#4706; &#4710;&#4723;</value>
+					</text>
+					<text id="household_locations/village/choose_element-label">
+						<value>&#4669;&#4637; &#4878;&#4901;</value>
+					</text>
+					<text id="household_locations/family_number-label">
+						<value>&#4689;&#4901;&#4650; &#4661;&#4853;&#4651;-&#4708;&#4725;</value>
+					</text>
+					<text id="household_locations/family_number/family_number_entered-label">
+						<value>&#4689;&#4901;&#4650; &#4661;&#4853;&#4651;-&#4708;&#4725;/&#4872;&#4827;/(<output value="/data/household_locations/village/village_number"/>/_ _ _)  &#4781;&#4941;&#4722; &#4710;&#4723; &#4845;&#4632;&#4619;&#4773;</value>
+						<value form="image">jr://file/commcare/image/data/family_identification/household_number.png</value>
+					</text>
+					<text id="household_locations/family_number/family_number_entered-constraintMsg">
+						<value>&#4689;&#4901;&#4650; &#4661;&#4853;&#4651; &#4708;&#4725;  &#4707;&#4819;&#4621; 3 &#4850;&#4866;&#4725; &#4781;&#4792;&#4813;&#4757; &#4768;&#4616;&#4814;</value>
+					</text>
+					<text id="household_locations/family_number/display_family_number-label">
+						<value>&#4633;&#4617;&#4773; &#4661;&#4853;&#4651; &#4708;&#4725;/&#4689;&#4933;&#4650; &#4872;&#4827; : <output value="/data/household_locations/family_number/family_number"/></value>
+					</text>
+					<text id="household_locations/family_number/family_number_validation_failed-constraintMsg">
+						<value>&#4773;&#4825;&#4845;  &#4689;&#4933;&#4650;  &#4661;&#4853;&#4651; &#4708;&#4725;/&#4872;&#4827; &#4677;&#4853;&#4634; &#4629;&#4826; &#4795;&#4618;&#4773; &#4661;&#4853;&#4651; &#4708;&#4725;  &#4829;&#4720;&#4896;&#4672;&#4637;&#4617; &#4773;&#4841;</value>
+					</text>
+					<text id="hda_network-label">
+						<value>&#4637;&#4725;&#4773;&#4661;&#4659;&#4653; &#4621;&#4637;&#4819;&#4725; &#4873;&#4869;&#4616;</value>
+					</text>
+					<text id="hda_network/hda_1-30/choose_element-label">
+						<value>&#4669;&#4637; &#4632;&#4651;&#4626; &#4901;&#4821;&#4755; &#4621;&#4637;&#4819;&#4725; &#4873;&#4869;&#4616; 1:30  ?</value>
+					</text>
+					<text id="hda_network/hda_1-30/display_hda_1-30-label">
+						<value>&#4901;&#4821;&#4755; &#4621;&#4637;&#4819;&#4725; &#4873;&#4869; 1:30 &#4637;&#4648;&#4930;:  <output value="/data/hda_network/hda_1-30/hda_1to30_name"/>
+
+&#4661;&#4621;&#4778; &#4673;&#4933;&#4650;: <output value="/data/hda_network/hda_1-30/hda_1to30_phone_number"/></value>
+					</text>
+					<text id="family_status-label">
+						<value>&#4777;&#4752;&#4723;&#4725; &#4661;&#4853;&#4651;</value>
+					</text>
+					<text id="family_status/family_status-label">
+						<value>&#4773;&#4826; &#4661;&#4853;&#4651; &#4638;&#4852;&#4621; &#4853;&#4841; &#4808;&#4845;&#4661; &#4768;&#4845;&#4782;&#4752;&#4757;</value>
+						<value form="image">jr://file/commcare/image/data/family_status/family_status.png</value>
+					</text>
+					<text id="family_status/family_status-model_family-label">
+						<value>&#4638;&#4852;&#4621; &#4661;&#4853;&#4651;</value>
+					</text>
+					<text id="family_status/family_status-not_model_family-label">
+						<value>&#4638;&#4852;&#4621; &#4661;&#4853;&#4651; &#4768;&#4845;&#4782;&#4752;&#4757;</value>
+					</text>
+					<text id="family_status/follow_up-label">
+						<value>&#4773;&#4826; &#4661;&#4853;&#4651; &#4638;&#4852;&#4621; &#4757;&#4637;&#4877;&#4707;&#4653; &#4901;&#4705;&#4677; &#4781;&#4725;&#4725;&#4621;&#4757; &#4853;&#4875;&#4941;&#4757; &#4781;&#4725;&#4872;&#4709;&#4650; &#4768;&#4616;&#4778;</value>
+						<value form="image">jr://file/commcare/image/data/family_status/follow_up.png</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4677;&#4901;&#4818; &#4633;&#4617;&#4773; &#4757;&#4633;&#4618;&#4773; &#4720;&#4635;&#4618;&#4769; &#4961;&#4961;
+
+&#4677;&#4901;&#4818; &#4757;&#4637;&#4621;&#4768;&#4781; &#4709;&#4619;&#4821;&#4618; &#4757;&#4840;&#4635;&#4757; &#4872;&#4933; &#4824;&#4622; &#4678;&#4931;&#4621; &#4896;&#4813;&#4677;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="no_audio/tir-label">
+						<value/>
+						<value form="audio">jr://file/commcare/audio/data/no_audio/tir-bqanwy.mp3</value>
+					</text>
+					<text id="no_audio/orm-label">
+						<value/>
+						<value form="audio">jr://file/commcare/audio/data/no_audio/orm-8x8che.mp3</value>
+					</text>
+					<text id="no_audio/amh-label">
+						<value/>
+						<value form="audio">jr://file/commcare/audio/data/no_audio/amh-lk1tq6.mp3</value>
+					</text>
+					<text id="family_identification-label">
+						<value>Family Identification</value>
+					</text>
+					<text id="family_identification/family_name-label">
+						<value>Family Name of Head of Household</value>
+						<value form="image">jr://file/commcare/image/data/family_identification/family_name.png</value>
+					</text>
+					<text id="family_identification/family_phone_number-label">
+						<value>Family Phone Number</value>
+						<value form="image">jr://file/commcare/image/data/family_identification/family_phone_number.png</value>
+					</text>
+					<text id="family_identification/family_phone_number-constraintMsg">
+						<value>The phone number must start with 0 and cannot be longer than 10 digits</value>
+					</text>
+					<text id="household_locations-label">
+						<value>Household Locations</value>
+					</text>
+					<text id="household_locations/village/choose_element-label">
+						<value>Village Name</value>
+					</text>
+					<text id="household_locations/family_number-label">
+						<value>Family number</value>
+					</text>
+					<text id="household_locations/family_number/family_number_entered-label">
+						<value>House/Family Number (<output value="/data/household_locations/village/village_number"/>/_ _ _)  Fill in the blanks.</value>
+						<value form="image">jr://file/commcare/image/data/family_identification/household_number.png</value>
+					</text>
+					<text id="household_locations/family_number/family_number_entered-constraintMsg">
+						<value>Family Number must be 3 digits</value>
+					</text>
+					<text id="household_locations/family_number/display_family_number-label">
+						<value>Full Family/House Number: <output value="/data/household_locations/family_number/family_number"/></value>
+					</text>
+					<text id="household_locations/family_number/family_number_validation_failed-constraintMsg">
+						<value>This House/Family Number has already been used for another family.</value>
+					</text>
+					<text id="hda_network-label">
+						<value>HDA Network</value>
+					</text>
+					<text id="hda_network/hda_1-30/choose_element-label">
+						<value>What is the HDA 1:30 Leader's Name?</value>
+					</text>
+					<text id="hda_network/hda_1-30/display_hda_1-30-label">
+						<value>HDA 1:30 Selected:  <output value="/data/hda_network/hda_1-30/hda_1to30_name"/>
+
+Phone Number: <output value="/data/hda_network/hda_1-30/hda_1to30_phone_number"/></value>
+					</text>
+					<text id="family_status-label">
+						<value>Family Status</value>
+					</text>
+					<text id="family_status/family_status-label">
+						<value>Is the family a Model Family?</value>
+						<value form="image">jr://file/commcare/image/data/family_status/family_status.png</value>
+					</text>
+					<text id="family_status/family_status-model_family-label">
+						<value>maatii moodeela</value>
+					</text>
+					<text id="family_status/family_status-not_model_family-label">
+						<value>Maatii moodeela miti</value>
+					</text>
+					<text id="family_status/follow_up-label">
+						<value>maatii kan moodeela godhuuf hordooffi fi gargarsaa cimaa godhuu qabda</value>
+						<value form="image">jr://file/commcare/image/data/family_status/follow_up.png</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki guutuma guututti guutame unka kan erguuf malattoo magarsaa kan kara bukkee harka mirgaa olii jiru xuqii.</value>
+					</text>
+				</translation>
+			</itext>
+		<bind calculate="/data/meta/timeEnd" nodeset="/data/case_open_family_0/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_open_family_0/case/@user_id"/><setvalue event="xforms-ready" ref="/data/case_open_family_0/case/@case_id" value="instance('commcaresession')/session/data/case_id_new_family_0"/><bind calculate="/data/family_identification/family_name" nodeset="/data/case_open_family_0/case/create/case_name"/><setvalue event="xforms-ready" ref="/data/case_open_family_0/case/create/owner_id" value="instance('groups')/groups/group/@id"/><bind calculate="/data/household_locations/family_number/family_number" nodeset="/data/case_open_family_0/case/update/family_number" relevant="count(/data/household_locations/family_number/family_number) &gt; 0"/><bind calculate="/data/family_identification/family_phone_number" nodeset="/data/case_open_family_0/case/update/family_phone_number" relevant="count(/data/family_identification/family_phone_number) &gt; 0"/><bind calculate="/data/family_status/family_status" nodeset="/data/case_open_family_0/case/update/family_status" relevant="count(/data/family_status/family_status) &gt; 0"/><bind calculate="/data/locations/hc_facility_code" nodeset="/data/case_open_family_0/case/update/hc_facility_code" relevant="count(/data/locations/hc_facility_code) &gt; 0"/><bind calculate="/data/hda_network/hda_1-30/hda_1to30_name" nodeset="/data/case_open_family_0/case/update/hda_1to30_name" relevant="count(/data/hda_network/hda_1-30/hda_1to30_name) &gt; 0"/><bind calculate="/data/hda_network/hda_1-30/hda_1to30_phone_number" nodeset="/data/case_open_family_0/case/update/hda_1to30_phone_number" relevant="count(/data/hda_network/hda_1-30/hda_1to30_phone_number) &gt; 0"/><bind calculate="/data/locations/health_center" nodeset="/data/case_open_family_0/case/update/health_center" relevant="count(/data/locations/health_center) &gt; 0"/><bind calculate="/data/locations/health_center_id" nodeset="/data/case_open_family_0/case/update/health_center_id" relevant="count(/data/locations/health_center_id) &gt; 0"/><bind calculate="/data/locations/health_post" nodeset="/data/case_open_family_0/case/update/health_post" relevant="count(/data/locations/health_post) &gt; 0"/><bind calculate="/data/locations/health_post_id" nodeset="/data/case_open_family_0/case/update/health_post_id" relevant="count(/data/locations/health_post_id) &gt; 0"/><bind calculate="/data/household_locations/hew_phone_number" nodeset="/data/case_open_family_0/case/update/hew_phone_number" relevant="count(/data/household_locations/hew_phone_number) &gt; 0"/><bind calculate="/data/locations/hp_facility_code" nodeset="/data/case_open_family_0/case/update/hp_facility_code" relevant="count(/data/locations/hp_facility_code) &gt; 0"/><bind calculate="/data/locations/region" nodeset="/data/case_open_family_0/case/update/region" relevant="count(/data/locations/region) &gt; 0"/><bind calculate="/data/locations/region_id" nodeset="/data/case_open_family_0/case/update/region_id" relevant="count(/data/locations/region_id) &gt; 0"/><bind calculate="/data/locations/test_or_real" nodeset="/data/case_open_family_0/case/update/test_or_real" relevant="count(/data/locations/test_or_real) &gt; 0"/><bind calculate="/data/household_locations/village/village_name" nodeset="/data/case_open_family_0/case/update/village_name" relevant="count(/data/household_locations/village/village_name) &gt; 0"/><bind calculate="/data/locations/woreda" nodeset="/data/case_open_family_0/case/update/woreda" relevant="count(/data/locations/woreda) &gt; 0"/><bind calculate="/data/locations/woreda_id" nodeset="/data/case_open_family_0/case/update/woreda_id" relevant="count(/data/locations/woreda_id) &gt; 0"/><bind calculate="/data/locations/zone" nodeset="/data/case_open_family_0/case/update/zone" relevant="count(/data/locations/zone) &gt; 0"/><bind calculate="/data/locations/zone_id" nodeset="/data/case_open_family_0/case/update/zone_id" relevant="count(/data/locations/zone_id) &gt; 0"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<group ref="/data/no_audio">
+			<trigger ref="/data/no_audio/tir" appearance="minimal">
+				<label ref="jr:itext('no_audio/tir-label')"/>
+			</trigger>
+			<trigger ref="/data/no_audio/orm" appearance="minimal">
+				<label ref="jr:itext('no_audio/orm-label')"/>
+			</trigger>
+			<trigger ref="/data/no_audio/amh" appearance="minimal">
+				<label ref="jr:itext('no_audio/amh-label')"/>
+			</trigger>
+		</group>
+		<group ref="/data/family_identification">
+			<label ref="jr:itext('family_identification-label')"/>
+			<input ref="/data/family_identification/family_name">
+				<label ref="jr:itext('family_identification/family_name-label')"/>
+			</input>
+			<input ref="/data/family_identification/family_phone_number" appearance="numeric">
+				<label ref="jr:itext('family_identification/family_phone_number-label')"/>
+				<alert ref="jr:itext('family_identification/family_phone_number-constraintMsg')"/>
+			</input>
+		</group>
+		<group ref="/data/household_locations">
+			<label ref="jr:itext('household_locations-label')"/>
+			<group ref="/data/household_locations/village">
+				<group>
+					<repeat jr:count="/data/household_locations/village/list_length" jr:noAddRemove="true()" nodeset="/data/household_locations/village/repeat"/>
+				</group>
+				<select1 ref="/data/household_locations/village/choose_element">
+					<label ref="jr:itext('household_locations/village/choose_element-label')"/>
+					<itemset nodeset="/data/household_locations/village/repeat">
+						<label ref="element"/>
+						<value ref="element_id"/>
+					</itemset>
+				</select1>
+			</group>
+			<group ref="/data/household_locations/family_number" appearance="field-list">
+				<label ref="jr:itext('household_locations/family_number-label')"/>
+				<input ref="/data/household_locations/family_number/family_number_entered" appearance="numeric">
+					<label ref="jr:itext('household_locations/family_number/family_number_entered-label')"/>
+					<alert ref="jr:itext('household_locations/family_number/family_number_entered-constraintMsg')"/>
+				</input>
+				<trigger ref="/data/household_locations/family_number/display_family_number" appearance="minimal">
+					<label ref="jr:itext('household_locations/family_number/display_family_number-label')"/>
+				</trigger>
+				<trigger ref="/data/household_locations/family_number/family_number_validation_failed" appearance="minimal">
+					<alert ref="jr:itext('household_locations/family_number/family_number_validation_failed-constraintMsg')"/>
+				</trigger>
+			</group>
+		</group>
+		<group ref="/data/hda_network">
+			<label ref="jr:itext('hda_network-label')"/>
+			<group ref="/data/hda_network/hda_1-30">
+				<group>
+					<repeat jr:count="/data/hda_network/hda_1-30/list_length" jr:noAddRemove="true()" nodeset="/data/hda_network/hda_1-30/repeat"/>
+				</group>
+				<select1 ref="/data/hda_network/hda_1-30/choose_element">
+					<label ref="jr:itext('hda_network/hda_1-30/choose_element-label')"/>
+					<itemset nodeset="/data/hda_network/hda_1-30/repeat">
+						<label ref="element"/>
+						<value ref="element_id"/>
+					</itemset>
+				</select1>
+				<trigger ref="/data/hda_network/hda_1-30/display_hda_1-30" appearance="minimal">
+					<label ref="jr:itext('hda_network/hda_1-30/display_hda_1-30-label')"/>
+				</trigger>
+			</group>
+		</group>
+		<group ref="/data/family_status">
+			<label ref="jr:itext('family_status-label')"/>
+			<select1 ref="/data/family_status/family_status">
+				<label ref="jr:itext('family_status/family_status-label')"/>
+				<item>
+					<label ref="jr:itext('family_status/family_status-model_family-label')"/>
+					<value>model_family</value>
+				</item>
+				<item>
+					<label ref="jr:itext('family_status/family_status-not_model_family-label')"/>
+					<value>not_model_family</value>
+				</item>
+			</select1>
+			<trigger ref="/data/family_status/follow_up" appearance="minimal">
+				<label ref="jr:itext('family_status/follow_up-label')"/>
+			</trigger>
+		</group>
+		<group ref="/data/locations"/>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

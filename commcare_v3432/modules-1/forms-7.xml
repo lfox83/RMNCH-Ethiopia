@@ -1,0 +1,1337 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum" vellum:ignore="richText">
+	<h:head>
+		<h:title>Choose or Create Client for Extra ANC Medications Action Card</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/5fe4368dda17b5c7fcb7ca9c715496bcb5d5ef98" uiVersion="1" version="3432" name="Choose or Create Client for Extra ANC Medications Action Card">
+					<notification_case_id/>
+					<client_info>
+						<client_name/>
+						<family_name/>
+						<mrn/>
+						<dob/>
+						<age_years/>
+						<village_name/>
+						<local_phone_number/>
+					</client_info>
+					<notification_client_info>
+						<client_name/>
+						<family_name/>
+						<mrn/>
+						<age_years/>
+						<village_name/>
+						<local_phone_number/>
+					</notification_client_info>
+					<load_to_display>
+						<extra_folic_acid_given/>
+						<extra_folic_acid_date_eth/>
+						<tt1_date_eth/>
+						<tt2_date_eth/>
+						<tt3_date_eth/>
+						<tt4_date_eth/>
+						<tt5_date_eth/>
+					</load_to_display>
+					<notification_info/>
+					<confirmation>
+						<confirm/>
+						<information/>
+						<notification_info/>
+						<extra_folic_acid_date_eth/>
+						<extra_folic_acid_given/>
+						<tt1_date_eth/>
+						<tt2_date_eth/>
+						<tt3_date_eth/>
+						<tt4_date_eth/>
+						<tt5_date_eth/>
+					</confirmation>
+					<folic_acid>
+						<load_notification>
+							<extra_folic_acid_given/>
+							<extra_folic_acid_date/>
+							<extra_folic_acid_date_eth/>
+						</load_notification>
+						<load_pregnancy_pp>
+							<extra_folic_acid_given/>
+							<extra_folic_acids_given/>
+							<extra_folic_acid_dates/>
+							<extra_folic_acid_dates_eth/>
+						</load_pregnancy_pp>
+						<modify_old_data>
+							<extra_folic_acids_given/>
+							<extra_folic_acid_dates/>
+							<extra_folic_acid_dates_eth/>
+						</modify_old_data>
+						<display_only>
+							<anc1_date_eth/>
+							<anc2_date_eth/>
+							<anc3_date_eth/>
+							<anc4_date_eth/>
+							<pnc1_date_eth/>
+							<pnc2_date_eth/>
+							<pnc3_date_eth/>
+							<pnc4_date_eth/>
+							<pnc5_date_eth/>
+							<anc1_folic_acid_given/>
+							<anc2_folic_acid_given/>
+							<anc3_folic_acid_given/>
+							<anc4_folic_acid_given/>
+							<pnc1_folic_acid_given/>
+							<pnc2_folic_acid_given/>
+							<pnc3_folic_acid_given/>
+							<pnc4_folic_acid_given/>
+							<pnc5_folic_acid_given/>
+						</display_only>
+						<anc_visit_summary>
+							<title/>
+							<anc1/>
+							<anc2/>
+							<anc3/>
+							<anc4/>
+							<pnc1/>
+							<pnc2/>
+							<pnc3/>
+							<pnc4/>
+							<none/>
+						</anc_visit_summary>
+						<extra_folic_acid>
+							<title/>
+							<list_length/>
+							<repeat jr:template="">
+								<number/>
+								<date/>
+								<date_eth/>
+								<display/>
+							</repeat>
+							<none/>
+							<notification_display/>
+							<add_folic_acid/>
+						</extra_folic_acid>
+						<final>
+							<extra_folic_acids_given/>
+							<extra_folic_acid_dates/>
+							<extra_folic_acid_dates_eth/>
+							<blank/>
+						</final>
+					</folic_acid>
+					<tt_vaccinations>
+						<load_notification>
+							<tt1_date/>
+							<tt2_date/>
+							<tt3_date/>
+							<tt4_date/>
+							<tt5_date/>
+							<tt1_date_eth/>
+							<tt2_date_eth/>
+							<tt3_date_eth/>
+							<tt4_date_eth/>
+							<tt5_date_eth/>
+						</load_notification>
+						<load_client>
+							<tt1_date_eth/>
+							<tt2_date_eth/>
+							<tt3_date_eth/>
+							<tt4_date_eth/>
+							<tt5_date_eth/>
+						</load_client>
+						<tt1>
+							<display/>
+							<add_date/>
+						</tt1>
+						<tt2>
+							<display/>
+							<add_date/>
+						</tt2>
+						<tt3>
+							<display/>
+							<add_date/>
+						</tt3>
+						<tt4>
+							<display/>
+							<add_date/>
+						</tt4>
+						<tt5>
+							<display/>
+							<add_date/>
+						</tt5>
+						<final>
+							<tt1_date/>
+							<tt2_date/>
+							<tt3_date/>
+							<tt4_date/>
+							<tt5_date/>
+							<tt1_date_eth/>
+							<tt2_date_eth/>
+							<tt3_date_eth/>
+							<tt4_date_eth/>
+							<tt5_date_eth/>
+						</final>
+					</tt_vaccinations>
+					<display_confirmed/>
+					<display_skipped/>
+					<update_mrn/>
+					<pregnancy_pp_case_id/>
+					<end_of_form/>
+				<case_load_notification_0><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><close/></case></case_load_notification_0><case_load_client_3><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><update><mrn/><tt1_date/><tt1_date_eth/><tt2_date/><tt2_date_eth/><tt3_date/><tt3_date_eth/><tt4_date/><tt4_date_eth/><tt5_date/><tt5_date_eth/></update></case></case_load_client_3><case_autoload_pregnancy_pp_4><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><update><extra_folic_acid_dates/><extra_folic_acid_dates_eth/><extra_folic_acid_given/><extra_folic_acids_given/><mrn/><tt1_date/><tt1_date_eth/><tt2_date/><tt2_date_eth/><tt3_date/><tt3_date_eth/><tt4_date/><tt4_date_eth/><tt5_date/><tt5_date_eth/></update></case></case_autoload_pregnancy_pp_4><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="casedb" src="jr://instance/casedb"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<bind nodeset="/data/notification_case_id" calculate="instance('commcaresession')/session/data/case_id_load_notification_0"/>
+			<bind nodeset="/data/client_info"/>
+			<bind nodeset="/data/client_info/client_name"/>
+			<bind nodeset="/data/client_info/family_name"/>
+			<bind nodeset="/data/client_info/mrn"/>
+			<bind nodeset="/data/client_info/dob"/>
+			<bind nodeset="/data/client_info/age_years" calculate="int((today() - date(/data/client_info/dob)) div 365.25)"/>
+			<bind nodeset="/data/client_info/village_name"/>
+			<bind nodeset="/data/client_info/local_phone_number"/>
+			<bind nodeset="/data/notification_client_info"/>
+			<bind nodeset="/data/notification_client_info/client_name"/>
+			<bind nodeset="/data/notification_client_info/family_name"/>
+			<bind nodeset="/data/notification_client_info/mrn"/>
+			<bind nodeset="/data/notification_client_info/age_years"/>
+			<bind nodeset="/data/notification_client_info/village_name"/>
+			<bind nodeset="/data/notification_client_info/local_phone_number"/>
+			<bind nodeset="/data/load_to_display"/>
+			<bind nodeset="/data/load_to_display/extra_folic_acid_given"/>
+			<bind nodeset="/data/load_to_display/extra_folic_acid_date_eth"/>
+			<bind nodeset="/data/load_to_display/tt1_date_eth"/>
+			<bind nodeset="/data/load_to_display/tt2_date_eth"/>
+			<bind nodeset="/data/load_to_display/tt3_date_eth"/>
+			<bind nodeset="/data/load_to_display/tt4_date_eth"/>
+			<bind nodeset="/data/load_to_display/tt5_date_eth"/>
+			<bind nodeset="/data/notification_info"/>
+			<bind nodeset="/data/confirmation"/>
+			<bind nodeset="/data/confirmation/confirm"/>
+			<bind nodeset="/data/confirmation/information"/>
+			<bind nodeset="/data/confirmation/notification_info"/>
+			<bind nodeset="/data/confirmation/extra_folic_acid_date_eth" relevant="/data/load_to_display/extra_folic_acid_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/extra_folic_acid_given" relevant="/data/load_to_display/extra_folic_acid_given != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/tt1_date_eth" relevant="/data/load_to_display/tt1_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/tt2_date_eth" relevant="/data/load_to_display/tt2_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/tt3_date_eth" relevant="/data/load_to_display/tt3_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/tt4_date_eth" relevant="/data/load_to_display/tt4_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/tt5_date_eth" relevant="/data/load_to_display/tt5_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/folic_acid" relevant="/data/confirmation/confirm = &quot;confirmed&quot;"/>
+			<bind nodeset="/data/folic_acid/load_notification"/>
+			<bind nodeset="/data/folic_acid/load_notification/extra_folic_acid_given"/>
+			<bind nodeset="/data/folic_acid/load_notification/extra_folic_acid_date"/>
+			<bind nodeset="/data/folic_acid/load_notification/extra_folic_acid_date_eth"/>
+			<bind nodeset="/data/folic_acid/load_pregnancy_pp"/>
+			<bind nodeset="/data/folic_acid/load_pregnancy_pp/extra_folic_acid_given"/>
+			<bind nodeset="/data/folic_acid/load_pregnancy_pp/extra_folic_acids_given"/>
+			<bind nodeset="/data/folic_acid/load_pregnancy_pp/extra_folic_acid_dates"/>
+			<bind nodeset="/data/folic_acid/load_pregnancy_pp/extra_folic_acid_dates_eth"/>
+			<bind nodeset="/data/folic_acid/modify_old_data"/>
+			<bind nodeset="/data/folic_acid/modify_old_data/extra_folic_acids_given" calculate="concat(if(/data/folic_acid/load_pregnancy_pp/extra_folic_acid_given != &quot;&quot;, concat(/data/folic_acid/load_pregnancy_pp/extra_folic_acid_given, &quot; &quot;), &quot;&quot;), /data/folic_acid/load_pregnancy_pp/extra_folic_acids_given)"/>
+			<bind nodeset="/data/folic_acid/modify_old_data/extra_folic_acid_dates" calculate="concat(if(/data/folic_acid/load_pregnancy_pp/extra_folic_acid_given != &quot;&quot;, &quot;- &quot;, &quot;&quot;), /data/folic_acid/load_pregnancy_pp/extra_folic_acid_dates)"/>
+			<bind nodeset="/data/folic_acid/modify_old_data/extra_folic_acid_dates_eth" calculate="concat(if(/data/folic_acid/load_pregnancy_pp/extra_folic_acid_given != &quot;&quot;, &quot;- &quot;, &quot;&quot;), /data/folic_acid/load_pregnancy_pp/extra_folic_acid_dates_eth)"/>
+			<bind nodeset="/data/folic_acid/display_only"/>
+			<bind nodeset="/data/folic_acid/display_only/anc1_date_eth"/>
+			<bind nodeset="/data/folic_acid/display_only/anc2_date_eth"/>
+			<bind nodeset="/data/folic_acid/display_only/anc3_date_eth"/>
+			<bind nodeset="/data/folic_acid/display_only/anc4_date_eth"/>
+			<bind nodeset="/data/folic_acid/display_only/pnc1_date_eth"/>
+			<bind nodeset="/data/folic_acid/display_only/pnc2_date_eth"/>
+			<bind nodeset="/data/folic_acid/display_only/pnc3_date_eth"/>
+			<bind nodeset="/data/folic_acid/display_only/pnc4_date_eth"/>
+			<bind nodeset="/data/folic_acid/display_only/pnc5_date_eth"/>
+			<bind nodeset="/data/folic_acid/display_only/anc1_folic_acid_given"/>
+			<bind nodeset="/data/folic_acid/display_only/anc2_folic_acid_given"/>
+			<bind nodeset="/data/folic_acid/display_only/anc3_folic_acid_given"/>
+			<bind nodeset="/data/folic_acid/display_only/anc4_folic_acid_given"/>
+			<bind nodeset="/data/folic_acid/display_only/pnc1_folic_acid_given"/>
+			<bind nodeset="/data/folic_acid/display_only/pnc2_folic_acid_given"/>
+			<bind nodeset="/data/folic_acid/display_only/pnc3_folic_acid_given"/>
+			<bind nodeset="/data/folic_acid/display_only/pnc4_folic_acid_given"/>
+			<bind nodeset="/data/folic_acid/display_only/pnc5_folic_acid_given"/>
+			<bind nodeset="/data/folic_acid/anc_visit_summary" relevant="/data/folic_acid/load_notification/extra_folic_acid_given &gt; 0"/>
+			<bind nodeset="/data/folic_acid/anc_visit_summary/title"/>
+			<bind nodeset="/data/folic_acid/anc_visit_summary/anc1" relevant="/data/folic_acid/display_only/anc1_folic_acid_given != &quot;&quot;"/>
+			<bind nodeset="/data/folic_acid/anc_visit_summary/anc2" relevant="/data/folic_acid/display_only/anc2_folic_acid_given != &quot;&quot;"/>
+			<bind nodeset="/data/folic_acid/anc_visit_summary/anc3" relevant="/data/folic_acid/display_only/anc3_folic_acid_given != &quot;&quot;"/>
+			<bind nodeset="/data/folic_acid/anc_visit_summary/anc4" relevant="/data/folic_acid/display_only/anc4_folic_acid_given != &quot;&quot;"/>
+			<bind nodeset="/data/folic_acid/anc_visit_summary/pnc1" relevant="/data/folic_acid/display_only/pnc1_folic_acid_given != &quot;&quot;"/>
+			<bind nodeset="/data/folic_acid/anc_visit_summary/pnc2" relevant="/data/folic_acid/display_only/pnc2_folic_acid_given != &quot;&quot;"/>
+			<bind nodeset="/data/folic_acid/anc_visit_summary/pnc3" relevant="/data/folic_acid/display_only/pnc3_folic_acid_given != &quot;&quot;"/>
+			<bind nodeset="/data/folic_acid/anc_visit_summary/pnc4" relevant="/data/folic_acid/display_only/pnc4_folic_acid_given != &quot;&quot;"/>
+			<bind nodeset="/data/folic_acid/anc_visit_summary/none" relevant="/data/folic_acid/display_only/anc1_folic_acid_given = &quot;&quot; and /data/folic_acid/display_only/anc2_folic_acid_given = &quot;&quot; and /data/folic_acid/display_only/anc3_folic_acid_given = &quot;&quot; and /data/folic_acid/display_only/anc4_folic_acid_given = &quot;&quot; and /data/folic_acid/display_only/pnc1_folic_acid_given = &quot;&quot; and /data/folic_acid/display_only/pnc2_folic_acid_given = &quot;&quot; and /data/folic_acid/display_only/pnc3_folic_acid_given = &quot;&quot; and /data/folic_acid/display_only/pnc4_folic_acid_given = &quot;&quot;"/>
+			<bind nodeset="/data/folic_acid/extra_folic_acid" relevant="/data/folic_acid/load_notification/extra_folic_acid_given &gt; 0"/>
+			<bind nodeset="/data/folic_acid/extra_folic_acid/title"/>
+			<bind nodeset="/data/folic_acid/extra_folic_acid/list_length" calculate="count-selected(/data/folic_acid/modify_old_data/extra_folic_acids_given)"/>
+			<bind nodeset="/data/folic_acid/extra_folic_acid/repeat"/>
+			<bind nodeset="/data/folic_acid/extra_folic_acid/repeat/number" calculate="selected-at(/data/folic_acid/modify_old_data/extra_folic_acids_given, position(current()/..))"/>
+			<bind nodeset="/data/folic_acid/extra_folic_acid/repeat/date" calculate="selected-at(/data/folic_acid/modify_old_data/extra_folic_acid_dates, position(current()/..))"/>
+			<bind nodeset="/data/folic_acid/extra_folic_acid/repeat/date_eth" calculate="selected-at(/data/folic_acid/modify_old_data/extra_folic_acid_dates_eth, position(current()/..))"/>
+			<bind nodeset="/data/folic_acid/extra_folic_acid/repeat/display"/>
+			<bind nodeset="/data/folic_acid/extra_folic_acid/none" relevant="/data/folic_acid/extra_folic_acid/list_length = 0"/>
+			<bind nodeset="/data/folic_acid/extra_folic_acid/notification_display"/>
+			<bind nodeset="/data/folic_acid/extra_folic_acid/add_folic_acid" required="true()"/>
+			<bind nodeset="/data/folic_acid/final" relevant="/data/folic_acid/extra_folic_acid/add_folic_acid = &quot;yes&quot;"/>
+			<bind nodeset="/data/folic_acid/final/extra_folic_acids_given" calculate="concat(/data/folic_acid/load_pregnancy_pp/extra_folic_acids_given, &quot; &quot;, /data/folic_acid/load_notification/extra_folic_acid_given)"/>
+			<bind nodeset="/data/folic_acid/final/extra_folic_acid_dates" calculate="concat(/data/folic_acid/load_pregnancy_pp/extra_folic_acid_dates, &quot; &quot;, /data/folic_acid/load_notification/extra_folic_acid_date)"/>
+			<bind nodeset="/data/folic_acid/final/extra_folic_acid_dates_eth" calculate="concat(/data/folic_acid/load_pregnancy_pp/extra_folic_acid_dates_eth, &quot; &quot;, /data/folic_acid/load_notification/extra_folic_acid_date_eth)"/>
+			<bind nodeset="/data/folic_acid/final/blank" calculate="&quot;&quot;"/>
+			<bind nodeset="/data/tt_vaccinations" relevant="/data/confirmation/confirm = &quot;confirmed&quot;"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt1_date"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt2_date"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt3_date"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt4_date"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt5_date"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt1_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt2_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt3_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt4_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt5_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_client"/>
+			<bind nodeset="/data/tt_vaccinations/load_client/tt1_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_client/tt2_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_client/tt3_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_client/tt4_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_client/tt5_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/tt1" relevant="/data/tt_vaccinations/load_notification/tt1_date_eth != &quot;&quot; and /data/tt_vaccinations/load_notification/tt1_date_eth != /data/tt_vaccinations/load_client/tt1_date_eth and /data/tt_vaccinations/load_client/tt1_date_eth != &quot;&quot; and /data/tt_vaccinations/load_client/tt1_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt1_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot;"/>
+			<bind nodeset="/data/tt_vaccinations/tt1/display"/>
+			<bind nodeset="/data/tt_vaccinations/tt1/add_date" required="true()"/>
+			<bind nodeset="/data/tt_vaccinations/tt2" relevant="/data/tt_vaccinations/load_client/tt2_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_client/tt2_date_eth != &quot;&quot; and /data/tt_vaccinations/load_notification/tt2_date_eth != /data/tt_vaccinations/load_client/tt2_date_eth and /data/tt_vaccinations/load_notification/tt2_date_eth != &quot;&quot; and /data/tt_vaccinations/load_notification/tt2_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot;"/>
+			<bind nodeset="/data/tt_vaccinations/tt2/display"/>
+			<bind nodeset="/data/tt_vaccinations/tt2/add_date" required="true()"/>
+			<bind nodeset="/data/tt_vaccinations/tt3" relevant="/data/tt_vaccinations/load_notification/tt3_date_eth != &quot;&quot; and /data/tt_vaccinations/load_notification/tt3_date_eth != /data/tt_vaccinations/load_client/tt3_date_eth and /data/tt_vaccinations/load_client/tt3_date_eth != &quot;&quot; and /data/tt_vaccinations/load_client/tt3_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt3_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot;"/>
+			<bind nodeset="/data/tt_vaccinations/tt3/display"/>
+			<bind nodeset="/data/tt_vaccinations/tt3/add_date" required="true()"/>
+			<bind nodeset="/data/tt_vaccinations/tt4" relevant="/data/tt_vaccinations/load_notification/tt4_date_eth != &quot;&quot; and /data/tt_vaccinations/load_notification/tt4_date_eth != /data/tt_vaccinations/load_client/tt4_date_eth and /data/tt_vaccinations/load_client/tt4_date_eth != &quot;&quot; and /data/tt_vaccinations/load_client/tt4_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt4_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot;"/>
+			<bind nodeset="/data/tt_vaccinations/tt4/display"/>
+			<bind nodeset="/data/tt_vaccinations/tt4/add_date" required="true()"/>
+			<bind nodeset="/data/tt_vaccinations/tt5" relevant="/data/tt_vaccinations/load_notification/tt5_date_eth != &quot;&quot; and /data/tt_vaccinations/load_notification/tt5_date_eth != /data/tt_vaccinations/load_client/tt5_date_eth and /data/tt_vaccinations/load_client/tt5_date_eth != &quot;&quot; and /data/tt_vaccinations/load_client/tt5_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt5_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot;"/>
+			<bind nodeset="/data/tt_vaccinations/tt5/display"/>
+			<bind nodeset="/data/tt_vaccinations/tt5/add_date" required="true()"/>
+			<bind nodeset="/data/tt_vaccinations/final"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt1_date" relevant="/data/tt_vaccinations/load_client/tt1_date_eth = &quot;&quot; or /data/tt_vaccinations/tt1/add_date = &quot;yes&quot; or (/data/tt_vaccinations/load_client/tt1_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt1_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt1_date"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt2_date" relevant="/data/tt_vaccinations/load_client/tt2_date_eth = &quot;&quot; or /data/tt_vaccinations/tt2/add_date = &quot;yes&quot; or (/data/tt_vaccinations/load_client/tt2_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt2_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt2_date"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt3_date" relevant="/data/tt_vaccinations/tt3/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt3_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt3_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt3_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt3_date"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt4_date" relevant="/data/tt_vaccinations/tt4/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt4_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt4_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt4_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt4_date"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt5_date" relevant="/data/tt_vaccinations/tt5/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt5_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt5_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt5_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt5_date"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt1_date_eth" relevant="/data/tt_vaccinations/tt1/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt1_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt1_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt1_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt1_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt2_date_eth" relevant="/data/tt_vaccinations/load_client/tt2_date_eth = &quot;&quot; or /data/tt_vaccinations/tt2/add_date = &quot;yes&quot; or (/data/tt_vaccinations/load_client/tt2_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt2_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt2_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt3_date_eth" relevant="/data/tt_vaccinations/tt3/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt3_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt3_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt3_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt3_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt4_date_eth" relevant="/data/tt_vaccinations/tt4/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt4_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt4_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt4_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt4_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt5_date_eth" relevant="/data/tt_vaccinations/tt5/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt5_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt5_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt5_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt5_date_eth"/>
+			<bind nodeset="/data/display_confirmed" relevant="/data/confirmation/confirm = &quot;confirmed&quot;"/>
+			<bind nodeset="/data/display_skipped" relevant="/data/confirmation/confirm = &quot;&quot;"/>
+			<bind nodeset="/data/update_mrn" relevant="/data/confirmation/confirm = &quot;confirmed&quot;" calculate="/data/notification_client_info/mrn"/>
+			<bind nodeset="/data/pregnancy_pp_case_id" calculate="instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="notification_info-label">
+						<value>### This Action Card contains very important information from a client's visit at the Health Center. This information will be added to the selected client's file if you confirm this Action Card.</value>
+						<value form="image">jr://file/commcare/image/data/notification_info-4dez5j.png</value>
+						<value form="markdown">### This Action Card contains very important information from a client's visit at the Health Center. This information will be added to the selected client's file if you confirm this Action Card.</value>
+					</text>
+					<text id="confirmation/confirm-label">
+						<value>Confirm that you want to add this information to the client's file.</value>
+						<value form="markdown">Confirm that you want to add this information to the client's file.</value>
+					</text>
+					<text id="confirmation/confirm-confirmed-label">
+						<value>**Confirmed**</value>
+						<value form="markdown">**Confirmed**</value>
+					</text>
+					<text id="confirmation/information-label">
+						<value>Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC Medication Action Card Information:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+						<value form="markdown">Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC Medication Action Card Information:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+					</text>
+					<text id="confirmation/notification_info-label">
+						<value>The Action Card also contains information about the client's TT vaccinations and Folic Acid. This information will be added to the selected client's file if you confirm this Action Card.</value>
+						<value form="markdown">The Action Card also contains information about the client's TT vaccinations and Folic Acid. This information will be added to the selected client's file if you confirm this Action Card.</value>
+					</text>
+					<text id="confirmation/extra_folic_acid_date_eth-label">
+						<value>* Extra Folic Acid Date: <output value="/data/load_to_display/extra_folic_acid_date_eth"/></value>
+						<value form="markdown">* Extra Folic Acid Date: <output value="/data/load_to_display/extra_folic_acid_date_eth"/></value>
+					</text>
+					<text id="confirmation/extra_folic_acid_given-label">
+						<value>* Extra Folic Acid Given: <output value="/data/load_to_display/extra_folic_acid_given"/></value>
+						<value form="markdown">* Extra Folic Acid Given: <output value="/data/load_to_display/extra_folic_acid_given"/></value>
+					</text>
+					<text id="confirmation/tt1_date_eth-label">
+						<value>* TT1 Date: <output value="/data/load_to_display/tt1_date_eth"/></value>
+						<value form="markdown">* TT1 Date: <output value="/data/load_to_display/tt1_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt2_date_eth-label">
+						<value>* TT2 Date: <output value="/data/load_to_display/tt2_date_eth"/></value>
+						<value form="markdown">* TT2 Date: <output value="/data/load_to_display/tt2_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt3_date_eth-label">
+						<value>* TT3 Date: <output value="/data/load_to_display/tt3_date_eth"/></value>
+						<value form="markdown">* TT3 Date: <output value="/data/load_to_display/tt3_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt4_date_eth-label">
+						<value>* TT4 Date: <output value="/data/load_to_display/tt4_date_eth"/></value>
+						<value form="markdown">* TT4 Date: <output value="/data/load_to_display/tt4_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt5_date_eth-label">
+						<value>* TT5 Date: <output value="/data/load_to_display/tt5_date_eth"/></value>
+						<value form="markdown">* TT5 Date: <output value="/data/load_to_display/tt5_date_eth"/></value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/title-label">
+						<value>Folic Acid Given during ANC visits</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc1-label">
+						<value>* ANC 1 (<output value="/data/folic_acid/display_only/anc1_date_eth"/>): **<output value="/data/folic_acid/display_only/anc1_folic_acid_given"/> tablets**</value>
+						<value form="markdown">* ANC 1 (<output value="/data/folic_acid/display_only/anc1_date_eth"/>): **<output value="/data/folic_acid/display_only/anc1_folic_acid_given"/> tablets**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc2-label">
+						<value>* ANC 2 (<output value="/data/folic_acid/display_only/anc2_date_eth"/>): **<output value="/data/folic_acid/display_only/anc2_folic_acid_given"/> tablets**</value>
+						<value form="markdown">* ANC 2 (<output value="/data/folic_acid/display_only/anc2_date_eth"/>): **<output value="/data/folic_acid/display_only/anc2_folic_acid_given"/> tablets**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc3-label">
+						<value>* ANC 3 (<output value="/data/folic_acid/display_only/anc3_date_eth"/>): **<output value="/data/folic_acid/display_only/anc3_folic_acid_given"/> tablets**</value>
+						<value form="markdown">* ANC 3 (<output value="/data/folic_acid/display_only/anc3_date_eth"/>): **<output value="/data/folic_acid/display_only/anc3_folic_acid_given"/> tablets**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc4-label">
+						<value>* ANC 4 (<output value="/data/folic_acid/display_only/anc4_date_eth"/>): **<output value="/data/folic_acid/display_only/anc4_folic_acid_given"/> tablets**</value>
+						<value form="markdown">* ANC 4 (<output value="/data/folic_acid/display_only/anc4_date_eth"/>): **<output value="/data/folic_acid/display_only/anc4_folic_acid_given"/> tablets**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc1-label">
+						<value>* PNC 1 (<output value="/data/folic_acid/display_only/pnc1_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc1_folic_acid_given"/> tablets**</value>
+						<value form="markdown">* PNC 1 (<output value="/data/folic_acid/display_only/pnc1_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc1_folic_acid_given"/> tablets**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc2-label">
+						<value>* PNC 2 (<output value="/data/folic_acid/display_only/pnc2_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc2_folic_acid_given"/> tablets**</value>
+						<value form="markdown">* PNC 2 (<output value="/data/folic_acid/display_only/pnc2_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc2_folic_acid_given"/> tablets**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc3-label">
+						<value>* PNC 3 (<output value="/data/folic_acid/display_only/pnc3_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc3_folic_acid_given"/> tablets**</value>
+						<value form="markdown">* PNC 3 (<output value="/data/folic_acid/display_only/pnc3_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc3_folic_acid_given"/> tablets**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc4-label">
+						<value>* PNC 4 (<output value="/data/folic_acid/display_only/pnc4_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc4_folic_acid_given"/> tablets**</value>
+						<value form="markdown">* PNC 4 (<output value="/data/folic_acid/display_only/pnc4_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc4_folic_acid_given"/> tablets**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/none-label">
+						<value>* None</value>
+						<value form="markdown">* None</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/title-label">
+						<value>Extra Folic Acid Given so far</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/repeat/display-label">
+						<value>* <output value="current()/../date_eth"/>: **<output value="current()/../number"/> tablets**</value>
+						<value form="markdown">* <output value="current()/../date_eth"/>: **<output value="current()/../number"/> tablets**</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/none-label">
+						<value>* None</value>
+						<value form="markdown">* None</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/notification_display-label">
+						<value>Extra Folic acid for Action Card:
+
+* <output value="/data/folic_acid/load_notification/extra_folic_acid_date_eth"/>: **<output value="/data/folic_acid/load_notification/extra_folic_acid_given"/> tablets**</value>
+						<value form="markdown">Extra Folic acid for Action Card:
+
+* <output value="/data/folic_acid/load_notification/extra_folic_acid_date_eth"/>: **<output value="/data/folic_acid/load_notification/extra_folic_acid_given"/> tablets**</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/add_folic_acid-label">
+						<value>Do you want to add the folic acid from the Action Card to the client's file?</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/add_folic_acid-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/add_folic_acid-no-label">
+						<value>No</value>
+					</text>
+					<text id="tt_vaccinations/tt1/display-label">
+						<value>TT1 Vaccination
+
+Current Date: <output value="/data/tt_vaccinations/load_client/tt1_date_eth"/>
+
+Action Card: <output value="/data/tt_vaccinations/load_notification/tt1_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-label">
+						<value>There are discrepancies. Do you want to overwrite the current date with the one from the Action Card?</value>
+					</text>
+					<text id="tt_vaccinations/tt2/display-label">
+						<value>TT2 Vaccination
+
+Current Date: <output value="/data/tt_vaccinations/load_client/tt2_date_eth"/>
+
+Action Card: <output value="/data/tt_vaccinations/load_notification/tt2_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt3/display-label">
+						<value>TT3 Vaccination
+
+Current Date: <output value="/data/tt_vaccinations/load_client/tt3_date_eth"/>
+
+Action Card: <output value="/data/tt_vaccinations/load_notification/tt3_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt4/display-label">
+						<value>TT4 Vaccination
+
+Current Date: <output value="/data/tt_vaccinations/load_client/tt4_date_eth"/>
+
+Action Card: <output value="/data/tt_vaccinations/load_notification/tt4_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt5/display-label">
+						<value>TT5 Vaccination
+
+Current Date: <output value="/data/tt_vaccinations/load_client/tt5_date_eth"/>
+
+Action Card: <output value="/data/tt_vaccinations/load_notification/tt5_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt5/add_date-no-label">
+						<value>No</value>
+					</text>
+					<text id="display_confirmed-label">
+						<value>The approved Action Card details will be added to <output value="/data/client_info/client_name"/>'s client history.</value>
+					</text>
+					<text id="display_skipped-label">
+						<value>The Action Card will NOT be added to <output value="/data/client_info/client_name"/>'s client history.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="notification_info-label">
+						<value>### &#4845;&#4613; &#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853;  &#4704;&#4900;&#4755; &#4899;&#4709;&#4843; &#4704;&#4752;&#4704;&#4648;&#4733;  &#4877;&#4828;   &#4776;&#4723;&#4779;&#4634;&#4811;  &#4873;&#4709;&#4765;&#4725; &#4840;&#4720;&#4872;&#4760;  &#4704;&#4899;&#4637; &#4896;&#4675;&#4634; &#4632;&#4648;&#4867;&#4814;&#4733;&#4757; &#4840;&#4843;&#4824; &#4752;&#4813;. &#4845;&#4613; &#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4776;&#4720;&#4672;&#4704;&#4621;&#4669;&#4813; &#4632;&#4648;&#4867;&#4813;&#4757;  &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4845;&#4904;&#4632;&#4651;&#4811;&#4621;.</value>
+						<value form="image">jr://file/commcare/image/data/notification_info-4dez5j.png</value>
+						<value form="markdown">### &#4845;&#4613; &#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853;  &#4704;&#4900;&#4755; &#4899;&#4709;&#4843; &#4704;&#4752;&#4704;&#4648;&#4733;  &#4877;&#4828;   &#4776;&#4723;&#4779;&#4634;&#4811;  &#4873;&#4709;&#4765;&#4725; &#4840;&#4720;&#4872;&#4760;  &#4704;&#4899;&#4637; &#4896;&#4675;&#4634; &#4632;&#4648;&#4867;&#4814;&#4733;&#4757; &#4840;&#4843;&#4824; &#4752;&#4813;. &#4845;&#4613; &#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4776;&#4720;&#4672;&#4704;&#4621;&#4669;&#4813; &#4632;&#4648;&#4867;&#4813;&#4757;  &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4845;&#4904;&#4632;&#4651;&#4811;&#4621;.</value>
+					</text>
+					<text id="confirmation/confirm-label">
+						<value>&#4773;&#4648;&#4877;&#4896;&#4763; &#4632;&#4614;&#4757; &#4768;&#4616;&#4709;&#4669;&#4963; &#4616;&#4632;&#4904;&#4632;&#4653;/&#4616;&#4632;&#4619;&#4781; &#4725;&#4936;&#4621;&#4874;&#4843;&#4616;&#4669;</value>
+						<value form="markdown">&#4773;&#4648;&#4877;&#4896;&#4763; &#4632;&#4614;&#4757; &#4768;&#4616;&#4709;&#4669;&#4963; &#4616;&#4632;&#4904;&#4632;&#4653;/&#4616;&#4632;&#4619;&#4781; &#4725;&#4936;&#4621;&#4874;&#4843;&#4616;&#4669;</value>
+					</text>
+					<text id="confirmation/confirm-confirmed-label">
+						<value>&#4840;&#4720;&#4648;&#4875;&#4872;&#4896;</value>
+						<value form="markdown">&#4840;&#4720;&#4648;&#4875;&#4872;&#4896;</value>
+					</text>
+					<text id="confirmation/information-label">
+						<value>Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC Medication Action Card Information:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+						<value form="markdown">Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC Medication Action Card Information:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+					</text>
+					<text id="confirmation/notification_info-label">
+						<value>### &#4845;&#4613; &#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4723;&#4779;&#4634;&#4811;  &#4840;&#4722;&#4722; &#4781;&#4725;&#4707;&#4725;&#4755; &#4942;&#4618;&#4781; &#4768;&#4658;&#4853; &#4632;&#4648;&#4867;&#4814;&#4733;&#4757; &#4840;&#4843;&#4824; &#4752;&#4813;. &#4845;&#4613; &#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4776;&#4720;&#4672;&#4704;&#4621;&#4669;&#4813; &#4632;&#4648;&#4867;&#4813;&#4757;  &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4845;&#4904;&#4632;&#4651;&#4811;&#4621;.</value>
+						<value form="markdown">### &#4845;&#4613; &#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4723;&#4779;&#4634;&#4811;  &#4840;&#4722;&#4722; &#4781;&#4725;&#4707;&#4725;&#4755; &#4942;&#4618;&#4781; &#4768;&#4658;&#4853; &#4632;&#4648;&#4867;&#4814;&#4733;&#4757; &#4840;&#4843;&#4824; &#4752;&#4813;. &#4845;&#4613; &#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4776;&#4720;&#4672;&#4704;&#4621;&#4669;&#4813; &#4632;&#4648;&#4867;&#4813;&#4757;  &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4845;&#4904;&#4632;&#4651;&#4811;&#4621;.</value>
+					</text>
+					<text id="confirmation/extra_folic_acid_date_eth-label">
+						<value>* &#4720;&#4904;&#4635;&#4650; &#4942;&#4618;&#4781; &#4768;&#4658;&#4853; &#4840;&#4808;&#4656;&#4848;&#4733;&#4704;&#4725; &#4672;&#4757;: <output value="/data/load_to_display/extra_folic_acid_date_eth"/></value>
+						<value form="markdown">* &#4720;&#4904;&#4635;&#4650; &#4942;&#4618;&#4781; &#4768;&#4658;&#4853; &#4840;&#4808;&#4656;&#4848;&#4733;&#4704;&#4725; &#4672;&#4757;: <output value="/data/load_to_display/extra_folic_acid_date_eth"/></value>
+					</text>
+					<text id="confirmation/extra_folic_acid_given-label">
+						<value>* &#4720;&#4904;&#4635;&#4650; &#4942;&#4618;&#4781; &#4768;&#4658;&#4853; &#4720;&#4656;&#4903;&#4621;: <output value="/data/load_to_display/extra_folic_acid_given"/></value>
+						<value form="markdown">* &#4720;&#4904;&#4635;&#4650; &#4942;&#4618;&#4781; &#4768;&#4658;&#4853; &#4720;&#4656;&#4903;&#4621;: <output value="/data/load_to_display/extra_folic_acid_given"/></value>
+					</text>
+					<text id="confirmation/tt1_date_eth-label">
+						<value>* &#4840;&#4722;&#4722; 1 &#4672;&#4896;&#4654;: <output value="/data/load_to_display/tt1_date_eth"/></value>
+						<value form="markdown">* &#4840;&#4722;&#4722; 1 &#4672;&#4896;&#4654;: <output value="/data/load_to_display/tt1_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt2_date_eth-label">
+						<value>* &#4840;&#4722;&#4722; 2 &#4672;&#4896;&#4654;: <output value="/data/load_to_display/tt2_date_eth"/></value>
+						<value form="markdown">* &#4840;&#4722;&#4722; 2 &#4672;&#4896;&#4654;: <output value="/data/load_to_display/tt2_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt3_date_eth-label">
+						<value>* &#4840;&#4722;&#4722; 3 &#4672;&#4896;&#4654;: <output value="/data/load_to_display/tt3_date_eth"/></value>
+						<value form="markdown">* &#4840;&#4722;&#4722; 3 &#4672;&#4896;&#4654;: <output value="/data/load_to_display/tt3_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt4_date_eth-label">
+						<value>* &#4840;&#4722;&#4722; 4 &#4672;&#4896;&#4654;: <output value="/data/load_to_display/tt4_date_eth"/></value>
+						<value form="markdown">* &#4840;&#4722;&#4722; 4 &#4672;&#4896;&#4654;: <output value="/data/load_to_display/tt4_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt5_date_eth-label">
+						<value>* &#4840;&#4722;&#4722; 5 &#4672;&#4896;&#4654; : <output value="/data/load_to_display/tt5_date_eth"/></value>
+						<value form="markdown">* &#4840;&#4722;&#4722; 5 &#4672;&#4896;&#4654; : <output value="/data/load_to_display/tt5_date_eth"/></value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/title-label">
+						<value>&#4704;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; &#4873;&#4709;&#4765;&#4726;&#4733; &#4840;&#4720;&#4656;&#4896; &#4720;&#4904;&#4635;&#4650; &#4942;&#4618;&#4781; &#4768;&#4658;&#4853;</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc1-label">
+						<value>* &#4840;&#4632;&#4864;&#4632;&#4650;&#4843; &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; (<output value="/data/folic_acid/display_only/anc1_date_eth"/>): **<output value="/data/folic_acid/display_only/anc1_folic_acid_given"/>   &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4840;&#4632;&#4864;&#4632;&#4650;&#4843; &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; (<output value="/data/folic_acid/display_only/anc1_date_eth"/>): **<output value="/data/folic_acid/display_only/anc1_folic_acid_given"/>   &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc2-label">
+						<value>* &#4609;&#4616;&#4720;&#4763;&#4813; &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; (<output value="/data/folic_acid/display_only/anc2_date_eth"/>): **<output value="/data/folic_acid/display_only/anc2_folic_acid_given"/> &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4609;&#4616;&#4720;&#4763;&#4813; &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; (<output value="/data/folic_acid/display_only/anc2_date_eth"/>): **<output value="/data/folic_acid/display_only/anc2_folic_acid_given"/> &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc3-label">
+						<value>* &#4662;&#4661;&#4720;&#4763;&#4813; &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; (<output value="/data/folic_acid/display_only/anc3_date_eth"/>): **<output value="/data/folic_acid/display_only/anc3_folic_acid_given"/> &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4662;&#4661;&#4720;&#4763;&#4813; &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; (<output value="/data/folic_acid/display_only/anc3_date_eth"/>): **<output value="/data/folic_acid/display_only/anc3_folic_acid_given"/> &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc4-label">
+						<value>* ANC 4 (<output value="/data/folic_acid/display_only/anc4_date_eth"/>): **<output value="/data/folic_acid/display_only/anc4_folic_acid_given"/> tablets**</value>
+						<value form="markdown">* ANC 4 (<output value="/data/folic_acid/display_only/anc4_date_eth"/>): **<output value="/data/folic_acid/display_only/anc4_folic_acid_given"/> tablets**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc1-label">
+						<value>* &#4704;&#4853;&#4613;&#4648;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 1 (<output value="/data/folic_acid/display_only/pnc1_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc1_folic_acid_given"/>   &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4704;&#4853;&#4613;&#4648;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 1 (<output value="/data/folic_acid/display_only/pnc1_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc1_folic_acid_given"/>   &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc2-label">
+						<value>* &#4704;&#4853;&#4613;&#4648;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 2 (<output value="/data/folic_acid/display_only/pnc2_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc2_folic_acid_given"/>   &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4704;&#4853;&#4613;&#4648;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 2 (<output value="/data/folic_acid/display_only/pnc2_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc2_folic_acid_given"/>   &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc3-label">
+						<value>* &#4704;&#4853;&#4613;&#4648;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 3 (<output value="/data/folic_acid/display_only/pnc3_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc3_folic_acid_given"/>   &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4704;&#4853;&#4613;&#4648;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 3 (<output value="/data/folic_acid/display_only/pnc3_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc3_folic_acid_given"/>   &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc4-label">
+						<value>* &#4704;&#4853;&#4613;&#4648;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 4 (<output value="/data/folic_acid/display_only/pnc4_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc4_folic_acid_given"/>   &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4704;&#4853;&#4613;&#4648;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 4 (<output value="/data/folic_acid/display_only/pnc4_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc4_folic_acid_given"/>   &#4773;&#4757;&#4781;&#4709;&#4622;&#4733; &#4720;&#4656;&#4720;&#4811;&#4621;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/none-label">
+						<value>&#4637;&#4757;&#4637; &#4768;&#4621;&#4720;&#4656;&#4899;&#4725;&#4637;</value>
+						<value form="markdown">&#4637;&#4757;&#4637; &#4768;&#4621;&#4720;&#4656;&#4899;&#4725;&#4637;</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/title-label">
+						<value>&#4773;&#4661;&#4779;&#4609;&#4757; &#4840;&#4720;&#4656;&#4896; &#4720;&#4904;&#4635;&#4650; &#4942;&#4618;&#4781; &#4768;&#4658;&#4853;</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/repeat/display-label">
+						<value>* <output value="current()/../date_eth"/>: **<output value="current()/../number"/> &#4781;&#4754;&#4758;&#4733;**</value>
+						<value form="markdown">* <output value="current()/../date_eth"/>: **<output value="current()/../number"/> &#4781;&#4754;&#4758;&#4733;**</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/none-label">
+						<value>&#4637;&#4757;&#4637; &#4768;&#4621;&#4720;&#4656;&#4899;&#4725;&#4637;</value>
+						<value form="markdown">&#4637;&#4757;&#4637; &#4768;&#4621;&#4720;&#4656;&#4899;&#4725;&#4637;</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/notification_display-label">
+						<value>&#4840;&#4720;&#4904;&#4635;&#4650; &#4942;&#4618;&#4781; &#4768;&#4658;&#4853; &#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853;:
+
+* <output value="/data/folic_acid/load_notification/extra_folic_acid_date_eth"/>: **<output value="/data/folic_acid/load_notification/extra_folic_acid_given"/> tablets**</value>
+						<value form="markdown">&#4840;&#4720;&#4904;&#4635;&#4650; &#4942;&#4618;&#4781; &#4768;&#4658;&#4853; &#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853;:
+
+* <output value="/data/folic_acid/load_notification/extra_folic_acid_date_eth"/>: **<output value="/data/folic_acid/load_notification/extra_folic_acid_given"/> tablets**</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/add_folic_acid-label">
+						<value>&#4942;&#4618;&#4781; &#4768;&#4658;&#4849; &#4776;&#4635;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4632;&#4904;&#4632;&#4653; &#4725;&#4936;&#4621;&#4877;&#4843;&#4616;&#4669;?</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/add_folic_acid-yes-label">
+						<value>&#4768;&#4814;</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/add_folic_acid-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="tt_vaccinations/tt1/display-label">
+						<value>&#4840;&#4722;&#4722; 1 &#4781;&#4725;&#4707;&#4725;
+
+&#4840;&#4827;&#4652; &#4672;&#4757; : <output value="/data/tt_vaccinations/load_client/tt1_date_eth"/>
+
+&#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853;: <output value="/data/tt_vaccinations/load_notification/tt1_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-label">
+						<value>&#4621;&#4841;&#4752;&#4726;&#4733; &#4768;&#4617;.  &#4704;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4849;&#4757; &#4843;&#4616;&#4813;&#4757; &#4704;&#4827;&#4652;&#4813; &#4672;&#4757; &#4704;&#4720;&#4931;&#4936;&#4813;&#4757; &#4632;&#4672;&#4840;&#4653; &#4725;&#4936;&#4621;&#4877;&#4843;&#4616;&#4669;?</value>
+					</text>
+					<text id="tt_vaccinations/tt2/display-label">
+						<value>&#4840;&#4722;&#4722;2  &#4781;&#4725;&#4707;&#4725;
+
+&#4840;&#4827;&#4652; &#4672;&#4757; : <output value="/data/tt_vaccinations/load_client/tt2_date_eth"/>
+
+&#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853;: <output value="/data/tt_vaccinations/load_notification/tt2_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt3/display-label">
+						<value>&#4840;&#4722;&#4722; 3 &#4781;&#4725;&#4707;&#4725;
+
+&#4840;&#4827;&#4652; &#4672;&#4757;: <output value="/data/tt_vaccinations/load_client/tt3_date_eth"/>
+
+&#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; : <output value="/data/tt_vaccinations/load_notification/tt3_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt4/display-label">
+						<value>&#4840;&#4722;&#4722; 4 &#4781;&#4725;&#4707;&#4725;
+
+&#4840;&#4827;&#4652;&#4813; &#4672;&#4757; : <output value="/data/tt_vaccinations/load_client/tt4_date_eth"/>
+&#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4672;&#4757;: <output value="/data/tt_vaccinations/load_notification/tt4_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt5/display-label">
+						<value>&#4840;&#4722;&#4722; 5 &#4781;&#4725;&#4707;&#4725;
+
+&#4840;&#4827;&#4652;&#4813; &#4672;&#4757; : <output value="/data/tt_vaccinations/load_client/tt5_date_eth"/>
+
+&#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853;: <output value="/data/tt_vaccinations/load_notification/tt5_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt5/add_date-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="display_confirmed-label">
+						<value>&#4840;&#4635;&#4659;&#4808;&#4674;&#4843;&#4813; &#4632;&#4621;&#4821;&#4781;&#4725; &#4840;&#4634;&#4904;&#4632;&#4648;&#4813;  output value="/data/client_info/client_name"/&gt;'s &#4704;&#4723;&#4779;&#4634;&#4811; &#4723;&#4650;&#4781; &#4619;&#4845; &#4752;&#4813;&#4961;&#4961;</value>
+					</text>
+					<text id="display_skipped-label">
+						<value>&#4840;&#4635;&#4659;&#4808;&#4674;&#4843;&#4813; &#4632;&#4621;&#4821;&#4781;&#4725; &#4768;&#4845;&#4904;&#4632;&#4653;&#4637; <output value="/data/client_info/client_name"/> &#4704;&#4723;&#4779;&#4634;&#4811; &#4723;&#4650;&#4781; &#4619;&#4845; &#4752;&#4813;&#4961;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="notification_info-label">
+						<value>### &#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4824;&#4896;&#4691;&#4616;&#4622; (&#4829;&#4627;&#4830;) &#4709;&#4899;&#4821;&#4634; &#4896;&#4691;&#4634; &#4627;&#4704;&#4652;&#4723; &#4771;&#4709; &#4901;&#4821;&#4755; &#4899;&#4706;&#4843;  &#4779;&#4709; &#4755;&#4845; &#4720;&#4627;&#4779;&#4635;&#4845; /&#4720;&#4872;&#4621;&#4875;&#4619;&#4845;  &#4817;&#4848;&#4725;   &#4773;&#4841;&#4964;&#4961;&#4961; &#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4773;&#4825;&#4845; &#4755;&#4709;&#4726;&#4637; &#4829;&#4720;&#4632;&#4648;&#4929; &#4720;&#4872;&#4621;&#4872;&#4621;&#4722; &#4939;&#4845;&#4621; &#4829;&#4813;&#4656;&#4797; &#4773;&#4841; &#4773;&#4757;&#4720;&#4848;&#4771; &#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4850; &#4771;&#4648;&#4875;&#4874;&#4933;&#4778;/&#4779;</value>
+						<value form="image">jr://file/commcare/image/data/notification_info-4dez5j.png</value>
+						<value form="markdown">### &#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4824;&#4896;&#4691;&#4616;&#4622; (&#4829;&#4627;&#4830;) &#4709;&#4899;&#4821;&#4634; &#4896;&#4691;&#4634; &#4627;&#4704;&#4652;&#4723; &#4771;&#4709; &#4901;&#4821;&#4755; &#4899;&#4706;&#4843;  &#4779;&#4709; &#4755;&#4845; &#4720;&#4627;&#4779;&#4635;&#4845; /&#4720;&#4872;&#4621;&#4875;&#4619;&#4845;  &#4817;&#4848;&#4725;   &#4773;&#4841;&#4964;&#4961;&#4961; &#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4773;&#4825;&#4845; &#4755;&#4709;&#4726;&#4637; &#4829;&#4720;&#4632;&#4648;&#4929; &#4720;&#4872;&#4621;&#4872;&#4621;&#4722; &#4939;&#4845;&#4621; &#4829;&#4813;&#4656;&#4797; &#4773;&#4841; &#4773;&#4757;&#4720;&#4848;&#4771; &#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4850; &#4771;&#4648;&#4875;&#4874;&#4933;&#4778;/&#4779;</value>
+					</text>
+					<text id="confirmation/confirm-label">
+						<value>&#4653;&#4877;&#4928;&#4760; &#4850;&#4778; &#4781;&#4725;&#4809;&#4661;&#4778; &#4808;&#4845; &#4781;&#4725;&#4621;&#4773;&#4778; &#4725;&#4848;&#4621;&#4845;&#4854;</value>
+						<value form="markdown">&#4653;&#4877;&#4928;&#4760; &#4850;&#4778; &#4781;&#4725;&#4809;&#4661;&#4778; &#4808;&#4845; &#4781;&#4725;&#4621;&#4773;&#4778; &#4725;&#4848;&#4621;&#4845;&#4854;</value>
+					</text>
+					<text id="confirmation/confirm-confirmed-label">
+						<value>&#4768;&#4648;&#4875;&#4877;&#4930;</value>
+						<value form="markdown">&#4768;&#4648;&#4875;&#4877;&#4930;</value>
+					</text>
+					<text id="confirmation/information-label">
+						<value>Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC Medication Action Card Information:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+						<value form="markdown">Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC Medication Action Card Information:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+					</text>
+					<text id="confirmation/notification_info-label">
+						<value>The Action Card also contains information about the client's TT vaccinations and Folic Acid. This information will be added to the selected client's file if you confirm this Action Card.</value>
+						<value form="markdown">The Action Card also contains information about the client's TT vaccinations and Folic Acid. This information will be added to the selected client's file if you confirm this Action Card.</value>
+					</text>
+					<text id="confirmation/extra_folic_acid_date_eth-label">
+						<value>* &#4720;&#4808;&#4659;&#4794; &#4942;&#4618;&#4781; &#4771;&#4658;&#4853; &#4821;&#4616;&#4725;: <output value="/data/load_to_display/extra_folic_acid_date_eth"/></value>
+						<value form="markdown">* &#4720;&#4808;&#4659;&#4794; &#4942;&#4618;&#4781; &#4771;&#4658;&#4853; &#4821;&#4616;&#4725;: <output value="/data/load_to_display/extra_folic_acid_date_eth"/></value>
+					</text>
+					<text id="confirmation/extra_folic_acid_given-label">
+						<value>* &#4829;&#4720;&#4813;&#4611;&#4704; &#4720;&#4808;&#4659;&#4794; &#4942;&#4618;&#4781; &#4771;&#4658;&#4853;: <output value="/data/load_to_display/extra_folic_acid_given"/></value>
+						<value form="markdown">* &#4829;&#4720;&#4813;&#4611;&#4704; &#4720;&#4808;&#4659;&#4794; &#4942;&#4618;&#4781; &#4771;&#4658;&#4853;: <output value="/data/load_to_display/extra_folic_acid_given"/></value>
+					</text>
+					<text id="confirmation/tt1_date_eth-label">
+						<value>* &#4722;&#4722;1 &#4821;&#4616;&#4725;: <output value="/data/load_to_display/tt1_date_eth"/></value>
+						<value form="markdown">* &#4722;&#4722;1 &#4821;&#4616;&#4725;: <output value="/data/load_to_display/tt1_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt2_date_eth-label">
+						<value>* &#4722;&#4722;2 &#4821;&#4616;&#4725;: <output value="/data/load_to_display/tt2_date_eth"/></value>
+						<value form="markdown">* &#4722;&#4722;2 &#4821;&#4616;&#4725;: <output value="/data/load_to_display/tt2_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt3_date_eth-label">
+						<value>* &#4722;&#4722;3 &#4821;&#4616;&#4725;:  <output value="/data/load_to_display/tt3_date_eth"/></value>
+						<value form="markdown">* &#4722;&#4722;3 &#4821;&#4616;&#4725;:  <output value="/data/load_to_display/tt3_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt4_date_eth-label">
+						<value>* &#4722;&#4722;4 &#4821;&#4616;&#4725;:  <output value="/data/load_to_display/tt4_date_eth"/></value>
+						<value form="markdown">* &#4722;&#4722;4 &#4821;&#4616;&#4725;:  <output value="/data/load_to_display/tt4_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt5_date_eth-label">
+						<value>* &#4722;&#4722;5 &#4821;&#4616;&#4725;: <output value="/data/load_to_display/tt5_date_eth"/></value>
+						<value form="markdown">* &#4722;&#4722;5 &#4821;&#4616;&#4725;: <output value="/data/load_to_display/tt5_date_eth"/></value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/title-label">
+						<value>&#4771;&#4709; &#4776;&#4845;&#4850; &#4821;&#4848;&#4725; &#4781;&#4757;&#4781;&#4757; &#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4829;&#4720;&#4813;&#4611;&#4704; &#4942;&#4618;&#4781; &#4771;&#4661;&#4853;</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc1-label">
+						<value>* &#4755;&#4845; &#4632;&#4864;&#4632;&#4653;&#4843; &#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; (<output value="/data/folic_acid/display_only/anc1_date_eth"/>): **<output value="/data/folic_acid/display_only/anc1_folic_acid_given"/>  &#4781;&#4754;&#4757; &#4720;&#4811;&#4610;&#4707;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4755;&#4845; &#4632;&#4864;&#4632;&#4653;&#4843; &#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; (<output value="/data/folic_acid/display_only/anc1_date_eth"/>): **<output value="/data/folic_acid/display_only/anc1_folic_acid_given"/>  &#4781;&#4754;&#4757; &#4720;&#4811;&#4610;&#4707;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc2-label">
+						<value>* &#4779;&#4621;&#4768;&#4845; &#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; (<output value="/data/folic_acid/display_only/anc2_date_eth"/>): **<output value="/data/folic_acid/display_only/anc2_folic_acid_given"/> &#4781;&#4754;&#4757; &#4720;&#4811;&#4610;&#4707;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4779;&#4621;&#4768;&#4845; &#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; (<output value="/data/folic_acid/display_only/anc2_date_eth"/>): **<output value="/data/folic_acid/display_only/anc2_folic_acid_given"/> &#4781;&#4754;&#4757; &#4720;&#4811;&#4610;&#4707;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc3-label">
+						<value>* &#4659;&#4621;&#4659;&#4845; &#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; (<output value="/data/folic_acid/display_only/anc3_date_eth"/>): **<output value="/data/folic_acid/display_only/anc3_folic_acid_given"/>  &#4781;&#4754;&#4757; &#4720;&#4811;&#4610;&#4707;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4659;&#4621;&#4659;&#4845; &#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; (<output value="/data/folic_acid/display_only/anc3_date_eth"/>): **<output value="/data/folic_acid/display_only/anc3_folic_acid_given"/>  &#4781;&#4754;&#4757; &#4720;&#4811;&#4610;&#4707;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc4-label">
+						<value>* &#4781;&#4757;&#4781;&#4757; &#4677;&#4853;&#4632; &#4808;&#4618;&#4853; 4 (<output value="/data/folic_acid/display_only/anc4_date_eth"/>): **<output value="/data/folic_acid/display_only/anc4_folic_acid_given"/> &#4723;&#4709;&#4620;&#4725;**</value>
+						<value form="markdown">* &#4781;&#4757;&#4781;&#4757; &#4677;&#4853;&#4632; &#4808;&#4618;&#4853; 4 (<output value="/data/folic_acid/display_only/anc4_date_eth"/>): **<output value="/data/folic_acid/display_only/anc4_folic_acid_given"/> &#4723;&#4709;&#4620;&#4725;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc1-label">
+						<value>* &#4771;&#4709; &#4853;&#4629;&#4650;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 1 (<output value="/data/folic_acid/display_only/pnc1_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc1_folic_acid_given"/>   &#4723;&#4709;&#4620;&#4725; &#4720;&#4811;&#4610;&#4705;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4771;&#4709; &#4853;&#4629;&#4650;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 1 (<output value="/data/folic_acid/display_only/pnc1_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc1_folic_acid_given"/>   &#4723;&#4709;&#4620;&#4725; &#4720;&#4811;&#4610;&#4705;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc2-label">
+						<value>* &#4771;&#4709; &#4853;&#4629;&#4650;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 2 (<output value="/data/folic_acid/display_only/pnc2_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc2_folic_acid_given"/>   &#4723;&#4709;&#4620;&#4725; &#4720;&#4811;&#4610;&#4705;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4771;&#4709; &#4853;&#4629;&#4650;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 2 (<output value="/data/folic_acid/display_only/pnc2_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc2_folic_acid_given"/>   &#4723;&#4709;&#4620;&#4725; &#4720;&#4811;&#4610;&#4705;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc3-label">
+						<value>* &#4771;&#4709; &#4853;&#4629;&#4650;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 3 (<output value="/data/folic_acid/display_only/pnc3_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc3_folic_acid_given"/>   &#4723;&#4709;&#4620;&#4725; &#4720;&#4811;&#4610;&#4705;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4771;&#4709; &#4853;&#4629;&#4650;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 3 (<output value="/data/folic_acid/display_only/pnc3_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc3_folic_acid_given"/>   &#4723;&#4709;&#4620;&#4725; &#4720;&#4811;&#4610;&#4705;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc4-label">
+						<value>* &#4771;&#4709; &#4853;&#4629;&#4650;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 4 (<output value="/data/folic_acid/display_only/pnc4_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc4_folic_acid_given"/>   &#4723;&#4709;&#4620;&#4725; &#4720;&#4811;&#4610;&#4705;&#4961;&#4961;**</value>
+						<value form="markdown">* &#4771;&#4709; &#4853;&#4629;&#4650;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; 4 (<output value="/data/folic_acid/display_only/pnc4_date_eth"/>): **<output value="/data/folic_acid/display_only/pnc4_folic_acid_given"/>   &#4723;&#4709;&#4620;&#4725; &#4720;&#4811;&#4610;&#4705;&#4961;&#4961;**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/none-label">
+						<value>* None</value>
+						<value form="markdown">* None</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/title-label">
+						<value>&#4781;&#4659;&#4709; &#4624;&#4826; &#4829;&#4720;&#4813;&#4611;&#4704; &#4720;&#4808;&#4659;&#4794; &#4942;&#4618;&#4781; &#4771;&#4658;&#4853;</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/repeat/display-label">
+						<value>* <output value="current()/../date_eth"/>: **<output value="current()/../number"/> &#4723;&#4709;&#4621;&#4725;**</value>
+						<value form="markdown">* <output value="current()/../date_eth"/>: **<output value="current()/../number"/> &#4723;&#4709;&#4621;&#4725;**</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/none-label">
+						<value>0</value>
+						<value form="markdown">0</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/notification_display-label">
+						<value>&#4720;&#4808;&#4659;&#4794; &#4942;&#4618;&#4781; &#4771;&#4658;&#4853; &#4757; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853;:
+
+* <output value="/data/folic_acid/load_notification/extra_folic_acid_date_eth"/>: **<output value="/data/folic_acid/load_notification/extra_folic_acid_given"/> &#4723;&#4709;&#4620;&#4725;**</value>
+						<value form="markdown">&#4720;&#4808;&#4659;&#4794; &#4942;&#4618;&#4781; &#4771;&#4658;&#4853; &#4757; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853;:
+
+* <output value="/data/folic_acid/load_notification/extra_folic_acid_date_eth"/>: **<output value="/data/folic_acid/load_notification/extra_folic_acid_given"/> &#4723;&#4709;&#4620;&#4725;**</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/add_folic_acid-label">
+						<value>&#4942;&#4618;&#4781; &#4771;&#4658;&#4853; &#4779;&#4709; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4755;&#4709; &#4848;&#4757;&#4704;&#4763; &#4939;&#4845;&#4621; &#4781;&#4725;&#4813;&#4661;&#4794; &#4725;&#4848;&#4621;&#4841; &#4850;&#4794;</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/add_folic_acid-yes-label">
+						<value>&#4773;&#4808;</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/add_folic_acid-no-label">
+						<value>&#4771;&#4845;&#4939;&#4621;</value>
+					</text>
+					<text id="tt_vaccinations/tt1/display-label">
+						<value>&#4722;&#4722;1 &#4781;&#4725;&#4707;&#4725;
+
+&#4755;&#4845; &#4672;&#4648;&#4707; &#4821;&#4616;&#4725;: <output value="/data/tt_vaccinations/load_client/tt1_date_eth"/>
+
+&#4627;&#4704;&#4652;&#4723;: <output value="/data/tt_vaccinations/load_notification/tt1_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-label">
+						<value>&#4941;&#4621;&#4621;&#4845;/&#4824;&#4845;&#4632;&#4659;&#4656;&#4621;  &#4752;&#4872;&#4653; &#4768;&#4616;&#4814;&#4964; &#4773;&#4826; &#4755;&#4845; &#4672;&#4648;&#4707; &#4821;&#4616;&#4725; &#4824;&#4622; &#4637;&#4661;&#4826; &#4771;&#4709; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4637;&#4661;&#4824;&#4622; &#4781;&#4725;&#4779;&#4773; &#4854; &#4725;&#4848;&#4618;?</value>
+					</text>
+					<text id="tt_vaccinations/tt2/display-label">
+						<value>&#4722;&#4722;2 &#4781;&#4725;&#4707;&#4725;
+
+&#4755;&#4845; &#4672;&#4648;&#4707; &#4821;&#4616;&#4725;: <output value="/data/tt_vaccinations/load_client/tt2_date_eth"/>
+
+&#4627;&#4704;&#4652;&#4723;: <output value="/data/tt_vaccinations/load_notification/tt2_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt3/display-label">
+						<value>&#4722;&#4722;3 &#4781;&#4725;&#4707;&#4725;
+
+&#4755;&#4845; &#4672;&#4648;&#4707; &#4821;&#4616;&#4725;: <output value="/data/tt_vaccinations/load_client/tt3_date_eth"/>
+
+&#4627;&#4704;&#4652;&#4723;: <output value="/data/tt_vaccinations/load_notification/tt3_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt4/display-label">
+						<value>&#4722;&#4722;4 &#4781;&#4725;&#4707;&#4725;
+
+&#4755;&#4845; &#4672;&#4648;&#4707; &#4821;&#4616;&#4725;: <output value="/data/tt_vaccinations/load_client/tt4_date_eth"/>
+
+&#4627;&#4704;&#4652;&#4723;: <output value="/data/tt_vaccinations/load_notification/tt4_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt5/display-label">
+						<value>&#4722;&#4722;5 &#4781;&#4725;&#4707;&#4725;
+
+&#4755;&#4845; &#4672;&#4648;&#4707; &#4821;&#4616;&#4725;: <output value="/data/tt_vaccinations/load_client/tt5_date_eth"/>
+
+&#4627;&#4704;&#4652;&#4723;: <output value="/data/tt_vaccinations/load_notification/tt5_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt5/add_date-no-label">
+						<value>&#4771;&#4845;&#4939;&#4621;</value>
+					</text>
+					<text id="display_confirmed-label">
+						<value>&#4773;&#4722; &#4829;&#4928;&#4848;&#4688; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4627;&#4704;&#4652;&#4723; &#4755;&#4709; &#4755;&#4845; <output value="/data/client_info/client_name"/>&#4848;&#4757;&#4704;&#4763; &#4635;&#4613;&#4848;&#4653; &#4781;&#4813;&#4656;&#4797; &#4773;&#4841;.</value>
+					</text>
+					<text id="display_skipped-label">
+						<value>&#4632;&#4941;&#4616;&#4898; &#4632;&#4621;&#4773;&#4781;&#4722; &#4768;&#4845;&#4809;&#4661;&#4781;&#4757;  <output value="/data/client_info/client_name"/> &#4768;&#4709; &#4755;&#4845; &#4629;&#4633;&#4637; &#4723;&#4650;&#4781; &#4773;&#4841;&#4961;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4773;&#4722; &#4677;&#4901;&#4818; &#4633;&#4617;&#4773; &#4757;&#4633;&#4617;&#4773; &#4720;&#4635;&#4617;&#4769; &#4773;&#4841;&#4961;&#4961;
+
+&#4773;&#4722; &#4677;&#4901;&#4818; &#4757;&#4637;&#4621;&#4768;&#4781; &#4709;&#4619;&#4821;&#4618; &#4709;&#4840;&#4635;&#4757; &#4872;&#4933; &#4824;&#4622; &#4678;&#4931;&#4621; &#4629;&#4709;&#4650; &#4896;&#4809;&#4677;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="notification_info-label">
+						<value>### kaardiin Ergaa dabarsituun kun oddefannoo baayee barbaachisaa yeroo tajaajilaman riifaraaliif buufata fayyaa dhuufu qabudhaa kaanaaf erga mirkana'een booda faayilii tajaajilamatti dabali</value>
+						<value form="image">jr://file/commcare/image/data/notification_info-4dez5j.png</value>
+						<value form="markdown">### kaardiin Ergaa dabarsituun kun oddefannoo baayee barbaachisaa yeroo tajaajilaman riifaraaliif buufata fayyaa dhuufu qabudhaa kaanaaf erga mirkana'een booda faayilii tajaajilamatti dabali</value>
+					</text>
+					<text id="confirmation/confirm-label">
+						<value>Odefannoo kana faayila tajaajilamatti dabaluuf mirkaneesittee</value>
+						<value form="markdown">Odefannoo kana faayila tajaajilamatti dabaluuf mirkaneesittee</value>
+					</text>
+					<text id="confirmation/confirm-confirmed-label">
+						<value>**mirkanaa'e**</value>
+						<value form="markdown">**mirkanaa'e**</value>
+					</text>
+					<text id="confirmation/information-label">
+						<value>Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC Medication Action Card Information:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+						<value form="markdown">Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC Medication Action Card Information:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+					</text>
+					<text id="confirmation/notification_info-label">
+						<value>The Action Card also contains information about the client's TT vaccinations and Folic Acid. This information will be added to the selected client's file if you confirm this Action Card.</value>
+						<value form="markdown">The Action Card also contains information about the client's TT vaccinations and Folic Acid. This information will be added to the selected client's file if you confirm this Action Card.</value>
+					</text>
+					<text id="confirmation/extra_folic_acid_date_eth-label">
+						<value>* Extra Folic Acid Date: <output value="/data/load_to_display/extra_folic_acid_date_eth"/></value>
+						<value form="markdown">* Extra Folic Acid Date: <output value="/data/load_to_display/extra_folic_acid_date_eth"/></value>
+					</text>
+					<text id="confirmation/extra_folic_acid_given-label">
+						<value>* foliiki asidii kenamee: <output value="/data/load_to_display/extra_folic_acid_given"/></value>
+						<value form="markdown">* foliiki asidii kenamee: <output value="/data/load_to_display/extra_folic_acid_given"/></value>
+					</text>
+					<text id="confirmation/tt1_date_eth-label">
+						<value>* Guyyaa talaalli manjalloo 1: <output value="/data/load_to_display/tt1_date_eth"/></value>
+						<value form="markdown">* Guyyaa talaalli manjalloo 1: <output value="/data/load_to_display/tt1_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt2_date_eth-label">
+						<value>* Guyyaa talaalli manjalloo 2: <output value="/data/load_to_display/tt2_date_eth"/></value>
+						<value form="markdown">* Guyyaa talaalli manjalloo 2: <output value="/data/load_to_display/tt2_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt3_date_eth-label">
+						<value>* Guyyaa talaalli manjalloo 3 : <output value="/data/load_to_display/tt3_date_eth"/></value>
+						<value form="markdown">* Guyyaa talaalli manjalloo 3 : <output value="/data/load_to_display/tt3_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt4_date_eth-label">
+						<value>* Guyyaa talaalli manjalloo 4 : <output value="/data/load_to_display/tt4_date_eth"/></value>
+						<value form="markdown">* Guyyaa talaalli manjalloo 4 : <output value="/data/load_to_display/tt4_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt5_date_eth-label">
+						<value>* Guyyaa talaalli manjalloo 5:  <output value="/data/load_to_display/tt5_date_eth"/></value>
+						<value form="markdown">* Guyyaa talaalli manjalloo 5:  <output value="/data/load_to_display/tt5_date_eth"/></value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/title-label">
+						<value>Foliiki asiidi yeroo hordoffi da'umsa dura kename</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc1-label">
+						<value>* Tajaajila da'umsa duraa 1 (<output value="/data/folic_acid/display_only/anc1_date_eth"/>: **<output value="/data/folic_acid/display_only/anc1_folic_acid_given"/> kiniinoota**</value>
+						<value form="markdown">* Tajaajila da'umsa duraa 1 (<output value="/data/folic_acid/display_only/anc1_date_eth"/>: **<output value="/data/folic_acid/display_only/anc1_folic_acid_given"/> kiniinoota**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc2-label">
+						<value>* Tajaajila da'umsa duraa 2 (<output value="/data/folic_acid/display_only/anc2_date_eth"/>): **<output value="/data/folic_acid/display_only/anc2_folic_acid_given"/> kiniinoota**</value>
+						<value form="markdown">* Tajaajila da'umsa duraa 2 (<output value="/data/folic_acid/display_only/anc2_date_eth"/>): **<output value="/data/folic_acid/display_only/anc2_folic_acid_given"/> kiniinoota**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc3-label">
+						<value>* Tajaajila da'umsa duraa 3 (<output value="/data/folic_acid/display_only/anc3_date_eth"/>): **<output value="/data/folic_acid/display_only/anc3_folic_acid_given"/> kiniinoota**</value>
+						<value form="markdown">* Tajaajila da'umsa duraa 3 (<output value="/data/folic_acid/display_only/anc3_date_eth"/>): **<output value="/data/folic_acid/display_only/anc3_folic_acid_given"/> kiniinoota**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/anc4-label">
+						<value>* Tajaajila da'umsa duraa 4 (<output value="/data/folic_acid/display_only/anc4_date_eth"/>): **<output value="/data/folic_acid/display_only/anc4_folic_acid_given"/> kiniinoota**</value>
+						<value form="markdown">* Tajaajila da'umsa duraa 4 (<output value="/data/folic_acid/display_only/anc4_date_eth"/>): **<output value="/data/folic_acid/display_only/anc4_folic_acid_given"/> kiniinoota**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc1-label">
+						<value>* Tajaajila da'umsa booda 1 (<output value="/data/folic_acid/display_only/pnc1_date_eth"/>: **<output value="/data/folic_acid/display_only/pnc1_folic_acid_given"/> kiniinoota**</value>
+						<value form="markdown">* Tajaajila da'umsa booda 1 (<output value="/data/folic_acid/display_only/pnc1_date_eth"/>: **<output value="/data/folic_acid/display_only/pnc1_folic_acid_given"/> kiniinoota**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc2-label">
+						<value>* Tajaajila da'umsa booda 2 (<output value="/data/folic_acid/display_only/pnc2_date_eth"/>: **<output value="/data/folic_acid/display_only/pnc2_folic_acid_given"/> kiniinoota**</value>
+						<value form="markdown">* Tajaajila da'umsa booda 2 (<output value="/data/folic_acid/display_only/pnc2_date_eth"/>: **<output value="/data/folic_acid/display_only/pnc2_folic_acid_given"/> kiniinoota**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc3-label">
+						<value>* Tajaajila da'umsa booda 3 (<output value="/data/folic_acid/display_only/pnc3_date_eth"/>: **<output value="/data/folic_acid/display_only/pnc3_folic_acid_given"/> kiniinoota**</value>
+						<value form="markdown">* Tajaajila da'umsa booda 3 (<output value="/data/folic_acid/display_only/pnc3_date_eth"/>: **<output value="/data/folic_acid/display_only/pnc3_folic_acid_given"/> kiniinoota**</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/pnc4-label">
+						<value>* Tajaajila da'umsa booda 4 (<output value="/data/folic_acid/display_only/pnc4_date_eth"/>: **<output value="/data/folic_acid/display_only/pnc4_folic_acid_given"/> kiniinoota*</value>
+						<value form="markdown">* Tajaajila da'umsa booda 4 (<output value="/data/folic_acid/display_only/pnc4_date_eth"/>: **<output value="/data/folic_acid/display_only/pnc4_folic_acid_given"/> kiniinoota*</value>
+					</text>
+					<text id="folic_acid/anc_visit_summary/none-label">
+						<value>hin jiru</value>
+						<value form="markdown">hin jiru</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/title-label">
+						<value>Foliiki asiidi dabalataan kename</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/repeat/display-label">
+						<value>* <output value="current()/../date_eth"/>: **<output value="current()/../number"/> kiniinoota**</value>
+						<value form="markdown">* <output value="current()/../date_eth"/>: **<output value="current()/../number"/> kiniinoota**</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/none-label">
+						<value>hin jiru</value>
+						<value form="markdown">hin jiru</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/notification_display-label">
+						<value>yaadannoo foliiki asidii dabalataa:
+
+* <output value="/data/folic_acid/load_notification/extra_folic_acid_date_eth"/>: **<output value="/data/folic_acid/load_notification/extra_folic_acid_given"/> tablets**</value>
+						<value form="markdown">yaadannoo foliiki asidii dabalataa:
+
+* <output value="/data/folic_acid/load_notification/extra_folic_acid_date_eth"/>: **<output value="/data/folic_acid/load_notification/extra_folic_acid_given"/> tablets**</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/add_folic_acid-label">
+						<value>Foliiki asidii 'action card' irraa kara faayilaa tajaajilamatti dabalu barbaada?</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/add_folic_acid-yes-label">
+						<value>eeyyeen</value>
+					</text>
+					<text id="folic_acid/extra_folic_acid/add_folic_acid-no-label">
+						<value>miti</value>
+					</text>
+					<text id="tt_vaccinations/tt1/display-label">
+						<value>Talaalli manjalloo 1
+
+yeroo amma: <output value="/data/tt_vaccinations/load_client/tt1_date_eth"/>
+
+yaadannoo: <output value="/data/tt_vaccinations/load_notification/tt1_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-label">
+						<value>Garaagarum guyyaa akishiin kardii waliin tokko waan hin taaneef guyyaa akishiin kaardii irraa jirutti jijjiru barbaaddaa</value>
+					</text>
+					<text id="tt_vaccinations/tt2/display-label">
+						<value>Talaalli manjalloo 2
+
+yeroo amma: <output value="/data/tt_vaccinations/load_client/tt2_date_eth"/>
+
+yaadannoo: <output value="/data/tt_vaccinations/load_notification/tt2_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt3/display-label">
+						<value>Talaalli manjalloo 3
+
+yeroo amma: <output value="/data/tt_vaccinations/load_client/tt3_date_eth"/>
+
+yaadannoo: <output value="/data/tt_vaccinations/load_notification/tt3_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt4/display-label">
+						<value>Talaalli manjalloo 4
+
+yeroo amma: <output value="/data/tt_vaccinations/load_client/tt4_date_eth"/>
+
+yaadannoo: <output value="/data/tt_vaccinations/load_notification/tt4_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt5/display-label">
+						<value>Talaalli manjalloo 5
+
+yeroo amma: <output value="/data/tt_vaccinations/load_client/tt5_date_eth"/>
+
+yaadannoo: <output value="/data/tt_vaccinations/load_notification/tt5_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt5/add_date-no-label">
+						<value>Miti</value>
+					</text>
+					<text id="display_confirmed-label">
+						<value>Ergaan beekisisa kan dabalamu <output value="/data/client_info/client_name"/>'s seenaa dhukkuba yaalama irratti.</value>
+					</text>
+					<text id="display_skipped-label">
+						<value>ergaan beekisisaa  <output value="/data/client_info/client_name"/>'s seenaa dhukkuba yaalama irratti hin dabalamu.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki guutuma guututti guutame unka kan erguuf malattoo magarsaa kan kara bukkee harka mirgaa olii jiru xuqii.</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/load_to_display/tt4_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt4_date_eth"/><setvalue event="xforms-ready" ref="/data/load_to_display/extra_folic_acid_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/extra_folic_acid_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_client_info/local_phone_number" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/local_phone_number"/><setvalue event="xforms-ready" ref="/data/load_to_display/extra_folic_acid_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/extra_folic_acid_given"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt1_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt1_date_eth"/><setvalue event="xforms-ready" ref="/data/folic_acid/load_notification/extra_folic_acid_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/extra_folic_acid_given"/><setvalue event="xforms-ready" ref="/data/notification_client_info/client_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/client_name"/><setvalue event="xforms-ready" ref="/data/load_to_display/tt5_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt5_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_client_info/age_years" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/age_years"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt5_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt5_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_client_info/village_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/village"/><setvalue event="xforms-ready" ref="/data/folic_acid/load_notification/extra_folic_acid_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/extra_folic_acid_date"/><setvalue event="xforms-ready" ref="/data/folic_acid/load_notification/extra_folic_acid_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/extra_folic_acid_date_eth"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt3_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt3_date"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt2_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt2_date"/><setvalue event="xforms-ready" ref="/data/notification_client_info/family_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/family_name"/><setvalue event="xforms-ready" ref="/data/load_to_display/tt1_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt1_date_eth"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt4_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt4_date"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt5_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt5_date"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt4_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt4_date_eth"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt2_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt2_date_eth"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt1_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt1_date"/><setvalue event="xforms-ready" ref="/data/load_to_display/tt3_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt3_date_eth"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt3_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt3_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_client_info/mrn" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/mrn"/><setvalue event="xforms-ready" ref="/data/load_to_display/tt2_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt2_date_eth"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_load_notification_0/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_load_notification_0/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_load_notification_0" nodeset="/data/case_load_notification_0/case/@case_id"/><bind nodeset="/data/case_load_notification_0/case/close" relevant="/data/confirmation/confirm = 'confirmed'"/><setvalue event="xforms-ready" ref="/data/client_info/client_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/case_name"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_client/tt3_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/tt3_date_eth"/><setvalue event="xforms-ready" ref="/data/client_info/dob" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/dob"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_client/tt2_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/tt2_date_eth"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_client/tt4_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/tt4_date_eth"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_client/tt1_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/tt1_date_eth"/><setvalue event="xforms-ready" ref="/data/client_info/mrn" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/mrn"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_client/tt5_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/tt5_date_eth"/><setvalue event="xforms-ready" ref="/data/client_info/family_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/family_name"/><setvalue event="xforms-ready" ref="/data/client_info/village_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/village_name"/><setvalue event="xforms-ready" ref="/data/client_info/local_phone_number" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/local_phone_number"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_load_client_3/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_load_client_3/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_load_client_3" nodeset="/data/case_load_client_3/case/@case_id"/><bind calculate="/data/update_mrn" nodeset="/data/case_load_client_3/case/update/mrn" relevant="count(/data/update_mrn) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt1_date" nodeset="/data/case_load_client_3/case/update/tt1_date" relevant="count(/data/tt_vaccinations/final/tt1_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt1_date_eth" nodeset="/data/case_load_client_3/case/update/tt1_date_eth" relevant="count(/data/tt_vaccinations/final/tt1_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt2_date" nodeset="/data/case_load_client_3/case/update/tt2_date" relevant="count(/data/tt_vaccinations/final/tt2_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt2_date_eth" nodeset="/data/case_load_client_3/case/update/tt2_date_eth" relevant="count(/data/tt_vaccinations/final/tt2_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt3_date" nodeset="/data/case_load_client_3/case/update/tt3_date" relevant="count(/data/tt_vaccinations/final/tt3_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt3_date_eth" nodeset="/data/case_load_client_3/case/update/tt3_date_eth" relevant="count(/data/tt_vaccinations/final/tt3_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt4_date" nodeset="/data/case_load_client_3/case/update/tt4_date" relevant="count(/data/tt_vaccinations/final/tt4_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt4_date_eth" nodeset="/data/case_load_client_3/case/update/tt4_date_eth" relevant="count(/data/tt_vaccinations/final/tt4_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt5_date" nodeset="/data/case_load_client_3/case/update/tt5_date" relevant="count(/data/tt_vaccinations/final/tt5_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt5_date_eth" nodeset="/data/case_load_client_3/case/update/tt5_date_eth" relevant="count(/data/tt_vaccinations/final/tt5_date_eth) &gt; 0"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/anc2_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/anc2_date_eth"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/anc4_folic_acid_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/anc4_folic_acid_given"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/pnc3_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/pnc3_date_eth"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/pnc4_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/pnc4_date_eth"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/anc3_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/anc3_date_eth"/><setvalue event="xforms-ready" ref="/data/folic_acid/load_pregnancy_pp/extra_folic_acids_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/extra_folic_acids_given"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/anc1_folic_acid_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/anc1_folic_acid_given"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/pnc1_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/pnc1_date_eth"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/pnc3_folic_acid_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/pnc3_folic_acid_given"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/pnc1_folic_acid_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/pnc1_folic_acid_given"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/pnc2_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/pnc2_date_eth"/><setvalue event="xforms-ready" ref="/data/folic_acid/load_pregnancy_pp/extra_folic_acid_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/extra_folic_acid_given"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/pnc4_folic_acid_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/pnc4_folic_acid_given"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/anc3_folic_acid_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/anc3_folic_acid_given"/><setvalue event="xforms-ready" ref="/data/folic_acid/load_pregnancy_pp/extra_folic_acid_dates" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/extra_folic_acid_dates"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/pnc2_folic_acid_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/pnc2_folic_acid_given"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/anc1_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/anc1_date_eth"/><setvalue event="xforms-ready" ref="/data/folic_acid/load_pregnancy_pp/extra_folic_acid_dates_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/extra_folic_acid_dates_eth"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/anc4_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/anc4_date_eth"/><setvalue event="xforms-ready" ref="/data/folic_acid/display_only/anc2_folic_acid_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/anc2_folic_acid_given"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_autoload_pregnancy_pp_4/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_autoload_pregnancy_pp_4/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4" nodeset="/data/case_autoload_pregnancy_pp_4/case/@case_id"/><bind calculate="/data/folic_acid/final/extra_folic_acid_dates" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/extra_folic_acid_dates" relevant="count(/data/folic_acid/final/extra_folic_acid_dates) &gt; 0"/><bind calculate="/data/folic_acid/final/extra_folic_acid_dates_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/extra_folic_acid_dates_eth" relevant="count(/data/folic_acid/final/extra_folic_acid_dates_eth) &gt; 0"/><bind calculate="/data/folic_acid/final/blank" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/extra_folic_acid_given" relevant="count(/data/folic_acid/final/blank) &gt; 0"/><bind calculate="/data/folic_acid/final/extra_folic_acids_given" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/extra_folic_acids_given" relevant="count(/data/folic_acid/final/extra_folic_acids_given) &gt; 0"/><bind calculate="/data/update_mrn" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/mrn" relevant="count(/data/update_mrn) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt1_date" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt1_date" relevant="count(/data/tt_vaccinations/final/tt1_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt1_date_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt1_date_eth" relevant="count(/data/tt_vaccinations/final/tt1_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt2_date" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt2_date" relevant="count(/data/tt_vaccinations/final/tt2_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt2_date_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt2_date_eth" relevant="count(/data/tt_vaccinations/final/tt2_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt3_date" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt3_date" relevant="count(/data/tt_vaccinations/final/tt3_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt3_date_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt3_date_eth" relevant="count(/data/tt_vaccinations/final/tt3_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt4_date" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt4_date" relevant="count(/data/tt_vaccinations/final/tt4_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt4_date_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt4_date_eth" relevant="count(/data/tt_vaccinations/final/tt4_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt5_date" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt5_date" relevant="count(/data/tt_vaccinations/final/tt5_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt5_date_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt5_date_eth" relevant="count(/data/tt_vaccinations/final/tt5_date_eth) &gt; 0"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<group ref="/data/client_info"/>
+		<group ref="/data/notification_client_info"/>
+		<group ref="/data/load_to_display"/>
+		<trigger ref="/data/notification_info" appearance="minimal">
+			<label ref="jr:itext('notification_info-label')"/>
+		</trigger>
+		<group ref="/data/confirmation" appearance="field-list">
+			<select ref="/data/confirmation/confirm">
+				<label ref="jr:itext('confirmation/confirm-label')"/>
+				<item>
+					<label ref="jr:itext('confirmation/confirm-confirmed-label')"/>
+					<value>confirmed</value>
+				</item>
+			</select>
+			<trigger ref="/data/confirmation/information" appearance="minimal">
+				<label ref="jr:itext('confirmation/information-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/notification_info" appearance="minimal">
+				<label ref="jr:itext('confirmation/notification_info-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/extra_folic_acid_date_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/extra_folic_acid_date_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/extra_folic_acid_given" appearance="minimal">
+				<label ref="jr:itext('confirmation/extra_folic_acid_given-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/tt1_date_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/tt1_date_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/tt2_date_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/tt2_date_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/tt3_date_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/tt3_date_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/tt4_date_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/tt4_date_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/tt5_date_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/tt5_date_eth-label')"/>
+			</trigger>
+		</group>
+		<group ref="/data/folic_acid">
+			<group ref="/data/folic_acid/load_notification"/>
+			<group ref="/data/folic_acid/load_pregnancy_pp"/>
+			<group ref="/data/folic_acid/modify_old_data"/>
+			<group ref="/data/folic_acid/display_only"/>
+			<group ref="/data/folic_acid/anc_visit_summary" appearance="field-list">
+				<trigger ref="/data/folic_acid/anc_visit_summary/title" appearance="minimal">
+					<label ref="jr:itext('folic_acid/anc_visit_summary/title-label')"/>
+				</trigger>
+				<trigger ref="/data/folic_acid/anc_visit_summary/anc1" appearance="minimal">
+					<label ref="jr:itext('folic_acid/anc_visit_summary/anc1-label')"/>
+				</trigger>
+				<trigger ref="/data/folic_acid/anc_visit_summary/anc2" appearance="minimal">
+					<label ref="jr:itext('folic_acid/anc_visit_summary/anc2-label')"/>
+				</trigger>
+				<trigger ref="/data/folic_acid/anc_visit_summary/anc3" appearance="minimal">
+					<label ref="jr:itext('folic_acid/anc_visit_summary/anc3-label')"/>
+				</trigger>
+				<trigger ref="/data/folic_acid/anc_visit_summary/anc4" appearance="minimal">
+					<label ref="jr:itext('folic_acid/anc_visit_summary/anc4-label')"/>
+				</trigger>
+				<trigger ref="/data/folic_acid/anc_visit_summary/pnc1" appearance="minimal">
+					<label ref="jr:itext('folic_acid/anc_visit_summary/pnc1-label')"/>
+				</trigger>
+				<trigger ref="/data/folic_acid/anc_visit_summary/pnc2" appearance="minimal">
+					<label ref="jr:itext('folic_acid/anc_visit_summary/pnc2-label')"/>
+				</trigger>
+				<trigger ref="/data/folic_acid/anc_visit_summary/pnc3" appearance="minimal">
+					<label ref="jr:itext('folic_acid/anc_visit_summary/pnc3-label')"/>
+				</trigger>
+				<trigger ref="/data/folic_acid/anc_visit_summary/pnc4" appearance="minimal">
+					<label ref="jr:itext('folic_acid/anc_visit_summary/pnc4-label')"/>
+				</trigger>
+				<trigger ref="/data/folic_acid/anc_visit_summary/none" appearance="minimal">
+					<label ref="jr:itext('folic_acid/anc_visit_summary/none-label')"/>
+				</trigger>
+			</group>
+			<group ref="/data/folic_acid/extra_folic_acid" appearance="field-list">
+				<trigger ref="/data/folic_acid/extra_folic_acid/title" appearance="minimal">
+					<label ref="jr:itext('folic_acid/extra_folic_acid/title-label')"/>
+				</trigger>
+				<group>
+					<repeat jr:count="/data/folic_acid/extra_folic_acid/list_length" jr:noAddRemove="true()" nodeset="/data/folic_acid/extra_folic_acid/repeat">
+						<trigger ref="/data/folic_acid/extra_folic_acid/repeat/display" appearance="minimal">
+							<label ref="jr:itext('folic_acid/extra_folic_acid/repeat/display-label')"/>
+						</trigger>
+					</repeat>
+				</group>
+				<trigger ref="/data/folic_acid/extra_folic_acid/none" appearance="minimal">
+					<label ref="jr:itext('folic_acid/extra_folic_acid/none-label')"/>
+				</trigger>
+				<trigger ref="/data/folic_acid/extra_folic_acid/notification_display" appearance="minimal">
+					<label ref="jr:itext('folic_acid/extra_folic_acid/notification_display-label')"/>
+				</trigger>
+				<select1 ref="/data/folic_acid/extra_folic_acid/add_folic_acid">
+					<label ref="jr:itext('folic_acid/extra_folic_acid/add_folic_acid-label')"/>
+					<item>
+						<label ref="jr:itext('folic_acid/extra_folic_acid/add_folic_acid-yes-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('folic_acid/extra_folic_acid/add_folic_acid-no-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/folic_acid/final"/>
+		</group>
+		<group ref="/data/tt_vaccinations">
+			<group ref="/data/tt_vaccinations/load_notification"/>
+			<group ref="/data/tt_vaccinations/load_client"/>
+			<group ref="/data/tt_vaccinations/tt1" appearance="field-list">
+				<trigger ref="/data/tt_vaccinations/tt1/display" appearance="minimal">
+					<label ref="jr:itext('tt_vaccinations/tt1/display-label')"/>
+				</trigger>
+				<select1 ref="/data/tt_vaccinations/tt1/add_date">
+					<label ref="jr:itext('tt_vaccinations/tt1/add_date-label')"/>
+					<item>
+						<label ref="jr:itext('folic_acid/extra_folic_acid/add_folic_acid-yes-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('folic_acid/extra_folic_acid/add_folic_acid-no-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/tt_vaccinations/tt2" appearance="field-list">
+				<trigger ref="/data/tt_vaccinations/tt2/display" appearance="minimal">
+					<label ref="jr:itext('tt_vaccinations/tt2/display-label')"/>
+				</trigger>
+				<select1 ref="/data/tt_vaccinations/tt2/add_date">
+					<label ref="jr:itext('tt_vaccinations/tt1/add_date-label')"/>
+					<item>
+						<label ref="jr:itext('folic_acid/extra_folic_acid/add_folic_acid-yes-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('folic_acid/extra_folic_acid/add_folic_acid-no-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/tt_vaccinations/tt3" appearance="field-list">
+				<trigger ref="/data/tt_vaccinations/tt3/display" appearance="minimal">
+					<label ref="jr:itext('tt_vaccinations/tt3/display-label')"/>
+				</trigger>
+				<select1 ref="/data/tt_vaccinations/tt3/add_date">
+					<label ref="jr:itext('tt_vaccinations/tt1/add_date-label')"/>
+					<item>
+						<label ref="jr:itext('folic_acid/extra_folic_acid/add_folic_acid-yes-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('folic_acid/extra_folic_acid/add_folic_acid-no-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/tt_vaccinations/tt4" appearance="field-list">
+				<trigger ref="/data/tt_vaccinations/tt4/display" appearance="minimal">
+					<label ref="jr:itext('tt_vaccinations/tt4/display-label')"/>
+				</trigger>
+				<select1 ref="/data/tt_vaccinations/tt4/add_date">
+					<label ref="jr:itext('tt_vaccinations/tt1/add_date-label')"/>
+					<item>
+						<label ref="jr:itext('folic_acid/extra_folic_acid/add_folic_acid-yes-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('folic_acid/extra_folic_acid/add_folic_acid-no-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/tt_vaccinations/tt5" appearance="field-list">
+				<trigger ref="/data/tt_vaccinations/tt5/display" appearance="minimal">
+					<label ref="jr:itext('tt_vaccinations/tt5/display-label')"/>
+				</trigger>
+				<select1 ref="/data/tt_vaccinations/tt5/add_date">
+					<label ref="jr:itext('tt_vaccinations/tt1/add_date-label')"/>
+					<item>
+						<label ref="jr:itext('folic_acid/extra_folic_acid/add_folic_acid-yes-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('tt_vaccinations/tt5/add_date-no-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/tt_vaccinations/final"/>
+		</group>
+		<trigger ref="/data/display_confirmed" appearance="minimal">
+			<label ref="jr:itext('display_confirmed-label')"/>
+		</trigger>
+		<trigger ref="/data/display_skipped" appearance="minimal">
+			<label ref="jr:itext('display_skipped-label')"/>
+		</trigger>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

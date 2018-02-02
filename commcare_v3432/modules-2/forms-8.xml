@@ -1,0 +1,375 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>(R2) Long-Term Family Planning Yearly Report</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/71a15a9de42762387387bcfc66b255fabd320120" uiVersion="1" version="3393" name="(R2) Long-Term Family Planning Yearly Report">
+					<instructions/>
+					<still_using_method/>
+					<using_different_method/>
+					<fp_save_to_client>
+						<fp_method/>
+						<fp_location/>
+						<fp_method_start_date/>
+						<fp_method_end_date/>
+						<fp_follow_up_date/>
+						<fp_reporting_date/>
+						<fp_next_visit_date/>
+					</fp_save_to_client>
+					<fp_reporting_display_condition/>
+					<fp_reporting>
+						<client_case_id/>
+						<num_reports/>
+						<reports jr:template="">
+							<repeat_position/>
+							<enforce_repeat_number>
+								<fp_report_date/>
+								<report_name/>
+								<age_years/>
+								<age_range/>
+								<fp_report_date_eth/>
+								<fp_report_week/>
+								<fp_report_month/>
+								<create_case>
+									<create_fp_reporting_case>
+										<case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id="">
+											<create>
+												<case_type/>
+												<case_name/>
+												<owner_id/>
+											</create>
+											<update>
+												<fp_report_date/>
+												<age_years/>
+												<age_range/>
+												<fp_report_date_eth/>
+												<fp_report_week/>
+												<fp_report_month/>
+												<fp_method/>
+												<health_post_id/>
+												<health_post/>
+												<health_center_id/>
+												<health_center/>
+												<test_or_real/>
+												<region_id/>
+												<region/>
+												<zone_id/>
+												<zone/>
+												<woreda_id/>
+												<woreda/>
+												<hp_facility_code/>
+												<hc_facility_code/>
+											</update>
+											<close/>
+											<index>
+												<parent case_type="&quot;client&quot;" relationship="child"/>
+											</index>
+										</case>
+									</create_fp_reporting_case>
+								</create_case>
+							</enforce_repeat_number>
+						</reports>
+						<last_fp_report_date/>
+					</fp_reporting>
+					<next_steps>
+						<still_using_method/>
+						<using_different_method/>
+						<not_using_fp/>
+					</next_steps>
+					<load_fp_info>
+						<fp_method/>
+						<fp_method_start_date/>
+						<fp_method_end_date/>
+						<last_fp_report_date/>
+					</load_fp_info>
+					<load_client_info>
+						<client_case_id/>
+						<client_name/>
+						<mrn/>
+						<client_number/>
+						<gender/>
+						<dob/>
+					</load_client_info>
+					<load_family_info>
+						<family_name/>
+						<family_number/>
+						<house_gps/>
+						<village_name/>
+					</load_family_info>
+					<locations>
+						<health_post_id/>
+						<health_post/>
+						<health_center_id/>
+						<health_center/>
+						<test_or_real/>
+						<region_id/>
+						<region/>
+						<zone_id/>
+						<zone/>
+						<woreda_id/>
+						<woreda/>
+						<hp_facility_code/>
+						<hc_facility_code/>
+					</locations>
+				<case_load_client_1><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><update><fp_follow_up_date/><fp_location/><fp_method/><fp_method_end_date/><fp_method_start_date/><fp_next_visit_date/><fp_reporting_date/><last_fp_report_date/></update></case></case_load_client_1><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="casedb" src="jr://instance/casedb"/><instance id="locations" src="jr://fixture/locations"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<bind nodeset="/data/instructions"/>
+			<bind nodeset="/data/still_using_method" required="true()"/>
+			<bind nodeset="/data/using_different_method" relevant="/data/still_using_method = &quot;no&quot;" required="true()"/>
+			<bind nodeset="/data/fp_save_to_client"/>
+			<bind nodeset="/data/fp_save_to_client/fp_method" relevant="/data/using_different_method = &quot;no&quot;" calculate="&quot;&quot;"/>
+			<bind nodeset="/data/fp_save_to_client/fp_location" relevant="/data/using_different_method = &quot;no&quot;" calculate="&quot;&quot;"/>
+			<bind nodeset="/data/fp_save_to_client/fp_method_start_date" relevant="/data/using_different_method = &quot;no&quot;" calculate="&quot;&quot;"/>
+			<bind nodeset="/data/fp_save_to_client/fp_method_end_date" relevant="/data/using_different_method = &quot;no&quot;" calculate="&quot;&quot;"/>
+			<bind nodeset="/data/fp_save_to_client/fp_follow_up_date" relevant="/data/using_different_method = &quot;no&quot;" calculate="&quot;&quot;"/>
+			<bind nodeset="/data/fp_save_to_client/fp_reporting_date" relevant="/data/using_different_method = &quot;no&quot; or /data/still_using_method = &quot;yes&quot;" calculate="if(/data/using_different_method = &quot;no&quot;, &quot;&quot;, date(today() + 365.25))"/>
+			<bind nodeset="/data/fp_save_to_client/fp_next_visit_date" calculate="if(/data/using_different_method = &quot;no&quot;, &quot;&quot;, if(min(coalesce(date(/data/fp_save_to_client/fp_method_end_date), 99999), coalesce(date(/data/fp_save_to_client/fp_reporting_date), 99999), coalesce(date(/data/fp_save_to_client/fp_follow_up_date), 99999)) = 99999, 99999, date(min(coalesce(date(/data/fp_save_to_client/fp_method_end_date), 99999), coalesce(date(/data/fp_save_to_client/fp_reporting_date), 99999), coalesce(date(/data/fp_save_to_client/fp_follow_up_date), 99999)))))"/>
+			<bind nodeset="/data/fp_reporting_display_condition" calculate="/data/still_using_method = &quot;yes&quot;"/>
+			<bind nodeset="/data/fp_reporting" relevant="/data/fp_reporting_display_condition"/>
+			<bind nodeset="/data/fp_reporting/client_case_id" calculate="instance('commcaresession')/session/data/case_id_load_client_1"/>
+			<bind nodeset="/data/fp_reporting/num_reports" calculate="int((today() - date(/data/load_fp_info/last_fp_report_date)) div 365.25)"/>
+			<bind nodeset="/data/fp_reporting/reports"/>
+			<bind nodeset="/data/fp_reporting/reports/repeat_position" calculate="if(/data/fp_reporting_display_condition, position(current()/..), &quot;&quot;)"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number" relevant="current()/../repeat_position + 1 &lt;= /data/fp_reporting/num_reports"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/fp_report_date" calculate="date(date(/data/load_fp_info/last_fp_report_date) + (current()/../../repeat_position + 1) * 365.25)"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/report_name" calculate="concat(/data/load_client_info/client_name, &quot; - &quot;, current()/../fp_report_date)"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/age_years" calculate="int((date(current()/../fp_report_date) - date(/data/load_client_info/dob)) div 365.25)"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/age_range" calculate="cond(current()/../age_years &lt; 15, &quot;&lt; 15&quot;, current()/../age_years &lt; 20, &quot;15-19&quot;, current()/../age_years &lt; 25, &quot;20-24&quot;, current()/../age_years &lt; 50, &quot;25-49&quot;, &quot;&gt; 49&quot;)"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/fp_report_date_eth" relevant="current()/../fp_report_date != &quot;&quot;" calculate="format-date-for-calendar(date(current()/../fp_report_date), 'ethiopian', '%Y-%m-%d')"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/fp_report_week" relevant="current()/../fp_report_date != &quot;&quot;" calculate="format-date-for-calendar(date(current()/../fp_report_date) - (format-date(date(current()/../fp_report_date), '%w') + 2) mod 7, 'ethiopian', '%Y-%m-%d')"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/fp_report_month" relevant="current()/../fp_report_date != &quot;&quot;" calculate="concat(substr(current()/../fp_report_date_eth, 0, 4) - if(substr(current()/../fp_report_date_eth, 5, 7) = 1 and substr(current()/../fp_report_date_eth, 8, 10) &lt; 21, 1, 0), if(if(substr(current()/../fp_report_date_eth, 8, 10) &gt;= 21, substr(current()/../fp_report_date_eth, 5, 7), if(substr(current()/../fp_report_date_eth, 5, 7) = 1, 12, substr(current()/../fp_report_date_eth, 5, 7) - 1)) &lt; 10, '-0', '-'), int(if(substr(current()/../fp_report_date_eth, 8, 10) &gt;= 21, substr(current()/../fp_report_date_eth, 5, 7), if(substr(current()/../fp_report_date_eth, 5, 7) = 1, 12, substr(current()/../fp_report_date_eth, 5, 7) - 1))), '-21')"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/@case_id" calculate="uuid()"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/create/case_type" calculate="&quot;fp_reporting&quot;"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/create/case_name" calculate="current()/../../../../../report_name"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/create/owner_id" calculate="/data/locations/health_post_id"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/fp_report_date" calculate="current()/../../../../../fp_report_date" relevant="current()/../../../../../fp_report_date != &quot;&quot;"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/age_years" calculate="current()/../../../../../age_years" relevant="current()/../../../../../age_years != &quot;&quot;"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/age_range" calculate="current()/../../../../../age_range" relevant="current()/../../../../../age_range != &quot;&quot;"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/fp_report_date_eth" calculate="current()/../../../../../fp_report_date_eth" relevant="current()/../../../../../fp_report_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/fp_report_week" calculate="current()/../../../../../fp_report_week" relevant="current()/../../../../../fp_report_week != &quot;&quot;"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/fp_report_month" calculate="current()/../../../../../fp_report_month" relevant="current()/../../../../../fp_report_month != &quot;&quot;"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/fp_method" calculate="/data/load_fp_info/fp_method" relevant="/data/load_fp_info/fp_method != &quot;&quot;"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/health_post_id" calculate="/data/locations/health_post_id"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/health_post" calculate="/data/locations/health_post"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/health_center_id" calculate="/data/locations/health_center_id"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/health_center" calculate="/data/locations/health_center"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/test_or_real" calculate="/data/locations/test_or_real"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/region_id" calculate="/data/locations/region_id"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/region" calculate="/data/locations/region"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/zone_id" calculate="/data/locations/zone_id"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/zone" calculate="/data/locations/zone"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/woreda_id" calculate="/data/locations/woreda_id"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/woreda" calculate="/data/locations/woreda"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/hp_facility_code" calculate="/data/locations/hp_facility_code"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/update/hc_facility_code" calculate="/data/locations/hc_facility_code"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/close"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/index/parent" calculate="/data/load_client_info/client_case_id"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/@date_modified" calculate="/data/meta/timeEnd" type="xsd:dateTime"/>
+			<bind nodeset="/data/fp_reporting/reports/enforce_repeat_number/create_case/create_fp_reporting_case/case/@user_id" calculate="instance('commcaresession')/session/context/userid"/>
+			<bind nodeset="/data/fp_reporting/last_fp_report_date" relevant="/data/fp_reporting/num_reports &gt; 0" calculate="/data/fp_reporting/reports[/data/fp_reporting/num_reports]/enforce_repeat_number/fp_report_date"/>
+			<bind nodeset="/data/next_steps"/>
+			<bind nodeset="/data/next_steps/still_using_method" relevant="/data/still_using_method = &quot;yes&quot;"/>
+			<bind nodeset="/data/next_steps/using_different_method" relevant="/data/using_different_method = &quot;yes&quot;"/>
+			<bind nodeset="/data/next_steps/not_using_fp" relevant="/data/using_different_method = &quot;no&quot;"/>
+			<bind nodeset="/data/load_fp_info"/>
+			<bind nodeset="/data/load_fp_info/fp_method"/>
+			<bind nodeset="/data/load_fp_info/fp_method_start_date"/>
+			<bind nodeset="/data/load_fp_info/fp_method_end_date"/>
+			<bind nodeset="/data/load_fp_info/last_fp_report_date"/>
+			<bind nodeset="/data/load_client_info"/>
+			<bind nodeset="/data/load_client_info/client_case_id" calculate="instance('commcaresession')/session/data/case_id_load_client_1"/>
+			<bind nodeset="/data/load_client_info/client_name"/>
+			<bind nodeset="/data/load_client_info/mrn"/>
+			<bind nodeset="/data/load_client_info/client_number"/>
+			<bind nodeset="/data/load_client_info/gender"/>
+			<bind nodeset="/data/load_client_info/dob"/>
+			<bind nodeset="/data/load_family_info"/>
+			<bind nodeset="/data/load_family_info/family_name"/>
+			<bind nodeset="/data/load_family_info/family_number"/>
+			<bind nodeset="/data/load_family_info/house_gps"/>
+			<bind nodeset="/data/load_family_info/village_name"/>
+			<bind nodeset="/data/locations"/>
+			<bind nodeset="/data/locations/health_post_id" calculate="instance('commcaresession')/session/user/data/commcare_location_id"/>
+			<bind nodeset="/data/locations/health_post" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/name"/>
+			<bind nodeset="/data/locations/health_center_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/@health-center_id"/>
+			<bind nodeset="/data/locations/health_center" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/name"/>
+			<bind nodeset="/data/locations/test_or_real" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/region_id" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/@region_id"/>
+			<bind nodeset="/data/locations/region" calculate="instance('locations')/locations/location[@id = /data/locations/region_id]/name"/>
+			<bind nodeset="/data/locations/zone_id" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/@zone_id"/>
+			<bind nodeset="/data/locations/zone" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/name"/>
+			<bind nodeset="/data/locations/woreda_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/@woreda_id"/>
+			<bind nodeset="/data/locations/woreda" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/name"/>
+			<bind nodeset="/data/locations/hp_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/hc_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="instructions-label">
+						<value>This form is used once a year for HMIS reporting purposes only.  The purpose is to verify that the woman is still using her long-term family-planning method and protected from pregnancy.  You do not need to have an actual Family Planning visit with the woman to complete this form.</value>
+					</text>
+					<text id="still_using_method-label">
+						<value>Is
+<output value="/data/load_client_info/client_name"/>  still using <output value="/data/load_fp_info/fp_method"/> ?</value>
+					</text>
+					<text id="still_using_method-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="still_using_method-no-label">
+						<value>No</value>
+					</text>
+					<text id="using_different_method-label">
+						<value>Is
+<output value="/data/load_client_info/client_name"/> now using a different method of family planning?</value>
+					</text>
+					<text id="next_steps/still_using_method-label">
+						<value>Great!  This client will be tallied for your HMIS Family Planning indicators.</value>
+					</text>
+					<text id="next_steps/using_different_method-label">
+						<value>Great!  Please use the Update Client Information form to indicate that she is using this method.</value>
+					</text>
+					<text id="next_steps/not_using_fp-label">
+						<value>Please plan to have a Family Planning Visit with (client) to educate her about all of the Family Planning options and help her make a choice that will work for her.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="instructions-label">
+						<value>This form is used once a year for HMIS reporting purposes only.  The purpose is to verify that the woman is still using her long-term family-planning method and protected from pregnancy.  You do not need to have an actual Family Planning visit with the woman to complete this form.</value>
+					</text>
+					<text id="still_using_method-label">
+						<value>Is
+<output value="/data/load_client_info/client_name"/>  still using <output value="/data/load_fp_info/fp_method"/> ?</value>
+					</text>
+					<text id="still_using_method-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="still_using_method-no-label">
+						<value>No</value>
+					</text>
+					<text id="using_different_method-label">
+						<value>Is
+<output value="/data/load_client_info/client_name"/> now using a different method of family planning?</value>
+					</text>
+					<text id="next_steps/still_using_method-label">
+						<value>Great!  This client will be tallied for your HMIS Family Planning indicators.</value>
+					</text>
+					<text id="next_steps/using_different_method-label">
+						<value>Great!  Please use the Update Client Information form to indicate that she is using this method.</value>
+					</text>
+					<text id="next_steps/not_using_fp-label">
+						<value>Please plan to have a Family Planning Visit with (client) to educate her about all of the Family Planning options and help her make a choice that will work for her.</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="instructions-label">
+						<value>This form is used once a year for HMIS reporting purposes only.  The purpose is to verify that the woman is still using her long-term family-planning method and protected from pregnancy.  You do not need to have an actual Family Planning visit with the woman to complete this form.</value>
+					</text>
+					<text id="still_using_method-label">
+						<value>Is
+<output value="/data/load_client_info/client_name"/>  still using <output value="/data/load_fp_info/fp_method"/> ?</value>
+					</text>
+					<text id="still_using_method-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="still_using_method-no-label">
+						<value>No</value>
+					</text>
+					<text id="using_different_method-label">
+						<value>Is
+<output value="/data/load_client_info/client_name"/> now using a different method of family planning?</value>
+					</text>
+					<text id="next_steps/still_using_method-label">
+						<value>Great!  This client will be tallied for your HMIS Family Planning indicators.</value>
+					</text>
+					<text id="next_steps/using_different_method-label">
+						<value>Great!  Please use the Update Client Information form to indicate that she is using this method.</value>
+					</text>
+					<text id="next_steps/not_using_fp-label">
+						<value>Please plan to have a Family Planning Visit with (client) to educate her about all of the Family Planning options and help her make a choice that will work for her.</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="instructions-label">
+						<value>This form is used once a year for HMIS reporting purposes only.  The purpose is to verify that the woman is still using her long-term family-planning method and protected from pregnancy.  You do not need to have an actual Family Planning visit with the woman to complete this form.</value>
+					</text>
+					<text id="still_using_method-label">
+						<value>Is
+<output value="/data/load_client_info/client_name"/>  still using <output value="/data/load_fp_info/fp_method"/> ?</value>
+					</text>
+					<text id="still_using_method-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="still_using_method-no-label">
+						<value>No</value>
+					</text>
+					<text id="using_different_method-label">
+						<value>Is
+<output value="/data/load_client_info/client_name"/> now using a different method of family planning?</value>
+					</text>
+					<text id="next_steps/still_using_method-label">
+						<value>Great!  This client will be tallied for your HMIS Family Planning indicators.</value>
+					</text>
+					<text id="next_steps/using_different_method-label">
+						<value>Great!  Please use the Update Client Information form to indicate that she is using this method.</value>
+					</text>
+					<text id="next_steps/not_using_fp-label">
+						<value>Please plan to have a Family Planning Visit with (client) to educate her about all of the Family Planning options and help her make a choice that will work for her.</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/load_client_info/client_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/case_name"/><setvalue event="xforms-ready" ref="/data/load_fp_info/last_fp_report_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/last_fp_report_date"/><setvalue event="xforms-ready" ref="/data/load_client_info/dob" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/dob"/><setvalue event="xforms-ready" ref="/data/load_client_info/gender" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/gender"/><setvalue event="xforms-ready" ref="/data/load_client_info/client_number" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/client_number"/><setvalue event="xforms-ready" ref="/data/load_fp_info/fp_method" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/fp_method"/><setvalue event="xforms-ready" ref="/data/load_client_info/mrn" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/mrn"/><setvalue event="xforms-ready" ref="/data/load_fp_info/fp_method_start_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/fp_method_start_date"/><setvalue event="xforms-ready" ref="/data/load_fp_info/fp_method_end_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_1]/fp_method_end_date"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_load_client_1/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_load_client_1/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_load_client_1" nodeset="/data/case_load_client_1/case/@case_id"/><bind calculate="/data/fp_save_to_client/fp_follow_up_date" nodeset="/data/case_load_client_1/case/update/fp_follow_up_date" relevant="count(/data/fp_save_to_client/fp_follow_up_date) &gt; 0"/><bind calculate="/data/fp_save_to_client/fp_location" nodeset="/data/case_load_client_1/case/update/fp_location" relevant="count(/data/fp_save_to_client/fp_location) &gt; 0"/><bind calculate="/data/fp_save_to_client/fp_method" nodeset="/data/case_load_client_1/case/update/fp_method" relevant="count(/data/fp_save_to_client/fp_method) &gt; 0"/><bind calculate="/data/fp_save_to_client/fp_method_end_date" nodeset="/data/case_load_client_1/case/update/fp_method_end_date" relevant="count(/data/fp_save_to_client/fp_method_end_date) &gt; 0"/><bind calculate="/data/fp_save_to_client/fp_method_start_date" nodeset="/data/case_load_client_1/case/update/fp_method_start_date" relevant="count(/data/fp_save_to_client/fp_method_start_date) &gt; 0"/><bind calculate="/data/fp_save_to_client/fp_next_visit_date" nodeset="/data/case_load_client_1/case/update/fp_next_visit_date" relevant="count(/data/fp_save_to_client/fp_next_visit_date) &gt; 0"/><bind calculate="/data/fp_save_to_client/fp_reporting_date" nodeset="/data/case_load_client_1/case/update/fp_reporting_date" relevant="count(/data/fp_save_to_client/fp_reporting_date) &gt; 0"/><bind calculate="/data/fp_reporting/last_fp_report_date" nodeset="/data/case_load_client_1/case/update/last_fp_report_date" relevant="count(/data/fp_reporting/last_fp_report_date) &gt; 0"/><setvalue event="xforms-ready" ref="/data/load_family_info/house_gps" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_family_3]/house_gps"/><setvalue event="xforms-ready" ref="/data/load_family_info/family_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_family_3]/case_name"/><setvalue event="xforms-ready" ref="/data/load_family_info/village_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_family_3]/village_name"/><setvalue event="xforms-ready" ref="/data/load_family_info/family_number" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_family_3]/family_number"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<trigger ref="/data/instructions" appearance="minimal">
+			<label ref="jr:itext('instructions-label')"/>
+		</trigger>
+		<select1 ref="/data/still_using_method">
+			<label ref="jr:itext('still_using_method-label')"/>
+			<item>
+				<label ref="jr:itext('still_using_method-yes-label')"/>
+				<value>yes</value>
+			</item>
+			<item>
+				<label ref="jr:itext('still_using_method-no-label')"/>
+				<value>no</value>
+			</item>
+		</select1>
+		<select1 ref="/data/using_different_method">
+			<label ref="jr:itext('using_different_method-label')"/>
+			<item>
+				<label ref="jr:itext('still_using_method-yes-label')"/>
+				<value>yes</value>
+			</item>
+			<item>
+				<label ref="jr:itext('still_using_method-no-label')"/>
+				<value>no</value>
+			</item>
+		</select1>
+		<group ref="/data/fp_save_to_client"/>
+		<group ref="/data/fp_reporting">
+			<group>
+				<repeat jr:count="/data/fp_reporting/num_reports" jr:noAddRemove="true()" nodeset="/data/fp_reporting/reports">
+					<group ref="/data/fp_reporting/reports/enforce_repeat_number">
+						<group ref="/data/fp_reporting/reports/enforce_repeat_number/create_case"/>
+					</group>
+				</repeat>
+			</group>
+		</group>
+		<group ref="/data/next_steps">
+			<trigger ref="/data/next_steps/still_using_method" appearance="minimal">
+				<label ref="jr:itext('next_steps/still_using_method-label')"/>
+			</trigger>
+			<trigger ref="/data/next_steps/using_different_method" appearance="minimal">
+				<label ref="jr:itext('next_steps/using_different_method-label')"/>
+			</trigger>
+			<trigger ref="/data/next_steps/not_using_fp" appearance="minimal">
+				<label ref="jr:itext('next_steps/not_using_fp-label')"/>
+			</trigger>
+		</group>
+		<group ref="/data/load_fp_info"/>
+		<group ref="/data/load_client_info"/>
+		<group ref="/data/load_family_info"/>
+		<group ref="/data/locations"/>
+	</h:body>
+</h:html>

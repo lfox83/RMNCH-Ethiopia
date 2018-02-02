@@ -1,0 +1,664 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum" vellum:ignore="richText">
+	<h:head>
+		<h:title>Approve Outcome Action Card</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/a0248549ed912f9421cbbf31a60644b1f883c757" uiVersion="1" version="3432" name="Approve Outcome Action Card">
+					<notification_case_id/>
+					<client_name/>
+					<notification_info/>
+					<load_for_display>
+						<edd_eth/>
+						<outcome_time/>
+						<outcome_gestational_age/>
+						<num_babies/>
+						<num_still_birth/>
+						<num_live_birth/>
+						<live_births_alive/>
+						<live_births_weight/>
+						<live_births_mrn/>
+						<outcome_date_eth/>
+						<scheduled_date_pnc1_eth/>
+					</load_for_display>
+					<display_warning>
+						<due_for_pnc/>
+						<warning/>
+					</display_warning>
+					<confirmation>
+						<confirm/>
+						<information/>
+						<notification_info/>
+						<outcome_date_eth/>
+						<outcome_gestational_age/>
+						<edd_eth/>
+						<scheduled_date_pnc1_eth/>
+						<num_babies/>
+						<num_still_birth/>
+						<num_live_birth/>
+						<live_births_alive/>
+						<live_births_weight/>
+						<live_births_mrn/>
+					</confirmation>
+					<display_confirmed/>
+					<display_skipped/>
+					<pregnancy_pp_case>
+						<next_visit_num_hc/>
+						<next_visit_num_hp/>
+						<next_visit_date_hc/>
+						<next_visit_date_hc_eth/>
+						<next_visit_location_hc/>
+						<next_visit_date_hp/>
+						<next_visit_date_hp_eth/>
+						<next_visit_location_hp/>
+						<next_visit_num/>
+						<newborn_cases_created/>
+						<edd/>
+					</pregnancy_pp_case>
+					<notification_case>
+						<basic_info>
+							<mrn/>
+						</basic_info>
+						<pregnancy_outcome_details>
+							<edd/>
+							<edd_eth/>
+							<outcome_date/>
+							<outcome_time/>
+							<outcome_location/>
+							<outcome_maternal/>
+							<outcome_gestational_age/>
+							<spontaneous_abortion/>
+							<num_babies/>
+							<num_still_birth/>
+							<num_live_birth/>
+							<live_births_alive/>
+							<live_births_death_date/>
+							<live_births_death_location/>
+							<live_births_newborn_name/>
+							<live_births_apgar_score/>
+							<live_births_gender/>
+							<live_births_bcg_done/>
+							<live_births_opv0_done/>
+							<live_births_vitamin_k_done/>
+							<live_births_weight/>
+							<live_births_mrn/>
+							<soft_close/>
+							<close_client/>
+							<close_reason/>
+							<death_date/>
+							<death_maternal/>
+							<death_location/>
+							<outcome_date_eth/>
+							<outcome_report_month/>
+							<outcome_report_week/>
+							<death_date_eth/>
+							<death_report_month/>
+							<death_report_week/>
+							<scheduled_date_pnc1/>
+							<scheduled_date_pnc1_eth/>
+							<scheduled_date_anc2_stop/>
+							<scheduled_date_anc3_stop/>
+							<scheduled_date_anc4_stop/>
+							<scheduled_date_pnc_final/>
+							<scheduled_date_pnc_final_eth/>
+							<location_pnc_final/>
+							<edd_stop/>
+						</pregnancy_outcome_details>
+						<hiv_details>
+							<hiv_tested/>
+							<hiv_positive/>
+							<hiv_treatment_initiated/>
+						</hiv_details>
+						<scheduling>
+							<load_notification>
+								<next_visit_num_hc/>
+								<next_visit_date_hc/>
+								<next_visit_date_hc_eth/>
+								<next_visit_location_hc/>
+							</load_notification>
+							<save_hp>
+								<next_visit_num_hp/>
+								<next_visit_date_hp/>
+								<next_visit_date_hp_eth/>
+								<next_visit_location_hp/>
+							</save_hp>
+							<blank_hc>
+								<next_visit_num_hc/>
+								<next_visit_date_hc/>
+								<next_visit_date_hc_eth/>
+								<next_visit_location_hc/>
+							</blank_hc>
+						</scheduling>
+					</notification_case>
+					<end_of_form/>
+				<case_load_notification_0><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><close/></case></case_load_notification_0><case_autoload_client_1><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><update><close_reason/><death_date/><death_date_eth/><death_location/><death_maternal/><death_report_month/><death_report_week/><hiv_positive/><hiv_tested/><hiv_treatment_initiated/><mrn/><ppp_next_visit_date_hc/><ppp_next_visit_date_hc_eth/><ppp_next_visit_date_hp/><ppp_next_visit_date_hp_eth/><ppp_next_visit_location_hc/><ppp_next_visit_location_hp/><ppp_next_visit_num_hc/><ppp_next_visit_num_hp/><soft_close/></update><close/></case></case_autoload_client_1><case_autoload_pregnancy_pp_2><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><update><edd/><edd_eth/><edd_stop/><hiv_positive/><hiv_tested/><hiv_treatment_initiated/><live_births_alive/><live_births_apgar_score/><live_births_bcg_done/><live_births_death_date/><live_births_death_location/><live_births_gender/><live_births_mrn/><live_births_newborn_name/><live_births_opv0_done/><live_births_vitamin_k_done/><live_births_weight/><location_pnc_final/><mrn/><next_visit_date_hc/><next_visit_date_hc_eth/><next_visit_date_hp/><next_visit_date_hp_eth/><next_visit_location_hc/><next_visit_location_hp/><next_visit_num_hc/><next_visit_num_hp/><num_babies/><num_live_birth/><num_still_birth/><outcome_date/><outcome_date_eth/><outcome_gestational_age/><outcome_location/><outcome_maternal/><outcome_report_month/><outcome_report_week/><outcome_time/><scheduled_date_anc2_stop/><scheduled_date_anc3_stop/><scheduled_date_anc4_stop/><scheduled_date_pnc1/><scheduled_date_pnc1_eth/><scheduled_date_pnc_final/><scheduled_date_pnc_final_eth/><spontaneous_abortion/></update><close/></case></case_autoload_pregnancy_pp_2><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance>
+			<instance src="jr://instance/casedb" id="casedb"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<bind nodeset="/data/notification_case_id" calculate="instance('commcaresession')/session/data/case_id_load_notification_0"/>
+			<bind nodeset="/data/client_name"/>
+			<bind nodeset="/data/notification_info"/>
+			<bind nodeset="/data/load_for_display"/>
+			<bind nodeset="/data/load_for_display/edd_eth" relevant="/data/pregnancy_pp_case/edd = &quot;&quot;"/>
+			<bind nodeset="/data/load_for_display/outcome_time"/>
+			<bind nodeset="/data/load_for_display/outcome_gestational_age"/>
+			<bind nodeset="/data/load_for_display/num_babies" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/num_babies != &quot;&quot;"/>
+			<bind nodeset="/data/load_for_display/num_still_birth" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/num_still_birth != &quot;&quot;"/>
+			<bind nodeset="/data/load_for_display/num_live_birth" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/num_live_birth != &quot;&quot;"/>
+			<bind nodeset="/data/load_for_display/live_births_alive" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_alive != &quot;&quot;"/>
+			<bind nodeset="/data/load_for_display/live_births_weight" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_weight != &quot;&quot;"/>
+			<bind nodeset="/data/load_for_display/live_births_mrn" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_mrn != &quot;&quot;"/>
+			<bind nodeset="/data/load_for_display/outcome_date_eth"/>
+			<bind nodeset="/data/load_for_display/scheduled_date_pnc1_eth"/>
+			<bind nodeset="/data/display_warning" relevant="/data/pregnancy_pp_case/next_visit_num &gt; 5"/>
+			<bind nodeset="/data/display_warning/due_for_pnc"/>
+			<bind nodeset="/data/display_warning/warning"/>
+			<bind nodeset="/data/confirmation"/>
+			<bind nodeset="/data/confirmation/confirm"/>
+			<bind nodeset="/data/confirmation/information"/>
+			<bind nodeset="/data/confirmation/notification_info"/>
+			<bind nodeset="/data/confirmation/outcome_date_eth" relevant="/data/load_for_display/outcome_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/outcome_gestational_age" relevant="/data/load_for_display/outcome_gestational_age != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/edd_eth" relevant="/data/load_for_display/edd_eth != ''"/>
+			<bind nodeset="/data/confirmation/scheduled_date_pnc1_eth" relevant="/data/load_for_display/scheduled_date_pnc1_eth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/num_babies" relevant="/data/load_for_display/num_babies != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/num_still_birth" relevant="/data/load_for_display/num_still_birth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/num_live_birth" relevant="/data/load_for_display/num_live_birth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/live_births_alive" relevant="/data/load_for_display/live_births_alive != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/live_births_weight" relevant="/data/load_for_display/live_births_weight != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/live_births_mrn" relevant="/data/load_for_display/live_births_mrn != &quot;&quot;"/>
+			<bind nodeset="/data/display_confirmed" relevant="/data/confirmation/confirm = &quot;confirmed&quot;"/>
+			<bind nodeset="/data/display_skipped" relevant="/data/confirmation/confirm = &quot;&quot;"/>
+			<bind nodeset="/data/pregnancy_pp_case"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_num_hc"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_num_hp"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_date_hc"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_date_hc_eth"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_location_hc"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_date_hp"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_date_hp_eth"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_location_hp"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_num" calculate="max(/data/pregnancy_pp_case/next_visit_num_hc, /data/pregnancy_pp_case/next_visit_num_hp)"/>
+			<bind nodeset="/data/pregnancy_pp_case/newborn_cases_created"/>
+			<bind nodeset="/data/pregnancy_pp_case/edd"/>
+			<bind nodeset="/data/notification_case" relevant="/data/confirmation/confirm = &quot;confirmed&quot;"/>
+			<bind nodeset="/data/notification_case/basic_info"/>
+			<bind nodeset="/data/notification_case/basic_info/mrn"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/edd" relevant="/data/pregnancy_pp_case/edd = &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/edd_eth" relevant="/data/pregnancy_pp_case/edd = &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/outcome_date"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/outcome_time"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/outcome_location" relevant="instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/outcome_maternal != &quot;unknown&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/outcome_maternal" relevant="instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/outcome_maternal != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/outcome_gestational_age"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/spontaneous_abortion" relevant="instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/spontaneous_abortion != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/num_babies" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/num_babies = &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/num_still_birth" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/num_still_birth != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/num_live_birth" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/num_live_birth != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/live_births_alive" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_alive != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/live_births_death_date" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_death_date != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/live_births_death_location" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_death_location != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/live_births_newborn_name" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_newborn_name != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/live_births_apgar_score" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_apgar_score != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/live_births_gender" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_gender != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/live_births_bcg_done" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_bcg_done != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/live_births_opv0_done" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_opv0_done != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/live_births_vitamin_k_done" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_vitamin_k_done != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/live_births_weight" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_weight != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/live_births_mrn" relevant="/data/pregnancy_pp_case/newborn_cases_created != &quot;yes&quot; and instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/live_births_mrn != &quot;&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/soft_close" relevant="/data/notification_case/pregnancy_outcome_details/outcome_maternal = &quot;dead&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/close_client" relevant="/data/notification_case/pregnancy_outcome_details/outcome_maternal = &quot;dead&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/close_reason" relevant="/data/notification_case/pregnancy_outcome_details/outcome_maternal = &quot;dead&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/death_date" relevant="/data/notification_case/pregnancy_outcome_details/outcome_maternal = &quot;dead&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/death_maternal" relevant="/data/notification_case/pregnancy_outcome_details/outcome_maternal = &quot;dead&quot;" calculate="&quot;yes&quot;"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/death_location"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/outcome_date_eth"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/outcome_report_month"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/outcome_report_week"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/death_date_eth"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/death_report_month"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/death_report_week"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc1"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc1_eth"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/scheduled_date_anc2_stop"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/scheduled_date_anc3_stop"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/scheduled_date_anc4_stop"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc_final"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc_final_eth"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/location_pnc_final"/>
+			<bind nodeset="/data/notification_case/pregnancy_outcome_details/edd_stop"/>
+			<bind nodeset="/data/notification_case/hiv_details"/>
+			<bind nodeset="/data/notification_case/hiv_details/hiv_tested" relevant="instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/hiv_tested = &quot;yes&quot;"/>
+			<bind nodeset="/data/notification_case/hiv_details/hiv_positive" relevant="instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/hiv_positive = &quot;yes&quot; or instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/hiv_positive = &quot;no&quot;"/>
+			<bind nodeset="/data/notification_case/hiv_details/hiv_treatment_initiated" relevant="instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/hiv_treatment_initiated = &quot;yes&quot; or instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/hiv_treatment_initiated = &quot;no&quot;"/>
+			<bind nodeset="/data/notification_case/scheduling" relevant="/data/pregnancy_pp_case/next_visit_num_hc &lt; 6"/>
+			<bind nodeset="/data/notification_case/scheduling/load_notification"/>
+			<bind nodeset="/data/notification_case/scheduling/load_notification/next_visit_num_hc"/>
+			<bind nodeset="/data/notification_case/scheduling/load_notification/next_visit_date_hc"/>
+			<bind nodeset="/data/notification_case/scheduling/load_notification/next_visit_date_hc_eth"/>
+			<bind nodeset="/data/notification_case/scheduling/load_notification/next_visit_location_hc"/>
+			<bind nodeset="/data/notification_case/scheduling/save_hp"/>
+			<bind nodeset="/data/notification_case/scheduling/save_hp/next_visit_num_hp" calculate="max(/data/pregnancy_pp_case/next_visit_num, /data/notification_case/scheduling/load_notification/next_visit_num_hc)"/>
+			<bind nodeset="/data/notification_case/scheduling/save_hp/next_visit_date_hp" calculate="if(/data/notification_case/scheduling/load_notification/next_visit_num_hc &gt; /data/pregnancy_pp_case/next_visit_num, /data/notification_case/scheduling/load_notification/next_visit_date_hc, if(/data/pregnancy_pp_case/next_visit_num_hc &gt; /data/pregnancy_pp_case/next_visit_num_hp, /data/pregnancy_pp_case/next_visit_date_hc, /data/pregnancy_pp_case/next_visit_date_hp))"/>
+			<bind nodeset="/data/notification_case/scheduling/save_hp/next_visit_date_hp_eth" calculate="if(/data/notification_case/scheduling/load_notification/next_visit_num_hc &gt; /data/pregnancy_pp_case/next_visit_num, /data/notification_case/scheduling/load_notification/next_visit_date_hc_eth, if(/data/pregnancy_pp_case/next_visit_num_hc &gt; /data/pregnancy_pp_case/next_visit_num_hp, /data/pregnancy_pp_case/next_visit_date_hc_eth, /data/pregnancy_pp_case/next_visit_date_hp_eth))"/>
+			<bind nodeset="/data/notification_case/scheduling/save_hp/next_visit_location_hp" calculate="if(/data/notification_case/scheduling/load_notification/next_visit_num_hc &gt; /data/pregnancy_pp_case/next_visit_num, /data/notification_case/scheduling/load_notification/next_visit_location_hc, if(/data/pregnancy_pp_case/next_visit_num_hc &gt; /data/pregnancy_pp_case/next_visit_num_hp, /data/pregnancy_pp_case/next_visit_location_hc, /data/pregnancy_pp_case/next_visit_location_hp))"/>
+			<bind nodeset="/data/notification_case/scheduling/blank_hc"/>
+			<bind nodeset="/data/notification_case/scheduling/blank_hc/next_visit_num_hc" calculate="0"/>
+			<bind nodeset="/data/notification_case/scheduling/blank_hc/next_visit_date_hc" calculate="0"/>
+			<bind nodeset="/data/notification_case/scheduling/blank_hc/next_visit_date_hc_eth" calculate="0"/>
+			<bind nodeset="/data/notification_case/scheduling/blank_hc/next_visit_location_hc" calculate="&quot;&quot;"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="notification_info-label">
+						<value>### This Action Card contains very important information from a client's visit at the Health Center. This information will be added to the selected client's file if you confirm this Action Card.</value>
+						<value form="image">jr://file/commcare/image/data/notification_info-2l9v69.png</value>
+						<value form="markdown">### This Action Card contains very important information from a client's visit at the Health Center. This information will be added to the selected client's file if you confirm this Action Card.</value>
+					</text>
+					<text id="display_warning/due_for_pnc-label">
+						<value>Warning: The client is currently due for PNC <output value="/data/pregnancy_pp_case/next_visit_num - 5"/>.</value>
+					</text>
+					<text id="display_warning/warning-label">
+						<value>Adding this Action Card will overwrite the details previously entered for Delivery Outcome!</value>
+					</text>
+					<text id="confirmation/confirm-label">
+						<value>Confirm that you want to add this information to the client's file.</value>
+						<value form="markdown">Confirm that you want to add this information to the client's file.</value>
+					</text>
+					<text id="confirmation/confirm-confirmed-label">
+						<value>**Confirmed**</value>
+						<value form="markdown">**Confirmed**</value>
+					</text>
+					<text id="confirmation/information-label">
+						<value>Client Name:
+
+* <output value="/data/client_name"/></value>
+						<value form="markdown">Client Name:
+
+* <output value="/data/client_name"/></value>
+					</text>
+					<text id="confirmation/notification_info-label">
+						<value>This Notification also contains important details about medications, vaccinations and the pregnancy outcome which will be added to the selected client's file upon confirmation.</value>
+					</text>
+					<text id="confirmation/outcome_date_eth-label">
+						<value>* Outcome Date: <output value="/data/load_for_display/outcome_date_eth"/></value>
+						<value form="markdown">* Outcome Date: <output value="/data/load_for_display/outcome_date_eth"/></value>
+					</text>
+					<text id="confirmation/outcome_gestational_age-label">
+						<value>* Outcome Gestational Age: <output value="/data/load_for_display/outcome_gestational_age"/> Weeks</value>
+						<value form="markdown">* Outcome Gestational Age: <output value="/data/load_for_display/outcome_gestational_age"/> Weeks</value>
+					</text>
+					<text id="confirmation/edd_eth-label">
+						<value>* EDD: <output value="/data/load_for_display/edd_eth"/></value>
+						<value form="markdown">* EDD: <output value="/data/load_for_display/edd_eth"/></value>
+					</text>
+					<text id="confirmation/scheduled_date_pnc1_eth-label">
+						<value>* Scheduled PNC 1 Date: <output value="/data/load_for_display/scheduled_date_pnc1_eth"/></value>
+						<value form="markdown">* Scheduled PNC 1 Date: <output value="/data/load_for_display/scheduled_date_pnc1_eth"/></value>
+					</text>
+					<text id="confirmation/num_babies-label">
+						<value>* Number of babies born: <output value="/data/load_for_display/num_babies"/></value>
+						<value form="markdown">* Number of babies born: <output value="/data/load_for_display/num_babies"/></value>
+					</text>
+					<text id="confirmation/num_still_birth-label">
+						<value>* Number of Still Births: <output value="/data/load_for_display/num_still_birth"/></value>
+						<value form="markdown">* Number of Still Births: <output value="/data/load_for_display/num_still_birth"/></value>
+					</text>
+					<text id="confirmation/num_live_birth-label">
+						<value>* Number of Live Births: <output value="/data/load_for_display/num_live_birth"/></value>
+						<value form="markdown">* Number of Live Births: <output value="/data/load_for_display/num_live_birth"/></value>
+					</text>
+					<text id="confirmation/live_births_alive-label">
+						<value>* Number of live births still alive: <output value="/data/load_for_display/live_births_alive"/></value>
+						<value form="markdown">* Number of live births still alive: <output value="/data/load_for_display/live_births_alive"/></value>
+					</text>
+					<text id="confirmation/live_births_weight-label">
+						<value>* Birth weight: <output value="/data/load_for_display/live_births_weight"/></value>
+						<value form="markdown">* Birth weight: <output value="/data/load_for_display/live_births_weight"/></value>
+					</text>
+					<text id="confirmation/live_births_mrn-label">
+						<value>* Live Birth's MRN: <output value="/data/load_for_display/live_births_mrn"/></value>
+						<value form="markdown">* Live Birth's MRN: <output value="/data/load_for_display/live_births_mrn"/></value>
+					</text>
+					<text id="display_confirmed-label">
+						<value>The Action Card will be added to <output value="/data/client_name"/>'s client history.</value>
+					</text>
+					<text id="display_skipped-label">
+						<value>The Action Card will NOT be added to <output value="/data/client_name"/>'s client history.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="notification_info-label">
+						<value>### &#4845;&#4613; &#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4704;&#4900;&#4755; &#4899;&#4709;&#4843; &#4723;&#4779;&#4634;&#4811; &#4877;&#4705;&#4765;&#4725; &#4707;&#4848;&#4648;&#4872;&#4733;&#4704;&#4725; &#4877;&#4828;  &#4704;&#4899;&#4637; &#4896;&#4675;&#4634; &#4632;&#4648;&#4867;&#4814;&#4733;&#4757; &#4840;&#4843;&#4824; &#4752;&#4813;. &#4845;&#4613; &#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4776;&#4720;&#4672;&#4704;&#4621;&#4669;&#4813; &#4632;&#4648;&#4867;&#4813;&#4757;  &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4845;&#4904;&#4632;&#4651;&#4811;&#4621;.</value>
+						<value form="image">jr://file/commcare/image/data/notification_info-2l9v69.png</value>
+						<value form="markdown">### &#4845;&#4613; &#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4704;&#4900;&#4755; &#4899;&#4709;&#4843; &#4723;&#4779;&#4634;&#4811; &#4877;&#4705;&#4765;&#4725; &#4707;&#4848;&#4648;&#4872;&#4733;&#4704;&#4725; &#4877;&#4828;  &#4704;&#4899;&#4637; &#4896;&#4675;&#4634; &#4632;&#4648;&#4867;&#4814;&#4733;&#4757; &#4840;&#4843;&#4824; &#4752;&#4813;. &#4845;&#4613; &#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4776;&#4720;&#4672;&#4704;&#4621;&#4669;&#4813; &#4632;&#4648;&#4867;&#4813;&#4757;  &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4845;&#4904;&#4632;&#4651;&#4811;&#4621;.</value>
+					</text>
+					<text id="display_warning/due_for_pnc-label">
+						<value>&#4635;&#4661;&#4896;&#4757;&#4672;&#4674;&#4843;: &#4840;&#4723;&#4779;&#4634;&#4811; &#4840;&#4853;&#4613;&#4648; &#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; &#4877;&#4828; &#4848;&#4653;&#4663;&#4621;/ &#4768;&#4609;&#4757; &#4752;&#4813;. <output value="/data/pregnancy_pp_case/next_visit_num - 5"/>.</value>
+					</text>
+					<text id="display_warning/warning-label">
+						<value>&#4845;&#4613; &#4840;&#4635;&#4659;&#4808;&#4677;&#4843; &#4632;&#4621;&#4821;&#4781;&#4725;  &#4632;&#4904;&#4632;&#4653; &#4776;&#4768;&#4609;&#4757; &#4704;&#4938;&#4725; &#4704;&#4808;&#4618;&#4853; &#4877;&#4828; &#4840;&#4872;&#4707;&#4813;&#4757;  &#4829;&#4653;&#4829;&#4653; &#4632;&#4648;&#4867; &#4845;&#4720;&#4776;&#4811;&#4621;!</value>
+					</text>
+					<text id="confirmation/confirm-label">
+						<value>&#4773;&#4648;&#4877;&#4896;&#4763; &#4632;&#4614;&#4757; &#4768;&#4616;&#4709;&#4669;&#4963; &#4616;&#4632;&#4904;&#4632;&#4653;/&#4616;&#4632;&#4619;&#4781; &#4725;&#4936;&#4621;&#4874;&#4843;&#4616;&#4669;</value>
+						<value form="markdown">&#4773;&#4648;&#4877;&#4896;&#4763; &#4632;&#4614;&#4757; &#4768;&#4616;&#4709;&#4669;&#4963; &#4616;&#4632;&#4904;&#4632;&#4653;/&#4616;&#4632;&#4619;&#4781; &#4725;&#4936;&#4621;&#4874;&#4843;&#4616;&#4669;</value>
+					</text>
+					<text id="confirmation/confirm-confirmed-label">
+						<value>&#4840;&#4720;&#4648;&#4875;&#4872;&#4896;</value>
+						<value form="markdown">&#4840;&#4720;&#4648;&#4875;&#4872;&#4896;</value>
+					</text>
+					<text id="confirmation/information-label">
+						<value>&#4840;&#4723;&#4779;&#4634; &#4661;&#4637;:
+
+* <output value="/data/client_name"/></value>
+						<value form="markdown">&#4840;&#4723;&#4779;&#4634; &#4661;&#4637;:
+
+* <output value="/data/client_name"/></value>
+					</text>
+					<text id="confirmation/notification_info-label">
+						<value>&#4704;&#4720;&#4904;&#4635;&#4650;&#4637; &#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4849; &#4661;&#4616; &#4632;&#4853;&#4608;&#4754;&#4726;&#4733; &#4963; &#4781;&#4725;&#4707;&#4725; &#4773;&#4755; &#4840;&#4808;&#4618;&#4853; &#4609;&#4756;&#4723;  &#4840;&#4634;&#4872;&#4621;&#4933; &#4632;&#4648;&#4867; &#4840;&#4843;&#4824; &#4752;&#4813;. &#4845;&#4613; &#4632;&#4648;&#4867; &#4776;&#4720;&#4672;&#4704;&#4616;&#4669;&#4813;  &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4845;&#4904;&#4632;&#4651;&#4621;.</value>
+					</text>
+					<text id="confirmation/outcome_date_eth-label">
+						<value>* &#4840;&#4808;&#4618;&#4853; &#4672;&#4896;&#4654;/&#4672;&#4757;: <output value="/data/load_for_display/outcome_date_eth"/></value>
+						<value form="markdown">* &#4840;&#4808;&#4618;&#4853; &#4672;&#4896;&#4654;/&#4672;&#4757;: <output value="/data/load_for_display/outcome_date_eth"/></value>
+					</text>
+					<text id="confirmation/outcome_gestational_age-label">
+						<value>* &#4840;&#4808;&#4618;&#4853; &#4808;&#4651;&#4720; &#4933;&#4757;&#4661;: <output value="/data/load_for_display/outcome_gestational_age"/></value>
+						<value form="markdown">* &#4840;&#4808;&#4618;&#4853; &#4808;&#4651;&#4720; &#4933;&#4757;&#4661;: <output value="/data/load_for_display/outcome_gestational_age"/></value>
+					</text>
+					<text id="confirmation/edd_eth-label">
+						<value>* &#4704;&#4877;&#4637;&#4725; &#4840;&#4637;&#4725;&#4808;&#4621;&#4853;&#4704;&#4725; &#4672;&#4757;: <output value="/data/load_for_display/edd_eth"/></value>
+						<value form="markdown">* &#4704;&#4877;&#4637;&#4725; &#4840;&#4637;&#4725;&#4808;&#4621;&#4853;&#4704;&#4725; &#4672;&#4757;: <output value="/data/load_for_display/edd_eth"/></value>
+					</text>
+					<text id="confirmation/scheduled_date_pnc1_eth-label">
+						<value>* &#4853;&#4613;&#4648; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; 1 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/scheduled_date_pnc1_eth"/></value>
+						<value form="markdown">* &#4853;&#4613;&#4648; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; 1 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/scheduled_date_pnc1_eth"/></value>
+					</text>
+					<text id="confirmation/num_babies-label">
+						<value>* &#4840;&#4720;&#4808;&#4616;&#4849; &#4613;&#4931;&#4755;&#4725; &#4673;&#4901;&#4653;: <output value="/data/load_for_display/num_babies"/></value>
+						<value form="markdown">* &#4840;&#4720;&#4808;&#4616;&#4849; &#4613;&#4931;&#4755;&#4725; &#4673;&#4901;&#4653;: <output value="/data/load_for_display/num_babies"/></value>
+					</text>
+					<text id="confirmation/num_still_birth-label">
+						<value>* &#4638;&#4720;&#4813; &#4840;&#4720;&#4808;&#4616;&#4849; &#4613;&#4931;&#4755;&#4725; &#4673;&#4901;&#4653;: <output value="/data/load_for_display/num_still_birth"/></value>
+						<value form="markdown">* &#4638;&#4720;&#4813; &#4840;&#4720;&#4808;&#4616;&#4849; &#4613;&#4931;&#4755;&#4725; &#4673;&#4901;&#4653;: <output value="/data/load_for_display/num_still_birth"/></value>
+					</text>
+					<text id="confirmation/num_live_birth-label">
+						<value>* &#4704;&#4610;&#4808;&#4725; &#4840;&#4720;&#4808;&#4616;&#4849; &#4613;&#4931;&#4755;&#4725; &#4673;&#4901;&#4653;: <output value="/data/load_for_display/num_live_birth"/></value>
+						<value form="markdown">* &#4704;&#4610;&#4808;&#4725; &#4840;&#4720;&#4808;&#4616;&#4849; &#4613;&#4931;&#4755;&#4725; &#4673;&#4901;&#4653;: <output value="/data/load_for_display/num_live_birth"/></value>
+					</text>
+					<text id="confirmation/live_births_alive-label">
+						<value>* &#4704;&#4610;&#4808;&#4725; &#4776;&#4720;&#4808;&#4616;&#4849;&#4725; &#4613;&#4931;&#4755;&#4725; &#4704;&#4610;&#4808;&#4725; &#4843;&#4617;&#4725;: <output value="/data/load_for_display/live_births_alive"/></value>
+						<value form="markdown">* &#4704;&#4610;&#4808;&#4725; &#4776;&#4720;&#4808;&#4616;&#4849;&#4725; &#4613;&#4931;&#4755;&#4725; &#4704;&#4610;&#4808;&#4725; &#4843;&#4617;&#4725;: <output value="/data/load_for_display/live_births_alive"/></value>
+					</text>
+					<text id="confirmation/live_births_weight-label">
+						<value>* &#4781;&#4709;&#4848;&#4725;: <output value="/data/load_for_display/live_births_weight"/></value>
+						<value form="markdown">* &#4781;&#4709;&#4848;&#4725;: <output value="/data/load_for_display/live_births_weight"/></value>
+					</text>
+					<text id="confirmation/live_births_mrn-label">
+						<value>* &#4704;&#4610;&#4808;&#4725; &#4840;&#4720;&#4808;&#4616;&#4849; &#4636;&#4850;&#4779;&#4621; &#4650;&#4776;&#4653;&#4853; &#4673;&#4901;&#4653;: <output value="/data/load_for_display/live_births_mrn"/></value>
+						<value form="markdown">* &#4704;&#4610;&#4808;&#4725; &#4840;&#4720;&#4808;&#4616;&#4849; &#4636;&#4850;&#4779;&#4621; &#4650;&#4776;&#4653;&#4853; &#4673;&#4901;&#4653;: <output value="/data/load_for_display/live_births_mrn"/></value>
+					</text>
+					<text id="display_confirmed-label">
+						<value>&#4840;&#4635;&#4659;&#4808;&#4674;&#4843;&#4813; &#4632;&#4621;&#4821;&#4781;&#4725; &#4840;&#4634;&#4904;&#4632;&#4648;&#4813;  <output value="/data/client_name"/> &#4840;&#4723;&#4779;&#4634;&#4811; &#4840;&#4613;&#4781;&#4637;&#4755;  &#4829;&#4653;&#4829;&#4653; &#4619;&#4845; &#4752;&#4813;&#4961;&#4961;</value>
+					</text>
+					<text id="display_skipped-label">
+						<value>&#4840;&#4635;&#4659;&#4808;&#4674;&#4843;&#4813; &#4632;&#4621;&#4821;&#4781;&#4725; &#4808;&#4848; <output value="/data/client_name"/> &#4840;&#4723;&#4779;&#4634;&#4811; &#4840;&#4613;&#4781;&#4637;&#4755;  &#4829;&#4653;&#4829;&#4653; &#4768;&#4845;&#4904;&#4632;&#4653;&#4637;&#4961;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="notification_info-label">
+						<value>&#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4824;&#4896;&#4691;&#4616;&#4622; (&#4829;&#4627;&#4830;) &#4709;&#4899;&#4821;&#4634; &#4896;&#4691;&#4634; &#4627;&#4704;&#4652;&#4723; &#4771;&#4709; &#4901;&#4821;&#4755; &#4899;&#4706;&#4843;  &#4779;&#4709; &#4755;&#4845; &#4720;&#4627;&#4779;&#4635;&#4845; /&#4720;&#4872;&#4621;&#4875;&#4619;&#4845;  &#4817;&#4848;&#4725;   &#4773;&#4841;&#4964;&#4961;&#4961; &#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4773;&#4825;&#4845; &#4755;&#4709;&#4726;&#4637; &#4829;&#4720;&#4632;&#4648;&#4929; &#4720;&#4872;&#4621;&#4872;&#4621;&#4722; &#4939;&#4845;&#4621; &#4829;&#4813;&#4656;&#4797; &#4773;&#4841; &#4773;&#4757;&#4720;&#4848;&#4771; &#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4850; &#4771;&#4648;&#4875;&#4874;&#4933;&#4778;/&#4779;</value>
+						<value form="image">jr://file/commcare/image/data/notification_info-2l9v69.png</value>
+						<value form="markdown">&#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4824;&#4896;&#4691;&#4616;&#4622; (&#4829;&#4627;&#4830;) &#4709;&#4899;&#4821;&#4634; &#4896;&#4691;&#4634; &#4627;&#4704;&#4652;&#4723; &#4771;&#4709; &#4901;&#4821;&#4755; &#4899;&#4706;&#4843;  &#4779;&#4709; &#4755;&#4845; &#4720;&#4627;&#4779;&#4635;&#4845; /&#4720;&#4872;&#4621;&#4875;&#4619;&#4845;  &#4817;&#4848;&#4725;   &#4773;&#4841;&#4964;&#4961;&#4961; &#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4773;&#4825;&#4845; &#4755;&#4709;&#4726;&#4637; &#4829;&#4720;&#4632;&#4648;&#4929; &#4720;&#4872;&#4621;&#4872;&#4621;&#4722; &#4939;&#4845;&#4621; &#4829;&#4813;&#4656;&#4797; &#4773;&#4841; &#4773;&#4757;&#4720;&#4848;&#4771; &#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4850; &#4771;&#4648;&#4875;&#4874;&#4933;&#4778;/&#4779;</value>
+					</text>
+					<text id="display_warning/due_for_pnc-label">
+						<value>&#4632;&#4896;&#4757;&#4672;&#4693;&#4723;&#4961; &#4773;&#4827; &#4720;&#4627;&#4779;&#4634;&#4725;  &#4771;&#4709;&#4826; &#4624;&#4826; &#4773;&#4811;&#4757; &#4755;&#4845; &#4853;&#4629;&#4650; &#4808;&#4618;&#4853;<output value="/data/pregnancy_pp_case/next_visit_num - 5"/> &#4877;&#4828;&#4771; &#4704;&#4930;&#4625; &#4773;&#4841; .</value>
+					</text>
+					<text id="display_warning/warning-label">
+						<value>&#4773;&#4826; &#4755;&#4845; &#4632;&#4941;&#4616;&#4898; &#4632;&#4621;&#4773;&#4797;&#4722; &#4637;&#4813;&#4659;&#4797; &#4677;&#4853;&#4634; &#4624;&#4826; &#4771;&#4709;  &#4773;&#4811;&#4757; &#4808;&#4618;&#4853; &#4829;&#4771;&#4720;&#4808; &#4829;&#4653;&#4829;&#4653; &#4627;&#4704;&#4652;&#4723; /&#4632;&#4648;&#4851;&#4773;&#4723; &#4845;&#4725;&#4781;&#4774;  &#4773;&#4841;&#4964;</value>
+					</text>
+					<text id="confirmation/confirm-label">
+						<value>&#4653;&#4877;&#4928;&#4760; &#4850;&#4778; &#4781;&#4725;&#4809;&#4661;&#4778; &#4808;&#4845; &#4781;&#4725;&#4621;&#4773;&#4778; &#4725;&#4848;&#4621;&#4845;&#4854;</value>
+						<value form="markdown">&#4653;&#4877;&#4928;&#4760; &#4850;&#4778; &#4781;&#4725;&#4809;&#4661;&#4778; &#4808;&#4845; &#4781;&#4725;&#4621;&#4773;&#4778; &#4725;&#4848;&#4621;&#4845;&#4854;</value>
+					</text>
+					<text id="confirmation/confirm-confirmed-label">
+						<value>&#4768;&#4648;&#4875;&#4877;&#4930;</value>
+						<value form="markdown">&#4768;&#4648;&#4875;&#4877;&#4930;</value>
+					</text>
+					<text id="confirmation/information-label">
+						<value>&#4669;&#4637; &#4848;&#4757;&#4704;&#4763;:
+
+* <output value="/data/client_name"/></value>
+						<value form="markdown">&#4669;&#4637; &#4848;&#4757;&#4704;&#4763;:
+
+* <output value="/data/client_name"/></value>
+					</text>
+					<text id="confirmation/notification_info-label">
+						<value>&#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4850;   &#4824;&#4896;&#4691;&#4616;&#4622; (&#4829;&#4627;&#4830;) &#4709;&#4899;&#4821;&#4634; &#4896;&#4691;&#4634;  &#4829;&#4653;&#4829;&#4653; &#4627;&#4704;&#4652;&#4723; &#4709;&#4827;&#4821;&#4707; &#4632;&#4853;&#4627;&#4754;&#4723;&#4725;&#4964;&#4781;&#4725;&#4707;&#4725;&#4757; &#4813;&#4933;&#4770;&#4725; &#4901;&#4757;&#4658;&#4757;  &#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4773;&#4825;&#4845; &#4755;&#4709;&#4726;&#4637; &#4829;&#4720;&#4632;&#4648;&#4929; &#4720;&#4872;&#4621;&#4872;&#4621;&#4722; &#4939;&#4845;&#4621; &#4829;&#4813;&#4656;&#4797; &#4773;&#4841; &#4773;&#4757;&#4720;&#4848;&#4771; &#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4850; &#4771;&#4648;&#4875;&#4874;&#4933;&#4778;/&#4779;</value>
+					</text>
+					<text id="confirmation/outcome_date_eth-label">
+						<value>*&#4813;&#4930;&#4770;&#4725; &#4821;&#4616;&#4725;: <output value="/data/load_for_display/outcome_date_eth"/></value>
+						<value form="markdown">*&#4813;&#4930;&#4770;&#4725; &#4821;&#4616;&#4725;: <output value="/data/load_for_display/outcome_date_eth"/></value>
+					</text>
+					<text id="confirmation/outcome_gestational_age-label">
+						<value>*&#4813;&#4930;&#4770;&#4725; &#4821;&#4853;&#4632; &#4901;&#4757;&#4658;: <output value="/data/load_for_display/outcome_gestational_age"/></value>
+						<value form="markdown">*&#4813;&#4930;&#4770;&#4725; &#4821;&#4853;&#4632; &#4901;&#4757;&#4658;: <output value="/data/load_for_display/outcome_gestational_age"/></value>
+					</text>
+					<text id="confirmation/edd_eth-label">
+						<value>* &#4725;&#4933;&#4706;&#4725; &#4829;&#4877;&#4704;&#4648;&#4617; &#4755;&#4845; &#4821;&#4616;&#4725; &#4808;&#4618;&#4853;: <output value="/data/load_for_display/edd_eth"/></value>
+						<value form="markdown">* &#4725;&#4933;&#4706;&#4725; &#4829;&#4877;&#4704;&#4648;&#4617; &#4755;&#4845; &#4821;&#4616;&#4725; &#4808;&#4618;&#4853;: <output value="/data/load_for_display/edd_eth"/></value>
+					</text>
+					<text id="confirmation/scheduled_date_pnc1_eth-label">
+						<value>* &#4821;&#4616;&#4725; &#4678;&#4928;&#4654; &#4781;&#4757;&#4781;&#4757; &#4853;&#4629;&#4650; &#4808;&#4618;&#4853; 1: <output value="/data/load_for_display/scheduled_date_pnc1_eth"/></value>
+						<value form="markdown">* &#4821;&#4616;&#4725; &#4678;&#4928;&#4654; &#4781;&#4757;&#4781;&#4757; &#4853;&#4629;&#4650; &#4808;&#4618;&#4853; 1: <output value="/data/load_for_display/scheduled_date_pnc1_eth"/></value>
+					</text>
+					<text id="confirmation/num_babies-label">
+						<value>* &#4709;&#4610;&#4808;&#4725; &#4829;&#4720;&#4808;&#4616;&#4849; &#4704;&#4829;&#4626; &#4613;&#4931;&#4755;&#4725; : <output value="/data/load_for_display/num_babies"/></value>
+						<value form="markdown">* &#4709;&#4610;&#4808;&#4725; &#4829;&#4720;&#4808;&#4616;&#4849; &#4704;&#4829;&#4626; &#4613;&#4931;&#4755;&#4725; : <output value="/data/load_for_display/num_babies"/></value>
+					</text>
+					<text id="confirmation/num_still_birth-label">
+						<value>* &#4709;&#4610;&#4808;&#4725; &#4824;&#4845;&#4720;&#4808;&#4616;&#4849; &#4704;&#4829;&#4626; &#4613;&#4931;&#4755;&#4725;: <output value="/data/load_for_display/num_still_birth"/></value>
+						<value form="markdown">* &#4709;&#4610;&#4808;&#4725; &#4824;&#4845;&#4720;&#4808;&#4616;&#4849; &#4704;&#4829;&#4626; &#4613;&#4931;&#4755;&#4725;: <output value="/data/load_for_display/num_still_birth"/></value>
+					</text>
+					<text id="confirmation/num_live_birth-label">
+						<value>* &#4709;&#4610;&#4808;&#4725; &#4829;&#4720;&#4808;&#4616;&#4849; &#4704;&#4829;&#4626; &#4613;&#4931;&#4755;&#4725;: <output value="/data/load_for_display/num_live_birth"/></value>
+						<value form="markdown">* &#4709;&#4610;&#4808;&#4725; &#4829;&#4720;&#4808;&#4616;&#4849; &#4704;&#4829;&#4626; &#4613;&#4931;&#4755;&#4725;: <output value="/data/load_for_display/num_live_birth"/></value>
+					</text>
+					<text id="confirmation/live_births_alive-label">
+						<value>* &#4704;&#4829;&#4626; &#4709;&#4610;&#4808;&#4725; &#4829;&#4720;&#4808;&#4616;&#4849; &#4773;&#4755; &#4781;&#4659;&#4709; &#4624;&#4826; &#4824;&#4616;&#4813; &#4613;&#4931;&#4755;&#4725;: <output value="/data/load_for_display/live_births_alive"/></value>
+						<value form="markdown">* &#4704;&#4829;&#4626; &#4709;&#4610;&#4808;&#4725; &#4829;&#4720;&#4808;&#4616;&#4849; &#4773;&#4755; &#4781;&#4659;&#4709; &#4624;&#4826; &#4824;&#4616;&#4813; &#4613;&#4931;&#4755;&#4725;: <output value="/data/load_for_display/live_births_alive"/></value>
+					</text>
+					<text id="confirmation/live_births_weight-label">
+						<value>* &#4781;&#4709;&#4848;&#4725; &#4813;&#4621;&#4854;: <output value="/data/load_for_display/live_births_weight"/></value>
+						<value form="markdown">* &#4781;&#4709;&#4848;&#4725; &#4813;&#4621;&#4854;: <output value="/data/load_for_display/live_births_weight"/></value>
+					</text>
+					<text id="confirmation/live_births_mrn-label">
+						<value>* &#4709;&#4610;&#4808;&#4725; &#4829;&#4720;&#4808;&#4616;&#4848; &#4755;&#4845; &#4629;&#4781;&#4637;&#4755; &#4673;&#4933;&#4650;: <output value="/data/load_for_display/live_births_mrn"/></value>
+						<value form="markdown">* &#4709;&#4610;&#4808;&#4725; &#4829;&#4720;&#4808;&#4616;&#4848; &#4755;&#4845; &#4629;&#4781;&#4637;&#4755; &#4673;&#4933;&#4650;: <output value="/data/load_for_display/live_births_mrn"/></value>
+					</text>
+					<text id="display_confirmed-label">
+						<value>&#4632;&#4941;&#4616;&#4898; &#4632;&#4621;&#4773;&#4781;&#4722; &#4829;&#4809;&#4661;&#4782; <output value="/data/client_name"/> &#4768;&#4709; &#4755;&#4845; &#4629;&#4633;&#4637; &#4723;&#4650;&#4781; &#4773;&#4841;&#4961;&#4961;</value>
+					</text>
+					<text id="display_skipped-label">
+						<value>&#4632;&#4941;&#4616;&#4898; &#4632;&#4621;&#4773;&#4781;&#4722; &#4768;&#4845;&#4809;&#4661;&#4781;&#4757;  <output value="/data/client_name"/> &#4768;&#4709; &#4755;&#4845; &#4629;&#4633;&#4637; &#4723;&#4650;&#4781; &#4773;&#4841;&#4961;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4773;&#4722; &#4677;&#4901;&#4818; &#4633;&#4617;&#4773; &#4757;&#4633;&#4617;&#4773; &#4720;&#4635;&#4617;&#4769; &#4773;&#4841;&#4961;&#4961;
+
+&#4773;&#4722; &#4677;&#4901;&#4818; &#4757;&#4637;&#4621;&#4768;&#4781; &#4709;&#4619;&#4821;&#4618; &#4709;&#4840;&#4635;&#4757; &#4872;&#4933; &#4824;&#4622; &#4678;&#4931;&#4621; &#4629;&#4709;&#4650; &#4896;&#4809;&#4677;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="notification_info-label">
+						<value>### kaardiin Ergaa dabarsituun kun oddefannoo baayee barbaachisaa yeroo tajaajilaman buufata fayyaa dhuufu qabudhaa kaanaaf erga mirkana'een booda faayilii tajaajilamatti dabali</value>
+						<value form="image">jr://file/commcare/image/data/notification_info-2l9v69.png</value>
+						<value form="markdown">### kaardiin Ergaa dabarsituun kun oddefannoo baayee barbaachisaa yeroo tajaajilaman buufata fayyaa dhuufu qabudhaa kaanaaf erga mirkana'een booda faayilii tajaajilamatti dabali</value>
+					</text>
+					<text id="display_warning/due_for_pnc-label">
+						<value>Akkeekachisa:yaalamituu yeroon hordoffin daa'umsa booda ishee ga'e/amma  <output value="/data/pregnancy_pp_case/next_visit_num - 5"/>.</value>
+					</text>
+					<text id="display_warning/warning-label">
+						<value>ergaa dabarsitu kana assi keessattii dabaluun odeefannoo firii da'umsaa ture dura bakka ni buusa</value>
+					</text>
+					<text id="confirmation/confirm-label">
+						<value>faayilaa tajaajilamatti ergaa beekisfitu dabaluuf mirknessitee</value>
+						<value form="markdown">faayilaa tajaajilamatti ergaa beekisfitu dabaluuf mirknessitee</value>
+					</text>
+					<text id="confirmation/confirm-confirmed-label">
+						<value>**mirkanessi**</value>
+						<value form="markdown">**mirkanessi**</value>
+					</text>
+					<text id="confirmation/information-label">
+						<value>maqaa tajaajilama:
+
+* <output value="/data/client_name"/></value>
+						<value form="markdown">maqaa tajaajilama:
+
+* <output value="/data/client_name"/></value>
+					</text>
+					<text id="confirmation/notification_info-label">
+						<value>'Action card'n odefannoo wa'ee ulfaa,talaalli,dawwaa fi seenaa meedikaala of keessaa qaba. Oddefannoon kun faayilii tajaajilama filamee keessaa mirkaanessuuf gala</value>
+					</text>
+					<text id="confirmation/outcome_date_eth-label">
+						<value>* guyyaa firiin itti ilaalamu: <output value="/data/load_for_display/outcome_date_eth"/></value>
+						<value form="markdown">* guyyaa firiin itti ilaalamu: <output value="/data/load_for_display/outcome_date_eth"/></value>
+					</text>
+					<text id="confirmation/outcome_gestational_age-label">
+						<value>* Bu'aa ji'oota ulfaa: <output value="/data/load_for_display/outcome_gestational_age"/></value>
+						<value form="markdown">* Bu'aa ji'oota ulfaa: <output value="/data/load_for_display/outcome_gestational_age"/></value>
+					</text>
+					<text id="confirmation/edd_eth-label">
+						<value>Tilmaama guyyaa da'umsa: <output value="/data/load_for_display/edd_eth"/></value>
+						<value form="markdown">Tilmaama guyyaa da'umsa: <output value="/data/load_for_display/edd_eth"/></value>
+					</text>
+					<text id="confirmation/scheduled_date_pnc1_eth-label">
+						<value>* guyyaa hurdoffii da'umsa booda 1 itti qacaraman: <output value="/data/load_for_display/scheduled_date_pnc1_eth"/></value>
+						<value form="markdown">* guyyaa hurdoffii da'umsa booda 1 itti qacaraman: <output value="/data/load_for_display/scheduled_date_pnc1_eth"/></value>
+					</text>
+					<text id="confirmation/num_babies-label">
+						<value>* lakk. Daa'ima dhalatanii: <output value="/data/load_for_display/num_babies"/></value>
+						<value form="markdown">* lakk. Daa'ima dhalatanii: <output value="/data/load_for_display/num_babies"/></value>
+					</text>
+					<text id="confirmation/num_still_birth-label">
+						<value>* lakk. Daa'ima du'ani dhalatan: <output value="/data/load_for_display/num_still_birth"/></value>
+						<value form="markdown">* lakk. Daa'ima du'ani dhalatan: <output value="/data/load_for_display/num_still_birth"/></value>
+					</text>
+					<text id="confirmation/num_live_birth-label">
+						<value>* daa'iman libbuun dhalatan: <output value="/data/load_for_display/num_live_birth"/></value>
+						<value form="markdown">* daa'iman libbuun dhalatan: <output value="/data/load_for_display/num_live_birth"/></value>
+					</text>
+					<text id="confirmation/live_births_alive-label">
+						<value>* daa'iman libbuun  dhalatani amma hoona libbun jiran: <output value="/data/load_for_display/live_births_alive"/></value>
+						<value form="markdown">* daa'iman libbuun  dhalatani amma hoona libbun jiran: <output value="/data/load_for_display/live_births_alive"/></value>
+					</text>
+					<text id="confirmation/live_births_weight-label">
+						<value>* ulfaatina daa'ima reef dhalattee: <output value="/data/load_for_display/live_births_weight"/></value>
+						<value form="markdown">* ulfaatina daa'ima reef dhalattee: <output value="/data/load_for_display/live_births_weight"/></value>
+					</text>
+					<text id="confirmation/live_births_mrn-label">
+						<value>* lakk. Yaala daa'ima reef dhalatte: <output value="/data/load_for_display/live_births_mrn"/></value>
+						<value form="markdown">* lakk. Yaala daa'ima reef dhalatte: <output value="/data/load_for_display/live_births_mrn"/></value>
+					</text>
+					<text id="display_confirmed-label">
+						<value>Ergaan beekisisa kan dabalamu <output value="/data/client_name"/>'s seenaa dhukkuba yaalama irratti.</value>
+					</text>
+					<text id="display_skipped-label">
+						<value>ergaan beekisisaa  <output value="/data/client_name"/>'s seenaa dhukkuba yaalama irratti hin dabalamu.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki guutuma guututti guutame unka kan erguuf malattoo magarsaa kan kara bukkee harka mirgaa olii jiru xuqii.</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/outcome_location" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/outcome_location"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc1_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/scheduled_date_pnc1_eth"/><setvalue event="xforms-ready" ref="/data/load_for_display/outcome_time" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/outcome_time"/><setvalue event="xforms-ready" ref="/data/load_for_display/outcome_gestational_age" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/outcome_gestational_age"/><setvalue event="xforms-ready" ref="/data/notification_case/hiv_details/hiv_treatment_initiated" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/hiv_treatment_initiated"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/scheduled_date_anc4_stop" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/scheduled_date_anc4_stop"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/soft_close" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/soft_close"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/scheduled_date_anc3_stop" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/scheduled_date_anc3_stop"/><setvalue event="xforms-ready" ref="/data/load_for_display/num_still_birth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/num_still_birth"/><setvalue event="xforms-ready" ref="/data/notification_case/basic_info/mrn" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/mrn"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/live_births_alive" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_alive"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/live_births_death_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_death_date"/><setvalue event="xforms-ready" ref="/data/notification_case/scheduling/load_notification/next_visit_location_hc" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/next_visit_location_hc"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/outcome_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/outcome_date"/><setvalue event="xforms-ready" ref="/data/load_for_display/live_births_weight" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_weight"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/outcome_maternal" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/outcome_maternal"/><setvalue event="xforms-ready" ref="/data/load_for_display/edd_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/edd_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/live_births_newborn_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_newborn_name"/><setvalue event="xforms-ready" ref="/data/notification_case/hiv_details/hiv_positive" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/hiv_positive"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/live_births_vitamin_k_done" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_vitamin_k_done"/><setvalue event="xforms-ready" ref="/data/load_for_display/scheduled_date_pnc1_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/scheduled_date_pnc1_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc_final_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/scheduled_date_pnc_final_eth"/><setvalue event="xforms-ready" ref="/data/load_for_display/live_births_mrn" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_mrn"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/live_births_opv0_done" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_opv0_done"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/edd_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/edd_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/outcome_report_month" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/outcome_report_month"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/edd_stop" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/edd_stop"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/outcome_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/outcome_date_eth"/><setvalue event="xforms-ready" ref="/data/load_for_display/live_births_alive" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_alive"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/death_report_week" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/death_report_week"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/live_births_bcg_done" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_bcg_done"/><setvalue event="xforms-ready" ref="/data/load_for_display/num_live_birth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/num_live_birth"/><setvalue event="xforms-ready" ref="/data/load_for_display/outcome_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/outcome_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/death_report_month" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/death_report_month"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/num_babies" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/num_babies"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/live_births_death_location" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_death_location"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/death_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/death_date"/><setvalue event="xforms-ready" ref="/data/load_for_display/num_babies" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/num_babies"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/close_client" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/close_client"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/num_live_birth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/num_live_birth"/><setvalue event="xforms-ready" ref="/data/notification_case/scheduling/load_notification/next_visit_date_hc_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/next_visit_date_hc_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/live_births_mrn" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_mrn"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc_final" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/scheduled_date_pnc_final"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/num_still_birth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/num_still_birth"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/edd" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/edd"/><setvalue event="xforms-ready" ref="/data/notification_case/scheduling/load_notification/next_visit_date_hc" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/next_visit_date_hc"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/live_births_weight" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_weight"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/outcome_gestational_age" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/outcome_gestational_age"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/location_pnc_final" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/location_pnc_final"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/close_reason" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/close_reason"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/outcome_time" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/outcome_time"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/outcome_report_week" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/outcome_report_week"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/death_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/death_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/death_location" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/death_location"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/spontaneous_abortion" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/spontaneous_abortion"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/live_births_apgar_score" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_apgar_score"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/scheduled_date_anc2_stop" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/scheduled_date_anc2_stop"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/death_maternal" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/death_maternal"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/live_births_gender" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/live_births_gender"/><setvalue event="xforms-ready" ref="/data/notification_case/hiv_details/hiv_tested" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/hiv_tested"/><setvalue event="xforms-ready" ref="/data/notification_case/scheduling/load_notification/next_visit_num_hc" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/next_visit_num_hc"/><setvalue event="xforms-ready" ref="/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc1" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/scheduled_date_pnc1"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_load_notification_0/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_load_notification_0/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_load_notification_0" nodeset="/data/case_load_notification_0/case/@case_id"/><bind nodeset="/data/case_load_notification_0/case/close" relevant="/data/confirmation/confirm = 'confirmed'"/><setvalue event="xforms-ready" ref="/data/client_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/case_name"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_autoload_client_1/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_autoload_client_1/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_autoload_client_1" nodeset="/data/case_autoload_client_1/case/@case_id"/><bind calculate="/data/notification_case/pregnancy_outcome_details/close_reason" nodeset="/data/case_autoload_client_1/case/update/close_reason" relevant="count(/data/notification_case/pregnancy_outcome_details/close_reason) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/death_date" nodeset="/data/case_autoload_client_1/case/update/death_date" relevant="count(/data/notification_case/pregnancy_outcome_details/death_date) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/death_date_eth" nodeset="/data/case_autoload_client_1/case/update/death_date_eth" relevant="count(/data/notification_case/pregnancy_outcome_details/death_date_eth) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/death_location" nodeset="/data/case_autoload_client_1/case/update/death_location" relevant="count(/data/notification_case/pregnancy_outcome_details/death_location) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/death_maternal" nodeset="/data/case_autoload_client_1/case/update/death_maternal" relevant="count(/data/notification_case/pregnancy_outcome_details/death_maternal) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/death_report_month" nodeset="/data/case_autoload_client_1/case/update/death_report_month" relevant="count(/data/notification_case/pregnancy_outcome_details/death_report_month) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/death_report_week" nodeset="/data/case_autoload_client_1/case/update/death_report_week" relevant="count(/data/notification_case/pregnancy_outcome_details/death_report_week) &gt; 0"/><bind calculate="/data/notification_case/hiv_details/hiv_positive" nodeset="/data/case_autoload_client_1/case/update/hiv_positive" relevant="count(/data/notification_case/hiv_details/hiv_positive) &gt; 0"/><bind calculate="/data/notification_case/hiv_details/hiv_tested" nodeset="/data/case_autoload_client_1/case/update/hiv_tested" relevant="count(/data/notification_case/hiv_details/hiv_tested) &gt; 0"/><bind calculate="/data/notification_case/hiv_details/hiv_treatment_initiated" nodeset="/data/case_autoload_client_1/case/update/hiv_treatment_initiated" relevant="count(/data/notification_case/hiv_details/hiv_treatment_initiated) &gt; 0"/><bind calculate="/data/notification_case/basic_info/mrn" nodeset="/data/case_autoload_client_1/case/update/mrn" relevant="count(/data/notification_case/basic_info/mrn) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_date_hc" nodeset="/data/case_autoload_client_1/case/update/ppp_next_visit_date_hc" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_date_hc) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_date_hc_eth" nodeset="/data/case_autoload_client_1/case/update/ppp_next_visit_date_hc_eth" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_date_hc_eth) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_date_hp" nodeset="/data/case_autoload_client_1/case/update/ppp_next_visit_date_hp" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_date_hp) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_date_hp_eth" nodeset="/data/case_autoload_client_1/case/update/ppp_next_visit_date_hp_eth" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_date_hp_eth) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_location_hc" nodeset="/data/case_autoload_client_1/case/update/ppp_next_visit_location_hc" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_location_hc) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_location_hp" nodeset="/data/case_autoload_client_1/case/update/ppp_next_visit_location_hp" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_location_hp) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_num_hc" nodeset="/data/case_autoload_client_1/case/update/ppp_next_visit_num_hc" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_num_hc) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_num_hp" nodeset="/data/case_autoload_client_1/case/update/ppp_next_visit_num_hp" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_num_hp) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/soft_close" nodeset="/data/case_autoload_client_1/case/update/soft_close" relevant="count(/data/notification_case/pregnancy_outcome_details/soft_close) &gt; 0"/><bind nodeset="/data/case_autoload_client_1/case/close" relevant="/data/notification_case/pregnancy_outcome_details/close_client = 'yes'"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_num_hp" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_2]/next_visit_num_hp"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_num_hc" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_2]/next_visit_num_hc"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_location_hp" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_2]/next_visit_location_hp"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/edd" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_2]/edd"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_date_hc" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_2]/next_visit_date_hc"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_date_hc_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_2]/next_visit_date_hc_eth"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/newborn_cases_created" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_2]/newborn_cases_created"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_date_hp_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_2]/next_visit_date_hp_eth"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_location_hc" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_2]/next_visit_location_hc"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_date_hp" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_2]/next_visit_date_hp"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_autoload_pregnancy_pp_2/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_autoload_pregnancy_pp_2/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_2" nodeset="/data/case_autoload_pregnancy_pp_2/case/@case_id"/><bind calculate="/data/notification_case/pregnancy_outcome_details/edd" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/edd" relevant="count(/data/notification_case/pregnancy_outcome_details/edd) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/edd_eth" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/edd_eth" relevant="count(/data/notification_case/pregnancy_outcome_details/edd_eth) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/edd_stop" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/edd_stop" relevant="count(/data/notification_case/pregnancy_outcome_details/edd_stop) &gt; 0"/><bind calculate="/data/notification_case/hiv_details/hiv_positive" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/hiv_positive" relevant="count(/data/notification_case/hiv_details/hiv_positive) &gt; 0"/><bind calculate="/data/notification_case/hiv_details/hiv_tested" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/hiv_tested" relevant="count(/data/notification_case/hiv_details/hiv_tested) &gt; 0"/><bind calculate="/data/notification_case/hiv_details/hiv_treatment_initiated" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/hiv_treatment_initiated" relevant="count(/data/notification_case/hiv_details/hiv_treatment_initiated) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/live_births_alive" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/live_births_alive" relevant="count(/data/notification_case/pregnancy_outcome_details/live_births_alive) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/live_births_apgar_score" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/live_births_apgar_score" relevant="count(/data/notification_case/pregnancy_outcome_details/live_births_apgar_score) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/live_births_bcg_done" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/live_births_bcg_done" relevant="count(/data/notification_case/pregnancy_outcome_details/live_births_bcg_done) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/live_births_death_date" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/live_births_death_date" relevant="count(/data/notification_case/pregnancy_outcome_details/live_births_death_date) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/live_births_death_location" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/live_births_death_location" relevant="count(/data/notification_case/pregnancy_outcome_details/live_births_death_location) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/live_births_gender" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/live_births_gender" relevant="count(/data/notification_case/pregnancy_outcome_details/live_births_gender) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/live_births_mrn" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/live_births_mrn" relevant="count(/data/notification_case/pregnancy_outcome_details/live_births_mrn) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/live_births_newborn_name" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/live_births_newborn_name" relevant="count(/data/notification_case/pregnancy_outcome_details/live_births_newborn_name) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/live_births_opv0_done" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/live_births_opv0_done" relevant="count(/data/notification_case/pregnancy_outcome_details/live_births_opv0_done) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/live_births_vitamin_k_done" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/live_births_vitamin_k_done" relevant="count(/data/notification_case/pregnancy_outcome_details/live_births_vitamin_k_done) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/live_births_weight" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/live_births_weight" relevant="count(/data/notification_case/pregnancy_outcome_details/live_births_weight) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/location_pnc_final" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/location_pnc_final" relevant="count(/data/notification_case/pregnancy_outcome_details/location_pnc_final) &gt; 0"/><bind calculate="/data/notification_case/basic_info/mrn" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/mrn" relevant="count(/data/notification_case/basic_info/mrn) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_date_hc" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/next_visit_date_hc" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_date_hc) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_date_hc_eth" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/next_visit_date_hc_eth" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_date_hc_eth) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_date_hp" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/next_visit_date_hp" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_date_hp) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_date_hp_eth" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/next_visit_date_hp_eth" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_date_hp_eth) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_location_hc" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/next_visit_location_hc" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_location_hc) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_location_hp" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/next_visit_location_hp" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_location_hp) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_num_hc" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/next_visit_num_hc" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_num_hc) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_num_hp" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/next_visit_num_hp" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_num_hp) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/num_babies" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/num_babies" relevant="count(/data/notification_case/pregnancy_outcome_details/num_babies) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/num_live_birth" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/num_live_birth" relevant="count(/data/notification_case/pregnancy_outcome_details/num_live_birth) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/num_still_birth" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/num_still_birth" relevant="count(/data/notification_case/pregnancy_outcome_details/num_still_birth) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/outcome_date" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/outcome_date" relevant="count(/data/notification_case/pregnancy_outcome_details/outcome_date) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/outcome_date_eth" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/outcome_date_eth" relevant="count(/data/notification_case/pregnancy_outcome_details/outcome_date_eth) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/outcome_gestational_age" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/outcome_gestational_age" relevant="count(/data/notification_case/pregnancy_outcome_details/outcome_gestational_age) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/outcome_location" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/outcome_location" relevant="count(/data/notification_case/pregnancy_outcome_details/outcome_location) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/outcome_maternal" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/outcome_maternal" relevant="count(/data/notification_case/pregnancy_outcome_details/outcome_maternal) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/outcome_report_month" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/outcome_report_month" relevant="count(/data/notification_case/pregnancy_outcome_details/outcome_report_month) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/outcome_report_week" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/outcome_report_week" relevant="count(/data/notification_case/pregnancy_outcome_details/outcome_report_week) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/outcome_time" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/outcome_time" relevant="count(/data/notification_case/pregnancy_outcome_details/outcome_time) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/scheduled_date_anc2_stop" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/scheduled_date_anc2_stop" relevant="count(/data/notification_case/pregnancy_outcome_details/scheduled_date_anc2_stop) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/scheduled_date_anc3_stop" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/scheduled_date_anc3_stop" relevant="count(/data/notification_case/pregnancy_outcome_details/scheduled_date_anc3_stop) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/scheduled_date_anc4_stop" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/scheduled_date_anc4_stop" relevant="count(/data/notification_case/pregnancy_outcome_details/scheduled_date_anc4_stop) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc1" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/scheduled_date_pnc1" relevant="count(/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc1) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc1_eth" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/scheduled_date_pnc1_eth" relevant="count(/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc1_eth) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc_final" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/scheduled_date_pnc_final" relevant="count(/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc_final) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc_final_eth" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/scheduled_date_pnc_final_eth" relevant="count(/data/notification_case/pregnancy_outcome_details/scheduled_date_pnc_final_eth) &gt; 0"/><bind calculate="/data/notification_case/pregnancy_outcome_details/spontaneous_abortion" nodeset="/data/case_autoload_pregnancy_pp_2/case/update/spontaneous_abortion" relevant="count(/data/notification_case/pregnancy_outcome_details/spontaneous_abortion) &gt; 0"/><bind nodeset="/data/case_autoload_pregnancy_pp_2/case/close" relevant="/data/notification_case/pregnancy_outcome_details/spontaneous_abortion = 'yes'"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<trigger ref="/data/notification_info" appearance="minimal">
+			<label ref="jr:itext('notification_info-label')"/>
+		</trigger>
+		<group ref="/data/load_for_display"/>
+		<group ref="/data/display_warning" appearance="field-list">
+			<trigger ref="/data/display_warning/due_for_pnc" appearance="minimal">
+				<label ref="jr:itext('display_warning/due_for_pnc-label')"/>
+			</trigger>
+			<trigger ref="/data/display_warning/warning" appearance="minimal">
+				<label ref="jr:itext('display_warning/warning-label')"/>
+			</trigger>
+		</group>
+		<group ref="/data/confirmation" appearance="field-list">
+			<select ref="/data/confirmation/confirm">
+				<label ref="jr:itext('confirmation/confirm-label')"/>
+				<item>
+					<label ref="jr:itext('confirmation/confirm-confirmed-label')"/>
+					<value>confirmed</value>
+				</item>
+			</select>
+			<trigger ref="/data/confirmation/information" appearance="minimal">
+				<label ref="jr:itext('confirmation/information-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/notification_info" appearance="minimal">
+				<label ref="jr:itext('confirmation/notification_info-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/outcome_date_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/outcome_date_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/outcome_gestational_age" appearance="minimal">
+				<label ref="jr:itext('confirmation/outcome_gestational_age-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/edd_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/edd_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/scheduled_date_pnc1_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/scheduled_date_pnc1_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/num_babies" appearance="minimal">
+				<label ref="jr:itext('confirmation/num_babies-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/num_still_birth" appearance="minimal">
+				<label ref="jr:itext('confirmation/num_still_birth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/num_live_birth" appearance="minimal">
+				<label ref="jr:itext('confirmation/num_live_birth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/live_births_alive" appearance="minimal">
+				<label ref="jr:itext('confirmation/live_births_alive-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/live_births_weight" appearance="minimal">
+				<label ref="jr:itext('confirmation/live_births_weight-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/live_births_mrn" appearance="minimal">
+				<label ref="jr:itext('confirmation/live_births_mrn-label')"/>
+			</trigger>
+		</group>
+		<trigger ref="/data/display_confirmed" appearance="minimal">
+			<label ref="jr:itext('display_confirmed-label')"/>
+		</trigger>
+		<trigger ref="/data/display_skipped" appearance="minimal">
+			<label ref="jr:itext('display_skipped-label')"/>
+		</trigger>
+		<group ref="/data/pregnancy_pp_case"/>
+		<group ref="/data/notification_case">
+			<group ref="/data/notification_case/basic_info"/>
+			<group ref="/data/notification_case/pregnancy_outcome_details"/>
+			<group ref="/data/notification_case/hiv_details"/>
+			<group ref="/data/notification_case/scheduling">
+				<group ref="/data/notification_case/scheduling/load_notification"/>
+				<group ref="/data/notification_case/scheduling/save_hp"/>
+				<group ref="/data/notification_case/scheduling/blank_hc"/>
+			</group>
+		</group>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

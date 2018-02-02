@@ -1,0 +1,208 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum" vellum:ignore="richText">
+	<h:head>
+		<h:title>HDA Management</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/cb9d8185b3dfcc4a41022be3eb5d06f22a492fab" uiVersion="1" version="3432" name="HDA Management">
+					<num_hda_1-30/>
+					<hdas jr:template="">
+						<enforce_repeat_number>
+							<hda_1-30_name/>
+							<hda_1-30_phone_entered/>
+							<hda_1-30_name_no_spaces/>
+							<hda_1-30_phone/>
+						</enforce_repeat_number>
+					</hdas>
+					<hda_1-30_names/>
+					<hda_1-30_phones/>
+					<warning/>
+					<remove_duplicates ids="" count="" current_index="">
+						<item id="" index="" jr:template="">
+							<remove_duplicates>
+								<case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id="">
+									<close/>
+								</case>
+							</remove_duplicates>
+						</item>
+					</remove_duplicates>
+					<locations>
+						<health_post_id/>
+						<health_post/>
+						<health_center_id/>
+						<health_center/>
+						<region_id/>
+						<region/>
+						<zone_id/>
+						<zone/>
+						<woreda_id/>
+						<woreda/>
+						<hp_facility_code/>
+						<hc_facility_code/>
+						<test_or_real/>
+					</locations>
+					<end_of_form/>
+				<case_autoload_hp_supervision_0><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><update><hda_1-30_names/><hda_1-30_phones/></update></case></case_autoload_hp_supervision_0><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="locations" src="jr://fixture/locations"/>
+			<instance src="jr://instance/casedb" id="casedb"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<bind nodeset="/data/num_hda_1-30" type="xsd:int" required="true()"/>
+			<bind nodeset="/data/hdas"/>
+			<bind nodeset="/data/hdas/enforce_repeat_number" relevant="position(current()/..) + 1 &lt;= /data/num_hda_1-30"/>
+			<bind nodeset="/data/hdas/enforce_repeat_number/hda_1-30_name" type="xsd:string" required="true()"/>
+			<bind nodeset="/data/hdas/enforce_repeat_number/hda_1-30_phone_entered" type="xsd:string" constraint="regex(., '^0[0-9]{9}$')" jr:constraintMsg="jr:itext('hdas/enforce_repeat_number/hda_1-30_phone_entered-constraintMsg')" required="false()"/>
+			<bind nodeset="/data/hdas/enforce_repeat_number/hda_1-30_name_no_spaces" calculate="replace(current()/../hda_1-30_name, &quot; &quot;, &quot;_&quot;)"/>
+			<bind nodeset="/data/hdas/enforce_repeat_number/hda_1-30_phone" calculate="coalesce(current()/../hda_1-30_phone_entered, &quot;-&quot;)"/>
+			<bind nodeset="/data/hda_1-30_names" calculate="join(&quot; &quot;, /data/hdas/enforce_repeat_number/hda_1-30_name_no_spaces)"/>
+			<bind nodeset="/data/hda_1-30_phones" calculate="join(&quot; &quot;, /data/hdas/enforce_repeat_number/hda_1-30_phone)"/>
+			<bind nodeset="/data/warning"/>
+			<bind nodeset="/data/remove_duplicates/@current_index" calculate="count(/data/remove_duplicates/item)"/>
+			<bind nodeset="/data/remove_duplicates/item"/>
+			<bind nodeset="/data/remove_duplicates/item/remove_duplicates/case/close"/>
+			<bind nodeset="/data/remove_duplicates/item/remove_duplicates/case/@date_modified" calculate="/data/meta/timeEnd" type="xsd:dateTime"/>
+			<bind nodeset="/data/remove_duplicates/item/remove_duplicates/case/@user_id" calculate="instance('commcaresession')/session/context/userid"/>
+			<bind nodeset="/data/remove_duplicates/item/remove_duplicates/case/@case_id" calculate="current()/../../../@id"/>
+			<bind nodeset="/data/locations"/>
+			<bind nodeset="/data/locations/health_post_id" calculate="instance('commcaresession')/session/user/data/commcare_location_id"/>
+			<bind nodeset="/data/locations/health_post" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/name"/>
+			<bind nodeset="/data/locations/health_center_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/@health-center_id"/>
+			<bind nodeset="/data/locations/health_center" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/name"/>
+			<bind nodeset="/data/locations/region_id" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/@region_id"/>
+			<bind nodeset="/data/locations/region" calculate="instance('locations')/locations/location[@id = /data/locations/region_id]/name"/>
+			<bind nodeset="/data/locations/zone_id" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/@zone_id"/>
+			<bind nodeset="/data/locations/zone" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/name"/>
+			<bind nodeset="/data/locations/woreda_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/@woreda_id"/>
+			<bind nodeset="/data/locations/woreda" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/name"/>
+			<bind nodeset="/data/locations/hp_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/hc_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/test_or_real" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/end_of_form"/>
+			<setvalue event="xforms-ready" ref="/data/num_hda_1-30" value="count-selected(instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id_autoload_hp_supervision_0]/hda_1-30_names)"/>
+			<setvalue event="jr-insert" ref="/data/hdas/enforce_repeat_number/hda_1-30_name" value="if(position(current()/../..) + 1 &gt; count-selected(instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id_autoload_hp_supervision_0]/hda_1-30_names), &quot;&quot;, replace(selected-at(instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id_autoload_hp_supervision_0]/hda_1-30_names, position(current()/../..)), &quot;_&quot;, &quot; &quot;))"/>
+			<setvalue event="jr-insert" ref="/data/hdas/enforce_repeat_number/hda_1-30_phone_entered" value="if(position(current()/../..) + 1 &gt; count-selected(instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id_autoload_hp_supervision_0]/hda_1-30_names), &quot;&quot;, replace(selected-at(instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id_autoload_hp_supervision_0]/hda_1-30_phones, position(current()/../..)), &quot;-&quot;, &quot;&quot;))"/>
+			<setvalue event="xforms-ready" ref="/data/remove_duplicates/@ids" value="join(' ', instance('casedb')/casedb/case[@case_type = &quot;hp_supervision&quot;][@status = &quot;open&quot;][@case_id != instance('commcaresession')/session/data/case_id_autoload_hp_supervision_0][health_post_id = instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id_autoload_hp_supervision_0]/health_post_id]/@case_id)"/>
+			<setvalue event="xforms-ready" ref="/data/remove_duplicates/@count" value="count-selected(/data/remove_duplicates/@ids)"/>
+			<setvalue event="jr-insert" ref="/data/remove_duplicates/item/@index" value="int(/data/remove_duplicates/@current_index)"/>
+			<setvalue event="jr-insert" ref="/data/remove_duplicates/item/@id" value="selected-at(/data/remove_duplicates/@ids, ../@index)"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="num_hda_1-30-label">
+						<value>How many HDA 1:30s are there for this Health Post?</value>
+					</text>
+					<text id="hdas/enforce_repeat_number/hda_1-30_name-label">
+						<value>HDA 1:30 Name <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="hdas/enforce_repeat_number/hda_1-30_phone_entered-label">
+						<value>HDA 1:30 Phone Number <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="hdas/enforce_repeat_number/hda_1-30_phone_entered-constraintMsg">
+						<value>The phone number must start with 0 and cannot be longer than 10 digits</value>
+					</text>
+					<text id="warning-label">
+						<value>Important:  Editing the HDA names and phone numbers here will update the options you have in The **Register New Family** and **Edit Family Information** forms.  It will not automatically update existing family information.  To update family information, use the **Edit Family Information** form.</value>
+						<value form="markdown">Important:  Editing the HDA names and phone numbers here will update the options you have in The **Register New Family** and **Edit Family Information** forms.  It will not automatically update existing family information.  To update family information, use the **Edit Family Information** form.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="num_hda_1-30-label">
+						<value>&#4704;&#4826;&#4613; &#4900;&#4755; &#4780;&#4619; &#4661;&#4653; &#4661;&#4757;&#4725; &#4840;&#4900;.&#4621;.&#4656; 1:30 &#4705;&#4853;&#4757; &#4768;&#4616; ?</value>
+					</text>
+					<text id="hdas/enforce_repeat_number/hda_1-30_name-label">
+						<value>&#4840;&#4900;.&#4621;.&#4656; 1:30 &#4705;&#4853;&#4757; &#4661;&#4637; <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="hdas/enforce_repeat_number/hda_1-30_phone_entered-label">
+						<value>&#4840;&#4900;.&#4621;.&#4656; 1:30 &#4705;&#4853;&#4757; &#4632;&#4650; &#4661;&#4621;&#4781;<output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="hdas/enforce_repeat_number/hda_1-30_phone_entered-constraintMsg">
+						<value>&#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4777; &#4776;0 &#4632;&#4864;&#4632;&#4653; &#4768;&#4616;&#4704;&#4725; &#4773;&#4755; &#4776;10 &#4673;&#4901;&#4654;&#4733; &#4632;&#4709;&#4616;&#4901; &#4840;&#4616;&#4704;&#4725;&#4637;</value>
+					</text>
+					<text id="warning-label">
+						<value>&#4896;&#4675;&#4634; &#4632;&#4648;&#4867;:   &#4840;&#4900;.&#4621;.&#4656; &#4661;&#4637; &#4773;&#4755; &#4661;&#4621;&#4781; &#4673;&#4901;&#4653; &#4635;&#4661;&#4720;&#4779;&#4776;&#4621; &#4616;&#4635;&#4667;&#4667;&#4621; **&#4768;&#4850;&#4661; &#4708;&#4720;&#4656;&#4709; &#4632;&#4632;&#4829;&#4872;&#4709;** &#4773;&#4755; **&#4840;&#4708;&#4720;&#4656;&#4709; &#4632;&#4648;&#4867; &#4635;&#4661;&#4720;&#4779;&#4776;&#4621;**  &#4677;&#4934;&#4733; &#4813;&#4661;&#4901; &#4843;&#4617; &#4637;&#4653;&#4907;&#4814;&#4733;&#4757; &#4632;&#4896;&#4672;&#4637; &#4845;&#4731;&#4619;&#4621;&#4961;&#4961;  &#4845;&#4613; &#4808;&#4850;&#4843;&#4813;&#4753; &#4840;&#4752;&#4704;&#4648;&#4813;&#4757; &#4840;&#4708;&#4720;&#4656;&#4709; &#4632;&#4648;&#4867; &#4773;&#4757;&#4850;&#4667;&#4667;&#4621; &#4843;&#4848;&#4653;&#4875;&#4621;&#4961;&#4961; &#4840;&#4708;&#4720;&#4656;&#4709; &#4632;&#4648;&#4867; &#4616;&#4632;&#4667;&#4667;&#4621; **&#4840;&#4708;&#4720;&#4656;&#4709; &#4632;&#4648;&#4867; &#4635;&#4661;&#4720;&#4779;&#4776;&#4621;**  &#4840;&#4634;&#4616;&#4813;&#4757; &#4677;&#4933; &#4632;&#4896;&#4672;&#4637; &#4845;&#4731;&#4619;&#4621;&#4961;&#4961;</value>
+						<value form="markdown">&#4896;&#4675;&#4634; &#4632;&#4648;&#4867;:   &#4840;&#4900;.&#4621;.&#4656; &#4661;&#4637; &#4773;&#4755; &#4661;&#4621;&#4781; &#4673;&#4901;&#4653; &#4635;&#4661;&#4720;&#4779;&#4776;&#4621; &#4616;&#4635;&#4667;&#4667;&#4621; **&#4768;&#4850;&#4661; &#4708;&#4720;&#4656;&#4709; &#4632;&#4632;&#4829;&#4872;&#4709;** &#4773;&#4755; **&#4840;&#4708;&#4720;&#4656;&#4709; &#4632;&#4648;&#4867; &#4635;&#4661;&#4720;&#4779;&#4776;&#4621;**  &#4677;&#4934;&#4733; &#4813;&#4661;&#4901; &#4843;&#4617; &#4637;&#4653;&#4907;&#4814;&#4733;&#4757; &#4632;&#4896;&#4672;&#4637; &#4845;&#4731;&#4619;&#4621;&#4961;&#4961;  &#4845;&#4613; &#4808;&#4850;&#4843;&#4813;&#4753; &#4840;&#4752;&#4704;&#4648;&#4813;&#4757; &#4840;&#4708;&#4720;&#4656;&#4709; &#4632;&#4648;&#4867; &#4773;&#4757;&#4850;&#4667;&#4667;&#4621; &#4843;&#4848;&#4653;&#4875;&#4621;&#4961;&#4961; &#4840;&#4708;&#4720;&#4656;&#4709; &#4632;&#4648;&#4867; &#4616;&#4632;&#4667;&#4667;&#4621; **&#4840;&#4708;&#4720;&#4656;&#4709; &#4632;&#4648;&#4867; &#4635;&#4661;&#4720;&#4779;&#4776;&#4621;**  &#4840;&#4634;&#4616;&#4813;&#4757; &#4677;&#4933; &#4632;&#4896;&#4672;&#4637; &#4845;&#4731;&#4619;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="num_hda_1-30-label">
+						<value>&#4768;&#4709; &#4725;&#4629;&#4722; &#4773;&#4826; &#4901;&#4821;&#4755; &#4780;&#4619; &#4781;&#4757;&#4848;&#4845; &#4621;&#4637;&#4819;&#4725; &#4873;&#4869;&#4616;  1:30 &#4768;&#4616;&#4811; ?</value>
+					</text>
+					<text id="hdas/enforce_repeat_number/hda_1-30_name-label">
+						<value>&#4621;&#4637;&#4819;&#4725; &#4873;&#4869;&#4616;1:30 &#4665;&#4637;  <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="hdas/enforce_repeat_number/hda_1-30_phone_entered-label">
+						<value>&#4621;&#4637;&#4819;&#4725; &#4873;&#4869;&#4616;1:30 &#4635;&#4626;&#4725;  &#4661;&#4621;&#4778;<output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="hdas/enforce_repeat_number/hda_1-30_phone_entered-constraintMsg">
+						<value>&#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4778; &#4779;&#4709; 0 &#4864;&#4634;&#4649; &#4877;&#4757; &#4779;&#4709; 10 &#4673;&#4933;&#4650; &#4781;&#4704;&#4621;&#4933; &#4840;&#4709;&#4617;&#4757;</value>
+					</text>
+					<text id="warning-label">
+						<value>&#4896;&#4675;&#4634;  &#4632;&#4648;&#4851;&#4773;&#4723;:  &#4755;&#4845; &#4621;&#4637;&#4819;&#4725; &#4873;&#4869;&#4616; &#4664;&#4637;&#4757;  &#4661;&#4621;&#4778; &#4673;&#4933;&#4653;&#4757; &#4637;&#4661;&#4725;&#4781;&#4779;&#4621; &#4757;&#4637;&#4637;&#4629;&#4843;&#4669; **&#4627;&#4853;&#4669; &#4661;&#4853;&#4651; &#4637;&#4637;&#4829;&#4875;&#4709;** &#4757; **&#4755;&#4845; &#4661;&#4853;&#4651; &#4632;&#4648;&#4851;&#4773;&#4723; &#4637;&#4661;&#4725;&#4781;&#4779;&#4621;** &#4768;&#4709; &#4677;&#4901;&#4821;&#4723;&#4725; &#4824;&#4616;&#4813; &#4632;&#4635;&#4648;&#4933;&#4723;&#4725; &#4637;&#4901;&#4675;&#4637; &#4845;&#4779;&#4768;&#4621;&#4961;&#4961;  &#4773;&#4826; &#4669;&#4817; &#4829;&#4752;&#4704;&#4648; &#4755;&#4845; &#4661;&#4853;&#4651; &#4632;&#4648;&#4851;&#4773;&#4723; &#4781;&#4632;&#4627;&#4840;&#4669; &#4845;&#4872;&#4709;&#4653; &#4961;&#4961; &#4755;&#4845; &#4661;&#4853;&#4651; &#4632;&#4648;&#4851;&#4773;&#4723; &#4757;&#4637;&#4637;&#4629;&#4843;&#4669;  **&#4755;&#4845; &#4661;&#4853;&#4651; &#4632;&#4648;&#4851;&#4773;&#4723; &#4637;&#4661;&#4725;&#4781;&#4779;&#4621;** &#4829;&#4709;&#4621; &#4677;&#4901;&#4818; &#4637;&#4901;&#4675;&#4637; &#4845;&#4776;&#4768;&#4621; &#4961;&#4961;</value>
+						<value form="markdown">&#4896;&#4675;&#4634;  &#4632;&#4648;&#4851;&#4773;&#4723;:  &#4755;&#4845; &#4621;&#4637;&#4819;&#4725; &#4873;&#4869;&#4616; &#4664;&#4637;&#4757;  &#4661;&#4621;&#4778; &#4673;&#4933;&#4653;&#4757; &#4637;&#4661;&#4725;&#4781;&#4779;&#4621; &#4757;&#4637;&#4637;&#4629;&#4843;&#4669; **&#4627;&#4853;&#4669; &#4661;&#4853;&#4651; &#4637;&#4637;&#4829;&#4875;&#4709;** &#4757; **&#4755;&#4845; &#4661;&#4853;&#4651; &#4632;&#4648;&#4851;&#4773;&#4723; &#4637;&#4661;&#4725;&#4781;&#4779;&#4621;** &#4768;&#4709; &#4677;&#4901;&#4821;&#4723;&#4725; &#4824;&#4616;&#4813; &#4632;&#4635;&#4648;&#4933;&#4723;&#4725; &#4637;&#4901;&#4675;&#4637; &#4845;&#4779;&#4768;&#4621;&#4961;&#4961;  &#4773;&#4826; &#4669;&#4817; &#4829;&#4752;&#4704;&#4648; &#4755;&#4845; &#4661;&#4853;&#4651; &#4632;&#4648;&#4851;&#4773;&#4723; &#4781;&#4632;&#4627;&#4840;&#4669; &#4845;&#4872;&#4709;&#4653; &#4961;&#4961; &#4755;&#4845; &#4661;&#4853;&#4651; &#4632;&#4648;&#4851;&#4773;&#4723; &#4757;&#4637;&#4637;&#4629;&#4843;&#4669;  **&#4755;&#4845; &#4661;&#4853;&#4651; &#4632;&#4648;&#4851;&#4773;&#4723; &#4637;&#4661;&#4725;&#4781;&#4779;&#4621;** &#4829;&#4709;&#4621; &#4677;&#4901;&#4818; &#4637;&#4901;&#4675;&#4637; &#4845;&#4776;&#4768;&#4621; &#4961;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="num_hda_1-30-label">
+						<value>How many HDA 1:30s are there for this Health Post?</value>
+					</text>
+					<text id="hdas/enforce_repeat_number/hda_1-30_name-label">
+						<value>HDA 1:30 Name <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="hdas/enforce_repeat_number/hda_1-30_phone_entered-label">
+						<value>HDA 1:30 Phone Number <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="hdas/enforce_repeat_number/hda_1-30_phone_entered-constraintMsg">
+						<value>The phone number must start with 0 and cannot be longer than 10 digits</value>
+					</text>
+					<text id="warning-label">
+						<value>Important:  Editing the HDA names and phone numbers here will update the options you have in The **Register New Family** and **Edit Family Information** forms.  It will not automatically update existing family information.  To update family information, use the **Edit Family Information** form.</value>
+						<value form="markdown">Important:  Editing the HDA names and phone numbers here will update the options you have in The **Register New Family** and **Edit Family Information** forms.  It will not automatically update existing family information.  To update family information, use the **Edit Family Information** form.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki guutuma guututti guutame unka kan erguuf malattoo magarsaa kan kara bukkee harka mirgaa olii jiru xuqii.</value>
+					</text>
+				</translation>
+			</itext>
+		<bind calculate="/data/meta/timeEnd" nodeset="/data/case_autoload_hp_supervision_0/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_autoload_hp_supervision_0/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_autoload_hp_supervision_0" nodeset="/data/case_autoload_hp_supervision_0/case/@case_id"/><bind calculate="/data/hda_1-30_names" nodeset="/data/case_autoload_hp_supervision_0/case/update/hda_1-30_names" relevant="count(/data/hda_1-30_names) &gt; 0"/><bind calculate="/data/hda_1-30_phones" nodeset="/data/case_autoload_hp_supervision_0/case/update/hda_1-30_phones" relevant="count(/data/hda_1-30_phones) &gt; 0"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<input ref="/data/num_hda_1-30">
+			<label ref="jr:itext('num_hda_1-30-label')"/>
+		</input>
+		<group>
+			<repeat jr:count="/data/num_hda_1-30" jr:noAddRemove="true()" nodeset="/data/hdas">
+				<group ref="/data/hdas/enforce_repeat_number" appearance="field-list">
+					<input ref="/data/hdas/enforce_repeat_number/hda_1-30_name">
+						<label ref="jr:itext('hdas/enforce_repeat_number/hda_1-30_name-label')"/>
+					</input>
+					<input ref="/data/hdas/enforce_repeat_number/hda_1-30_phone_entered" appearance="numeric">
+						<label ref="jr:itext('hdas/enforce_repeat_number/hda_1-30_phone_entered-label')"/>
+						<alert ref="jr:itext('hdas/enforce_repeat_number/hda_1-30_phone_entered-constraintMsg')"/>
+					</input>
+				</group>
+			</repeat>
+		</group>
+		<trigger ref="/data/warning" appearance="minimal">
+			<label ref="jr:itext('warning-label')"/>
+		</trigger>
+		<group>
+			<repeat jr:count="/data/remove_duplicates/@count" jr:noAddRemove="true()" nodeset="/data/remove_duplicates/item"/>
+		</group>
+		<group ref="/data/locations"/>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

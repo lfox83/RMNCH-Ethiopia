@@ -1,0 +1,1250 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum" vellum:ignore="richText">
+	<h:head>
+		<h:title>Choose or Create Client for ANC 1 Action Card</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/50F20DEC-1245-448A-A772-5C6F57AC555F" uiVersion="1" version="3432" name="Choose or Create Client for ANC 1 Action Card">
+					<notification_case_id/>
+					<client_info>
+						<client_name/>
+						<family_name/>
+						<mrn/>
+						<dob/>
+						<age_years/>
+						<village_name/>
+						<local_phone_number/>
+					</client_info>
+					<notification_client_info>
+						<client_name/>
+						<family_name/>
+						<mrn/>
+						<age_years/>
+						<village_name/>
+						<local_phone_number/>
+					</notification_client_info>
+					<load_for_display>
+						<edd_eth/>
+						<anc1_weight/>
+						<anc1_folic_acid_given/>
+						<anc1_date_eth/>
+						<anc1_gestational_age/>
+						<scheduled_date_anc2_eth/>
+						<tt1_date_eth/>
+						<tt2_date_eth/>
+						<tt3_date_eth/>
+						<tt4_date_eth/>
+						<tt5_date_eth/>
+					</load_for_display>
+					<notification_info/>
+					<display_warning>
+						<due_for_anc/>
+						<due_for_delivery/>
+						<due_for_pnc/>
+						<warning/>
+					</display_warning>
+					<confirmation>
+						<confirm/>
+						<information/>
+						<notification_contents/>
+						<anc1_date_eth/>
+						<edd_eth/>
+						<anc1_gestional_age/>
+						<anc1_weight/>
+						<anc1_folic_acid_given/>
+						<tt1_date_eth/>
+						<tt2_date_eth/>
+						<tt3_date_eth/>
+						<tt4_date_eth/>
+						<tt5_date_eth/>
+						<scheduled_date_anc2_eth/>
+					</confirmation>
+					<tt_vaccinations>
+						<load_notification>
+							<tt1_date/>
+							<tt2_date/>
+							<tt3_date/>
+							<tt4_date/>
+							<tt5_date/>
+							<tt1_date_eth/>
+							<tt2_date_eth/>
+							<tt3_date_eth/>
+							<tt4_date_eth/>
+							<tt5_date_eth/>
+						</load_notification>
+						<load_client>
+							<tt1_date_eth/>
+							<tt2_date_eth/>
+							<tt3_date_eth/>
+							<tt4_date_eth/>
+							<tt5_date_eth/>
+						</load_client>
+						<tt1>
+							<display/>
+							<add_date/>
+						</tt1>
+						<tt2>
+							<display/>
+							<add_date/>
+						</tt2>
+						<tt3>
+							<display/>
+							<add_date/>
+						</tt3>
+						<tt4>
+							<display/>
+							<add_date/>
+						</tt4>
+						<tt5>
+							<display/>
+							<add_date/>
+						</tt5>
+						<final>
+							<tt1_date/>
+							<tt2_date/>
+							<tt3_date/>
+							<tt4_date/>
+							<tt5_date/>
+							<tt1_date_eth/>
+							<tt2_date_eth/>
+							<tt3_date_eth/>
+							<tt4_date_eth/>
+							<tt5_date_eth/>
+						</final>
+					</tt_vaccinations>
+					<display_confirmed/>
+					<display_skipped/>
+					<pregnancy_pp_case>
+						<next_visit_num_hc/>
+						<next_visit_date_hc/>
+						<next_visit_date_hc_eth/>
+						<next_visit_location_hc/>
+						<next_visit_num_hp/>
+						<next_visit_date_hp/>
+						<next_visit_date_hp_eth/>
+						<next_visit_location_hp/>
+						<next_visit_num/>
+					</pregnancy_pp_case>
+					<notification_case>
+						<basic_info>
+							<mrn/>
+						</basic_info>
+						<anc1_details>
+							<edd/>
+							<edd_eth/>
+							<anc1_date/>
+							<anc1_location/>
+							<anc1_weight/>
+							<gravidity/>
+							<parity/>
+							<prev_stillbirth_loss/>
+							<prev_3_spontaneous_abortions/>
+							<prev_low_birth_weight/>
+							<prev_high_birth_weight/>
+							<prev_hypertension_eclampsia/>
+							<prev_cs/>
+							<multiple_pregnancy/>
+							<rh_isoimmunization/>
+							<vaginal_bleeding/>
+							<pelvic_mass/>
+							<diastolic_bp_over_90/>
+							<diabetes_mellitus/>
+							<renal_disease/>
+							<cardiac_disease/>
+							<chronic_hypertension/>
+							<substance_abuse/>
+							<severe_medical_disease/>
+							<age_under_16/>
+							<age_over_40/>
+							<anc1_folic_acid_given/>
+							<anc1_date_eth/>
+							<anc1_report_month/>
+							<anc1_report_week/>
+							<anc1_gestational_age/>
+							<scheduled_date_anc2/>
+							<scheduled_date_anc2_eth/>
+							<location_anc2/>
+						</anc1_details>
+						<hiv_details>
+							<hiv_tested/>
+							<hiv_positive/>
+							<hiv_treatment_initiated/>
+						</hiv_details>
+						<scheduling>
+							<load_notification>
+								<next_visit_num_hc/>
+								<next_visit_date_hc/>
+								<next_visit_date_hc_eth/>
+								<next_visit_location_hc/>
+							</load_notification>
+							<save_hp>
+								<next_visit_num_hp/>
+								<next_visit_date_hp/>
+								<next_visit_date_hp_eth/>
+								<next_visit_location_hp/>
+							</save_hp>
+							<blank_hc>
+								<next_visit_num_hc/>
+								<next_visit_date_hc/>
+								<next_visit_date_hc_eth/>
+								<next_visit_location_hc/>
+							</blank_hc>
+						</scheduling>
+					</notification_case>
+					<end_of_form/>
+				<case_load_notification_0><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><close/></case></case_load_notification_0><case_load_client_3><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><update><hiv_positive/><hiv_tested/><hiv_treatment_initiated/><mrn/><ppp_next_visit_date_hc/><ppp_next_visit_date_hc_eth/><ppp_next_visit_date_hp/><ppp_next_visit_date_hp_eth/><ppp_next_visit_location_hc/><ppp_next_visit_location_hp/><ppp_next_visit_num_hc/><ppp_next_visit_num_hp/><tt1_date/><tt1_date_eth/><tt2_date/><tt2_date_eth/><tt3_date/><tt3_date_eth/><tt4_date/><tt4_date_eth/><tt5_date/><tt5_date_eth/></update></case></case_load_client_3><case_autoload_pregnancy_pp_4><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><update><age_over_40/><age_under_16/><anc1_date/><anc1_date_eth/><anc1_folic_acid_given/><anc1_gestational_age/><anc1_location/><anc1_report_month/><anc1_report_week/><anc1_weight/><cardiac_disease/><chronic_hypertension/><diabetes_mellitus/><diastolic_bp_over_90/><edd/><edd_eth/><gravidity/><hiv_positive/><hiv_tested/><hiv_treatment_initiated/><location_anc2/><mrn/><multiple_pregnancy/><next_visit_date_hc/><next_visit_date_hc_eth/><next_visit_date_hp/><next_visit_date_hp_eth/><next_visit_location_hc/><next_visit_location_hp/><next_visit_num_hc/><next_visit_num_hp/><parity/><pelvic_mass/><prev_3_spontaneous_abortions/><prev_cs/><prev_high_birth_weight/><prev_hypertension_eclampsia/><prev_low_birth_weight/><prev_stillbirth_loss/><renal_disease/><rh_isoimmunization/><scheduled_date_anc2/><scheduled_date_anc2_eth/><severe_medical_disease/><substance_abuse/><tt1_date/><tt1_date_eth/><tt2_date/><tt2_date_eth/><tt3_date/><tt3_date_eth/><tt4_date/><tt4_date_eth/><tt5_date/><tt5_date_eth/><vaginal_bleeding/></update></case></case_autoload_pregnancy_pp_4><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance>
+			<instance src="jr://instance/casedb" id="casedb"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<bind nodeset="/data/notification_case_id" calculate="instance('commcaresession')/session/data/case_id_load_notification_0"/>
+			<bind nodeset="/data/client_info"/>
+			<bind nodeset="/data/client_info/client_name"/>
+			<bind nodeset="/data/client_info/family_name"/>
+			<bind nodeset="/data/client_info/mrn"/>
+			<bind nodeset="/data/client_info/dob"/>
+			<bind nodeset="/data/client_info/age_years" calculate="int((today() - date(/data/client_info/dob)) div 365.25)"/>
+			<bind nodeset="/data/client_info/village_name"/>
+			<bind nodeset="/data/client_info/local_phone_number"/>
+			<bind nodeset="/data/notification_client_info"/>
+			<bind nodeset="/data/notification_client_info/client_name"/>
+			<bind nodeset="/data/notification_client_info/family_name"/>
+			<bind nodeset="/data/notification_client_info/mrn"/>
+			<bind nodeset="/data/notification_client_info/age_years"/>
+			<bind nodeset="/data/notification_client_info/village_name"/>
+			<bind nodeset="/data/notification_client_info/local_phone_number"/>
+			<bind nodeset="/data/load_for_display"/>
+			<bind nodeset="/data/load_for_display/edd_eth"/>
+			<bind nodeset="/data/load_for_display/anc1_weight"/>
+			<bind nodeset="/data/load_for_display/anc1_folic_acid_given"/>
+			<bind nodeset="/data/load_for_display/anc1_date_eth"/>
+			<bind nodeset="/data/load_for_display/anc1_gestational_age"/>
+			<bind nodeset="/data/load_for_display/scheduled_date_anc2_eth"/>
+			<bind nodeset="/data/load_for_display/tt1_date_eth"/>
+			<bind nodeset="/data/load_for_display/tt2_date_eth"/>
+			<bind nodeset="/data/load_for_display/tt3_date_eth"/>
+			<bind nodeset="/data/load_for_display/tt4_date_eth"/>
+			<bind nodeset="/data/load_for_display/tt5_date_eth"/>
+			<bind nodeset="/data/notification_info"/>
+			<bind nodeset="/data/display_warning" relevant="/data/pregnancy_pp_case/next_visit_num &gt; 1"/>
+			<bind nodeset="/data/display_warning/due_for_anc" relevant="/data/pregnancy_pp_case/next_visit_num &lt; 5"/>
+			<bind nodeset="/data/display_warning/due_for_delivery" relevant="/data/pregnancy_pp_case/next_visit_num = 5"/>
+			<bind nodeset="/data/display_warning/due_for_pnc" relevant="/data/pregnancy_pp_case/next_visit_num &gt; 5"/>
+			<bind nodeset="/data/display_warning/warning"/>
+			<bind nodeset="/data/confirmation"/>
+			<bind nodeset="/data/confirmation/confirm" required="false()"/>
+			<bind nodeset="/data/confirmation/information"/>
+			<bind nodeset="/data/confirmation/notification_contents"/>
+			<bind nodeset="/data/confirmation/anc1_date_eth" relevant="/data/load_for_display/anc1_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/edd_eth" relevant="/data/load_for_display/edd_eth != ''"/>
+			<bind nodeset="/data/confirmation/anc1_gestional_age" relevant="/data/load_for_display/anc1_gestational_age != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/anc1_weight" relevant="/data/load_for_display/anc1_weight != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/anc1_folic_acid_given" relevant="/data/load_for_display/anc1_folic_acid_given != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/tt1_date_eth" relevant="/data/load_for_display/tt1_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/tt2_date_eth" relevant="/data/load_for_display/tt2_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/tt3_date_eth" relevant="/data/load_for_display/tt3_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/tt4_date_eth" relevant="/data/load_for_display/tt4_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/tt5_date_eth" relevant="/data/load_for_display/tt5_date_eth != &quot;&quot;"/>
+			<bind nodeset="/data/confirmation/scheduled_date_anc2_eth" relevant="/data/load_for_display/scheduled_date_anc2_eth != ''"/>
+			<bind nodeset="/data/tt_vaccinations" relevant="/data/confirmation/confirm = &quot;confirmed&quot;"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt1_date"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt2_date"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt3_date"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt4_date"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt5_date"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt1_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt2_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt3_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt4_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_notification/tt5_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_client"/>
+			<bind nodeset="/data/tt_vaccinations/load_client/tt1_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_client/tt2_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_client/tt3_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_client/tt4_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/load_client/tt5_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/tt1" relevant="/data/tt_vaccinations/load_notification/tt1_date_eth != &quot;&quot; and /data/tt_vaccinations/load_notification/tt1_date_eth != /data/tt_vaccinations/load_client/tt1_date_eth and /data/tt_vaccinations/load_client/tt1_date_eth != &quot;&quot; and /data/tt_vaccinations/load_client/tt1_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt1_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot;"/>
+			<bind nodeset="/data/tt_vaccinations/tt1/display"/>
+			<bind nodeset="/data/tt_vaccinations/tt1/add_date" required="true()"/>
+			<bind nodeset="/data/tt_vaccinations/tt2" relevant="/data/tt_vaccinations/load_client/tt2_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_client/tt2_date_eth != &quot;&quot; and /data/tt_vaccinations/load_notification/tt2_date_eth != /data/tt_vaccinations/load_client/tt2_date_eth and /data/tt_vaccinations/load_notification/tt2_date_eth != &quot;&quot; and /data/tt_vaccinations/load_notification/tt2_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot;"/>
+			<bind nodeset="/data/tt_vaccinations/tt2/display"/>
+			<bind nodeset="/data/tt_vaccinations/tt2/add_date" required="true()"/>
+			<bind nodeset="/data/tt_vaccinations/tt3" relevant="/data/tt_vaccinations/load_notification/tt3_date_eth != &quot;&quot; and /data/tt_vaccinations/load_notification/tt3_date_eth != /data/tt_vaccinations/load_client/tt3_date_eth and /data/tt_vaccinations/load_client/tt3_date_eth != &quot;&quot; and /data/tt_vaccinations/load_client/tt3_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt3_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot;"/>
+			<bind nodeset="/data/tt_vaccinations/tt3/display"/>
+			<bind nodeset="/data/tt_vaccinations/tt3/add_date" required="true()"/>
+			<bind nodeset="/data/tt_vaccinations/tt4" relevant="/data/tt_vaccinations/load_notification/tt4_date_eth != &quot;&quot; and /data/tt_vaccinations/load_notification/tt4_date_eth != /data/tt_vaccinations/load_client/tt4_date_eth and /data/tt_vaccinations/load_client/tt4_date_eth != &quot;&quot; and /data/tt_vaccinations/load_client/tt4_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt4_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot;"/>
+			<bind nodeset="/data/tt_vaccinations/tt4/display"/>
+			<bind nodeset="/data/tt_vaccinations/tt4/add_date" required="true()"/>
+			<bind nodeset="/data/tt_vaccinations/tt5" relevant="/data/tt_vaccinations/load_notification/tt5_date_eth != &quot;&quot; and /data/tt_vaccinations/load_notification/tt5_date_eth != /data/tt_vaccinations/load_client/tt5_date_eth and /data/tt_vaccinations/load_client/tt5_date_eth != &quot;&quot; and /data/tt_vaccinations/load_client/tt5_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt5_date_eth != &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot;"/>
+			<bind nodeset="/data/tt_vaccinations/tt5/display"/>
+			<bind nodeset="/data/tt_vaccinations/tt5/add_date" required="true()"/>
+			<bind nodeset="/data/tt_vaccinations/final"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt1_date" relevant="/data/tt_vaccinations/load_client/tt1_date_eth = &quot;&quot; or /data/tt_vaccinations/tt1/add_date = &quot;yes&quot; or (/data/tt_vaccinations/load_client/tt1_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt1_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt1_date"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt2_date" relevant="/data/tt_vaccinations/load_client/tt2_date_eth = &quot;&quot; or /data/tt_vaccinations/tt2/add_date = &quot;yes&quot; or (/data/tt_vaccinations/load_client/tt2_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt2_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt2_date"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt3_date" relevant="/data/tt_vaccinations/tt3/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt3_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt3_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt3_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt3_date"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt4_date" relevant="/data/tt_vaccinations/tt4/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt4_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt4_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt4_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt4_date"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt5_date" relevant="/data/tt_vaccinations/tt5/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt5_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt5_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt5_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt5_date"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt1_date_eth" relevant="/data/tt_vaccinations/tt1/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt1_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt1_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt1_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt1_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt2_date_eth" relevant="/data/tt_vaccinations/load_client/tt2_date_eth = &quot;&quot; or /data/tt_vaccinations/tt2/add_date = &quot;yes&quot; or (/data/tt_vaccinations/load_client/tt2_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt2_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt2_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt3_date_eth" relevant="/data/tt_vaccinations/tt3/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt3_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt3_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt3_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt3_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt4_date_eth" relevant="/data/tt_vaccinations/tt4/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt4_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt4_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt4_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt4_date_eth"/>
+			<bind nodeset="/data/tt_vaccinations/final/tt5_date_eth" relevant="/data/tt_vaccinations/tt5/add_date = &quot;yes&quot; or /data/tt_vaccinations/load_client/tt5_date_eth = &quot;&quot; or (/data/tt_vaccinations/load_client/tt5_date_eth = &quot;&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;&quot; and /data/tt_vaccinations/load_notification/tt5_date_eth != &quot;&quot;)" calculate="/data/tt_vaccinations/load_notification/tt5_date_eth"/>
+			<bind nodeset="/data/display_confirmed" relevant="/data/confirmation/confirm = &quot;confirmed&quot;"/>
+			<bind nodeset="/data/display_skipped" relevant="/data/confirmation/confirm = &quot;&quot;"/>
+			<bind nodeset="/data/pregnancy_pp_case"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_num_hc"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_date_hc"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_date_hc_eth"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_location_hc"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_num_hp"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_date_hp"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_date_hp_eth"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_location_hp"/>
+			<bind nodeset="/data/pregnancy_pp_case/next_visit_num" calculate="max(/data/pregnancy_pp_case/next_visit_num_hc, /data/pregnancy_pp_case/next_visit_num_hp)"/>
+			<bind nodeset="/data/notification_case" relevant="/data/confirmation/confirm = &quot;confirmed&quot;"/>
+			<bind nodeset="/data/notification_case/basic_info"/>
+			<bind nodeset="/data/notification_case/basic_info/mrn"/>
+			<bind nodeset="/data/notification_case/anc1_details"/>
+			<bind nodeset="/data/notification_case/anc1_details/edd"/>
+			<bind nodeset="/data/notification_case/anc1_details/edd_eth"/>
+			<bind nodeset="/data/notification_case/anc1_details/anc1_date"/>
+			<bind nodeset="/data/notification_case/anc1_details/anc1_location"/>
+			<bind nodeset="/data/notification_case/anc1_details/anc1_weight"/>
+			<bind nodeset="/data/notification_case/anc1_details/gravidity"/>
+			<bind nodeset="/data/notification_case/anc1_details/parity"/>
+			<bind nodeset="/data/notification_case/anc1_details/prev_stillbirth_loss"/>
+			<bind nodeset="/data/notification_case/anc1_details/prev_3_spontaneous_abortions"/>
+			<bind nodeset="/data/notification_case/anc1_details/prev_low_birth_weight"/>
+			<bind nodeset="/data/notification_case/anc1_details/prev_high_birth_weight"/>
+			<bind nodeset="/data/notification_case/anc1_details/prev_hypertension_eclampsia"/>
+			<bind nodeset="/data/notification_case/anc1_details/prev_cs"/>
+			<bind nodeset="/data/notification_case/anc1_details/multiple_pregnancy"/>
+			<bind nodeset="/data/notification_case/anc1_details/rh_isoimmunization"/>
+			<bind nodeset="/data/notification_case/anc1_details/vaginal_bleeding"/>
+			<bind nodeset="/data/notification_case/anc1_details/pelvic_mass"/>
+			<bind nodeset="/data/notification_case/anc1_details/diastolic_bp_over_90"/>
+			<bind nodeset="/data/notification_case/anc1_details/diabetes_mellitus"/>
+			<bind nodeset="/data/notification_case/anc1_details/renal_disease"/>
+			<bind nodeset="/data/notification_case/anc1_details/cardiac_disease"/>
+			<bind nodeset="/data/notification_case/anc1_details/chronic_hypertension"/>
+			<bind nodeset="/data/notification_case/anc1_details/substance_abuse"/>
+			<bind nodeset="/data/notification_case/anc1_details/severe_medical_disease"/>
+			<bind nodeset="/data/notification_case/anc1_details/age_under_16"/>
+			<bind nodeset="/data/notification_case/anc1_details/age_over_40"/>
+			<bind nodeset="/data/notification_case/anc1_details/anc1_folic_acid_given"/>
+			<bind nodeset="/data/notification_case/anc1_details/anc1_date_eth"/>
+			<bind nodeset="/data/notification_case/anc1_details/anc1_report_month"/>
+			<bind nodeset="/data/notification_case/anc1_details/anc1_report_week"/>
+			<bind nodeset="/data/notification_case/anc1_details/anc1_gestational_age"/>
+			<bind nodeset="/data/notification_case/anc1_details/scheduled_date_anc2"/>
+			<bind nodeset="/data/notification_case/anc1_details/scheduled_date_anc2_eth"/>
+			<bind nodeset="/data/notification_case/anc1_details/location_anc2"/>
+			<bind nodeset="/data/notification_case/hiv_details"/>
+			<bind nodeset="/data/notification_case/hiv_details/hiv_tested" relevant="instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/hiv_tested = &quot;yes&quot;"/>
+			<bind nodeset="/data/notification_case/hiv_details/hiv_positive" relevant="instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/hiv_positive = &quot;yes&quot; or instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/hiv_positive = &quot;no&quot;"/>
+			<bind nodeset="/data/notification_case/hiv_details/hiv_treatment_initiated" relevant="instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/hiv_treatment_initiated = &quot;yes&quot; or instance('casedb')/casedb/case[@case_id = /data/notification_case_id]/hiv_treatment_initiated = &quot;no&quot;"/>
+			<bind nodeset="/data/notification_case/scheduling"/>
+			<bind nodeset="/data/notification_case/scheduling/load_notification"/>
+			<bind nodeset="/data/notification_case/scheduling/load_notification/next_visit_num_hc"/>
+			<bind nodeset="/data/notification_case/scheduling/load_notification/next_visit_date_hc"/>
+			<bind nodeset="/data/notification_case/scheduling/load_notification/next_visit_date_hc_eth"/>
+			<bind nodeset="/data/notification_case/scheduling/load_notification/next_visit_location_hc"/>
+			<bind nodeset="/data/notification_case/scheduling/save_hp"/>
+			<bind nodeset="/data/notification_case/scheduling/save_hp/next_visit_num_hp" calculate="max(/data/pregnancy_pp_case/next_visit_num, /data/notification_case/scheduling/load_notification/next_visit_num_hc)"/>
+			<bind nodeset="/data/notification_case/scheduling/save_hp/next_visit_date_hp" calculate="if(/data/notification_case/scheduling/load_notification/next_visit_num_hc &gt; /data/pregnancy_pp_case/next_visit_num, /data/notification_case/scheduling/load_notification/next_visit_date_hc, if(/data/pregnancy_pp_case/next_visit_num_hc &gt; /data/pregnancy_pp_case/next_visit_num_hp, /data/pregnancy_pp_case/next_visit_date_hc, /data/pregnancy_pp_case/next_visit_date_hp))"/>
+			<bind nodeset="/data/notification_case/scheduling/save_hp/next_visit_date_hp_eth" calculate="if(/data/notification_case/scheduling/load_notification/next_visit_num_hc &gt; /data/pregnancy_pp_case/next_visit_num, /data/notification_case/scheduling/load_notification/next_visit_date_hc_eth, if(/data/pregnancy_pp_case/next_visit_num_hc &gt; /data/pregnancy_pp_case/next_visit_num_hp, /data/pregnancy_pp_case/next_visit_date_hc_eth, /data/pregnancy_pp_case/next_visit_date_hp_eth))"/>
+			<bind nodeset="/data/notification_case/scheduling/save_hp/next_visit_location_hp" calculate="if(/data/notification_case/scheduling/load_notification/next_visit_num_hc &gt; /data/pregnancy_pp_case/next_visit_num, /data/notification_case/scheduling/load_notification/next_visit_location_hc, if(/data/pregnancy_pp_case/next_visit_num_hc &gt; /data/pregnancy_pp_case/next_visit_num_hp, /data/pregnancy_pp_case/next_visit_location_hc, /data/pregnancy_pp_case/next_visit_location_hp))"/>
+			<bind nodeset="/data/notification_case/scheduling/blank_hc"/>
+			<bind nodeset="/data/notification_case/scheduling/blank_hc/next_visit_num_hc" calculate="0"/>
+			<bind nodeset="/data/notification_case/scheduling/blank_hc/next_visit_date_hc" calculate="0"/>
+			<bind nodeset="/data/notification_case/scheduling/blank_hc/next_visit_date_hc_eth" calculate="0"/>
+			<bind nodeset="/data/notification_case/scheduling/blank_hc/next_visit_location_hc" calculate="&quot;&quot;"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="notification_info-label">
+						<value>### This action card contains very important information from a client's visit at the Health Center. This information will be added to the selected client's file if you confirm this action card.</value>
+						<value form="image">jr://file/commcare/image/data/notification_info-kzdv91.png</value>
+						<value form="markdown">### This action card contains very important information from a client's visit at the Health Center. This information will be added to the selected client's file if you confirm this action card.</value>
+					</text>
+					<text id="display_warning/due_for_anc-label">
+						<value>Warning: The client that you have selected is currently due for ANC <output value="/data/pregnancy_pp_case/next_visit_num"/>.</value>
+					</text>
+					<text id="display_warning/due_for_delivery-label">
+						<value>Warning: The selected client is currently due for Delivery.</value>
+					</text>
+					<text id="display_warning/due_for_pnc-label">
+						<value>Warning: The selected client is currently due for PNC <output value="/data/pregnancy_pp_case/next_visit_num - 5"/>.</value>
+					</text>
+					<text id="display_warning/warning-label">
+						<value>Adding this action card will overwrite the details previously entered for ANC 1!</value>
+					</text>
+					<text id="confirmation/confirm-label">
+						<value>Confirm that you want to add this information to the client's file.</value>
+						<value form="markdown">Confirm that you want to add this information to the client's file.</value>
+					</text>
+					<text id="confirmation/confirm-confirmed-label">
+						<value>**Confirmed**</value>
+						<value form="markdown">**Confirmed**</value>
+					</text>
+					<text id="confirmation/information-label">
+						<value>Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC 1 Action Card Contains Information about this Client:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+						<value form="markdown">Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC 1 Action Card Contains Information about this Client:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+					</text>
+					<text id="confirmation/notification_contents-label">
+						<value>The Action Card also contains information about her pregnancy, vaccinations, medications and medical history. This information will be added to the selected client's file upon confirmation.</value>
+					</text>
+					<text id="confirmation/anc1_date_eth-label">
+						<value>* ANC 1 Date: <output value="/data/load_for_display/anc1_date_eth"/></value>
+						<value form="markdown">* ANC 1 Date: <output value="/data/load_for_display/anc1_date_eth"/></value>
+					</text>
+					<text id="confirmation/edd_eth-label">
+						<value>* EDD: <output value="/data/load_for_display/edd_eth"/></value>
+						<value form="markdown">* EDD: <output value="/data/load_for_display/edd_eth"/></value>
+					</text>
+					<text id="confirmation/anc1_gestional_age-label">
+						<value>* ANC 1 Gestational Age: <output value="/data/load_for_display/anc1_gestational_age"/> Weeks</value>
+						<value form="markdown">* ANC 1 Gestational Age: <output value="/data/load_for_display/anc1_gestational_age"/> Weeks</value>
+					</text>
+					<text id="confirmation/anc1_weight-label">
+						<value>* ANC 1 Weight: <output value="/data/load_for_display/anc1_weight"/></value>
+						<value form="markdown">* ANC 1 Weight: <output value="/data/load_for_display/anc1_weight"/></value>
+					</text>
+					<text id="confirmation/anc1_folic_acid_given-label">
+						<value>* ANC 1 Folic Acid Given: <output value="/data/load_for_display/anc1_folic_acid_given"/></value>
+						<value form="markdown">* ANC 1 Folic Acid Given: <output value="/data/load_for_display/anc1_folic_acid_given"/></value>
+					</text>
+					<text id="confirmation/tt1_date_eth-label">
+						<value>* TT1 Date: <output value="/data/load_for_display/tt1_date_eth"/></value>
+						<value form="markdown">* TT1 Date: <output value="/data/load_for_display/tt1_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt2_date_eth-label">
+						<value>* TT2 Date: <output value="/data/load_for_display/tt2_date_eth"/></value>
+						<value form="markdown">* TT2 Date: <output value="/data/load_for_display/tt2_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt3_date_eth-label">
+						<value>* TT3 Date: <output value="/data/load_for_display/tt3_date_eth"/></value>
+						<value form="markdown">* TT3 Date: <output value="/data/load_for_display/tt3_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt4_date_eth-label">
+						<value>* TT4 Date: <output value="/data/load_for_display/tt4_date_eth"/></value>
+						<value form="markdown">* TT4 Date: <output value="/data/load_for_display/tt4_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt5_date_eth-label">
+						<value>* TT5 Date: <output value="/data/load_for_display/tt5_date_eth"/></value>
+						<value form="markdown">* TT5 Date: <output value="/data/load_for_display/tt5_date_eth"/></value>
+					</text>
+					<text id="confirmation/scheduled_date_anc2_eth-label">
+						<value>* ANC 2 Scheduled For: <output value="/data/load_for_display/scheduled_date_anc2_eth"/></value>
+						<value form="markdown">* ANC 2 Scheduled For: <output value="/data/load_for_display/scheduled_date_anc2_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt1/display-label">
+						<value>TT1 Vaccination
+
+Current Date: <output value="/data/tt_vaccinations/load_client/tt1_date_eth"/>
+
+Action Card: <output value="/data/tt_vaccinations/load_notification/tt1_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-label">
+						<value>There are discrepancies. Do you want to overwrite the current date with the one from the action card?</value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-no-label">
+						<value>No</value>
+					</text>
+					<text id="tt_vaccinations/tt2/display-label">
+						<value>TT2 Vaccination
+
+Current Date: <output value="/data/tt_vaccinations/load_client/tt2_date_eth"/>
+
+Action Card: <output value="/data/tt_vaccinations/load_notification/tt2_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt3/display-label">
+						<value>TT3 Vaccination
+
+Current Date: <output value="/data/tt_vaccinations/load_client/tt3_date_eth"/>
+
+Action Card: <output value="/data/tt_vaccinations/load_notification/tt3_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt3/add_date-label">
+						<value>There are discrepancies. Do you want to overwrite the current date with the one from the action card?</value>
+					</text>
+					<text id="tt_vaccinations/tt4/display-label">
+						<value>TT4 Vaccination
+
+Current Date: <output value="/data/tt_vaccinations/load_client/tt4_date_eth"/>
+
+Action Card: <output value="/data/tt_vaccinations/load_notification/tt4_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt4/add_date-label">
+						<value>There are discrepancies. Do you want to overwrite the current date with the one from the action card?</value>
+					</text>
+					<text id="tt_vaccinations/tt5/display-label">
+						<value>TT5 Vaccination
+
+Current Date: <output value="/data/tt_vaccinations/load_client/tt5_date_eth"/>
+
+Action Card: <output value="/data/tt_vaccinations/load_notification/tt5_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt5/add_date-label">
+						<value>There are discrepanciesDo you want to overwrite the current date with the one from the action card?</value>
+					</text>
+					<text id="tt_vaccinations/tt5/add_date-no-label">
+						<value>No</value>
+					</text>
+					<text id="display_confirmed-label">
+						<value>The action card will be added to <output value="/data/client_info/client_name"/>'s client history.</value>
+					</text>
+					<text id="display_skipped-label">
+						<value>The action card will **NOT** be added to <output value="/data/client_info/client_name"/>'s client history.</value>
+						<value form="markdown">The action card will **NOT** be added to <output value="/data/client_info/client_name"/>'s client history.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="notification_info-label">
+						<value>### &#4845;&#4613; &#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4704;&#4900;&#4755; &#4899;&#4709;&#4843; &#4723;&#4779;&#4634;&#4811; &#4877;&#4705;&#4765;&#4725; &#4707;&#4848;&#4648;&#4872;&#4733;&#4704;&#4725; &#4877;&#4828;  &#4704;&#4899;&#4637; &#4896;&#4675;&#4634; &#4632;&#4648;&#4867;&#4814;&#4733;&#4757; &#4840;&#4843;&#4824; &#4752;&#4813;. &#4845;&#4613; &#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4776;&#4720;&#4672;&#4704;&#4621;&#4669;&#4813; &#4632;&#4648;&#4867;&#4813;&#4757;  &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4845;&#4904;&#4632;&#4651;&#4811;&#4621;.</value>
+						<value form="image">jr://file/commcare/image/data/notification_info-kzdv91.png</value>
+						<value form="markdown">### &#4845;&#4613; &#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4704;&#4900;&#4755; &#4899;&#4709;&#4843; &#4723;&#4779;&#4634;&#4811; &#4877;&#4705;&#4765;&#4725; &#4707;&#4848;&#4648;&#4872;&#4733;&#4704;&#4725; &#4877;&#4828;  &#4704;&#4899;&#4637; &#4896;&#4675;&#4634; &#4632;&#4648;&#4867;&#4814;&#4733;&#4757; &#4840;&#4843;&#4824; &#4752;&#4813;. &#4845;&#4613; &#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4853; &#4776;&#4720;&#4672;&#4704;&#4621;&#4669;&#4813; &#4632;&#4648;&#4867;&#4813;&#4757;  &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4845;&#4904;&#4632;&#4651;&#4811;&#4621;.</value>
+					</text>
+					<text id="display_warning/due_for_anc-label">
+						<value>&#4635;&#4661;&#4896;&#4757;&#4672;&#4674;&#4843;: &#4840;&#4723;&#4779;&#4634;&#4811;  &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; &#4848;&#4653;&#4663;&#4621;/ &#4768;&#4609;&#4757; &#4752;&#4813; <output value="/data/pregnancy_pp_case/next_visit_num"/>.</value>
+					</text>
+					<text id="display_warning/due_for_delivery-label">
+						<value>&#4635;&#4661;&#4896;&#4757;&#4672;&#4674;&#4843;: &#4840;&#4723;&#4779;&#4634;&#4811; &#4840;&#4808;&#4618;&#4853; &#4877;&#4828; &#4848;&#4653;&#4663;&#4621;/ &#4768;&#4609;&#4757; &#4752;&#4813;.</value>
+					</text>
+					<text id="display_warning/due_for_pnc-label">
+						<value>&#4635;&#4661;&#4896;&#4757;&#4672;&#4674;&#4843;: &#4840;&#4723;&#4779;&#4634;&#4811; &#4840;&#4853;&#4613;&#4648; &#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; &#4877;&#4828; &#4848;&#4653;&#4663;&#4621;/ &#4768;&#4609;&#4757; &#4752;&#4813;. <output value="/data/pregnancy_pp_case/next_visit_num - 5"/>.</value>
+					</text>
+					<text id="display_warning/warning-label">
+						<value>&#4845;&#4613; &#4840;&#4635;&#4659;&#4808;&#4677;&#4843; &#4632;&#4621;&#4821;&#4781;&#4725;  &#4632;&#4904;&#4632;&#4653; &#4776;&#4768;&#4609;&#4757; &#4704;&#4938;&#4725; &#4704;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; 1 &#4840;&#4872;&#4707;&#4813;&#4757;  &#4829;&#4653;&#4829;&#4653; &#4632;&#4648;&#4867; &#4845;&#4720;&#4776;&#4811;&#4621;!</value>
+					</text>
+					<text id="confirmation/confirm-label">
+						<value>&#4773;&#4648;&#4877;&#4896;&#4763; &#4632;&#4614;&#4757; &#4768;&#4616;&#4709;&#4669;&#4963; &#4616;&#4632;&#4904;&#4632;&#4653;/&#4616;&#4632;&#4619;&#4781; &#4725;&#4936;&#4621;&#4874;&#4843;&#4616;&#4669;</value>
+						<value form="markdown">&#4773;&#4648;&#4877;&#4896;&#4763; &#4632;&#4614;&#4757; &#4768;&#4616;&#4709;&#4669;&#4963; &#4616;&#4632;&#4904;&#4632;&#4653;/&#4616;&#4632;&#4619;&#4781; &#4725;&#4936;&#4621;&#4874;&#4843;&#4616;&#4669;</value>
+					</text>
+					<text id="confirmation/confirm-confirmed-label">
+						<value>&#4840;&#4720;&#4648;&#4875;&#4872;&#4896;</value>
+						<value form="markdown">&#4840;&#4720;&#4648;&#4875;&#4872;&#4896;</value>
+					</text>
+					<text id="confirmation/information-label">
+						<value>Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC 1 Action Card Contains Information about this Client:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+						<value form="markdown">Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC 1 Action Card Contains Information about this Client:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+					</text>
+					<text id="confirmation/notification_contents-label">
+						<value>&#4704;&#4720;&#4904;&#4635;&#4650;&#4637; &#4840;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4849;&#4961;&#4661;&#4616;&#4773;&#4653;&#4877;&#4829;&#4755;&#4811;&#4963;&#4632;&#4853;&#4608;&#4754;&#4726;&#4733; &#4773;&#4755; &#4840;&#4900;&#4755; &#4637;&#4653;&#4632;&#4651; &#4840;&#4634;&#4872;&#4621;&#4933; &#4632;&#4648;&#4867;&#4840;&#4843;&#4824; &#4752;&#4813;. &#4845;&#4613; &#4632;&#4648;&#4867; &#4776;&#4720;&#4672;&#4704;&#4616;&#4669;&#4813;  &#4808;&#4848; &#4723;&#4779;&#4634;&#4811; &#4635;&#4613;&#4848;&#4653; &#4845;&#4904;&#4632;&#4651;&#4621;.</value>
+					</text>
+					<text id="confirmation/anc1_date_eth-label">
+						<value>* &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; 1 &#4672;&#4896;&#4654;/&#4672;&#4757;: <output value="/data/load_for_display/anc1_date_eth"/></value>
+						<value form="markdown">* &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; 1 &#4672;&#4896;&#4654;/&#4672;&#4757;: <output value="/data/load_for_display/anc1_date_eth"/></value>
+					</text>
+					<text id="confirmation/edd_eth-label">
+						<value>* &#4704;&#4877;&#4637;&#4725; &#4840;&#4637;&#4725;&#4808;&#4621;&#4853;&#4704;&#4725; &#4672;&#4757;: <output value="/data/load_for_display/edd_eth"/></value>
+						<value form="markdown">* &#4704;&#4877;&#4637;&#4725; &#4840;&#4637;&#4725;&#4808;&#4621;&#4853;&#4704;&#4725; &#4672;&#4757;: <output value="/data/load_for_display/edd_eth"/></value>
+					</text>
+					<text id="confirmation/anc1_gestional_age-label">
+						<value>* &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; 1  &#4808;&#4651;&#4720;-&#4933;&#4757;&#4661;: <output value="/data/load_for_display/anc1_gestational_age"/> Weeks</value>
+						<value form="markdown">* &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; 1  &#4808;&#4651;&#4720;-&#4933;&#4757;&#4661;: <output value="/data/load_for_display/anc1_gestational_age"/> Weeks</value>
+					</text>
+					<text id="confirmation/anc1_weight-label">
+						<value>* &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; 1 &#4781;&#4709;&#4848;&#4725;: <output value="/data/load_for_display/anc1_weight"/></value>
+						<value form="markdown">* &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; 1 &#4781;&#4709;&#4848;&#4725;: <output value="/data/load_for_display/anc1_weight"/></value>
+					</text>
+					<text id="confirmation/anc1_folic_acid_given-label">
+						<value>* &#4704;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; 1 &#4840;&#4720;&#4656;&#4896; &#4942;&#4618;&#4781; &#4768;&#4658;&#4853; : <output value="/data/load_for_display/anc1_folic_acid_given"/></value>
+						<value form="markdown">* &#4704;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; 1 &#4840;&#4720;&#4656;&#4896; &#4942;&#4618;&#4781; &#4768;&#4658;&#4853; : <output value="/data/load_for_display/anc1_folic_acid_given"/></value>
+					</text>
+					<text id="confirmation/tt1_date_eth-label">
+						<value>* &#4840;&#4722;&#4722; 1 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/tt1_date_eth"/></value>
+						<value form="markdown">* &#4840;&#4722;&#4722; 1 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/tt1_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt2_date_eth-label">
+						<value>* &#4840;&#4722;&#4722; 2 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/tt2_date_eth"/></value>
+						<value form="markdown">* &#4840;&#4722;&#4722; 2 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/tt2_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt3_date_eth-label">
+						<value>* &#4840;&#4722;&#4722; 3 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/tt3_date_eth"/></value>
+						<value form="markdown">* &#4840;&#4722;&#4722; 3 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/tt3_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt4_date_eth-label">
+						<value>* &#4840;&#4722;&#4722; 4 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/tt4_date_eth"/></value>
+						<value form="markdown">* &#4840;&#4722;&#4722; 4 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/tt4_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt5_date_eth-label">
+						<value>* &#4840;&#4722;&#4722; 5 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/tt5_date_eth"/></value>
+						<value form="markdown">* &#4840;&#4722;&#4722; 5 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/tt5_date_eth"/></value>
+					</text>
+					<text id="confirmation/scheduled_date_anc2_eth-label">
+						<value>* &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; 2 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/scheduled_date_anc2_eth"/></value>
+						<value form="markdown">* &#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; 2 &#4672;&#4896;&#4654;: <output value="/data/load_for_display/scheduled_date_anc2_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt1/display-label">
+						<value>&#4840;&#4722;&#4722;1 &#4781;&#4725;&#4707;&#4725;
+
+&#4827;&#4652; &#4672;&#4757;: <output value="/data/tt_vaccinations/load_client/tt1_date_eth"/>
+
+&#4635;&#4659;&#4808;&#4674;&#4843; &#4632;&#4621;&#4773;&#4781;&#4725;: <output value="/data/tt_vaccinations/load_notification/tt1_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-label">
+						<value>&#4621;&#4841;&#4752;&#4726;&#4733; &#4768;&#4617;. &#4840;&#4827;&#4652;&#4813; &#4672;&#4757; &#4704;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4849; &#4843;&#4616;&#4809;&#4757; &#4672;&#4757;  &#4725;&#4720;&#4781;&#4811;&#4616;&#4669; ?</value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-yes-label">
+						<value>&#4768;&#4814;</value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="tt_vaccinations/tt2/display-label">
+						<value>&#4840;&#4722;&#4722;2 &#4781;&#4725;&#4707;&#4725;
+
+Current Date: <output value="/data/tt_vaccinations/load_client/tt2_date_eth"/>
+
+&#4635;&#4659;&#4808;&#4674;&#4843; &#4632;&#4621;&#4773;&#4781;&#4725;: <output value="/data/tt_vaccinations/load_notification/tt2_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt3/display-label">
+						<value>&#4840;&#4722;&#4722; 3 &#4781;&#4725;&#4707;&#4725;
+
+&#4827;&#4652; &#4672;&#4757; : <output value="/data/tt_vaccinations/load_client/tt3_date_eth"/>
+
+&#4635;&#4659;&#4808;&#4674;&#4843; &#4632;&#4621;&#4773;&#4781;&#4725;: <output value="/data/tt_vaccinations/load_notification/tt3_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt3/add_date-label">
+						<value>&#4621;&#4841;&#4752;&#4726;&#4733; &#4768;&#4617;. &#4840;&#4827;&#4652;&#4813; &#4672;&#4757; &#4704;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4849; &#4843;&#4616;&#4809;&#4757; &#4672;&#4757;  &#4725;&#4720;&#4781;&#4811;&#4616;&#4669; ?</value>
+					</text>
+					<text id="tt_vaccinations/tt4/display-label">
+						<value>&#4840;&#4722;&#4722; 4 &#4781;&#4725;&#4707;&#4725;
+
+&#4840;&#4827;&#4652; &#4672;&#4757;: <output value="/data/tt_vaccinations/load_client/tt4_date_eth"/>
+
+&#4635;&#4659;&#4808;&#4674;&#4843; &#4632;&#4621;&#4773;&#4781;&#4725;: <output value="/data/tt_vaccinations/load_notification/tt4_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt4/add_date-label">
+						<value>&#4621;&#4841;&#4752;&#4726;&#4733; &#4768;&#4617;. &#4840;&#4827;&#4652;&#4813; &#4672;&#4757; &#4704;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4849; &#4843;&#4616;&#4809;&#4757; &#4672;&#4757;  &#4725;&#4720;&#4781;&#4811;&#4616;&#4669; ?</value>
+					</text>
+					<text id="tt_vaccinations/tt5/display-label">
+						<value>&#4840;&#4722;&#4722; 5 &#4781;&#4725;&#4707;&#4725;
+
+&#4827;&#4652; &#4672;&#4757;: <output value="/data/tt_vaccinations/load_client/tt5_date_eth"/>
+
+&#4635;&#4659;&#4808;&#4674;&#4843; &#4632;&#4621;&#4773;&#4781;&#4725;: <output value="/data/tt_vaccinations/load_notification/tt5_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt5/add_date-label">
+						<value>&#4621;&#4841;&#4752;&#4726;&#4733; &#4768;&#4617;. &#4840;&#4827;&#4652;&#4813; &#4672;&#4757; &#4704;&#4635;&#4659;&#4808;&#4674;&#4843; &#4779;&#4653;&#4849; &#4843;&#4616;&#4809;&#4757; &#4672;&#4757;  &#4725;&#4720;&#4781;&#4811;&#4616;&#4669; ?</value>
+					</text>
+					<text id="tt_vaccinations/tt5/add_date-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="display_confirmed-label">
+						<value>&#4840;&#4635;&#4659;&#4808;&#4674;&#4843;&#4813; &#4632;&#4621;&#4821;&#4781;&#4725; &#4840;&#4634;&#4904;&#4632;&#4648;&#4813;  <output value="/data/client_info/client_name"/>' &#4840;&#4723;&#4779;&#4634;&#4811; &#4840;&#4613;&#4781;&#4637;&#4755;  &#4829;&#4653;&#4829;&#4653; &#4619;&#4845; &#4752;&#4813;&#4961;&#4961;</value>
+					</text>
+					<text id="display_skipped-label">
+						<value>&#4840;&#4635;&#4659;&#4808;&#4674;&#4843;&#4813; &#4632;&#4621;&#4821;&#4781;&#4725; &#4808;&#4848; <output value="/data/client_info/client_name"/>' &#4840;&#4723;&#4779;&#4634;&#4811; &#4840;&#4613;&#4781;&#4637;&#4755;  &#4829;&#4653;&#4829;&#4653; &#4768;&#4845;&#4904;&#4632;&#4653;&#4637;&#4961;&#4961;</value>
+						<value form="markdown">&#4840;&#4635;&#4659;&#4808;&#4674;&#4843;&#4813; &#4632;&#4621;&#4821;&#4781;&#4725; &#4808;&#4848; <output value="/data/client_info/client_name"/>' &#4840;&#4723;&#4779;&#4634;&#4811; &#4840;&#4613;&#4781;&#4637;&#4755;  &#4829;&#4653;&#4829;&#4653; &#4768;&#4845;&#4904;&#4632;&#4653;&#4637;&#4961;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="notification_info-label">
+						<value>### &#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4824;&#4896;&#4691;&#4616;&#4622; (&#4829;&#4627;&#4830;) &#4709;&#4899;&#4821;&#4634; &#4896;&#4691;&#4634; &#4627;&#4704;&#4652;&#4723; &#4771;&#4709; &#4901;&#4821;&#4755; &#4899;&#4706;&#4843;  &#4779;&#4709; &#4755;&#4845; &#4720;&#4627;&#4779;&#4635;&#4845; /&#4720;&#4872;&#4621;&#4875;&#4619;&#4845;  &#4817;&#4848;&#4725;   &#4773;&#4841;&#4964;&#4961;&#4961; &#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4773;&#4825;&#4845; &#4755;&#4709;&#4726;&#4637; &#4829;&#4720;&#4632;&#4648;&#4929; &#4720;&#4872;&#4621;&#4872;&#4621;&#4722; &#4939;&#4845;&#4621; &#4829;&#4813;&#4656;&#4797; &#4773;&#4841; &#4773;&#4757;&#4720;&#4848;&#4771; &#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4850; &#4771;&#4648;&#4875;&#4874;&#4933;&#4778;/&#4779;</value>
+						<value form="image">jr://file/commcare/image/data/notification_info-kzdv91.png</value>
+						<value form="markdown">### &#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4824;&#4896;&#4691;&#4616;&#4622; (&#4829;&#4627;&#4830;) &#4709;&#4899;&#4821;&#4634; &#4896;&#4691;&#4634; &#4627;&#4704;&#4652;&#4723; &#4771;&#4709; &#4901;&#4821;&#4755; &#4899;&#4706;&#4843;  &#4779;&#4709; &#4755;&#4845; &#4720;&#4627;&#4779;&#4635;&#4845; /&#4720;&#4872;&#4621;&#4875;&#4619;&#4845;  &#4817;&#4848;&#4725;   &#4773;&#4841;&#4964;&#4961;&#4961; &#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4773;&#4825;&#4845; &#4755;&#4709;&#4726;&#4637; &#4829;&#4720;&#4632;&#4648;&#4929; &#4720;&#4872;&#4621;&#4872;&#4621;&#4722; &#4939;&#4845;&#4621; &#4829;&#4813;&#4656;&#4797; &#4773;&#4841; &#4773;&#4757;&#4720;&#4848;&#4771; &#4773;&#4826; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4850; &#4771;&#4648;&#4875;&#4874;&#4933;&#4778;/&#4779;</value>
+					</text>
+					<text id="display_warning/due_for_anc-label">
+						<value>&#4632;&#4896;&#4757;&#4672;&#4693;&#4723;&#4961; &#4720;&#4627;&#4779;&#4634;&#4725; &#4771;&#4709;&#4826; &#4624;&#4826; &#4877;&#4828;  &#4781;&#4725;&#4725;&#4621; &#4677;&#4853;&#4634; &#4808;&#4618;&#4853; &#4961;<output value="/data/pregnancy_pp_case/next_visit_num"/> &#4624;&#4826; &#4773;&#4841;&#4961;&#4961;</value>
+					</text>
+					<text id="display_warning/due_for_delivery-label">
+						<value>&#4632;&#4896;&#4757;&#4672;&#4693;&#4723;&#4961; &#4773;&#4827; &#4720;&#4627;&#4779;&#4634;&#4725; &#4725;&#4808;&#4621;&#4848;&#4617; &#4877;&#4828; &#4704;&#4930;&#4625; &#4771;&#4622;</value>
+					</text>
+					<text id="display_warning/due_for_pnc-label">
+						<value>&#4632;&#4896;&#4757;&#4672;&#4693;&#4723;&#4961; &#4773;&#4827; &#4720;&#4627;&#4779;&#4634;&#4725;  &#4771;&#4709;&#4826; &#4624;&#4826; &#4773;&#4811;&#4757; &#4755;&#4845; &#4853;&#4629;&#4650; &#4808;&#4618;&#4853;  <output value="/data/pregnancy_pp_case/next_visit_num - 5"/> &#4877;&#4828;&#4771; &#4704;&#4930;&#4625; &#4773;&#4841; .</value>
+					</text>
+					<text id="display_warning/warning-label">
+						<value>&#4773;&#4826; &#4755;&#4845; &#4632;&#4941;&#4616;&#4898; &#4632;&#4621;&#4773;&#4797;&#4722; &#4637;&#4813;&#4659;&#4797; &#4677;&#4853;&#4634; &#4624;&#4826; &#4771;&#4709; &#4781;&#4725;&#4725;&#4621; &#4677;&#4853;&#4632; &#4808;&#4618;&#4853;  1 &#4829;&#4771;&#4720;&#4813; &#4829;&#4653;&#4829;&#4653; &#4632;&#4648;&#4851;&#4773;&#4723; (&#4627;&#4704;&#4652;&#4723;) &#4845;&#4725;&#4781;&#4774; &#4773;&#4841;&#4964;</value>
+					</text>
+					<text id="confirmation/confirm-label">
+						<value>&#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4755;&#4709;&#4722; &#4755;&#4845; &#4848;&#4757;&#4704;&#4763; &#4939;&#4845;&#4621; &#4725;&#4848;&#4621;&#4841; &#4850;&#4794;</value>
+						<value form="markdown">&#4773;&#4826; &#4627;&#4704;&#4652;&#4723; &#4755;&#4709;&#4722; &#4755;&#4845; &#4848;&#4757;&#4704;&#4763; &#4939;&#4845;&#4621; &#4725;&#4848;&#4621;&#4841; &#4850;&#4794;</value>
+					</text>
+					<text id="confirmation/confirm-confirmed-label">
+						<value>&#4720;&#4648;&#4875;&#4874;&#4929;</value>
+						<value form="markdown">&#4720;&#4648;&#4875;&#4874;&#4929;</value>
+					</text>
+					<text id="confirmation/information-label">
+						<value>Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC 1 Action Card Contains Information about this Client:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+						<value form="markdown">Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC 1 Action Card Contains Information about this Client:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+					</text>
+					<text id="confirmation/notification_contents-label">
+						<value>The Action Card also contains information about her pregnancy, vaccinations, medications and medical history. This information will be added to the selected client's file upon confirmation.</value>
+					</text>
+					<text id="confirmation/anc1_date_eth-label">
+						<value>* &#4677;&#4853;&#4634; &#4808;&#4618;&#4853; 1 &#4821;&#4616;&#4725;: <output value="/data/load_for_display/anc1_date_eth"/></value>
+						<value form="markdown">* &#4677;&#4853;&#4634; &#4808;&#4618;&#4853; 1 &#4821;&#4616;&#4725;: <output value="/data/load_for_display/anc1_date_eth"/></value>
+					</text>
+					<text id="confirmation/edd_eth-label">
+						<value>* &#4725;&#4933;&#4706;&#4725; &#4829;&#4877;&#4704;&#4648;&#4617; &#4821;&#4616;&#4725; &#4808;&#4618;&#4853;: <output value="/data/load_for_display/edd_eth"/></value>
+						<value form="markdown">* &#4725;&#4933;&#4706;&#4725; &#4829;&#4877;&#4704;&#4648;&#4617; &#4821;&#4616;&#4725; &#4808;&#4618;&#4853;: <output value="/data/load_for_display/edd_eth"/></value>
+					</text>
+					<text id="confirmation/anc1_gestional_age-label">
+						<value>* &#4677;&#4853;&#4634; &#4808;&#4618;&#4853; 1 &#4821;&#4853;&#4632;: <output value="/data/load_for_display/anc1_gestational_age"/> &#4656;&#4633;&#4755;&#4725;</value>
+						<value form="markdown">* &#4677;&#4853;&#4634; &#4808;&#4618;&#4853; 1 &#4821;&#4853;&#4632;: <output value="/data/load_for_display/anc1_gestational_age"/> &#4656;&#4633;&#4755;&#4725;</value>
+					</text>
+					<text id="confirmation/anc1_weight-label">
+						<value>* &#4781;&#4757;&#4781;&#4757; &#4677;&#4853;&#4634; &#4808;&#4618;&#4853; 1 &#4781;&#4709;&#4848;&#4725;: <output value="/data/load_for_display/anc1_weight"/></value>
+						<value form="markdown">* &#4781;&#4757;&#4781;&#4757; &#4677;&#4853;&#4634; &#4808;&#4618;&#4853; 1 &#4781;&#4709;&#4848;&#4725;: <output value="/data/load_for_display/anc1_weight"/></value>
+					</text>
+					<text id="confirmation/anc1_folic_acid_given-label">
+						<value>* &#4781;&#4757;&#4781;&#4757; &#4677;&#4853;&#4634; &#4808;&#4618;&#4853; 1  &#4942;&#4618;&#4781; &#4771;&#4658;&#4853;: <output value="/data/load_for_display/anc1_folic_acid_given"/></value>
+						<value form="markdown">* &#4781;&#4757;&#4781;&#4757; &#4677;&#4853;&#4634; &#4808;&#4618;&#4853; 1  &#4942;&#4618;&#4781; &#4771;&#4658;&#4853;: <output value="/data/load_for_display/anc1_folic_acid_given"/></value>
+					</text>
+					<text id="confirmation/tt1_date_eth-label">
+						<value>* &#4722;&#4722;1 &#4821;&#4616;&#4725;: <output value="/data/load_for_display/tt1_date_eth"/></value>
+						<value form="markdown">* &#4722;&#4722;1 &#4821;&#4616;&#4725;: <output value="/data/load_for_display/tt1_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt2_date_eth-label">
+						<value>* &#4722;&#4722;2 &#4821;&#4616;&#4725;: <output value="/data/load_for_display/tt2_date_eth"/></value>
+						<value form="markdown">* &#4722;&#4722;2 &#4821;&#4616;&#4725;: <output value="/data/load_for_display/tt2_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt3_date_eth-label">
+						<value>* &#4722;&#4722;3 &#4821;&#4616;&#4725;: <output value="/data/load_for_display/tt3_date_eth"/></value>
+						<value form="markdown">* &#4722;&#4722;3 &#4821;&#4616;&#4725;: <output value="/data/load_for_display/tt3_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt4_date_eth-label">
+						<value>* &#4722;&#4722;4 &#4821;&#4616;&#4725;: <output value="/data/load_for_display/tt4_date_eth"/></value>
+						<value form="markdown">* &#4722;&#4722;4 &#4821;&#4616;&#4725;: <output value="/data/load_for_display/tt4_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt5_date_eth-label">
+						<value>* &#4722;&#4722;5 &#4821;&#4616;&#4725;: <output value="/data/load_for_display/tt5_date_eth"/></value>
+						<value form="markdown">* &#4722;&#4722;5 &#4821;&#4616;&#4725;: <output value="/data/load_for_display/tt5_date_eth"/></value>
+					</text>
+					<text id="confirmation/scheduled_date_anc2_eth-label">
+						<value>* &#4694;&#4928;&#4654; &#4781;&#4757;&#4781;&#4757; &#4677;&#4853;&#4634; &#4808;&#4618;&#4853; 2 : <output value="/data/load_for_display/scheduled_date_anc2_eth"/></value>
+						<value form="markdown">* &#4694;&#4928;&#4654; &#4781;&#4757;&#4781;&#4757; &#4677;&#4853;&#4634; &#4808;&#4618;&#4853; 2 : <output value="/data/load_for_display/scheduled_date_anc2_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt1/display-label">
+						<value>&#4722;&#4722;1 &#4781;&#4725;&#4707;&#4725;&#4961;
+
+&#4829;&#4688;&#4648;&#4704; &#4821;&#4616;&#4725;: <output value="/data/tt_vaccinations/load_client/tt1_date_eth"/>
+
+&#4627;&#4704;&#4652;&#4723;: <output value="/data/tt_vaccinations/load_notification/tt1_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-label">
+						<value>&#4941;&#4621;&#4621;&#4845;&#4752;&#4725; &#4824;&#4616;&#4814;&#4637; &#4768;&#4616;&#4809;&#4964;&#4773;&#4826; &#4755;&#4845; &#4672;&#4648;&#4707; &#4821;&#4616;&#4725; &#4824;&#4622; &#4637;&#4661;&#4826; &#4771;&#4709; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4637;&#4661;&#4824;&#4622; &#4781;&#4725;&#4779;&#4773; &#4854; &#4725;&#4848;&#4618;?</value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-yes-label">
+						<value>&#4773;&#4808;</value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-no-label">
+						<value>&#4771;&#4845;&#4939;&#4621;</value>
+					</text>
+					<text id="tt_vaccinations/tt2/display-label">
+						<value>&#4722;&#4722;2 &#4781;&#4725;&#4707;&#4725;
+
+&#4829;&#4688;&#4648;&#4704; &#4821;&#4616;&#4725;: <output value="/data/tt_vaccinations/load_client/tt2_date_eth"/>
+
+&#4627;&#4704;&#4652;&#4723;: <output value="/data/tt_vaccinations/load_notification/tt2_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt3/display-label">
+						<value>&#4722;&#4722;3 &#4781;&#4725;&#4707;&#4725;
+
+&#4755;&#4845; &#4672;&#4648;&#4707; &#4821;&#4616;&#4725;: <output value="/data/tt_vaccinations/load_client/tt3_date_eth"/>
+
+&#4627;&#4704;&#4652;&#4723;: <output value="/data/tt_vaccinations/load_notification/tt3_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt3/add_date-label">
+						<value>&#4941;&#4621;&#4621;&#4845;&#4752;&#4725; &#4824;&#4616;&#4814;&#4637; &#4768;&#4616;&#4809;&#4964;&#4773;&#4826; &#4755;&#4845; &#4672;&#4648;&#4707; &#4821;&#4616;&#4725; &#4824;&#4622; &#4637;&#4661;&#4826; &#4771;&#4709; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4637;&#4661;&#4824;&#4622; &#4776;&#4693;&#4840;&#4653; &#4854; &#4725;&#4848;&#4618;?</value>
+					</text>
+					<text id="tt_vaccinations/tt4/display-label">
+						<value>&#4722;&#4722;4 &#4781;&#4725;&#4707;&#4725;
+
+&#4755;&#4845; &#4672;&#4648;&#4707; &#4821;&#4616;&#4725;: <output value="/data/tt_vaccinations/load_client/tt4_date_eth"/>
+
+&#4627;&#4704;&#4652;&#4723;: <output value="/data/tt_vaccinations/load_notification/tt4_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt4/add_date-label">
+						<value>&#4941;&#4621;&#4621;&#4845;&#4752;&#4725; &#4824;&#4616;&#4814;&#4637; &#4768;&#4616;&#4809;&#4964;&#4773;&#4826; &#4755;&#4845; &#4672;&#4648;&#4707; &#4821;&#4616;&#4725; &#4824;&#4622; &#4637;&#4661;&#4826; &#4771;&#4709; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4637;&#4661;&#4824;&#4622; &#4776;&#4693;&#4840;&#4653; &#4854; &#4725;&#4848;&#4618;?</value>
+					</text>
+					<text id="tt_vaccinations/tt5/display-label">
+						<value>&#4722;&#4722;5 &#4781;&#4725;&#4707;&#4725;
+&#4755;&#4845; &#4672;&#4648;&#4707; &#4821;&#4616;&#4725;: <output value="/data/tt_vaccinations/load_client/tt5_date_eth"/>
+
+&#4627;&#4704;&#4652;&#4723;: <output value="/data/tt_vaccinations/load_notification/tt5_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt5/add_date-label">
+						<value>&#4941;&#4621;&#4621;&#4845;&#4752;&#4725; &#4824;&#4616;&#4814;&#4637; &#4768;&#4616;&#4809;&#4964;&#4773;&#4826; &#4755;&#4845; &#4672;&#4648;&#4707; &#4821;&#4616;&#4725; &#4824;&#4622; &#4637;&#4661;&#4826; &#4771;&#4709; &#4771;&#4781;&#4669;&#4757; &#4779;&#4653;&#4853; &#4637;&#4661;&#4824;&#4622; &#4776;&#4693;&#4840;&#4653; &#4854; &#4725;&#4848;&#4618;?</value>
+					</text>
+					<text id="tt_vaccinations/tt5/add_date-no-label">
+						<value>&#4771;&#4845;&#4939;&#4621;</value>
+					</text>
+					<text id="display_confirmed-label">
+						<value>&#4632;&#4941;&#4616;&#4898; &#4632;&#4621;&#4773;&#4781;&#4722; &#4829;&#4809;&#4661;&#4782; <output value="/data/client_info/client_name"/> &#4768;&#4709; &#4755;&#4845; &#4629;&#4633;&#4637; &#4723;&#4650;&#4781; &#4773;&#4841;&#4961;&#4961;</value>
+					</text>
+					<text id="display_skipped-label">
+						<value>&#4632;&#4941;&#4616;&#4898; &#4632;&#4621;&#4773;&#4781;&#4722; &#4768;&#4845;&#4809;&#4661;&#4781;&#4757;  <output value="/data/client_info/client_name"/> &#4768;&#4709; &#4755;&#4845; &#4629;&#4633;&#4637; &#4723;&#4650;&#4781; &#4773;&#4841;&#4961;&#4961;</value>
+						<value form="markdown">&#4632;&#4941;&#4616;&#4898; &#4632;&#4621;&#4773;&#4781;&#4722; &#4768;&#4845;&#4809;&#4661;&#4781;&#4757;  <output value="/data/client_info/client_name"/> &#4768;&#4709; &#4755;&#4845; &#4629;&#4633;&#4637; &#4723;&#4650;&#4781; &#4773;&#4841;&#4961;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4773;&#4722; &#4677;&#4901;&#4818; &#4633;&#4617;&#4773; &#4757;&#4633;&#4617;&#4773; &#4720;&#4635;&#4617;&#4769; &#4773;&#4841;&#4961;&#4961;
+
+&#4773;&#4722; &#4677;&#4901;&#4818; &#4757;&#4637;&#4621;&#4768;&#4781; &#4709;&#4619;&#4821;&#4618; &#4709;&#4840;&#4635;&#4757; &#4872;&#4933; &#4824;&#4622; &#4678;&#4931;&#4621; &#4629;&#4709;&#4650; &#4896;&#4809;&#4677;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="notification_info-label">
+						<value>### kaardiin Ergaa dabarsituun kun oddefannoo baayee barbaachisaa yeroo tajaajilaman buufata fayyaa dhuufu qabudhaa kaanaaf erga mirkana'een booda faayilii tajaajilamatti dabali</value>
+						<value form="image">jr://file/commcare/image/data/notification_info-kzdv91.png</value>
+						<value form="markdown">### kaardiin Ergaa dabarsituun kun oddefannoo baayee barbaachisaa yeroo tajaajilaman buufata fayyaa dhuufu qabudhaa kaanaaf erga mirkana'een booda faayilii tajaajilamatti dabali</value>
+					</text>
+					<text id="display_warning/due_for_anc-label">
+						<value>Akkeekachisa:yaalamituu yeroon hordoffin daa'umsa dura ishee ga'e/amma <output value="/data/pregnancy_pp_case/next_visit_num"/>.</value>
+					</text>
+					<text id="display_warning/due_for_delivery-label">
+						<value>akkeekachisa:yaalamituu yeroon da'umsaa ishee ga'e/amma</value>
+					</text>
+					<text id="display_warning/due_for_pnc-label">
+						<value>Akkeekachisa:yaalamituu yeroon hordoffin daa'umsa booda ishee ga'e/amma<output value="/data/pregnancy_pp_case/next_visit_num - 5"/>.</value>
+					</text>
+					<text id="display_warning/warning-label">
+						<value>ergaa dabarsitu kana assi keessattii dabaluun odeefannoo hordoffii da'umsa 1 ture dura bakka ni buusa</value>
+					</text>
+					<text id="confirmation/confirm-label">
+						<value>Confirm that you want to add this information to the client's file.</value>
+						<value form="markdown">Confirm that you want to add this information to the client's file.</value>
+					</text>
+					<text id="confirmation/confirm-confirmed-label">
+						<value>** Mirkaneessi **</value>
+						<value form="markdown">** Mirkaneessi **</value>
+					</text>
+					<text id="confirmation/information-label">
+						<value>Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC 1 Action Card Contains Information about this Client:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+						<value form="markdown">Client Information:
+
+* Name: <output value="/data/client_info/client_name"/>
+* Head of Household: <output value="/data/client_info/family_name"/>
+* MRN: <output value="/data/client_info/mrn"/>
+* Age: <output value="/data/client_info/age_years"/> years
+* Village: <output value="/data/client_info/village_name"/>
+* Phone: <output value="/data/client_info/local_phone_number"/>
+
+ANC 1 Action Card Contains Information about this Client:
+
+* Name: <output value="/data/notification_client_info/client_name"/>
+* Head of Household: <output value="/data/notification_client_info/family_name"/>
+* MRN: <output value="/data/notification_client_info/mrn"/>
+* Age: <output value="/data/notification_client_info/age_years"/> years
+* Village: <output value="/data/notification_client_info/village_name"/>
+* Phone: <output value="/data/notification_client_info/local_phone_number"/></value>
+					</text>
+					<text id="confirmation/notification_contents-label">
+						<value>'Action card'n odefannoo wa'ee ulfaa,talaalli,dawwaa fi seenaa meeikaala of keessaa qaba. Oddefannoon kun faayilii tajaajilama filamee keessaa mirkaanessuuf gala</value>
+					</text>
+					<text id="confirmation/anc1_date_eth-label">
+						<value>* guyyaa hordoffi da'umsaa duraa 1: <output value="/data/load_for_display/anc1_date_eth"/></value>
+						<value form="markdown">* guyyaa hordoffi da'umsaa duraa 1: <output value="/data/load_for_display/anc1_date_eth"/></value>
+					</text>
+					<text id="confirmation/edd_eth-label">
+						<value>* Tilmaama guyyaa da'umsaa: <output value="/data/load_for_display/edd_eth"/></value>
+						<value form="markdown">* Tilmaama guyyaa da'umsaa: <output value="/data/load_for_display/edd_eth"/></value>
+					</text>
+					<text id="confirmation/anc1_gestional_age-label">
+						<value>* ji'otaa ulfaa hordoffii da'umsa dura 1: <output value="/data/load_for_display/anc1_gestational_age"/> Torbeen</value>
+						<value form="markdown">* ji'otaa ulfaa hordoffii da'umsa dura 1: <output value="/data/load_for_display/anc1_gestational_age"/> Torbeen</value>
+					</text>
+					<text id="confirmation/anc1_weight-label">
+						<value>* haadhoolee yeroo hordoffii da'umsaa dura 1 ulfaatin isaan safaramee: <output value="/data/load_for_display/anc1_weight"/></value>
+						<value form="markdown">* haadhoolee yeroo hordoffii da'umsaa dura 1 ulfaatin isaan safaramee: <output value="/data/load_for_display/anc1_weight"/></value>
+					</text>
+					<text id="confirmation/anc1_folic_acid_given-label">
+						<value>* haadhoolee yeroo hordoffii da'umsaa dura 1 fooliik asidii fudhatan: <output value="/data/load_for_display/anc1_folic_acid_given"/></value>
+						<value form="markdown">* haadhoolee yeroo hordoffii da'umsaa dura 1 fooliik asidii fudhatan: <output value="/data/load_for_display/anc1_folic_acid_given"/></value>
+					</text>
+					<text id="confirmation/tt1_date_eth-label">
+						<value>* Guyyaa talaalli manjalloo 1: <output value="/data/load_for_display/tt1_date_eth"/></value>
+						<value form="markdown">* Guyyaa talaalli manjalloo 1: <output value="/data/load_for_display/tt1_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt2_date_eth-label">
+						<value>* Guyyaa talaalli manjalloo 2: <output value="/data/load_for_display/tt2_date_eth"/></value>
+						<value form="markdown">* Guyyaa talaalli manjalloo 2: <output value="/data/load_for_display/tt2_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt3_date_eth-label">
+						<value>* Guyyaa talaalli manjalloo 3 : <output value="/data/load_for_display/tt3_date_eth"/></value>
+						<value form="markdown">* Guyyaa talaalli manjalloo 3 : <output value="/data/load_for_display/tt3_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt4_date_eth-label">
+						<value>* Guyyaa talaalli manjalloo 4: <output value="/data/load_for_display/tt4_date_eth"/></value>
+						<value form="markdown">* Guyyaa talaalli manjalloo 4: <output value="/data/load_for_display/tt4_date_eth"/></value>
+					</text>
+					<text id="confirmation/tt5_date_eth-label">
+						<value>* Guyyaa talaalli manjalloo 5: <output value="/data/load_for_display/tt5_date_eth"/></value>
+						<value form="markdown">* Guyyaa talaalli manjalloo 5: <output value="/data/load_for_display/tt5_date_eth"/></value>
+					</text>
+					<text id="confirmation/scheduled_date_anc2_eth-label">
+						<value>* Beelama HDD 2: <output value="/data/load_for_display/scheduled_date_anc2_eth"/></value>
+						<value form="markdown">* Beelama HDD 2: <output value="/data/load_for_display/scheduled_date_anc2_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt1/display-label">
+						<value>Talaalli manjalloo 1
+
+yeroo amma: <output value="/data/tt_vaccinations/load_client/tt1_date_eth"/>
+
+yaadannoo: <output value="/data/tt_vaccinations/load_notification/tt1_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-label">
+						<value>Garaagarum guyyaa akishiin kardii waliin tokko waan hin taaneef guyyaa akishiin kaardii irraa jirutti jijjiru barbaaddaa</value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-yes-label">
+						<value>eeyyeen</value>
+					</text>
+					<text id="tt_vaccinations/tt1/add_date-no-label">
+						<value>miti</value>
+					</text>
+					<text id="tt_vaccinations/tt2/display-label">
+						<value>Talaalli manjalloo 2
+
+yeroo amma: <output value="/data/tt_vaccinations/load_client/tt2_date_eth"/>
+
+yaadannoo: <output value="/data/tt_vaccinations/load_notification/tt2_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt3/display-label">
+						<value>Talaalli manjalloo 3
+
+yeroo amma: <output value="/data/tt_vaccinations/load_client/tt3_date_eth"/>
+
+yaadannoo: <output value="/data/tt_vaccinations/load_notification/tt3_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt3/add_date-label">
+						<value>There are discrepancies. Do you want to overwrite the current date with the one from the action card?</value>
+					</text>
+					<text id="tt_vaccinations/tt4/display-label">
+						<value>Talaalli manjalloo 4
+
+yeroo amma: <output value="/data/tt_vaccinations/load_client/tt4_date_eth"/>
+
+yaadannoo: <output value="/data/tt_vaccinations/load_notification/tt4_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt4/add_date-label">
+						<value>Garaagarum guyyaa akishiin kardii waliin tokko waan hin taaneef guyyaa akishiin kaardii irraa jirutti jijjiru barbaaddaa</value>
+					</text>
+					<text id="tt_vaccinations/tt5/display-label">
+						<value>Talaalli manjalloo 5
+
+yeroo amma: <output value="/data/tt_vaccinations/load_client/tt5_date_eth"/>
+
+yaadannoo: <output value="/data/tt_vaccinations/load_notification/tt5_date_eth"/></value>
+					</text>
+					<text id="tt_vaccinations/tt5/add_date-label">
+						<value>Garaagarum guyyaa akishiin kardii waliin tokko waan hin taaneef guyyaa akishiin kaardii irraa jirutti jijjiru barbaaddaa</value>
+					</text>
+					<text id="tt_vaccinations/tt5/add_date-no-label">
+						<value>Miti</value>
+					</text>
+					<text id="display_confirmed-label">
+						<value>Ergaan beekisisa kan dabalamu <output value="/data/client_info/client_name"/>'s seenaa dhukkuba yaalama irratti.</value>
+					</text>
+					<text id="display_skipped-label">
+						<value>ergaan beekisisaa  <output value="/data/client_info/client_name"/>'s seenaa dhukkuba yaalama irratti hin dabalamu.</value>
+						<value form="markdown">ergaan beekisisaa  <output value="/data/client_info/client_name"/>'s seenaa dhukkuba yaalama irratti hin dabalamu.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki guutuma guututti guutame unka kan erguuf malattoo magarsaa kan kara bukkee harka mirgaa olii jiru xuqii.</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt5_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt5_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_client_info/local_phone_number" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/local_phone_number"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/anc1_location" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/anc1_location"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/anc1_report_week" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/anc1_report_week"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/vaginal_bleeding" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/vaginal_bleeding"/><setvalue event="xforms-ready" ref="/data/load_for_display/tt3_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt3_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/prev_cs" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/prev_cs"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt5_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt5_date"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/anc1_gestational_age" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/anc1_gestational_age"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/scheduled_date_anc2" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/scheduled_date_anc2"/><setvalue event="xforms-ready" ref="/data/notification_client_info/mrn" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/mrn"/><setvalue event="xforms-ready" ref="/data/load_for_display/tt5_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt5_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_client_info/age_years" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/age_years"/><setvalue event="xforms-ready" ref="/data/notification_case/basic_info/mrn" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/mrn"/><setvalue event="xforms-ready" ref="/data/load_for_display/tt1_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt1_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/prev_stillbirth_loss" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/prev_stillbirth_loss"/><setvalue event="xforms-ready" ref="/data/notification_case/scheduling/load_notification/next_visit_location_hc" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/next_visit_location_hc"/><setvalue event="xforms-ready" ref="/data/notification_case/scheduling/load_notification/next_visit_date_hc_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/next_visit_date_hc_eth"/><setvalue event="xforms-ready" ref="/data/load_for_display/anc1_gestational_age" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/anc1_gestational_age"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/prev_high_birth_weight" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/prev_high_birth_weight"/><setvalue event="xforms-ready" ref="/data/load_for_display/edd_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/edd_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/hiv_details/hiv_positive" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/hiv_positive"/><setvalue event="xforms-ready" ref="/data/load_for_display/tt4_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt4_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_client_info/family_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/family_name"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/edd_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/edd_eth"/><setvalue event="xforms-ready" ref="/data/notification_client_info/village_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/village"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/prev_low_birth_weight" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/prev_low_birth_weight"/><setvalue event="xforms-ready" ref="/data/load_for_display/anc1_weight" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/anc1_weight"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/pelvic_mass" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/pelvic_mass"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/anc1_report_month" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/anc1_report_month"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/parity" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/parity"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/substance_abuse" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/substance_abuse"/><setvalue event="xforms-ready" ref="/data/notification_case/scheduling/load_notification/next_visit_date_hc" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/next_visit_date_hc"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt2_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt2_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/renal_disease" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/renal_disease"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/location_anc2" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/location_anc2"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt3_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt3_date"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/prev_hypertension_eclampsia" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/prev_hypertension_eclampsia"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/scheduled_date_anc2_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/scheduled_date_anc2_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/anc1_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/anc1_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/prev_3_spontaneous_abortions" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/prev_3_spontaneous_abortions"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/age_under_16" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/age_under_16"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/severe_medical_disease" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/severe_medical_disease"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/anc1_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/anc1_date"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt2_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt2_date"/><setvalue event="xforms-ready" ref="/data/notification_case/hiv_details/hiv_treatment_initiated" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/hiv_treatment_initiated"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/rh_isoimmunization" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/rh_isoimmunization"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/gravidity" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/gravidity"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt4_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt4_date"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/chronic_hypertension" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/chronic_hypertension"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/anc1_folic_acid_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/anc1_folic_acid_given"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt4_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt4_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/scheduling/load_notification/next_visit_num_hc" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/next_visit_num_hc"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/cardiac_disease" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/cardiac_disease"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/diabetes_mellitus" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/diabetes_mellitus"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt1_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt1_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_client_info/client_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/client_name"/><setvalue event="xforms-ready" ref="/data/load_for_display/anc1_folic_acid_given" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/anc1_folic_acid_given"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt3_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt3_date_eth"/><setvalue event="xforms-ready" ref="/data/load_for_display/tt2_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt2_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/diastolic_bp_over_90" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/diastolic_bp_over_90"/><setvalue event="xforms-ready" ref="/data/load_for_display/anc1_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/anc1_date_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/anc1_weight" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/anc1_weight"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_notification/tt1_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/tt1_date"/><setvalue event="xforms-ready" ref="/data/load_for_display/scheduled_date_anc2_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/scheduled_date_anc2_eth"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/edd" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/edd"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/age_over_40" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/age_over_40"/><setvalue event="xforms-ready" ref="/data/notification_case/anc1_details/multiple_pregnancy" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/multiple_pregnancy"/><setvalue event="xforms-ready" ref="/data/notification_case/hiv_details/hiv_tested" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_notification_0]/hiv_tested"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_load_notification_0/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_load_notification_0/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_load_notification_0" nodeset="/data/case_load_notification_0/case/@case_id"/><bind nodeset="/data/case_load_notification_0/case/close" relevant="/data/confirmation/confirm = 'confirmed'"/><setvalue event="xforms-ready" ref="/data/client_info/mrn" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/mrn"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_client/tt3_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/tt3_date_eth"/><setvalue event="xforms-ready" ref="/data/client_info/dob" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/dob"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_client/tt2_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/tt2_date_eth"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_client/tt4_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/tt4_date_eth"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_client/tt1_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/tt1_date_eth"/><setvalue event="xforms-ready" ref="/data/client_info/client_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/case_name"/><setvalue event="xforms-ready" ref="/data/tt_vaccinations/load_client/tt5_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/tt5_date_eth"/><setvalue event="xforms-ready" ref="/data/client_info/family_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/family_name"/><setvalue event="xforms-ready" ref="/data/client_info/village_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/village_name"/><setvalue event="xforms-ready" ref="/data/client_info/local_phone_number" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_client_3]/local_phone_number"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_load_client_3/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_load_client_3/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_load_client_3" nodeset="/data/case_load_client_3/case/@case_id"/><bind calculate="/data/notification_case/hiv_details/hiv_positive" nodeset="/data/case_load_client_3/case/update/hiv_positive" relevant="count(/data/notification_case/hiv_details/hiv_positive) &gt; 0"/><bind calculate="/data/notification_case/hiv_details/hiv_tested" nodeset="/data/case_load_client_3/case/update/hiv_tested" relevant="count(/data/notification_case/hiv_details/hiv_tested) &gt; 0"/><bind calculate="/data/notification_case/hiv_details/hiv_treatment_initiated" nodeset="/data/case_load_client_3/case/update/hiv_treatment_initiated" relevant="count(/data/notification_case/hiv_details/hiv_treatment_initiated) &gt; 0"/><bind calculate="/data/notification_case/basic_info/mrn" nodeset="/data/case_load_client_3/case/update/mrn" relevant="count(/data/notification_case/basic_info/mrn) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_date_hc" nodeset="/data/case_load_client_3/case/update/ppp_next_visit_date_hc" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_date_hc) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_date_hc_eth" nodeset="/data/case_load_client_3/case/update/ppp_next_visit_date_hc_eth" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_date_hc_eth) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_date_hp" nodeset="/data/case_load_client_3/case/update/ppp_next_visit_date_hp" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_date_hp) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_date_hp_eth" nodeset="/data/case_load_client_3/case/update/ppp_next_visit_date_hp_eth" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_date_hp_eth) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_location_hc" nodeset="/data/case_load_client_3/case/update/ppp_next_visit_location_hc" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_location_hc) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_location_hp" nodeset="/data/case_load_client_3/case/update/ppp_next_visit_location_hp" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_location_hp) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_num_hc" nodeset="/data/case_load_client_3/case/update/ppp_next_visit_num_hc" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_num_hc) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_num_hp" nodeset="/data/case_load_client_3/case/update/ppp_next_visit_num_hp" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_num_hp) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt1_date" nodeset="/data/case_load_client_3/case/update/tt1_date" relevant="count(/data/tt_vaccinations/final/tt1_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt1_date_eth" nodeset="/data/case_load_client_3/case/update/tt1_date_eth" relevant="count(/data/tt_vaccinations/final/tt1_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt2_date" nodeset="/data/case_load_client_3/case/update/tt2_date" relevant="count(/data/tt_vaccinations/final/tt2_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt2_date_eth" nodeset="/data/case_load_client_3/case/update/tt2_date_eth" relevant="count(/data/tt_vaccinations/final/tt2_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt3_date" nodeset="/data/case_load_client_3/case/update/tt3_date" relevant="count(/data/tt_vaccinations/final/tt3_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt3_date_eth" nodeset="/data/case_load_client_3/case/update/tt3_date_eth" relevant="count(/data/tt_vaccinations/final/tt3_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt4_date" nodeset="/data/case_load_client_3/case/update/tt4_date" relevant="count(/data/tt_vaccinations/final/tt4_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt4_date_eth" nodeset="/data/case_load_client_3/case/update/tt4_date_eth" relevant="count(/data/tt_vaccinations/final/tt4_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt5_date" nodeset="/data/case_load_client_3/case/update/tt5_date" relevant="count(/data/tt_vaccinations/final/tt5_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt5_date_eth" nodeset="/data/case_load_client_3/case/update/tt5_date_eth" relevant="count(/data/tt_vaccinations/final/tt5_date_eth) &gt; 0"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_num_hp" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/next_visit_num_hp"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_num_hc" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/next_visit_num_hc"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_location_hp" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/next_visit_location_hp"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_date_hc" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/next_visit_date_hc"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_date_hc_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/next_visit_date_hc_eth"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_date_hp_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/next_visit_date_hp_eth"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_location_hc" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/next_visit_location_hc"/><setvalue event="xforms-ready" ref="/data/pregnancy_pp_case/next_visit_date_hp" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4]/next_visit_date_hp"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_autoload_pregnancy_pp_4/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_autoload_pregnancy_pp_4/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_autoload_pregnancy_pp_4" nodeset="/data/case_autoload_pregnancy_pp_4/case/@case_id"/><bind calculate="/data/notification_case/anc1_details/age_over_40" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/age_over_40" relevant="count(/data/notification_case/anc1_details/age_over_40) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/age_under_16" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/age_under_16" relevant="count(/data/notification_case/anc1_details/age_under_16) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/anc1_date" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/anc1_date" relevant="count(/data/notification_case/anc1_details/anc1_date) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/anc1_date_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/anc1_date_eth" relevant="count(/data/notification_case/anc1_details/anc1_date_eth) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/anc1_folic_acid_given" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/anc1_folic_acid_given" relevant="count(/data/notification_case/anc1_details/anc1_folic_acid_given) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/anc1_gestational_age" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/anc1_gestational_age" relevant="count(/data/notification_case/anc1_details/anc1_gestational_age) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/anc1_location" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/anc1_location" relevant="count(/data/notification_case/anc1_details/anc1_location) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/anc1_report_month" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/anc1_report_month" relevant="count(/data/notification_case/anc1_details/anc1_report_month) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/anc1_report_week" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/anc1_report_week" relevant="count(/data/notification_case/anc1_details/anc1_report_week) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/anc1_weight" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/anc1_weight" relevant="count(/data/notification_case/anc1_details/anc1_weight) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/cardiac_disease" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/cardiac_disease" relevant="count(/data/notification_case/anc1_details/cardiac_disease) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/chronic_hypertension" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/chronic_hypertension" relevant="count(/data/notification_case/anc1_details/chronic_hypertension) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/diabetes_mellitus" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/diabetes_mellitus" relevant="count(/data/notification_case/anc1_details/diabetes_mellitus) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/diastolic_bp_over_90" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/diastolic_bp_over_90" relevant="count(/data/notification_case/anc1_details/diastolic_bp_over_90) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/edd" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/edd" relevant="count(/data/notification_case/anc1_details/edd) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/edd_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/edd_eth" relevant="count(/data/notification_case/anc1_details/edd_eth) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/gravidity" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/gravidity" relevant="count(/data/notification_case/anc1_details/gravidity) &gt; 0"/><bind calculate="/data/notification_case/hiv_details/hiv_positive" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/hiv_positive" relevant="count(/data/notification_case/hiv_details/hiv_positive) &gt; 0"/><bind calculate="/data/notification_case/hiv_details/hiv_tested" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/hiv_tested" relevant="count(/data/notification_case/hiv_details/hiv_tested) &gt; 0"/><bind calculate="/data/notification_case/hiv_details/hiv_treatment_initiated" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/hiv_treatment_initiated" relevant="count(/data/notification_case/hiv_details/hiv_treatment_initiated) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/location_anc2" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/location_anc2" relevant="count(/data/notification_case/anc1_details/location_anc2) &gt; 0"/><bind calculate="/data/notification_case/basic_info/mrn" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/mrn" relevant="count(/data/notification_case/basic_info/mrn) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/multiple_pregnancy" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/multiple_pregnancy" relevant="count(/data/notification_case/anc1_details/multiple_pregnancy) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_date_hc" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/next_visit_date_hc" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_date_hc) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_date_hc_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/next_visit_date_hc_eth" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_date_hc_eth) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_date_hp" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/next_visit_date_hp" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_date_hp) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_date_hp_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/next_visit_date_hp_eth" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_date_hp_eth) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_location_hc" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/next_visit_location_hc" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_location_hc) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_location_hp" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/next_visit_location_hp" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_location_hp) &gt; 0"/><bind calculate="/data/notification_case/scheduling/blank_hc/next_visit_num_hc" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/next_visit_num_hc" relevant="count(/data/notification_case/scheduling/blank_hc/next_visit_num_hc) &gt; 0"/><bind calculate="/data/notification_case/scheduling/save_hp/next_visit_num_hp" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/next_visit_num_hp" relevant="count(/data/notification_case/scheduling/save_hp/next_visit_num_hp) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/parity" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/parity" relevant="count(/data/notification_case/anc1_details/parity) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/pelvic_mass" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/pelvic_mass" relevant="count(/data/notification_case/anc1_details/pelvic_mass) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/prev_3_spontaneous_abortions" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/prev_3_spontaneous_abortions" relevant="count(/data/notification_case/anc1_details/prev_3_spontaneous_abortions) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/prev_cs" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/prev_cs" relevant="count(/data/notification_case/anc1_details/prev_cs) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/prev_high_birth_weight" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/prev_high_birth_weight" relevant="count(/data/notification_case/anc1_details/prev_high_birth_weight) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/prev_hypertension_eclampsia" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/prev_hypertension_eclampsia" relevant="count(/data/notification_case/anc1_details/prev_hypertension_eclampsia) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/prev_low_birth_weight" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/prev_low_birth_weight" relevant="count(/data/notification_case/anc1_details/prev_low_birth_weight) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/prev_stillbirth_loss" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/prev_stillbirth_loss" relevant="count(/data/notification_case/anc1_details/prev_stillbirth_loss) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/renal_disease" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/renal_disease" relevant="count(/data/notification_case/anc1_details/renal_disease) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/rh_isoimmunization" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/rh_isoimmunization" relevant="count(/data/notification_case/anc1_details/rh_isoimmunization) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/scheduled_date_anc2" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/scheduled_date_anc2" relevant="count(/data/notification_case/anc1_details/scheduled_date_anc2) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/scheduled_date_anc2_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/scheduled_date_anc2_eth" relevant="count(/data/notification_case/anc1_details/scheduled_date_anc2_eth) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/severe_medical_disease" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/severe_medical_disease" relevant="count(/data/notification_case/anc1_details/severe_medical_disease) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/substance_abuse" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/substance_abuse" relevant="count(/data/notification_case/anc1_details/substance_abuse) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt1_date" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt1_date" relevant="count(/data/tt_vaccinations/final/tt1_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt1_date_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt1_date_eth" relevant="count(/data/tt_vaccinations/final/tt1_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt2_date" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt2_date" relevant="count(/data/tt_vaccinations/final/tt2_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt2_date_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt2_date_eth" relevant="count(/data/tt_vaccinations/final/tt2_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt3_date" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt3_date" relevant="count(/data/tt_vaccinations/final/tt3_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt3_date_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt3_date_eth" relevant="count(/data/tt_vaccinations/final/tt3_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt4_date" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt4_date" relevant="count(/data/tt_vaccinations/final/tt4_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt4_date_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt4_date_eth" relevant="count(/data/tt_vaccinations/final/tt4_date_eth) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt5_date" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt5_date" relevant="count(/data/tt_vaccinations/final/tt5_date) &gt; 0"/><bind calculate="/data/tt_vaccinations/final/tt5_date_eth" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/tt5_date_eth" relevant="count(/data/tt_vaccinations/final/tt5_date_eth) &gt; 0"/><bind calculate="/data/notification_case/anc1_details/vaginal_bleeding" nodeset="/data/case_autoload_pregnancy_pp_4/case/update/vaginal_bleeding" relevant="count(/data/notification_case/anc1_details/vaginal_bleeding) &gt; 0"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<group ref="/data/client_info"/>
+		<group ref="/data/notification_client_info"/>
+		<group ref="/data/load_for_display"/>
+		<trigger ref="/data/notification_info" appearance="minimal">
+			<label ref="jr:itext('notification_info-label')"/>
+		</trigger>
+		<group ref="/data/display_warning" appearance="field-list">
+			<trigger ref="/data/display_warning/due_for_anc" appearance="minimal">
+				<label ref="jr:itext('display_warning/due_for_anc-label')"/>
+			</trigger>
+			<trigger ref="/data/display_warning/due_for_delivery" appearance="minimal">
+				<label ref="jr:itext('display_warning/due_for_delivery-label')"/>
+			</trigger>
+			<trigger ref="/data/display_warning/due_for_pnc" appearance="minimal">
+				<label ref="jr:itext('display_warning/due_for_pnc-label')"/>
+			</trigger>
+			<trigger ref="/data/display_warning/warning" appearance="minimal">
+				<label ref="jr:itext('display_warning/warning-label')"/>
+			</trigger>
+		</group>
+		<group ref="/data/confirmation" appearance="field-list">
+			<select ref="/data/confirmation/confirm">
+				<label ref="jr:itext('confirmation/confirm-label')"/>
+				<item>
+					<label ref="jr:itext('confirmation/confirm-confirmed-label')"/>
+					<value>confirmed</value>
+				</item>
+			</select>
+			<trigger ref="/data/confirmation/information" appearance="minimal">
+				<label ref="jr:itext('confirmation/information-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/notification_contents" appearance="minimal">
+				<label ref="jr:itext('confirmation/notification_contents-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/anc1_date_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/anc1_date_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/edd_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/edd_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/anc1_gestional_age" appearance="minimal">
+				<label ref="jr:itext('confirmation/anc1_gestional_age-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/anc1_weight" appearance="minimal">
+				<label ref="jr:itext('confirmation/anc1_weight-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/anc1_folic_acid_given" appearance="minimal">
+				<label ref="jr:itext('confirmation/anc1_folic_acid_given-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/tt1_date_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/tt1_date_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/tt2_date_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/tt2_date_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/tt3_date_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/tt3_date_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/tt4_date_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/tt4_date_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/tt5_date_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/tt5_date_eth-label')"/>
+			</trigger>
+			<trigger ref="/data/confirmation/scheduled_date_anc2_eth" appearance="minimal">
+				<label ref="jr:itext('confirmation/scheduled_date_anc2_eth-label')"/>
+			</trigger>
+		</group>
+		<group ref="/data/tt_vaccinations">
+			<group ref="/data/tt_vaccinations/load_notification"/>
+			<group ref="/data/tt_vaccinations/load_client"/>
+			<group ref="/data/tt_vaccinations/tt1" appearance="field-list">
+				<trigger ref="/data/tt_vaccinations/tt1/display" appearance="minimal">
+					<label ref="jr:itext('tt_vaccinations/tt1/display-label')"/>
+				</trigger>
+				<select1 ref="/data/tt_vaccinations/tt1/add_date">
+					<label ref="jr:itext('tt_vaccinations/tt1/add_date-label')"/>
+					<item>
+						<label ref="jr:itext('tt_vaccinations/tt1/add_date-yes-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('tt_vaccinations/tt1/add_date-no-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/tt_vaccinations/tt2" appearance="field-list">
+				<trigger ref="/data/tt_vaccinations/tt2/display" appearance="minimal">
+					<label ref="jr:itext('tt_vaccinations/tt2/display-label')"/>
+				</trigger>
+				<select1 ref="/data/tt_vaccinations/tt2/add_date">
+					<label ref="jr:itext('tt_vaccinations/tt1/add_date-label')"/>
+					<item>
+						<label ref="jr:itext('tt_vaccinations/tt1/add_date-yes-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('tt_vaccinations/tt1/add_date-no-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/tt_vaccinations/tt3" appearance="field-list">
+				<trigger ref="/data/tt_vaccinations/tt3/display" appearance="minimal">
+					<label ref="jr:itext('tt_vaccinations/tt3/display-label')"/>
+				</trigger>
+				<select1 ref="/data/tt_vaccinations/tt3/add_date">
+					<label ref="jr:itext('tt_vaccinations/tt3/add_date-label')"/>
+					<item>
+						<label ref="jr:itext('tt_vaccinations/tt1/add_date-yes-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('tt_vaccinations/tt1/add_date-no-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/tt_vaccinations/tt4" appearance="field-list">
+				<trigger ref="/data/tt_vaccinations/tt4/display" appearance="minimal">
+					<label ref="jr:itext('tt_vaccinations/tt4/display-label')"/>
+				</trigger>
+				<select1 ref="/data/tt_vaccinations/tt4/add_date">
+					<label ref="jr:itext('tt_vaccinations/tt4/add_date-label')"/>
+					<item>
+						<label ref="jr:itext('tt_vaccinations/tt1/add_date-yes-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('tt_vaccinations/tt1/add_date-no-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/tt_vaccinations/tt5" appearance="field-list">
+				<trigger ref="/data/tt_vaccinations/tt5/display" appearance="minimal">
+					<label ref="jr:itext('tt_vaccinations/tt5/display-label')"/>
+				</trigger>
+				<select1 ref="/data/tt_vaccinations/tt5/add_date">
+					<label ref="jr:itext('tt_vaccinations/tt5/add_date-label')"/>
+					<item>
+						<label ref="jr:itext('tt_vaccinations/tt1/add_date-yes-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('tt_vaccinations/tt5/add_date-no-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/tt_vaccinations/final"/>
+		</group>
+		<trigger ref="/data/display_confirmed" appearance="minimal">
+			<label ref="jr:itext('display_confirmed-label')"/>
+		</trigger>
+		<trigger ref="/data/display_skipped" appearance="minimal">
+			<label ref="jr:itext('display_skipped-label')"/>
+		</trigger>
+		<group ref="/data/pregnancy_pp_case"/>
+		<group ref="/data/notification_case">
+			<group ref="/data/notification_case/basic_info"/>
+			<group ref="/data/notification_case/anc1_details"/>
+			<group ref="/data/notification_case/hiv_details"/>
+			<group ref="/data/notification_case/scheduling">
+				<group ref="/data/notification_case/scheduling/load_notification"/>
+				<group ref="/data/notification_case/scheduling/save_hp"/>
+				<group ref="/data/notification_case/scheduling/blank_hc"/>
+			</group>
+		</group>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>
