@@ -1,0 +1,1210 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum" vellum:ignore="richText">
+	<h:head>
+		<h:title>Extra ANC Medications</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/f6260b73461ff33ae91d5ff950cbe9eb5f9ad5d4" uiVersion="1" version="915" name="Extra ANC Medications">
+					<notification_type/>
+					<notification_date/>
+					<notification_name/>
+					<display_client/>
+					<mrn>
+						<mrn>
+							<title/>
+							<number/>
+							<year/>
+							<mrn_validation_message/>
+							<current_year_eth_calc/>
+							<current_year_eth/>
+							<mrn/>
+						</mrn>
+						<display_mrn/>
+					</mrn>
+					<visit_info>
+						<visit_date/>
+						<midwife_name>
+							<list_length/>
+							<repeat jr:template="">
+								<element/>
+								<phone/>
+								<element_id/>
+							</repeat>
+							<choose_element/>
+							<midwife_name/>
+							<midwife_phone_number/>
+						</midwife_name>
+					</visit_info>
+					<medication_provided>
+						<folic_acid_tablets>
+							<extra_folic_acid_given/>
+							<extra_folic_acid_date/>
+						</folic_acid_tablets>
+						<tt_vaccinations>
+							<tt1>
+								<prev_completed/>
+								<prev_date_eth/>
+								<prev_date_unknown/>
+								<completed/>
+								<date_known/>
+								<date/>
+								<tt1_date/>
+							</tt1>
+							<tt2>
+								<prev_completed/>
+								<prev_date_eth/>
+								<prev_date_unknown/>
+								<completed/>
+								<date_known/>
+								<date/>
+								<tt2_date/>
+							</tt2>
+							<tt3>
+								<prev_completed/>
+								<prev_date_eth/>
+								<prev_date_unknown/>
+								<completed/>
+								<date_known/>
+								<date/>
+								<tt3_date/>
+							</tt3>
+							<tt4>
+								<prev_completed/>
+								<prev_date_eth/>
+								<prev_date_unknown/>
+								<completed/>
+								<date_known/>
+								<date/>
+								<tt4_date/>
+							</tt4>
+							<tt5>
+								<prev_completed/>
+								<prev_date_eth/>
+								<prev_date_unknown/>
+								<completed/>
+								<date_known/>
+								<date/>
+								<tt5_date/>
+							</tt5>
+						</tt_vaccinations>
+					</medication_provided>
+					<ethiopian_dates>
+						<notification_date_eth/>
+						<extra_folic_acid_date_eth/>
+						<tt1_date_eth/>
+						<tt2_date_eth/>
+						<tt3_date_eth/>
+						<tt4_date_eth/>
+						<tt5_date_eth/>
+					</ethiopian_dates>
+					<load_family_info>
+						<family_case_id/>
+						<family_name/>
+						<family_number/>
+						<house_gps/>
+						<village_name/>
+					</load_family_info>
+					<load_client_info>
+						<client_case_id/>
+						<client_name/>
+						<client_number/>
+						<local_phone_number/>
+						<dob/>
+						<age_years/>
+						<tt1_date/>
+						<tt2_date/>
+						<tt3_date/>
+						<tt4_date/>
+						<tt5_date/>
+						<tt1_date_eth/>
+						<tt2_date_eth/>
+						<tt3_date_eth/>
+						<tt4_date_eth/>
+						<tt5_date_eth/>
+					</load_client_info>
+					<locations>
+						<health_post_id/>
+						<health_post/>
+						<health_center_id/>
+						<health_center/>
+						<region_id/>
+						<region/>
+						<zone_id/>
+						<zone/>
+						<woreda_id/>
+						<woreda/>
+						<hc_facility_code/>
+						<hp_facility_code/>
+						<test_or_real/>
+					</locations>
+					<end_of_form/>
+				<case_open_notification_2><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><create><case_name/><owner_id>-</owner_id><case_type>notification</case_type></create><update><age_years/><client_case_id/><client_name/><extra_folic_acid_date/><extra_folic_acid_date_eth/><extra_folic_acid_given/><hc_facility_code/><health_center/><health_center_id/><health_post/><health_post_id/><hp_facility_code/><local_phone_number/><midwife_name/><midwife_phone_number/><mrn/><notification_date/><notification_date_eth/><notification_type/><owner_id/><region/><region_id/><test_or_real/><tt1_date/><tt1_date_eth/><tt2_date/><tt2_date_eth/><tt3_date/><tt3_date_eth/><tt4_date/><tt4_date_eth/><tt5_date/><tt5_date_eth/><village/><woreda/><woreda_id/><zone/><zone_id/></update></case></case_open_notification_2><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance>
+			<instance src="jr://fixture/locations" id="locations"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<instance src="jr://instance/casedb" id="casedb"/>
+			<bind nodeset="/data/notification_type" calculate="&quot;anc_medications&quot;"/>
+			<bind nodeset="/data/notification_date" calculate="today()"/>
+			<bind nodeset="/data/notification_name" calculate="concat(&quot;ANCmeds - &quot;, /data/load_client_info/client_name)" required="true()"/>
+			<bind nodeset="/data/display_client"/>
+			<bind nodeset="/data/mrn"/>
+			<bind nodeset="/data/mrn/mrn"/>
+			<bind nodeset="/data/mrn/mrn/title"/>
+			<bind nodeset="/data/mrn/mrn/number" type="xsd:string" constraint="string-length(.) = 5" jr:constraintMsg="jr:itext('mrn/mrn/number-constraintMsg')" required="true()"/>
+			<bind nodeset="/data/mrn/mrn/year" type="xsd:string" constraint="string-length(.) = 2 and (. = 99 or . &lt;= /data/mrn/mrn/current_year_eth)" jr:constraintMsg="jr:itext('mrn/mrn/year-constraintMsg')" required="true()"/>
+			<bind nodeset="/data/mrn/mrn/mrn_validation_message" relevant="/data/mrn/mrn/year &lt; (/data/mrn/mrn/current_year_eth - 5)"/>
+			<bind nodeset="/data/mrn/mrn/current_year_eth_calc" calculate="(int((date(today()) - 253) div 365.25) + 1963)"/>
+			<bind nodeset="/data/mrn/mrn/current_year_eth" calculate="substr(/data/mrn/mrn/current_year_eth_calc, 2, 4)"/>
+			<bind nodeset="/data/mrn/mrn/mrn" calculate="concat(/data/mrn/mrn/number, &quot;/&quot;, /data/mrn/mrn/year)"/>
+			<bind nodeset="/data/mrn/display_mrn"/>
+			<bind nodeset="/data/visit_info"/>
+			<bind nodeset="/data/visit_info/visit_date" type="xsd:date" constraint=". &lt;= today()" jr:constraintMsg="jr:itext('visit_info/visit_date-constraintMsg')" required="true()"/>
+			<bind nodeset="/data/visit_info/midwife_name"/>
+			<bind nodeset="/data/visit_info/midwife_name/list_length" calculate="count-selected(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'midwife_settings'][1]/midwife_names)"/>
+			<bind nodeset="/data/visit_info/midwife_name/repeat"/>
+			<bind nodeset="/data/visit_info/midwife_name/repeat/element" calculate="replace(selected-at(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'midwife_settings'][1]/midwife_names, position(current()/..)), &quot;_&quot;, &quot; &quot;)"/>
+			<bind nodeset="/data/visit_info/midwife_name/repeat/phone" calculate="replace(selected-at(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'midwife_settings'][1]/midwife_phones, position(current()/..)), &quot;_&quot;, &quot; &quot;)"/>
+			<bind nodeset="/data/visit_info/midwife_name/repeat/element_id" calculate="lower-case(selected-at(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'midwife_settings'][1]/midwife_names, position(current()/..)))"/>
+			<bind nodeset="/data/visit_info/midwife_name/choose_element" required="true()"/>
+			<bind nodeset="/data/visit_info/midwife_name/midwife_name" calculate="/data/visit_info/midwife_name/repeat[element_id = /data/visit_info/midwife_name/choose_element]/element"/>
+			<bind nodeset="/data/visit_info/midwife_name/midwife_phone_number" calculate="/data/visit_info/midwife_name/repeat[element_id = /data/visit_info/midwife_name/choose_element]/phone"/>
+			<bind nodeset="/data/medication_provided"/>
+			<bind nodeset="/data/medication_provided/folic_acid_tablets"/>
+			<bind nodeset="/data/medication_provided/folic_acid_tablets/extra_folic_acid_given" type="xsd:int" constraint=". &gt;= 0" jr:constraintMsg="jr:itext('medication_provided/folic_acid_tablets/extra_folic_acid_given-constraintMsg')" required="true()"/>
+			<bind nodeset="/data/medication_provided/folic_acid_tablets/extra_folic_acid_date" calculate="/data/visit_info/visit_date"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt1"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt1/prev_completed" relevant="/data/load_client_info/tt1_date != &quot;&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt1/prev_date_eth" relevant="/data/load_client_info/tt1_date != &quot;&quot; and /data/load_client_info/tt1_date != &quot;unknown&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt1/prev_date_unknown" relevant="/data/load_client_info/tt1_date = &quot;unknown&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt1/completed" relevant="/data/load_client_info/tt1_date = &quot;&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt1/date_known" relevant="/data/medication_provided/tt_vaccinations/tt1/completed = 'prev_completed' or /data/load_client_info/tt1_date = &quot;unknown&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt1/date" type="xsd:date" relevant="/data/medication_provided/tt_vaccinations/tt1/date_known = &quot;yes&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt1/tt1_date" relevant="/data/load_client_info/tt1_date = &quot;&quot; or /data/load_client_info/tt1_date = &quot;unknown&quot;" calculate="if(/data/medication_provided/tt_vaccinations/tt1/completed = &quot;not_completed&quot;, &quot;&quot;, if(/data/medication_provided/tt_vaccinations/tt1/completed = &quot;completed&quot;, /data/visit_info/visit_date, if(/data/medication_provided/tt_vaccinations/tt1/date_known = &quot;yes&quot;, /data/medication_provided/tt_vaccinations/tt1/date, &quot;unknown&quot;)))"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt2" relevant="/data/load_client_info/tt1_date != &quot;&quot; or /data/medication_provided/tt_vaccinations/tt1/completed = 'prev_completed'"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt2/prev_completed" relevant="/data/load_client_info/tt2_date != &quot;&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt2/prev_date_eth" relevant="/data/load_client_info/tt2_date != &quot;&quot; and /data/load_client_info/tt2_date != &quot;unknown&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt2/prev_date_unknown" relevant="/data/load_client_info/tt2_date = &quot;unknown&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt2/completed" relevant="/data/load_client_info/tt2_date = &quot;&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt2/date_known" relevant="/data/medication_provided/tt_vaccinations/tt2/completed = 'prev_completed' or /data/load_client_info/tt2_date = &quot;unknown&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt2/date" type="xsd:date" relevant="/data/medication_provided/tt_vaccinations/tt2/date_known = &quot;yes&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt2/tt2_date" relevant="/data/load_client_info/tt2_date = &quot;&quot; or /data/load_client_info/tt2_date = &quot;unknown&quot;" calculate="if(/data/medication_provided/tt_vaccinations/tt2/completed = &quot;not_completed&quot;, &quot;&quot;, if(/data/medication_provided/tt_vaccinations/tt2/completed = &quot;completed&quot;, /data/visit_info/visit_date, if(/data/medication_provided/tt_vaccinations/tt2/date_known = &quot;yes&quot;, /data/medication_provided/tt_vaccinations/tt2/date, &quot;unknown&quot;)))"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt3" relevant="/data/load_client_info/tt2_date != &quot;&quot; or /data/medication_provided/tt_vaccinations/tt2/completed = 'prev_completed'"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt3/prev_completed" relevant="/data/load_client_info/tt3_date != &quot;&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt3/prev_date_eth" relevant="/data/load_client_info/tt3_date != &quot;&quot; and /data/load_client_info/tt3_date != &quot;unknown&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt3/prev_date_unknown" relevant="/data/load_client_info/tt3_date = &quot;unknown&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt3/completed" relevant="/data/load_client_info/tt3_date = &quot;&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt3/date_known" relevant="/data/medication_provided/tt_vaccinations/tt3/completed = 'prev_completed' or /data/load_client_info/tt3_date = &quot;unknown&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt3/date" type="xsd:date" relevant="/data/medication_provided/tt_vaccinations/tt3/date_known = &quot;yes&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt3/tt3_date" relevant="/data/load_client_info/tt3_date = &quot;&quot; or /data/load_client_info/tt3_date = &quot;unknown&quot;" calculate="if(/data/medication_provided/tt_vaccinations/tt3/completed = &quot;not_completed&quot;, &quot;&quot;, if(/data/medication_provided/tt_vaccinations/tt3/completed = &quot;completed&quot;, /data/visit_info/visit_date, if(/data/medication_provided/tt_vaccinations/tt3/date_known = &quot;yes&quot;, /data/medication_provided/tt_vaccinations/tt3/date, &quot;unknown&quot;)))"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt4" relevant="/data/load_client_info/tt3_date != &quot;&quot; or /data/medication_provided/tt_vaccinations/tt3/completed = 'prev_completed'"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt4/prev_completed" relevant="/data/load_client_info/tt4_date != &quot;&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt4/prev_date_eth" relevant="/data/load_client_info/tt4_date != &quot;&quot; and /data/load_client_info/tt4_date != &quot;unknown&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt4/prev_date_unknown" relevant="/data/load_client_info/tt4_date = &quot;unknown&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt4/completed" relevant="/data/load_client_info/tt4_date = &quot;&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt4/date_known" relevant="/data/medication_provided/tt_vaccinations/tt4/completed = 'prev_completed' or /data/load_client_info/tt4_date = &quot;unknown&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt4/date" type="xsd:date" relevant="/data/medication_provided/tt_vaccinations/tt4/date_known = &quot;yes&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt4/tt4_date" relevant="/data/load_client_info/tt4_date = &quot;&quot; or /data/load_client_info/tt4_date = &quot;unknown&quot;" calculate="if(/data/medication_provided/tt_vaccinations/tt4/completed = &quot;not_completed&quot;, &quot;&quot;, if(/data/medication_provided/tt_vaccinations/tt4/completed = &quot;completed&quot;, /data/visit_info/visit_date, if(/data/medication_provided/tt_vaccinations/tt4/date_known = &quot;yes&quot;, /data/medication_provided/tt_vaccinations/tt4/date, &quot;unknown&quot;)))"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt5" relevant="/data/load_client_info/tt4_date != &quot;&quot; or /data/medication_provided/tt_vaccinations/tt4/completed = 'prev_completed'"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt5/prev_completed" relevant="/data/load_client_info/tt5_date != &quot;&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt5/prev_date_eth" relevant="/data/load_client_info/tt5_date != &quot;&quot; and /data/load_client_info/tt5_date != &quot;unknown&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt5/prev_date_unknown" relevant="/data/load_client_info/tt5_date = &quot;unknown&quot;"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt5/completed" relevant="/data/load_client_info/tt5_date = &quot;&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt5/date_known" relevant="/data/medication_provided/tt_vaccinations/tt5/completed = 'prev_completed' or /data/load_client_info/tt5_date = &quot;unknown&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt5/date" type="xsd:date" relevant="/data/medication_provided/tt_vaccinations/tt5/date_known = &quot;yes&quot;" required="true()"/>
+			<bind nodeset="/data/medication_provided/tt_vaccinations/tt5/tt5_date" relevant="/data/load_client_info/tt5_date = &quot;&quot; or /data/load_client_info/tt5_date = &quot;unknown&quot;" calculate="if(/data/medication_provided/tt_vaccinations/tt5/completed = &quot;not_completed&quot;, &quot;&quot;, if(/data/medication_provided/tt_vaccinations/tt5/completed = &quot;completed&quot;, /data/visit_info/visit_date, if(/data/medication_provided/tt_vaccinations/tt5/date_known = &quot;yes&quot;, /data/medication_provided/tt_vaccinations/tt5/date, &quot;unknown&quot;)))"/>
+			<bind nodeset="/data/ethiopian_dates"/>
+			<bind nodeset="/data/ethiopian_dates/notification_date_eth" calculate="if(today() = '', '', concat(int((date(today()) - 253) div 365.25) + 1963, if(int((date(today()) - 253 - (365 * int((date(today()) - 253) div 365.25) + 1 + int((int((date(today()) - 253) div 365.25) - 1) div 4))) div 30) + 1 &lt; 10, '-0', '-'), int((date(today()) - 253 - (365 * (int((date(today()) - 253) div 365.25) + 1963 - 1963) + 1 + int((int((date(today()) - 253) div 365.25) - 1) div 4))) div 30) + 1, if(((date(today()) - 253 - (365 * int((date(today()) - 253) div 365.25) + 1 + int((int((date(today()) - 253) div 365.25) - 1) div 4))) mod 30) + 1 &lt; 10, '-0', '-'), ((date(today()) - 253 - (365 * int((date(today()) - 253) div 365.25) + 1 + int((int((date(today()) - 253) div 365.25) - 1) div 4))) mod 30) + 1))"/>
+			<bind nodeset="/data/ethiopian_dates/extra_folic_acid_date_eth" relevant="/data/visit_info/visit_date != &quot;&quot;" calculate="if(/data/visit_info/visit_date = '', '', concat(int((date(/data/visit_info/visit_date) - 253) div 365.25) + 1963, if(int((date(/data/visit_info/visit_date) - 253 - (365 * int((date(/data/visit_info/visit_date) - 253) div 365.25) + 1 + int((int((date(/data/visit_info/visit_date) - 253) div 365.25) - 1) div 4))) div 30) + 1 &lt; 10, '-0', '-'), int((date(/data/visit_info/visit_date) - 253 - (365 * (int((date(/data/visit_info/visit_date) - 253) div 365.25) + 1963 - 1963) + 1 + int((int((date(/data/visit_info/visit_date) - 253) div 365.25) - 1) div 4))) div 30) + 1, if(((date(/data/visit_info/visit_date) - 253 - (365 * int((date(/data/visit_info/visit_date) - 253) div 365.25) + 1 + int((int((date(/data/visit_info/visit_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1 &lt; 10, '-0', '-'), ((date(/data/visit_info/visit_date) - 253 - (365 * int((date(/data/visit_info/visit_date) - 253) div 365.25) + 1 + int((int((date(/data/visit_info/visit_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1))"/>
+			<bind nodeset="/data/ethiopian_dates/tt1_date_eth" relevant="/data/medication_provided/tt_vaccinations/tt1/tt1_date != &quot;&quot;" calculate="if(/data/medication_provided/tt_vaccinations/tt1/tt1_date = '', '', if(/data/medication_provided/tt_vaccinations/tt1/tt1_date = 'unknown', '&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;', concat(int((date(/data/medication_provided/tt_vaccinations/tt1/tt1_date) - 253) div 365.25) + 1963, if(int((date(/data/medication_provided/tt_vaccinations/tt1/tt1_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt1/tt1_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt1/tt1_date) - 253) div 365.25) - 1) div 4))) div 30) + 1 &lt; 10, '-0', '-'), int((date(/data/medication_provided/tt_vaccinations/tt1/tt1_date) - 253 - (365 * (int((date(/data/medication_provided/tt_vaccinations/tt1/tt1_date) - 253) div 365.25) + 1963 - 1963) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt1/tt1_date) - 253) div 365.25) - 1) div 4))) div 30) + 1, if(((date(/data/medication_provided/tt_vaccinations/tt1/tt1_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt1/tt1_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt1/tt1_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1 &lt; 10, '-0', '-'), ((date(/data/medication_provided/tt_vaccinations/tt1/tt1_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt1/tt1_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt1/tt1_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1)))"/>
+			<bind nodeset="/data/ethiopian_dates/tt2_date_eth" relevant="/data/medication_provided/tt_vaccinations/tt2/tt2_date != &quot;&quot;" calculate="if(/data/medication_provided/tt_vaccinations/tt2/tt2_date = '', '', if(/data/medication_provided/tt_vaccinations/tt2/tt2_date = 'unknown', '&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;', concat(int((date(/data/medication_provided/tt_vaccinations/tt2/tt2_date) - 253) div 365.25) + 1963, if(int((date(/data/medication_provided/tt_vaccinations/tt2/tt2_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt2/tt2_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt2/tt2_date) - 253) div 365.25) - 1) div 4))) div 30) + 1 &lt; 10, '-0', '-'), int((date(/data/medication_provided/tt_vaccinations/tt2/tt2_date) - 253 - (365 * (int((date(/data/medication_provided/tt_vaccinations/tt2/tt2_date) - 253) div 365.25) + 1963 - 1963) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt2/tt2_date) - 253) div 365.25) - 1) div 4))) div 30) + 1, if(((date(/data/medication_provided/tt_vaccinations/tt2/tt2_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt2/tt2_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt2/tt2_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1 &lt; 10, '-0', '-'), ((date(/data/medication_provided/tt_vaccinations/tt2/tt2_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt2/tt2_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt2/tt2_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1)))"/>
+			<bind nodeset="/data/ethiopian_dates/tt3_date_eth" relevant="/data/medication_provided/tt_vaccinations/tt3/tt3_date != &quot;&quot;" calculate="if(/data/medication_provided/tt_vaccinations/tt3/tt3_date = '', '', if(/data/medication_provided/tt_vaccinations/tt3/tt3_date = 'unknown', '&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;', concat(int((date(/data/medication_provided/tt_vaccinations/tt3/tt3_date) - 253) div 365.25) + 1963, if(int((date(/data/medication_provided/tt_vaccinations/tt3/tt3_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt3/tt3_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt3/tt3_date) - 253) div 365.25) - 1) div 4))) div 30) + 1 &lt; 10, '-0', '-'), int((date(/data/medication_provided/tt_vaccinations/tt3/tt3_date) - 253 - (365 * (int((date(/data/medication_provided/tt_vaccinations/tt3/tt3_date) - 253) div 365.25) + 1963 - 1963) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt3/tt3_date) - 253) div 365.25) - 1) div 4))) div 30) + 1, if(((date(/data/medication_provided/tt_vaccinations/tt3/tt3_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt3/tt3_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt3/tt3_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1 &lt; 10, '-0', '-'), ((date(/data/medication_provided/tt_vaccinations/tt3/tt3_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt3/tt3_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt3/tt3_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1)))"/>
+			<bind nodeset="/data/ethiopian_dates/tt4_date_eth" relevant="/data/medication_provided/tt_vaccinations/tt4/tt4_date != &quot;&quot;" calculate="if(/data/medication_provided/tt_vaccinations/tt4/tt4_date = '', '', if(/data/medication_provided/tt_vaccinations/tt4/tt4_date = 'unknown', '&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;', concat(int((date(/data/medication_provided/tt_vaccinations/tt4/tt4_date) - 253) div 365.25) + 1963, if(int((date(/data/medication_provided/tt_vaccinations/tt4/tt4_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt4/tt4_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt4/tt4_date) - 253) div 365.25) - 1) div 4))) div 30) + 1 &lt; 10, '-0', '-'), int((date(/data/medication_provided/tt_vaccinations/tt4/tt4_date) - 253 - (365 * (int((date(/data/medication_provided/tt_vaccinations/tt4/tt4_date) - 253) div 365.25) + 1963 - 1963) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt4/tt4_date) - 253) div 365.25) - 1) div 4))) div 30) + 1, if(((date(/data/medication_provided/tt_vaccinations/tt4/tt4_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt4/tt4_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt4/tt4_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1 &lt; 10, '-0', '-'), ((date(/data/medication_provided/tt_vaccinations/tt4/tt4_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt4/tt4_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt4/tt4_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1)))"/>
+			<bind nodeset="/data/ethiopian_dates/tt5_date_eth" relevant="/data/medication_provided/tt_vaccinations/tt5/tt5_date != &quot;&quot;" calculate="if(/data/medication_provided/tt_vaccinations/tt5/tt5_date = '', '', if(/data/medication_provided/tt_vaccinations/tt5/tt5_date = 'unknown', '&#4768;&#4845;&#4723;&#4808;&#4677;&#4637;', concat(int((date(/data/medication_provided/tt_vaccinations/tt5/tt5_date) - 253) div 365.25) + 1963, if(int((date(/data/medication_provided/tt_vaccinations/tt5/tt5_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt5/tt5_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt5/tt5_date) - 253) div 365.25) - 1) div 4))) div 30) + 1 &lt; 10, '-0', '-'), int((date(/data/medication_provided/tt_vaccinations/tt5/tt5_date) - 253 - (365 * (int((date(/data/medication_provided/tt_vaccinations/tt5/tt5_date) - 253) div 365.25) + 1963 - 1963) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt5/tt5_date) - 253) div 365.25) - 1) div 4))) div 30) + 1, if(((date(/data/medication_provided/tt_vaccinations/tt5/tt5_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt5/tt5_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt5/tt5_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1 &lt; 10, '-0', '-'), ((date(/data/medication_provided/tt_vaccinations/tt5/tt5_date) - 253 - (365 * int((date(/data/medication_provided/tt_vaccinations/tt5/tt5_date) - 253) div 365.25) + 1 + int((int((date(/data/medication_provided/tt_vaccinations/tt5/tt5_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1)))"/>
+			<bind nodeset="/data/load_family_info"/>
+			<bind nodeset="/data/load_family_info/family_case_id" calculate="instance('commcaresession')/session/data/case_id_autoload_family_2"/>
+			<bind nodeset="/data/load_family_info/family_name"/>
+			<bind nodeset="/data/load_family_info/family_number"/>
+			<bind nodeset="/data/load_family_info/house_gps"/>
+			<bind nodeset="/data/load_family_info/village_name"/>
+			<bind nodeset="/data/load_client_info"/>
+			<bind nodeset="/data/load_client_info/client_case_id" calculate="instance('commcaresession')/session/data/case_id_autoload_client_1"/>
+			<bind nodeset="/data/load_client_info/client_name"/>
+			<bind nodeset="/data/load_client_info/client_number"/>
+			<bind nodeset="/data/load_client_info/local_phone_number"/>
+			<bind nodeset="/data/load_client_info/dob"/>
+			<bind nodeset="/data/load_client_info/age_years" calculate="int((today() - date(/data/load_client_info/dob)) div 365.25)"/>
+			<bind nodeset="/data/load_client_info/tt1_date"/>
+			<bind nodeset="/data/load_client_info/tt2_date"/>
+			<bind nodeset="/data/load_client_info/tt3_date"/>
+			<bind nodeset="/data/load_client_info/tt4_date"/>
+			<bind nodeset="/data/load_client_info/tt5_date"/>
+			<bind nodeset="/data/load_client_info/tt1_date_eth"/>
+			<bind nodeset="/data/load_client_info/tt2_date_eth"/>
+			<bind nodeset="/data/load_client_info/tt3_date_eth"/>
+			<bind nodeset="/data/load_client_info/tt4_date_eth"/>
+			<bind nodeset="/data/load_client_info/tt5_date_eth"/>
+			<bind nodeset="/data/locations"/>
+			<bind nodeset="/data/locations/health_post_id"/>
+			<bind nodeset="/data/locations/health_post" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/name"/>
+			<bind nodeset="/data/locations/health_center_id" calculate="instance('commcaresession')/session/user/data/commcare_location_id"/>
+			<bind nodeset="/data/locations/health_center" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/name"/>
+			<bind nodeset="/data/locations/region_id" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/@region_id"/>
+			<bind nodeset="/data/locations/region" calculate="instance('locations')/locations/location[@id = /data/locations/region_id]/name"/>
+			<bind nodeset="/data/locations/zone_id" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/@zone_id"/>
+			<bind nodeset="/data/locations/zone" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/name"/>
+			<bind nodeset="/data/locations/woreda_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/@woreda_id"/>
+			<bind nodeset="/data/locations/woreda" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/name"/>
+			<bind nodeset="/data/locations/hc_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/hp_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/test_or_real" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/test_or_real) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/test_or_real, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/end_of_form"/>
+			<setvalue event="xforms-ready" ref="/data/mrn/mrn/number" value="substr(instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id_autoload_client_1]/mrn, 0, 5)"/>
+			<setvalue event="xforms-ready" ref="/data/mrn/mrn/year" value="substr(instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id_autoload_client_1]/mrn, 6, 8)"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="display_client-label">
+						<value>This form is to be used if a pregnant woman visits the Health Center for Folic Acid or TT Vaccinations outside of a scheduled ANC 1 visit. You are recording Extra ANC medications given for <output value="/data/load_client_info/client_name"/>.</value>
+					</text>
+					<text id="mrn/mrn/title-label">
+						<value><output value="/data/load_client_info/client_name"/>'s MRN (_ _ _ _ _/_ _).  Fill in the blanks.</value>
+					</text>
+					<text id="mrn/mrn/number-label">
+						<value>Number</value>
+					</text>
+					<text id="mrn/mrn/number-constraintMsg">
+						<value>Record Number must be 5 digits.</value>
+					</text>
+					<text id="mrn/mrn/year-label">
+						<value>Enter a 2 digit Year</value>
+					</text>
+					<text id="mrn/mrn/year-constraintMsg">
+						<value>Year must be 2 digits and between 1999 and the current year</value>
+					</text>
+					<text id="mrn/mrn/mrn_validation_message-label">
+						<value>You have entered a year over 5 years in the past, please check to make sure you have entered the year correctly.</value>
+					</text>
+					<text id="mrn/display_mrn-label">
+						<value>The full MRN is <output value="/data/mrn/mrn/mrn"/>.</value>
+					</text>
+					<text id="visit_info/visit_date-label">
+						<value>Visit Date</value>
+					</text>
+					<text id="visit_info/visit_date-constraintMsg">
+						<value>ANC 1 cannot happen in the future!</value>
+					</text>
+					<text id="visit_info/midwife_name/choose_element-label">
+						<value>Name of Midwife Responsible for this visit.</value>
+					</text>
+					<text id="medication_provided-label">
+						<value>Medication Provided</value>
+					</text>
+					<text id="medication_provided/folic_acid_tablets-label">
+						<value>Folic Acid Tablets</value>
+					</text>
+					<text id="medication_provided/folic_acid_tablets/extra_folic_acid_given-label">
+						<value>How many tablets of ferrous sulphate / folic acid were provided?</value>
+					</text>
+					<text id="medication_provided/folic_acid_tablets/extra_folic_acid_given-constraintMsg">
+						<value>You cannot enter a number below 0.</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations-label">
+						<value>TT Vaccinations</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1-label">
+						<value>TT1</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/prev_completed-label">
+						<value>TT1 Completed</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/prev_date_eth-label">
+						<value>TT1 Date: <output value="/data/load_client_info/tt1_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/prev_date_unknown-label">
+						<value>TT1 Date: Unknown</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-label">
+						<value>What is the status of TT1?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-prev_completed-label">
+						<value>Completed prior to this visit</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-completed-label">
+						<value>Completed during this visit</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-not_completed-label">
+						<value>Not Completed / Unknown</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/date_known-label">
+						<value>Do you know the date for TT1?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/date_known-yes-label">
+						<value>Yes</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/date_known-no-label">
+						<value>No</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2-label">
+						<value>TT2</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/prev_completed-label">
+						<value>TT2 Completed</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/prev_date_eth-label">
+						<value>TT2 Date: <output value="/data/load_client_info/tt2_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/prev_date_unknown-label">
+						<value>TT2 Date: Unknown</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/completed-label">
+						<value>What is the status of TT2?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/completed-prev_completed-label">
+						<value>Completed prior to this visit</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/completed-completed-label">
+						<value>Completed during this visit</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/date_known-label">
+						<value>Do you know the date for TT2?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/date_known-no-label">
+						<value>No</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3-label">
+						<value>TT3</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/prev_completed-label">
+						<value>TT3 Completed</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/prev_date_eth-label">
+						<value>TT3 Date: <output value="/data/load_client_info/tt3_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/prev_date_unknown-label">
+						<value>TT3 Date: Unknown</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/completed-label">
+						<value>What is the status of TT3?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/date_known-label">
+						<value>Do you know the date for TT3?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/date_known-no-label">
+						<value>No</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4-label">
+						<value>TT4</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/prev_completed-label">
+						<value>TT4 Completed</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/prev_date_eth-label">
+						<value>TT4 Date: <output value="/data/load_client_info/tt4_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/prev_date_unknown-label">
+						<value>TT4 Date: Unknown</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/completed-label">
+						<value>What is the status of TT4?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/date_known-label">
+						<value>Do you know the date for TT4?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5-label">
+						<value>TT5</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/prev_completed-label">
+						<value>TT5 Completed</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/prev_date_eth-label">
+						<value>TT5 Date: <output value="/data/load_client_info/tt5_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/prev_date_unknown-label">
+						<value>TT5 Date: Unknown</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/completed-label">
+						<value>What is the status of TT5?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/date_known-label">
+						<value>Do you know the date for TT5?</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="display_client-label">
+						<value>&#4704;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; &#4840;&#4720;&#4808;&#4656;&#4849; &#4720;&#4904;&#4635;&#4650; &#4632;&#4853;&#4608;&#4754;&#4726;&#4733; &#4773;&#4840;&#4632;&#4824;&#4872;&#4709;&#4669; &#4752;&#4813;<output value="/data/load_client_info/client_name"/>.</value>
+					</text>
+					<text id="mrn/mrn/title-label">
+						<value><output value="/data/load_client_info/client_name"/>'s MRN (_ _ _ _ _/_ _).  Fill in the blanks.</value>
+					</text>
+					<text id="mrn/mrn/number-label">
+						<value>&#4673;&#4901;&#4653;</value>
+					</text>
+					<text id="mrn/mrn/number-constraintMsg">
+						<value>&#4840;&#4634;&#4632;&#4824;&#4872;&#4704;&#4813; &#4673;&#4901;&#4653; &#4768;&#4637;&#4661;&#4725; &#4850;&#4866;&#4725; &#4632;&#4614;&#4757; &#4768;&#4616;&#4704;&#4725;</value>
+					</text>
+					<text id="mrn/mrn/year-label">
+						<value>&#4707;&#4616; 2 &#4850;&#4866;&#4725; &#4819;&#4632;&#4725; &#4843;&#4661;&#4872;&#4705;</value>
+					</text>
+					<text id="mrn/mrn/year-constraintMsg">
+						<value>&#4819;&#4632;&#4725; &#4707;&#4616; 2 &#4850;&#4866;&#4725; &#4773;&#4755; &#4704;1999  &#4773;&#4755; &#4768;&#4609;&#4757; &#4843;&#4616;&#4813; &#4819;&#4632;&#4725; &#4632;&#4779;&#4776;&#4621; &#4632;&#4614;&#4757; &#4768;&#4616;&#4704;&#4725;</value>
+					</text>
+					<text id="mrn/mrn/mrn_validation_message-label">
+						<value>&#4635;&#4661;&#4872;&#4707;&#4725; &#4776;&#4752;&#4704;&#4648;&#4709;&#4669; 5&#4819;&#4632;&#4725; &#4808;&#4848; &#4747;&#4619; &#4720;&#4632;&#4621;&#4656;&#4667;&#4621;&#4963; &#4773;&#4707;&#4781;&#4669; &#4725;&#4781;&#4781;&#4616;&#4763;&#4813;&#4757; &#4819;&#4632;&#4725; &#4635;&#4661;&#4872;&#4707;&#4725;&#4669; &#4768;&#4648;&#4875;&#4877;&#4906;</value>
+					</text>
+					<text id="mrn/display_mrn-label">
+						<value>&#4840;&#4636;&#4850;&#4779;&#4621; &#4650;&#4869;&#4656;&#4725;&#4652;&#4669;&#4757; &#4673;&#4901;&#4653;  <output value="/data/mrn/mrn/mrn"/>.</value>
+					</text>
+					<text id="visit_info/visit_date-label">
+						<value>&#4840;&#4873;&#4709;&#4765;&#4725;/&#4672;&#4896;&#4654; &#4672;&#4757;</value>
+					</text>
+					<text id="visit_info/visit_date-constraintMsg">
+						<value>&#4840;&#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; &#4873;&#4709;&#4765;&#4725; 1  &#4949;&#4654;&#4877;&#4651;&#4637; &#4808;&#4848;&#4938;&#4725; &#4704;&#4635;&#4853;&#4648;&#4877; &#4768;&#4845;&#4656;&#4651;&#4637;&#4961;&#4961;</value>
+					</text>
+					<text id="visit_info/midwife_name/choose_element-label">
+						<value>&#4616;&#4826;&#4613; &#4873;&#4709;&#4765;&#4725; &#4608;&#4619;&#4938;&#4752;&#4725; &#4840;&#4634;&#4808;&#4661;&#4853; &#4768;&#4811;&#4619;&#4869; &#4707;&#4616;&#4633;&#4843;</value>
+					</text>
+					<text id="medication_provided-label">
+						<value>&#4632;&#4853;&#4739;&#4754;&#4725; &#4720;&#4656;&#4727;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="medication_provided/folic_acid_tablets-label">
+						<value>&#4840;&#4942;&#4618;&#4781; &#4768;&#4658;&#4853; &#4773;&#4757;&#4781;&#4709;&#4621;</value>
+					</text>
+					<text id="medication_provided/folic_acid_tablets/extra_folic_acid_given-label">
+						<value>&#4808;&#4661;&#4851; &#4776;&#4752;&#4704;&#4648; &#4963; &#4637;&#4757; &#4843;&#4613;&#4621; &#4942;&#4618;&#4781; &#4768;&#4658;&#4853; &#4632;&#4853;&#4608;&#4754;&#4725; &#4752;&#4813; &#4840;&#4808;&#4656;&#4848;&#4733;&#4813;</value>
+					</text>
+					<text id="medication_provided/folic_acid_tablets/extra_folic_acid_given-constraintMsg">
+						<value>&#4776;0 &#4704;&#4723;&#4733; &#4840;&#4614;&#4752; &#4673;&#4901;&#4653; &#4635;&#4661;&#4872;&#4707;&#4725; &#4768;&#4845;&#4731;&#4621;&#4637;&#4961;&#4961;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 1</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/prev_completed-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 1 &#4904;&#4653;&#4663;&#4621;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/prev_date_eth-label">
+						<value>&#4840;&#4722;&#4722;1 &#4781;&#4725;&#4707;&#4725; &#4672;&#4896;&#4654;: <output value="/data/load_client_info/tt1_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/prev_date_unknown-label">
+						<value>&#4840;&#4722;&#4722;1 &#4781;&#4725;&#4707;&#4725; &#4672;&#4896;&#4654;: &#4768;&#4845;&#4723;&#4808;&#4677;&#4637;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 1 &#4609;&#4756;&#4723; &#4773;&#4757;&#4852;&#4725; &#4752;&#4813;?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-prev_completed-label">
+						<value>&#4776;&#4826;&#4613; &#4704;&#4938;&#4725; &#4808;&#4661;&#4851;&#4616;&#4733;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-completed-label">
+						<value>&#4704;&#4824;&#4613; &#4873;&#4709;&#4765;&#4725; &#4808;&#4661;&#4851;&#4616;&#4733;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-not_completed-label">
+						<value>&#4904;&#4653;&#4659; &#4768;&#4621;&#4808;&#4656;&#4848;&#4733;&#4637;/ &#4768;&#4845;&#4723;&#4808;&#4677;&#4637;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/date_known-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;+&#4725; 1 &#4840;&#4808;&#4656;&#4848;&#4733;&#4704;&#4725;&#4757; &#4672;&#4757; &#4723;&#4813;&#4674;&#4843;&#4616;&#4669;?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/date_known-yes-label">
+						<value>&#4768;&#4814;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/date_known-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 2</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/prev_completed-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 2 &#4904;&#4653;&#4659;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/prev_date_eth-label">
+						<value>&#4840;&#4722;&#4722;2 &#4781;&#4725;&#4707;&#4725; &#4672;&#4896;&#4654;: <output value="/data/load_client_info/tt2_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/prev_date_unknown-label">
+						<value>&#4840;&#4722;&#4722;2 &#4781;&#4725;&#4707;&#4725; &#4672;&#4896;&#4654;: &#4768;&#4845;&#4723;&#4808;&#4677;&#4637;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/completed-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 2 &#4609;&#4756;&#4723; &#4773;&#4757;&#4852;&#4725; &#4752;&#4813;?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/completed-prev_completed-label">
+						<value>&#4776;&#4826;&#4613; &#4704;&#4938;&#4725; &#4808;&#4661;&#4851;&#4616;&#4733;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/completed-completed-label">
+						<value>&#4704;&#4824;&#4613; &#4873;&#4709;&#4765;&#4725; &#4808;&#4661;&#4851;&#4616;&#4733;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/date_known-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 2 &#4840;&#4808;&#4656;&#4848;&#4733;&#4704;&#4725;&#4757; &#4672;&#4757; &#4723;&#4813;&#4674;&#4843;&#4616;&#4669;?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/date_known-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 3</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/prev_completed-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 3 &#4904;&#4653;&#4659;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/prev_date_eth-label">
+						<value>&#4840;&#4722;&#4722;3 &#4781;&#4725;&#4707;&#4725; &#4672;&#4896;&#4654;: <output value="/data/load_client_info/tt3_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/prev_date_unknown-label">
+						<value>&#4840;&#4722;&#4722;3 &#4781;&#4725;&#4707;&#4725; &#4672;&#4896;&#4654;: &#4768;&#4845;&#4723;&#4808;&#4677;&#4637;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/completed-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 3 &#4609;&#4756;&#4723; &#4773;&#4757;&#4852;&#4725; &#4752;&#4813;?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/date_known-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 3 &#4840;&#4808;&#4656;&#4848;&#4733;&#4704;&#4725;&#4757; &#4672;&#4757; &#4723;&#4813;&#4674;&#4843;&#4616;&#4669;?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/date_known-no-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 4</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/prev_completed-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 4  &#4904;&#4653;&#4659;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/prev_date_eth-label">
+						<value>&#4840;&#4722;&#4722;4 &#4781;&#4725;&#4707;&#4725; &#4672;&#4896;&#4654;: <output value="/data/load_client_info/tt4_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/prev_date_unknown-label">
+						<value>&#4840;&#4722;&#4722;4 &#4781;&#4725;&#4707;&#4725; &#4672;&#4896;&#4654;: &#4768;&#4845;&#4723;&#4808;&#4677;&#4637;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/completed-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 4 &#4609;&#4756;&#4723; &#4773;&#4757;&#4852;&#4725; &#4752;&#4813;?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/date_known-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 4 &#4840;&#4808;&#4656;&#4848;&#4733;&#4704;&#4725;&#4757; &#4672;&#4757; &#4723;&#4813;&#4674;&#4843;&#4616;&#4669;?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 5</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/prev_completed-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 5  &#4904;&#4653;&#4659;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/prev_date_eth-label">
+						<value>&#4840;&#4722;&#4722;5 &#4781;&#4725;&#4707;&#4725; &#4672;&#4896;&#4654;: <output value="/data/load_client_info/tt5_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/prev_date_unknown-label">
+						<value>&#4840;&#4722;&#4722;5 &#4781;&#4725;&#4707;&#4725; &#4672;&#4896;&#4654;: &#4768;&#4845;&#4723;&#4808;&#4677;&#4637;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/completed-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 5 &#4609;&#4756;&#4723; &#4773;&#4757;&#4852;&#4725; &#4752;&#4813;?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/date_known-label">
+						<value>&#4840;&#4632;&#4757;&#4875;&#4875; &#4678;&#4621;&#4941; &#4781;&#4725;&#4707;&#4725; 5 &#4840;&#4808;&#4656;&#4848;&#4733;&#4704;&#4725;&#4757; &#4672;&#4757; &#4723;&#4813;&#4674;&#4843;&#4616;&#4669;?</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="display_client-label">
+						<value>&#4757; <output value="/data/load_client_info/client_name"/> &#4829;&#4720;&#4813;&#4611;&#4704; &#4725;&#4653;&#4941; &#4755;&#4845; &#4677;&#4853;&#4634; &#4808;&#4618;&#4853;  &#4632;&#4853;&#4627;&#4754;&#4725; &#4725;&#4637;&#4829;&#4877;&#4706;/&#4709; &#4771;&#4616;&#4795;/&#4794; .</value>
+					</text>
+					<text id="mrn/mrn/title-label">
+						<value><output value="/data/load_client_info/client_name"/> &#4629;&#4781;&#4637;&#4755; &#4779;&#4653;&#4850; &#4673;&#4933;&#4650; (_ _ _ _ _/_ _). &#4781;&#4941;&#4722; &#4704;&#4723; &#4637;&#4619;&#4773;.</value>
+					</text>
+					<text id="mrn/mrn/number-label">
+						<value>&#4673;&#4933;&#4650;</value>
+					</text>
+					<text id="mrn/mrn/number-constraintMsg">
+						<value>&#4829;&#4771;&#4721; &#4673;&#4933;&#4650;&#4704;&#4819;&#4621; 5 &#4850;&#4866;&#4725; &#4781;&#4792;&#4813;&#4757; &#4771;&#4616;&#4814;</value>
+					</text>
+					<text id="mrn/mrn/year-label">
+						<value>&#4704;&#4819;&#4621; 2 &#4850;&#4869;&#4725; &#4819;&#4632;&#4725; &#4771;&#4773;&#4725;&#4809;</value>
+					</text>
+					<text id="mrn/mrn/year-constraintMsg">
+						<value>&#4819;&#4632;&#4725;&#4964; &#4704;&#4819;&#4621; 2 &#4850;&#4866;&#4725; &#4781;&#4792;&#4813;&#4757; &#4845;&#4877;&#4707;&#4773; &#4773;&#4755; &#4771;&#4709; &#4638;&#4757;&#4878; 1999 &#4773;&#4755; &#4622;&#4634; &#4771;&#4632;&#4725;</value>
+					</text>
+					<text id="mrn/mrn/mrn_validation_message-label">
+						<value>&#4824;&#4773;&#4720;&#4797;&#4846; &#4819;&#4632;&#4725; &#4621;&#4821;&#4618;  &#4829;&#4627;&#4616;&#4936; 5 &#4819;&#4632;&#4723;&#4725; &#4773;&#4841;&#4961;&#4961; &#4704;&#4845;&#4827;&#4794; &#4725;&#4797;&#4781;&#4616;&#4763; &#4819;&#4632;&#4725; &#4637;&#4773;&#4723;&#4813;&#4778; &#4771;&#4648;&#4875;&#4877;&#4930;&#4961;&#4961;</value>
+					</text>
+					<text id="mrn/display_mrn-label">
+						<value>&#4629;&#4781;&#4637;&#4755; &#4632;&#4941;&#4616;&#4842; &#4673;&#4933;&#4650; <output value="/data/mrn/mrn/mrn"/>.</value>
+					</text>
+					<text id="visit_info/visit_date-label">
+						<value>&#4632;&#4819;&#4621;&#4722; &#4817;&#4848;&#4725;</value>
+					</text>
+					<text id="visit_info/visit_date-constraintMsg">
+						<value>&#4672;&#4851;&#4635;&#4845; &#4677;&#4853;&#4632; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; &#4757;&#4677;&#4853;&#4634;&#4725; &#4781;&#4792;&#4813;&#4757; &#4771;&#4845;&#4797;&#4773;&#4621;&#4757;</value>
+					</text>
+					<text id="visit_info/midwife_name/choose_element-label">
+						<value>&#4669;&#4637; &#4752;&#4826; &#4817;&#4848;&#4725; &#4627;&#4619;&#4941;&#4752;&#4725; &#4829;&#4808;&#4656;&#4848;&#4725; &#4632;&#4811;&#4616;&#4850;&#4725;</value>
+					</text>
+					<text id="medication_provided-label">
+						<value>&#4632;&#4853;&#4627;&#4754;&#4725; &#4720;&#4811;&#4610;&#4707;</value>
+					</text>
+					<text id="medication_provided/folic_acid_tablets-label">
+						<value>&#4942;&#4618;&#4781; &#4771;&#4658;&#4853; &#4781;&#4754;&#4755;</value>
+					</text>
+					<text id="medication_provided/folic_acid_tablets/extra_folic_acid_given-label">
+						<value>&#4781;&#4757;&#4848;&#4845; &#4941;&#4648; &#4781;&#4754;&#4755;  &#4940;&#4654;&#4661; &#4659;&#4621;&#4940;&#4725;/&#4942;&#4618;&#4781; &#4771;&#4658;&#4853; &#4720;&#4811;&#4610;&#4705;&#4811;</value>
+					</text>
+					<text id="medication_provided/folic_acid_tablets/extra_folic_acid_given-constraintMsg">
+						<value>&#4725;&#4629;&#4722; 0 &#4829;&#4798;&#4752; &#4673;&#4933;&#4650; &#4637;&#4773;&#4723;&#4813; &#4771;&#4845;&#4776;&#4771;&#4621;&#4757;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations-label">
+						<value>&#4722;&#4722; &#4781;&#4725;&#4707;&#4725;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1-label">
+						<value>&#4722;&#4722; 1</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/prev_completed-label">
+						<value>&#4722;&#4722; 1 &#4808;&#4850;&#4771;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/prev_date_eth-label">
+						<value>&#4722;&#4722;1 &#4821;&#4616;&#4725;: <output value="/data/load_client_info/tt1_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/prev_date_unknown-label">
+						<value>&#4722;&#4722;1 &#4821;&#4616;&#4725;: &#4771;&#4845;&#4941;&#4616;&#4901;&#4757;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-label">
+						<value>&#4777;&#4752;&#4723;&#4725; &#4722;&#4722;1 &#4781;&#4725;&#4707;&#4720; &#4776;&#4632;&#4845; &#4756;&#4649;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-prev_completed-label">
+						<value>&#4677;&#4853;&#4634; &#4773;&#4826; &#4817;&#4848;&#4725; &#4720;&#4896;&#4755;&#4690;&#4689;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-completed-label">
+						<value>&#4771;&#4709; &#4776;&#4845;&#4850; &#4773;&#4826; &#4817;&#4848;&#4725; &#4720;&#4896;&#4755;&#4690;&#4689;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-not_completed-label">
+						<value>&#4771;&#4845;&#4808;&#4848;&#4768;&#4725;&#4757;/&#4771;&#4845;&#4941;&#4616;&#4901;&#4757;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/date_known-label">
+						<value>&#4720;&#4722;&#4722;1 &#4781;&#4725;&#4707;&#4725; &#4829;&#4808;&#4656;&#4848;&#4725;&#4617; &#4821;&#4616;&#4725; &#4845;&#4941;&#4621;&#4901; &#4854;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/date_known-yes-label">
+						<value>&#4773;&#4808;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/date_known-no-label">
+						<value>&#4771;&#4845;&#4939;&#4621;&#4757;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2-label">
+						<value>&#4722;&#4722; 2</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/prev_completed-label">
+						<value>&#4722;&#4722; 2 &#4808;&#4850;&#4771;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/prev_date_eth-label">
+						<value>&#4722;&#4722;2 &#4821;&#4616;&#4725;: <output value="/data/load_client_info/tt2_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/prev_date_unknown-label">
+						<value>&#4722;&#4722;2 &#4821;&#4616;&#4725;: &#4771;&#4845;&#4941;&#4616;&#4901;&#4757;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/completed-label">
+						<value>&#4777;&#4752;&#4723;&#4725; &#4722;&#4722;2 &#4781;&#4725;&#4707;&#4720; &#4776;&#4632;&#4845; &#4756;&#4649;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/completed-prev_completed-label">
+						<value>&#4677;&#4853;&#4634; &#4773;&#4826; &#4817;&#4848;&#4725; &#4720;&#4896;&#4755;&#4690;&#4689;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/completed-completed-label">
+						<value>&#4771;&#4709; &#4776;&#4845;&#4850; &#4773;&#4826; &#4817;&#4848;&#4725; &#4720;&#4896;&#4755;&#4690;&#4689;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/date_known-label">
+						<value>&#4722;&#4722;2 &#4781;&#4725;&#4707;&#4725; &#4829;&#4808;&#4656;&#4848;&#4725;&#4617; &#4821;&#4616;&#4725; &#4845;&#4941;&#4621;&#4901; &#4854;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/date_known-no-label">
+						<value>&#4771;&#4845;&#4939;&#4621;&#4757;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3-label">
+						<value>&#4722;&#4722; 3</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/prev_completed-label">
+						<value>&#4722;&#4722; 3 &#4808;&#4850;&#4771;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/prev_date_eth-label">
+						<value>&#4722;&#4722;3 &#4821;&#4616;&#4725;: <output value="/data/load_client_info/tt3_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/prev_date_unknown-label">
+						<value>&#4722;&#4722;3 &#4821;&#4616;&#4725;: &#4771;&#4845;&#4941;&#4616;&#4901;&#4757;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/completed-label">
+						<value>&#4777;&#4752;&#4723;&#4725; &#4722;&#4722;3 &#4781;&#4725;&#4707;&#4720; &#4776;&#4632;&#4845; &#4756;&#4649;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/date_known-label">
+						<value>&#4722;&#4722;3 &#4781;&#4725;&#4707;&#4725; &#4829;&#4808;&#4656;&#4848;&#4725;&#4617; &#4821;&#4616;&#4725; &#4845;&#4941;&#4621;&#4901; &#4854;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/date_known-no-label">
+						<value>&#4771;&#4845;&#4939;&#4621;&#4757;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4-label">
+						<value>&#4722;&#4722; 4</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/prev_completed-label">
+						<value>&#4722;&#4722; 4 &#4808;&#4850;&#4771;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/prev_date_eth-label">
+						<value>&#4722;&#4722;4 &#4821;&#4616;&#4725;: <output value="/data/load_client_info/tt4_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/prev_date_unknown-label">
+						<value>&#4722;&#4722;4 &#4821;&#4616;&#4725;: &#4771;&#4845;&#4941;&#4616;&#4901;&#4757;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/completed-label">
+						<value>&#4777;&#4752;&#4723;&#4725; &#4722;&#4722;4 &#4781;&#4725;&#4707;&#4720; &#4776;&#4632;&#4845; &#4756;&#4649;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/date_known-label">
+						<value>&#4722;&#4722;4 &#4781;&#4725;&#4707;&#4725; &#4829;&#4808;&#4656;&#4848;&#4725;&#4617; &#4821;&#4616;&#4725; &#4845;&#4941;&#4621;&#4901; &#4854;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5-label">
+						<value>&#4722;&#4722; 5</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/prev_completed-label">
+						<value>&#4722;&#4722; 5 &#4808;&#4850;&#4771;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/prev_date_eth-label">
+						<value>&#4722;&#4722;5 &#4821;&#4616;&#4725;: <output value="/data/load_client_info/tt5_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/prev_date_unknown-label">
+						<value>&#4722;&#4722;5 &#4821;&#4616;&#4725;: &#4771;&#4845;&#4941;&#4616;&#4901;&#4757;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/completed-label">
+						<value>&#4777;&#4752;&#4723;&#4725; &#4722;&#4722;5 &#4781;&#4725;&#4707;&#4720; &#4776;&#4632;&#4845; &#4756;&#4649;</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/date_known-label">
+						<value>&#4722;&#4722;5 &#4781;&#4725;&#4707;&#4725; &#4829;&#4808;&#4656;&#4848;&#4725;&#4617; &#4821;&#4616;&#4725; &#4845;&#4941;&#4621;&#4901; &#4854;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4677;&#4901;&#4818; &#4720;&#4632;&#4618;&#4769;                                                                                                                                                                                        &#4757;&#4637;&#4621;&#4771;&#4797;      &#4771;&#4709; &#4619;&#4821;&#4618; &#4771;&#4709; &#4840;&#4635;&#4755;&#4845; &#4664;&#4752;&#4797; &#4829;&#4653;&#4781;&#4704; &#4694;&#4933;&#4616;&#4811;&#4845; &#4637;&#4621;&#4781;&#4725; &#4845;&#4933;&#4819;&#4753;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="display_client-label">
+						<value>unki kun kan garigaaru yoo haati ulfaa tokko hordoffii da'umsa dura 1n ala buufata fayyaa dhufte folik asidii fi talaallii manijalloo akkasumas dawwaa dabalata kenamuuf irratti galimmessuuf <output value="/data/load_client_info/client_name"/>.</value>
+					</text>
+					<text id="mrn/mrn/title-label">
+						<value><output value="/data/load_client_info/client_name"/>'s lakk. yaala (_ _ _ _ _/_ _).  Iddoowwan duwwatti guuti.</value>
+					</text>
+					<text id="mrn/mrn/number-label">
+						<value>Number</value>
+					</text>
+					<text id="mrn/mrn/number-constraintMsg">
+						<value>lakk. Dijitaa 5 ta'u qaba</value>
+					</text>
+					<text id="mrn/mrn/year-label">
+						<value>waggaadhaaf dijita 2 galichi</value>
+					</text>
+					<text id="mrn/mrn/year-constraintMsg">
+						<value>waggaan dijita 2 ta'u qaba fi gidduu bara 1999 fi bara kana ta'u qaba</value>
+					</text>
+					<text id="mrn/mrn/mrn_validation_message-label">
+						<value>kanaan dura waggoota shaniif waggaa galichuun ni beekama maaloo seeran galichu kee mirkanessi</value>
+					</text>
+					<text id="mrn/display_mrn-label">
+						<value>lakk. Guutuu Yaala <output value="/data/mrn/mrn/mrn"/>.</value>
+					</text>
+					<text id="visit_info/visit_date-label">
+						<value>guyyaa hordoffii</value>
+					</text>
+					<text id="visit_info/visit_date-constraintMsg">
+						<value>Hordoffin da'umsaa duraa 1 turee fulduuraaf hinoluu</value>
+					</text>
+					<text id="visit_info/midwife_name/choose_element-label">
+						<value>maqaa oggessaa deesiftu tajaajila da'umsaa duraa kenuut ga'ee fudhattee</value>
+					</text>
+					<text id="medication_provided-label">
+						<value>Dawwaan keenameef</value>
+					</text>
+					<text id="medication_provided/folic_acid_tablets-label">
+						<value>kiniina fooliki asidii</value>
+					</text>
+					<text id="medication_provided/folic_acid_tablets/extra_folic_acid_given-label">
+						<value>kiniina fooliki asidii/feeras salifeeti meeqatu kenameef</value>
+					</text>
+					<text id="medication_provided/folic_acid_tablets/extra_folic_acid_given-constraintMsg">
+						<value>lakk. 0 gadii galichuun hin danda'amuu</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations-label">
+						<value>Talaalli manjalloo</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1-label">
+						<value>Manjalloo 1</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/prev_completed-label">
+						<value>Talalli manjalloo xumuraan</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/prev_date_eth-label">
+						<value>guyya talalli manjallo 1<output value="/data/load_client_info/tt1_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/prev_date_unknown-label">
+						<value>hin beekumu</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-label">
+						<value>Talalliin manjaloo 1 akkam ture</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-prev_completed-label">
+						<value>kanaan duraa fudhattan jiru</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-completed-label">
+						<value>yeroo hordoffi da'umsaa durruu 1 irrati xumuraan</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/completed-not_completed-label">
+						<value>xumuraan hin fudhaanee /hin beekamu/</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/date_known-label">
+						<value>guyyaa talallii man jalloo 1 itti fudhatte beektaa ?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/date_known-yes-label">
+						<value>eyeen</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt1/date_known-no-label">
+						<value>miti</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2-label">
+						<value>talalli manjalloo 2</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/prev_completed-label">
+						<value>Talalli manjallo 2 xumurtee</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/prev_date_eth-label">
+						<value>TT2 Date: <output value="/data/load_client_info/tt2_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/prev_date_unknown-label">
+						<value>hin beekumu</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/completed-label">
+						<value>talallii man jalloo 2 akkam ture</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/completed-prev_completed-label">
+						<value>ulfaa'un duraa  xumurtee</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/completed-completed-label">
+						<value>yeroo hordoffii da'umsaa duraa 1 xemurtee</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/date_known-label">
+						<value>guyyaa talallii man jalloo 2 itti fudhatte beektaa ?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt2/date_known-no-label">
+						<value>mitti</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3-label">
+						<value>talallii man jalloo 3</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/prev_completed-label">
+						<value>talallii manjalloo 3 xumuran</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/prev_date_eth-label">
+						<value>TT3 Date: <output value="/data/load_client_info/tt3_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/prev_date_unknown-label">
+						<value>hin beekumu</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/completed-label">
+						<value>talalli man jalloo 3 akkam ture?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/date_known-label">
+						<value>guyya talalli manjallo itti fudhatte beekataa?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt3/date_known-no-label">
+						<value>hin beekumu</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4-label">
+						<value>Talalli manjalloo 4</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/prev_completed-label">
+						<value>talalli manjalloo 4 xumurtee</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/prev_date_eth-label">
+						<value>TT4 Date: <output value="/data/load_client_info/tt4_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/prev_date_unknown-label">
+						<value>hin beekumu</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/completed-label">
+						<value>talalli manjaloo 4 akkam ture?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt4/date_known-label">
+						<value>guyyaa talallii manjaloo itti 4 fudhatte beektaa?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5-label">
+						<value>talallii manjalloo 5</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/prev_completed-label">
+						<value>talallii manjalloo 5 xumurtee</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/prev_date_eth-label">
+						<value>TT5 Date: <output value="/data/load_client_info/tt5_date_eth"/></value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/prev_date_unknown-label">
+						<value>hin beekumu</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/completed-label">
+						<value>tallalii manjalloo 5 akkam ture?</value>
+					</text>
+					<text id="medication_provided/tt_vaccinations/tt5/date_known-label">
+						<value>guyyaa talallii manjaloo itti 5 fudhatte beektaa?</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki kun guutuma guutatti guutamee   unka kan eruudhaaf mallattoo magarsaa kara mirgaa bukkee olii jiru filadhuu</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/load_client_info/client_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/case_name"/><setvalue event="xforms-ready" ref="/data/load_client_info/local_phone_number" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/local_phone_number"/><setvalue event="xforms-ready" ref="/data/load_client_info/tt4_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/tt4_date_eth"/><setvalue event="xforms-ready" ref="/data/load_client_info/tt3_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/tt3_date"/><setvalue event="xforms-ready" ref="/data/load_client_info/tt2_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/tt2_date_eth"/><setvalue event="xforms-ready" ref="/data/load_client_info/tt5_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/tt5_date"/><setvalue event="xforms-ready" ref="/data/load_client_info/dob" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/dob"/><setvalue event="xforms-ready" ref="/data/load_client_info/tt5_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/tt5_date_eth"/><setvalue event="xforms-ready" ref="/data/load_client_info/client_number" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/client_number"/><setvalue event="xforms-ready" ref="/data/locations/health_post_id" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/health_post_id"/><setvalue event="xforms-ready" ref="/data/load_client_info/tt1_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/tt1_date"/><setvalue event="xforms-ready" ref="/data/load_client_info/tt4_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/tt4_date"/><setvalue event="xforms-ready" ref="/data/load_client_info/tt3_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/tt3_date_eth"/><setvalue event="xforms-ready" ref="/data/load_client_info/tt1_date_eth" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/tt1_date_eth"/><setvalue event="xforms-ready" ref="/data/load_client_info/tt2_date" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_client_1]/tt2_date"/><setvalue event="xforms-ready" ref="/data/load_family_info/house_gps" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_family_2]/house_gps"/><setvalue event="xforms-ready" ref="/data/load_family_info/family_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_family_2]/case_name"/><setvalue event="xforms-ready" ref="/data/load_family_info/village_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_family_2]/village_name"/><setvalue event="xforms-ready" ref="/data/load_family_info/family_number" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_autoload_family_2]/family_number"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_open_notification_2/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_open_notification_2/case/@user_id"/><setvalue event="xforms-ready" ref="/data/case_open_notification_2/case/@case_id" value="instance('commcaresession')/session/data/case_id_new_notification_0"/><bind calculate="/data/notification_name" nodeset="/data/case_open_notification_2/case/create/case_name"/><bind calculate="/data/load_client_info/age_years" nodeset="/data/case_open_notification_2/case/update/age_years" relevant="count(/data/load_client_info/age_years) &gt; 0"/><bind calculate="/data/load_client_info/client_case_id" nodeset="/data/case_open_notification_2/case/update/client_case_id" relevant="count(/data/load_client_info/client_case_id) &gt; 0"/><bind calculate="/data/load_client_info/client_name" nodeset="/data/case_open_notification_2/case/update/client_name" relevant="count(/data/load_client_info/client_name) &gt; 0"/><bind calculate="/data/medication_provided/folic_acid_tablets/extra_folic_acid_date" nodeset="/data/case_open_notification_2/case/update/extra_folic_acid_date" relevant="count(/data/medication_provided/folic_acid_tablets/extra_folic_acid_date) &gt; 0"/><bind calculate="/data/ethiopian_dates/extra_folic_acid_date_eth" nodeset="/data/case_open_notification_2/case/update/extra_folic_acid_date_eth" relevant="count(/data/ethiopian_dates/extra_folic_acid_date_eth) &gt; 0"/><bind calculate="/data/medication_provided/folic_acid_tablets/extra_folic_acid_given" nodeset="/data/case_open_notification_2/case/update/extra_folic_acid_given" relevant="count(/data/medication_provided/folic_acid_tablets/extra_folic_acid_given) &gt; 0"/><bind calculate="/data/locations/hc_facility_code" nodeset="/data/case_open_notification_2/case/update/hc_facility_code" relevant="count(/data/locations/hc_facility_code) &gt; 0"/><bind calculate="/data/locations/health_center" nodeset="/data/case_open_notification_2/case/update/health_center" relevant="count(/data/locations/health_center) &gt; 0"/><bind calculate="/data/locations/health_center_id" nodeset="/data/case_open_notification_2/case/update/health_center_id" relevant="count(/data/locations/health_center_id) &gt; 0"/><bind calculate="/data/locations/health_post" nodeset="/data/case_open_notification_2/case/update/health_post" relevant="count(/data/locations/health_post) &gt; 0"/><bind calculate="/data/locations/health_post_id" nodeset="/data/case_open_notification_2/case/update/health_post_id" relevant="count(/data/locations/health_post_id) &gt; 0"/><bind calculate="/data/locations/hp_facility_code" nodeset="/data/case_open_notification_2/case/update/hp_facility_code" relevant="count(/data/locations/hp_facility_code) &gt; 0"/><bind calculate="/data/load_client_info/local_phone_number" nodeset="/data/case_open_notification_2/case/update/local_phone_number" relevant="count(/data/load_client_info/local_phone_number) &gt; 0"/><bind calculate="/data/visit_info/midwife_name/midwife_name" nodeset="/data/case_open_notification_2/case/update/midwife_name" relevant="count(/data/visit_info/midwife_name/midwife_name) &gt; 0"/><bind calculate="/data/visit_info/midwife_name/midwife_phone_number" nodeset="/data/case_open_notification_2/case/update/midwife_phone_number" relevant="count(/data/visit_info/midwife_name/midwife_phone_number) &gt; 0"/><bind calculate="/data/mrn/mrn/mrn" nodeset="/data/case_open_notification_2/case/update/mrn" relevant="count(/data/mrn/mrn/mrn) &gt; 0"/><bind calculate="/data/notification_date" nodeset="/data/case_open_notification_2/case/update/notification_date" relevant="count(/data/notification_date) &gt; 0"/><bind calculate="/data/ethiopian_dates/notification_date_eth" nodeset="/data/case_open_notification_2/case/update/notification_date_eth" relevant="count(/data/ethiopian_dates/notification_date_eth) &gt; 0"/><bind calculate="/data/notification_type" nodeset="/data/case_open_notification_2/case/update/notification_type" relevant="count(/data/notification_type) &gt; 0"/><bind calculate="/data/locations/health_post_id" nodeset="/data/case_open_notification_2/case/update/owner_id" relevant="count(/data/locations/health_post_id) &gt; 0"/><bind calculate="/data/locations/region" nodeset="/data/case_open_notification_2/case/update/region" relevant="count(/data/locations/region) &gt; 0"/><bind calculate="/data/locations/region_id" nodeset="/data/case_open_notification_2/case/update/region_id" relevant="count(/data/locations/region_id) &gt; 0"/><bind calculate="/data/locations/test_or_real" nodeset="/data/case_open_notification_2/case/update/test_or_real" relevant="count(/data/locations/test_or_real) &gt; 0"/><bind calculate="/data/medication_provided/tt_vaccinations/tt1/tt1_date" nodeset="/data/case_open_notification_2/case/update/tt1_date" relevant="count(/data/medication_provided/tt_vaccinations/tt1/tt1_date) &gt; 0"/><bind calculate="/data/ethiopian_dates/tt1_date_eth" nodeset="/data/case_open_notification_2/case/update/tt1_date_eth" relevant="count(/data/ethiopian_dates/tt1_date_eth) &gt; 0"/><bind calculate="/data/medication_provided/tt_vaccinations/tt2/tt2_date" nodeset="/data/case_open_notification_2/case/update/tt2_date" relevant="count(/data/medication_provided/tt_vaccinations/tt2/tt2_date) &gt; 0"/><bind calculate="/data/ethiopian_dates/tt2_date_eth" nodeset="/data/case_open_notification_2/case/update/tt2_date_eth" relevant="count(/data/ethiopian_dates/tt2_date_eth) &gt; 0"/><bind calculate="/data/medication_provided/tt_vaccinations/tt3/tt3_date" nodeset="/data/case_open_notification_2/case/update/tt3_date" relevant="count(/data/medication_provided/tt_vaccinations/tt3/tt3_date) &gt; 0"/><bind calculate="/data/ethiopian_dates/tt3_date_eth" nodeset="/data/case_open_notification_2/case/update/tt3_date_eth" relevant="count(/data/ethiopian_dates/tt3_date_eth) &gt; 0"/><bind calculate="/data/medication_provided/tt_vaccinations/tt4/tt4_date" nodeset="/data/case_open_notification_2/case/update/tt4_date" relevant="count(/data/medication_provided/tt_vaccinations/tt4/tt4_date) &gt; 0"/><bind calculate="/data/ethiopian_dates/tt4_date_eth" nodeset="/data/case_open_notification_2/case/update/tt4_date_eth" relevant="count(/data/ethiopian_dates/tt4_date_eth) &gt; 0"/><bind calculate="/data/medication_provided/tt_vaccinations/tt5/tt5_date" nodeset="/data/case_open_notification_2/case/update/tt5_date" relevant="count(/data/medication_provided/tt_vaccinations/tt5/tt5_date) &gt; 0"/><bind calculate="/data/ethiopian_dates/tt5_date_eth" nodeset="/data/case_open_notification_2/case/update/tt5_date_eth" relevant="count(/data/ethiopian_dates/tt5_date_eth) &gt; 0"/><bind calculate="/data/load_family_info/village_name" nodeset="/data/case_open_notification_2/case/update/village" relevant="count(/data/load_family_info/village_name) &gt; 0"/><bind calculate="/data/locations/woreda" nodeset="/data/case_open_notification_2/case/update/woreda" relevant="count(/data/locations/woreda) &gt; 0"/><bind calculate="/data/locations/woreda_id" nodeset="/data/case_open_notification_2/case/update/woreda_id" relevant="count(/data/locations/woreda_id) &gt; 0"/><bind calculate="/data/locations/zone" nodeset="/data/case_open_notification_2/case/update/zone" relevant="count(/data/locations/zone) &gt; 0"/><bind calculate="/data/locations/zone_id" nodeset="/data/case_open_notification_2/case/update/zone_id" relevant="count(/data/locations/zone_id) &gt; 0"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<trigger ref="/data/display_client" appearance="minimal">
+			<label ref="jr:itext('display_client-label')"/>
+		</trigger>
+		<group ref="/data/mrn">
+			<group ref="/data/mrn/mrn" appearance="field-list">
+				<trigger ref="/data/mrn/mrn/title" appearance="minimal">
+					<label ref="jr:itext('mrn/mrn/title-label')"/>
+				</trigger>
+				<input ref="/data/mrn/mrn/number" appearance="numeric">
+					<label ref="jr:itext('mrn/mrn/number-label')"/>
+					<alert ref="jr:itext('mrn/mrn/number-constraintMsg')"/>
+				</input>
+				<input ref="/data/mrn/mrn/year" appearance="numeric">
+					<label ref="jr:itext('mrn/mrn/year-label')"/>
+					<alert ref="jr:itext('mrn/mrn/year-constraintMsg')"/>
+				</input>
+				<trigger ref="/data/mrn/mrn/mrn_validation_message" appearance="minimal">
+					<label ref="jr:itext('mrn/mrn/mrn_validation_message-label')"/>
+				</trigger>
+			</group>
+			<trigger ref="/data/mrn/display_mrn" appearance="minimal">
+				<label ref="jr:itext('mrn/display_mrn-label')"/>
+			</trigger>
+		</group>
+		<group ref="/data/visit_info">
+			<input ref="/data/visit_info/visit_date" appearance="ethiopian">
+				<label ref="jr:itext('visit_info/visit_date-label')"/>
+				<alert ref="jr:itext('visit_info/visit_date-constraintMsg')"/>
+			</input>
+			<group ref="/data/visit_info/midwife_name">
+				<group>
+					<repeat jr:count="/data/visit_info/midwife_name/list_length" jr:noAddRemove="true()" nodeset="/data/visit_info/midwife_name/repeat"/>
+				</group>
+				<select1 ref="/data/visit_info/midwife_name/choose_element">
+					<label ref="jr:itext('visit_info/midwife_name/choose_element-label')"/>
+					<itemset nodeset="/data/visit_info/midwife_name/repeat">
+						<label ref="element"/>
+						<value ref="element_id"/>
+					</itemset>
+				</select1>
+			</group>
+		</group>
+		<group ref="/data/medication_provided">
+			<label ref="jr:itext('medication_provided-label')"/>
+			<group ref="/data/medication_provided/folic_acid_tablets" appearance="field-list">
+				<label ref="jr:itext('medication_provided/folic_acid_tablets-label')"/>
+				<input ref="/data/medication_provided/folic_acid_tablets/extra_folic_acid_given">
+					<label ref="jr:itext('medication_provided/folic_acid_tablets/extra_folic_acid_given-label')"/>
+					<alert ref="jr:itext('medication_provided/folic_acid_tablets/extra_folic_acid_given-constraintMsg')"/>
+				</input>
+			</group>
+			<group ref="/data/medication_provided/tt_vaccinations">
+				<label ref="jr:itext('medication_provided/tt_vaccinations-label')"/>
+				<group ref="/data/medication_provided/tt_vaccinations/tt1" appearance="field-list">
+					<label ref="jr:itext('medication_provided/tt_vaccinations/tt1-label')"/>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt1/prev_completed" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/prev_completed-label')"/>
+					</trigger>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt1/prev_date_eth" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/prev_date_eth-label')"/>
+					</trigger>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt1/prev_date_unknown" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/prev_date_unknown-label')"/>
+					</trigger>
+					<select1 ref="/data/medication_provided/tt_vaccinations/tt1/completed">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/completed-label')"/>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/completed-prev_completed-label')"/>
+							<value>prev_completed</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/completed-completed-label')"/>
+							<value>completed</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/completed-not_completed-label')"/>
+							<value>not_completed</value>
+						</item>
+					</select1>
+					<select1 ref="/data/medication_provided/tt_vaccinations/tt1/date_known">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/date_known-label')"/>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/date_known-yes-label')"/>
+							<value>yes</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/date_known-no-label')"/>
+							<value>no</value>
+						</item>
+					</select1>
+					<input ref="/data/medication_provided/tt_vaccinations/tt1/date" appearance="ethiopian"/>
+				</group>
+				<group ref="/data/medication_provided/tt_vaccinations/tt2" appearance="field-list">
+					<label ref="jr:itext('medication_provided/tt_vaccinations/tt2-label')"/>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt2/prev_completed" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt2/prev_completed-label')"/>
+					</trigger>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt2/prev_date_eth" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt2/prev_date_eth-label')"/>
+					</trigger>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt2/prev_date_unknown" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt2/prev_date_unknown-label')"/>
+					</trigger>
+					<select1 ref="/data/medication_provided/tt_vaccinations/tt2/completed">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt2/completed-label')"/>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt2/completed-prev_completed-label')"/>
+							<value>prev_completed</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt2/completed-completed-label')"/>
+							<value>completed</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/completed-not_completed-label')"/>
+							<value>not_completed</value>
+						</item>
+					</select1>
+					<select1 ref="/data/medication_provided/tt_vaccinations/tt2/date_known">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt2/date_known-label')"/>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/date_known-yes-label')"/>
+							<value>yes</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt2/date_known-no-label')"/>
+							<value>no</value>
+						</item>
+					</select1>
+					<input ref="/data/medication_provided/tt_vaccinations/tt2/date" appearance="ethiopian"/>
+				</group>
+				<group ref="/data/medication_provided/tt_vaccinations/tt3" appearance="field-list">
+					<label ref="jr:itext('medication_provided/tt_vaccinations/tt3-label')"/>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt3/prev_completed" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt3/prev_completed-label')"/>
+					</trigger>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt3/prev_date_eth" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt3/prev_date_eth-label')"/>
+					</trigger>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt3/prev_date_unknown" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt3/prev_date_unknown-label')"/>
+					</trigger>
+					<select1 ref="/data/medication_provided/tt_vaccinations/tt3/completed">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt3/completed-label')"/>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt2/completed-prev_completed-label')"/>
+							<value>prev_completed</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt2/completed-completed-label')"/>
+							<value>completed</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/completed-not_completed-label')"/>
+							<value>not_completed</value>
+						</item>
+					</select1>
+					<select1 ref="/data/medication_provided/tt_vaccinations/tt3/date_known">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt3/date_known-label')"/>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/date_known-yes-label')"/>
+							<value>yes</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt3/date_known-no-label')"/>
+							<value>no</value>
+						</item>
+					</select1>
+					<input ref="/data/medication_provided/tt_vaccinations/tt3/date" appearance="ethiopian"/>
+				</group>
+				<group ref="/data/medication_provided/tt_vaccinations/tt4" appearance="field-list">
+					<label ref="jr:itext('medication_provided/tt_vaccinations/tt4-label')"/>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt4/prev_completed" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt4/prev_completed-label')"/>
+					</trigger>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt4/prev_date_eth" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt4/prev_date_eth-label')"/>
+					</trigger>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt4/prev_date_unknown" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt4/prev_date_unknown-label')"/>
+					</trigger>
+					<select1 ref="/data/medication_provided/tt_vaccinations/tt4/completed">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt4/completed-label')"/>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt2/completed-prev_completed-label')"/>
+							<value>prev_completed</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt2/completed-completed-label')"/>
+							<value>completed</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/completed-not_completed-label')"/>
+							<value>not_completed</value>
+						</item>
+					</select1>
+					<select1 ref="/data/medication_provided/tt_vaccinations/tt4/date_known">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt4/date_known-label')"/>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/date_known-yes-label')"/>
+							<value>yes</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt3/date_known-no-label')"/>
+							<value>no</value>
+						</item>
+					</select1>
+					<input ref="/data/medication_provided/tt_vaccinations/tt4/date" appearance="ethiopian"/>
+				</group>
+				<group ref="/data/medication_provided/tt_vaccinations/tt5" appearance="field-list">
+					<label ref="jr:itext('medication_provided/tt_vaccinations/tt5-label')"/>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt5/prev_completed" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt5/prev_completed-label')"/>
+					</trigger>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt5/prev_date_eth" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt5/prev_date_eth-label')"/>
+					</trigger>
+					<trigger ref="/data/medication_provided/tt_vaccinations/tt5/prev_date_unknown" appearance="minimal">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt5/prev_date_unknown-label')"/>
+					</trigger>
+					<select1 ref="/data/medication_provided/tt_vaccinations/tt5/completed">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt5/completed-label')"/>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt2/completed-prev_completed-label')"/>
+							<value>prev_completed</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/completed-completed-label')"/>
+							<value>completed</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/completed-not_completed-label')"/>
+							<value>not_completed</value>
+						</item>
+					</select1>
+					<select1 ref="/data/medication_provided/tt_vaccinations/tt5/date_known">
+						<label ref="jr:itext('medication_provided/tt_vaccinations/tt5/date_known-label')"/>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt1/date_known-yes-label')"/>
+							<value>yes</value>
+						</item>
+						<item>
+							<label ref="jr:itext('medication_provided/tt_vaccinations/tt3/date_known-no-label')"/>
+							<value>no</value>
+						</item>
+					</select1>
+					<input ref="/data/medication_provided/tt_vaccinations/tt5/date" appearance="ethiopian"/>
+				</group>
+			</group>
+		</group>
+		<group ref="/data/ethiopian_dates"/>
+		<group ref="/data/load_family_info"/>
+		<group ref="/data/load_client_info"/>
+		<group ref="/data/locations"/>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

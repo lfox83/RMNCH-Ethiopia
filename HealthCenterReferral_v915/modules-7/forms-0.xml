@@ -1,0 +1,263 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>EDD Calculator</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/8C6849B2-BE03-4A0E-BEDF-FB75BB67CC77" uiVersion="1" version="915" name="EDD Calculator">
+					<instruction/>
+					<edd>
+						<stage_info/>
+						<lmp_entered/>
+						<gestational_age_entered/>
+						<edd_entered/>
+						<edd_lmp_ga_label/>
+						<edd/>
+						<gestational_age/>
+						<lmp/>
+					</edd>
+					<ethiopian_dates>
+						<edd_eth/>
+						<lmp_eth/>
+					</ethiopian_dates>
+					<end_of_form/>
+				<orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="commcaresession" src="jr://instance/session"/>
+			<bind nodeset="/data/instruction"/>
+			<bind nodeset="/data/edd"/>
+			<bind nodeset="/data/edd/stage_info" required="true()"/>
+			<bind nodeset="/data/edd/lmp_entered" type="xsd:date" relevant="selected(/data/edd/stage_info, 'lmp')" required="true()"/>
+			<bind nodeset="/data/edd/gestational_age_entered" type="xsd:int" constraint=". &lt;= 43 and . &gt;= 0" jr:constraintMsg="jr:itext('edd/gestational_age_entered-constraintMsg')" relevant="selected(/data/edd/stage_info, 'gestational_age')" required="true()"/>
+			<bind nodeset="/data/edd/edd_entered" type="xsd:date" relevant="selected(/data/edd/stage_info, 'edd')" required="true()"/>
+			<bind nodeset="/data/edd/edd_lmp_ga_label" relevant="/data/edd/stage_info != 'none'"/>
+			<bind nodeset="/data/edd/edd" calculate="if(/data/edd/stage_info = 'edd', /data/edd/edd_entered, if(/data/edd/stage_info = 'gestational_age', date(today() + ((40 - /data/edd/gestational_age_entered) * 7)), if(/data/edd/stage_info = 'lmp', date(/data/edd/lmp_entered + 280), '')))"/>
+			<bind nodeset="/data/edd/gestational_age" calculate="if(/data/edd/stage_info = 'gestational_age', /data/edd/gestational_age_entered, if(/data/edd/stage_info = 'edd', int((today() - (date(/data/edd/edd_entered) - 40 * 7)) div 7), if(/data/edd/stage_info = 'lmp', int((today() - date(/data/edd/lmp_entered)) div 7), '')))"/>
+			<bind nodeset="/data/edd/lmp" calculate="if(/data/edd/stage_info = 'lmp', /data/edd/lmp_entered, if(/data/edd/stage_info = 'gestational_age', date(today() - (/data/edd/gestational_age_entered * 7)), if(/data/edd/stage_info = 'edd', date(/data/edd/edd_entered - 280), '')))"/>
+			<bind nodeset="/data/ethiopian_dates"/>
+			<bind nodeset="/data/ethiopian_dates/edd_eth" relevant="/data/edd/edd != &quot;&quot;" calculate="if(/data/edd/edd = '', '', concat(int((date(/data/edd/edd) - 253) div 365.25) + 1963, if(int((date(/data/edd/edd) - 253 - (365 * int((date(/data/edd/edd) - 253) div 365.25) + 1 + int((int((date(/data/edd/edd) - 253) div 365.25) - 1) div 4))) div 30) + 1 &lt; 10, '-0', '-'), int((date(/data/edd/edd) - 253 - (365 * (int((date(/data/edd/edd) - 253) div 365.25) + 1963 - 1963) + 1 + int((int((date(/data/edd/edd) - 253) div 365.25) - 1) div 4))) div 30) + 1, if(((date(/data/edd/edd) - 253 - (365 * int((date(/data/edd/edd) - 253) div 365.25) + 1 + int((int((date(/data/edd/edd) - 253) div 365.25) - 1) div 4))) mod 30) + 1 &lt; 10, '-0', '-'), ((date(/data/edd/edd) - 253 - (365 * int((date(/data/edd/edd) - 253) div 365.25) + 1 + int((int((date(/data/edd/edd) - 253) div 365.25) - 1) div 4))) mod 30) + 1))"/>
+			<bind nodeset="/data/ethiopian_dates/lmp_eth" relevant="/data/edd/lmp != &quot;&quot;" calculate="if(/data/edd/lmp = '', '', concat(int((date(/data/edd/lmp) - 253) div 365.25) + 1963, if(int((date(/data/edd/lmp) - 253 - (365 * int((date(/data/edd/lmp) - 253) div 365.25) + 1 + int((int((date(/data/edd/lmp) - 253) div 365.25) - 1) div 4))) div 30) + 1 &lt; 10, '-0', '-'), int((date(/data/edd/lmp) - 253 - (365 * (int((date(/data/edd/lmp) - 253) div 365.25) + 1963 - 1963) + 1 + int((int((date(/data/edd/lmp) - 253) div 365.25) - 1) div 4))) div 30) + 1, if(((date(/data/edd/lmp) - 253 - (365 * int((date(/data/edd/lmp) - 253) div 365.25) + 1 + int((int((date(/data/edd/lmp) - 253) div 365.25) - 1) div 4))) mod 30) + 1 &lt; 10, '-0', '-'), ((date(/data/edd/lmp) - 253 - (365 * int((date(/data/edd/lmp) - 253) div 365.25) + 1 + int((int((date(/data/edd/lmp) - 253) div 365.25) - 1) div 4))) mod 30) + 1))"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="instruction-label">
+						<value>This form will help you calculate the LMP, EDD, and Gestational Age for any pregnant woman.</value>
+					</text>
+					<text id="edd-label">
+						<value>Estimated Delivery Date</value>
+					</text>
+					<text id="edd/stage_info-label">
+						<value>Which information about the stage of pregnancy do you have to start with?</value>
+					</text>
+					<text id="edd/stage_info-lmp-label">
+						<value>Last Menstrual Period</value>
+					</text>
+					<text id="edd/stage_info-gestational_age-label">
+						<value>Gestational Age</value>
+					</text>
+					<text id="edd/stage_info-edd-label">
+						<value>Estimated Date of Delivery</value>
+					</text>
+					<text id="edd/lmp_entered-label">
+						<value>Date of LMP</value>
+					</text>
+					<text id="edd/gestational_age_entered-label">
+						<value>Gestational Age (in weeks)</value>
+					</text>
+					<text id="edd/gestational_age_entered-constraintMsg">
+						<value>The gestational age must be between 0 and 43 weeks.</value>
+					</text>
+					<text id="edd/edd_lmp_ga_label-label">
+						<value>* LMP: <output value="/data/ethiopian_dates/lmp_eth"/>
+
+* EDD: <output value="/data/ethiopian_dates/edd_eth"/>
+
+* Gestational Age: <output value="/data/edd/gestational_age"/> Weeks</value>
+						<value form="markdown">* LMP: <output value="/data/ethiopian_dates/lmp_eth"/>
+
+* EDD: <output value="/data/ethiopian_dates/edd_eth"/>
+
+* Gestational Age: <output value="/data/edd/gestational_age"/> Weeks</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="instruction-label">
+						<value>&#4845;&#4613; &#4677;&#4933; &#4635;&#4757;&#4763;&#4813;&#4637; &#4773;&#4653;&#4873;&#4829; &#4773;&#4755;&#4725; &#4840;&#4808;&#4653; &#4768;&#4704;&#4707; &#4616;&#4632;&#4904;&#4648;&#4667; &#4874;&#4828; &#4843;&#4840;&#4733;&#4704;&#4725;&#4757; , &#4808;&#4651;&#4720; &#4933;&#4757;&#4661;  &#4773;&#4755; &#4704;&#4877;&#4637;&#4725; &#4840;&#4637;&#4725;&#4808;&#4621;&#4853;&#4704;&#4725; &#4672;&#4757;   &#4616;&#4635;&#4661;&#4619;&#4725; &#4843;&#4877;&#4827;&#4621;.</value>
+					</text>
+					<text id="edd-label">
+						<value>&#4840;&#4637;&#4725;&#4808;&#4621;&#4853;&#4704;&#4725; &#4672;&#4757; &#4704;&#4877;&#4637;&#4725;</value>
+					</text>
+					<text id="edd/stage_info-label">
+						<value>&#4776;&#4773;&#4653;&#4877;&#4829;&#4755; &#4848;&#4648;&#4867;&#4814;&#4733; &#4704;&#4768;&#4757;&#4849; &#4616;&#4632;&#4864;&#4632;&#4653; &#4637;&#4757; &#4632;&#4648;&#4867; &#4768;&#4616;&#4669;</value>
+					</text>
+					<text id="edd/stage_info-lmp-label">
+						<value>&#4840;&#4808;&#4653; &#4768;&#4704;&#4707; &#4616;&#4632;&#4904;&#4648;&#4667; &#4874;&#4828; &#4843;&#4840;&#4733;&#4704;&#4725; &#4672;&#4757;</value>
+					</text>
+					<text id="edd/stage_info-gestational_age-label">
+						<value>&#4808;&#4651;&#4720; &#4933;&#4757;&#4661;</value>
+					</text>
+					<text id="edd/stage_info-edd-label">
+						<value>&#4840;&#4637;&#4725;&#4808;&#4621;&#4853;&#4704;&#4725;&#4757; &#4672;&#4757; &#4704;&#4632;&#4872;&#4632;&#4725;</value>
+					</text>
+					<text id="edd/lmp_entered-label">
+						<value>&#4840;&#4808;&#4653; &#4768;&#4704;&#4707; &#4616;&#4632;&#4904;&#4648;&#4667; &#4874;&#4828; &#4843;&#4840;&#4733;&#4704;&#4725; &#4672;&#4757;</value>
+					</text>
+					<text id="edd/gestational_age_entered-label">
+						<value>&#4808;&#4651;&#4720; &#4933;&#4757;&#4661; (&#4704;&#4659;&#4637;&#4757;&#4723;&#4725;)</value>
+					</text>
+					<text id="edd/gestational_age_entered-constraintMsg">
+						<value>&#4808;&#4651;&#4720; &#4933;&#4757;&#4661;  &#4632;&#4614;&#4757; &#4843;&#4616;&#4704;&#4725; &#4704;0 &#4773;&#4755; &#4704; 43 &#4659;&#4637;&#4757;&#4723;&#4725; &#4632;&#4779;&#4776;&#4621; &#4752;&#4813;&#4961;&#4961;</value>
+					</text>
+					<text id="edd/edd_lmp_ga_label-label">
+						<value>* &#4840;&#4808;&#4653; &#4768;&#4704;&#4707; &#4616;&#4632;&#4904;&#4648;&#4667; &#4874;&#4828; &#4843;&#4840;&#4733;&#4704;&#4725; &#4672;&#4757; : <output value="/data/ethiopian_dates/lmp_eth"/>
+
+* &#4704;&#4877;&#4637;&#4725; &#4840;&#4637;&#4725;&#4808;&#4621;&#4853;&#4704;&#4725; &#4672;&#4757; : <output value="/data/ethiopian_dates/edd_eth"/>
+
+* &#4808;&#4651;&#4720; &#4933;&#4757;&#4661;: <output value="/data/edd/gestational_age"/> &#4659;&#4637;&#4757;&#4723;&#4725;</value>
+						<value form="markdown">* &#4840;&#4808;&#4653; &#4768;&#4704;&#4707; &#4616;&#4632;&#4904;&#4648;&#4667; &#4874;&#4828; &#4843;&#4840;&#4733;&#4704;&#4725; &#4672;&#4757; : <output value="/data/ethiopian_dates/lmp_eth"/>
+
+* &#4704;&#4877;&#4637;&#4725; &#4840;&#4637;&#4725;&#4808;&#4621;&#4853;&#4704;&#4725; &#4672;&#4757; : <output value="/data/ethiopian_dates/edd_eth"/>
+
+* &#4808;&#4651;&#4720; &#4933;&#4757;&#4661;: <output value="/data/edd/gestational_age"/> &#4659;&#4637;&#4757;&#4723;&#4725;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="instruction-label">
+						<value>&#4773;&#4826; &#4677;&#4901;&#4818; &#4757;&#4793;&#4616;&#4757; &#4901;&#4753;&#4659;&#4725; &#4632;&#4808;&#4851;&#4773;&#4723; &#4808;&#4653;&#4627;&#4810; &#4933;&#4877;&#4843; &#4829;&#4720;&#4653;&#4771;&#4840;&#4619; &#4821;&#4616;&#4725; &#4877;&#4637;&#4723;&#4810; &#4773;&#4725;&#4808;&#4621;&#4848;&#4617; &#4821;&#4616;&#4725;&#4757; &#4808;&#4653;&#4626; &#4901;&#4757;&#4658;&#4757; &#4773;&#4757;&#4656;&#4653;&#4624;&#4617; &#4773;&#4841;</value>
+					</text>
+					<text id="edd-label">
+						<value>&#4877;&#4637;&#4723;&#4810; &#4773;&#4725;&#4808;&#4621;&#4848;&#4617; &#4821;&#4616;&#4725;</value>
+					</text>
+					<text id="edd/stage_info-label">
+						<value>&#4901;&#4757;&#4658; &#4829;&#4653;&#4776;&#4704;&#4617; &#4848;&#4648;&#4867; &#4723;&#4845; &#4709;&#4637;&#4901;&#4675;&#4637; &#4770;&#4795; &#4725;&#4656;&#4653;&#4630;</value>
+					</text>
+					<text id="edd/stage_info-lmp-label">
+						<value>&#4808;&#4653;&#4627;&#4810; &#4933;&#4877;&#4843; &#4757;&#4632;&#4808;&#4851;&#4773;&#4723; &#4877;&#4828; &#4829;&#4720;&#4653;&#4771;&#4840;&#4619; &#4877;&#4828;</value>
+					</text>
+					<text id="edd/stage_info-gestational_age-label">
+						<value>&#4821;&#4853;&#4632; &#4901;&#4757;&#4658;</value>
+					</text>
+					<text id="edd/stage_info-edd-label">
+						<value>&#4877;&#4637;&#4723;&#4810; &#4773;&#4725;&#4808;&#4621;&#4848;&#4617; &#4821;&#4616;&#4725;</value>
+					</text>
+					<text id="edd/lmp_entered-label">
+						<value>&#4808;&#4653;&#4627;&#4810; &#4933;&#4877;&#4843; &#4757;&#4632;&#4808;&#4851;&#4773;&#4723; &#4877;&#4828; &#4829;&#4720;&#4653;&#4771;&#4840;&#4619; &#4821;&#4616;&#4725;</value>
+					</text>
+					<text id="edd/gestational_age_entered-label">
+						<value>&#4821;&#4853;&#4632; &#4901;&#4757;&#4658; &#4709;&#4656;&#4633;&#4757;</value>
+					</text>
+					<text id="edd/gestational_age_entered-constraintMsg">
+						<value>&#4821;&#4853;&#4632; &#4901;&#4757;&#4658; &#4771;&#4709; &#4638;&#4757;&#4878; 0 &#4757; 43&#4757; &#4656;&#4633;&#4755;&#4725; &#4781;&#4792;&#4813;&#4757; &#4771;&#4616;&#4814;</value>
+					</text>
+					<text id="edd/edd_lmp_ga_label-label">
+						<value>*&#4808;&#4653;&#4627;&#4810; &#4933;&#4877;&#4843; &#4757;&#4632;&#4808;&#4851;&#4773;&#4723; &#4877;&#4828; &#4829;&#4720;&#4653;&#4771;&#4840;&#4619; &#4877;&#4828; : <output value="/data/ethiopian_dates/lmp_eth"/>
+
+* &#4877;&#4637;&#4723;&#4810; &#4773;&#4725;&#4808;&#4621;&#4848;&#4617; &#4821;&#4616;&#4725;: <output value="/data/ethiopian_dates/edd_eth"/>
+
+* &#4821;&#4853;&#4632; &#4901;&#4757;&#4658;: <output value="/data/edd/gestational_age"/> &#4656;&#4633;&#4755;&#4725;</value>
+						<value form="markdown">*&#4808;&#4653;&#4627;&#4810; &#4933;&#4877;&#4843; &#4757;&#4632;&#4808;&#4851;&#4773;&#4723; &#4877;&#4828; &#4829;&#4720;&#4653;&#4771;&#4840;&#4619; &#4877;&#4828; : <output value="/data/ethiopian_dates/lmp_eth"/>
+
+* &#4877;&#4637;&#4723;&#4810; &#4773;&#4725;&#4808;&#4621;&#4848;&#4617; &#4821;&#4616;&#4725;: <output value="/data/ethiopian_dates/edd_eth"/>
+
+* &#4821;&#4853;&#4632; &#4901;&#4757;&#4658;: <output value="/data/edd/gestational_age"/> &#4656;&#4633;&#4755;&#4725;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4677;&#4901;&#4818; &#4720;&#4632;&#4618;&#4769;                                                                                                                                                                                        &#4757;&#4637;&#4621;&#4771;&#4797;      &#4771;&#4709; &#4619;&#4821;&#4618; &#4771;&#4709; &#4840;&#4635;&#4755;&#4845; &#4664;&#4752;&#4797; &#4829;&#4653;&#4781;&#4704; &#4694;&#4933;&#4616;&#4811;&#4845; &#4637;&#4621;&#4781;&#4725; &#4845;&#4933;&#4819;&#4753;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="instruction-label">
+						<value>unki kun dubartoota hundaaf guyyaa marsa laguu dhumaa itti argitee,Tilimaaama guyyaa da'umsaa fi ji'oota ulfaa beekuuf gargaara</value>
+					</text>
+					<text id="edd-label">
+						<value>Guyyaa tilimaama da'umsaa</value>
+					</text>
+					<text id="edd/stage_info-label">
+						<value>sadarkaa ulfaa keessaa tokko jalqaabuf oddeefannoo maal qabda?</value>
+					</text>
+					<text id="edd/stage_info-lmp-label">
+						<value>Guyyaa marsaa laguu dhumaa itti argitee</value>
+					</text>
+					<text id="edd/stage_info-gestational_age-label">
+						<value>Ji'oota ulfaa</value>
+					</text>
+					<text id="edd/stage_info-edd-label">
+						<value>Guyyaa tilimaama da'umsaa</value>
+					</text>
+					<text id="edd/lmp_entered-label">
+						<value>Guyyaa marsaa laguu dhumaa itti argitee</value>
+					</text>
+					<text id="edd/gestational_age_entered-label">
+						<value>Ji'oota ulfaa (Torbeedhaan)</value>
+					</text>
+					<text id="edd/gestational_age_entered-constraintMsg">
+						<value>Ji'ootin ulfaa kan ta'u qabu 0 fi torbee 42 geddutti</value>
+					</text>
+					<text id="edd/edd_lmp_ga_label-label">
+						<value>* LMP: <output value="/data/ethiopian_dates/lmp_eth"/>
+
+* EDD: <output value="/data/ethiopian_dates/edd_eth"/>
+
+* Gestational Age: <output value="/data/edd/gestational_age"/> Weeks</value>
+						<value form="markdown">* LMP: <output value="/data/ethiopian_dates/lmp_eth"/>
+
+* EDD: <output value="/data/ethiopian_dates/edd_eth"/>
+
+* Gestational Age: <output value="/data/edd/gestational_age"/> Weeks</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki guutuma guututti guutame unka kana erguudha mallattoo magarsoha kana mirgo bokke olii jiru xuqi</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<trigger ref="/data/instruction" appearance="minimal">
+			<label ref="jr:itext('instruction-label')"/>
+		</trigger>
+		<group ref="/data/edd">
+			<label ref="jr:itext('edd-label')"/>
+			<select1 ref="/data/edd/stage_info">
+				<label ref="jr:itext('edd/stage_info-label')"/>
+				<item>
+					<label ref="jr:itext('edd/stage_info-lmp-label')"/>
+					<value>lmp</value>
+				</item>
+				<item>
+					<label ref="jr:itext('edd/stage_info-gestational_age-label')"/>
+					<value>gestational_age</value>
+				</item>
+				<item>
+					<label ref="jr:itext('edd/stage_info-edd-label')"/>
+					<value>edd</value>
+				</item>
+			</select1>
+			<input ref="/data/edd/lmp_entered" appearance="ethiopian">
+				<label ref="jr:itext('edd/lmp_entered-label')"/>
+			</input>
+			<input ref="/data/edd/gestational_age_entered">
+				<label ref="jr:itext('edd/gestational_age_entered-label')"/>
+				<alert ref="jr:itext('edd/gestational_age_entered-constraintMsg')"/>
+			</input>
+			<input ref="/data/edd/edd_entered" appearance="ethiopian">
+				<label ref="jr:itext('edd-label')"/>
+			</input>
+			<trigger ref="/data/edd/edd_lmp_ga_label" appearance="minimal">
+				<label ref="jr:itext('edd/edd_lmp_ga_label-label')"/>
+			</trigger>
+		</group>
+		<group ref="/data/ethiopian_dates"/>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

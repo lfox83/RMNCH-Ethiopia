@@ -1,0 +1,155 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>Initial Application Setup</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/148E9A62-824E-4E3F-AB85-0B49D9095DAA" uiVersion="1" version="915" name="Initial Application Setup">
+					<num_midwives/>
+					<midwives jr:template="">
+						<enforce_repeat_number>
+							<midwife_name/>
+							<midwife_phone_entered/>
+							<midwife_name_no_spaces/>
+							<midwife_phone/>
+						</enforce_repeat_number>
+					</midwives>
+					<midwife_names/>
+					<midwife_phones/>
+					<end_of_form/>
+					<locations>
+						<health_center_id/>
+						<health_center/>
+						<region_id/>
+						<region/>
+						<zone_id/>
+						<zone/>
+						<woreda_id/>
+						<woreda/>
+						<hc_facility_code/>
+						<test_or_real/>
+					</locations>
+				<case_open_midwife_settings_0><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><create><case_name/><owner_id/><case_type>midwife_settings</case_type></create><update><hc_facility_code/><health_center/><health_center_id/><midwife_names/><midwife_phones/><region/><region_id/><test_or_real/><woreda/><woreda_id/><zone/><zone_id/></update></case></case_open_midwife_settings_0><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="groups" src="jr://fixture/user-groups"/><instance id="locations" src="jr://fixture/locations"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<bind nodeset="/data/num_midwives" type="xsd:int" required="true()"/>
+			<bind nodeset="/data/midwives"/>
+			<bind nodeset="/data/midwives/enforce_repeat_number" relevant="position(current()/..) + 1 &lt;= /data/num_midwives"/>
+			<bind nodeset="/data/midwives/enforce_repeat_number/midwife_name" type="xsd:string" required="true()"/>
+			<bind nodeset="/data/midwives/enforce_repeat_number/midwife_phone_entered" type="xsd:string" constraint="regex(., '^0[0-9]{9}$')" jr:constraintMsg="jr:itext('midwives/enforce_repeat_number/midwife_phone_entered-constraintMsg')"/>
+			<bind nodeset="/data/midwives/enforce_repeat_number/midwife_name_no_spaces" calculate="replace(current()/../midwife_name, &quot; &quot;, &quot;_&quot;)"/>
+			<bind nodeset="/data/midwives/enforce_repeat_number/midwife_phone" calculate="coalesce(current()/../midwife_phone_entered, &quot;-&quot;)"/>
+			<bind nodeset="/data/midwife_names" calculate="join(&quot; &quot;, /data/midwives/enforce_repeat_number/midwife_name_no_spaces)"/>
+			<bind nodeset="/data/midwife_phones" calculate="join(&quot; &quot;, /data/midwives/enforce_repeat_number/midwife_phone)"/>
+			<bind nodeset="/data/end_of_form"/>
+			<bind nodeset="/data/locations"/>
+			<bind nodeset="/data/locations/health_center_id" calculate="instance('commcaresession')/session/user/data/commcare_location_id"/>
+			<bind nodeset="/data/locations/health_center" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/name" required="true()"/>
+			<bind nodeset="/data/locations/region_id" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/@region_id"/>
+			<bind nodeset="/data/locations/region" calculate="instance('locations')/locations/location[@id = /data/locations/region_id]/name"/>
+			<bind nodeset="/data/locations/zone_id" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/@zone_id"/>
+			<bind nodeset="/data/locations/zone" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/name"/>
+			<bind nodeset="/data/locations/woreda_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/@woreda_id"/>
+			<bind nodeset="/data/locations/woreda" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/name"/>
+			<bind nodeset="/data/locations/hc_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/test_or_real" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/test_or_real) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/test_or_real, &quot;Unknown&quot;)"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="num_midwives-label">
+						<value>How many Midwives are there for this Health Center?</value>
+					</text>
+					<text id="midwives/enforce_repeat_number/midwife_name-label">
+						<value>Midwife Name <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="midwives/enforce_repeat_number/midwife_phone_entered-label">
+						<value>Midwife Phone Number <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="midwives/enforce_repeat_number/midwife_phone_entered-constraintMsg">
+						<value>The phone number must start with 0 and cannot be longer than 10 digits</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="num_midwives-label">
+						<value>&#4704;&#4826;&#4613; &#4900;&#4755; &#4899;&#4709;&#4843; &#4661;&#4757;&#4725; &#4768;&#4811;&#4619;&#4869; &#4707;&#4616;&#4633;&#4843;&#4814;&#4733; &#4768;&#4617;?</value>
+					</text>
+					<text id="midwives/enforce_repeat_number/midwife_name-label">
+						<value>&#4840;&#4768;&#4811;&#4619;&#4869; &#4661;&#4637; <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="midwives/enforce_repeat_number/midwife_phone_entered-label">
+						<value>&#4840;&#4768;&#4811;&#4619;&#4869; &#4661;&#4621;&#4781; &#4673;&#4901;&#4653;<output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="midwives/enforce_repeat_number/midwife_phone_entered-constraintMsg">
+						<value>&#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4777; &#4776;0 &#4632;&#4864;&#4632;&#4653; &#4768;&#4616;&#4704;&#4725; &#4773;&#4755; &#4776;10 &#4673;&#4901;&#4654;&#4733; &#4632;&#4709;&#4616;&#4901; &#4840;&#4616;&#4704;&#4725;&#4637;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="num_midwives-label">
+						<value>&#4752;&#4826; &#4635;&#4773;&#4792;&#4621; &#4901;&#4821;&#4755;  &#4781;&#4757;&#4848;&#4845; &#4632;&#4811;&#4616;&#4850;&#4722; &#4771;&#4616;&#4814;&#4774;?</value>
+					</text>
+					<text id="midwives/enforce_repeat_number/midwife_name-label">
+						<value>&#4669;&#4637; &#4632;&#4811;&#4616;&#4850;&#4725;<output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="midwives/enforce_repeat_number/midwife_phone_entered-label">
+						<value>&#4755;&#4845; &#4632;&#4811;&#4616;&#4850;&#4725; &#4689;&#4933;&#4650; &#4661;&#4621;&#4778; <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="midwives/enforce_repeat_number/midwife_phone_entered-constraintMsg">
+						<value>&#4661;&#4621;&#4778; &#4689;&#4933;&#4650; &#4755;&#4845; &#4877;&#4853;&#4757; &#4779;&#4709; 0 &#4781;&#4869;&#4637;&#4653; &#4773;&#4754;&#4608;&#4814; &#4773;&#4755; &#4779;&#4709; 10 &#4853;&#4869;&#4725; &#4757;&#4619;&#4821;&#4618; &#4781;&#4792;&#4813;&#4757; &#4840;&#4709;&#4617;&#4757;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="num_midwives-label">
+						<value>oggeessota dahuumsaa meeqatu dhabbata fayyaa kana keessa jira?</value>
+					</text>
+					<text id="midwives/enforce_repeat_number/midwife_name-label">
+						<value>Midwife Name <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="midwives/enforce_repeat_number/midwife_phone_entered-label">
+						<value>Midwife Phone Number <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="midwives/enforce_repeat_number/midwife_phone_entered-constraintMsg">
+						<value>Lakk bilbilaa 0 dhaan jalqabuu qaba fi dijitoota 10 irra caluu hin qabu.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki kun guutuma guutatti guutamee   unka kan eruudhaaf mallattoo magarsaa kara mirgaa bukkee olii jiru filadhuu</value>
+					</text>
+				</translation>
+			</itext>
+		<bind calculate="/data/meta/timeEnd" nodeset="/data/case_open_midwife_settings_0/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_open_midwife_settings_0/case/@user_id"/><setvalue event="xforms-ready" ref="/data/case_open_midwife_settings_0/case/@case_id" value="instance('commcaresession')/session/data/case_id_new_midwife_settings_0"/><bind calculate="/data/locations/health_center" nodeset="/data/case_open_midwife_settings_0/case/create/case_name"/><setvalue event="xforms-ready" ref="/data/case_open_midwife_settings_0/case/create/owner_id" value="instance('groups')/groups/group/@id"/><bind calculate="/data/locations/hc_facility_code" nodeset="/data/case_open_midwife_settings_0/case/update/hc_facility_code" relevant="count(/data/locations/hc_facility_code) &gt; 0"/><bind calculate="/data/locations/health_center" nodeset="/data/case_open_midwife_settings_0/case/update/health_center" relevant="count(/data/locations/health_center) &gt; 0"/><bind calculate="/data/locations/health_center_id" nodeset="/data/case_open_midwife_settings_0/case/update/health_center_id" relevant="count(/data/locations/health_center_id) &gt; 0"/><bind calculate="/data/midwife_names" nodeset="/data/case_open_midwife_settings_0/case/update/midwife_names" relevant="count(/data/midwife_names) &gt; 0"/><bind calculate="/data/midwife_phones" nodeset="/data/case_open_midwife_settings_0/case/update/midwife_phones" relevant="count(/data/midwife_phones) &gt; 0"/><bind calculate="/data/locations/region" nodeset="/data/case_open_midwife_settings_0/case/update/region" relevant="count(/data/locations/region) &gt; 0"/><bind calculate="/data/locations/region_id" nodeset="/data/case_open_midwife_settings_0/case/update/region_id" relevant="count(/data/locations/region_id) &gt; 0"/><bind calculate="/data/locations/test_or_real" nodeset="/data/case_open_midwife_settings_0/case/update/test_or_real" relevant="count(/data/locations/test_or_real) &gt; 0"/><bind calculate="/data/locations/woreda" nodeset="/data/case_open_midwife_settings_0/case/update/woreda" relevant="count(/data/locations/woreda) &gt; 0"/><bind calculate="/data/locations/woreda_id" nodeset="/data/case_open_midwife_settings_0/case/update/woreda_id" relevant="count(/data/locations/woreda_id) &gt; 0"/><bind calculate="/data/locations/zone" nodeset="/data/case_open_midwife_settings_0/case/update/zone" relevant="count(/data/locations/zone) &gt; 0"/><bind calculate="/data/locations/zone_id" nodeset="/data/case_open_midwife_settings_0/case/update/zone_id" relevant="count(/data/locations/zone_id) &gt; 0"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<input ref="/data/num_midwives">
+			<label ref="jr:itext('num_midwives-label')"/>
+		</input>
+		<group>
+			<repeat jr:count="/data/num_midwives" jr:noAddRemove="true()" nodeset="/data/midwives">
+				<group ref="/data/midwives/enforce_repeat_number" appearance="field-list">
+					<input ref="/data/midwives/enforce_repeat_number/midwife_name">
+						<label ref="jr:itext('midwives/enforce_repeat_number/midwife_name-label')"/>
+					</input>
+					<input ref="/data/midwives/enforce_repeat_number/midwife_phone_entered" appearance="numeric">
+						<label ref="jr:itext('midwives/enforce_repeat_number/midwife_phone_entered-label')"/>
+						<alert ref="jr:itext('midwives/enforce_repeat_number/midwife_phone_entered-constraintMsg')"/>
+					</input>
+				</group>
+			</repeat>
+		</group>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+		<group ref="/data/locations"/>
+	</h:body>
+</h:html>

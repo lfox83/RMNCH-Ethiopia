@@ -1,0 +1,1540 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum" vellum:ignore="richText">
+	<h:head>
+		<h:title>Give Referral Feedback for client not on List</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/607f2c97cb84ce984c4b23836e13ec29d978c02a" uiVersion="1" version="915" name="Give Referral Feedback for client not on List">
+					<notification_type/>
+					<notification_date/>
+					<notification_date_eth/>
+					<referral_notification_created/>
+					<client_identification_information>
+						<client_name/>
+						<family_name/>
+						<gender/>
+						<mrn>
+							<mrn>
+								<title/>
+								<number/>
+								<year/>
+								<mrn_validation_message/>
+								<current_year_eth_calc/>
+								<current_year_eth/>
+								<mrn/>
+							</mrn>
+							<display_mrn/>
+						</mrn>
+						<age_years/>
+						<health_post_id/>
+						<village>
+							<list_length/>
+							<repeat jr:template="">
+								<element/>
+								<element_id/>
+							</repeat>
+							<choose_element/>
+							<village/>
+						</village>
+						<local_phone_number/>
+						<notification_name/>
+					</client_identification_information>
+					<follow_up_date/>
+					<referral_diagnosis/>
+					<referral_diagnosis_other/>
+					<label_direct_delivery_outcome/>
+					<referral_feedback/>
+					<referral_feedback_other/>
+					<referral_follow_up/>
+					<referral_follow_up_other/>
+					<midwife_name>
+						<list_length/>
+						<repeat jr:template="">
+							<element/>
+							<phone/>
+							<element_id/>
+						</repeat>
+						<choose_element/>
+						<midwife_name/>
+						<midwife_phone_number/>
+					</midwife_name>
+					<referral_complete/>
+					<follow_up_date_eth/>
+					<locations>
+						<health_center_id/>
+						<health_center/>
+						<health_post/>
+						<test_or_real/>
+						<region_id/>
+						<region/>
+						<zone_id/>
+						<zone/>
+						<woreda_id/>
+						<woreda/>
+						<hc_facility_code/>
+						<hp_facility_code/>
+					</locations>
+					<false/>
+					<end_of_form/>
+				<case_open_notification_1><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><create><case_name/><owner_id>-</owner_id><case_type>notification</case_type></create><update><age_years/><client_name/><family_name/><follow_up_date/><follow_up_date_eth/><gender/><hc_facility_code/><health_center/><health_center_id/><health_post/><health_post_id/><hp_facility_code/><local_phone_number/><midwife_name/><midwife_phone_number/><mrn/><notification_date/><notification_date_eth/><notification_type/><owner_id/><referral_complete/><referral_diagnosis/><referral_diagnosis_other/><referral_feedback/><referral_feedback_other/><referral_follow_up/><referral_follow_up_other/><region/><region_id/><test_or_real/><village/><woreda/><woreda_id/><zone/><zone_id/></update></case></case_open_notification_1><case_dont_open><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><create><case_name/><owner_id/><case_type>referral</case_type></create></case></case_dont_open><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="groups" src="jr://fixture/user-groups"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<instance src="jr://fixture/locations" id="locations"/>
+			<instance src="jr://instance/casedb" id="casedb"/>
+			<bind nodeset="/data/notification_type" calculate="&quot;referral&quot;"/>
+			<bind nodeset="/data/notification_date" calculate="today()"/>
+			<bind nodeset="/data/notification_date_eth" calculate="if(today() = '', '', concat(int((date(today()) - 253) div 365.25) + 1963, if(int((date(today()) - 253 - (365 * int((date(today()) - 253) div 365.25) + 1 + int((int((date(today()) - 253) div 365.25) - 1) div 4))) div 30) + 1 &lt; 10, '-0', '-'), int((date(today()) - 253 - (365 * (int((date(today()) - 253) div 365.25) + 1963 - 1963) + 1 + int((int((date(today()) - 253) div 365.25) - 1) div 4))) div 30) + 1, if(((date(today()) - 253 - (365 * int((date(today()) - 253) div 365.25) + 1 + int((int((date(today()) - 253) div 365.25) - 1) div 4))) mod 30) + 1 &lt; 10, '-0', '-'), ((date(today()) - 253 - (365 * int((date(today()) - 253) div 365.25) + 1 + int((int((date(today()) - 253) div 365.25) - 1) div 4))) mod 30) + 1))"/>
+			<bind nodeset="/data/referral_notification_created" calculate="&quot;yes&quot;"/>
+			<bind nodeset="/data/client_identification_information"/>
+			<bind nodeset="/data/client_identification_information/client_name" type="xsd:string" required="true()"/>
+			<bind nodeset="/data/client_identification_information/family_name" type="xsd:string"/>
+			<bind nodeset="/data/client_identification_information/gender" required="true()"/>
+			<bind nodeset="/data/client_identification_information/mrn"/>
+			<bind nodeset="/data/client_identification_information/mrn/mrn"/>
+			<bind nodeset="/data/client_identification_information/mrn/mrn/title"/>
+			<bind nodeset="/data/client_identification_information/mrn/mrn/number" type="xsd:string" constraint="string-length(.) = 5" jr:constraintMsg="jr:itext('client_identification_information/mrn/mrn/number-constraintMsg')" required="true()"/>
+			<bind nodeset="/data/client_identification_information/mrn/mrn/year" type="xsd:string" constraint="string-length(.) = 2 and (. = 99 or . &lt;= /data/client_identification_information/mrn/mrn/current_year_eth)" jr:constraintMsg="jr:itext('client_identification_information/mrn/mrn/year-constraintMsg')" required="true()"/>
+			<bind nodeset="/data/client_identification_information/mrn/mrn/mrn_validation_message" relevant="/data/client_identification_information/mrn/mrn/year &lt; (/data/client_identification_information/mrn/mrn/current_year_eth - 5)"/>
+			<bind nodeset="/data/client_identification_information/mrn/mrn/current_year_eth_calc" calculate="(int((date(today()) - 253) div 365.25) + 1963)"/>
+			<bind nodeset="/data/client_identification_information/mrn/mrn/current_year_eth" calculate="substr(/data/client_identification_information/mrn/mrn/current_year_eth_calc, 2, 4)"/>
+			<bind nodeset="/data/client_identification_information/mrn/mrn/mrn" calculate="concat(current()/../number, &quot;/&quot;, current()/../year)"/>
+			<bind nodeset="/data/client_identification_information/mrn/display_mrn"/>
+			<bind nodeset="/data/client_identification_information/age_years" type="xsd:int" constraint=". &gt;= 0 and . &lt;= 100" jr:constraintMsg="jr:itext('client_identification_information/age_years-constraintMsg')"/>
+			<bind nodeset="/data/client_identification_information/health_post_id" required="true()"/>
+			<bind nodeset="/data/client_identification_information/village" relevant="count(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][health_post_id = /data/client_identification_information/health_post_id]) &gt; 0"/>
+			<bind nodeset="/data/client_identification_information/village/list_length" calculate="if(count(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][health_post_id = /data/client_identification_information/health_post_id]) = 0, 0, count-selected(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][health_post_id = /data/client_identification_information/health_post_id][1]/village_names))"/>
+			<bind nodeset="/data/client_identification_information/village/repeat"/>
+			<bind nodeset="/data/client_identification_information/village/repeat/element" calculate="if(count(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][health_post_id = /data/client_identification_information/health_post_id]) = 0, &quot;&quot;, replace(selected-at(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][health_post_id = /data/client_identification_information/health_post_id][1]/village_names, position(current()/..)), &quot;_&quot;, &quot; &quot;))"/>
+			<bind nodeset="/data/client_identification_information/village/repeat/element_id" calculate="if(count(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][health_post_id = /data/client_identification_information/health_post_id]) = 0, &quot;&quot;, lower-case(selected-at(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'hp_supervision'][health_post_id = /data/client_identification_information/health_post_id][1]/village_names, position(current()/..))))"/>
+			<bind nodeset="/data/client_identification_information/village/choose_element"/>
+			<bind nodeset="/data/client_identification_information/village/village" calculate="/data/client_identification_information/village/repeat[element_id = /data/client_identification_information/village/choose_element]/element"/>
+			<bind nodeset="/data/client_identification_information/local_phone_number" type="xsd:string" constraint="regex(., '^0[0-9]{9}$')" jr:constraintMsg="jr:itext('client_identification_information/local_phone_number-constraintMsg')"/>
+			<bind nodeset="/data/client_identification_information/notification_name" calculate="concat(&quot;Referral - &quot;, /data/client_identification_information/client_name)" required="true()"/>
+			<bind nodeset="/data/follow_up_date" type="xsd:date" constraint=". &lt;= today()" jr:constraintMsg="jr:itext('follow_up_date-constraintMsg')" required="true()"/>
+			<bind nodeset="/data/referral_diagnosis" required="false()"/>
+			<bind nodeset="/data/referral_diagnosis_other" type="xsd:string" relevant="selected(/data/referral_diagnosis, 'other')" required="true()"/>
+			<bind nodeset="/data/label_direct_delivery_outcome" relevant="selected(/data/referral_diagnosis, 'spontaneous_abortion')"/>
+			<bind nodeset="/data/referral_feedback" required="false()"/>
+			<bind nodeset="/data/referral_feedback_other" type="xsd:string" relevant="selected(/data/referral_feedback, 'other')" required="true()"/>
+			<bind nodeset="/data/referral_follow_up" required="false()"/>
+			<bind nodeset="/data/referral_follow_up_other" type="xsd:string" relevant="selected(/data/referral_follow_up, 'other')" required="true()"/>
+			<bind nodeset="/data/midwife_name"/>
+			<bind nodeset="/data/midwife_name/list_length" calculate="count-selected(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'midwife_settings'][1]/midwife_names)"/>
+			<bind nodeset="/data/midwife_name/repeat"/>
+			<bind nodeset="/data/midwife_name/repeat/element" calculate="replace(selected-at(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'midwife_settings'][1]/midwife_names, position(current()/..)), &quot;_&quot;, &quot; &quot;)"/>
+			<bind nodeset="/data/midwife_name/repeat/phone" calculate="replace(selected-at(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'midwife_settings'][1]/midwife_phones, position(current()/..)), &quot;_&quot;, &quot; &quot;)"/>
+			<bind nodeset="/data/midwife_name/repeat/element_id" calculate="lower-case(selected-at(instance('casedb')/casedb/case[@status = 'open'][@case_type = 'midwife_settings'][1]/midwife_names, position(current()/..)))"/>
+			<bind nodeset="/data/midwife_name/choose_element" required="true()"/>
+			<bind nodeset="/data/midwife_name/midwife_name" calculate="/data/midwife_name/repeat[element_id = /data/midwife_name/choose_element]/element"/>
+			<bind nodeset="/data/midwife_name/midwife_phone_number" calculate="/data/midwife_name/repeat[element_id = /data/midwife_name/choose_element]/phone"/>
+			<bind nodeset="/data/referral_complete" calculate="&quot;yes&quot;"/>
+			<bind nodeset="/data/follow_up_date_eth" calculate="if(/data/follow_up_date = '', '', concat(int((date(/data/follow_up_date) - 253) div 365.25) + 1963, if(int((date(/data/follow_up_date) - 253 - (365 * int((date(/data/follow_up_date) - 253) div 365.25) + 1 + int((int((date(/data/follow_up_date) - 253) div 365.25) - 1) div 4))) div 30) + 1 &lt; 10, '-0', '-'), int((date(/data/follow_up_date) - 253 - (365 * (int((date(/data/follow_up_date) - 253) div 365.25) + 1963 - 1963) + 1 + int((int((date(/data/follow_up_date) - 253) div 365.25) - 1) div 4))) div 30) + 1, if(((date(/data/follow_up_date) - 253 - (365 * int((date(/data/follow_up_date) - 253) div 365.25) + 1 + int((int((date(/data/follow_up_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1 &lt; 10, '-0', '-'), ((date(/data/follow_up_date) - 253 - (365 * int((date(/data/follow_up_date) - 253) div 365.25) + 1 + int((int((date(/data/follow_up_date) - 253) div 365.25) - 1) div 4))) mod 30) + 1))"/>
+			<bind nodeset="/data/locations"/>
+			<bind nodeset="/data/locations/health_center_id" calculate="instance('commcaresession')/session/user/data/commcare_location_id"/>
+			<bind nodeset="/data/locations/health_center" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/name"/>
+			<bind nodeset="/data/locations/health_post" calculate="instance('locations')/locations/location[@id = /data/client_identification_information/health_post_id]/name"/>
+			<bind nodeset="/data/locations/test_or_real" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/test_or_real) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/test_or_real, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/region_id" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/@region_id"/>
+			<bind nodeset="/data/locations/region" calculate="instance('locations')/locations/location[@id = /data/locations/region_id]/name"/>
+			<bind nodeset="/data/locations/zone_id" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/@zone_id"/>
+			<bind nodeset="/data/locations/zone" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/name"/>
+			<bind nodeset="/data/locations/woreda_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/@woreda_id"/>
+			<bind nodeset="/data/locations/woreda" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/name"/>
+			<bind nodeset="/data/locations/hc_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_center_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/locations/hp_facility_code" calculate="if(count(instance('locations')/locations/location[@id = /data/client_identification_information/health_post_id]/location_data/facility_code) &gt; 0, instance('locations')/locations/location[@id = /data/client_identification_information/health_post_id]/location_data/facility_code, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/false" calculate="false()" required="true()"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="client_identification_information/client_name-label">
+						<value>Client Name</value>
+					</text>
+					<text id="client_identification_information/family_name-label">
+						<value>Head of Household
+
+*Please do your best to include this information. This will help the HEW to identify the client.*</value>
+						<value form="markdown">Head of Household
+
+*Please do your best to include this information. This will help the HEW to identify the client.*</value>
+					</text>
+					<text id="client_identification_information/gender-label">
+						<value>Gender</value>
+					</text>
+					<text id="client_identification_information/gender-male-label">
+						<value>Male</value>
+					</text>
+					<text id="client_identification_information/gender-female-label">
+						<value>Female</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/title-label">
+						<value><output value="/data/client_identification_information/client_name"/>'s MRN (_ _ _ _ _/_ _).  Fill in the blanks.</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/number-label">
+						<value>Number</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/number-constraintMsg">
+						<value>Record Number must be 5 digits.</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/year-label">
+						<value>Please enter a 2 digit year</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/year-constraintMsg">
+						<value>Year must be 2 digits and between 1999 and the current year</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/mrn_validation_message-label">
+						<value>You have entered a year over 5 years in the past, please check to make sure you have entered the year correctly.</value>
+					</text>
+					<text id="client_identification_information/mrn/display_mrn-label">
+						<value>The full MRN is <output value="current()/../mrn/mrn"/>.</value>
+					</text>
+					<text id="client_identification_information/age_years-label">
+						<value>What is <output value="/data/client_identification_information/client_name"/>'s age in years?</value>
+					</text>
+					<text id="client_identification_information/age_years-constraintMsg">
+						<value>Age must be between 0 and 100 years old.</value>
+					</text>
+					<text id="client_identification_information/health_post_id-label">
+						<value>What health post is responsible for <output value="/data/client_identification_information/client_name"/> ?</value>
+					</text>
+					<text id="client_identification_information/village/choose_element-label">
+						<value>Village</value>
+					</text>
+					<text id="client_identification_information/local_phone_number-label">
+						<value><output value="/data/client_identification_information/client_name"/>'s phone number?
+
+*This information is very important to help the HEW identify the client. If the client doesn't have a phone number, please include the number of a sister, friend or neighbor.*</value>
+						<value form="markdown"><output value="/data/client_identification_information/client_name"/>'s phone number?
+
+*This information is very important to help the HEW identify the client. If the client doesn't have a phone number, please include the number of a sister, friend or neighbor.*</value>
+					</text>
+					<text id="client_identification_information/local_phone_number-constraintMsg">
+						<value>The phone number must start with 0 and cannot be longer than 10 digits</value>
+					</text>
+					<text id="follow_up_date-label">
+						<value>Date of diagnosis/treatment</value>
+					</text>
+					<text id="follow_up_date-constraintMsg">
+						<value>The date of diagnosis/treatment cannot be in the future!</value>
+					</text>
+					<text id="referral_diagnosis-label">
+						<value>Diagnosis at the receiving facility. Select all that apply</value>
+					</text>
+					<text id="referral_diagnosis-antepartum_hemmorage-label">
+						<value>Antepartum Hemmorage</value>
+					</text>
+					<text id="referral_diagnosis-birth_asphyxia-label">
+						<value>Birth Asphyxia</value>
+					</text>
+					<text id="referral_diagnosis-deep_vein_thrombosis-label">
+						<value>Deep Vein Thrombosis</value>
+					</text>
+					<text id="referral_diagnosis-eclampsia-label">
+						<value>Eclampsia</value>
+					</text>
+					<text id="referral_diagnosis-hypertension-label">
+						<value>Hypertension</value>
+					</text>
+					<text id="referral_diagnosis-pre-eclampsia-label">
+						<value>Pre-Eclampsia</value>
+					</text>
+					<text id="referral_diagnosis-hypotension-label">
+						<value>Hypotension</value>
+					</text>
+					<text id="referral_diagnosis-malnutrition-label">
+						<value>Malnutrition</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_depression-label">
+						<value>Post partum depression</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_hemmorage-label">
+						<value>Post partum hemmorage</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_infection-label">
+						<value>Post partum infection</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_pelvic_infection-label">
+						<value>Post partum pelvic infection</value>
+					</text>
+					<text id="referral_diagnosis-pre_labor_rupture-label">
+						<value>Pre-labor rupture of membrane</value>
+					</text>
+					<text id="referral_diagnosis-severe_anemia-label">
+						<value>Severe anemia</value>
+					</text>
+					<text id="referral_diagnosis-severe_jaundice-label">
+						<value>Severe jaundice</value>
+					</text>
+					<text id="referral_diagnosis-severe_pre_eclampsia-label">
+						<value>Severe Pre-Eclampsia</value>
+					</text>
+					<text id="referral_diagnosis-serious_condition_abruption-label">
+						<value>Signals serious condition like abruption</value>
+					</text>
+					<text id="referral_diagnosis-serious_condition_pulmonary_oedema-label">
+						<value>Signal serious condition pulmonary oedema</value>
+					</text>
+					<text id="referral_diagnosis-sti_vaginal_discharge-label">
+						<value>STI (vaginal discharge)</value>
+					</text>
+					<text id="referral_diagnosis-urinary_retention-label">
+						<value>Urinary Retention</value>
+					</text>
+					<text id="referral_diagnosis-urinary_tract_infection-label">
+						<value>Urinary Tract Infection</value>
+					</text>
+					<text id="referral_diagnosis-very_low_birthweight-label">
+						<value>Very low weight and/or very preterm</value>
+					</text>
+					<text id="referral_diagnosis-very_severe_disease-label">
+						<value>Very severe disease</value>
+					</text>
+					<text id="referral_diagnosis-other-label">
+						<value>Other</value>
+					</text>
+					<text id="referral_diagnosis-spontaneous_abortion-label">
+						<value>Spontaneous Abortion</value>
+					</text>
+					<text id="referral_diagnosis_other-label">
+						<value>Please specify:</value>
+					</text>
+					<text id="label_direct_delivery_outcome-label">
+						<value>You have selected Spontaneous Abortion as a diagnosis. Once this form is complete, please fill out the Document Pregnancy Outcome form for this client.</value>
+					</text>
+					<text id="referral_feedback-label">
+						<value>Please select all the treatments given or measures taken:</value>
+					</text>
+					<text id="referral_feedback-supportive_care-label">
+						<value>Supportive care</value>
+					</text>
+					<text id="referral_feedback-magnesium_sulphate-label">
+						<value>Magnesium Sulphate Loading Dose</value>
+					</text>
+					<text id="referral_feedback-antibiotics-label">
+						<value>Antibiotics</value>
+					</text>
+					<text id="referral_feedback-antihypertensive-label">
+						<value>Antihypertensive</value>
+					</text>
+					<text id="referral_feedback-birth_attended-label">
+						<value>Birth attended</value>
+					</text>
+					<text id="referral_feedback-referred_hospital-label">
+						<value>Referred to primary hospital</value>
+					</text>
+					<text id="referral_feedback-womb_explored-label">
+						<value>Womb explored</value>
+					</text>
+					<text id="referral_feedback-genital_tract_repaired-label">
+						<value>Genital tract repaired</value>
+					</text>
+					<text id="referral_feedback-counselling-label">
+						<value>Counselling</value>
+					</text>
+					<text id="referral_feedback-iron_supplement-label">
+						<value>Iron Supplement</value>
+					</text>
+					<text id="referral_feedback-ergometrin-label">
+						<value>Ergometrin</value>
+					</text>
+					<text id="referral_feedback-oxytocin-label">
+						<value>Oxytocin</value>
+					</text>
+					<text id="referral_feedback-iv_fluids-label">
+						<value>IV Fluids</value>
+					</text>
+					<text id="referral_feedback-referral_enroute_support-label">
+						<value>Referral with enroute support and monitoring</value>
+					</text>
+					<text id="referral_feedback-intramuscular_ampicillin_gentamycin-label">
+						<value>Provided first dose of intramuscular Ampicillin and Gentamycin</value>
+					</text>
+					<text id="referral_feedback-treated_low_blood_sugar-label">
+						<value>Treated infant to prevent low blood sugar</value>
+					</text>
+					<text id="referral_feedback-warmed_infant-label">
+						<value>Warmed infant by skin-skin contact</value>
+					</text>
+					<text id="referral_feedback-advise_mother_warm_infant-label">
+						<value>Advised mother how to keep young infant warm</value>
+					</text>
+					<text id="referral_feedback-referred_urgently-label">
+						<value>Referred urgently to hospital</value>
+					</text>
+					<text id="referral_feedback-resuscitation-label">
+						<value>Started resuscitation immediately</value>
+					</text>
+					<text id="referral_feedback-ventilated-label">
+						<value>Ventilated with appropriate size bag and mask</value>
+					</text>
+					<text id="referral_feedback-newborn_care-label">
+						<value>Gave essential newborn care</value>
+					</text>
+					<text id="referral_feedback-monitored_6_hours-label">
+						<value>Monitored continuously for six hours</value>
+					</text>
+					<text id="referral_feedback-followed_24_hours-label">
+						<value>Followed in the facility for 24 hours</value>
+					</text>
+					<text id="referral_feedback-kangaroo_care-label">
+						<value>Initiated Kangaroo mother care</value>
+					</text>
+					<text id="referral_feedback-vitamin_k-label">
+						<value>Administered vitamin K</value>
+					</text>
+					<text id="referral_feedback-other-label">
+						<value>Other</value>
+					</text>
+					<text id="referral_feedback_other-label">
+						<value>Please specify</value>
+					</text>
+					<text id="referral_follow_up-label">
+						<value>Further treatment/follow up required. Select all that apply</value>
+					</text>
+					<text id="referral_follow_up-track_medication_compliance-label">
+						<value>Track the client closely to make sure she is taking her medications</value>
+					</text>
+					<text id="referral_follow_up-follow_speech_manner-label">
+						<value>Follow closely to see if speech and manner have improved, if not, refer again</value>
+					</text>
+					<text id="referral_follow_up-visit_pp_care-label">
+						<value>Visit for post-partum care</value>
+					</text>
+					<text id="referral_follow_up-record_bp_pattern-label">
+						<value>Record blood pressure pattern and communicate to Health Center</value>
+					</text>
+					<text id="referral_follow_up-help_kmc_continue-label">
+						<value>Help the mother continue KMC at home</value>
+					</text>
+					<text id="midwife_name/choose_element-label">
+						<value>Managed by</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="client_identification_information/client_name-label">
+						<value>&#4840;&#4723;&#4779;&#4634; &#4633;&#4617; &#4661;&#4637;</value>
+					</text>
+					<text id="client_identification_information/family_name-label">
+						<value>&#4840;&#4708;&#4720;&#4656;&#4709; &#4768;&#4707;&#4808;&#4651;</value>
+						<value form="markdown">&#4840;&#4708;&#4720;&#4656;&#4709; &#4768;&#4707;&#4808;&#4651;</value>
+					</text>
+					<text id="client_identification_information/gender-label">
+						<value>&#4926;&#4723;</value>
+					</text>
+					<text id="client_identification_information/gender-male-label">
+						<value>&#4808;&#4757;&#4853;</value>
+					</text>
+					<text id="client_identification_information/gender-female-label">
+						<value>&#4660;&#4725;</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/title-label">
+						<value>&#4840;&#4723;&#4779;&#4634; <output value="/data/client_identification_information/client_name"/>&#4636;&#4850;&#4779;&#4621; &#4650;&#4776;&#4653;&#4853; &#4673;&#4901;&#4653; (_ _ _ _ _/_ _).  &#4707;&#4854; &#4710;&#4723;&#4813; &#4619;&#4845; &#4845;&#4637;&#4617;.</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/number-label">
+						<value>&#4673;&#4901;&#4653;</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/number-constraintMsg">
+						<value>&#4840;&#4634;&#4632;&#4824;&#4872;&#4704;&#4813; &#4673;&#4901;&#4653; &#4776;1 &#4773;&#4661;&#4776; 5 &#4850;&#4866;&#4725; &#4632;&#4614;&#4757; &#4768;&#4616;&#4704;&#4725;</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/year-label">
+						<value>&#4773;&#4707;&#4781;&#4814;&#4757; &#4707;&#4616; 2 &#4819;&#4632;&#4725; &#4850;&#4866;&#4725; &#4843;&#4661;&#4872;&#4705;</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/year-constraintMsg">
+						<value>&#4819;&#4632;&#4725; &#4707;&#4616; 2 &#4850;&#4866;&#4725; &#4773;&#4755; &#4704;1999  &#4773;&#4755; &#4768;&#4609;&#4757; &#4843;&#4616;&#4813; &#4819;&#4632;&#4725; &#4632;&#4779;&#4776;&#4621; &#4632;&#4614;&#4757; &#4768;&#4616;&#4704;&#4725;</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/mrn_validation_message-label">
+						<value>&#4635;&#4661;&#4872;&#4707;&#4725; &#4776;&#4752;&#4704;&#4648;&#4709;&#4669; 5 &#4819;&#4632;&#4725; &#4808;&#4848; &#4747;&#4619; &#4720;&#4632;&#4621;&#4656;&#4667;&#4621;&#4963; &#4773;&#4707;&#4781;&#4669;&#4757; &#4725;&#4781;&#4781;&#4616;&#4763;&#4813;&#4757; &#4819;&#4632;&#4725; &#4635;&#4661;&#4872;&#4707;&#4725;&#4669; &#4768;&#4648;&#4875;&#4877;&#4906;</value>
+					</text>
+					<text id="client_identification_information/mrn/display_mrn-label">
+						<value>&#4633;&#4617;&#4813;&#4757; &#4840;&#4636;&#4850;&#4779;&#4621; &#4650;&#4776;&#4653;&#4853; &#4673;&#4901;&#4653;<output value="current()/../mrn/mrn"/>.</value>
+					</text>
+					<text id="client_identification_information/age_years-label">
+						<value>&#4840;&#4723;&#4779;&#4634; <output value="/data/client_identification_information/client_name"/> &#4821;&#4853;&#4636; &#4704;&#4768;&#4632;&#4723;&#4725; &#4661;&#4757;&#4725; &#4752;&#4813;&#4961;&#4961;</value>
+					</text>
+					<text id="client_identification_information/age_years-constraintMsg">
+						<value>&#4821;&#4853;&#4636; &#4704;0 &#4773;&#4755; 100 &#4819;&#4632;&#4723;&#4725; &#4813;&#4661;&#4901; &#4632;&#4614;&#4757; &#4768;&#4616;&#4704;&#4725;</value>
+					</text>
+					<text id="client_identification_information/health_post_id-label">
+						<value>&#4616;&#4723;&#4779;&#4634; <output value="/data/client_identification_information/client_name"/> &#4739;&#4619;&#4938;&#4752;&#4721;&#4757; &#4840;&#4634;&#4808;&#4661;&#4848;&#4813; &#4900;&#4755; &#4780;&#4619; &#4961;&#4961;</value>
+					</text>
+					<text id="client_identification_information/village/choose_element-label">
+						<value>&#4878;&#4901;</value>
+					</text>
+					<text id="client_identification_information/local_phone_number-label">
+						<value>&#4840;&#4723;&#4779;&#4634;&#4811; <output value="/data/client_identification_information/client_name"/>'s &#4661;&#4621;&#4781; &#4673;&#4901;&#4653;?</value>
+						<value form="markdown">&#4840;&#4723;&#4779;&#4634;&#4811; <output value="/data/client_identification_information/client_name"/>'s &#4661;&#4621;&#4781; &#4673;&#4901;&#4653;?</value>
+					</text>
+					<text id="client_identification_information/local_phone_number-constraintMsg">
+						<value>&#4661;&#4621;&#4781; &#4673;&#4901;&#4653; &#4632;&#4864;&#4632;&#4653; &#4843;&#4616;&#4704;&#4725; &#4776;0 &#4773;&#4755; &#4709;&#4827;&#4721; &#4776;10 &#4614;&#4756; &#4632;&#4709;&#4616;&#4901; &#4840;&#4616;&#4704;&#4725;&#4637;&#4961;&#4961;</value>
+					</text>
+					<text id="follow_up_date-label">
+						<value>&#4613;&#4781;&#4637;&#4755; &#4840;&#4720;&#4848;&#4648;&#4872;&#4704;&#4725; &#4672;&#4757;</value>
+					</text>
+					<text id="follow_up_date-constraintMsg">
+						<value>&#4613;&#4781;&#4637;&#4755; &#4840;&#4720;&#4848;&#4648;&#4872;&#4704;&#4725; &#4672;&#4757; &#4808;&#4848;&#4938;&#4725; &#4632;&#4614;&#4757; &#4840;&#4616;&#4704;&#4725;&#4637;</value>
+					</text>
+					<text id="referral_diagnosis-label">
+						<value>&#4704;&#4900;&#4755; &#4720;&#4683;&#4637; &#4616;&#4723;&#4779;&#4634;&#4811; &#4840;&#4720;&#4848;&#4648;&#4872;&#4619;&#4725; &#4637;&#4653;&#4632;&#4651; &#4632;&#4621;&#4661; &#4618;&#4614;&#4753; &#4840;&#4634;&#4733;&#4617; &#4609;&#4617;&#4757;&#4637; &#4845;&#4637;&#4648;&#4897;&#4961;</value>
+					</text>
+					<text id="referral_diagnosis-antepartum_hemmorage-label">
+						<value>&#4704;&#4677;&#4848;&#4632;-&#4808;&#4618;&#4853; &#4874;&#4828; &#4840;&#4634;&#4776;&#4656;&#4725; &#4848;&#4637; &#4632;&#4941;&#4656;&#4661;</value>
+					</text>
+					<text id="referral_diagnosis-birth_asphyxia-label">
+						<value>&#4613;&#4931;&#4753; &#4621;&#4781; &#4773;&#4757;&#4848;&#4720;&#4808;&#4616;&#4848; &#4843;&#4875;&#4896;&#4632;&#4813; &#4840;&#4768;&#4720;&#4752;&#4939;&#4936;&#4661; &#4733;&#4877;&#4653;</value>
+					</text>
+					<text id="referral_diagnosis-deep_vein_thrombosis-label">
+						<value>&#4850;&#4949; &#4716;&#4845;&#4757; &#4725;&#4654;&#4637;&#4710;&#4658;&#4661;</value>
+					</text>
+					<text id="referral_diagnosis-eclampsia-label">
+						<value>&#4772;&#4781;&#4619;&#4637;&#4666;&#4843;</value>
+					</text>
+					<text id="referral_diagnosis-hypertension-label">
+						<value>&#4776;&#4941;&#4720;&#4763; &#4840;&#4848;&#4637; &#4877;&#4938;&#4725;</value>
+					</text>
+					<text id="referral_diagnosis-pre-eclampsia-label">
+						<value>&#4949;&#4650;-&#4772;&#4781;&#4619;&#4637;&#4666;&#4843;</value>
+					</text>
+					<text id="referral_diagnosis-hypotension-label">
+						<value>&#4829;&#4677;&#4720;&#4763; &#4840;&#4848;&#4637; &#4877;&#4938;&#4725;</value>
+					</text>
+					<text id="referral_diagnosis-malnutrition-label">
+						<value>&#4840;&#4720;&#4632;&#4899;&#4896;&#4752; &#4637;&#4877;&#4709; &#4773;&#4901;&#4648;&#4725;</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_depression-label">
+						<value>&#4776;&#4808;&#4618;&#4853; &#4704;&#4739;&#4619; &#4840;&#4634;&#4776;&#4656;&#4725; &#4853;&#4709;&#4653;&#4725;</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_hemmorage-label">
+						<value>&#4776;&#4808;&#4618;&#4853; &#4704;&#4739;&#4619; &#4840;&#4634;&#4776;&#4656;&#4725; &#4848;&#4637; &#4632;&#4941;&#4656;&#4661;</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_infection-label">
+						<value>&#4776;&#4808;&#4618;&#4853; &#4704;&#4739;&#4619; &#4840;&#4634;&#4776;&#4656;&#4725; &#4770;&#4757;&#4940;&#4781;&#4669;&#4757;</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_pelvic_infection-label">
+						<value>&#4776;&#4808;&#4618;&#4853; &#4704;&#4739;&#4619; &#4840;&#4634;&#4776;&#4656;&#4725; &#4948;&#4621;&#4714;&#4781; &#4770;&#4757;&#4940;&#4781;&#4669;&#4757;</value>
+					</text>
+					<text id="referral_diagnosis-pre_labor_rupture-label">
+						<value>&#4704;&#4677;&#4853;&#4632; &#4637;&#4901; &#4874;&#4828; &#4840;&#4634;&#4776;&#4656;&#4725; &#4840;&#4669;&#4653;&#4725; &#4813;&#4611; &#4632;&#4941;&#4656;&#4661;</value>
+					</text>
+					<text id="referral_diagnosis-severe_anemia-label">
+						<value>&#4776;&#4941;&#4720;&#4763; &#4848;&#4637; &#4635;&#4752;&#4661;</value>
+					</text>
+					<text id="referral_diagnosis-severe_jaundice-label">
+						<value>&#4768;&#4845;&#4757;&#4963; &#4678;&#4851; &#4773;&#4755; &#4669;&#4757;&#4725; &#4704;&#4776;&#4941;&#4720;&#4763; &#4848;&#4648;&#4867; &#4706;&#4907; &#4632;&#4614;&#4757;</value>
+					</text>
+					<text id="referral_diagnosis-severe_pre_eclampsia-label">
+						<value>&#4776;&#4941;&#4720;&#4763; &#4949;&#4650;-&#4772;&#4781;&#4619;&#4637;&#4666;&#4843;</value>
+					</text>
+					<text id="referral_diagnosis-serious_condition_abruption-label">
+						<value>&#4776;&#4941;&#4720;&#4763; &#4840;&#4704;&#4669;&#4723; &#4637;&#4621;&#4781;&#4726;&#4733; &#4616;&#4637;&#4659;&#4620; &#4621;&#4865; &#4776;&#4632;&#4808;&#4616;&#4849; &#4704;&#4938;&#4725; &#4840;&#4773;&#4757;&#4877;&#4852; &#4621;&#4869; &#4776;&#4635;&#4613;&#4928;&#4757; &#4658;&#4616;&#4845;</value>
+					</text>
+					<text id="referral_diagnosis-serious_condition_pulmonary_oedema-label">
+						<value>&#4776;&#4941;&#4720;&#4763; &#4840;&#4704;&#4669;&#4723; &#4637;&#4621;&#4781;&#4726;&#4733; &#4616;&#4637;&#4659;&#4620; &#4704;&#4659;&#4637;&#4707; &#4619;&#4845; &#4840;&#4720;&#4896;&#4651;&#4672;&#4632; &#4936;&#4659;&#4669; &#4808;&#4845;&#4637; &#4813;&#4611;</value>
+					</text>
+					<text id="referral_diagnosis-sti_vaginal_discharge-label">
+						<value>&#4704;&#4877;&#4709;&#4648;-&#4661;&#4875; &#4877;&#4757;&#4761;&#4752;&#4725; &#4840;&#4634;&#4720;&#4619;&#4616;&#4937; &#4704;&#4669;&#4723;&#4814;&#4733;  (&#4776;&#4635;&#4613;&#4928;&#4757; &#4840;&#4634;&#4808;&#4899; &#4632;&#4901;&#4942; &#4669;&#4723; &#4843;&#4616;&#4813; &#4936;&#4659;&#4669; )</value>
+					</text>
+					<text id="referral_diagnosis-urinary_retention-label">
+						<value>&#4840;&#4669;&#4757;&#4725; &#4632;&#4683;&#4896;&#4653;</value>
+					</text>
+					<text id="referral_diagnosis-urinary_tract_infection-label">
+						<value>&#4840;&#4669;&#4757;&#4725; &#4711;&#4757;&#4711; &#4770;&#4757;&#4940;&#4781;&#4669;&#4757;</value>
+					</text>
+					<text id="referral_diagnosis-very_low_birthweight-label">
+						<value>&#4704;&#4899;&#4637; &#4829;&#4677;&#4720;&#4763; &#4840;&#4656;&#4813;&#4752;&#4725; &#4781;&#4709;&#4848;&#4725; &#4773;&#4755;/&#4808;&#4845;&#4637; &#4704;&#4899;&#4621; &#4621;&#4869; &#4843;&#4616;&#4874;&#4828;&#4813; &#4632;&#4808;&#4616;&#4853;</value>
+					</text>
+					<text id="referral_diagnosis-very_severe_disease-label">
+						<value>&#4704;&#4899;&#4637; &#4776;&#4941;&#4720;&#4763; &#4840;&#4614;&#4752; &#4704;&#4669;&#4723;</value>
+					</text>
+					<text id="referral_diagnosis-other-label">
+						<value>&#4620;&#4622;&#4733;</value>
+					</text>
+					<text id="referral_diagnosis-spontaneous_abortion-label">
+						<value>&#4843;&#4621;&#4723;&#4656;&#4704; &#4813;&#4653;&#4867;</value>
+					</text>
+					<text id="referral_diagnosis_other-label">
+						<value>&#4773;&#4707;&#4781;&#4814;&#4757; &#4845;&#4901;&#4672;&#4657;</value>
+					</text>
+					<text id="label_direct_delivery_outcome-label">
+						<value>&#4813;&#4653;&#4867;&#4813; &#4840;&#4637;&#4653;&#4632;&#4651; &#4819;&#4845;&#4752;&#4725; &#4614;&#4758; &#4720;&#4632;&#4653;&#4903;&#4621;. &#4845;&#4613; &#4677;&#4933; &#4768;&#4757;&#4852;  &#4776;&#4720;&#4638;&#4619; &#4963; &#4773;&#4707;&#4781;&#4814; &#4840;&#4723;&#4779;&#4634;&#4811; &#4840;&#4773;&#4653;&#4877;&#4829;&#4755; &#4813;&#4900;&#4725; &#4840;&#4632;&#4648;&#4867; &#4677;&#4933; &#4845;&#4637;&#4617;&#4725;.</value>
+					</text>
+					<text id="referral_feedback-label">
+						<value>&#4773;&#4707;&#4781;&#4814;&#4757; &#4840;&#4720;&#4656;&#4896;&#4813; &#4613;&#4781;&#4637;&#4755; &#4773;&#4755;  &#4840;&#4720;&#4808;&#4656;&#4848;&#4813;&#4757; &#4773;&#4653;&#4637;&#4867;   &#4845;&#4637;&#4648;&#4897;</value>
+					</text>
+					<text id="referral_feedback-supportive_care-label">
+						<value>&#4840;&#4773;&#4757;&#4781;&#4709;&#4779;&#4708; &#4853;&#4875;&#4941;</value>
+					</text>
+					<text id="referral_feedback-magnesium_sulphate-label">
+						<value>&#4635;&#4877;&#4754;&#4834;&#4840;&#4637; &#4656;&#4621;&#4940;&#4725; &#4622;&#4850;&#4757;&#4877; &#4854;&#4661;</value>
+					</text>
+					<text id="referral_feedback-antibiotics-label">
+						<value>&#4613;&#4632;&#4637; &#4635;&#4661;&#4723;&#4872;&#4667;</value>
+					</text>
+					<text id="referral_feedback-antihypertensive-label">
+						<value>&#4768;&#4757;&#4722;&#4768;&#4845;&#4944;&#4724;&#4757;&#4658;&#4717;</value>
+					</text>
+					<text id="referral_feedback-birth_attended-label">
+						<value>&#4768;&#4811;&#4619;&#4869; &#4707;&#4616;&#4633;&#4843;</value>
+					</text>
+					<text id="referral_feedback-referred_hospital-label">
+						<value>&#4808;&#4848; &#4632;&#4864;&#4632;&#4650;&#4843; &#4614;&#4661;&#4946;&#4723;&#4621; &#4650;&#4936;&#4653; &#4720;&#4848;&#4653;&#4875;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_feedback-womb_explored-label">
+						<value>&#4840;&#4635;&#4613;&#4928;&#4757; &#4773;&#4757;&#4677;&#4661;&#4675;&#4660;</value>
+					</text>
+					<text id="referral_feedback-genital_tract_repaired-label">
+						<value>&#4868;&#4754;&#4723;&#4621; &#4725;&#4651;&#4781;&#4725; &#4650;&#4948;&#4653;&#4853;</value>
+					</text>
+					<text id="referral_feedback-counselling-label">
+						<value>&#4773;&#4840;&#4632;&#4776;&#4648;&#4733; &#4752;&#4813;</value>
+					</text>
+					<text id="referral_feedback-iron_supplement-label">
+						<value>&#4768;&#4845;&#4648;&#4757; &#4656;&#4621;&#4940;&#4725;</value>
+					</text>
+					<text id="referral_feedback-ergometrin-label">
+						<value>&#4772;&#4653;&#4878;&#4636;&#4725;&#4650;&#4757;</value>
+					</text>
+					<text id="referral_feedback-oxytocin-label">
+						<value>&#4774;&#4781;&#4658;&#4726;&#4658;&#4757;</value>
+					</text>
+					<text id="referral_feedback-iv_fluids-label">
+						<value>&#4768;&#4845;.&#4714; &#4941;&#4617;&#4853;</value>
+					</text>
+					<text id="referral_feedback-referral_enroute_support-label">
+						<value>&#4650;&#4936;&#4651;&#4621; &#4632;&#4619;&#4781;  &#4776;&#4677;&#4653;&#4709;  &#4853;&#4875;&#4941; &#4773;&#4755; &#4781;&#4725;&#4725;&#4621; &#4875;&#4653;</value>
+					</text>
+					<text id="referral_feedback-intramuscular_ampicillin_gentamycin-label">
+						<value>&#4840;&#4632;&#4864;&#4632;&#4650;&#4843;&#4813; &#4854;&#4661; &#4770;&#4757;&#4725;&#4651;&#4635;&#4661;&#4777;&#4619;&#4653; &#4768;&#4638;&#4781;&#4659;&#4661;&#4618;&#4757; &#4773;&#4755; &#4864;&#4757;&#4723;&#4635;&#4845;&#4658;&#4757; &#4720;&#4656;&#4727;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_feedback-treated_low_blood_sugar-label">
+						<value>&#4904;&#4677;&#4619; &#4613;&#4931;&#4753;&#4757; &#4776;&#4829;&#4677;&#4720;&#4763; &#4848;&#4637; &#4661;&#4787;&#4653; &#4704;&#4669;&#4723; &#4616;&#4632;&#4776;&#4619;&#4776;&#4621; &#4723;&#4781;&#4639;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_feedback-warmed_infant-label">
+						<value>&#4904;&#4677;&#4619; &#4613;&#4931;&#4753;&#4757; &#4776;&#4773;&#4755;&#4725; &#4840;&#4656;&#4813;&#4752;&#4725; &#4768;&#4779;&#4621; &#4875;&#4653; &#4768;&#4872;&#4755;&#4765;&#4726; &#4704;&#4635;&#4672;&#4941; &#4773;&#4757;&#4850;&#4638;&#4672;&#4813; &#4720;&#4848;&#4653;&#4883;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_feedback-advise_mother_warm_infant-label">
+						<value>&#4773;&#4755;&#4725; &#4904;&#4677;&#4619; &#4613;&#4931;&#4753;&#4757; &#4773;&#4757;&#4852;&#4725; &#4635;&#4638;&#4677; &#4773;&#4757;&#4848;&#4637;&#4725;&#4733;&#4621; &#4720;&#4632;&#4781;&#4651;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_feedback-referred_urgently-label">
+						<value>&#4704;&#4768;&#4661;&#4728;&#4787;&#4845; &#4808;&#4848; &#4614;&#4661;&#4946;&#4723;&#4621; &#4650;&#4936;&#4653; &#4720;&#4848;&#4653;&#4875;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_feedback-resuscitation-label">
+						<value>&#4704;&#4768;&#4661;&#4728;&#4787;&#4845; &#4768;&#4941; &#4725;&#4757;&#4939;&#4669; &#4632;&#4661;&#4896;&#4725; &#4864;&#4637;&#4651;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_feedback-ventilated-label">
+						<value>&#4704;&#4720;&#4872;&#4706;&#4813; &#4840;&#4768;&#4840;&#4653; &#4672;&#4648;&#4898;&#4725; &#4720;&#4755;&#4941;&#4663;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_feedback-newborn_care-label">
+						<value>&#4632;&#4656;&#4648;&#4723;&#4810; &#4840;&#4904;&#4677;&#4619; &#4613;&#4931;&#4757; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; &#4720;&#4656;&#4727;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_feedback-monitored_6_hours-label">
+						<value>&#4704;&#4720;&#4776;&#4723;&#4723;&#4845; &#4616;6 &#4656;&#4819;&#4723;&#4725; &#4781;&#4725;&#4725;&#4621; &#4720;&#4848;&#4653;&#4883;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_feedback-followed_24_hours-label">
+						<value>&#4616;24 &#4656;&#4819;&#4723;&#4725; &#4704;&#4900;&#4755; &#4720;&#4683;&#4637; &#4720;&#4776;&#4723;&#4725;&#4619;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_feedback-kangaroo_care-label">
+						<value>&#4779;&#4757;&#4875;&#4654; &#4635;&#4824;&#4653; &#4780;&#4829; &#4720;&#4864;&#4637;&#4651;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_feedback-vitamin_k-label">
+						<value>&#4715;&#4845;&#4723;&#4634;&#4757; &#4780; &#4720;&#4656;&#4727;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_feedback-other-label">
+						<value>&#4620;&#4622;&#4733;</value>
+					</text>
+					<text id="referral_feedback_other-label">
+						<value>&#4773;&#4707;&#4781;&#4814;&#4757; &#4845;&#4901;&#4672;&#4657;</value>
+					</text>
+					<text id="referral_follow_up-label">
+						<value>&#4704;&#4720;&#4904;&#4635;&#4650; &#4840;&#4634;&#4843;&#4661;&#4936;&#4621;&#4877; &#4840;&#4781;&#4725;&#4725;&#4621;&#4755; &#4840;&#4613;&#4781;&#4637;&#4755; &#4768;&#4872;&#4621;&#4877;&#4622;&#4725;&#4961; &#4632;&#4621;&#4661; &#4618;&#4614;&#4753; &#4840;&#4634;&#4733;&#4617; &#4609;&#4617;&#4757;&#4637; &#4845;&#4637;&#4648;&#4897;</value>
+					</text>
+					<text id="referral_follow_up-track_medication_compliance-label">
+						<value>&#4723;&#4779;&#4634;&#4811; &#4632;&#4853;&#4739;&#4754;&#4727;&#4757; &#4704;&#4725;&#4781;&#4781;&#4621; &#4773;&#4840;&#4808;&#4656;&#4848;&#4733; &#4632;&#4614;&#4753;&#4757; &#4616;&#4635;&#4648;&#4875;&#4872;&#4901; &#4704;&#4677;&#4653;&#4709; &#4632;&#4776;&#4723;&#4720;&#4621; &#4961;&#4961;</value>
+					</text>
+					<text id="referral_follow_up-follow_speech_manner-label">
+						<value>&#4768;&#4752;&#4875;&#4872;&#4655; &#4773;&#4755; &#4609;&#4756;&#4723;&#4811; &#4632;&#4667;&#4667;&#4617;&#4757; &#4616;&#4635;&#4648;&#4875;&#4872;&#4901; &#4704;&#4677;&#4653;&#4709; &#4632;&#4776;&#4723;&#4720;&#4621; &#4843;&#4661;&#4936;&#4621;&#4875;&#4621; &#4961;&#4961; &#4779;&#4621;&#4720;&#4667;&#4667;&#4616;&#4963; &#4704;&#4853;&#4875;&#4634; &#4650;&#4936;&#4653; &#4635;&#4853;&#4648;&#4877;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_follow_up-visit_pp_care-label">
+						<value>&#4840;&#4853;&#4613;&#4648;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; &#4873;&#4709;&#4765;&#4725;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_follow_up-record_bp_pattern-label">
+						<value>&#4840;&#4848;&#4637; &#4877;&#4938;&#4727;&#4757; &#4609;&#4756;&#4723; &#4704;&#4720;&#4848;&#4875;&#4875;&#4634; &#4632;&#4776;&#4723;&#4720;&#4621;&#4755; &#4616;&#4900;&#4755; &#4899;&#4706;&#4843; &#4635;&#4659;&#4808;&#4677;&#4961;&#4961;</value>
+					</text>
+					<text id="referral_follow_up-help_kmc_continue-label">
+						<value>&#4773;&#4755;&#4725; &#4704;&#4708;&#4725; &#4813;&#4661;&#4901; &#4840;&#4779;&#4757;&#4875;&#4654; &#4635;&#4824;&#4653; &#4780;&#4653; &#4773;&#4757;&#4853;&#4725;&#4672;&#4901;&#4621; &#4808;&#4845;&#4637; &#4773;&#4757;&#4853;&#4723;&#4848;&#4653;&#4877; &#4632;&#4653;&#4851;&#4725;&#4961;&#4961;</value>
+					</text>
+					<text id="midwife_name/choose_element-label">
+						<value>&#4845;&#4613;&#4757; &#4942;&#4653;&#4637; &#4808;&#4845;&#4637; &#4650;&#4936;&#4651;&#4621; &#4780;&#4829; &#4843;&#4661;&#4720;&#4851;&#4848;&#4648;&#4813; &#4768;&#4779;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+				<translation lang="tir">
+					<text id="client_identification_information/client_name-label">
+						<value>&#4661;&#4637; &#4720;&#4872;&#4621;&#4875;&#4618;&#4725;</value>
+					</text>
+					<text id="client_identification_information/family_name-label">
+						<value>&#4632;&#4651;&#4626; &#4661;&#4853;&#4651;</value>
+						<value form="markdown">&#4632;&#4651;&#4626; &#4661;&#4853;&#4651;</value>
+					</text>
+					<text id="client_identification_information/gender-label">
+						<value>&#4926;&#4723;</value>
+					</text>
+					<text id="client_identification_information/gender-male-label">
+						<value>&#4720;&#4707;&#4821;&#4723;&#4845;</value>
+					</text>
+					<text id="client_identification_information/gender-female-label">
+						<value>&#4768;&#4752;&#4661;&#4720;&#4845;&#4722;</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/title-label">
+						<value><output value="/data/client_identification_information/client_name"/>'s &#4629;&#4781;&#4637;&#4755; &#4632;&#4941;&#4616;&#4842; &#4673;&#4933;&#4650; (_ _ _ _ _/_ _). &#4771;&#4709;&#4722; &#4781;&#4941;&#4722; &#4710;&#4723; &#4637;&#4619;&#4773;.</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/number-label">
+						<value>&#4673;&#4933;&#4650;</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/number-constraintMsg">
+						<value>&#4829;&#4637;&#4619;&#4773; &#4673;&#4933;&#4650; &#4704;&#4819;&#4621; 5 &#4850;&#4866;&#4725; &#4781;&#4792;&#4813;&#4757; &#4771;&#4616;&#4814;</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/year-label">
+						<value>&#4819;&#4632;&#4725;</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/year-constraintMsg">
+						<value>&#4819;&#4632;&#4725;  2 &#4853;&#4866;&#4725; &#4781;&#4792;&#4813;&#4757; &#4771;&#4616;&#4814;</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/mrn_validation_message-label">
+						<value>&#4824;&#4773;&#4720;&#4797;&#4846; &#4819;&#4632;&#4725; &#4621;&#4821;&#4618;  &#4829;&#4627;&#4616;&#4936; 5 &#4819;&#4632;&#4723;&#4725; &#4773;&#4841;&#4961;&#4961; &#4704;&#4845;&#4827;&#4794; &#4725;&#4797;&#4781;&#4616;&#4763; &#4819;&#4632;&#4725; &#4637;&#4773;&#4723;&#4813;&#4778; &#4771;&#4648;&#4875;&#4877;&#4930;&#4961;&#4961;</value>
+					</text>
+					<text id="client_identification_information/mrn/display_mrn-label">
+						<value>&#4629;&#4781;&#4637;&#4755; &#4632;&#4941;&#4616;&#4842; &#4673;&#4933;&#4650; <output value="current()/../mrn/mrn"/>.</value>
+					</text>
+					<text id="client_identification_information/age_years-label">
+						<value>&#4755;&#4845; &#4720;&#4872;&#4621;&#4875;&#4618;&#4725;  <output value="/data/client_identification_information/client_name"/>'s &#4821;&#4853;&#4632; &#4781;&#4757;&#4848;&#4845; &#4773;&#4841;?</value>
+					</text>
+					<text id="client_identification_information/age_years-constraintMsg">
+						<value>&#4821;&#4853;&#4632;  &#4771;&#4709; &#4638;&#4757;&#4878; 0 &#4757; 100&#4757; &#4819;&#4632;&#4723;&#4725; &#4781;&#4792;&#4813;&#4757; &#4771;&#4616;&#4814;</value>
+					</text>
+					<text id="client_identification_information/health_post_id-label">
+						<value>&#4627;&#4619;&#4941;&#4752;&#4725; &#4829;&#4808;&#4656;&#4848;&#4725; &#4780;&#4619; &#4901;&#4821;&#4755;  &#4632;&#4757; &#4773;&#4843; <output value="/data/client_identification_information/client_name"/>?</value>
+					</text>
+					<text id="client_identification_information/village/choose_element-label">
+						<value>&#4673;&#4664;&#4725;</value>
+					</text>
+					<text id="client_identification_information/local_phone_number-label">
+						<value><output value="/data/client_identification_information/client_name"/>'s &#4661;&#4621;&#4778; &#4673;&#4933;&#4650;r:</value>
+						<value form="markdown"><output value="/data/client_identification_information/client_name"/>'s &#4661;&#4621;&#4778; &#4673;&#4933;&#4650;r:</value>
+					</text>
+					<text id="client_identification_information/local_phone_number-constraintMsg">
+						<value>&#4661;&#4621;&#4778; &#4673;&#4933;&#4650; &#4779;&#4709; &#4828;&#4654; &#4845;&#4869;&#4637;&#4653; &#4776;&#4637;&#4769; &#4853;&#4635; &#4779;&#4709; 10 &#4850;&#4866;&#4725; &#4757;&#4619;&#4821;&#4618; &#4781;&#4752;&#4813;&#4629; &#4840;&#4709;&#4617;&#4757;</value>
+					</text>
+					<text id="follow_up_date-label">
+						<value>&#4629;&#4781;&#4637;&#4755; &#4829;&#4720;&#4872;&#4704;&#4648;&#4617; &#4821;&#4616;&#4725;</value>
+					</text>
+					<text id="follow_up_date-constraintMsg">
+						<value>&#4629;&#4781;&#4637;&#4755; &#4829;&#4720;&#4872;&#4704;&#4648;&#4617; &#4821;&#4616;&#4725; &#4757;&#4672;&#4931;&#4618; &#4829;&#4632;&#4933;&#4773; &#4771;&#4845;&#4792;&#4813;&#4757;&#4757;</value>
+					</text>
+					<text id="referral_diagnosis-label">
+						<value>Diagnosis at the receiving facility. Select all that apply</value>
+					</text>
+					<text id="referral_diagnosis-antepartum_hemmorage-label">
+						<value>&#4771;&#4757;&#4722; &#4947;&#4653;&#4720;&#4637; &#4612;&#4638;&#4648;&#4869;</value>
+					</text>
+					<text id="referral_diagnosis-birth_asphyxia-label">
+						<value>&#4755;&#4845; &#4637;&#4725;&#4757;&#4939;&#4661; &#4928;&#4872;&#4637;</value>
+					</text>
+					<text id="referral_diagnosis-deep_vein_thrombosis-label">
+						<value>&#4850;&#4949;&#4716;&#4845;&#4757; &#4725;&#4654;&#4637;&#4710;&#4658;&#4661;</value>
+					</text>
+					<text id="referral_diagnosis-eclampsia-label">
+						<value>&#4770;&#4781;&#4619;&#4637;&#4949;&#4658;&#4843;</value>
+					</text>
+					<text id="referral_diagnosis-hypertension-label">
+						<value>&#4853;&#4941;&#4770;&#4725; &#4848;&#4637;</value>
+					</text>
+					<text id="referral_diagnosis-pre-eclampsia-label">
+						<value>&#4949;&#4650;-&#4770;&#4781;&#4619;&#4637;&#4949;&#4658;&#4843;</value>
+					</text>
+					<text id="referral_diagnosis-hypotension-label">
+						<value>&#4853;&#4941;&#4770;&#4725; &#4848;&#4637;</value>
+					</text>
+					<text id="referral_diagnosis-malnutrition-label">
+						<value>&#4629;&#4933;&#4648;&#4725; &#4829;&#4720;&#4632;&#4899;&#4896;&#4752; &#4637;&#4877;&#4706;</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_depression-label">
+						<value>&#4853;&#4629;&#4650; &#4808;&#4618;&#4853; &#4829;&#4797;&#4656;&#4725; &#4853;&#4709;&#4653;&#4725;</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_hemmorage-label">
+						<value>&#4853;&#4629;&#4650; &#4808;&#4618;&#4853; &#4829;&#4941;&#4896;&#4653; &#4848;&#4637; &#4637;&#4941;&#4659;&#4661;</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_infection-label">
+						<value>&#4853;&#4629;&#4650; &#4808;&#4618;&#4853; &#4829;&#4797;&#4656;&#4725; &#4648;&#4797;&#4658;</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_pelvic_infection-label">
+						<value>&#4853;&#4629;&#4650; &#4808;&#4618;&#4853; &#4829;&#4941;&#4896;&#4653; &#4948;&#4621;&#4714;&#4661; &#4648;&#4797;&#4658;</value>
+					</text>
+					<text id="referral_diagnosis-pre_labor_rupture-label">
+						<value>&#4677;&#4853;&#4634; &#4629;&#4653;&#4658; &#4829;&#4941;&#4896;&#4653; &#4637;&#4941;&#4659;&#4661; &#4672;&#4669;&#4726; &#4771;&#4757;&#4669;&#4722;</value>
+					</text>
+					<text id="referral_diagnosis-severe_anemia-label">
+						<value>&#4637;&#4757;&#4771;&#4661; &#4848;&#4637;</value>
+					</text>
+					<text id="referral_diagnosis-severe_jaundice-label">
+						<value>&#4771;&#4779;&#4619;&#4725; &#4613;&#4931;&#4757; &#4771;&#4709; &#4706;&#4907; &#4637;&#4677;&#4843;&#4653;</value>
+					</text>
+					<text id="referral_diagnosis-severe_pre_eclampsia-label">
+						<value>&#4829;&#4616;&#4819;&#4616; &#4949;&#4650;-&#4770;&#4781;&#4619;&#4637;&#4949;&#4658;&#4843;</value>
+					</text>
+					<text id="referral_diagnosis-serious_condition_abruption-label">
+						<value>&#4776;&#4637; &#4637;&#4757;&#4931;&#4621; &#4901;&#4757;&#4658; &#4829;&#4771;&#4637;&#4656;&#4617; &#4627;&#4848;&#4872;&#4763; &#4777;&#4752;&#4723;&#4725; &#4840;&#4632;&#4619;&#4797;&#4725;</value>
+					</text>
+					<text id="referral_diagnosis-serious_condition_pulmonary_oedema-label">
+						<value>&#4771;&#4709; &#4659;&#4637;&#4707; &#4635;&#4843;&#4810; &#4629;&#4704;&#4901; &#4637;&#4941;&#4899;&#4653;</value>
+					</text>
+					<text id="referral_diagnosis-sti_vaginal_discharge-label">
+						<value>&#4772;&#4661;&#4722;&#4771;&#4845; /&#4715;&#4874;&#4755;&#4621; &#4850;&#4656;&#4731;&#4653;&#4869;</value>
+					</text>
+					<text id="referral_diagnosis-urinary_retention-label">
+						<value>&#4669;&#4757;&#4722; &#4637;&#4821;&#4931;&#4813;</value>
+					</text>
+					<text id="referral_diagnosis-urinary_tract_infection-label">
+						<value>&#4711;&#4757;&#4711;&#4723;&#4725; &#4669;&#4757;&#4722; &#4637;&#4653;&#4795;&#4661;</value>
+					</text>
+					<text id="referral_diagnosis-very_low_birthweight-label">
+						<value>&#4709;&#4899;&#4821;&#4634; &#4725;&#4625;&#4725; &#4781;&#4709;&#4848;&#4725;&#4757; &#4773;&#4811;&#4753; &#4824;&#4845;&#4771;&#4792;&#4616; &#4813;&#4621;&#4854;</value>
+					</text>
+					<text id="referral_diagnosis-very_severe_disease-label">
+						<value>&#4824;&#4659;&#4674; &#4629;&#4635;&#4637;</value>
+					</text>
+					<text id="referral_diagnosis-other-label">
+						<value>&#4779;&#4618;&#4773;</value>
+					</text>
+					<text id="referral_diagnosis-spontaneous_abortion-label">
+						<value>&#4853;&#4757;&#4872;&#4720;&#4763; &#4637;&#4757;&#4931;&#4621; &#4901;&#4757;&#4658;</value>
+					</text>
+					<text id="referral_diagnosis_other-label">
+						<value>&#4845;&#4896;&#4672;&#4661;</value>
+					</text>
+					<text id="label_direct_delivery_outcome-label">
+						<value>&#4611;&#4757;&#4848;&#4704;&#4723;&#4810; &#4637;&#4757;&#4931;&#4621; &#4901;&#4757;&#4658; &#4757;&#4637;&#4653;&#4632;&#4651; &#4632;&#4650;&#4933;&#4778; &#4771;&#4776;&#4794;&#4962; &#4773;&#4826; &#4677;&#4901;&#4818; &#4632;&#4618;&#4794; &#4637;&#4661; &#4808;&#4851;&#4773;&#4794; &#4704;&#4845;&#4827;&#4794; &#4704;&#4722; &#4755;&#4845; &#4813;&#4930;&#4770;&#4725; &#4901;&#4757;&#4658; &#4854;&#4781;&#4632;&#4757;&#4725; &#4752;&#4827; &#4720;&#4627;&#4779;&#4634;&#4725; &#4637;&#4621;&#4773;&#4619;&#4962;</value>
+					</text>
+					<text id="referral_feedback-label">
+						<value>&#4704;&#4845;&#4824;&#4774;&#4637; &#4829;&#4720;&#4813;&#4611;&#4704; &#4629;&#4781;&#4637;&#4755; &#4808;&#4845; &#4829;&#4720;&#4808;&#4656;&#4848; &#4661;&#4873;&#4637;&#4722;  &#4637;&#4648;&#4930;/&#4933;</value>
+					</text>
+					<text id="referral_feedback-supportive_care-label">
+						<value>&#4853;&#4875;&#4939;&#4810; &#4781;&#4757;&#4781;&#4757;</value>
+					</text>
+					<text id="referral_feedback-magnesium_sulphate-label">
+						<value>&#4632;&#4635;&#4877;&#4754;&#4658;&#4840;&#4637; &#4659;&#4616;&#4940;&#4725; &#4622;&#4850;&#4757;&#4877; &#4854;&#4829;</value>
+					</text>
+					<text id="referral_feedback-antibiotics-label">
+						<value>&#4632;&#4816;&#4872;&#4658; &#4629;&#4635;&#4635;&#4725;</value>
+					</text>
+					<text id="referral_feedback-antihypertensive-label">
+						<value>&#4928;&#4648; &#4853;&#4941;&#4770;&#4725; &#4848;&#4637;</value>
+					</text>
+					<text id="referral_feedback-birth_attended-label">
+						<value>&#4709;&#4632;&#4757; &#4720;&#4811;&#4618;&#4849;</value>
+					</text>
+					<text id="referral_feedback-referred_hospital-label">
+						<value>&#4755;&#4709; &#4632;&#4707;&#4773;&#4723;&#4810; &#4614;&#4661;&#4946;&#4723;&#4621; &#4650;&#4936;&#4653; &#4720;&#4707;&#4610;&#4617;</value>
+					</text>
+					<text id="referral_feedback-womb_explored-label">
+						<value>&#4814;&#4637;&#4709; &#4772;&#4781;&#4661;&#4949;&#4622;&#4653;</value>
+					</text>
+					<text id="referral_feedback-genital_tract_repaired-label">
+						<value>&#4864;&#4754;&#4723;&#4621; &#4725;&#4651;&#4781; &#4650;&#4948;&#4840;&#4653;</value>
+					</text>
+					<text id="referral_feedback-counselling-label">
+						<value>&#4637;&#4797;&#4650;</value>
+					</text>
+					<text id="referral_feedback-iron_supplement-label">
+						<value>&#4771;&#4845;&#4654;&#4757; &#4659;&#4616;&#4940;&#4725;</value>
+					</text>
+					<text id="referral_feedback-ergometrin-label">
+						<value>&#4772;&#4653;&#4878;&#4636;&#4725;&#4650;&#4757;</value>
+					</text>
+					<text id="referral_feedback-oxytocin-label">
+						<value>&#4774;&#4781;&#4658;&#4726;&#4658;&#4757;</value>
+					</text>
+					<text id="referral_feedback-iv_fluids-label">
+						<value>&#4771;&#4845;&#4714; &#4941;&#4617;&#4853;</value>
+					</text>
+					<text id="referral_feedback-referral_enroute_support-label">
+						<value>&#4650;&#4936;&#4651;&#4621; &#4848;&#4872;&#4941;&#4757; &#4781;&#4725;&#4725;&#4621;&#4757; &#4771;&#4709; &#4813;&#4669;&#4899;&#4810; &#4817;&#4848;&#4725;</value>
+					</text>
+					<text id="referral_feedback-intramuscular_ampicillin_gentamycin-label">
+						<value>&#4755;&#4845; &#4632;&#4864;&#4632;&#4653;&#4843; &#4854;&#4829; &#4771;&#4638;&#4781;&#4659; &#4757; &#4864;&#4757;&#4723;&#4757; &#4709;&#4770;&#4757;&#4720;&#4651;&#4635;&#4661;&#4777;&#4619;&#4653; &#4720;&#4811;&#4610;&#4705;</value>
+					</text>
+					<text id="referral_feedback-treated_low_blood_sugar-label">
+						<value>&#4613;&#4931;&#4757; &#4779;&#4709; &#4725;&#4625;&#4725; &#4755;&#4845; &#4848;&#4637; &#4661;&#4787;&#4653; &#4757;&#4637;&#4781;&#4621;&#4795;&#4621; &#4720;&#4627;&#4778;&#4633;</value>
+					</text>
+					<text id="referral_feedback-warmed_infant-label">
+						<value>&#4613;&#4931;&#4757; &#4755;&#4709; &#4771;&#4854; &#4709;&#4637;&#4933;&#4875;&#4821; &#4637;&#4639;&#4693;</value>
+					</text>
+					<text id="referral_feedback-advise_mother_warm_infant-label">
+						<value>&#4771;&#4854; &#4813;&#4619;&#4851; &#4776;&#4632;&#4845; &#4876;&#4651; &#4776;&#4637; &#4773;&#4720;&#4633;&#4694; &#4720;&#4632;&#4794;&#4651;</value>
+					</text>
+					<text id="referral_feedback-referred_urgently-label">
+						<value>&#4709;&#4677;&#4621;&#4897;&#4941; &#4771;&#4709; &#4614;&#4661;&#4946;&#4723;&#4621; &#4650;&#4936;&#4653;</value>
+					</text>
+					<text id="referral_feedback-resuscitation-label">
+						<value>&#4725;&#4757;&#4939;&#4669; &#4637;&#4611;&#4709; &#4720;&#4864;&#4634;&#4649;</value>
+					</text>
+					<text id="referral_feedback-ventilated-label">
+						<value>&#4709;&#4877;&#4705;&#4773; &#4632;&#4896;&#4757; &#4776;&#4648;&#4898;&#4725;&#4757; &#4632;&#4664;&#4936;&#4757;&#4757; &#4720;&#4757;&#4938;&#4657;</value>
+					</text>
+					<text id="referral_feedback-newborn_care-label">
+						<value>&#4632;&#4656;&#4648;&#4723;&#4810; &#4755;&#4845; &#4755;&#4933;&#4619;&#4723;&#4725; &#4629;&#4781;&#4637;&#4755; &#4720;&#4811;&#4610;&#4705;</value>
+					</text>
+					<text id="referral_feedback-monitored_6_hours-label">
+						<value>&#4757;&#4720;&#4792;&#4723;&#4723;&#4618; 6 &#4661;&#4819;&#4723;&#4725; &#4637;&#4781;&#4725;&#4723;&#4621;</value>
+					</text>
+					<text id="referral_feedback-followed_24_hours-label">
+						<value>&#4757;24 &#4661;&#4819;&#4723;&#4725; &#4771;&#4709; &#4725;&#4779;&#4621; &#4781;&#4725;&#4725;&#4621; &#4637;&#4877;&#4707;&#4653;</value>
+					</text>
+					<text id="referral_feedback-kangaroo_care-label">
+						<value>&#4779;&#4757;&#4875;&#4654; &#4635;&#4824;&#4653; &#4780;&#4653; &#4781;&#4869;&#4632;&#4653; &#4637;&#4877;&#4707;&#4653;</value>
+					</text>
+					<text id="referral_feedback-vitamin_k-label">
+						<value>&#4715;&#4845;&#4723;&#4634;&#4757; &#4780; &#4720;&#4811;&#4610;&#4705;</value>
+					</text>
+					<text id="referral_feedback-other-label">
+						<value>&#4779;&#4621;&#4773;</value>
+					</text>
+					<text id="referral_feedback_other-label">
+						<value>&#4845;&#4896;&#4672;&#4661;</value>
+					</text>
+					<text id="referral_follow_up-label">
+						<value>Further treatment/follow up required. Select all that apply</value>
+					</text>
+					<text id="referral_follow_up-track_medication_compliance-label">
+						<value>&#4632;&#4853;&#4627;&#4754;&#4723;&#4723; &#4709;&#4771;&#4877;&#4707;&#4705; &#4725;&#4808;&#4661;&#4853; &#4637;&#4613;&#4619;&#4811; &#4720;&#4792;&#4723;&#4720;&#4621;</value>
+					</text>
+					<text id="referral_follow_up-follow_speech_manner-label">
+						<value>&#4771;&#4752;&#4875;&#4877;&#4651;&#4757; &#4928;&#4707;&#4845;&#4757; &#4637;&#4637;&#4629;&#4843;&#4669; &#4637;&#4613;&#4619;&#4809; &#4637;&#4781;&#4725;&#4723;&#4621;</value>
+					</text>
+					<text id="referral_follow_up-visit_pp_care-label">
+						<value>&#4757;&#4853;&#4629;&#4648; &#4808;&#4618;&#4853; &#4877;&#4621;&#4875;&#4622;&#4725; &#4637;&#4611;&#4709;</value>
+					</text>
+					<text id="referral_follow_up-record_bp_pattern-label">
+						<value>&#4928;&#4677;&#4898; &#4848;&#4637; &#4709;&#4637;&#4821;&#4675;&#4757; &#4616;&#4813;&#4901;&#4723;&#4721; &#4637;&#4661; &#4899;&#4709;&#4843; &#4901;&#4821;&#4755; &#4720;&#4824;&#4651;&#4648;&#4709;</value>
+					</text>
+					<text id="referral_follow_up-help_kmc_continue-label">
+						<value>&#4779;&#4757;&#4875;&#4654; &#4635;&#4824;&#4653; &#4780;&#4653; &#4771;&#4709; &#4872;&#4827;&#4771; &#4773;&#4813;&#4757; &#4781;&#4725;&#4677;&#4933;&#4616;&#4617; &#4627;&#4877;&#4827;</value>
+					</text>
+					<text id="midwife_name/choose_element-label">
+						<value>Managed by</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4677;&#4901;&#4818; &#4720;&#4632;&#4618;&#4769;                                                                                                                                                                                        &#4757;&#4637;&#4621;&#4771;&#4797;      &#4771;&#4709; &#4619;&#4821;&#4618; &#4771;&#4709; &#4840;&#4635;&#4755;&#4845; &#4664;&#4752;&#4797; &#4829;&#4653;&#4781;&#4704; &#4694;&#4933;&#4616;&#4811;&#4845; &#4637;&#4621;&#4781;&#4725; &#4845;&#4933;&#4819;&#4753;</value>
+					</text>
+				</translation>
+				<translation lang="orm">
+					<text id="client_identification_information/client_name-label">
+						<value>Maqaa Yaalama</value>
+					</text>
+					<text id="client_identification_information/family_name-label">
+						<value>itti gafatamaa abbaa mana</value>
+						<value form="markdown">itti gafatamaa abbaa mana</value>
+					</text>
+					<text id="client_identification_information/gender-label">
+						<value>saala</value>
+					</text>
+					<text id="client_identification_information/gender-male-label">
+						<value>dhiira</value>
+					</text>
+					<text id="client_identification_information/gender-female-label">
+						<value>dubartii</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/title-label">
+						<value><output value="/data/client_identification_information/client_name"/>'s MRN (_ _ _ _ _/_ _).  Iddoowwaan duwwaa kana guuti.</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/number-label">
+						<value>lakkofsaa</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/number-constraintMsg">
+						<value>lakk.yaala dijita 5 ta'u qaba</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/year-label">
+						<value>waggaadhaaf dijita 2 galichi</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/year-constraintMsg">
+						<value>Year must be 2 digits and between 1999 and the current year</value>
+					</text>
+					<text id="client_identification_information/mrn/mrn/mrn_validation_message-label">
+						<value>You have entered a year over 5 years in the past, please check to make sure you have entered the year correctly.</value>
+					</text>
+					<text id="client_identification_information/mrn/display_mrn-label">
+						<value>lakk. Guutu yaala <output value="current()/../mrn/mrn"/>.</value>
+					</text>
+					<text id="client_identification_information/age_years-label">
+						<value>Yaalaman <output value="/data/client_identification_information/client_name"/>'s umuriin isa/ishee waggaadhaan?</value>
+					</text>
+					<text id="client_identification_information/age_years-constraintMsg">
+						<value>Umuriin haadha dhulfaa waggaa 10 fi 100 gidduu ta'u qaba</value>
+					</text>
+					<text id="client_identification_information/health_post_id-label">
+						<value>Keellaa fayyaa tajaajilamaaf imaana fudhaate <output value="/data/client_identification_information/client_name"/>?</value>
+					</text>
+					<text id="client_identification_information/village/choose_element-label">
+						<value>Gooxii</value>
+					</text>
+					<text id="client_identification_information/local_phone_number-label">
+						<value><output value="/data/client_identification_information/client_name"/>'s lakk. Bilbilaa yaalamaa:</value>
+						<value form="markdown"><output value="/data/client_identification_information/client_name"/>'s lakk. Bilbilaa yaalamaa:</value>
+					</text>
+					<text id="client_identification_information/local_phone_number-constraintMsg">
+						<value>lakk. Bilbilaa 0 irraa eegalu qaba garu dijita 10 caalu hin qabu</value>
+					</text>
+					<text id="follow_up_date-label">
+						<value>Guyyaa itti yaalamite</value>
+					</text>
+					<text id="follow_up_date-constraintMsg">
+						<value>Guyyaa itti yaalamite fulduratti ta'u hin danda'u</value>
+					</text>
+					<text id="referral_diagnosis-label">
+						<value>Tajaajilamutuudhaaf yaala mana yaalatti kenamee</value>
+					</text>
+					<text id="referral_diagnosis-antepartum_hemmorage-label">
+						<value>dhangala'u dhiigaa yeroo da'umsaan dura mudatu</value>
+					</text>
+					<text id="referral_diagnosis-birth_asphyxia-label">
+						<value>rakkina afuura baafachuu da'imaa reef dhalattee</value>
+					</text>
+					<text id="referral_diagnosis-deep_vein_thrombosis-label">
+						<value>diip veeni tiroboosis</value>
+					</text>
+					<text id="referral_diagnosis-eclampsia-label">
+						<value>Eclampsia</value>
+					</text>
+					<text id="referral_diagnosis-hypertension-label">
+						<value>Hypertension</value>
+					</text>
+					<text id="referral_diagnosis-pre-eclampsia-label">
+						<value>Pre-Eclampsia</value>
+					</text>
+					<text id="referral_diagnosis-hypotension-label">
+						<value>dhiibbaa dhiigaa gadii bu'aa</value>
+					</text>
+					<text id="referral_diagnosis-malnutrition-label">
+						<value>hanqina nyaata</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_depression-label">
+						<value>fajajuu da'umsaan booda muudatu</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_hemmorage-label">
+						<value>dhangala'u dhiigaa da'umsaan booda</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_infection-label">
+						<value>infeekishiin da'umsaa booda</value>
+					</text>
+					<text id="referral_diagnosis-post_partum_pelvic_infection-label">
+						<value>infeekishiin mogolee da'umsaan booda</value>
+					</text>
+					<text id="referral_diagnosis-pre_labor_rupture-label">
+						<value>dhangala'uu bishaan bubbee cininsuun dura</value>
+					</text>
+					<text id="referral_diagnosis-severe_anemia-label">
+						<value>Hir'ina dhiigaa cimaa</value>
+					</text>
+					<text id="referral_diagnosis-severe_jaundice-label">
+						<value>Boorachu cimaa gogaa,ijaa fi fincaan</value>
+					</text>
+					<text id="referral_diagnosis-severe_pre_eclampsia-label">
+						<value>Pirii ikilaabishiyaa cimaa</value>
+					</text>
+					<text id="referral_diagnosis-serious_condition_abruption-label">
+						<value>malattoo cimaa dhukkubaa kan akka oobbattii gadamessaa irraa adda bahuu</value>
+					</text>
+					<text id="referral_diagnosis-serious_condition_pulmonary_oedema-label">
+						<value>malattoo cimaa dhukkubaa kan akka bishaan sonbaa keessaatti kuufamu</value>
+					</text>
+					<text id="referral_diagnosis-sti_vaginal_discharge-label">
+						<value>dhukkuba saalan dadarboo (dhangala'oo qaama saala duubartii)</value>
+					</text>
+					<text id="referral_diagnosis-urinary_retention-label">
+						<value>Fincaan qabachuu</value>
+					</text>
+					<text id="referral_diagnosis-urinary_tract_infection-label">
+						<value>infeekishiin ojummoo fincaani</value>
+					</text>
+					<text id="referral_diagnosis-very_low_birthweight-label">
+						<value>ulfaatina qaama baay'ee gadii bu'aa / da'imaa yeroo da'umsaa dura dhalattee</value>
+					</text>
+					<text id="referral_diagnosis-very_severe_disease-label">
+						<value>Dhukkuba cimaa</value>
+					</text>
+					<text id="referral_diagnosis-other-label">
+						<value>kan biroo</value>
+					</text>
+					<text id="referral_diagnosis-spontaneous_abortion-label">
+						<value>ulfaa ofii isaatin bu'e</value>
+					</text>
+					<text id="referral_diagnosis_other-label">
+						<value>maaloo ibsaa</value>
+					</text>
+					<text id="label_direct_delivery_outcome-label">
+						<value>Raagaan kun yaalaf filamee. Akkuma unki kun guutameen maaloo qabxii ulfaa yaalamitu guutaa</value>
+					</text>
+					<text id="referral_feedback-label">
+						<value>maaloo yaala fi tarkaanifi fudhatamee hunda filadhaa</value>
+					</text>
+					<text id="referral_feedback-supportive_care-label">
+						<value>kununisaa</value>
+					</text>
+					<text id="referral_feedback-magnesium_sulphate-label">
+						<value>Magnesium Sulphate Loading Dose</value>
+					</text>
+					<text id="referral_feedback-antibiotics-label">
+						<value>Dawwaa dhukkubaa</value>
+					</text>
+					<text id="referral_feedback-antihypertensive-label">
+						<value>Dawwaa dhiibbaa dhiigaa</value>
+					</text>
+					<text id="referral_feedback-birth_attended-label">
+						<value>kan deesisee</value>
+					</text>
+					<text id="referral_feedback-referred_hospital-label">
+						<value>Hospitaala sad. Tokkofatti riifarii godhuu</value>
+					</text>
+					<text id="referral_feedback-womb_explored-label">
+						<value>Sochii gadamessaa</value>
+					</text>
+					<text id="referral_feedback-genital_tract_repaired-label">
+						<value>Genital tract repaired</value>
+					</text>
+					<text id="referral_feedback-counselling-label">
+						<value>Gorsa</value>
+					</text>
+					<text id="referral_feedback-iron_supplement-label">
+						<value>Iron Supplement</value>
+					</text>
+					<text id="referral_feedback-ergometrin-label">
+						<value>Ergometrin</value>
+					</text>
+					<text id="referral_feedback-oxytocin-label">
+						<value>Oxytocin</value>
+					</text>
+					<text id="referral_feedback-iv_fluids-label">
+						<value>IV Fluids</value>
+					</text>
+					<text id="referral_feedback-referral_enroute_support-label">
+						<value>Gargaarsa fi hordoffii dhihoo waliin riifari erguu</value>
+					</text>
+					<text id="referral_feedback-intramuscular_ampicillin_gentamycin-label">
+						<value>amipiciliini fi jeentaamyiciini kara intraamaskuulariidhaan keennameef</value>
+					</text>
+					<text id="referral_feedback-treated_low_blood_sugar-label">
+						<value>da'imttii hir'inaa sukkaaratiif akka hin muudamineef yaalamtee</value>
+					</text>
+					<text id="referral_feedback-warmed_infant-label">
+						<value>da'imtii qaama haadhattii maxanuudhaan akka ho'ituu godhame</value>
+					</text>
+					<text id="referral_feedback-advise_mother_warm_infant-label">
+						<value>Haati akkamitti da'ima ishee akka hooftu gorsii kenameef</value>
+					</text>
+					<text id="referral_feedback-referred_urgently-label">
+						<value>ariitiidhaan kara Hospitaala ergamtee</value>
+					</text>
+					<text id="referral_feedback-resuscitation-label">
+						<value>gargaarsi ariitiidhaan jalqabame</value>
+					</text>
+					<text id="referral_feedback-ventilated-label">
+						<value>qaraxiixa wal madalaa ta'een afuura baafate</value>
+					</text>
+					<text id="referral_feedback-newborn_care-label">
+						<value>Hordoffii bu'uraa da'imaa reef dhalatteef</value>
+					</text>
+					<text id="referral_feedback-monitored_6_hours-label">
+						<value>sa'a 6f mana yaalatti hordofitee</value>
+					</text>
+					<text id="referral_feedback-followed_24_hours-label">
+						<value>sa'a 24f mana yaalatti hordofitee</value>
+					</text>
+					<text id="referral_feedback-kangaroo_care-label">
+						<value>kangaaroo mazar keeriin jalqabeef</value>
+					</text>
+					<text id="referral_feedback-vitamin_k-label">
+						<value>Vit. K kenaameefi</value>
+					</text>
+					<text id="referral_feedback-other-label">
+						<value>kan biroo</value>
+					</text>
+					<text id="referral_feedback_other-label">
+						<value>maaloo ibsaa</value>
+					</text>
+					<text id="referral_follow_up-label">
+						<value>Yaala dabalataa/hordoffii baribaachisuu</value>
+					</text>
+					<text id="referral_follow_up-track_medication_compliance-label">
+						<value>Yaalamtuun dawwaa seeraan fudhachuu ishee hordofuu</value>
+					</text>
+					<text id="referral_follow_up-follow_speech_manner-label">
+						<value>Haala dubbii isheetiif amalaa ishee hordoofudhaaan jijjiramaa jiru ilaalu yoo jijjjirama hin qabine ammas riifarii godhuu</value>
+					</text>
+					<text id="referral_follow_up-visit_pp_care-label">
+						<value>dawwii hordooffi da'umsaa booda</value>
+					</text>
+					<text id="referral_follow_up-record_bp_pattern-label">
+						<value>Hordooffi dhiibbaa dhiigaa hordoofudhaan buufata fayyaatiif gabaasa</value>
+					</text>
+					<text id="referral_follow_up-help_kmc_continue-label">
+						<value>akka haati manattii 'kangaaroo mother care'itti fuftu gargaaruu</value>
+					</text>
+					<text id="midwife_name/choose_element-label">
+						<value>kan too'annoo godhee</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>unki guutumaa guututti guutemee  unka kana erguutdhaaf malattoo magarsaa karaa mirgaa kara oli jiru filadhuu</value>
+					</text>
+				</translation>
+			</itext>
+		<bind calculate="/data/meta/timeEnd" nodeset="/data/case_open_notification_1/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_open_notification_1/case/@user_id"/><setvalue event="xforms-ready" ref="/data/case_open_notification_1/case/@case_id" value="instance('commcaresession')/session/data/case_id_new_notification_0"/><bind calculate="/data/client_identification_information/notification_name" nodeset="/data/case_open_notification_1/case/create/case_name"/><bind calculate="/data/client_identification_information/age_years" nodeset="/data/case_open_notification_1/case/update/age_years" relevant="count(/data/client_identification_information/age_years) &gt; 0"/><bind calculate="/data/client_identification_information/client_name" nodeset="/data/case_open_notification_1/case/update/client_name" relevant="count(/data/client_identification_information/client_name) &gt; 0"/><bind calculate="/data/client_identification_information/family_name" nodeset="/data/case_open_notification_1/case/update/family_name" relevant="count(/data/client_identification_information/family_name) &gt; 0"/><bind calculate="/data/follow_up_date" nodeset="/data/case_open_notification_1/case/update/follow_up_date" relevant="count(/data/follow_up_date) &gt; 0"/><bind calculate="/data/follow_up_date_eth" nodeset="/data/case_open_notification_1/case/update/follow_up_date_eth" relevant="count(/data/follow_up_date_eth) &gt; 0"/><bind calculate="/data/client_identification_information/gender" nodeset="/data/case_open_notification_1/case/update/gender" relevant="count(/data/client_identification_information/gender) &gt; 0"/><bind calculate="/data/locations/hc_facility_code" nodeset="/data/case_open_notification_1/case/update/hc_facility_code" relevant="count(/data/locations/hc_facility_code) &gt; 0"/><bind calculate="/data/locations/health_center" nodeset="/data/case_open_notification_1/case/update/health_center" relevant="count(/data/locations/health_center) &gt; 0"/><bind calculate="/data/locations/health_center_id" nodeset="/data/case_open_notification_1/case/update/health_center_id" relevant="count(/data/locations/health_center_id) &gt; 0"/><bind calculate="/data/locations/health_post" nodeset="/data/case_open_notification_1/case/update/health_post" relevant="count(/data/locations/health_post) &gt; 0"/><bind calculate="/data/client_identification_information/health_post_id" nodeset="/data/case_open_notification_1/case/update/health_post_id" relevant="count(/data/client_identification_information/health_post_id) &gt; 0"/><bind calculate="/data/locations/hp_facility_code" nodeset="/data/case_open_notification_1/case/update/hp_facility_code" relevant="count(/data/locations/hp_facility_code) &gt; 0"/><bind calculate="/data/client_identification_information/local_phone_number" nodeset="/data/case_open_notification_1/case/update/local_phone_number" relevant="count(/data/client_identification_information/local_phone_number) &gt; 0"/><bind calculate="/data/midwife_name/midwife_name" nodeset="/data/case_open_notification_1/case/update/midwife_name" relevant="count(/data/midwife_name/midwife_name) &gt; 0"/><bind calculate="/data/midwife_name/midwife_phone_number" nodeset="/data/case_open_notification_1/case/update/midwife_phone_number" relevant="count(/data/midwife_name/midwife_phone_number) &gt; 0"/><bind calculate="/data/client_identification_information/mrn/mrn/mrn" nodeset="/data/case_open_notification_1/case/update/mrn" relevant="count(/data/client_identification_information/mrn/mrn/mrn) &gt; 0"/><bind calculate="/data/notification_date" nodeset="/data/case_open_notification_1/case/update/notification_date" relevant="count(/data/notification_date) &gt; 0"/><bind calculate="/data/notification_date_eth" nodeset="/data/case_open_notification_1/case/update/notification_date_eth" relevant="count(/data/notification_date_eth) &gt; 0"/><bind calculate="/data/notification_type" nodeset="/data/case_open_notification_1/case/update/notification_type" relevant="count(/data/notification_type) &gt; 0"/><bind calculate="/data/client_identification_information/health_post_id" nodeset="/data/case_open_notification_1/case/update/owner_id" relevant="count(/data/client_identification_information/health_post_id) &gt; 0"/><bind calculate="/data/referral_complete" nodeset="/data/case_open_notification_1/case/update/referral_complete" relevant="count(/data/referral_complete) &gt; 0"/><bind calculate="/data/referral_diagnosis" nodeset="/data/case_open_notification_1/case/update/referral_diagnosis" relevant="count(/data/referral_diagnosis) &gt; 0"/><bind calculate="/data/referral_diagnosis_other" nodeset="/data/case_open_notification_1/case/update/referral_diagnosis_other" relevant="count(/data/referral_diagnosis_other) &gt; 0"/><bind calculate="/data/referral_feedback" nodeset="/data/case_open_notification_1/case/update/referral_feedback" relevant="count(/data/referral_feedback) &gt; 0"/><bind calculate="/data/referral_feedback_other" nodeset="/data/case_open_notification_1/case/update/referral_feedback_other" relevant="count(/data/referral_feedback_other) &gt; 0"/><bind calculate="/data/referral_follow_up" nodeset="/data/case_open_notification_1/case/update/referral_follow_up" relevant="count(/data/referral_follow_up) &gt; 0"/><bind calculate="/data/referral_follow_up_other" nodeset="/data/case_open_notification_1/case/update/referral_follow_up_other" relevant="count(/data/referral_follow_up_other) &gt; 0"/><bind calculate="/data/locations/region" nodeset="/data/case_open_notification_1/case/update/region" relevant="count(/data/locations/region) &gt; 0"/><bind calculate="/data/locations/region_id" nodeset="/data/case_open_notification_1/case/update/region_id" relevant="count(/data/locations/region_id) &gt; 0"/><bind calculate="/data/locations/test_or_real" nodeset="/data/case_open_notification_1/case/update/test_or_real" relevant="count(/data/locations/test_or_real) &gt; 0"/><bind calculate="/data/client_identification_information/village/village" nodeset="/data/case_open_notification_1/case/update/village" relevant="count(/data/client_identification_information/village/village) &gt; 0"/><bind calculate="/data/locations/woreda" nodeset="/data/case_open_notification_1/case/update/woreda" relevant="count(/data/locations/woreda) &gt; 0"/><bind calculate="/data/locations/woreda_id" nodeset="/data/case_open_notification_1/case/update/woreda_id" relevant="count(/data/locations/woreda_id) &gt; 0"/><bind calculate="/data/locations/zone" nodeset="/data/case_open_notification_1/case/update/zone" relevant="count(/data/locations/zone) &gt; 0"/><bind calculate="/data/locations/zone_id" nodeset="/data/case_open_notification_1/case/update/zone_id" relevant="count(/data/locations/zone_id) &gt; 0"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_dont_open/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_dont_open/case/@user_id"/><bind nodeset="/data/case_dont_open/case" relevant="/data/false = 'TRUE'"/><setvalue event="xforms-ready" ref="/data/case_dont_open/case/@case_id" value="instance('commcaresession')/session/data/case_id_new_referral_1"/><bind calculate="/data/false" nodeset="/data/case_dont_open/case/create/case_name"/><setvalue event="xforms-ready" ref="/data/case_dont_open/case/create/owner_id" value="instance('groups')/groups/group/@id"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<group ref="/data/client_identification_information">
+			<input ref="/data/client_identification_information/client_name">
+				<label ref="jr:itext('client_identification_information/client_name-label')"/>
+			</input>
+			<input ref="/data/client_identification_information/family_name">
+				<label ref="jr:itext('client_identification_information/family_name-label')"/>
+			</input>
+			<select1 ref="/data/client_identification_information/gender">
+				<label ref="jr:itext('client_identification_information/gender-label')"/>
+				<item>
+					<label ref="jr:itext('client_identification_information/gender-male-label')"/>
+					<value>male</value>
+				</item>
+				<item>
+					<label ref="jr:itext('client_identification_information/gender-female-label')"/>
+					<value>female</value>
+				</item>
+			</select1>
+			<group ref="/data/client_identification_information/mrn">
+				<group ref="/data/client_identification_information/mrn/mrn" appearance="field-list">
+					<trigger ref="/data/client_identification_information/mrn/mrn/title" appearance="minimal">
+						<label ref="jr:itext('client_identification_information/mrn/mrn/title-label')"/>
+					</trigger>
+					<input ref="/data/client_identification_information/mrn/mrn/number" appearance="numeric">
+						<label ref="jr:itext('client_identification_information/mrn/mrn/number-label')"/>
+						<alert ref="jr:itext('client_identification_information/mrn/mrn/number-constraintMsg')"/>
+					</input>
+					<input ref="/data/client_identification_information/mrn/mrn/year" appearance="numeric">
+						<label ref="jr:itext('client_identification_information/mrn/mrn/year-label')"/>
+						<alert ref="jr:itext('client_identification_information/mrn/mrn/year-constraintMsg')"/>
+					</input>
+					<trigger ref="/data/client_identification_information/mrn/mrn/mrn_validation_message" appearance="minimal">
+						<label ref="jr:itext('client_identification_information/mrn/mrn/mrn_validation_message-label')"/>
+					</trigger>
+				</group>
+				<trigger ref="/data/client_identification_information/mrn/display_mrn" appearance="minimal">
+					<label ref="jr:itext('client_identification_information/mrn/display_mrn-label')"/>
+				</trigger>
+			</group>
+			<input ref="/data/client_identification_information/age_years">
+				<label ref="jr:itext('client_identification_information/age_years-label')"/>
+				<alert ref="jr:itext('client_identification_information/age_years-constraintMsg')"/>
+			</input>
+			<select1 ref="/data/client_identification_information/health_post_id">
+				<label ref="jr:itext('client_identification_information/health_post_id-label')"/>
+				<itemset nodeset="instance('locations')/locations/location[@type = &quot;health-post&quot;][@health-center_id = /data/locations/health_center_id]">
+					<label ref="name"/>
+					<value ref="@id"/>
+				</itemset>
+			</select1>
+			<group ref="/data/client_identification_information/village">
+				<group>
+					<repeat jr:count="/data/client_identification_information/village/list_length" jr:noAddRemove="true()" nodeset="/data/client_identification_information/village/repeat"/>
+				</group>
+				<select1 ref="/data/client_identification_information/village/choose_element">
+					<label ref="jr:itext('client_identification_information/village/choose_element-label')"/>
+					<itemset nodeset="/data/client_identification_information/village/repeat">
+						<label ref="element"/>
+						<value ref="element_id"/>
+					</itemset>
+				</select1>
+			</group>
+			<input ref="/data/client_identification_information/local_phone_number" appearance="numeric">
+				<label ref="jr:itext('client_identification_information/local_phone_number-label')"/>
+				<alert ref="jr:itext('client_identification_information/local_phone_number-constraintMsg')"/>
+			</input>
+		</group>
+		<input ref="/data/follow_up_date" appearance="ethiopian">
+			<label ref="jr:itext('follow_up_date-label')"/>
+			<alert ref="jr:itext('follow_up_date-constraintMsg')"/>
+		</input>
+		<select ref="/data/referral_diagnosis">
+			<label ref="jr:itext('referral_diagnosis-label')"/>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-antepartum_hemmorage-label')"/>
+				<value>antepartum_hemmorage</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-birth_asphyxia-label')"/>
+				<value>birth_asphyxia</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-deep_vein_thrombosis-label')"/>
+				<value>deep_vein_thrombosis</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-eclampsia-label')"/>
+				<value>eclampsia</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-hypertension-label')"/>
+				<value>hypertension</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-pre-eclampsia-label')"/>
+				<value>pre-eclampsia</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-hypotension-label')"/>
+				<value>hypotension</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-malnutrition-label')"/>
+				<value>malnutrition</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-post_partum_depression-label')"/>
+				<value>post_partum_depression</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-post_partum_hemmorage-label')"/>
+				<value>post_partum_hemmorage</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-post_partum_infection-label')"/>
+				<value>post_partum_infection</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-post_partum_pelvic_infection-label')"/>
+				<value>post_partum_pelvic_infection</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-pre_labor_rupture-label')"/>
+				<value>pre_labor_rupture</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-severe_anemia-label')"/>
+				<value>severe_anemia</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-severe_jaundice-label')"/>
+				<value>severe_jaundice</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-severe_pre_eclampsia-label')"/>
+				<value>severe_pre_eclampsia</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-serious_condition_abruption-label')"/>
+				<value>serious_condition_abruption</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-serious_condition_pulmonary_oedema-label')"/>
+				<value>serious_condition_pulmonary_oedema</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-sti_vaginal_discharge-label')"/>
+				<value>sti_vaginal_discharge</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-urinary_retention-label')"/>
+				<value>urinary_retention</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-urinary_tract_infection-label')"/>
+				<value>urinary_tract_infection</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-very_low_birthweight-label')"/>
+				<value>very_low_birthweight</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-very_severe_disease-label')"/>
+				<value>very_severe_disease</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-other-label')"/>
+				<value>other</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-spontaneous_abortion-label')"/>
+				<value>spontaneous_abortion</value>
+			</item>
+		</select>
+		<input ref="/data/referral_diagnosis_other">
+			<label ref="jr:itext('referral_diagnosis_other-label')"/>
+		</input>
+		<trigger ref="/data/label_direct_delivery_outcome" appearance="minimal">
+			<label ref="jr:itext('label_direct_delivery_outcome-label')"/>
+		</trigger>
+		<select ref="/data/referral_feedback">
+			<label ref="jr:itext('referral_feedback-label')"/>
+			<item>
+				<label ref="jr:itext('referral_feedback-supportive_care-label')"/>
+				<value>supportive_care</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-magnesium_sulphate-label')"/>
+				<value>magnesium_sulphate</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-antibiotics-label')"/>
+				<value>antibiotics</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-antihypertensive-label')"/>
+				<value>antihypertensive</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-birth_attended-label')"/>
+				<value>birth_attended</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-referred_hospital-label')"/>
+				<value>referred_hospital</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-womb_explored-label')"/>
+				<value>womb_explored</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-genital_tract_repaired-label')"/>
+				<value>genital_tract_repaired</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-counselling-label')"/>
+				<value>counselling</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-iron_supplement-label')"/>
+				<value>iron_supplement</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-ergometrin-label')"/>
+				<value>ergometrin</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-oxytocin-label')"/>
+				<value>oxytocin</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-iv_fluids-label')"/>
+				<value>iv_fluids</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-referral_enroute_support-label')"/>
+				<value>referral_enroute_support</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-intramuscular_ampicillin_gentamycin-label')"/>
+				<value>intramuscular_ampicillin_gentamycin</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-treated_low_blood_sugar-label')"/>
+				<value>treated_low_blood_sugar</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-warmed_infant-label')"/>
+				<value>warmed_infant</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-advise_mother_warm_infant-label')"/>
+				<value>advise_mother_warm_infant</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-referred_urgently-label')"/>
+				<value>referred_urgently</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-resuscitation-label')"/>
+				<value>resuscitation</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-ventilated-label')"/>
+				<value>ventilated</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-newborn_care-label')"/>
+				<value>newborn_care</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-monitored_6_hours-label')"/>
+				<value>monitored_6_hours</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-followed_24_hours-label')"/>
+				<value>followed_24_hours</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-kangaroo_care-label')"/>
+				<value>kangaroo_care</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-vitamin_k-label')"/>
+				<value>vitamin_k</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_feedback-other-label')"/>
+				<value>other</value>
+			</item>
+		</select>
+		<input ref="/data/referral_feedback_other">
+			<label ref="jr:itext('referral_feedback_other-label')"/>
+		</input>
+		<select ref="/data/referral_follow_up">
+			<label ref="jr:itext('referral_follow_up-label')"/>
+			<item>
+				<label ref="jr:itext('referral_follow_up-track_medication_compliance-label')"/>
+				<value>track_medication_compliance</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_follow_up-follow_speech_manner-label')"/>
+				<value>follow_speech_manner</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_follow_up-visit_pp_care-label')"/>
+				<value>visit_pp_care</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_follow_up-record_bp_pattern-label')"/>
+				<value>record_bp_pattern</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_follow_up-help_kmc_continue-label')"/>
+				<value>help_kmc_continue</value>
+			</item>
+			<item>
+				<label ref="jr:itext('referral_diagnosis-other-label')"/>
+				<value>other</value>
+			</item>
+		</select>
+		<input ref="/data/referral_follow_up_other">
+			<label ref="jr:itext('referral_feedback_other-label')"/>
+		</input>
+		<group ref="/data/midwife_name">
+			<group>
+				<repeat jr:count="/data/midwife_name/list_length" jr:noAddRemove="true()" nodeset="/data/midwife_name/repeat"/>
+			</group>
+			<select1 ref="/data/midwife_name/choose_element">
+				<label ref="jr:itext('midwife_name/choose_element-label')"/>
+				<itemset nodeset="/data/midwife_name/repeat">
+					<label ref="element"/>
+					<value ref="element_id"/>
+				</itemset>
+			</select1>
+		</group>
+		<group ref="/data/locations"/>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>
