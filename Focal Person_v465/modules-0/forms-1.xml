@@ -1,0 +1,621 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>HEW Visit Observation Checklist</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/75df1fe5da14a069f51548c8e8af9e0c280dc7db" uiVersion="1" version="463" name="HEW Visit Observation Checklist">
+					<hew_name/>
+					<form_label/>
+					<observation_location/>
+					<explain_to_the_hew_what_you_are_doing_is_to_observe_the_way_she_is_providin/>
+					<observed_activity/>
+					<other_activity/>
+					<consultation_label/>
+					<greeting/>
+					<introduction/>
+					<purpose/>
+					<client_questions_concerns/>
+					<counsel_galidraa_orpa/>
+					<personal_interaction/>
+					<protocol_visit/>
+					<paper_referral/>
+					<mobile_referral/>
+					<dignity_respect/>
+					<schedule_follow_up/>
+					<protocol_questions_concerns/>
+					<mobile_app_use/>
+					<score_result_label/>
+					<gaps_label/>
+					<recommendations/>
+					<other_recommendation/>
+					<call_reminder/>
+					<thank_her_reminder/>
+					<scoring>
+						<actual_score/>
+						<total_possible/>
+						<percent_score/>
+						<score_ranking/>
+					</scoring>
+					<end_of_form/>
+				<orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="commcaresession" src="jr://instance/session"/><instance id="casedb" src="jr://instance/casedb"/>
+			<bind nodeset="/data/hew_name"/>
+			<bind nodeset="/data/form_label"/>
+			<bind nodeset="/data/observation_location"/>
+			<bind nodeset="/data/explain_to_the_hew_what_you_are_doing_is_to_observe_the_way_she_is_providin"/>
+			<bind nodeset="/data/observed_activity" required="true()"/>
+			<bind nodeset="/data/other_activity" type="xsd:string" relevant="/data/observed_activity = 'other'" required="true()"/>
+			<bind nodeset="/data/consultation_label"/>
+			<bind nodeset="/data/greeting" required="true()"/>
+			<bind nodeset="/data/introduction" required="true()"/>
+			<bind nodeset="/data/purpose" required="true()"/>
+			<bind nodeset="/data/client_questions_concerns" required="true()"/>
+			<bind nodeset="/data/counsel_galidraa_orpa" required="true()"/>
+			<bind nodeset="/data/personal_interaction" relevant="/data/observed_activity != 'other'" required="true()"/>
+			<bind nodeset="/data/protocol_visit" relevant="/data/observed_activity != 'other'" required="true()"/>
+			<bind nodeset="/data/paper_referral" required="true()"/>
+			<bind nodeset="/data/mobile_referral" relevant="/data/observed_activity != 'other'" required="true()"/>
+			<bind nodeset="/data/dignity_respect" required="true()"/>
+			<bind nodeset="/data/schedule_follow_up" required="true()"/>
+			<bind nodeset="/data/protocol_questions_concerns" required="true()"/>
+			<bind nodeset="/data/mobile_app_use" relevant="/data/observed_activity != 'other'" required="true()"/>
+			<bind nodeset="/data/score_result_label"/>
+			<bind nodeset="/data/gaps_label"/>
+			<bind nodeset="/data/recommendations" required="true()"/>
+			<bind nodeset="/data/other_recommendation" type="xsd:string" relevant="selected(/data/recommendations, 'other')"/>
+			<bind nodeset="/data/call_reminder" required="true()"/>
+			<bind nodeset="/data/thank_her_reminder" required="true()"/>
+			<bind nodeset="/data/scoring"/>
+			<bind nodeset="/data/scoring/actual_score" calculate="/data/greeting + /data/introduction + /data/purpose + /data/client_questions_concerns + /data/counsel_galidraa_orpa + /data/personal_interaction + /data/protocol_visit + /data/mobile_referral + /data/dignity_respect + /data/protocol_questions_concerns + if(/data/paper_referral = 99, 0, /data/paper_referral) + if(/data/schedule_follow_up = 99, 0, /data/schedule_follow_up) + if(/data/mobile_app_use = 'excellent', 2, if(/data/mobile_app_use = 'average', 1, 0))"/>
+			<bind nodeset="/data/scoring/total_possible" calculate="if(/data/paper_referral != 99, 1, 0) + if(/data/schedule_follow_up != 99, 1, 0) + 12"/>
+			<bind nodeset="/data/scoring/percent_score" calculate="(int((/data/scoring/actual_score div /data/scoring/total_possible) * 100) div 100) * 100"/>
+			<bind nodeset="/data/scoring/score_ranking" relevant="/data/scoring/percent_score != ''" calculate="if(/data/scoring/percent_score &gt;= 90, &quot;Very Good!&quot;, if((/data/scoring/percent_score &lt; 90 and /data/scoring/percent_score &gt;= 80), &quot;Good&quot;, if((/data/scoring/percent_score &lt; 80 and /data/scoring/percent_score &gt;= 70), &quot;Average&quot;, if((/data/scoring/percent_score &lt; 70 and /data/scoring/percent_score &gt;= 60), &quot;Poor&quot;, &quot;Very Poor&quot;))))"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="form_label-label">
+						<value>This form is used to follow individual health extension workers during health post and household visits to check the quality of the services they are offering to clients.</value>
+					</text>
+					<text id="observation_location-label">
+						<value>Where is the observation taking place?</value>
+					</text>
+					<text id="observation_location-health_post-label">
+						<value>Health Post</value>
+					</text>
+					<text id="observation_location-household-label">
+						<value>Household</value>
+					</text>
+					<text id="explain_to_the_hew_what_you_are_doing_is_to_observe_the_way_she_is_providin-label">
+						<value>Explain to the HEW what you are doing is to observe the way she is providing services to her clients and you will be helping her to do her job better.</value>
+					</text>
+					<text id="observed_activity-label">
+						<value>What type of HEW activity are you observing?</value>
+					</text>
+					<text id="observed_activity-anc_registration-label">
+						<value>ANC Registration</value>
+					</text>
+					<text id="observed_activity-anc_checkup-label">
+						<value>ANC Checkup</value>
+					</text>
+					<text id="observed_activity-pnc_visit-label">
+						<value>PNC Visit</value>
+					</text>
+					<text id="observed_activity-other-label">
+						<value>Other</value>
+					</text>
+					<text id="other_activity-label">
+						<value>Specify Other:</value>
+					</text>
+					<text id="consultation_label-label">
+						<value>**Let the HEW perform the consultation and do not use this application**
+
+When the HEW is finished with the visit you can continue filling out this form.</value>
+						<value form="markdown">**Let the HEW perform the consultation and do not use this application**
+
+When the HEW is finished with the visit you can continue filling out this form.</value>
+					</text>
+					<text id="greeting-label">
+						<value>Did the HEW greet the client warmly and with ease?</value>
+					</text>
+					<text id="introduction-label">
+						<value>Did the HEW introduce herself and the supervisor?</value>
+					</text>
+					<text id="purpose-label">
+						<value>Did the HEW explain the purpose of the visit or consult?</value>
+					</text>
+					<text id="client_questions_concerns-label">
+						<value>Did the HEW ask the client if they had any questions or concerns throughout the visit/consult?</value>
+					</text>
+					<text id="client_questions_concerns-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="client_questions_concerns-0-label">
+						<value>No</value>
+					</text>
+					<text id="counsel_galidraa_orpa-label">
+						<value>Did the HEW counsel the client using the GALIDRAA /ORPA method?</value>
+					</text>
+					<text id="personal_interaction-label">
+						<value>Did the HEW maintain a personal discussion and human interaction while using the application for guidance?</value>
+					</text>
+					<text id="protocol_visit-label">
+						<value>Did the HEW follow all the steps in the protocol for the visit using the application?</value>
+					</text>
+					<text id="paper_referral-label">
+						<value>Did the HEW refer the client to services at the health center and used the paper referral form to document the referral?</value>
+					</text>
+					<text id="paper_referral-99-label">
+						<value>Not Applicable</value>
+					</text>
+					<text id="mobile_referral-label">
+						<value>Did the HEW also use the mobile application to document the referral to the health center?</value>
+					</text>
+					<text id="dignity_respect-label">
+						<value>Did the HEW treat the client with dignity and respect related to the clients choices and rights throughout the visit?</value>
+					</text>
+					<text id="schedule_follow_up-label">
+						<value>Did the HEW schedule a follow up visit and inform the client of the date?</value>
+					</text>
+					<text id="protocol_questions_concerns-label">
+						<value>Did the HEWs accurately follow the protocol to respond to the clients questions or concerns?</value>
+					</text>
+					<text id="mobile_app_use-label">
+						<value>Overall, how well did the HEW utilize the mobile application during the consult?</value>
+					</text>
+					<text id="mobile_app_use-poor-label">
+						<value>Poor: Forgot to use the mobile application or had serious issues in using the mobile application during the visit</value>
+					</text>
+					<text id="mobile_app_use-average-label">
+						<value>Average, needs improvement: had some minor issues using the mobile application, but was successful in using the phone during the visit</value>
+					</text>
+					<text id="mobile_app_use-excellent-label">
+						<value>Excellent: used the mobile application with ease and no problems during the visit</value>
+					</text>
+					<text id="score_result_label-label">
+						<value><output value="/data/hew_name"/>   scored <output value="/data/scoring/actual_score"/> out of <output value="/data/scoring/total_possible"/> possible points, a percentage of <output value="/data/scoring/percent_score"/>%.
+
+This result is <output value="/data/scoring/score_ranking"/>.</value>
+					</text>
+					<text id="gaps_label-label">
+						<value>Address any observed gaps with HEW and reinforce best practices.</value>
+					</text>
+					<text id="recommendations-label">
+						<value>Did you provide any of the following recommendations for improvement during the visit?</value>
+					</text>
+					<text id="recommendations-respect_dignity-label">
+						<value>Improve how HEW interacts with the client in terms of respect and dignity</value>
+					</text>
+					<text id="recommendations-greeting-label">
+						<value>Improve how HEW greets the client</value>
+					</text>
+					<text id="recommendations-counselling-label">
+						<value>Improve HEW counselling methods</value>
+					</text>
+					<text id="recommendations-question_response-label">
+						<value>Improve HEW's response to client questions and concerns</value>
+					</text>
+					<text id="recommendations-clinical_skills-label">
+						<value>Improve HEW clinical skills or knowledge</value>
+					</text>
+					<text id="recommendations-visit_referral_documentation-label">
+						<value>Improve HEW visit and referral documentation</value>
+					</text>
+					<text id="other_recommendation-label">
+						<value>Specify other:</value>
+					</text>
+					<text id="call_reminder-label">
+						<value>Remind the HEW that they can call you if there are major questions or concerns. Remind the HEWs that they can call you for free.</value>
+					</text>
+					<text id="call_reminder-ok-label">
+						<value>OK</value>
+					</text>
+					<text id="thank_her_reminder-label">
+						<value>Thank the HEWs for her work and let her know that you will be following up as planned to review the progress on the recommendations made during the visit.</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="form_label-label">
+						<value>&#4845;&#4613; &#4942;&#4653;&#4637; &#4840;&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669; &#4707;&#4616;&#4633;&#4843;&#4814;&#4733; &#4900;&#4755; &#4780;&#4619; &#4808;&#4845;&#4637; &#4708;&#4725; &#4616;&#4708;&#4725; &#4873;&#4709;&#4765;&#4725; &#4704;&#4634;&#4843;&#4848;&#4653;&#4873;&#4704;&#4725; &#4672;&#4757; &#4616;&#4773;&#4755;&#4725;&#4637; &#4616;&#4621;&#4869;&#4637; &#4840;&#4634;&#4656;&#4897;&#4725;&#4757; &#4840;&#4900;&#4755; &#4768;&#4872;&#4621;&#4877;&#4622;&#4725; &#4901;&#4651;&#4725; &#4616;&#4632;&#4678;&#4899;&#4896;&#4653; &#4840;&#4634;&#4648;&#4851; &#4732;&#4781;&#4618;&#4661;&#4725; &#4752;&#4813;&#4961;&#4961;</value>
+					</text>
+					<text id="observation_location-label">
+						<value>&#4637;&#4621;&#4776;&#4723;&#4813; &#4840;&#4634;&#4779;&#4612;&#4848;&#4813; &#4840;&#4725; &#4710;&#4723; &#4752;&#4813;&#4961;&#4961;</value>
+					</text>
+					<text id="observation_location-health_post-label">
+						<value>&#4900;&#4755; &#4780;&#4619;</value>
+					</text>
+					<text id="observation_location-household-label">
+						<value>&#4708;&#4725;</value>
+					</text>
+					<text id="explain_to_the_hew_what_you_are_doing_is_to_observe_the_way_she_is_providin-label">
+						<value>&#4704;&#4632;&#4864;&#4632;&#4650;&#4843; &#4840;&#4826;&#4613; &#4637;&#4621;&#4776;&#4723; &#4819;&#4619;&#4635; &#4637;&#4757; &#4773;&#4757;&#4848;&#4614;&#4752; &#4616;&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4632;&#4877;&#4616;&#4933;&#4961;&#4961;&#4845;&#4613;&#4637; &#4840;&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4616;&#4773;&#4755;&#4725; &#4808;&#4845;&#4637; &#4616;&#4621;&#4869; &#4840;&#4900;&#4755; &#4768;&#4872;&#4621;&#4877;&#4622;&#4725; &#4773;&#4757;&#4852;&#4725; &#4773;&#4757;&#4848;&#4637;&#4725;&#4656;&#4901; &#4616;&#4632;&#4632;&#4621;&#4776;&#4725;&#4755; &#4704;&#4826;&#4843;&#4813;&#4637; &#4633;&#4843;&#4810; &#4853;&#4875;&#4941; &#4616;&#4635;&#4853;&#4648;&#4877; &#4752;&#4813;&#4961;&#4961;</value>
+					</text>
+					<text id="observed_activity-label">
+						<value>&#4704;&#4637;&#4776;&#4723;&#4813; &#4632;&#4656;&#4648;&#4725; &#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4637;&#4757; &#4661;&#4651; &#4773;&#4840;&#4656;&#4651;&#4733; &#4752;&#4813;</value>
+					</text>
+					<text id="observed_activity-anc_registration-label">
+						<value>&#4840;&#4677;&#4853;&#4632;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; &#4637;&#4829;&#4872;&#4707;</value>
+					</text>
+					<text id="observed_activity-anc_checkup-label">
+						<value>&#4840;&#4677;&#4853;&#4632;-&#4808;&#4618;&#4853; &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; &#4635;&#4899;&#4650;&#4843;</value>
+					</text>
+					<text id="observed_activity-pnc_visit-label">
+						<value>&#4840;&#4677;&#4853;&#4632;-&#4808;&#4618;&#4853;  &#4773;&#4757;&#4781;&#4709;&#4779;&#4708; &#4635;&#4899;&#4650;&#4843;</value>
+					</text>
+					<text id="observed_activity-other-label">
+						<value>&#4620;&#4622;&#4733;</value>
+					</text>
+					<text id="other_activity-label">
+						<value>&#4620;&#4619; &#4776;&#4614;&#4752; &#4845;&#4896;&#4672;&#4661;</value>
+					</text>
+					<text id="consultation_label-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4840;&#4864;&#4632;&#4648;&#4733;&#4813;&#4757; &#4840;&#4637;&#4781;&#4653; &#4768;&#4872;&#4621;&#4877;&#4622;&#4725; &#4773;&#4661;&#4776;&#4637;&#4725;&#4904;&#4653;&#4661; &#4853;&#4648;&#4661; &#4896;&#4709;&#4677;/&#4674;&#4961;&#4961; &#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4661;&#4651;&#4811;&#4757; &#4776;&#4904;&#4648;&#4656;&#4733; &#4704;&#4739;&#4619; &#4845;&#4613; &#4942;&#4653;&#4637; &#4632;&#4638;&#4619;&#4725; &#4768;&#4616;&#4704;&#4725;&#4961;&#4961;</value>
+						<value form="markdown">&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4840;&#4864;&#4632;&#4648;&#4733;&#4813;&#4757; &#4840;&#4637;&#4781;&#4653; &#4768;&#4872;&#4621;&#4877;&#4622;&#4725; &#4773;&#4661;&#4776;&#4637;&#4725;&#4904;&#4653;&#4661; &#4853;&#4648;&#4661; &#4896;&#4709;&#4677;/&#4674;&#4961;&#4961; &#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4661;&#4651;&#4811;&#4757; &#4776;&#4904;&#4648;&#4656;&#4733; &#4704;&#4739;&#4619; &#4845;&#4613; &#4942;&#4653;&#4637; &#4632;&#4638;&#4619;&#4725; &#4768;&#4616;&#4704;&#4725;&#4961;&#4961;</value>
+					</text>
+					<text id="greeting-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4616;&#4723;&#4779;&#4634;&#4811; &#4704;&#4720;&#4632;&#4731;&#4728;&#4755; &#4901;&#4649; &#4704;&#4614;&#4752; &#4609;&#4756;&#4723; &#4656;&#4619;&#4637;&#4723; &#4768;&#4677;&#4653;&#4707;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="introduction-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4773;&#4663;&#4757;&#4755; &#4657;&#4944;&#4653;&#4715;&#4845;&#4824;&#4649;&#4757;/&#4655;&#4757; &#4768;&#4661;&#4720;&#4811;&#4813;&#4675;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="purpose-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4616;&#4723;&#4779;&#4634;&#4811; &#4840;&#4826;&#4613; &#4873;&#4709;&#4765;&#4725; &#4808;&#4845;&#4637; &#4637;&#4781;&#4653; &#4768;&#4872;&#4621;&#4877;&#4622;&#4725; &#4768;&#4619;&#4635;&#4813;&#4757; &#4720;&#4755;&#4877;&#4651;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="client_questions_concerns-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811;&#4963; &#4723;&#4779;&#4634;&#4811; &#4707;&#4848;&#4648;&#4872;&#4733;&#4813; &#4840;&#4873;&#4709;&#4765;&#4725; &#4808;&#4845;&#4637; &#4840;&#4637;&#4781;&#4653; &#4768;&#4872;&#4621;&#4877;&#4622;&#4725; &#4875;&#4653; &#4704;&#4720;&#4843;&#4843;&#4824; &#4632;&#4621;&#4777; &#4843;&#4619;&#4725;&#4757; &#4901;&#4843;&#4676; &#4773;&#4757;&#4853;&#4725;&#4896;&#4845;&#4677; &#4768;&#4853;&#4653;&#4875;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="client_questions_concerns-1-label">
+						<value>&#4768;&#4814;</value>
+					</text>
+					<text id="client_questions_concerns-0-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value>
+					</text>
+					<text id="counsel_galidraa_orpa-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4723;&#4779;&#4634;&#4811;&#4757; &#4661;&#4725;&#4632;&#4781;&#4653; &#4875;&#4618;&#4853;&#4651; &#4773;&#4755; &#4774;&#4653;&#4947; &#4840;&#4637;&#4781;&#4653; &#4768;&#4656;&#4899;&#4901; &#4824;&#4852;&#4757; &#4808;&#4845;&#4637; &#4661;&#4653;&#4819;&#4725; &#4720;&#4896;&#4677;&#4635; &#4752;&#4704;&#4653;&#4961;&#4961;</value>
+					</text>
+					<text id="personal_interaction-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4638;&#4707;&#4845;&#4621; &#4768;&#4949;&#4618;&#4780;&#4669;&#4753;&#4757; &#4773;&#4757;&#4848; &#4632;&#4632;&#4650;&#4843; &#4808;&#4845;&#4637; &#4632;&#4776;&#4723;&#4720;&#4843; &#4704;&#4632;&#4896;&#4672;&#4637; &#4776;&#4723;&#4779;&#4634;&#4811; &#4875;&#4653; &#4813;&#4845;&#4845;&#4725; &#4768;&#4853;&#4653;&#4875; &#4752;&#4704;&#4653;&#4961;&#4961;</value>
+					</text>
+					<text id="protocol_visit-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4873;&#4709;&#4765;&#4721;&#4757; &#4661;&#4723;&#4779;&#4610;&#4853; &#4808;&#4845;&#4637; &#4723;&#4779;&#4634;&#4811;&#4757; &#4661;&#4725;&#4632;&#4781;&#4653; &#4638;&#4707;&#4845;&#4621; &#4768;&#4949;&#4618;&#4780;&#4669;&#4753; &#4619;&#4845; &#4843;&#4616;&#4813;&#4757; &#4632;&#4632;&#4650;&#4843; &#4808;&#4845;&#4637; &#4632;&#4776;&#4723;&#4720;&#4843; &#4824;&#4852; &#4704;&#4725;&#4781;&#4781;&#4621; &#4720;&#4776;&#4725;&#4619; &#4768;&#4853;&#4653;&#4875;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="paper_referral-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4723;&#4779;&#4634;&#4811; &#4840;&#4720;&#4667;&#4616; &#4900;&#4755; &#4768;&#4872;&#4621;&#4877;&#4622;&#4725; &#4773;&#4757;&#4853;&#4723;&#4872;&#4765; &#4808;&#4848; &#4900;&#4755; &#4899;&#4706;&#4843; &#4621;&#4779;&#4616;&#4733;&#4961;&#4961; &#4773;&#4757;&#4850;&#4609;&#4637; &#4768;&#4661;&#4936;&#4619;&#4874;&#4813;&#4757; &#4840;&#4650;&#4936;&#4651; &#4632;&#4648;&#4867; &#4704;&#4650;&#4936;&#4651; &#4808;&#4648;&#4672;&#4721; &#4619;&#4845; &#4768;&#4661;&#4941;&#4651;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="paper_referral-99-label">
+						<value>&#4720;&#4877;&#4707;&#4651;&#4810; &#4768;&#4845;&#4848;&#4616;&#4637;&#4961;&#4961;</value>
+					</text>
+					<text id="mobile_referral-label">
+						<value>&#4704;&#4720;&#4904;&#4635;&#4650;&#4637;&#4963; &#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4768;&#4661;&#4936;&#4619;&#4874;&#4813;&#4757; &#4840;&#4650;&#4936;&#4651; &#4632;&#4648;&#4867; &#4616;&#4632;&#4632;&#4829;&#4872;&#4709; &#4704;&#4638;&#4707;&#4845;&#4621; &#4768;&#4949;&#4618;&#4780;&#4669;&#4757; &#4619;&#4845; &#4843;&#4616;&#4813;&#4757; &#4840;&#4650;&#4936;&#4651;&#4621; &#4942;&#4653;&#4637; &#4720;&#4896;&#4677;&#4635;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="dignity_respect-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4840;&#4723;&#4779;&#4634;&#4811;&#4757; &#4941;&#4619;&#4878;&#4725;&#4755; &#4637;&#4653;&#4907; &#4677;&#4853;&#4634;&#4843; &#4704;&#4632;&#4661;&#4896;&#4725; &#4840;&#4864;&#4632;&#4648;&#4733;&#4813;&#4757; &#4873;&#4709;&#4765;&#4725; &#4773;&#4661;&#4776;&#4637;&#4725;&#4904;&#4653;&#4661; &#4853;&#4648;&#4661; &#4704;&#4635;&#4781;&#4704;&#4653;&#4755; &#4768;&#4781;&#4709;&#4654;&#4725; &#4704;&#4720;&#4638;&#4619;&#4725; &#4632;&#4757;&#4872;&#4853; &#4768;&#4776;&#4755;&#4813;&#4755;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="schedule_follow_up-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4672;&#4899;&#4845; &#4840;&#4873;&#4709;&#4765;&#4725; &#4672;&#4896;&#4654; &#4672;&#4757; &#4845;&#4827;&#4616;&#4733;&#4961;&#4961; &#4840;&#4672;&#4896;&#4654; &#4672;&#4753;&#4757;&#4637; &#4616;&#4723;&#4779;&#4634;&#4811; &#4768;&#4659;&#4813;&#4675;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="protocol_questions_concerns-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4840;&#4723;&#4779;&#4634;&#4811;&#4757; &#4901;&#4843;&#4678;&#4814;&#4733; &#4704;&#4725;&#4781;&#4781;&#4621; &#4704;&#4632;&#4648;&#4851;&#4725; &#4773;&#4755; &#4632;&#4632;&#4650;&#4843;&#4813;&#4757; &#4704;&#4632;&#4776;&#4720;&#4621; &#4632;&#4621;&#4659;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="mobile_app_use-label">
+						<value>&#4704;&#4768;&#4896;&#4675;&#4619;&#4845;&#4963; &#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4723;&#4779;&#4634;&#4811;&#4757; &#4704;&#4637;&#4725;&#4632;&#4781;&#4653;&#4704;&#4725; &#4874;&#4828; &#4840;&#4638;&#4707;&#4845;&#4621; &#4768;&#4949;&#4618;&#4780;&#4669;&#4757; &#4768;&#4896;&#4675;&#4672;&#4639; &#4773;&#4757;&#4852;&#4725; &#4752;&#4704;&#4653;&#4961;&#4961;</value>
+					</text>
+					<text id="mobile_app_use-poor-label">
+						<value>&#4848;&#4779;&#4635;:  &#4638;&#4707;&#4845;&#4621; &#4768;&#4949;&#4618;&#4780;&#4669;&#4753;&#4757; &#4768;&#4896;&#4675;&#4672;&#4637; &#4632;&#4653;&#4659;&#4725; &#4808;&#4845;&#4637; &#4704;&#4873;&#4709;&#4765;&#4725; &#4808;&#4677;&#4725; &#4638;&#4707;&#4845;&#4621; &#4768;&#4949;&#4618;&#4780;&#4669;&#4753;&#4757; &#4661;&#4725;&#4896;&#4672;&#4637; &#4776;&#4941;&#4720;&#4763; &#4733;&#4877;&#4653; &#4768;&#4875;&#4901;&#4639;&#4723;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="mobile_app_use-average-label">
+						<value>&#4704;&#4768;&#4635;&#4779;&#4765;, &#4632;&#4667;&#4667;&#4621; &#4845;&#4936;&#4621;&#4875;&#4621;: &#4840;&#4638;&#4707;&#4845;&#4621; &#4768;&#4949;&#4618;&#4780;&#4669;&#4757; &#4768;&#4896;&#4675;&#4672;&#4637; &#4619;&#4845; &#4725;&#4757;&#4669; &#4733;&#4877;&#4654;&#4733; &#4768;&#4617;&#4707;&#4725;, &#4752;&#4872;&#4653; &#4877;&#4757; &#4704;&#4873;&#4709;&#4765;&#4725; &#4808;&#4677;&#4725; &#4638;&#4707;&#4845;&#4621; &#4768;&#4949;&#4618;&#4780;&#4669;&#4753;&#4757; &#4704;&#4901;&#4649; &#4609;&#4756;&#4723; &#4720;&#4896;&#4677;&#4635;&#4704;&#4723;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="mobile_app_use-excellent-label">
+						<value>&#4773;&#4869;&#4877; &#4704;&#4899;&#4637; &#4901;&#4649;: &#4638;&#4707;&#4845;&#4621; &#4768;&#4949;&#4618;&#4780;&#4669;&#4753;&#4757; &#4704;&#4672;&#4619;&#4617; &#4720;&#4896;&#4677;&#4635;&#4704;&#4723;&#4616;&#4733; &#4773;&#4757;&#4850;&#4609;&#4637; &#4704;&#4873;&#4709;&#4765;&#4725; &#4808;&#4677;&#4725; &#4637;&#4757;&#4637; &#4733;&#4877;&#4653; &#4768;&#4619;&#4875;&#4896;&#4635;&#4725;&#4637;&#4961;&#4961;</value>
+					</text>
+					<text id="score_result_label-label">
+						<value><output value="/data/hew_name"/>   scored <output value="/data/scoring/actual_score"/> out of <output value="/data/scoring/total_possible"/> possible points, a percentage of <output value="/data/scoring/percent_score"/>%.</value>
+					</text>
+					<text id="gaps_label-label">
+						<value>&#4704;&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4619;&#4845; &#4840;&#4723;&#4841; &#4635;&#4757;&#4763;&#4813;&#4637; &#4768;&#4845;&#4752;&#4725; &#4781;&#4941;&#4720;&#4726;&#4733; &#4773;&#4755; &#4901;&#4649; &#4720;&#4638;&#4781;&#4654;&#4814;&#4733; &#4635;&#4873;&#4619;&#4725; &#4808;&#4845;&#4637; &#4635;&#4661;&#4939;&#4939;&#4725;&#4961;&#4961;</value>
+					</text>
+					<text id="recommendations-label">
+						<value>&#4704;&#4873;&#4709;&#4765;&#4725; &#4808;&#4677;&#4725; &#4776;&#4826;&#4613; &#4704;&#4723;&#4733; &#4704;&#4720;&#4824;&#4648;&#4824;&#4649; &#4752;&#4872;&#4654;&#4733; &#4619;&#4845; &#4616;&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4664;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4633;&#4843;&#4810; &#4635;&#4667;&#4667;&#4843; &#4773;&#4757;&#4853;&#4723;&#4848;&#4653; &#4720;&#4632;&#4781;&#4651;&#4616;&#4733;&#4961;&#4961;</value>
+					</text>
+					<text id="recommendations-respect_dignity-label">
+						<value>&#4840;&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4664;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4776;&#4723;&#4779;&#4634; &#4875;&#4653; &#4704;&#4637;&#4723;&#4808;&#4651;&#4704;&#4725; &#4874;&#4828; &#4768;&#4781;&#4709;&#4654;&#4725; &#4704;&#4632;&#4661;&#4896;&#4725;&#4963; &#4704;&#4632;&#4776;&#4707;&#4704;&#4653;  &#4768;&#4656;&#4899;&#4901; &#4619;&#4845; &#4773;&#4757;&#4853;&#4723;&#4667;&#4669;&#4621; &#4637;&#4781;&#4653; &#4720;&#4656;&#4727;&#4723;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="recommendations-greeting-label">
+						<value>&#4840;&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4664;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4616;&#4723;&#4779;&#4634; &#4656;&#4619;&#4637;&#4723;  &#4768;&#4656;&#4899;&#4901; &#4619;&#4845; &#4773;&#4757;&#4853;&#4723;&#4667;&#4669;&#4621; &#4637;&#4781;&#4653; &#4720;&#4656;&#4727;&#4723;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="recommendations-counselling-label">
+						<value>&#4840;&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4664;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4616;&#4723;&#4779;&#4634; &#4840;&#4637;&#4781;&#4653; &#4768;&#4872;&#4621;&#4877;&#4622;&#4725; &#4768;&#4656;&#4899;&#4901; &#4619;&#4845; &#4773;&#4757;&#4853;&#4723;&#4667;&#4669;&#4621; &#4637;&#4781;&#4653; &#4720;&#4656;&#4727;&#4723;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="recommendations-question_response-label">
+						<value>&#4840;&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4664;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4840;&#4723;&#4779;&#4634; &#4901;&#4843;&#4676; &#4773;&#4755; &#4845;&#4877;&#4707;&#4765; &#4632;&#4621;&#4661; &#4768;&#4656;&#4899;&#4901; &#4619;&#4845; &#4773;&#4757;&#4853;&#4723;&#4667;&#4669;&#4621; &#4637;&#4781;&#4653; &#4720;&#4656;&#4727;&#4723;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="recommendations-clinical_skills-label">
+						<value>&#4840;&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4664;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4843;&#4616;&#4707;&#4725;&#4757; &#4840;&#4781;&#4618;&#4754;&#4779;&#4621; &#4781;&#4613;&#4622;&#4725; &#4808;&#4845;&#4637; &#4840;&#4821;&#4813;&#4672;&#4725; &#4781;&#4941;&#4720;&#4725; &#4619;&#4845; &#4773;&#4757;&#4853;&#4723;&#4667;&#4669;&#4621; &#4637;&#4781;&#4653; &#4720;&#4656;&#4727;&#4723;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="recommendations-visit_referral_documentation-label">
+						<value>&#4840;&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4664;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4843;&#4616;&#4707;&#4725;&#4757;  &#4840;&#4781;&#4618;&#4754;&#4779;&#4621; &#4781;&#4613;&#4622;&#4725; &#4808;&#4845;&#4637; &#4840;&#4821;&#4813;&#4672;&#4725; &#4781;&#4941;&#4720;&#4725; &#4619;&#4845; &#4773;&#4757;&#4853;&#4723;&#4667;&#4669;&#4621; &#4637;&#4781;&#4653; &#4720;&#4656;&#4727;&#4723;&#4621;&#4961;&#4961;</value>
+					</text>
+					<text id="other_recommendation-label">
+						<value>&#4620;&#4619; &#4840;&#4635;&#4667;&#4667;&#4843; &#4608;&#4659;&#4710;&#4733; &#4779;&#4617; &#4845;&#4896;&#4672;&#4661;</value>
+					</text>
+					<text id="call_reminder-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4901;&#4843;&#4676; &#4779;&#4619;&#4725; &#4808;&#4845;&#4637; &#4853;&#4875;&#4941; &#4776;&#4936;&#4616;&#4872;&#4733; &#4657;&#4944;&#4653;&#4715;&#4845;&#4824;&#4649; &#4875;&#4653; &#4704;&#4752;&#4931; &#4661;&#4621;&#4781; &#4673;&#4901;&#4653; &#4632;&#4848;&#4808;&#4621; &#4773;&#4757;&#4848;&#4637;&#4725;&#4733; &#4635;&#4661;&#4723;&#4808;&#4661;&#4961;&#4961;</value>
+					</text>
+					<text id="call_reminder-ok-label">
+						<value>&#4773;&#4666;</value>
+					</text>
+					<text id="thank_her_reminder-label">
+						<value>&#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4635;&#4632;&#4661;&#4872;&#4757;&#4961;&#4961; &#4704;&#4672;&#4899;&#4845;&#4637; &#4637;&#4621;&#4776;&#4725; &#4874;&#4828; &#4900;&#4755; &#4772;&#4781;&#4661;&#4724;&#4757;&#4669;&#4757; &#4707;&#4616;&#4633;&#4843;&#4811; &#4704;&#4720;&#4656;&#4899;&#4725; &#4768;&#4661;&#4720;&#4843;&#4840;&#4725; &#4632;&#4656;&#4648;&#4725; &#4781;&#4941;&#4720;&#4726;&#4733;&#4757; &#4704;&#4635;&#4661;&#4720;&#4779;&#4776;&#4621; &#4661;&#4651;&#4814;&#4733;&#4757; &#4632;&#4661;&#4651;&#4725; &#4773;&#4757;&#4851;&#4616;&#4707;&#4725;&#4755; &#4704;&#4826;&#4613; &#4619;&#4845;&#4637; &#4781;&#4725;&#4725;&#4621; &#4773;&#4757;&#4848;&#4634;&#4848;&#4648;&#4872;&#4877;&#4707;&#4725; &#4632;&#4755;&#4872;&#4653;&#4961;&#4961;</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961; 
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/hew_name" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_hew_supervision_0]/full_name"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<trigger ref="/data/form_label" appearance="minimal">
+			<label ref="jr:itext('form_label-label')"/>
+		</trigger>
+		<select1 ref="/data/observation_location">
+			<label ref="jr:itext('observation_location-label')"/>
+			<item>
+				<label ref="jr:itext('observation_location-health_post-label')"/>
+				<value>health_post</value>
+			</item>
+			<item>
+				<label ref="jr:itext('observation_location-household-label')"/>
+				<value>household</value>
+			</item>
+		</select1>
+		<trigger ref="/data/explain_to_the_hew_what_you_are_doing_is_to_observe_the_way_she_is_providin" appearance="minimal">
+			<label ref="jr:itext('explain_to_the_hew_what_you_are_doing_is_to_observe_the_way_she_is_providin-label')"/>
+		</trigger>
+		<select1 ref="/data/observed_activity">
+			<label ref="jr:itext('observed_activity-label')"/>
+			<item>
+				<label ref="jr:itext('observed_activity-anc_registration-label')"/>
+				<value>anc_registration</value>
+			</item>
+			<item>
+				<label ref="jr:itext('observed_activity-anc_checkup-label')"/>
+				<value>anc_checkup</value>
+			</item>
+			<item>
+				<label ref="jr:itext('observed_activity-pnc_visit-label')"/>
+				<value>pnc_visit</value>
+			</item>
+			<item>
+				<label ref="jr:itext('observed_activity-other-label')"/>
+				<value>other</value>
+			</item>
+		</select1>
+		<input ref="/data/other_activity">
+			<label ref="jr:itext('other_activity-label')"/>
+		</input>
+		<trigger ref="/data/consultation_label" appearance="minimal">
+			<label ref="jr:itext('consultation_label-label')"/>
+		</trigger>
+		<select1 ref="/data/greeting">
+			<label ref="jr:itext('greeting-label')"/>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-1-label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-0-label')"/>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 ref="/data/introduction">
+			<label ref="jr:itext('introduction-label')"/>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-1-label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-0-label')"/>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 ref="/data/purpose">
+			<label ref="jr:itext('purpose-label')"/>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-1-label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-0-label')"/>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 ref="/data/client_questions_concerns">
+			<label ref="jr:itext('client_questions_concerns-label')"/>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-1-label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-0-label')"/>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 ref="/data/counsel_galidraa_orpa">
+			<label ref="jr:itext('counsel_galidraa_orpa-label')"/>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-1-label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-0-label')"/>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 ref="/data/personal_interaction">
+			<label ref="jr:itext('personal_interaction-label')"/>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-1-label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-0-label')"/>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 ref="/data/protocol_visit">
+			<label ref="jr:itext('protocol_visit-label')"/>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-1-label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-0-label')"/>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 ref="/data/paper_referral">
+			<label ref="jr:itext('paper_referral-label')"/>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-1-label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-0-label')"/>
+				<value>0</value>
+			</item>
+			<item>
+				<label ref="jr:itext('paper_referral-99-label')"/>
+				<value>99</value>
+			</item>
+		</select1>
+		<select1 ref="/data/mobile_referral">
+			<label ref="jr:itext('mobile_referral-label')"/>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-1-label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-0-label')"/>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 ref="/data/dignity_respect">
+			<label ref="jr:itext('dignity_respect-label')"/>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-1-label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-0-label')"/>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 ref="/data/schedule_follow_up">
+			<label ref="jr:itext('schedule_follow_up-label')"/>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-1-label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-0-label')"/>
+				<value>0</value>
+			</item>
+			<item>
+				<label ref="jr:itext('paper_referral-99-label')"/>
+				<value>99</value>
+			</item>
+		</select1>
+		<select1 ref="/data/protocol_questions_concerns">
+			<label ref="jr:itext('protocol_questions_concerns-label')"/>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-1-label')"/>
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('client_questions_concerns-0-label')"/>
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 ref="/data/mobile_app_use">
+			<label ref="jr:itext('mobile_app_use-label')"/>
+			<item>
+				<label ref="jr:itext('mobile_app_use-poor-label')"/>
+				<value>poor</value>
+			</item>
+			<item>
+				<label ref="jr:itext('mobile_app_use-average-label')"/>
+				<value>average</value>
+			</item>
+			<item>
+				<label ref="jr:itext('mobile_app_use-excellent-label')"/>
+				<value>excellent</value>
+			</item>
+		</select1>
+		<trigger ref="/data/score_result_label" appearance="minimal">
+			<label ref="jr:itext('score_result_label-label')"/>
+		</trigger>
+		<trigger ref="/data/gaps_label" appearance="minimal">
+			<label ref="jr:itext('gaps_label-label')"/>
+		</trigger>
+		<select ref="/data/recommendations">
+			<label ref="jr:itext('recommendations-label')"/>
+			<item>
+				<label ref="jr:itext('recommendations-respect_dignity-label')"/>
+				<value>respect_dignity</value>
+			</item>
+			<item>
+				<label ref="jr:itext('recommendations-greeting-label')"/>
+				<value>greeting</value>
+			</item>
+			<item>
+				<label ref="jr:itext('recommendations-counselling-label')"/>
+				<value>counselling</value>
+			</item>
+			<item>
+				<label ref="jr:itext('recommendations-question_response-label')"/>
+				<value>question_response</value>
+			</item>
+			<item>
+				<label ref="jr:itext('recommendations-clinical_skills-label')"/>
+				<value>clinical_skills</value>
+			</item>
+			<item>
+				<label ref="jr:itext('recommendations-visit_referral_documentation-label')"/>
+				<value>visit_referral_documentation</value>
+			</item>
+			<item>
+				<label ref="jr:itext('observed_activity-other-label')"/>
+				<value>other</value>
+			</item>
+		</select>
+		<input ref="/data/other_recommendation">
+			<label ref="jr:itext('other_recommendation-label')"/>
+		</input>
+		<select1 ref="/data/call_reminder">
+			<label ref="jr:itext('call_reminder-label')"/>
+			<item>
+				<label ref="jr:itext('call_reminder-ok-label')"/>
+				<value>ok</value>
+			</item>
+		</select1>
+		<select1 ref="/data/thank_her_reminder">
+			<label ref="jr:itext('thank_her_reminder-label')"/>
+			<item>
+				<label ref="jr:itext('call_reminder-ok-label')"/>
+				<value>ok</value>
+			</item>
+		</select1>
+		<group ref="/data/scoring"/>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

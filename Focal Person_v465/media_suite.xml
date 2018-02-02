@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<suite version="465" descriptor="Media Suite File">
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: anc.png" id="media-877dbf1955cfb237c9cf56c08652d44f-anc.png" version="1">
+      <location authority="local">./commcare/image/anc.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/a35a75994dcdf8ecf8be4a1bca9ee436/anc.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: anc1.png" id="media-865f06de648f0ab38859003907d66e4e-anc1.png" version="1">
+      <location authority="local">./commcare/image/anc1.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/c1c8b9c7add1ffff749cd7ccf74ae9aa/anc1.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: anc2.png" id="media-ea06dccda3d1a6b2f553c72a69c707ae-anc2.png" version="1">
+      <location authority="local">./commcare/image/anc2.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/e1589cda85bf737f3e5fe9d63c1ac958/anc2.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: anc3.png" id="media-2c558e6a61288f10e27c5d1c59fc339e-anc3.png" version="1">
+      <location authority="local">./commcare/image/anc3.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/204aa6ac80cd30a73a409b08a6a4725f/anc3.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: anc4.png" id="media-b37d5561c1d039cc238b81eeb73c2802-anc4.png" version="1">
+      <location authority="local">./commcare/image/anc4.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/df0860b205baeb76912d295ff7166b14/anc4.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/gps/gps_enabled1">
+    <resource descriptor="Image File: gps3.png" id="media-c48e040d4343a8cfe9b1dea8d17a2d99-gps3.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/gps/gps_enabled1/gps3.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/358bb770b710e87daaaad188cc7b3227/gps3.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/gps/gps_enabled1">
+    <resource descriptor="Image File: gps4.png" id="media-164a4b91f114d7c48189c6322ec9d43d-gps4.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/gps/gps_enabled1/gps4.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/8f4a5de8eee8f820d7bb183c6ebeb9e1/gps4.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/slow/background">
+    <resource descriptor="Image File: background1.png" id="media-a7b2b0c0e1c64a32a1573a2cc0f24e7f-background1.png" version="1">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/slow/background/background1.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/25f38245a5bc6c4bbb7ba747a088c9ab/background1.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/slow/background">
+    <resource descriptor="Image File: background2.png" id="media-ead518dc8a34ce1bfeea517e1a997bed-background2.png" version="1">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/slow/background/background2.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/bb41d7b8d5f017ad8109506438f9560f/background2.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/slow/background">
+    <resource descriptor="Image File: background3.png" id="media-1759901f51035d4454a1235321d6542e-background3.png" version="1">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/slow/background/background3.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/06bdba17dffe2ecf8d6d475ab5b8b305/background3.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/sync/airplane">
+    <resource descriptor="Image File: airplane1.png" id="media-54696ba611df96303c20831126b43fa8-airplane1.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/sync/airplane/airplane1.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/5d4b857385feebbb1e585815b8bf6d25/airplane1.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/sync/airplane">
+    <resource descriptor="Image File: airplane2.png" id="media-fe3a32a9772be8d7ec19e77e32ad1c78-airplane2.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/sync/airplane/airplane2.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7b76c5a10fde84abe07b028f96b130bf/airplane2.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/sync/airplane">
+    <resource descriptor="Image File: airplane3.png" id="media-519e3d0779231f56ff61e8fed7f1e245-airplane3.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/sync/airplane/airplane3.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7b76c5a10fde84abe07b028f96f1f528/airplane3.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/sync/airplane">
+    <resource descriptor="Image File: airplane4.png" id="media-951dce24f9a492068078cf26b8d76435-airplane4.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/sync/airplane/airplane4.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/d1b3c1aaf91c2d36472627a256b28b1e/airplane4.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/sync/airplane">
+    <resource descriptor="Image File: airplane5.png" id="media-32f44e3f99d862b49d5c55e4c03f82b2-airplane5.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/sync/airplane/airplane5.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7b76c5a10fde84abe07b028f96f1edff/airplane5.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/sync/airplane">
+    <resource descriptor="Image File: airplane6.png" id="media-f473335f999f1c1c79bcfd3ac7ec04f0-airplane6.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/sync/airplane/airplane6.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/b5efcd4f1bdbcc0040c50c21c30bd663/airplane6.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/sync/airplane">
+    <resource descriptor="Image File: airplane7.png" id="media-f18e34336cc1f2f02ba679e403821983-airplane7.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/sync/airplane/airplane7.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/33fbba3ab21abd262209dd6bc02139cd/airplane7.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/sync/date_and_time">
+    <resource descriptor="Image File: date_time1.png" id="media-ad27202ddb8257e71b79d7c6c608ff38-date_time1.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time1.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7b76c5a10fde84abe07b028f96b130bf/date_time1.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/sync/date_and_time">
+    <resource descriptor="Image File: date_time2.png" id="media-7328cea1fc387e37534c8f76e183b87f-date_time2.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time2.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/7b76c5a10fde84abe07b028f96f1f528/date_time2.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/sync/date_and_time">
+    <resource descriptor="Image File: date_time3.png" id="media-4673b2a0e6195f25166bd4ec16af68e3-date_time3.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time3.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/fd75e9dce02b84dd17c90289c53055f3/date_time3.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/sync/date_and_time">
+    <resource descriptor="Image File: date_time4.png" id="media-cf13dccdf00184175ec03d08531e6c15-date_time4.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time4.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/85aa8d3263feb8409e0cfec4a0432d37/date_time4.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/instruct_root/sync/date_and_time">
+    <resource descriptor="Image File: date_time5.png" id="media-afaa2decdbb60ea39b59a627f289f234-date_time5.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time5.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/78cc9b345b160037cd8792b62578b801/date_time5.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/missing/case_filter1">
+    <resource descriptor="Image File: casefilter1.png" id="media-0ca330f61c1d07d29b4f59aa0e328aa7-casefilter1.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/missing/case_filter1/casefilter1.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/e4e11870b52cb705da24356e30d8ed2d/casefilter1.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/missing/case_filter1">
+    <resource descriptor="Image File: casefilter2.png" id="media-e0b898333aa4074394351eaf24c34e0a-casefilter2.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/missing/case_filter1/casefilter2.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/a6a6caa16e0c689baf75b1621ce9effb/casefilter2.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/missing/login">
+    <resource descriptor="Image File: start_login_instruct.png" id="media-13cd47d6a0954de32ebd9a4526aa8899-start_login_instruct.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/missing/login/start_login_instruct.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/69a8ab7cdf0fb8709c6f4495f0814bae/start_login_instruct.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/root_problem/sync">
+    <resource descriptor="Image File: red_airplane.png" id="media-7d41d75648eb9e4dadc6531f0963294a-red_airplane.png" version="463">
+      <location authority="local">./commcare/image/data/root_problem/sync/red_airplane.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/d5814669457fed6978a08e47d3c6983f/red_airplane.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/solve/gps">
+    <resource descriptor="Image File: turn_on.png" id="media-554bdcf7d29d56786938441bb2f0e92b-turn_on.png" version="463">
+      <location authority="local">./commcare/image/data/solve/gps/turn_on.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/100f75e8b3e53bab652675292ead8df6/turn_on.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image/data/solve/missing/clear_case_filter">
+    <resource descriptor="Image File: clear_case_filter1.png" id="media-9bb0e773e53c854a220869baa4e4c79c-clear_case_filter1.png" version="463">
+      <location authority="local">./commcare/image/data/solve/missing/clear_case_filter/clear_case_filter1.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/b2ef10ab0c64039c9a0085ceccde8600/clear_case_filter1.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: location_community.png" id="media-cc1f282eb06a5c9706e793cafbd9ef5c-location_community.png" version="1">
+      <location authority="local">./commcare/image/location_community.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/df0ef2bc5493f41ab40ece9162b533d9/location_community.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: location_health_center.png" id="media-380e25ebe3efeb2e1cd1ac946dff49e5-location_health_center.png" version="1">
+      <location authority="local">./commcare/image/location_health_center.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/a33ad1f19451035bf25c59b3c0bb0133/location_health_center.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: location_health_post.png" id="media-7f6c09ce4cc1a332de0f3af3492117dc-location_health_post.png" version="1">
+      <location authority="local">./commcare/image/location_health_post.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/c1c8b9c7add1ffff749cd7ccf7b05803/location_health_post.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: pnc.png" id="media-d8024ac3689b0560e61078fd65f164d9-pnc.png" version="1">
+      <location authority="local">./commcare/image/pnc.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/71c2a5e1321658f98b9f9ee6c776fcfb/pnc.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: pnc1.png" id="media-1fadd8cbdc5521e23aed680920774e4d-pnc1.png" version="1">
+      <location authority="local">./commcare/image/pnc1.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/5cda7c75152562fcb64ee501c784c375/pnc1.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: pnc2.png" id="media-0d1f5a846908dd200e3ef0c30dca5bef-pnc2.png" version="1">
+      <location authority="local">./commcare/image/pnc2.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/c5298d97f401278a29a44234a713383d/pnc2.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: pnc3.png" id="media-9deb9c437e3a475b75cdf569f7f4f873-pnc3.png" version="1">
+      <location authority="local">./commcare/image/pnc3.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/f249051ac0979b58b1781eb846729f8a/pnc3.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: pnc4.png" id="media-42738bf2e02b5b85d47e0361ad4e6f98-pnc4.png" version="1">
+      <location authority="local">./commcare/image/pnc4.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/f249051ac0979b58b1781eb84672902c/pnc4.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: pnc5.png" id="media-5dad3edb91606d4af324fe6d0adb556b-pnc5.png" version="1">
+      <location authority="local">./commcare/image/pnc5.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/1f843ea68fd7a70d954029e9623c4621/pnc5.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: settings.png" id="media-5aa268406df430116fc6fd67f90f978b-settings.png" version="1">
+      <location authority="local">./commcare/image/settings.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/9baa6f45fb98257027c3c98bfa96f4ef/settings.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: supervision_checklists.png" id="media-9fed921c43d49b0e425e355f04e367a7-supervision_checklists.png" version="1">
+      <location authority="local">./commcare/image/supervision_checklists.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/babc55e5ff6b7056911f1a311a2efd9e/supervision_checklists.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: supervision_kebele.png" id="media-42e67982e3179a7525bf6a6a8b32ab91-supervision_kebele.png" version="463">
+      <location authority="local">./commcare/image/supervision_kebele.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/8b87b8402895832dfe9f0226134dd9bf/supervision_kebele.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: supervision_observation.png" id="media-5aed34b608af3e1f05bdae6083150637-supervision_observation.png" version="1">
+      <location authority="local">./commcare/image/supervision_observation.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/8b87b8402895832dfe9f0226138da42b/supervision_observation.png</location>
+    </resource>
+  </media>
+  <media path="../../commcare/image">
+    <resource descriptor="Image File: supervision_troubleshooting.png" id="media-7f40b493aafea103cbc07d9134a0f870-supervision_troubleshooting.png" version="1">
+      <location authority="local">./commcare/image/supervision_troubleshooting.png</location>
+      <location authority="remote">https://www.commcarehq.org/hq/multimedia/file/CommCareImage/71b6107fcd0408eca8758dac5a76686e/supervision_troubleshooting.png</location>
+    </resource>
+  </media>
+</suite>

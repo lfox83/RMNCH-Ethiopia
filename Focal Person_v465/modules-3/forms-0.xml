@@ -1,0 +1,73 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>Late PNC Visits</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/7d58b318107d5982412f05cbf20a56a4c401bf7f" uiVersion="1" version="463" name="Late PNC Visits">
+					<follow_up_method/>
+					<end_of_form/>
+				<case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""/><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="commcaresession" src="jr://instance/session"/>
+			<bind nodeset="/data/follow_up_method"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="follow_up_method-label">
+						<value>How will you follow up on this late PNC Visit?</value></text>
+					<text id="follow_up_method-call-label">
+						<value>Phone call to HEW</value></text>
+					<text id="follow_up_method-sms-label">
+						<value>SMS to HEW</value></text>
+					<text id="follow_up_method-visit-label">
+						<value>Visit HEW</value></text>
+					<text id="follow_up_method-other-label">
+						<value>Other</value></text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value></text>
+				</translation>
+				<translation lang="amh">
+					<text id="follow_up_method-label">
+						<value>&#4704;&#4656;&#4819;&#4721; &#4843;&#4621;&#4720;&#4848;&#4648;&#4872;&#4813;&#4757; &#4840;&#4853;&#4613;&#4648; &#4808;&#4618;&#4853; &#4781;&#4725;&#4725;&#4621; &#4773;&#4757;&#4852;&#4725; &#4752;&#4813; &#4840;&#4637;&#4725;&#4776;&#4723;&#4720;&#4845;&#4813;&#4961;</value></text>
+					<text id="follow_up_method-call-label">
+						<value>&#4616;&#4900;.&#4772;.&#4656; &#4661;&#4621;&#4781; &#4632;&#4848;&#4808;&#4621;</value></text>
+					<text id="follow_up_method-sms-label">
+						<value>&#4616;&#4900;.&#4772;.&#4656; &#4840;&#4768;&#4909;&#4653; &#4840;&#4933;&#4609;&#4941; &#4632;&#4621;&#4821;&#4781;&#4725; &#4632;&#4619;&#4781;</value></text>
+					<text id="follow_up_method-visit-label">
+						<value>&#4900;.&#4772;.&#4656; &#4632;&#4878;&#4709;&#4760;&#4725;</value></text>
+					<text id="follow_up_method-other-label">
+						<value>&#4620;&#4622;&#4733;</value></text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value></text>
+				</translation>
+			</itext>
+		<bind calculate="/data/meta/timeEnd" nodeset="/data/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id" nodeset="/data/case/@case_id"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<select ref="/data/follow_up_method">
+			<label ref="jr:itext('follow_up_method-label')"/>
+			<item>
+				<label ref="jr:itext('follow_up_method-call-label')"/>
+				<value>call</value>
+			</item>
+			<item>
+				<label ref="jr:itext('follow_up_method-sms-label')"/>
+				<value>sms</value>
+			</item>
+			<item>
+				<label ref="jr:itext('follow_up_method-visit-label')"/>
+				<value>visit</value>
+			</item>
+			<item>
+				<label ref="jr:itext('follow_up_method-other-label')"/>
+				<value>other</value>
+			</item>
+		</select>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

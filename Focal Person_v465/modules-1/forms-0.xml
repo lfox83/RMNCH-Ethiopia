@@ -1,0 +1,2298 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>Troubleshooting</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/58f155adce34955edd30f995d4a97acdcfdf267e" uiVersion="1" version="463" name="Troubleshooting">
+					<hew_name/>
+					<hew_user_id/>
+					<instruction/>
+					<device_type/>
+					<id_number/>
+					<problem_area/>
+					<root_problem>
+						<sync>
+							<sync_problem/>
+							<red_airplane/>
+							<date_time/>
+							<date_and_time>
+								<start_instruct_date_time/>
+								<date_time1/>
+								<date_time2/>
+								<date_time3/>
+								<date_time4/>
+								<date_and_time2/>
+							</date_and_time>
+							<signal/>
+							<credit/>
+						</sync>
+						<missing>
+							<what_is_missing/>
+							<logged_in/>
+							<login>
+								<start_login_instruct/>
+								<logged_in2/>
+							</login>
+							<case_filter/>
+							<case_filter1>
+								<casefilter1/>
+								<casefilter2/>
+								<casefilter3/>
+							</case_filter1>
+						</missing>
+						<slow>
+							<background/>
+							<current_apps_instruct>
+								<start_instruct_background/>
+								<background1/>
+								<background2/>
+								<background_after_instruct/>
+							</current_apps_instruct>
+						</slow>
+						<sound>
+							<volume/>
+						</sound>
+						<camera>
+							<blocked/>
+							<broken/>
+						</camera>
+						<broken_usable_and_unusable>
+							<appears_broken/>
+							<try_charge/>
+						</broken_usable_and_unusable>
+						<android_locked>
+							<remember/>
+						</android_locked>
+						<accessory>
+							<which_accessory/>
+							<solar_panel_problem/>
+							<powerbank_problem/>
+						</accessory>
+						<telephone>
+							<signal/>
+						</telephone>
+						<gps>
+							<gps_enabled/>
+							<gps_enabled1>
+								<start_gps_instruct/>
+								<gps1/>
+								<gps2/>
+								<gps3/>
+								<gps4/>
+								<gps_enabled2/>
+							</gps_enabled1>
+							<gps_signal/>
+						</gps>
+						<instruct_root>
+							<sync>
+								<airplane>
+									<start_instruct_airplane/>
+									<airplane1/>
+									<airplane2/>
+									<airplane3/>
+									<airplane4/>
+									<airplane5/>
+									<airplane6/>
+									<airplane7/>
+								</airplane>
+							</sync>
+						</instruct_root>
+					</root_problem>
+					<solve>
+						<sync>
+							<airplane_instruction/>
+							<closer_to_tower/>
+							<solve_date_and_time>
+								<fix_date_and_time/>
+								<date_time4/>
+								<date_time5/>
+							</solve_date_and_time>
+						</sync>
+						<missing>
+							<turn_off_case_filter/>
+							<clear_case_filter>
+								<clear_case_filter1/>
+							</clear_case_filter>
+							<educate_user/>
+						</missing>
+						<slow>
+							<close_apps/>
+						</slow>
+						<sound>
+							<turn_it_up/>
+						</sound>
+						<camera>
+							<unblock_lens/>
+						</camera>
+						<battery>
+							<charge_battery/>
+						</battery>
+						<android_locked>
+							<remember/>
+						</android_locked>
+						<gps>
+							<turn_on/>
+							<signal/>
+						</gps>
+						<solar_panel>
+							<darkening_instruction/>
+							<temperature_instruction/>
+							<connection_instruction/>
+						</solar_panel>
+						<powerbank>
+							<indicator_instruction/>
+							<not_charging_instruction/>
+						</powerbank>
+						<check_solve/>
+						<great/>
+					</solve>
+					<ticket>
+						<closing>
+							<closing_ticket/>
+						</closing>
+						<sync>
+							<phone_defect/>
+							<sync_apn/>
+							<needs_credit/>
+						</sync>
+						<missing>
+							<incorrect_login/>
+							<uninstall/>
+							<multimedia_removed/>
+							<old_commcare/>
+						</missing>
+						<slow>
+							<bug/>
+						</slow>
+						<sound>
+							<defective_speaker/>
+						</sound>
+						<camera>
+							<broken/>
+							<camera_software_bug_or_full/>
+						</camera>
+						<broken_usable_and_unusable>
+							<battery_defect/>
+							<screen_broken/>
+							<power_button_broken/>
+							<internals_broken/>
+						</broken_usable_and_unusable>
+						<android_locked>
+							<android_locked/>
+						</android_locked>
+						<accessory>
+							<phone_case/>
+							<wall_charger/>
+							<solar_charger/>
+							<cable/>
+							<powerbank/>
+						</accessory>
+						<commcare_locked>
+							<incorrect_login/>
+						</commcare_locked>
+						<telephone>
+							<sim_or_apn/>
+						</telephone>
+						<gps>
+							<gps_broken/>
+						</gps>
+						<unsolved>
+							<unsolved/>
+						</unsolved>
+						<open_ticket>
+							<phone/>
+							<ticket_message/>
+							<closing/>
+							<sync/>
+							<missing/>
+							<slow/>
+							<sound/>
+							<camera/>
+							<broken/>
+							<android_locked/>
+							<accessory/>
+							<commcare_locked/>
+							<telephone/>
+							<gps/>
+							<unsolved/>
+						</open_ticket>
+					</ticket>
+					<date_submitted/>
+					<end_of_form/>
+				<case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""/><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance>
+			<instance src="jr://instance/casedb" id="casedb"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<bind nodeset="/data/hew_name" calculate="instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id]/full_name"/>
+			<bind nodeset="/data/hew_user_id" calculate="instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id]/hew_user_id"/>
+			<bind nodeset="/data/instruction"/>
+			<bind nodeset="/data/device_type" required="true()"/>
+			<bind nodeset="/data/id_number" type="xsd:int" required="true()"/>
+			<bind nodeset="/data/problem_area" required="true()"/>
+			<bind nodeset="/data/root_problem"/>
+			<bind nodeset="/data/root_problem/sync"/>
+			<bind nodeset="/data/root_problem/sync/sync_problem" relevant="/data/problem_area = 'sync'" required="true()"/>
+			<bind nodeset="/data/root_problem/sync/red_airplane" relevant="/data/root_problem/sync/sync_problem = 'red_text'" required="true()"/>
+			<bind nodeset="/data/root_problem/sync/date_time" relevant="/data/root_problem/sync/red_airplane = 'no' or /data/problem_area = 'commcare_locked'" required="true()"/>
+			<bind nodeset="/data/root_problem/sync/date_and_time" relevant="/data/root_problem/sync/date_time = 'unknown'"/>
+			<bind nodeset="/data/root_problem/sync/date_and_time/start_instruct_date_time"/>
+			<bind nodeset="/data/root_problem/sync/date_and_time/date_time1"/>
+			<bind nodeset="/data/root_problem/sync/date_and_time/date_time2"/>
+			<bind nodeset="/data/root_problem/sync/date_and_time/date_time3"/>
+			<bind nodeset="/data/root_problem/sync/date_and_time/date_time4"/>
+			<bind nodeset="/data/root_problem/sync/date_and_time/date_and_time2" required="true()"/>
+			<bind nodeset="/data/root_problem/sync/signal" relevant="(/data/root_problem/sync/sync_problem = 'long_attempt' or /data/root_problem/sync/date_time = 'yes' or /data/root_problem/sync/date_and_time/date_and_time2 = 'yes') and /data/problem_area != &quot;commcare_locked&quot;" required="true()"/>
+			<bind nodeset="/data/root_problem/sync/credit" relevant="/data/root_problem/sync/signal = 'yes'" required="true()"/>
+			<bind nodeset="/data/root_problem/missing" relevant="/data/problem_area = 'missing'"/>
+			<bind nodeset="/data/root_problem/missing/what_is_missing" required="true()"/>
+			<bind nodeset="/data/root_problem/missing/logged_in" relevant="/data/root_problem/missing/what_is_missing = 'form' or /data/root_problem/missing/what_is_missing = 'module' or /data/root_problem/missing/what_is_missing = 'client'" required="true()"/>
+			<bind nodeset="/data/root_problem/missing/login" relevant="/data/root_problem/missing/logged_in = 'unknown'"/>
+			<bind nodeset="/data/root_problem/missing/login/start_login_instruct"/>
+			<bind nodeset="/data/root_problem/missing/login/logged_in2" relevant="/data/root_problem/missing/what_is_missing = 'form' or /data/root_problem/missing/what_is_missing = 'module' or /data/root_problem/missing/what_is_missing = 'client'" required="true()"/>
+			<bind nodeset="/data/root_problem/missing/case_filter" relevant="(/data/root_problem/missing/logged_in = 'yes' or /data/root_problem/missing/login/logged_in2 = 'yes') and /data/root_problem/missing/what_is_missing != 'form' and /data/root_problem/missing/what_is_missing != 'module'" required="true()"/>
+			<bind nodeset="/data/root_problem/missing/case_filter1" relevant="/data/root_problem/missing/case_filter = 'unknown'"/>
+			<bind nodeset="/data/root_problem/missing/case_filter1/casefilter1"/>
+			<bind nodeset="/data/root_problem/missing/case_filter1/casefilter2"/>
+			<bind nodeset="/data/root_problem/missing/case_filter1/casefilter3"/>
+			<bind nodeset="/data/root_problem/slow" relevant="/data/problem_area = 'slow'"/>
+			<bind nodeset="/data/root_problem/slow/background"/>
+			<bind nodeset="/data/root_problem/slow/current_apps_instruct" relevant="/data/root_problem/slow/background = 'unknown'"/>
+			<bind nodeset="/data/root_problem/slow/current_apps_instruct/start_instruct_background"/>
+			<bind nodeset="/data/root_problem/slow/current_apps_instruct/background1"/>
+			<bind nodeset="/data/root_problem/slow/current_apps_instruct/background2"/>
+			<bind nodeset="/data/root_problem/slow/current_apps_instruct/background_after_instruct"/>
+			<bind nodeset="/data/root_problem/sound" relevant="/data/problem_area = 'sound'"/>
+			<bind nodeset="/data/root_problem/sound/volume" required="true()"/>
+			<bind nodeset="/data/root_problem/camera" relevant="/data/problem_area = 'camera'"/>
+			<bind nodeset="/data/root_problem/camera/blocked" required="true()"/>
+			<bind nodeset="/data/root_problem/camera/broken" relevant="/data/root_problem/camera/blocked = 'no'" required="true()"/>
+			<bind nodeset="/data/root_problem/broken_usable_and_unusable" relevant="/data/problem_area = 'broken_usable' or /data/problem_area = 'battery'"/>
+			<bind nodeset="/data/root_problem/broken_usable_and_unusable/appears_broken" relevant="/data/problem_area = 'broken_usable'" required="true()"/>
+			<bind nodeset="/data/root_problem/broken_usable_and_unusable/try_charge" relevant="/data/root_problem/broken_usable_and_unusable/appears_broken = 'battery' or /data/problem_area = 'battery'" required="true()"/>
+			<bind nodeset="/data/root_problem/android_locked" relevant="/data/problem_area = 'android_locked'"/>
+			<bind nodeset="/data/root_problem/android_locked/remember"/>
+			<bind nodeset="/data/root_problem/accessory" relevant="/data/problem_area = 'accessory'"/>
+			<bind nodeset="/data/root_problem/accessory/which_accessory" required="true()"/>
+			<bind nodeset="/data/root_problem/accessory/solar_panel_problem" relevant="/data/root_problem/accessory/which_accessory = 'solar_charger'" required="true()"/>
+			<bind nodeset="/data/root_problem/accessory/powerbank_problem" relevant="/data/root_problem/accessory/which_accessory = 'powerbank'" required="true()"/>
+			<bind nodeset="/data/root_problem/telephone" relevant="/data/problem_area = 'telephone'"/>
+			<bind nodeset="/data/root_problem/telephone/signal"/>
+			<bind nodeset="/data/root_problem/gps" relevant="/data/problem_area = 'gps'"/>
+			<bind nodeset="/data/root_problem/gps/gps_enabled" required="true()"/>
+			<bind nodeset="/data/root_problem/gps/gps_enabled1" relevant="/data/root_problem/gps/gps_enabled = 'unknown'"/>
+			<bind nodeset="/data/root_problem/gps/gps_enabled1/start_gps_instruct"/>
+			<bind nodeset="/data/root_problem/gps/gps_enabled1/gps1"/>
+			<bind nodeset="/data/root_problem/gps/gps_enabled1/gps2"/>
+			<bind nodeset="/data/root_problem/gps/gps_enabled1/gps3"/>
+			<bind nodeset="/data/root_problem/gps/gps_enabled1/gps4"/>
+			<bind nodeset="/data/root_problem/gps/gps_enabled1/gps_enabled2" required="true()"/>
+			<bind nodeset="/data/root_problem/gps/gps_signal" relevant="/data/root_problem/gps/gps_enabled = 'yes' or /data/root_problem/gps/gps_enabled1/gps_enabled2 = 'yes'" required="true()"/>
+			<bind nodeset="/data/root_problem/instruct_root"/>
+			<bind nodeset="/data/root_problem/instruct_root/sync"/>
+			<bind nodeset="/data/root_problem/instruct_root/sync/airplane" relevant="/data/root_problem/sync/red_airplane = 'yes'"/>
+			<bind nodeset="/data/root_problem/instruct_root/sync/airplane/start_instruct_airplane"/>
+			<bind nodeset="/data/root_problem/instruct_root/sync/airplane/airplane1"/>
+			<bind nodeset="/data/root_problem/instruct_root/sync/airplane/airplane2"/>
+			<bind nodeset="/data/root_problem/instruct_root/sync/airplane/airplane3"/>
+			<bind nodeset="/data/root_problem/instruct_root/sync/airplane/airplane4"/>
+			<bind nodeset="/data/root_problem/instruct_root/sync/airplane/airplane5"/>
+			<bind nodeset="/data/root_problem/instruct_root/sync/airplane/airplane6"/>
+			<bind nodeset="/data/root_problem/instruct_root/sync/airplane/airplane7"/>
+			<bind nodeset="/data/solve"/>
+			<bind nodeset="/data/solve/sync"/>
+			<bind nodeset="/data/solve/sync/airplane_instruction" relevant="/data/root_problem/sync/red_airplane = 'yes'" required="true()"/>
+			<bind nodeset="/data/solve/sync/closer_to_tower" relevant="/data/root_problem/sync/signal = 'no' or /data/root_problem/telephone/signal = 'no'" required="true()"/>
+			<bind nodeset="/data/solve/sync/solve_date_and_time" relevant="/data/root_problem/sync/date_time = 'no' or /data/root_problem/sync/date_and_time/date_and_time2 = 'no'"/>
+			<bind nodeset="/data/solve/sync/solve_date_and_time/fix_date_and_time" required="true()"/>
+			<bind nodeset="/data/solve/sync/solve_date_and_time/date_time4"/>
+			<bind nodeset="/data/solve/sync/solve_date_and_time/date_time5"/>
+			<bind nodeset="/data/solve/missing"/>
+			<bind nodeset="/data/solve/missing/turn_off_case_filter" relevant="/data/root_problem/missing/case_filter = 'yes' or /data/root_problem/missing/case_filter1/casefilter3 = 'yes'" required="true()"/>
+			<bind nodeset="/data/solve/missing/clear_case_filter" relevant="/data/solve/missing/turn_off_case_filter = 'unknown'"/>
+			<bind nodeset="/data/solve/missing/clear_case_filter/clear_case_filter1" relevant="/data/solve/missing/turn_off_case_filter = 'unknown'"/>
+			<bind nodeset="/data/solve/missing/educate_user" relevant="(/data/root_problem/missing/what_is_missing = 'form' and (/data/root_problem/missing/logged_in = 'yes' or /data/root_problem/missing/login/logged_in2 = 'yes'))" required="true()"/>
+			<bind nodeset="/data/solve/slow"/>
+			<bind nodeset="/data/solve/slow/close_apps" relevant="/data/root_problem/slow/background = 'yes' or /data/root_problem/slow/current_apps_instruct/background_after_instruct = 'yes'" required="true()"/>
+			<bind nodeset="/data/solve/sound"/>
+			<bind nodeset="/data/solve/sound/turn_it_up" relevant="/data/root_problem/sound/volume = 'no'" required="true()"/>
+			<bind nodeset="/data/solve/camera"/>
+			<bind nodeset="/data/solve/camera/unblock_lens" relevant="/data/root_problem/camera/blocked = 'yes'" required="true()"/>
+			<bind nodeset="/data/solve/battery"/>
+			<bind nodeset="/data/solve/battery/charge_battery" relevant="/data/root_problem/broken_usable_and_unusable/try_charge = 'no'" required="true()"/>
+			<bind nodeset="/data/solve/android_locked"/>
+			<bind nodeset="/data/solve/android_locked/remember" relevant="/data/root_problem/android_locked/remember = 'no'" required="true()"/>
+			<bind nodeset="/data/solve/gps"/>
+			<bind nodeset="/data/solve/gps/turn_on" relevant="/data/root_problem/gps/gps_enabled = 'no' or /data/root_problem/gps/gps_enabled1/gps_enabled2 = 'no'" required="true()"/>
+			<bind nodeset="/data/solve/gps/signal" relevant="/data/root_problem/gps/gps_signal = 'no'" required="true()"/>
+			<bind nodeset="/data/solve/solar_panel" relevant="/data/root_problem/accessory/which_accessory = 'solar_charger'"/>
+			<bind nodeset="/data/solve/solar_panel/darkening_instruction" relevant="/data/root_problem/accessory/solar_panel_problem = 'darkening'" required="true()"/>
+			<bind nodeset="/data/solve/solar_panel/temperature_instruction" relevant="/data/root_problem/accessory/solar_panel_problem = 'high_temperature'" required="true()"/>
+			<bind nodeset="/data/solve/solar_panel/connection_instruction" relevant="/data/root_problem/accessory/solar_panel_problem = 'connection'" required="true()"/>
+			<bind nodeset="/data/solve/powerbank" relevant="/data/root_problem/accessory/which_accessory = 'powerbank'"/>
+			<bind nodeset="/data/solve/powerbank/indicator_instruction" relevant="/data/root_problem/accessory/powerbank_problem = 'indicator'" required="true()"/>
+			<bind nodeset="/data/solve/powerbank/not_charging_instruction" required="true()"/>
+			<bind nodeset="/data/solve/check_solve" relevant="/data/solve/solar_panel/temperature_instruction = 'ok' or /data/solve/solar_panel/darkening_instruction = 'ok' or /data/solve/missing/educate_user = 'ok' or /data/solve/missing/turn_off_case_filter = 'unknown' or /data/solve/gps/turn_on = 'ok' or /data/solve/sound/turn_it_up = 'ok' or /data/solve/sync/airplane_instruction = 'ok' or /data/solve/sync/solve_date_and_time/fix_date_and_time = 'ok' or /data/solve/missing/turn_off_case_filter = 'ok' or /data/solve/slow/close_apps = 'ok' or /data/solve/camera/unblock_lens = 'ok' or /data/solve/android_locked/remember = 'ok' or /data/solve/battery/charge_battery = 'ok' or /data/solve/sync/closer_to_tower = 'ok' or /data/solve/slow/close_apps = 'ok' or /data/solve/gps/signal = 'ok' or /data/solve/solar_panel/connection_instruction = 'ok' or /data/solve/powerbank/indicator_instruction = 'ok' or /data/solve/powerbank/not_charging_instruction = 'ok'" required="true()"/>
+			<bind nodeset="/data/solve/great" relevant="/data/solve/check_solve = 'yes'"/>
+			<bind nodeset="/data/ticket"/>
+			<bind nodeset="/data/ticket/closing" relevant="/data/problem_area = 'closing'"/>
+			<bind nodeset="/data/ticket/closing/closing_ticket" relevant="/data/problem_area = 'closing'" required="true()"/>
+			<bind nodeset="/data/ticket/sync" relevant="/data/problem_area = 'sync'"/>
+			<bind nodeset="/data/ticket/sync/phone_defect" relevant="/data/root_problem/sync/sync_problem = 'nothing'" required="true()"/>
+			<bind nodeset="/data/ticket/sync/sync_apn" relevant="/data/root_problem/sync/credit = 'yes'" required="true()"/>
+			<bind nodeset="/data/ticket/sync/needs_credit" relevant="/data/root_problem/sync/credit = 'no'" required="true()"/>
+			<bind nodeset="/data/ticket/missing" relevant="/data/problem_area = 'missing'"/>
+			<bind nodeset="/data/ticket/missing/incorrect_login" relevant="/data/root_problem/missing/logged_in = 'no' or /data/root_problem/missing/login/logged_in2 = 'no'" required="true()"/>
+			<bind nodeset="/data/ticket/missing/uninstall" relevant="/data/root_problem/missing/what_is_missing = 'commcare'" required="true()"/>
+			<bind nodeset="/data/ticket/missing/multimedia_removed" relevant="/data/root_problem/missing/what_is_missing = 'multimedia'" required="true()"/>
+			<bind nodeset="/data/ticket/missing/old_commcare" relevant="(/data/root_problem/missing/what_is_missing = 'module' and (/data/root_problem/missing/logged_in = 'yes' or /data/root_problem/missing/login/logged_in2 = 'yes')) or (/data/root_problem/missing/what_is_missing = 'form' and /data/solve/check_solve = 'no')" required="true()"/>
+			<bind nodeset="/data/ticket/slow" relevant="/data/problem_area = 'slow'"/>
+			<bind nodeset="/data/ticket/slow/bug" relevant="/data/root_problem/slow/background = 'no' or /data/root_problem/slow/current_apps_instruct/background_after_instruct = 'no'" required="true()"/>
+			<bind nodeset="/data/ticket/sound" relevant="/data/problem_area = 'sound'"/>
+			<bind nodeset="/data/ticket/sound/defective_speaker" relevant="/data/root_problem/sound/volume = 'yes'" required="true()"/>
+			<bind nodeset="/data/ticket/camera" relevant="/data/problem_area = 'camera'"/>
+			<bind nodeset="/data/ticket/camera/broken" relevant="/data/root_problem/camera/broken = 'yes'" required="true()"/>
+			<bind nodeset="/data/ticket/camera/camera_software_bug_or_full" relevant="/data/root_problem/camera/broken = 'no'" required="true()"/>
+			<bind nodeset="/data/ticket/broken_usable_and_unusable" relevant="/data/problem_area = 'broken_usable' or /data/problem_area = 'broken_unusable' or /data/problem_area = 'battery'"/>
+			<bind nodeset="/data/ticket/broken_usable_and_unusable/battery_defect" relevant="/data/root_problem/broken_usable_and_unusable/try_charge = 'yes'" required="true()"/>
+			<bind nodeset="/data/ticket/broken_usable_and_unusable/screen_broken" relevant="/data/root_problem/broken_usable_and_unusable/appears_broken = 'screen'" required="true()"/>
+			<bind nodeset="/data/ticket/broken_usable_and_unusable/power_button_broken" relevant="/data/root_problem/broken_usable_and_unusable/appears_broken = 'buttons'" required="true()"/>
+			<bind nodeset="/data/ticket/broken_usable_and_unusable/internals_broken" relevant="/data/root_problem/broken_usable_and_unusable/appears_broken = 'internals'" required="true()"/>
+			<bind nodeset="/data/ticket/android_locked" relevant="/data/problem_area = 'android_locked'"/>
+			<bind nodeset="/data/ticket/android_locked/android_locked" relevant="/data/root_problem/android_locked/remember = 'yes'" required="true()"/>
+			<bind nodeset="/data/ticket/accessory" relevant="/data/problem_area = 'accessory' and /data/solve/check_solve != 'yes'"/>
+			<bind nodeset="/data/ticket/accessory/phone_case" relevant="/data/root_problem/accessory/which_accessory = 'phone_case'" required="true()"/>
+			<bind nodeset="/data/ticket/accessory/wall_charger" relevant="/data/root_problem/accessory/which_accessory = 'wall_charger'" required="true()"/>
+			<bind nodeset="/data/ticket/accessory/solar_charger" relevant="/data/root_problem/accessory/which_accessory = 'solar_charger'" required="true()"/>
+			<bind nodeset="/data/ticket/accessory/cable" relevant="/data/root_problem/accessory/which_accessory = 'cable'" required="true()"/>
+			<bind nodeset="/data/ticket/accessory/powerbank" relevant="/data/root_problem/accessory/which_accessory = 'powerbank'" required="true()"/>
+			<bind nodeset="/data/ticket/commcare_locked" relevant="/data/problem_area = 'commcare_locked'"/>
+			<bind nodeset="/data/ticket/commcare_locked/incorrect_login" relevant="/data/problem_area = 'commcare_locked' and (/data/root_problem/sync/date_time = 'yes' or /data/root_problem/sync/date_and_time/date_and_time2 = 'yes') or (/data/solve/sync/solve_date_and_time/fix_date_and_time = &quot;ok&quot; and /data/solve/check_solve = &quot;no&quot;)" required="true()"/>
+			<bind nodeset="/data/ticket/telephone" relevant="/data/problem_area = 'telephone'"/>
+			<bind nodeset="/data/ticket/telephone/sim_or_apn" relevant="/data/root_problem/telephone/signal = 'yes'" required="true()"/>
+			<bind nodeset="/data/ticket/gps" relevant="/data/problem_area = 'gps'"/>
+			<bind nodeset="/data/ticket/gps/gps_broken" relevant="/data/root_problem/gps/gps_signal = 'yes' or /data/root_problem/gps/gps_enabled1/gps_enabled2 = 'yes' or (/data/solve/gps/turn_on = 'ok' and /data/solve/check_solve = 'no')" required="true()"/>
+			<bind nodeset="/data/ticket/unsolved"/>
+			<bind nodeset="/data/ticket/unsolved/unsolved" relevant="/data/solve/check_solve = 'no'" required="true()"/>
+			<bind nodeset="/data/ticket/open_ticket" relevant="false()"/>
+			<bind nodeset="/data/ticket/open_ticket/phone" type="xsd:int" relevant="/data/ticket/open_ticket/telephone = 'open' or /data/ticket/open_ticket/commcare_locked = 'open' or /data/ticket/open_ticket/accessory = 'open' or /data/ticket/open_ticket/android_locked = 'open' or /data/ticket/open_ticket/broken = 'open' or /data/ticket/open_ticket/camera = 'open' or /data/ticket/open_ticket/sound = 'open' or /data/ticket/open_ticket/slow = 'open' or /data/ticket/open_ticket/missing = 'open' or /data/ticket/open_ticket/sync = 'open' or /data/ticket/open_ticket/closing = 'open' or /data/ticket/open_ticket/gps = 'open' or /data/ticket/open_ticket/unsolved = 'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/ticket_message" relevant="/data/ticket/open_ticket/gps = 'open' or /data/ticket/open_ticket/telephone = 'open' or /data/ticket/open_ticket/commcare_locked = 'open' or /data/ticket/open_ticket/accessory = 'open' or /data/ticket/open_ticket/android_locked = 'open' or /data/ticket/open_ticket/camera = 'open' or /data/ticket/open_ticket/sound = 'open' or /data/ticket/open_ticket/slow = 'open' or /data/ticket/open_ticket/missing = 'open' or /data/ticket/open_ticket/sync = 'open' or /data/ticket/open_ticket/closing = 'open' or /data/ticket/open_ticket/unsolved = 'open' or /data/ticket/open_ticket/broken = 'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/closing" relevant="/data/ticket/closing/closing_ticket = &quot;ok&quot;" calculate="'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/sync" relevant="/data/ticket/sync/sync_apn = 'open_ticket_sync_apn' or /data/ticket/sync/phone_defect = 'open_ticket_sync_defect' or /data/ticket/sync/needs_credit = 'refill_credit'" calculate="'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/missing" relevant="/data/ticket/missing/multimedia_removed = 'ok' or /data/ticket/missing/uninstall = 'ok' or /data/ticket/missing/incorrect_login = 'ok' or /data/ticket/missing/old_commcare = 'ok'" calculate="'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/slow" relevant="/data/ticket/slow/bug = 'ok'" calculate="'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/sound" relevant="/data/ticket/sound/defective_speaker = 'ok'" calculate="'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/camera" relevant="/data/ticket/camera/broken = 'ok' or /data/ticket/camera/camera_software_bug_or_full = 'ok'" calculate="'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/broken" relevant="/data/ticket/broken_usable_and_unusable/power_button_broken = 'ok' or /data/ticket/broken_usable_and_unusable/screen_broken = 'ok' or /data/ticket/broken_usable_and_unusable/battery_defect = 'ok' or /data/ticket/broken_usable_and_unusable/internals_broken = 'ok'" calculate="'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/android_locked" relevant="/data/ticket/android_locked/android_locked = 'ok'" calculate="'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/accessory" relevant="/data/ticket/accessory/solar_charger = 'ok' or /data/ticket/accessory/wall_charger = 'ok' or /data/ticket/accessory/phone_case = 'ok' or /data/ticket/accessory/cable = 'ok'" calculate="'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/commcare_locked" relevant="/data/ticket/commcare_locked/incorrect_login = 'ok'" calculate="'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/telephone" relevant="/data/ticket/telephone/sim_or_apn = 'ok'" calculate="'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/gps" relevant="/data/ticket/gps/gps_broken = 'ok'" calculate="'open'"/>
+			<bind nodeset="/data/ticket/open_ticket/unsolved" relevant="/data/ticket/unsolved/unsolved = 'ok'" calculate="'open'"/>
+			<bind nodeset="/data/date_submitted" calculate="today()"/>
+			<bind nodeset="/data/end_of_form"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="instruction-label">
+						<value>This form helps the Focal Person to troubleshoot common problems in using the phone, tablet, PV Solar Charger, Powerbank and other project accessories.</value></text>
+					<text id="device_type-label">
+						<value>What type of mobile device are you using?</value></text>
+					<text id="device_type-tecno_phone-label">
+						<value>Tecno phone</value></text>
+					<text id="device_type-huawei_phone-label">
+						<value>Huawei phone</value></text>
+					<text id="device_type-tecno_tablet-label">
+						<value>Tecno Tablet</value></text>
+					<text id="id_number-label">
+						<value>The ID number of the device with the problem:</value></text>
+					<text id="problem_area-label">
+						<value>What is the problem?</value></text>
+					<text id="problem_area-broken_usable-label">
+						<value>The phone is broken</value></text>
+					<text id="problem_area-closing-label">
+						<value>CommCare doesn't open</value></text>
+					<text id="problem_area-sync-label">
+						<value>CommCare doesn't sync</value></text>
+					<text id="problem_area-slow-label">
+						<value>CommCare is slow</value></text>
+					<text id="problem_area-commcare_locked-label">
+						<value>CommCare is locked</value></text>
+					<text id="problem_area-missing-label">
+						<value>Something is missing</value></text>
+					<text id="problem_area-android_locked-label">
+						<value>The phone is locked</value></text>
+					<text id="problem_area-sound-label">
+						<value>There's no sound</value></text>
+					<text id="problem_area-camera-label">
+						<value>It can't take pictures</value></text>
+					<text id="problem_area-telephone-label">
+						<value>It can't make calls or SMS</value></text>
+					<text id="problem_area-battery-label">
+						<value>The battery isn't working</value></text>
+					<text id="problem_area-gps-label">
+						<value>The GPS isn't working</value></text>
+					<text id="problem_area-accessory-label">
+						<value>Problem with an accessory</value></text>
+					<text id="root_problem/sync/sync_problem-label">
+						<value>What happens when a sync is attempted?</value></text>
+					<text id="root_problem/sync/sync_problem-long_attempt-label">
+						<value>Long attempt, but no sync</value></text>
+					<text id="root_problem/sync/syn-item1-label">
+						<value>Red text error</value></text>
+					<text id="root_problem/sync/syn-item2-label">
+						<value>Nothing</value></text>
+					<text id="root_problem/sync/red_airplane-label">
+						<value>Does the red text refer to airplane mode?</value><value form="image">jr://file/commcare/image/data/root_problem/sync/red_airplane.png</value></text>
+					<text id="root_problem/sync/date_time-label">
+						<value>Are the date and time correct?</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time-label">
+						<value>date_and_time</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time/start_instruct_date_time-label">
+						<value>These instructions explain how to ensure the Date &amp; Time settings of your device are correct.
+
+
+
+If the Date &amp; Time settings are incorrect, Users may not be able to log in correctly, and CommCare will not be able to sync.</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time/date_time1-label">
+						<value>Select the All Apps menu from the homescreen.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time1.png</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time/date_time2-label">
+						<value>Select the Settings menu inside the All Apps menu.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time2.png</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time/date_time3-label">
+						<value>Scroll down in the Settings menu, until you reach the "System" section.  In the System section, select "Date &amp; Time."</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time3.png</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time/date_time4-label">
+						<value>The red boxes below indicate the Date &amp; Time settings may be incorrect.  Press the check boxes to Enable "Automatic date &amp; time" and "Automatic time zone."</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time4.png</value></text>
+					<text id="root_problem/sync/copy-1-of-date_time-label">
+						<value>Are the date and time correct?</value></text>
+					<text id="root_problem/sync/question4-label">
+						<value>Does the user have signal?</value></text>
+					<text id="root_problem/sync/question3-label">
+						<value>Does the phone have credit?</value></text>
+					<text id="root_problem/missing/what_is_missing-label">
+						<value>What is missing?</value></text>
+					<text id="root_problem/missing/what_is_missing-commcare-label">
+						<value>CommCare</value></text>
+					<text id="root_problem/missing/what_is_missing-form-label">
+						<value>A form</value></text>
+					<text id="root_problem/missing/what_is_missing-module-label">
+						<value>A module</value></text>
+					<text id="root_problem/missing/what_is_missing-client-label">
+						<value>A client</value></text>
+					<text id="root_problem/missing/what_is_missing-multimedia-label">
+						<value>Audio or images</value></text>
+					<text id="root_problem/missing/logged_in-label">
+						<value>Is the user logged in correctly and synced?</value></text>
+					<text id="root_problem/missing/login-label">
+						<value>login</value></text>
+					<text id="root_problem/missing/login/start_login_instruct-label">
+						<value>When the user is logged into CommCare correctly, the start screen will appear as below.
+
+
+
+Pay attention to the username, to be sure it is correct.
+
+
+
+Notice when the user is synced there are no numbers on the Sync with Server button, and the bar below it is blue.
+
+
+
+The date and time listed in the blue bar is recent.</value><value form="image">jr://file/commcare/image/data/root_problem/missing/login/start_login_instruct.png</value></text>
+					<text id="root_problem/missing/copy-1-of-logged_in-label">
+						<value>Is the user logged in correctly and synced?</value></text>
+					<text id="root_problem/missing/case_filter-label">
+						<value>Is a case list filter active?</value></text>
+					<text id="root_problem/missing/case_filter1-label">
+						<value>case_filter1</value></text>
+					<text id="root_problem/missing/case_filter1/casefilter1-label">
+						<value>When the case list filter is active, you only see the cases that are being searched for, as seen below.</value><value form="image">jr://file/commcare/image/data/root_problem/missing/case_filter1/casefilter1.png</value></text>
+					<text id="root_problem/missing/case_filter1/casefilter2-label">
+						<value>When the case list filter is not active, you see all of your cases for that module.
+
+
+
+If a client is missing and the case list filter is not active, check in the Client Management module to verify that they are registered for the service module you are attempting to use.</value><value form="image">jr://file/commcare/image/data/root_problem/missing/case_filter1/casefilter2.png</value></text>
+					<text id="root_problem/slow/background-label">
+						<value>Are there many apps running in the concurrently in the background?</value></text>
+					<text id="root_problem/slow/background-unknown-label">
+						<value>Help me find out</value></text>
+					<text id="root_problem/slow/current_apps_instruct-label">
+						<value>current_apps_instruct</value></text>
+					<text id="root_problem/instruct_root/slow/background/start_instruct_background-label">
+						<value>These instructions will explain how to find out which apps are currently running, and how to close them if there are too many.</value></text>
+					<text id="root_problem/instruct_root/slow/question3-label">
+						<value>First press the "Recent Apps" button.
+
+  
+
+The appearance and location of this button will vary by device and by Android version.  
+
+
+
+It will always be to the right or to the left of the All Apps menu button, but never in the center.  
+
+
+
+It often appears similar to a list, with three lines.  
+
+
+
+It never looks like an arrow, which is the Back button.  
+
+
+
+It may be a physical button, or displayed on the screen.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/slow/background/background1.png</value></text>
+					<text id="root_problem/instruct_root/slow/background/background2-label">
+						<value>When many apps are running, the list will appear full. 
+
+ 
+
+The appearance of the list will vary by Android version.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/slow/background/background2.png</value></text>
+					<text id="root_problem/sound/volume-label">
+						<value>Is the volume turned up?</value></text>
+					<text id="root_problem/camera/blocked-label">
+						<value>Is the camera lens blocked?</value></text>
+					<text id="root_problem/camera/broken-label">
+						<value>Is the camera lens broken?</value></text>
+					<text id="root_problem/broken_usable/appears_broken-label">
+						<value>What part of the phone appears to be broken?</value></text>
+					<text id="root_problem/broken_usable/appears_broken-screen-label">
+						<value>Screen</value></text>
+					<text id="root_problem/broken_usable/appears_broken-body-label">
+						<value>Body</value></text>
+					<text id="root_problem/broken_usable/appears_broken-buttons-label">
+						<value>A button</value></text>
+					<text id="root_problem/broken_usable/appears_broken-internals-label">
+						<value>Interals</value></text>
+					<text id="root_problem/broken_usable/appears_broken-battery-label">
+						<value>Battery</value></text>
+					<text id="root_problem/broken_usable_and_unusable/appears_broken-usb_port-label">
+						<value>The charging port</value></text>
+					<text id="root_problem/broken_usable_and_unusable/appears_broken-audio_jack-label">
+						<value>The audio port</value></text>
+					<text id="root_problem/broken_usable/try_charge-label">
+						<value>Did they try to charge the device?</value></text>
+					<text id="root_problem/android_locked/remember-label">
+						<value>Have they tried seriously to remember and understand that the phone must be reset if they have forgotten?</value></text>
+					<text id="root_problem/accessory/which_accessory-label">
+						<value>Which accessory has the problem?</value></text>
+					<text id="root_problem/accessory/which_accessory-phone_case-label">
+						<value>Phone or Tablet Case</value></text>
+					<text id="root_problem/accessory/which_accessory-wall_charger-label">
+						<value>Wall charger</value></text>
+					<text id="root_problem/accessory/which_accessory-solar_charger-label">
+						<value>PV Solar Panel</value></text>
+					<text id="root_problem/accessory/which_accessory-cable-label">
+						<value>USB charging cable</value></text>
+					<text id="root_problem/accessory/which_accessory-powerbank-label">
+						<value>Powerbank</value></text>
+					<text id="root_problem/accessory/solar_panel_problem-label">
+						<value>What is the problem with the solar panel?</value></text>
+					<text id="root_problem/accessory/solar_panel_problem-darkening-label">
+						<value>Shading or Darkening</value></text>
+					<text id="root_problem/accessory/solar_panel_problem-high_temperature-label">
+						<value>High operating temperature</value></text>
+					<text id="root_problem/accessory/solar_panel_problem-connection-label">
+						<value>Poor connection</value></text>
+					<text id="root_problem/accessory/solar_panel_problem-broken-label">
+						<value>Broken</value></text>
+					<text id="root_problem/accessory/solar_panel_problem-lost_stolen-label">
+						<value>Lost or Stolen</value></text>
+					<text id="root_problem/accessory/powerbank_problem-label">
+						<value>What is the problem with the power bank?</value></text>
+					<text id="root_problem/accessory/powerbank_problem-indicator-label">
+						<value>Indicator</value></text>
+					<text id="root_problem/accessory/powerbank_problem-not_charging-label">
+						<value>Not charging</value></text>
+					<text id="root_problem/accessory/powerbank_problem-loose_usb_port-label">
+						<value>Loose USB port</value></text>
+					<text id="gps/gps_enabled-label">
+						<value>Is GPS enabled?</value></text>
+					<text id="root_problem/gps/gps_enabled-unknown-label">
+						<value>I don't know</value></text>
+					<text id="root_problem/gps/gps_enabled1-label">
+						<value>gps_enabled1</value></text>
+					<text id="root_problem/gps/gps_enabled1/question5-label">
+						<value>These instructions will explain how to verify that GPS is enabled on your device.</value></text>
+					<text id="root_problem/gps/gps_enabled1/gps3-label">
+						<value>In the settings menu, select "Location" under the heading "Personal."</value><value form="image">jr://file/commcare/image/data/root_problem/gps/gps_enabled1/gps3.png</value></text>
+					<text id="root_problem/gps/gps_enabled1/gps4-label">
+						<value>In the Location menu, see the switch at the top of the page.</value><value form="image">jr://file/commcare/image/data/root_problem/gps/gps_enabled1/gps4.png</value></text>
+					<text id="root_problem/gps/gps_signal-label">
+						<value>Is there good cellular signal?</value></text>
+					<text id="root_problem/instruct_root/sync-label">
+						<value>sync</value></text>
+					<text id="root_problem/instruct_root/sync/airplane-label">
+						<value>airplane</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/start_instruct_airplane-label">
+						<value>These instructions explain:
+
+1. How to know if Airplane Mode is ON
+
+2. How to turn Airplane Mode OFF
+
+
+
+Airplane Mode, when enabled, disables all radios on the device so that it will be safe to use on an airplane.  We need to disable Airplane Mode so that the device radios can be used.  This will allow CommCare to sync.</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane1-label">
+						<value>This is the homescreen with the Airplane Mode indicator showing.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane1.png</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane2-label">
+						<value>If the Airplane Mode indicator is showing, press the All Apps button on the homescreen.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane2.png</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane3-label">
+						<value>Inside the All Apps menu, choose the Settings button.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane3.png</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane4-label">
+						<value>Inside the settings menu, under "Wireless &amp; Networks," press the "More..." button.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane4.png</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane5-label">
+						<value>Inside the "More..." menu, you will see the Airplane Mode toggle.  When the toggle is blue, Airplane Mode is ON.  Press the toggle to turn OFF Airplane Mode.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane5.png</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane6-label">
+						<value>When Airplane Mode is OFF the toggle will be gray, and the Airplane Mode indicator icon will no longer appear at the top of the screen.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane6.png</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane7-label">
+						<value>This is the homescreen when Airplane Mode is OFF.  Notice the Airplane Mode indicator is missing from the top bar.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane7.png</value></text>
+					<text id="root_problem/sync/airplane_instruction-label">
+						<value>Follow the instructions to turn Airplane Mode OFF.
+
+
+
+Swipe backwards to review the instructions if you are unsure how to proceed, or swipe forward to continue.</value></text>
+					<text id="solve/sync/closer_to_tower-label">
+						<value>Please move closer to a cell phone tower, where you will have better signal.  CommCare requires signal to sync.</value></text>
+					<text id="solve/sync/solve_date_and_time-label">
+						<value>solve_date_and_time</value></text>
+					<text id="root_problem/sync/fix_date_and_time-label">
+						<value>The following instructions explain how to set the correct date &amp; time settings.</value></text>
+					<text id="root_problem/sync/date_and_time/copy-1-of-date_time4-label">
+						<value>The empty check boxes indicate that date &amp; time settings are not automatic.
+
+
+
+When the date &amp; time settings are automatic, we know that they will not be incorrect.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time4.png</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time/date_time5-label">
+						<value>Check the boxes for Automatic date &amp; time and Automatic time zone.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time5.png</value></text>
+					<text id="solve/missing/turn_off_case_filter-label">
+						<value>Remove the Case Filter to see all of the cases.</value></text>
+					<text id="solve/missing/turn_off_case_filter-unknown-label">
+						<value>I don't know how</value></text>
+					<text id="solve/missing/clear_case_filter-label">
+						<value>clear_case_filter</value></text>
+					<text id="solve/missing/clear_case_filter/clear_case_filter1-label">
+						<value>To clear the case list filter, tap in the search box, and use the keyboard backspace key to clear the filter.  Then press the 'Enter' key to proceed.</value><value form="image">jr://file/commcare/image/data/solve/missing/clear_case_filter/clear_case_filter1.png</value></text>
+					<text id="solve/missing/educate_user-label">
+						<value>The user may not understand that forms in CommCare only display when they are needed.
+
+
+
+The user should discuss the way specific forms become available, and how they become hidden, with their supervisor or a colleague who is strong in their use of CommCare.</value></text>
+					<text id="root_problem/slow/close_apps-label">
+						<value>Remove some apps from the Recent Apps list.
+
+
+
+Do this by dragging apps from the list to the left or right, off the screen.
+
+
+
+When the list is empty, the device will be faster.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/slow/background/background3.png</value></text>
+					<text id="root_problem/sound/turn_it_up-label">
+						<value>Turn up the volume using the volume button on the side of the device.</value></text>
+					<text id="root_problem/camera/unblock_lens-label">
+						<value>Try to remove anything that may be blocking the lens.</value></text>
+					<text id="solve/battery/charge_battery-label">
+						<value>The user should charge the battery before using the device.</value></text>
+					<text id="solve/android_locked/remember-label">
+						<value>They must try to remember the code, or the phone will have to be reset!</value></text>
+					<text id="solve/android_locked/remember-ok-label">
+						<value>OK</value></text>
+					<text id="solve/gps/turn_on-label">
+						<value>Switch the Location setting to 'On,' and then attempt to use CommCare again.</value><value form="image">jr://file/commcare/image/data/solve/gps/turn_on.png</value></text>
+					<text id="solve/gps/signal-label">
+						<value>Please skip Location questions when working in areas with poor signal strength.</value></text>
+					<text id="solve/solar_panel-label">
+						<value>solar panel</value></text>
+					<text id="solve/solar_panel/darkening_instruction-label">
+						<value>This is the most common when the voltage is low.
+
+Make sure that there are no trees around the areas where the PV solar is placed. And ensure that the solar panel is not blocked by a shadow at any time during the day.</value></text>
+					<text id="solve/solar_panel/temperature_instruction-label">
+						<value>If shading is not an issue, most likely it will be the higher than normal operating temperature of the solar panels.
+
+Make sure that there's sufficient air circulation beneath the panels and that this open space is not blocked in any way.</value></text>
+					<text id="solve/solar_panel/connection_instruction-label">
+						<value>If the panel is not overheated, you should check the cables for a bad connection. Check to make sure that that cables are not tangled or torn and that they are not exposed to water or moisture.</value></text>
+					<text id="solve/powerbank-label">
+						<value>powerbank</value></text>
+					<text id="solve/powerbank/indicator_instruction-label">
+						<value>If the indicator is not functioning, then there&#8217;s a good chance that the charging circuit or the voltage converter might be defective, or the batteries will simply no longer accept charge. 
+
+Therefore, the first thing on your to do list is to make sure the charging function is still working which means only the indicator failed.</value></text>
+					<text id="solve/powerbank/not_charging_instruction-label">
+						<value>If your power bank is not charging it&#8217;s possible that the charging circuit is broken but the batteries are still good to use. 
+
+Try to change the batteries.</value></text>
+					<text id="check/check_solve-label">
+						<value>Was the problem solved?</value></text>
+					<text id="check/che-item1-label">
+						<value>Yes</value></text>
+					<text id="check/che-item2-label">
+						<value>No</value></text>
+					<text id="solve/great-label">
+						<value>Great job fixing the problem!</value></text>
+					<text id="ticket/closing/closing_ticket-label">
+						<value>The application may have a corrupted install, a mis-configured user, or a bug.  In order to fix this, you will need help from a technician.  
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/sync/phone_defect-label">
+						<value>It appears the phone may be defective.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/sync/question6-label">
+						<value>The APN configuration may be incorrect.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/sync/needs_credit-label">
+						<value>CommCare needs credit in order to sync.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/missing/incorrect_login-label">
+						<value>The user's login information appears to be incorrect.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/missing/uninstall-label">
+						<value>CommCare appears to have been removed from the device.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/missing/multimedia_removed-label">
+						<value>It appears CommCare audio or images has been removed, or was never installed correctly.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/missing/old_commcare-label">
+						<value>The user may be using an obsolete version of CommCare
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/slow/bug-label">
+						<value>CommCare apparently has a bug that is slowing the program down, or the device has a shortage of available storage.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/sound/defective_speaker-label">
+						<value>The speaker appears to be broken or defective.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/camera/broken-label">
+						<value>The phone's camera appears to be broken.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/camera/camera_software_bug_or_full-label">
+						<value>The phone's camera software appears to be broken, or the device is full.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/broken_usable_and_unusable/battery_defect-label">
+						<value>The device's battery appears to be broken or defective.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/broken_usable_and_unusable/screen_broken-label">
+						<value>The device's screen appears to be broken or defective.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/broken_usable_and_unusable/power_button_broken-label">
+						<value>A button on the device appears to be broken or defective.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/broken_usable_and_unusable/internals_broken-label">
+						<value>The device's internals appear to be broken or defective.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/android_locked/android_locked-label">
+						<value>The user appears to be locked out of their device.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/accessory/phone_case-label">
+						<value>The case appears to be lost or broken.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/accessory/wall_charger-label">
+						<value>The wall charger appears to be lost or broken.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/accessory/solar_charger-label">
+						<value>The solar charger appears to be lost or broken.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/accessory/cable-label">
+						<value>The power cable appears to be lost or broken.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/accessory/powerbank-label">
+						<value>The powerbank appears to be lost or broken.
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/commcare_locked/incorrect_login-label">
+						<value>The user's login information may be incorrect, CommCare may have a bug, or the phone's APN may be misconfigured.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/telephone/sim_or_apn-label">
+						<value>The phone maybe be out of credit, have a mis-configured APN, or a broken SIM.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/gps/gps_broken-label">
+						<value>The phone's GPS appears to be broken.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/unsolved-label2">
+						<value>We're sorry the solution given didn't work for you.
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/phone-label">
+						<value>What phone number would you like to be contacted with?</value></text>
+					<text id="ticket/ticket-label">
+						<value>A troubleshooting ticket has been opened.  You will be contacted by your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor to help you resolve this issue.  Thank you.</value></text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value></text>
+				</translation>
+				<translation lang="amh">
+					<text id="instruction-label">
+						<value>&#4845;&#4613; &#4942;&#4653;&#4637; &#4840;&#4634;&#4843;&#4872;&#4616;&#4877;&#4616;&#4813; &#4616;&#4900;&#4755; &#4899;&#4706;&#4843; &#4720;&#4808;&#4779;&#4845; &#4656;&#4813; (&#4942;&#4779;&#4621; &#4944;&#4653;&#4656;&#4757;) &#4658;&#4614;&#4757; &#4963; &#4704;&#4638;&#4707;&#4845;&#4621; &#4963; &#4704;&#4723;&#4709;&#4620;&#4725;&#4963; &#4704;&#4946;.&#4714; &#4662;&#4619;&#4653; &#4773;&#4755; &#4704;&#4947;&#4808;&#4653; &#4707;&#4757;&#4781; &#4619;&#4845; &#4616;&#4634;&#4776;&#4656;&#4721; &#4724;&#4781;&#4754;&#4779;&#4621; &#4733;&#4877;&#4654;&#4733; &#4635;&#4661;&#4720;&#4779;&#4776;&#4843;&#4752;&#4725; &#4845;&#4648;&#4851;&#4621;&#4961;&#4961;</value></text>
+					<text id="device_type-label">
+						<value>&#4637;&#4757; &#4768;&#4845;&#4752;&#4725; &#4840;&#4638;&#4707;&#4845;&#4621;  &#4661;&#4621;&#4781; &#4752;&#4813; &#4840;&#4637;&#4725;&#4896;&#4672;&#4634;&#4813;?</value></text>
+					<text id="device_type-tecno_phone-label">
+						<value>&#4724;&#4781;&#4758; &#4638;&#4707;&#4845;&#4621;</value></text>
+					<text id="device_type-huawei_phone-label">
+						<value>&#4609;&#4768;&#4812; &#4638;&#4707;&#4845;&#4621;</value></text>
+					<text id="device_type-tecno_tablet-label">
+						<value>&#4724;&#4776;&#4758; &#4723;&#4709;&#4620;&#4725;</value></text>
+					<text id="id_number-label">
+						<value>&#4733;&#4877;&#4653; &#4843;&#4875;&#4896;&#4632;&#4813; &#4821;&#4675; &#4632;&#4616;&#4843; &#4673;&#4901;&#4653;</value></text>
+					<text id="problem_area-label">
+						<value>&#4733;&#4877;&#4649; &#4637;&#4757;&#4853;&#4752;&#4813;</value></text>
+					<text id="problem_area-broken_usable-label">
+						<value>&#4840;&#4661;&#4621;&#4781; &#4632;&#4656;&#4704;&#4653;</value></text>
+					<text id="problem_area-closing-label">
+						<value>&#4840;&#4782;&#4637;&#4780;&#4653; &#4768;&#4616;&#4632;&#4781;&#4936;&#4725;</value></text>
+					<text id="problem_area-sync-label">
+						<value>&#4776;&#4782;&#4637;&#4780;&#4653; &#4656;&#4653;&#4712;&#4653; &#4875;&#4653; &#4632;&#4648;&#4867; &#4808;&#4845;&#4637; &#4942;&#4653;&#4637; &#4616;&#4635;&#4661;&#4872;&#4707;&#4725;&#4755; &#4616;&#4632;&#4672;&#4704;&#4621; &#4768;&#4616;&#4632;&#4731;&#4621;</value></text>
+					<text id="problem_area-slow-label">
+						<value>&#4840;&#4782;&#4637;&#4780;&#4653; &#4829;&#4877; &#4635;&#4616;&#4725;</value></text>
+					<text id="problem_area-commcare_locked-label">
+						<value>&#4840;&#4782;&#4637;&#4780;&#4653; &#4632;&#4824;&#4875;&#4725;</value></text>
+					<text id="problem_area-missing-label">
+						<value>&#4840;&#4614;&#4752; &#4752;&#4872;&#4653; &#4632;&#4873;&#4848;&#4621;</value></text>
+					<text id="problem_area-android_locked-label">
+						<value>&#4840;&#4661;&#4621;&#4781; &#4632;&#4824;&#4875;&#4725;</value></text>
+					<text id="problem_area-sound-label">
+						<value>&#4853;&#4637;&#4933; &#4768;&#4616;&#4635;&#4656;&#4635;&#4725;</value></text>
+					<text id="problem_area-camera-label">
+						<value>&#4942;&#4726; &#4768;&#4616;&#4635;&#4757;&#4659;&#4725;</value></text>
+					<text id="problem_area-telephone-label">
+						<value>&#4661;&#4621;&#4781; &#4768;&#4616;&#4632;&#4848;&#4808;&#4621; &#4773;&#4755; &#4840;&#4768;&#4909;&#4653; &#4840;&#4933;&#4609;&#4941; &#4632;&#4621;&#4821;&#4781;&#4725; &#4768;&#4616;&#4632;&#4619;&#4781;&#4755; &#4768;&#4616;&#4632;&#4672;&#4709;&#4621;</value></text>
+					<text id="problem_area-battery-label">
+						<value>&#4707;&#4725;&#4650; &#4768;&#4616;&#4632;&#4661;&#4651;&#4725;</value></text>
+					<text id="problem_area-gps-label">
+						<value>&#4866;.&#4946;.&#4772;&#4661; &#4768;&#4616;&#4632;&#4661;&#4651;&#4725;</value></text>
+					<text id="problem_area-accessory-label">
+						<value>&#4840;&#4661;&#4621;&#4781; &#4632;&#4901;&#4939;&#4725; &#4808;&#4845;&#4637; &#4632;&#4656;&#4704;&#4653;</value></text>
+					<text id="root_problem/sync/sync_problem-label">
+						<value>&#4840;&#4638;&#4619;&#4669;&#4813;&#4757; &#4808;&#4845;&#4637; &#4840;&#4638;&#4619;&#4792;&#4813;&#4757; &#4632;&#4648;&#4867; &#4808;&#4848; &#4782;&#4637;&#4780;&#4653; &#4656;&#4653;&#4712;&#4653; &#4616;&#4632;&#4619;&#4781; &#4704;&#4637;&#4725;&#4638;&#4781;&#4653;&#4704;&#4725;/&#4704;&#4637;&#4725;&#4638;&#4781;&#4650;&#4704;&#4725; &#4874;&#4828; &#4637;&#4757; &#4720;&#4936;&#4896;&#4648;&#4961;&#4961;</value></text>
+					<text id="root_problem/sync/sync_problem-long_attempt-label">
+						<value>&#4709;&#4825; &#4638;&#4776;&#4653;&#4777;&#4765; &#4752;&#4872;&#4653; &#4877;&#4757; &#4840;&#4720;&#4638;&#4619;&#4813;&#4757; &#4632;&#4648;&#4867; &#4808;&#4848; &#4782;&#4637;&#4780;&#4653; &#4656;&#4653;&#4712;&#4653; &#4768;&#4845;&#4621;&#4781;&#4637;</value></text>
+					<text id="root_problem/sync/syn-item1-label">
+						<value>&#4704;&#4672;&#4845; &#4933;&#4609;&#4941; &#4840;&#4720;&#4928;&#4936; &#4709;&#4621;&#4669;&#4725; &#4635;&#4659;&#4840;&#4725;</value></text>
+					<text id="root_problem/sync/syn-item2-label">
+						<value>&#4637;&#4757;&#4637; &#4733;&#4877;&#4653; &#4768;&#4616;&#4632;&#4758;&#4653;</value></text>
+					<text id="root_problem/sync/red_airplane-label">
+						<value>&#4704;&#4840;&#4672;&#4845; &#4840;&#4720;&#4923;&#4936;&#4813; &#4933;&#4609;&#4941; &#4840;&#4768;&#4813;&#4654;&#4949;&#4619;&#4757; &#4637;&#4621;&#4781;&#4725; &#4752;&#4813; &#4840;&#4634;&#4843;&#4659;&#4840;&#4813;</value><value form="image">jr://file/commcare/image/data/root_problem/sync/red_airplane.png</value></text>
+					<text id="root_problem/sync/date_time-label">
+						<value>&#4840;&#4638;&#4707;&#4845;&#4617; &#4808;&#4845;&#4637; &#4840;&#4723;&#4709;&#4620;&#4721; &#4840;&#4672;&#4757;&#4755; &#4656;&#4819;&#4725; &#4677;&#4757;&#4709;&#4653; &#4621;&#4781; &#4752;&#4813;&#4961;&#4961;</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time-label">
+						<value>&#4672;&#4757;_&#4773;&#4755;_&#4656;&#4819;&#4725;</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time/start_instruct_date_time-label">
+						<value>&#4845;&#4613; &#4632;&#4621;&#4821;&#4781;&#4725; &#4840;&#4638;&#4707;&#4845;&#4617;&#4757; &#4808;&#4845;&#4637; &#4840;&#4723;&#4709;&#4620;&#4721;&#4757; &#4672;&#4757;&#4755; &#4656;&#4819;&#4725; &#4677;&#4757;&#4709;&#4653; &#4773;&#4757;&#4852;&#4725; &#4635;&#4661;&#4720;&#4779;&#4776;&#4621; &#4773;&#4757;&#4848;&#4634;&#4731;&#4621; &#4843;&#4659;&#4843;&#4621;&#4961;&#4961;
+
+&#4840;&#4672;&#4757; &#4773;&#4755; &#4656;&#4819;&#4725; &#4677;&#4757;&#4709;&#4653; &#4725;&#4781;&#4781;&#4621; &#4779;&#4621;&#4614;&#4752; &#4720;&#4896;&#4675;&#4634;&#4813; &#4808;&#4848; &#4638;&#4707;&#4845;&#4621; &#4768;&#4949; &#4632;&#4877;&#4707;&#4725; &#4768;&#4845;&#4733;&#4621;&#4637;&#4961;&#4961; &#4782;&#4637;&#4780;&#4653;&#4637; &#4704;&#4725;&#4781;&#4781;&#4621; &#4776;&#4656;&#4653;&#4712;&#4653; &#4875;&#4653; &#4658;&#4757;&#4781; /&#4635;&#4661;&#4635;&#4635;&#4725;/ &#4808;&#4845;&#4637; &#4632;&#4648;&#4867; &#4632;&#4619;&#4781; &#4808;&#4845;&#4637; &#4632;&#4672;&#4704;&#4621; &#4768;&#4845;&#4733;&#4621;&#4961;&#4961;</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time/date_time1-label">
+						<value>&#4704;&#4614;&#4637; &#4773;&#4661;&#4781;&#4650;&#4757; &#4619;&#4845; &#4843;&#4616;&#4813;&#4757; &#4840;&#4609;&#4617;&#4637; &#4768;&#4949; &#4637;&#4755;&#4620; &#4808;&#4845;&#4637; &#4636;&#4753; &#4637;&#4648;&#4901;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time1.png</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time/date_time2-label">
+						<value>&#4704;&#4609;&#4617;&#4637; &#4768;&#4949; &#4637;&#4755;&#4620; &#4808;&#4845;&#4637; &#4636;&#4753; &#4619;&#4845; &#4843;&#4616;&#4813;&#4757; &#4660;&#4722;&#4757;&#4877; &#4808;&#4845;&#4637; &#4677;&#4757;&#4709;&#4653; &#4637;&#4648;&#4901;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time2.png</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time/date_time3-label">
+						<value>&#4635;&#4661;&#4720;&#4779;&#4776;&#4843;&#4813; &#4776;&#4720;&#4776;&#4936;&#4720; &#4704;&#4739;&#4619; &#4661;&#4653;&#4768;&#4720; &#4781;&#4941;&#4617;&#4757; &#4773;&#4661;&#4776;&#4637;&#4723;&#4872;&#4765;/&#4637;&#4723;&#4872;&#4762; &#4853;&#4648;&#4661; &#4808;&#4848; &#4723;&#4733; &#4635;&#4664;&#4709;&#4616;&#4621; &#4808;&#4845;&#4637; &#4773;&#4661;&#4781;&#4654;&#4621; &#4635;&#4853;&#4648;&#4877;&#4961;&#4961; &#4704;&#4661;&#4653;&#4768;&#4725; &#4781;&#4941;&#4621; &#4813;&#4661;&#4901; &#4672;&#4757; &#4773;&#4755; &#4656;&#4819;&#4725; &#4840;&#4634;&#4616;&#4813;&#4757; &#4845;&#4637;&#4648;&#4897;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time3.png</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time/date_time4-label">
+						<value>&#4776;&#4723;&#4728;&#4813; &#4843;&#4616;&#4813; &#4672;&#4845; &#4659;&#4901;&#4757; &#4840;&#4634;&#4843;&#4659;&#4840;&#4813; &#4672;&#4757; &#4773;&#4755; &#4656;&#4819;&#4725; &#4725;&#4781;&#4621;&#4621; &#4768;&#4845;&#4848;&#4616;&#4637; &#4840;&#4634;&#4621; &#4752;&#4813;&#4961;&#4961; &#4658;&#4661;&#4720;&#4633; &#4768;&#4813;&#4726;&#4635;&#4722;&#4781; &#4672;&#4757;&#4755; &#4656;&#4819;&#4725;&#4757; &#4773;&#4757;&#4850;&#4609;&#4637; &#4768;&#4813;&#4726;&#4635;&#4722;&#4781; &#4840;&#4656;&#4819;&#4725; &#4781;&#4621;&#4621; &#4704;&#4651;&#4657; &#4773;&#4757;&#4850;&#4843;&#4661;&#4720;&#4779;&#4781;&#4621; &#4776;&#4720;&#4936;&#4616;&#4872; &#4840;&#4635;&#4632;&#4621;&#4776;&#4731; &#4659;&#4901;&#4753;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time4.png</value></text>
+					<text id="root_problem/sync/copy-1-of-date_time-label">
+						<value>&#4768;&#4609;&#4757; &#4843;&#4616;&#4813; &#4672;&#4757; &#4773;&#4755; &#4656;&#4819;&#4725; &#4725;&#4781;&#4621;&#4621; &#4752;&#4813;&#4961;&#4961;</value></text>
+					<text id="root_problem/sync/question4-label">
+						<value>&#4720;&#4896;&#4675;&#4634;&#4813; &#4637;&#4621;&#4781;&#4725; &#4768;&#4616;&#4813;</value></text>
+					<text id="root_problem/sync/question3-label">
+						<value>&#4661;&#4621;&#4777; &#4610;&#4659;&#4709; &#4768;&#4616;&#4813;</value></text>
+					<text id="root_problem/missing/what_is_missing-label">
+						<value>&#4840;&#4878;&#4848;&#4616;&#4813; &#4637;&#4757;&#4853;&#4752;&#4813;</value></text>
+					<text id="root_problem/missing/what_is_missing-commcare-label">
+						<value>&#4782;&#4637;&#4780;&#4653;</value></text>
+					<text id="root_problem/missing/what_is_missing-form-label">
+						<value>&#4942;&#4653;&#4637;</value></text>
+					<text id="root_problem/missing/what_is_missing-module-label">
+						<value>&#4638;&#4865;&#4621;</value></text>
+					<text id="root_problem/missing/what_is_missing-client-label">
+						<value>&#4720;&#4896;&#4675;&#4634;</value></text>
+					<text id="root_problem/missing/what_is_missing-multimedia-label">
+						<value>&#4853;&#4637;&#4933; &#4808;&#4845;&#4637; &#4637;&#4661;&#4621;</value></text>
+					<text id="root_problem/missing/logged_in-label">
+						<value>&#4720;&#4896;&#4675;&#4634;&#4813; &#4808;&#4848; &#4782;&#4637;&#4780;&#4653; &#4662;&#4941;&#4725;&#4812;&#4653; &#4704;&#4725;&#4781;&#4781;&#4621; &#4622;&#4874;&#4757; &#4755; &#4658;&#4757;&#4781; &#4768;&#4853;&#4653;&#4883;&#4621;</value></text>
+					<text id="root_problem/missing/login-label">
+						<value>&#4632;&#4877;&#4707;&#4725;</value></text>
+					<text id="root_problem/missing/login/start_login_instruct-label">
+						<value>&#4773;&#4757;&#4853; &#4720;&#4896;&#4675;&#4634; &#4808;&#4848; &#4782;&#4637;&#4780;&#4653; &#4662;&#4941;&#4725;&#4812;&#4653; &#4704;&#4725;&#4781;&#4781;&#4621; &#4658;&#4872;&#4707; &#4840;&#4632;&#4864;&#4632;&#4650;&#4843;&#4813; &#4773;&#4661;&#4781;&#4650;&#4757; &#4808;&#4845;&#4637; &#4635;&#4843; &#4773;&#4757;&#4850;&#4826;&#4613; &#4845;&#4632;&#4661;&#4619;&#4621;&#4961;&#4961;&#4840;&#4632;&#4877;&#4706;&#4843;&#4813; &#4661;&#4637; &#4725;&#4781;&#4621;&#4621; &#4632;&#4614;&#4753;&#4757; &#4616;&#4635;&#4648;&#4875;&#4872;&#4901; &#4616;&#4632;&#4877;&#4707;&#4843;&#4813; &#4661;&#4637; &#4725;&#4777;&#4648;&#4725; &#4661;&#4906;/&#4661;&#4901;&#4961;&#4961;&#4720;&#4896;&#4675;&#4634;&#4813; &#4658;&#4757;&#4781; &#4658;&#4843;&#4848;&#4653;&#4877; &#4635;&#4661;&#4720;&#4811;&#4621; &#4843;&#4616;&#4616;&#4704;&#4725; &#4752;&#4872;&#4653; &#4706;&#4758;&#4653; &#4656;&#4653;&#4712;&#4653; &#4658;&#4757;&#4781; &#4635;&#4853;&#4648;&#4874;&#4843;&#4813; &#4875;&#4653; &#4637;&#4757;&#4637; &#4673;&#4901;&#4653; &#4773;&#4757;&#4848;&#4620;&#4616; &#4632;&#4632;&#4621;&#4776;&#4725; &#4961;&#4961; &#4776;&#4826;&#4613; &#4704;&#4723;&#4733; &#4843;&#4616;&#4813; &#4707;&#4653; &#4656;&#4635;&#4843;&#4810; &#4752;&#4813;&#4961;&#4961;&#4704;&#4656;&#4635;&#4843;&#4810; &#4707;&#4653; &#4813;&#4661;&#4901; &#4843;&#4616;&#4813; &#4672;&#4757; &#4773;&#4755; &#4656;&#4819;&#4725; &#4840;&#4677;&#4653;&#4709; &#4672;&#4757; &#4632;&#4614;&#4753;&#4757;&#4757; &#4632;&#4632;&#4621;&#4776;&#4725;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/missing/login/start_login_instruct.png</value></text>
+					<text id="root_problem/missing/copy-1-of-logged_in-label">
+						<value>&#4720;&#4896;&#4675;&#4634;&#4813; &#4808;&#4848; &#4658;&#4661;&#4720;&#4633; &#4704;&#4725;&#4781;&#4781;&#4621; &#4872;&#4709;&#4721;&#4811;&#4621; &#4773;&#4757;&#4850;&#4609;&#4637; &#4658;&#4757;&#4781; &#4768;&#4853;&#4653;&#4883;&#4621;&#4961;&#4961;</value></text>
+					<text id="root_problem/missing/case_filter-label">
+						<value>&#4840;&#4780;&#4829; &#4829;&#4653;&#4829;&#4653; &#4938;&#4621;&#4720;&#4653; &#4635;&#4853;&#4648;&#4874;&#4843;&#4813; &#4704;&#4725;&#4781;&#4781;&#4621; &#4845;&#4656;&#4651;&#4621;&#4961;&#4961;</value></text>
+					<text id="root_problem/missing/case_filter1-label">
+						<value>&#4873;&#4851;&#4845;_&#4635;&#4899;&#4651;&#4725;1</value></text>
+					<text id="root_problem/missing/case_filter1/casefilter1-label">
+						<value>&#4840;&#4780;&#4829; &#4829;&#4653;&#4829;&#4653; &#4635;&#4813;&#4907;&#4813; &#4704;&#4725;&#4781;&#4781;&#4621; &#4776;&#4656;&#4651; &#4840;&#4720;&#4936;&#4616;&#4873;&#4725; &#4780;&#4829; &#4829;&#4653;&#4829;&#4654;&#4733; &#4709;&#4731; &#4845;&#4723;&#4843;&#4617;&#4963; &#4776;&#4826;&#4613; &#4704;&#4723;&#4733; &#4773;&#4757;&#4848;&#4634;&#4723;&#4840;&#4813;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/missing/case_filter1/casefilter1.png</value></text>
+					<text id="root_problem/missing/case_filter1/casefilter2-label">
+						<value>&#4840;&#4780;&#4829; &#4829;&#4653;&#4829;&#4653; &#4635;&#4813;&#4907;&#4813; &#4704;&#4725;&#4781;&#4781;&#4621; &#4779;&#4621;&#4656;&#4651;&#4963; &#4840;&#4638;&#4869;&#4617; &#4609;&#4617;&#4637; &#4780;&#4829; &#4829;&#4653;&#4829;&#4654;&#4733; &#4723;&#4843;&#4616;&#4613; &#4808;&#4845;&#4637; &#4723;&#4843;&#4616;&#4669;&#4961;&#4961;&#4723;&#4779;&#4634; &#4779;&#4621;&#4720;&#4872;&#4760; &#4773;&#4755; &#4840;&#4780;&#4829; &#4829;&#4653;&#4829;&#4653; &#4635;&#4813;&#4907;&#4813; &#4779;&#4621;&#4656;&#4651; &#4963; &#4723;&#4779;&#4634;&#4813; &#4840;&#4768;&#4872;&#4621;&#4877;&#4622;&#4725; &#4638;&#4869;&#4617;&#4757; &#4616;&#4632;&#4896;&#4672;&#4637; &#4632;&#4632;&#4829;&#4872;&#4705;&#4757; &#4616;&#4635;&#4648;&#4875;&#4872;&#4901; &#4840;&#4723;&#4779;&#4634;&#4814;&#4733; &#4635;&#4661;&#4720;&#4851;&#4848;&#4650;&#4843; &#4638;&#4869;&#4617;&#4757; &#4632;&#4632;&#4621;&#4776;&#4725;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/missing/case_filter1/casefilter2.png</value></text>
+					<text id="root_problem/slow/background-label">
+						<value>&#4776;&#4704;&#4661;&#4720; &#4864;&#4653;&#4707; &#4704;&#4773;&#4757;&#4853; &#4874;&#4828; &#4840;&#4634;&#4656;&#4649; &#4709;&#4825; &#4638;&#4707;&#4845;&#4621; &#4768;&#4950;&#4733; &#4768;&#4617;&#4961;&#4961;</value></text>
+					<text id="root_problem/slow/background-unknown-label">
+						<value>&#4773;&#4757;&#4851;&#4872;&#4765; &#4773;&#4653;&#4851;&#4765;</value></text>
+					<text id="root_problem/slow/current_apps_instruct-label">
+						<value>current_apps_instruct</value></text>
+					<text id="root_problem/instruct_root/slow/background/start_instruct_background-label">
+						<value>&#4845;&#4613; &#4725;&#4821;&#4827;&#4829; &#4704;&#4768;&#4609;&#4757; &#4656;&#4819;&#4725; &#4840;&#4725;&#4763;&#4813; &#4638;&#4707;&#4845;&#4621; &#4768;&#4949; &#4773;&#4840;&#4656;&#4651; &#4773;&#4757;&#4848;&#4614;&#4752; &#4773;&#4757;&#4852;&#4725; &#4635;&#4877;&#4760;&#4725; &#4773;&#4757;&#4848;&#4637;&#4757;&#4733;&#4621; &#4845;&#4872;&#4621;&#4931;&#4621;&#4961;&#4961; &#4709;&#4825; &#4638;&#4707;&#4845;&#4621; &#4768;&#4950;&#4733; &#4776;&#4614;&#4753; &#4773;&#4757;&#4852;&#4725; &#4632;&#4829;&#4875;&#4725; &#4773;&#4757;&#4851;&#4616;&#4709;&#4757; &#4843;&#4659;&#4843;&#4621;&#4961;&#4961;</value></text>
+					<text id="root_problem/instruct_root/slow/question3-label">
+						<value>&#4704;&#4632;&#4864;&#4632;&#4650;&#4843; " &#4840;&#4677;&#4653;&#4709; &#4768;&#4950;&#4733;" &#4840;&#4634;&#4616;&#4813;&#4757; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;&#4840;&#4826;&#4613; &#4704;&#4720;&#4757; &#4872;&#4933;&#4723;&#4755; &#4632;&#4872;&#4763; &#4776;&#4661;&#4621;&#4781; &#4661;&#4621;&#4781; &#4773;&#4757;&#4850;&#4609;&#4637; &#4704;&#4768;&#4757;&#4853;&#4654;&#4845;&#4853; &#4661;&#4650;&#4725; &#4808;&#4845;&#4637; &#4773;&#4725;&#4637; &#4768;&#4845;&#4752;&#4725; &#4845;&#4616;&#4843;&#4843;&#4621;&#4961;&#4961;&#4609;&#4620;&#4637; &#4776;&#4609;&#4617;&#4637; &#4638;&#4707;&#4845;&#4621; &#4768;&#4950;&#4733; &#4635;&#4813;&#4907; &#4704;&#4720;&#4757; &#4704;&#4672;&#4765; &#4808;&#4845;&#4637; &#4704;&#4877;&#4651; &#4704;&#4777;&#4621; &#4845;&#4872;&#4763;&#4621;&#4963; &#4704;&#4632;&#4779;&#4776;&#4621; &#4704;&#4777;&#4621; &#4877;&#4757; &#4704;&#4941;&#4929;&#4637; &#4768;&#4845;&#4872;&#4765;&#4637;&#4768;&#4709;&#4827;&#4763;&#4813;&#4757; &#4874;&#4828; &#4704;&#4662;&#4661;&#4725; &#4632;&#4661;&#4632;&#4654;&#4733; &#4829;&#4653;&#4829;&#4653; &#4845;&#4723;&#4843;&#4621;&#4961;&#4961;&#4704;&#4941;&#4929;&#4637; &#4773;&#4757;&#4848; &#4672;&#4661;&#4725; &#4768;&#4845;&#4632;&#4661;&#4621;&#4637;&#4963; &#4773;&#4757;&#4848; &#4707;&#4781; &#4704;&#4720;&#4757; &#4845;&#4632;&#4661;&#4619;&#4621;&#4961;&#4961;&#4638;&#4707;&#4845;&#4621; &#4672;&#4942; &#4619;&#4845; &#4843;&#4616; &#4704;&#4720;&#4757; &#4808;&#4845;&#4637; &#4840;&#4773;&#4661;&#4781;&#4650;&#4757; &#4704;&#4720;&#4757; &#4619;&#4845; &#4845;&#4723;&#4843;&#4621;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/slow/background/background1.png</value></text>
+					<text id="root_problem/instruct_root/slow/background/background2-label">
+						<value>&#4709;&#4825; &#4638;&#4707;&#4845;&#4621; &#4768;&#4950;&#4733; &#4651;&#4757; &#4658;&#4843;&#4649;&#4873; &#4808;&#4845;&#4637; &#4658;&#4656;&#4649;&#4963; &#4829;&#4653;&#4829;&#4649; &#4633;&#4617; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961;&#4872;&#4933;&#4723;&#4813; &#4704;&#4720;&#4616;&#4843;&#4841; &#4768;&#4757;&#4853;&#4654;&#4845;&#4853; &#4645;&#4650;&#4726;&#4733; &#4619;&#4845; &#4845;&#4616;&#4843;&#4843;&#4621;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/slow/background/background2.png</value></text>
+					<text id="root_problem/sound/volume-label">
+						<value>&#4853;&#4637;&#4933; &#4632;&#4661;&#4907;&#4813; &#4776;&#4941; &#4720;&#4848;&#4653;&#4883;&#4621;&#4961;&#4961;</value></text>
+					<text id="root_problem/camera/blocked-label">
+						<value>&#4840;&#4779;&#4636;&#4651;&#4813; &#4620;&#4757; &#4720;&#4776;&#4621;&#4781;&#4623;&#4621;&#4961;&#4961;</value></text>
+					<text id="root_problem/camera/broken-label">
+						<value>&#4840;&#4779;&#4636;&#4651;&#4813; &#4620;&#4757; &#4720;&#4656;&#4709;&#4655;&#4621;&#4961;&#4961;</value></text>
+					<text id="root_problem/broken_usable/appears_broken-label">
+						<value>&#4840;&#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4777; &#4840;&#4725;&#4763;&#4813; &#4768;&#4779;&#4617; &#4752;&#4813; &#4840;&#4720;&#4656;&#4704;&#4648;&#4813;&#4961;&#4961;</value></text>
+					<text id="root_problem/broken_usable/appears_broken-screen-label">
+						<value>&#4840;&#4638;&#4707;&#4845;&#4617; &#4632;&#4661;&#4723;&#4808;&#4725;</value></text>
+					<text id="root_problem/broken_usable/appears_broken-body-label">
+						<value>&#4768;&#4779;&#4617;</value></text>
+					<text id="root_problem/broken_usable/appears_broken-buttons-label">
+						<value>&#4704;&#4720;&#4753;</value></text>
+					<text id="root_problem/broken_usable/appears_broken-internals-label">
+						<value>&#4813;&#4661;&#4899;&#4810; &#4733;&#4877;&#4653;</value></text>
+					<text id="root_problem/broken_usable/appears_broken-battery-label">
+						<value>&#4707;&#4725;&#4650;&#4813;</value></text>
+					<text id="root_problem/broken_usable_and_unusable/appears_broken-usb_port-label">
+						<value>&#4731;&#4653;&#4869; &#4635;&#4853;&#4648;&#4874;&#4843;&#4813; &#4950;&#4653;&#4725;</value></text>
+					<text id="root_problem/broken_usable_and_unusable/appears_broken-audio_jack-label">
+						<value>&#4853;&#4637;&#4933; &#4632;&#4661;&#4634;&#4843;&#4813; &#4950;&#4653;&#4725;</value></text>
+					<text id="root_problem/broken_usable/try_charge-label">
+						<value>&#4821;&#4675;&#4813;&#4757; &#4731;&#4653;&#4869; &#4616;&#4635;&#4853;&#4648;&#4877; &#4638;&#4781;&#4651;&#4729; &#4752;&#4704;&#4653;</value></text>
+					<text id="root_problem/android_locked/remember-label">
+						<value>&#4661;&#4621;&#4777;&#4757; &#4650;&#4660;&#4725; &#4635;&#4853;&#4648;&#4877; &#4776;&#4720;&#4648;&#4659; &#4963; &#4845;&#4613;&#4757;&#4757; &#4616;&#4635;&#4853;&#4648;&#4877; &#4704;&#4720;&#4848;&#4875;&#4875;&#4634; &#4720;&#4638;&#4781;&#4655;&#4621; &#4773;&#4757;&#4850;&#4609;&#4637; &#4616;&#4635;&#4808;&#4677;&#4637; &#4720;&#4733;&#4623;&#4621;&#4961;&#4961;</value></text>
+					<text id="root_problem/accessory/which_accessory-label">
+						<value>$Which accessory has the problem?</value></text>
+					<text id="root_problem/accessory/which_accessory-phone_case-label">
+						<value>&#4638;&#4707;&#4845;&#4621; &#4672;&#4942;</value></text>
+					<text id="root_problem/accessory/which_accessory-wall_charger-label">
+						<value>&#4758;&#4653;&#4635;&#4621; &#4731;&#4653;&#4869; &#4635;&#4853;&#4648;&#4874;&#4843; (&#4776;&#4877;&#4650;&#4853; &#4739;&#4845;&#4621;)</value></text>
+					<text id="root_problem/accessory/which_accessory-solar_charger-label">
+						<value>&#4946;.&#4714; &#4662;&#4619;&#4653; &#4947;&#4752;&#4621;</value></text>
+					<text id="root_problem/accessory/which_accessory-cable-label">
+						<value>&#4841;.&#4772;&#4661;.&#4706; &#4731;&#4653;&#4869; &#4635;&#4853;&#4648;&#4874;&#4843;</value></text>
+					<text id="root_problem/accessory/which_accessory-powerbank-label">
+						<value>&#4947;&#4808;&#4653; &#4707;&#4757;&#4781;</value></text>
+					<text id="root_problem/accessory/solar_panel_problem-label">
+						<value>&#4704;&#4946;.&#4714; &#4662;&#4619;&#4653; &#4947;&#4752;&#4621; &#4619;&#4845; &#4843;&#4875;&#4896;&#4632;&#4813; &#4733;&#4877;&#4653; &#4637;&#4757;&#4853;&#4752;&#4813;?</value></text>
+					<text id="root_problem/accessory/solar_panel_problem-darkening-label">
+						<value>&#4635;&#4901;&#4619;&#4725; &#4773;&#4755; &#4632;&#4901;&#4678;&#4653;</value></text>
+					<text id="root_problem/accessory/solar_panel_problem-high_temperature-label">
+						<value>&#4776;&#4941;&#4720;&#4763; &#4840;&#4614;&#4752; &#4840;&#4634;&#4656;&#4651; &#4633;&#4672;&#4725; &#4632;&#4758;&#4653;</value></text>
+					<text id="root_problem/accessory/solar_panel_problem-connection-label">
+						<value>&#4840;&#4635;&#4872;&#4755;&#4763;&#4813; &#4780;&#4709;&#4621; &#4704;&#4848;&#4757;&#4709; &#4768;&#4616;&#4632;&#4843;&#4829;</value></text>
+					<text id="root_problem/accessory/solar_panel_problem-broken-label">
+						<value>&#4632;&#4656;&#4704;&#4653;</value></text>
+					<text id="root_problem/accessory/solar_panel_problem-lost_stolen-label">
+						<value>&#4632;&#4901;&#4939;&#4725;</value></text>
+					<text id="root_problem/accessory/powerbank_problem-label">
+						<value>&#4704;&#4947;&#4808;&#4653; &#4707;&#4757;&#4781; &#4619;&#4845; &#4843;&#4875;&#4896;&#4632;&#4813; &#4733;&#4877;&#4653; &#4637;&#4757;&#4853;&#4752;&#4813;?</value></text>
+					<text id="root_problem/accessory/powerbank_problem-indicator-label">
+						<value>&#4896;&#4683;&#4634;&#4813;(&#4704;&#4947;&#4808;&#4653; &#4707;&#4757;&#4781; &#4632;&#4661;&#4723;&#4808;&#4725; &#4619;&#4845; &#4840;&#4634;&#4723;&#4845; &#4840;&#4731;&#4653;&#4869; &#4637;&#4621;&#4781;&#4725;)</value></text>
+					<text id="root_problem/accessory/powerbank_problem-not_charging-label">
+						<value>&#4731;&#4653;&#4869; &#4768;&#4616;&#4635;&#4853;&#4648;&#4877;</value></text>
+					<text id="root_problem/accessory/powerbank_problem-loose_usb_port-label">
+						<value>&#4841;.&#4772;&#4661;.&#4706; &#4632;&#4656;&#4778;&#4843;&#4813; &#4768;&#4616;&#4632;&#4901;&#4704;&#4677; &#4808;&#4845;&#4637; &#4632;&#4619;&#4672;&#4677;</value></text>
+					<text id="gps/gps_enabled-label">
+						<value>&#4866;.&#4946;.&#4772;&#4661; &#4845;&#4656;&#4651;&#4621;</value></text>
+					<text id="root_problem/gps/gps_enabled-unknown-label">
+						<value>&#4877;&#4757;&#4827;&#4708; &#4840;&#4616;&#4765;&#4637;</value></text>
+					<text id="root_problem/gps/gps_enabled1-label">
+						<value>&#4866;.&#4946;.&#4772;&#4661;_&#4632;&#4709;&#4651;&#4725;1</value></text>
+					<text id="root_problem/gps/gps_enabled1/question5-label">
+						<value>&#4845;&#4613; &#4725;&#4821;&#4827;&#4829; &#4866;.&#4946;.&#4772;&#4661; &#4773;&#4757;&#4852;&#4725; &#4635;&#4709;&#4651;&#4725; &#4768;&#4757;&#4848;&#4634;&#4731;&#4621; &#4843;&#4709;&#4651;&#4651;&#4621;&#4961;&#4961;</value></text>
+					<text id="root_problem/gps/gps_enabled1/gps3-label">
+						<value>&#4704;&#4635;&#4661;&#4720;&#4779;&#4776;&#4843;&#4813; &#4636;&#4753; &#4661;&#4653;&#4963; "&#4840;&#4877;&#4621;" &#4704;&#4634;&#4616;&#4813; &#4653;&#4773;&#4661; &#4661;&#4653; "&#4710;&#4723;" &#4840;&#4634;&#4616;&#4813;&#4757; &#4637;&#4648;&#4901;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/gps/gps_enabled1/gps3.png</value></text>
+					<text id="root_problem/gps/gps_enabled1/gps4-label">
+						<value>&#4704;&#4710;&#4723; &#4632;&#4637;&#4648;&#4907; &#4636;&#4753; &#4661;&#4653;&#4963; &#4704;&#4872;&#4929; &#4768;&#4755;&#4725; &#4704;&#4777;&#4621; &#4773;&#4661;&#4810;&#4729;&#4757; &#4845;&#4632;&#4621;&#4776;&#4721;</value><value form="image">jr://file/commcare/image/data/root_problem/gps/gps_enabled1/gps4.png</value></text>
+					<text id="root_problem/gps/gps_signal-label">
+						<value>&#4901;&#4649; &#4840;&#4614;&#4752; &#4638;&#4707;&#4845;&#4621; &#4756;&#4725;&#4814;&#4653;&#4781; &#4768;&#4616;</value></text>
+					<text id="root_problem/instruct_root/sync-label">
+						<value>&#4658;&#4757;&#4781;</value></text>
+					<text id="root_problem/instruct_root/sync/airplane-label">
+						<value>&#4772;&#4653;&#4949;&#4620;&#4757;</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/start_instruct_airplane-label">
+						<value>&#4845;&#4613; &#4632;&#4632;&#4650;&#4843; &#4840;&#4634;&#4872;&#4621;&#4928;&#4813;:
+
+1. &#4772;&#4653;&#4949;&#4620;&#4757; &#4638;&#4853; &#4632;&#4709;&#4651;&#4721;&#4757; &#4773;&#4757;&#4852;&#4725; &#4773;&#4755;&#4675;&#4616;&#4757;
+
+2. &#4772;&#4653;&#4949;&#4620;&#4757; &#4638;&#4853; &#4632;&#4901;&#4939;&#4721;&#4757; &#4773;&#4757;&#4852;&#4725; &#4773;&#4755;&#4675;&#4616;&#4757;
+
+
+
+&#4772;&#4653;&#4949;&#4620;&#4757; &#4638;&#4853; &#4963; &#4704;&#4634;&#4704;&#4651;&#4704;&#4725; &#4656;&#4819;&#4725; &#4704;&#4661;&#4621;&#4781; &#4619;&#4845; &#4843;&#4617;&#4725;&#4757; &#4609;&#4617;&#4757;&#4637; &#4652;&#4850;&#4846;&#4758;&#4733; &#4843;&#4896;&#4939;&#4621; &#4845;&#4613;&#4637; &#4772;&#4653;&#4949;&#4620;&#4757;  &#4616;&#4632;&#4896;&#4672;&#4637; &#4768;&#4632;&#4730; &#4845;&#4614;&#4755;&#4621;&#4961;&#4961; &#4772;&#4653;&#4949;&#4620;&#4757; &#4638;&#4853; &#4658;&#4896;&#4939; &#4704;&#4661;&#4621;&#4781; &#4619;&#4845; &#4843;&#4617;&#4725;&#4757; &#4609;&#4617;&#4757;&#4637; &#4652;&#4850;&#4846;&#4758;&#4733; &#4845;&#4656;&#4651;&#4617;&#4961;&#4961; &#4845;&#4613;&#4637; &#4782;&#4637;&#4780;&#4653; &#4658;&#4757;&#4781; &#4773;&#4757;&#4850;&#4843;&#4848;&#4653;&#4877; &#4843;&#4848;&#4653;&#4875;&#4621; &#4808;&#4845;&#4637; &#4843;&#4661;&#4733;&#4619;&#4621;&#4961;&#4961;</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane1-label">
+						<value>&#4704;&#4614;&#4637; &#4773;&#4661;&#4781;&#4650;&#4757; &#4619;&#4845; &#4840;&#4634;&#4723;&#4840;&#4813; &#4840;&#4768;&#4813;&#4654;&#4949;&#4619;&#4757; &#4637;&#4621;&#4781;&#4725; &#4773;&#4757;&#4850;&#4613; &#4845;&#4632;&#4661;&#4619;&#4621;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane1.png</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane2-label">
+						<value>&#4840;&#4768;&#4813;&#4654;&#4949;&#4619;&#4757; &#4638;&#4853; &#4637;&#4621;&#4781;&#4725; &#4773;&#4843;&#4659;&#4840; &#4776;&#4614;&#4752;&#4963; &#4704;&#4614;&#4637; &#4773;&#4661;&#4781;&#4650;&#4757; &#4619;&#4845; &#4843;&#4616;&#4813;&#4757; &#4840;&#4609;&#4617;&#4637; &#4638;&#4707;&#4845;&#4621; &#4768;&#4949; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane2.png</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane3-label">
+						<value>&#4840;&#4609;&#4617;&#4637; &#4638;&#4707;&#4845;&#4621; &#4768;&#4949; &#4829;&#4653;&#4829;&#4653; /&#4636;&#4753;/ &#4813;&#4661;&#4901;&#4963; &#4840;&#4635;&#4661;&#4720;&#4779;&#4776;&#4843; &#4704;&#4720;&#4753;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane3.png</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane4-label">
+						<value>&#4840;&#4609;&#4617;&#4637; &#4638;&#4707;&#4845;&#4621; &#4768;&#4949; &#4829;&#4653;&#4829;&#4653; /&#4636;&#4753;/ &#4813;&#4661;&#4901;&#4963; "&#4704;&#4872;&#4632;&#4853; &#4768;&#4621;&#4707;&#4755; &#4756;&#4725;&#4814;&#4653;&#4781;" &#4661;&#4653; &#4840;&#4634;&#4872;&#4760;&#4813;&#4757; "&#4720;&#4904;&#4635;&#4650; &#8230;" &#4840;&#4634;&#4616;&#4813;&#4757; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane4.png</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane5-label">
+						<value>Inside the "More..." menu, you will see the Airplane Mode toggle.  When the toggle is blue, Airplane Mode is ON.  Press the toggle to turn OFF Airplane Mode.</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane5.png</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane6-label">
+						<value>&#4840;&#4768;&#4813;&#4654;&#4949;&#4619;&#4753;&#4757; &#4638;&#4853; &#4637;&#4621;&#4781;&#4725; &#4704;&#4634;&#4896;&#4939;&#4704;&#4725; &#4808;&#4677;&#4725; &#4632;&#4672;&#4840;&#4650;&#4843;&#4813; &#4877;&#4651;&#4907; &#4672;&#4616;&#4637; &#4843;&#4659;&#4843;&#4621;&#4961;&#4961;&#4963; &#4840;&#4768;&#4813;&#4654;&#4949;&#4619;&#4757; &#4638;&#4853; &#4632;&#4616;&#4843; &#4637;&#4621;&#4781;&#4725; &#4704;&#4638;&#4707;&#4845;&#4617; &#4773;&#4661;&#4781;&#4650;&#4757; &#4704;&#4619;&#4845; &#4704;&#4777;&#4621; &#4768;&#4845;&#4723;&#4845;&#4637;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane6.png</value></text>
+					<text id="root_problem/instruct_root/sync/airplane/airplane7-label">
+						<value>&#4772;&#4653;&#4949;&#4620;&#4757; &#4638;&#4853;  &#4704;&#4634;&#4896;&#4939;&#4704;&#4725; &#4656;&#4819;&#4725; &#4840;&#4661;&#4621;&#4777; &#4614;&#4637;&#4773;&#4661;&#4781;&#4650;&#4757; &#4773;&#4757;&#4848;&#4826;&#4613; &#4845;&#4632;&#4661;&#4619;&#4621;&#4961;&#4961; &#4704;&#4661;&#4621;&#4777; &#4704;&#4619;&#4845; &#4704;&#4777;&#4621; &#4840;&#4772;&#4653;&#4949;&#4620;&#4757; &#4638;&#4853;  &#4637;&#4621;&#4776;&#4925; &#4632;&#4901;&#4939;&#4721;&#4757; &#4635;&#4661;&#4720;&#4811;&#4621; &#4768;&#4616;&#4709;&#4669;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/airplane/airplane7.png</value></text>
+					<text id="root_problem/sync/airplane_instruction-label">
+						<value>&#4840;&#4768;&#4813;&#4654;&#4949;&#4619;&#4757; &#4638;&#4853; &#4632;&#4616;&#4843; &#4637;&#4621;&#4781;&#4725; &#4616;&#4635;&#4901;&#4939;&#4725; &#4845;&#4613;&#4757;&#4757; &#4725;&#4821;&#4827;&#4829; &#4632;&#4776;&#4720;&#4621;&#4961;&#4961; &#4773;&#4757;&#4852;&#4725; &#4632;&#4672;&#4896;&#4621; &#4773;&#4757;&#4848;&#4634;&#4731;&#4621; &#4877;&#4651; &#4840;&#4634;&#4843;&#4875;&#4707; &#4776;&#4614;&#4752; &#4840;&#4725;&#4821;&#4827;&#4825;&#4757; &#4632;&#4648;&#4867; &#4616;&#4635;&#4840;&#4725; &#4840;&#4638;&#4707;&#4845;&#4617;&#4757; &#4773;&#4661;&#4781;&#4650;&#4757; &#4704;&#4632;&#4907;&#4757; &#4808;&#4848; &#4739;&#4619; &#4635;&#4659;&#4616;&#4941;&#4961;&#4961; &#4616;&#4632;&#4672;&#4896;&#4621; &#4848;&#4877;&#4638; &#4808;&#4848;&#4938;&#4725; &#4635;&#4659;&#4616;&#4941;&#4961;&#4961;</value></text>
+					<text id="solve/sync/closer_to_tower-label">
+						<value>&#4638;&#4707;&#4845;&#4617;&#4757; &#4808;&#4848; &#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4781; &#4723;&#4808;&#4653; &#4704;&#4635;&#4661;&#4896;&#4875;&#4725; &#4840;&#4720;&#4667;&#4616; &#4840;&#4756;&#4725;&#4814;&#4653;&#4781; &#4658;&#4877;&#4755;&#4621; &#4635;&#4877;&#4760;&#4725; &#4845;&#4731;&#4619;&#4621;&#4961;&#4961; &#4638;&#4707;&#4845;&#4621; &#4768;&#4945; &#4658;&#4757;&#4781; &#4773;&#4757;&#4850;&#4843;&#4648;&#4877; &#4840;&#4720;&#4667;&#4616; &#4756;&#4725;&#4814;&#4653;&#4781; &#4845;&#4936;&#4621;&#4875;&#4621;&#4961;&#4961;</value></text>
+					<text id="solve/sync/solve_date_and_time-label">
+						<value>&#4632;&#4941;&#4725;&#4612;_&#4672;&#4757;_&#4773;&#4755;_&#4656;&#4819;&#4725;</value></text>
+					<text id="root_problem/sync/fix_date_and_time-label">
+						<value>&#4845;&#4613; &#4725;&#4821;&#4827;&#4829; &#4725;&#4781;&#4781;&#4616;&#4763; &#4672;&#4757; &#4773;&#4755; &#4656;&#4819;&#4725; &#4773;&#4757;&#4852;&#4725; &#4635;&#4661;&#4720;&#4779;&#4776;&#4621; &#4773;&#4757;&#4848;&#4634;&#4731;&#4621; &#4845;&#4872;&#4621;&#4931;&#4621;&#4961;&#4961;</value></text>
+					<text id="root_problem/sync/date_and_time/copy-1-of-date_time4-label">
+						<value>&#4707;&#4854; &#4840;&#4659;&#4901;&#4757; &#4637;&#4621;&#4781;&#4725; &#4840;&#4634;&#4843;&#4659;&#4840;&#4813; &#4672;&#4757; &#4773;&#4755; &#4656;&#4819;&#4725; &#4635;&#4661;&#4720;&#4779;&#4776;&#4843;&#4813; &#4768;&#4813;&#4726;&#4635;&#4722;&#4781; &#4773;&#4757;&#4851;&#4621;&#4614;&#4752; &#4752;&#4813;&#4961;&#4961;&#4840;&#4672;&#4757; &#4773;&#4755; &#4656;&#4819;&#4725; &#4635;&#4661;&#4720;&#4779;&#4776;&#4843;&#4813; &#4768;&#4813;&#4726;&#4635;&#4722;&#4781; &#4779;&#4621;&#4614;&#4757; &#4963; &#4840;&#4656;&#4819;&#4725; &#4768;&#4678;&#4899;&#4896;&#4649; &#4725;&#4781;&#4781;&#4621; &#4768;&#4616;&#4632;&#4614;&#4753;&#4757; &#4773;&#4755;&#4813;&#4675;&#4616;&#4757;&#4961;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time4.png</value></text>
+					<text id="root_problem/instruct_root/sync/date_and_time/date_time5-label">
+						<value>&#4840;&#4672;&#4757; &#4773;&#4755; &#4656;&#4819;&#4725; &#4635;&#4661;&#4720;&#4779;&#4776;&#4843;&#4813; &#4768;&#4813;&#4726;&#4635;&#4722;&#4781; &#4773;&#4757;&#4850;&#4614;&#4757; &#4840;&#4707;&#4854; &#4659;&#4901;&#4757; &#4637;&#4621;&#4781;&#4721;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/sync/date_and_time/date_time5.png</value></text>
+					<text id="solve/missing/turn_off_case_filter-label">
+						<value>&#4609;&#4617;&#4757;&#4637; &#4780;&#4829; &#4616;&#4632;&#4632;&#4621;&#4776;&#4725; &#4780;&#4829; &#4632;&#4637;&#4648;&#4907;&#4813;&#4757; &#4635;&#4661;&#4808;&#4872;&#4853;&#4961;&#4961;</value></text>
+					<text id="solve/missing/turn_off_case_filter-unknown-label">
+						<value>&#4773;&#4757;&#4852;&#4725; &#4773;&#4757;&#4848;&#4614;&#4752; &#4768;&#4619;&#4808;&#4777;&#4637;</value></text>
+					<text id="solve/missing/clear_case_filter-label">
+						<value>$clear_case_filter</value></text>
+					<text id="solve/missing/clear_case_filter/clear_case_filter1-label">
+						<value>&#4840;&#4780;&#4829; &#4829;&#4653;&#4829;&#4653; &#4635;&#4659;&#4843;&#4813;&#4757; &#4616;&#4635;&#4933;&#4851;&#4725; &#4963; &#4840;&#4632;&#4936;&#4616;&#4874;&#4843;&#4813;&#4757; &#4710;&#4781;&#4661; &#4632;&#4907;&#4757; &#4773;&#4755; &#4840;&#4778;&#4710;&#4653;&#4849;&#4757; &#4808;&#4848; &#4739;&#4619; &#4632;&#4632;&#4616;&#4667; &#4632;&#4896;&#4672;&#4637;&#4961;&#4961; &#4776;&#4826;&#4613; &#4704;&#4739;&#4619; &#4616;&#4632;&#4672;&#4896;&#4621; '&#4635;&#4661;&#4872;&#4706;&#4843;&#4813;&#4757; &#4808;&#4845;&#4637; &#4770;&#4757;&#4720;&#4653;&#4757;' &#4632;&#4907;&#4757;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/solve/missing/clear_case_filter/clear_case_filter1.png</value></text>
+					<text id="solve/missing/educate_user-label">
+						<value>&#4704;&#4782;&#4637;&#4780;&#4653; &#4619;&#4845; &#4843;&#4617; &#4677;&#4934;&#4733; &#4840;&#4634;&#4723;&#4841;&#4725; &#4704;&#4634;&#4936;&#4616;&#4873; &#4656;&#4819;&#4725; &#4709;&#4731; &#4632;&#4614;&#4755;&#4728;&#4813;&#4757; &#4619;&#4845;&#4648;&#4849; &#4845;&#4733;&#4619;&#4617;&#4961;&#4961;                                             
+                                                                                                
+
+
+
+&#4720;&#4896;&#4675;&#4634;&#4814;&#4733; &#4704;&#4782;&#4637;&#4780;&#4653; &#4768;&#4896;&#4675;&#4672;&#4637; &#4619;&#4845; &#4781;&#4613;&#4622;&#4725; &#4779;&#4619;&#4728;&#4813; &#4840;&#4661;&#4651; &#4707;&#4621;&#4848;&#4648;&#4710;&#4731;&#4728;&#4813; &#4773;&#4755; &#4776;&#4720;&#4678;&#4899;&#4899;&#4650;&#4843;&#4728;&#4813; &#4875;&#4653; &#4768;&#4757;&#4853; &#4840;&#4634;&#4936;&#4616;&#4877; &#4677;&#4933; &#4773;&#4757;&#4852;&#4725; &#4618;&#4632;&#4899; &#4808;&#4845;&#4637; &#4618;&#4848;&#4704;&#4677; &#4773;&#4757;&#4848;&#4634;&#4733;&#4621; &#4632;&#4808;&#4843;&#4840;&#4725; &#4768;&#4616;&#4707;&#4728;&#4813;&#4961;&#4961;</value></text>
+					<text id="root_problem/slow/close_apps-label">
+						<value>&#4840;&#4720;&#4808;&#4656;&#4753; &#4638;&#4707;&#4845;&#4621; &#4768;&#4950;&#4733;&#4757; &#4776;&#4650;&#4656;&#4757;&#4725; &#4638;&#4707;&#4845;&#4621; &#4768;&#4949; &#4829;&#4653;&#4829;&#4653; &#4635;&#4661;&#4808;&#4872;&#4853;&#4961;&#4961;&#4638;&#4707;&#4845;&#4621; &#4768;&#4945;&#4757; &#4776;&#4638;&#4707;&#4845;&#4621; &#4773;&#4661;&#4781;&#4650;&#4757; &#4619;&#4845; &#4776;&#4877;&#4651; &#4808;&#4848; &#4672;&#4765; &#4632;&#4878;&#4720;&#4725;&#4961;&#4961;&#4829;&#4653;&#4829;&#4649; &#4707;&#4854; &#4776;&#4614;&#4752; &#4963; &#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4777; &#4936;&#4899;&#4757; &#4845;&#4614;&#4755;&#4621;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/root_problem/instruct_root/slow/background/background3.png</value></text>
+					<text id="root_problem/sound/turn_it_up-label">
+						<value>&#4704;&#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4777; &#4704;&#4878;&#4757; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4840;&#4853;&#4637;&#4933; &#4704;&#4720;&#4757; &#4704;&#4632;&#4907;&#4757; &#4840;&#4853;&#4637;&#4933; &#4632;&#4896;&#4753;&#4757;&#4757; &#4632;&#4904;&#4632;&#4653;&#4961;&#4961;</value></text>
+					<text id="root_problem/camera/unblock_lens-label">
+						<value>&#4840;&#4779;&#4636;&#4651; &#4632;&#4661;&#4723;&#4808;&#4721;&#4757; &#4808;&#4845;&#4637; &#4620;&#4757;&#4661; &#4840;&#4634;&#4664;&#4941;&#4757; &#4635;&#4757;&#4763;&#4813;&#4757;&#4637; &#4752;&#4872;&#4653; &#4635;&#4661;&#4808;&#4872;&#4853;&#4961;&#4961;</value></text>
+					<text id="solve/battery/charge_battery-label">
+						<value>&#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4777;&#4757; &#4776;&#4632;&#4896;&#4672;&#4637; &#4704;&#4938;&#4725; &#4707;&#4725;&#4650;&#4813;&#4757; &#4731;&#4653;&#4869; &#4635;&#4853;&#4648;&#4877; &#4843;&#4661;&#4936;&#4621;&#4875;&#4621;&#4961;&#4961;</value></text>
+					<text id="solve/android_locked/remember-label">
+						<value>&#4840;&#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4777;&#4757; &#4632;&#4877;&#4706;&#4843; &#4782;&#4853; &#4635;&#4661;&#4723;&#4808;&#4661; &#4845;&#4872;&#4707;&#4621; &#4808;&#4845;&#4637; &#4661;&#4621;&#4777;&#4757; &#4851;&#4877;&#4637; &#4635;&#4661;&#4864;&#4632;&#4653;&#4961;&#4961;</value></text>
+					<text id="solve/android_locked/remember-ok-label">
+						<value>&#4773;&#4666;</value></text>
+					<text id="solve/gps/turn_on-label">
+						<value>&#4840;&#4710;&#4723; &#4632;&#4872;&#4763;&#4813;&#4757; &#4635;&#4661;&#4720;&#4779;&#4776;&#4843; '&#4704;&#4635;&#4709;&#4651;&#4725; ' &#4632;&#4672;&#4840;&#4653; &#4632;&#4731;&#4621; &#4755; &#4638;&#4707;&#4845;&#4621; &#4768;&#4945;&#4757; &#4704;&#4853;&#4875;&#4634; &#4616;&#4632;&#4896;&#4672;&#4637; &#4632;&#4638;&#4776;&#4653;&#4961;&#4961;</value><value form="image">jr://file/commcare/image/data/solve/gps/turn_on.png</value></text>
+					<text id="solve/gps/signal-label">
+						<value>&#4848;&#4779;&#4635; &#4840;&#4614;&#4757; &#4638;&#4707;&#4845;&#4621; &#4756;&#4725;&#4814;&#4653;&#4781; &#4707;&#4616;&#4813; &#4768;&#4779;&#4707;&#4706; &#4776;&#4614;&#4752; &#4840;&#4637;&#4725;&#4656;&#4649;&#4725;&#4963; &#4840;&#4710;&#4723; &#4632;&#4872;&#4763;&#4813;&#4757; &#4901;&#4843;&#4674; &#4829;&#4616;&#4617;&#4725;&#4961;&#4961;</value></text>
+					<text id="solve/solar_panel-label">
+						<value>&#4662;&#4619;&#4653; &#4947;&#4752;&#4621;</value></text>
+					<text id="solve/solar_panel/darkening_instruction-label">
+						<value>&#4768;&#4709;&#4827;&#4763;&#4813;&#4757; &#4874;&#4828; &#4829;&#4677;&#4720;&#4763; &#4739;&#4845;&#4621; &#4618;&#4758;&#4653; &#4840;&#4634;&#4733;&#4621;&#4704;&#4725; &#4637;&#4781;&#4757;&#4843;&#4725;&#4961;&#4961; &#4946;.&#4714; &#4662;&#4619;&#4653; &#4821;&#4675;&#4813; &#4704;&#4720;&#4672;&#4632;&#4896;&#4704;&#4720; &#4768;&#4779;&#4707;&#4706; &#4637;&#4757;&#4637; &#4768;&#4845;&#4752;&#4725; &#4827;&#4942;&#4733; &#4768;&#4616;&#4632;&#4758;&#4651;&#4728;&#4813;&#4757; &#4635;&#4648;&#4875;&#4872;&#4901;&#4961;&#4961; &#4773;&#4757;&#4850;&#4609;&#4637;&#4963; &#4946;.&#4714; &#4662;&#4619;&#4649; &#4704;&#4635;&#4757;&#4763;&#4813;&#4637; &#4672;&#4757; &#4704;&#4901;&#4619; &#4768;&#4616;&#4632;&#4776;&#4616;&#4617;&#4757; &#4635;&#4648;&#4875;&#4872;&#4901; &#4843;&#4661;&#4936;&#4621;&#4875;&#4621;&#4961;&#4961;</value></text>
+					<text id="solve/solar_panel/temperature_instruction-label">
+						<value>&#4901;&#4619;&#4813; &#4637;&#4781;&#4757;&#4843;&#4725; &#4779;&#4621;&#4614;&#4757;&#4963; &#4840;&#4672;&#4753; &#4840;&#4633;&#4672;&#4725; &#4632;&#4896;&#4757; &#4946;.&#4714; &#4662;&#4619;&#4649; &#4704;&#4725;&#4781;&#4781;&#4621; &#4616;&#4632;&#4661;&#4651;&#4725; &#4776;&#4634;&#4843;&#4661;&#4936;&#4621;&#4872;&#4813; &#4840;&#4633;&#4672;&#4725; &#4632;&#4896;&#4757; &#4661;&#4621;&#4704;&#4616;&#4896; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961;Make sure that there's sufficient air circulation beneath the panels and that this open space is not blocked in any way.</value></text>
+					<text id="solve/solar_panel/connection_instruction-label">
+						<value>&#4946;.&#4714; &#4662;&#4619;&#4649; &#4776;&#4632;&#4896;&#4757; &#4704;&#4619;&#4845; &#4779;&#4621;&#4638;&#4672;&#4963; &#4840;&#4733;&#4877;&#4649; &#4637;&#4781;&#4757;&#4843;&#4725; &#4840;&#4634;&#4614;&#4752;&#4813; &#4947;&#4808;&#4653; &#4780;&#4709;&#4617; &#4704;&#4848;&#4757;&#4709; &#4768;&#4616;&#4632;&#4656;&#4779;&#4725; &#4752;&#4813;&#4961;&#4961;</value></text>
+					<text id="solve/powerbank-label">
+						<value>powerbank</value></text>
+					<text id="solve/powerbank/indicator_instruction-label">
+						<value>&#4896;&#4683;&#4634;&#4813; &#4840;&#4635;&#4845;&#4656;&#4651; &#4776;&#4614;&#4752; &#4731;&#4653;&#4869; &#4635;&#4853;&#4648;&#4874;&#4843;&#4813; &#4656;&#4653;&#4778;&#4813;&#4725; &#4808;&#4845;&#4637; &#4739;&#4845;&#4621; &#4632;&#4616;&#4808;&#4907;&#4813; &#4768;&#4845;&#4656;&#4651;&#4637; &#4635;&#4616;&#4725; &#4752;&#4813;&#4964; &#4808;&#4845;&#4637; &#4848;&#4638; &#4707;&#4725;&#4650;&#4813; &#4637;&#4757;&#4637; &#4731;&#4653;&#4869; &#4768;&#4845;&#4672;&#4704;&#4621;&#4637; &#4635;&#4616;&#4725; &#4752;&#4813;&#4961;&#4961; &#4661;&#4616;&#4826;&#4613; &#4768;&#4757;&#4853; &#4635;&#4648;&#4875;&#4872;&#4901; &#4843;&#4616;&#4707;&#4729; &#4752;&#4872;&#4653; &#4896;&#4683;&#4634;&#4813; &#4707;&#4845;&#4656;&#4651;&#4637; &#4731;&#4653;&#4869; &#4773;&#4757;&#4848;&#4634;&#4656;&#4651; &#4635;&#4808;&#4677; &#4843;&#4661;&#4936;&#4621;&#4875;&#4621;&#4961;&#4961;Therefore, the first thing on your to do list is to make sure the charging function is still working which means only the indicator failed.</value></text>
+					<text id="solve/powerbank/not_charging_instruction-label">
+						<value>&#4947;&#4808;&#4653; &#4707;&#4757;&#4781;&#4963; &#4731;&#4653;&#4869; &#4840;&#4635;&#4843;&#4848;&#4653;&#4877; &#4776;&#4614;&#4752; &#4731;&#4653;&#4869; &#4635;&#4853;&#4648;&#4874;&#4843;&#4813; &#4656;&#4653;&#4778;&#4813;&#4725; &#4720;&#4656;&#4709;&#4654; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621; &#4752;&#4872;&#4653; &#4877;&#4757; &#4707;&#4725;&#4650;&#4813; &#4618;&#4656;&#4651; &#4845;&#4733;&#4619;&#4621; &#4961;&#4961;     
+
+&#4707;&#4725;&#4650;&#4813;&#4757; &#4616;&#4632;&#4672;&#4840;&#4653; &#4632;&#4638;&#4776;&#4653;&#4961;&#4961;</value></text>
+					<text id="check/check_solve-label">
+						<value>&#4733;&#4877;&#4649; &#4720;&#4661;&#4720;&#4779;&#4781;&#4617;&#4811;&#4621;&#4961;&#4961;</value></text>
+					<text id="check/che-item1-label">
+						<value>&#4768;&#4814;</value></text>
+					<text id="check/che-item2-label">
+						<value>&#4768;&#4845;&#4848;&#4616;&#4637;</value></text>
+					<text id="solve/great-label">
+						<value>&#4733;&#4877;&#4649;&#4757; &#4704;&#4635;&#4661;&#4720;&#4779;&#4776;&#4621;&#4814;&#4725; &#4723;&#4619;&#4677; &#4661;&#4651; &#4656;&#4653;&#4720;&#4811;&#4621;&#4961;&#4961;</value></text>
+					<text id="ticket/closing/closing_ticket-label">
+						<value>&#4840;&#4768;&#4709;&#4618;&#4780;&#4669;&#4753; &#4768;&#4907;&#4907;&#4757; &#4637;&#4757; &#4768;&#4621;&#4707;&#4725; &#4725;&#4781;&#4781;&#4621; &#4843;&#4621;&#4614;&#4752;&#4963; &#4840;&#4720;&#4896;&#4675;&#4634;&#4813; &#4635;&#4661;&#4720;&#4779;&#4776;&#4843; &#4840;&#4720;&#4659;&#4659;&#4720; &#4808;&#4845;&#4637; &#4733;&#4877;&#4653; &#4618;&#4758;&#4648;&#4813; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961; &#4661;&#4616;&#4826;&#4613; &#4845;&#4613;&#4757; &#4733;&#4877;&#4653; &#4616;&#4635;&#4661;&#4720;&#4779;&#4776;&#4621;&#4963;  &#4776;&#4724;&#4781;&#4754;&#4666;&#4843;&#4757; &#4773;&#4653;&#4851;&#4723; &#4843;&#4661;&#4936;&#4621;&#4875;&#4621;&#4961;&#4961;
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/sync/phone_defect-label">
+						<value>&#4845;&#4613; &#4840;&#4632;&#4899;&#4813; &#4637;&#4757; &#4768;&#4621;&#4707;&#4725; &#4661;&#4621;&#4777; &#4733;&#4877;&#4653; &#4768;&#4875;&#4901;&#4638;&#4725; &#4752;&#4813;&#4961;&#4961;
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/sync/question6-label">
+						<value>&#4840;&#4772;.&#4946;.&#4772;&#4757; &#4782;&#4757;&#4938;&#4872;&#4652;&#4669;&#4757; &#4637;&#4757; &#4768;&#4621;&#4707;&#4725; &#4725;&#4781;&#4781;&#4621; &#4619;&#4845;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/sync/needs_credit-label">
+						<value>&#4782;&#4637;&#4780;&#4649; &#4658;&#4757;&#4781; &#4773;&#4757;&#4850;&#4843;&#4848;&#4653;&#4877; &#4638;&#4707;&#4845;&#4617; &#4659;&#4757;&#4722;&#4637; &#4618;&#4758;&#4648;&#4813; &#4845;&#4872;&#4707;&#4621;&#4961;&#4961;
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/missing/incorrect_login-label">
+						<value>&#4840;&#4720;&#4896;&#4675;&#4634;&#4813; &#4840;&#4845;&#4616;&#4941; &#4661;&#4637; &#4808;&#4845;&#4637; &#4673;&#4621;&#4941; &#4725;&#4781;&#4781;&#4621; &#4773;&#4757;&#4851;&#4621;&#4614;&#4752; &#4843;&#4659;&#4843;&#4621;&#4961;&#4961;
+
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/missing/uninstall-label">
+						<value>&#4845;&#4613; &#4840;&#4634;&#4843;&#4659;&#4840;&#4813; &#4782;&#4637;&#4780;&#4653; &#4776;&#4661;&#4621;&#4777; &#4619;&#4845; &#4773;&#4757;&#4848;&#4896;&#4939; &#4752;&#4813;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/missing/multimedia_removed-label">
+						<value>&#4845;&#4613; &#4840;&#4634;&#4843;&#4659;&#4840;&#4813; &#4840;&#4782;&#4637;&#4780;&#4653; &#4853;&#4637;&#4933; &#4773;&#4755; &#4661;&#4821;&#4622;&#4733; &#4896;&#4941;&#4720;&#4811;&#4621; &#4808;&#4845;&#4637; &#4704;&#4725;&#4781;&#4781;&#4621; &#4661;&#4619;&#4621;&#4720;&#4907;&#4753; &#4752;&#4813;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/missing/old_commcare-label">
+						<value>&#4720;&#4896;&#4675;&#4634;&#4813; &#4637;&#4757; &#4768;&#4621;&#4707;&#4725; &#4843;&#4616;&#4936;&#4704;&#4725;&#4757; &#4840;&#4782;&#4637;&#4780;&#4653; &#4773;&#4725;&#4637;  &#4662;&#4725;&#4812;&#4653; &#4661;&#4621;&#4720;&#4896;&#4672;&#4632; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/slow/bug-label">
+						<value>&#4782;&#4637;&#4780;&#4653; &#4733;&#4877;&#4653; &#4768;&#4875;&#4901;&#4638;&#4723;&#4621; &#4845;&#4613;&#4637; &#4949;&#4654;&#4877;&#4651;&#4633; &#4829;&#4877; &#4773;&#4757;&#4850;&#4621; &#4768;&#4853;&#4653;&#4878;&#4723;&#4621; &#4808;&#4845;&#4637; &#4661;&#4621;&#4777; &#4704;&#4674; &#4840;&#4614;&#4752; &#4840;&#4710;&#4723; &#4773;&#4901;&#4648;&#4725; &#4768;&#4616;&#4704;&#4725;&#4961;&#4961;
+
+                                                                                &#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/sound/defective_speaker-label">
+						<value>&#4773;&#4661;&#4946;&#4776;&#4649; &#4720;&#4656;&#4709;&#4654; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621; &#4808;&#4845;&#4637; &#4709;&#4621;&#4669;&#4725; &#4768;&#4616;&#4704;&#4725;&#4961;&#4961;
+                                                                                                                                                                                                                                                                                                                                                                                       &#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/camera/broken-label">
+						<value>$The phone's camera appears to be broken.
+
+
+
+Please contact your HIT Expert or the JSI L10K 2020 mHealth Technical Advisor.</value></text>
+					<text id="ticket/camera/camera_software_bug_or_full-label">
+						<value>&#4840;&#4661;&#4621;&#4777; &#4779;&#4636;&#4651; &#4662;&#4941;&#4725;&#4812;&#4653; &#4720;&#4656;&#4709;&#4654; &#4808;&#4845;&#4637;  &#4661;&#4621;&#4777; &#4633;&#4617; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/broken_usable_and_unusable/battery_defect-label">
+						<value>&#4840;&#4661;&#4621;&#4777; &#4707;&#4725;&#4650; &#4720;&#4656;&#4709;&#4654; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621; &#4808;&#4845;&#4637; &#4709;&#4621;&#4669;&#4725; &#4768;&#4616;&#4704;&#4725;&#4961;&#4961;
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/broken_usable_and_unusable/screen_broken-label">
+						<value>&#4840;&#4661;&#4621;&#4777; &#4773;&#4661;&#4781;&#4650;&#4757; &#4720;&#4656;&#4709;&#4654; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621; &#4808;&#4845;&#4637; &#4709;&#4621;&#4669;&#4725; &#4768;&#4616;&#4704;&#4725;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/broken_usable_and_unusable/power_button_broken-label">
+						<value>&#4840;&#4661;&#4621;&#4777; &#4704;&#4720;&#4757; &#4720;&#4656;&#4709;&#4654; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621; &#4808;&#4845;&#4637; &#4709;&#4621;&#4669;&#4725; &#4768;&#4616;&#4704;&#4725;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/broken_usable_and_unusable/internals_broken-label">
+						<value>&#4840;&#4661;&#4621;&#4777; &#4840;&#4813;&#4661;&#4901; &#4768;&#4779;&#4621; &#4720;&#4656;&#4709;&#4654; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621; &#4808;&#4845;&#4637; &#4709;&#4621;&#4669;&#4725; &#4768;&#4616;&#4704;&#4725;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/android_locked/android_locked-label">
+						<value>&#4720;&#4896;&#4675;&#4634;&#4814;&#4733; &#4840;&#4651;&#4659;&#4728;&#4813;&#4757; &#4661;&#4621;&#4781; &#4658;&#4752;&#4779;&#4777; &#4824;&#4877;&#4720;&#4813;&#4725; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/accessory/phone_case-label">
+						<value>&#4873;&#4851;&#4841; &#4896;&#4941;&#4726; &#4808;&#4845;&#4637; &#4720;&#4656;&#4709;&#4654; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961;
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/accessory/wall_charger-label">
+						<value>&#4840;&#4877;&#4653;&#4877;&#4851; &#4619;&#4845; &#4632;&#4656;&#4778;&#4843; &#4731;&#4653;&#4864;&#4653; &#4896;&#4941;&#4726; &#4808;&#4845;&#4637; &#4720;&#4656;&#4709;&#4654; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/accessory/solar_charger-label">
+						<value>&#4840;&#4662;&#4619;&#4653; &#4731;&#4653;&#4864;&#4649; &#4896;&#4941;&#4726; &#4808;&#4845;&#4637; &#4720;&#4656;&#4709;&#4654; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/accessory/cable-label">
+						<value>&#4840;&#4947;&#4808;&#4653; &#4780;&#4709;&#4621; &#4896;&#4941;&#4726; &#4808;&#4845;&#4637; &#4720;&#4656;&#4709;&#4654; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/accessory/powerbank-label">
+						<value>&#4947;&#4808;&#4653; &#4707;&#4757;&#4777; &#4896;&#4941;&#4726; &#4808;&#4845;&#4637; &#4720;&#4656;&#4709;&#4654; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961;
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/commcare_locked/incorrect_login-label">
+						<value>&#4840;&#4720;&#4896;&#4675;&#4634;&#4813; &#4840;&#4845;&#4616;&#4941; &#4661;&#4637; &#4773;&#4755; &#4673;&#4621;&#4941; &#4725;&#4781;&#4781;&#4621; &#4661;&#4619;&#4621;&#4614;&#4752; &#4808;&#4845;&#4637; &#4782;&#4637;&#4780;&#4653; &#4637;&#4757; &#4768;&#4621;&#4707;&#4725; &#4733;&#4877;&#4653; &#4661;&#4619;&#4616;&#4704;&#4725; &#4808;&#4845;&#4637; &#4840;&#4661;&#4621;&#4777; &#4772;.&#4946;.&#4772;&#4757; &#4704;&#4725;&#4781;&#4781;&#4621; &#4782;&#4757;&#4938;&#4872;&#4653; &#4661;&#4619;&#4621;&#4720;&#4848;&#4648;&#4872; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/telephone/sim_or_apn-label">
+						<value>&#4661;&#4621;&#4777; &#4872;&#4757;&#4824;&#4709; &#4661;&#4616;&#4620;&#4616;&#4813; &#4808;&#4845;&#4637; &#4840;&#4661;&#4621;&#4777; &#4772;.&#4946;.&#4772;&#4757; &#4704;&#4725;&#4781;&#4781;&#4621; &#4782;&#4757;&#4938;&#4872;&#4653; &#4661;&#4619;&#4621;&#4720;&#4848;&#4648;&#4872;  &#4808;&#4845;&#4637;  &#4658;&#4633; &#4720;&#4656;&#4709;&#4654; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4964;&#4964;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/gps/gps_broken-label">
+						<value>&#4840;&#4661;&#4621;&#4777; &#4866;.&#4946;.&#4772;&#4661; &#4661;&#4616;&#4720;&#4656;&#4704; &#4618;&#4614;&#4757; &#4845;&#4733;&#4619;&#4621;&#4961;&#4961;
+
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/unsolved-label2">
+						<value>&#4845;&#4677;&#4653;&#4723; &#4773;&#4757;&#4896;&#4845;&#4675;&#4616;&#4757;&#4963; &#4840;&#4720;&#4656;&#4896;&#4813; &#4632;&#4941;&#4725;&#4612; &#4725;&#4781;&#4781;&#4621; &#4768;&#4621;&#4656;&#4651;&#4637;&#4961;&#4961;
+
+
+&#4773;&#4707;&#4781;&#4814;&#4757;&#4963; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4853;&#4875;&#4941; &#4845;&#4896;&#4845;&#4673;&#4961;&#4961;</value></text>
+					<text id="ticket/phone-label">
+						<value>&#4840;&#4635;&#4757;&#4757; &#4840;&#4638;&#4707;&#4845;&#4621; &#4661;&#4621;&#4781; &#4635;&#4877;&#4760;&#4725; &#4773;&#4755; &#4773;&#4653;&#4851;&#4725; &#4616;&#4632;&#4896;&#4840;&#4677; &#4845;&#4936;&#4621;&#4875;&#4617;?</value></text>
+					<text id="ticket/ticket-label">
+						<value>&#4840;&#4733;&#4877;&#4653; &#4635;&#4661;&#4720;&#4779;&#4776;&#4843;&#4813; &#4722;&#4780;&#4725; &#4720;&#4776;&#4941;&#4727;&#4621;&#4961;&#4961; &#4704;&#4900;&#4755; &#4899;&#4706;&#4843;&#4813; &#4840;&#4900;&#4755; &#4770;&#4757;&#4942;&#4653;&#4636;&#4669;&#4757; &#4724;&#4781;&#4754;&#4666;&#4843;&#4757;  &#4808;&#4845;&#4637; &#4840;&#4868;.&#4772;&#4661;.&#4768;&#4845;/&#4772;&#4621;.10.&#4776; 2020 &#4638;&#4707;&#4845;&#4621; &#4612;&#4621;&#4829; &#4724;&#4781;&#4754;&#4779;&#4621; &#4707;&#4616;&#4633;&#4843;&#4813; &#4848;&#4813;&#4616;&#4813; &#4853;&#4875;&#4941; &#4845;&#4656;&#4901;&#4814;&#4723;&#4621;&#4961;&#4961; &#4773;&#4755;&#4632;&#4656;&#4877;&#4755;&#4616;&#4757;&#4961;&#4961;</value></text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value></text>
+				</translation>
+			</itext>
+		<bind calculate="/data/meta/timeEnd" nodeset="/data/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id" nodeset="/data/case/@case_id"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+		<vellum:hashtags>{"#case/full_name":null,"#case/hew_user_id":null}</vellum:hashtags>
+		<vellum:hashtagTransforms>{"prefixes":{"#case/":"instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id]/"}}</vellum:hashtagTransforms>
+	</h:head>
+	<h:body>
+		<trigger ref="/data/instruction" appearance="minimal">
+			<label ref="jr:itext('instruction-label')"/>
+		</trigger>
+		<select1 ref="/data/device_type">
+			<label ref="jr:itext('device_type-label')"/>
+			<item>
+				<label ref="jr:itext('device_type-tecno_phone-label')"/>
+				<value>tecno_phone</value>
+			</item>
+			<item>
+				<label ref="jr:itext('device_type-huawei_phone-label')"/>
+				<value>huawei_phone</value>
+			</item>
+			<item>
+				<label ref="jr:itext('device_type-tecno_tablet-label')"/>
+				<value>tecno_tablet</value>
+			</item>
+		</select1>
+		<input ref="/data/id_number">
+			<label ref="jr:itext('id_number-label')"/>
+		</input>
+		<select1 ref="/data/problem_area">
+			<label ref="jr:itext('problem_area-label')"/>
+			<item>
+				<label ref="jr:itext('problem_area-broken_usable-label')"/>
+				<value>broken_usable</value>
+			</item>
+			<item>
+				<label ref="jr:itext('problem_area-closing-label')"/>
+				<value>closing</value>
+			</item>
+			<item>
+				<label ref="jr:itext('problem_area-sync-label')"/>
+				<value>sync</value>
+			</item>
+			<item>
+				<label ref="jr:itext('problem_area-slow-label')"/>
+				<value>slow</value>
+			</item>
+			<item>
+				<label ref="jr:itext('problem_area-commcare_locked-label')"/>
+				<value>commcare_locked</value>
+			</item>
+			<item>
+				<label ref="jr:itext('problem_area-missing-label')"/>
+				<value>missing</value>
+			</item>
+			<item>
+				<label ref="jr:itext('problem_area-android_locked-label')"/>
+				<value>android_locked</value>
+			</item>
+			<item>
+				<label ref="jr:itext('problem_area-sound-label')"/>
+				<value>sound</value>
+			</item>
+			<item>
+				<label ref="jr:itext('problem_area-camera-label')"/>
+				<value>camera</value>
+			</item>
+			<item>
+				<label ref="jr:itext('problem_area-telephone-label')"/>
+				<value>telephone</value>
+			</item>
+			<item>
+				<label ref="jr:itext('problem_area-battery-label')"/>
+				<value>battery</value>
+			</item>
+			<item>
+				<label ref="jr:itext('problem_area-gps-label')"/>
+				<value>gps</value>
+			</item>
+			<item>
+				<label ref="jr:itext('problem_area-accessory-label')"/>
+				<value>accessory</value>
+			</item>
+		</select1>
+		<group ref="/data/root_problem">
+			<group ref="/data/root_problem/sync">
+				<select1 ref="/data/root_problem/sync/sync_problem">
+					<label ref="jr:itext('root_problem/sync/sync_problem-label')"/>
+					<item>
+						<label ref="jr:itext('root_problem/sync/sync_problem-long_attempt-label')"/>
+						<value>long_attempt</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/sync/syn-item1-label')"/>
+						<value>red_text</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/sync/syn-item2-label')"/>
+						<value>nothing</value>
+					</item>
+				</select1>
+				<select1 ref="/data/root_problem/sync/red_airplane">
+					<label ref="jr:itext('root_problem/sync/red_airplane-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+				<select1 ref="/data/root_problem/sync/date_time">
+					<label ref="jr:itext('root_problem/sync/date_time-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/gps/gps_enabled-unknown-label')"/>
+						<value>unknown</value>
+					</item>
+				</select1>
+				<group ref="/data/root_problem/sync/date_and_time">
+					<label ref="jr:itext('root_problem/instruct_root/sync/date_and_time-label')"/>
+					<trigger ref="/data/root_problem/sync/date_and_time/start_instruct_date_time" appearance="minimal">
+						<label ref="jr:itext('root_problem/instruct_root/sync/date_and_time/start_instruct_date_time-label')"/>
+					</trigger>
+					<trigger ref="/data/root_problem/sync/date_and_time/date_time1" appearance="minimal">
+						<label ref="jr:itext('root_problem/instruct_root/sync/date_and_time/date_time1-label')"/>
+					</trigger>
+					<trigger ref="/data/root_problem/sync/date_and_time/date_time2" appearance="minimal">
+						<label ref="jr:itext('root_problem/instruct_root/sync/date_and_time/date_time2-label')"/>
+					</trigger>
+					<trigger ref="/data/root_problem/sync/date_and_time/date_time3" appearance="minimal">
+						<label ref="jr:itext('root_problem/instruct_root/sync/date_and_time/date_time3-label')"/>
+					</trigger>
+					<trigger ref="/data/root_problem/sync/date_and_time/date_time4" appearance="minimal">
+						<label ref="jr:itext('root_problem/instruct_root/sync/date_and_time/date_time4-label')"/>
+					</trigger>
+					<select1 ref="/data/root_problem/sync/date_and_time/date_and_time2">
+						<label ref="jr:itext('root_problem/sync/copy-1-of-date_time-label')"/>
+						<item>
+							<label ref="jr:itext('check/che-item1-label')"/>
+							<value>yes</value>
+						</item>
+						<item>
+							<label ref="jr:itext('check/che-item2-label')"/>
+							<value>no</value>
+						</item>
+					</select1>
+				</group>
+				<select1 ref="/data/root_problem/sync/signal">
+					<label ref="jr:itext('root_problem/sync/question4-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+				<select1 ref="/data/root_problem/sync/credit">
+					<label ref="jr:itext('root_problem/sync/question3-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/root_problem/missing">
+				<select1 ref="/data/root_problem/missing/what_is_missing">
+					<label ref="jr:itext('root_problem/missing/what_is_missing-label')"/>
+					<item>
+						<label ref="jr:itext('root_problem/missing/what_is_missing-commcare-label')"/>
+						<value>commcare</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/missing/what_is_missing-form-label')"/>
+						<value>form</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/missing/what_is_missing-module-label')"/>
+						<value>module</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/missing/what_is_missing-client-label')"/>
+						<value>client</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/missing/what_is_missing-multimedia-label')"/>
+						<value>multimedia</value>
+					</item>
+				</select1>
+				<select1 ref="/data/root_problem/missing/logged_in">
+					<label ref="jr:itext('root_problem/missing/logged_in-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/gps/gps_enabled-unknown-label')"/>
+						<value>unknown</value>
+					</item>
+				</select1>
+				<group ref="/data/root_problem/missing/login">
+					<label ref="jr:itext('root_problem/missing/login-label')"/>
+					<trigger ref="/data/root_problem/missing/login/start_login_instruct" appearance="minimal">
+						<label ref="jr:itext('root_problem/missing/login/start_login_instruct-label')"/>
+					</trigger>
+					<select1 ref="/data/root_problem/missing/login/logged_in2">
+						<label ref="jr:itext('root_problem/missing/copy-1-of-logged_in-label')"/>
+						<item>
+							<label ref="jr:itext('check/che-item1-label')"/>
+							<value>yes</value>
+						</item>
+						<item>
+							<label ref="jr:itext('check/che-item2-label')"/>
+							<value>no</value>
+						</item>
+					</select1>
+				</group>
+				<select1 ref="/data/root_problem/missing/case_filter">
+					<label ref="jr:itext('root_problem/missing/case_filter-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/gps/gps_enabled-unknown-label')"/>
+						<value>unknown</value>
+					</item>
+				</select1>
+				<group ref="/data/root_problem/missing/case_filter1">
+					<label ref="jr:itext('root_problem/missing/case_filter1-label')"/>
+					<trigger ref="/data/root_problem/missing/case_filter1/casefilter1" appearance="minimal">
+						<label ref="jr:itext('root_problem/missing/case_filter1/casefilter1-label')"/>
+					</trigger>
+					<trigger ref="/data/root_problem/missing/case_filter1/casefilter2" appearance="minimal">
+						<label ref="jr:itext('root_problem/missing/case_filter1/casefilter2-label')"/>
+					</trigger>
+					<select1 ref="/data/root_problem/missing/case_filter1/casefilter3">
+						<label ref="jr:itext('root_problem/missing/case_filter-label')"/>
+						<item>
+							<label ref="jr:itext('check/che-item1-label')"/>
+							<value>yes</value>
+						</item>
+						<item>
+							<label ref="jr:itext('check/che-item2-label')"/>
+							<value>no</value>
+						</item>
+					</select1>
+				</group>
+			</group>
+			<group ref="/data/root_problem/slow">
+				<select1 ref="/data/root_problem/slow/background">
+					<label ref="jr:itext('root_problem/slow/background-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/slow/background-unknown-label')"/>
+						<value>unknown</value>
+					</item>
+				</select1>
+				<group ref="/data/root_problem/slow/current_apps_instruct">
+					<label ref="jr:itext('root_problem/slow/current_apps_instruct-label')"/>
+					<trigger ref="/data/root_problem/slow/current_apps_instruct/start_instruct_background" appearance="minimal">
+						<label ref="jr:itext('root_problem/instruct_root/slow/background/start_instruct_background-label')"/>
+					</trigger>
+					<trigger ref="/data/root_problem/slow/current_apps_instruct/background1" appearance="minimal">
+						<label ref="jr:itext('root_problem/instruct_root/slow/question3-label')"/>
+					</trigger>
+					<trigger ref="/data/root_problem/slow/current_apps_instruct/background2" appearance="minimal">
+						<label ref="jr:itext('root_problem/instruct_root/slow/background/background2-label')"/>
+					</trigger>
+					<select1 ref="/data/root_problem/slow/current_apps_instruct/background_after_instruct">
+						<label ref="jr:itext('root_problem/slow/background-label')"/>
+						<item>
+							<label ref="jr:itext('check/che-item1-label')"/>
+							<value>yes</value>
+						</item>
+						<item>
+							<label ref="jr:itext('check/che-item2-label')"/>
+							<value>no</value>
+						</item>
+					</select1>
+				</group>
+			</group>
+			<group ref="/data/root_problem/sound">
+				<select1 ref="/data/root_problem/sound/volume">
+					<label ref="jr:itext('root_problem/sound/volume-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/root_problem/camera">
+				<select1 ref="/data/root_problem/camera/blocked">
+					<label ref="jr:itext('root_problem/camera/blocked-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+				<select1 ref="/data/root_problem/camera/broken">
+					<label ref="jr:itext('root_problem/camera/broken-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/root_problem/broken_usable_and_unusable">
+				<select1 ref="/data/root_problem/broken_usable_and_unusable/appears_broken">
+					<label ref="jr:itext('root_problem/broken_usable/appears_broken-label')"/>
+					<item>
+						<label ref="jr:itext('root_problem/broken_usable/appears_broken-screen-label')"/>
+						<value>screen</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/broken_usable/appears_broken-body-label')"/>
+						<value>body</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/broken_usable/appears_broken-buttons-label')"/>
+						<value>buttons</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/broken_usable/appears_broken-internals-label')"/>
+						<value>internals</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/broken_usable/appears_broken-battery-label')"/>
+						<value>battery</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/broken_usable_and_unusable/appears_broken-usb_port-label')"/>
+						<value>usb_port</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/broken_usable_and_unusable/appears_broken-audio_jack-label')"/>
+						<value>audio_jack</value>
+					</item>
+				</select1>
+				<select1 ref="/data/root_problem/broken_usable_and_unusable/try_charge">
+					<label ref="jr:itext('root_problem/broken_usable/try_charge-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/root_problem/android_locked">
+				<select1 ref="/data/root_problem/android_locked/remember">
+					<label ref="jr:itext('root_problem/android_locked/remember-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/root_problem/accessory">
+				<select1 ref="/data/root_problem/accessory/which_accessory">
+					<label ref="jr:itext('root_problem/accessory/which_accessory-label')"/>
+					<item>
+						<label ref="jr:itext('root_problem/accessory/which_accessory-phone_case-label')"/>
+						<value>phone_case</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/accessory/which_accessory-wall_charger-label')"/>
+						<value>wall_charger</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/accessory/which_accessory-solar_charger-label')"/>
+						<value>solar_charger</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/accessory/which_accessory-cable-label')"/>
+						<value>cable</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/accessory/which_accessory-powerbank-label')"/>
+						<value>powerbank</value>
+					</item>
+				</select1>
+				<select1 ref="/data/root_problem/accessory/solar_panel_problem">
+					<label ref="jr:itext('root_problem/accessory/solar_panel_problem-label')"/>
+					<item>
+						<label ref="jr:itext('root_problem/accessory/solar_panel_problem-darkening-label')"/>
+						<value>darkening</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/accessory/solar_panel_problem-high_temperature-label')"/>
+						<value>high_temperature</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/accessory/solar_panel_problem-connection-label')"/>
+						<value>connection</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/accessory/solar_panel_problem-broken-label')"/>
+						<value>broken</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/accessory/solar_panel_problem-lost_stolen-label')"/>
+						<value>lost_stolen</value>
+					</item>
+				</select1>
+				<select1 ref="/data/root_problem/accessory/powerbank_problem">
+					<label ref="jr:itext('root_problem/accessory/powerbank_problem-label')"/>
+					<item>
+						<label ref="jr:itext('root_problem/accessory/powerbank_problem-indicator-label')"/>
+						<value>indicator</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/accessory/powerbank_problem-not_charging-label')"/>
+						<value>not_charging</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/accessory/powerbank_problem-loose_usb_port-label')"/>
+						<value>loose_usb_port</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/root_problem/telephone">
+				<select1 ref="/data/root_problem/telephone/signal">
+					<label ref="jr:itext('root_problem/sync/question4-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/root_problem/gps">
+				<select1 ref="/data/root_problem/gps/gps_enabled">
+					<label ref="jr:itext('gps/gps_enabled-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+					<item>
+						<label ref="jr:itext('root_problem/gps/gps_enabled-unknown-label')"/>
+						<value>unknown</value>
+					</item>
+				</select1>
+				<group ref="/data/root_problem/gps/gps_enabled1">
+					<label ref="jr:itext('root_problem/gps/gps_enabled1-label')"/>
+					<trigger ref="/data/root_problem/gps/gps_enabled1/start_gps_instruct" appearance="minimal">
+						<label ref="jr:itext('root_problem/gps/gps_enabled1/question5-label')"/>
+					</trigger>
+					<trigger ref="/data/root_problem/gps/gps_enabled1/gps1" appearance="minimal">
+						<label ref="jr:itext('root_problem/instruct_root/sync/date_and_time/date_time1-label')"/>
+					</trigger>
+					<trigger ref="/data/root_problem/gps/gps_enabled1/gps2" appearance="minimal">
+						<label ref="jr:itext('root_problem/instruct_root/sync/date_and_time/date_time2-label')"/>
+					</trigger>
+					<trigger ref="/data/root_problem/gps/gps_enabled1/gps3" appearance="minimal">
+						<label ref="jr:itext('root_problem/gps/gps_enabled1/gps3-label')"/>
+					</trigger>
+					<trigger ref="/data/root_problem/gps/gps_enabled1/gps4" appearance="minimal">
+						<label ref="jr:itext('root_problem/gps/gps_enabled1/gps4-label')"/>
+					</trigger>
+					<select1 ref="/data/root_problem/gps/gps_enabled1/gps_enabled2">
+						<label ref="jr:itext('gps/gps_enabled-label')"/>
+						<item>
+							<label ref="jr:itext('check/che-item1-label')"/>
+							<value>yes</value>
+						</item>
+						<item>
+							<label ref="jr:itext('check/che-item2-label')"/>
+							<value>no</value>
+						</item>
+					</select1>
+				</group>
+				<select1 ref="/data/root_problem/gps/gps_signal">
+					<label ref="jr:itext('root_problem/gps/gps_signal-label')"/>
+					<item>
+						<label ref="jr:itext('check/che-item1-label')"/>
+						<value>yes</value>
+					</item>
+					<item>
+						<label ref="jr:itext('check/che-item2-label')"/>
+						<value>no</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/root_problem/instruct_root">
+				<group ref="/data/root_problem/instruct_root/sync">
+					<label ref="jr:itext('root_problem/instruct_root/sync-label')"/>
+					<group ref="/data/root_problem/instruct_root/sync/airplane">
+						<label ref="jr:itext('root_problem/instruct_root/sync/airplane-label')"/>
+						<trigger ref="/data/root_problem/instruct_root/sync/airplane/start_instruct_airplane" appearance="minimal">
+							<label ref="jr:itext('root_problem/instruct_root/sync/airplane/start_instruct_airplane-label')"/>
+						</trigger>
+						<trigger ref="/data/root_problem/instruct_root/sync/airplane/airplane1" appearance="minimal">
+							<label ref="jr:itext('root_problem/instruct_root/sync/airplane/airplane1-label')"/>
+						</trigger>
+						<trigger ref="/data/root_problem/instruct_root/sync/airplane/airplane2" appearance="minimal">
+							<label ref="jr:itext('root_problem/instruct_root/sync/airplane/airplane2-label')"/>
+						</trigger>
+						<trigger ref="/data/root_problem/instruct_root/sync/airplane/airplane3" appearance="minimal">
+							<label ref="jr:itext('root_problem/instruct_root/sync/airplane/airplane3-label')"/>
+						</trigger>
+						<trigger ref="/data/root_problem/instruct_root/sync/airplane/airplane4" appearance="minimal">
+							<label ref="jr:itext('root_problem/instruct_root/sync/airplane/airplane4-label')"/>
+						</trigger>
+						<trigger ref="/data/root_problem/instruct_root/sync/airplane/airplane5" appearance="minimal">
+							<label ref="jr:itext('root_problem/instruct_root/sync/airplane/airplane5-label')"/>
+						</trigger>
+						<trigger ref="/data/root_problem/instruct_root/sync/airplane/airplane6" appearance="minimal">
+							<label ref="jr:itext('root_problem/instruct_root/sync/airplane/airplane6-label')"/>
+						</trigger>
+						<trigger ref="/data/root_problem/instruct_root/sync/airplane/airplane7" appearance="minimal">
+							<label ref="jr:itext('root_problem/instruct_root/sync/airplane/airplane7-label')"/>
+						</trigger>
+					</group>
+				</group>
+			</group>
+		</group>
+		<group ref="/data/solve">
+			<group ref="/data/solve/sync">
+				<select1 ref="/data/solve/sync/airplane_instruction">
+					<label ref="jr:itext('root_problem/sync/airplane_instruction-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/solve/sync/closer_to_tower">
+					<label ref="jr:itext('solve/sync/closer_to_tower-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<group ref="/data/solve/sync/solve_date_and_time">
+					<label ref="jr:itext('solve/sync/solve_date_and_time-label')"/>
+					<select1 ref="/data/solve/sync/solve_date_and_time/fix_date_and_time">
+						<label ref="jr:itext('root_problem/sync/fix_date_and_time-label')"/>
+						<item>
+							<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+							<value>ok</value>
+						</item>
+					</select1>
+					<trigger ref="/data/solve/sync/solve_date_and_time/date_time4" appearance="minimal">
+						<label ref="jr:itext('root_problem/sync/date_and_time/copy-1-of-date_time4-label')"/>
+					</trigger>
+					<trigger ref="/data/solve/sync/solve_date_and_time/date_time5" appearance="minimal">
+						<label ref="jr:itext('root_problem/instruct_root/sync/date_and_time/date_time5-label')"/>
+					</trigger>
+				</group>
+			</group>
+			<group ref="/data/solve/missing">
+				<select1 ref="/data/solve/missing/turn_off_case_filter">
+					<label ref="jr:itext('solve/missing/turn_off_case_filter-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+					<item>
+						<label ref="jr:itext('solve/missing/turn_off_case_filter-unknown-label')"/>
+						<value>unknown</value>
+					</item>
+				</select1>
+				<group ref="/data/solve/missing/clear_case_filter">
+					<label ref="jr:itext('solve/missing/clear_case_filter-label')"/>
+					<trigger ref="/data/solve/missing/clear_case_filter/clear_case_filter1" appearance="minimal">
+						<label ref="jr:itext('solve/missing/clear_case_filter/clear_case_filter1-label')"/>
+					</trigger>
+				</group>
+				<select1 ref="/data/solve/missing/educate_user">
+					<label ref="jr:itext('solve/missing/educate_user-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/solve/slow">
+				<select1 ref="/data/solve/slow/close_apps">
+					<label ref="jr:itext('root_problem/slow/close_apps-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/solve/sound">
+				<select1 ref="/data/solve/sound/turn_it_up">
+					<label ref="jr:itext('root_problem/sound/turn_it_up-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/solve/camera">
+				<select1 ref="/data/solve/camera/unblock_lens">
+					<label ref="jr:itext('root_problem/camera/unblock_lens-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/solve/battery">
+				<select1 ref="/data/solve/battery/charge_battery">
+					<label ref="jr:itext('solve/battery/charge_battery-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/solve/android_locked">
+				<select1 ref="/data/solve/android_locked/remember">
+					<label ref="jr:itext('solve/android_locked/remember-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/solve/gps">
+				<select1 ref="/data/solve/gps/turn_on">
+					<label ref="jr:itext('solve/gps/turn_on-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/solve/gps/signal">
+					<label ref="jr:itext('solve/gps/signal-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/solve/solar_panel">
+				<label ref="jr:itext('solve/solar_panel-label')"/>
+				<select1 ref="/data/solve/solar_panel/darkening_instruction">
+					<label ref="jr:itext('solve/solar_panel/darkening_instruction-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/solve/solar_panel/temperature_instruction">
+					<label ref="jr:itext('solve/solar_panel/temperature_instruction-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/solve/solar_panel/connection_instruction">
+					<label ref="jr:itext('solve/solar_panel/connection_instruction-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/solve/powerbank">
+				<label ref="jr:itext('solve/powerbank-label')"/>
+				<select1 ref="/data/solve/powerbank/indicator_instruction">
+					<label ref="jr:itext('solve/powerbank/indicator_instruction-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/solve/powerbank/not_charging_instruction">
+					<label ref="jr:itext('solve/powerbank/not_charging_instruction-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<select1 ref="/data/solve/check_solve">
+				<label ref="jr:itext('check/check_solve-label')"/>
+				<item>
+					<label ref="jr:itext('check/che-item1-label')"/>
+					<value>yes</value>
+				</item>
+				<item>
+					<label ref="jr:itext('check/che-item2-label')"/>
+					<value>no</value>
+				</item>
+			</select1>
+			<trigger ref="/data/solve/great" appearance="minimal">
+				<label ref="jr:itext('solve/great-label')"/>
+			</trigger>
+		</group>
+		<group ref="/data/ticket">
+			<group ref="/data/ticket/closing">
+				<select1 ref="/data/ticket/closing/closing_ticket">
+					<label ref="jr:itext('ticket/closing/closing_ticket-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/ticket/sync">
+				<select1 ref="/data/ticket/sync/phone_defect">
+					<label ref="jr:itext('ticket/sync/phone_defect-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>open_ticket_sync_defect</value>
+					</item>
+				</select1>
+				<select1 ref="/data/ticket/sync/sync_apn">
+					<label ref="jr:itext('ticket/sync/question6-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>open_ticket_sync_apn</value>
+					</item>
+				</select1>
+				<select1 ref="/data/ticket/sync/needs_credit">
+					<label ref="jr:itext('ticket/sync/needs_credit-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>refill_credit</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/ticket/missing">
+				<select1 ref="/data/ticket/missing/incorrect_login">
+					<label ref="jr:itext('ticket/missing/incorrect_login-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/ticket/missing/uninstall">
+					<label ref="jr:itext('ticket/missing/uninstall-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/ticket/missing/multimedia_removed">
+					<label ref="jr:itext('ticket/missing/multimedia_removed-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/ticket/missing/old_commcare">
+					<label ref="jr:itext('ticket/missing/old_commcare-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/ticket/slow">
+				<select1 ref="/data/ticket/slow/bug">
+					<label ref="jr:itext('ticket/slow/bug-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/ticket/sound">
+				<select1 ref="/data/ticket/sound/defective_speaker">
+					<label ref="jr:itext('ticket/sound/defective_speaker-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/ticket/camera">
+				<select1 ref="/data/ticket/camera/broken">
+					<label ref="jr:itext('ticket/camera/broken-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/ticket/camera/camera_software_bug_or_full">
+					<label ref="jr:itext('ticket/camera/camera_software_bug_or_full-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/ticket/broken_usable_and_unusable">
+				<select1 ref="/data/ticket/broken_usable_and_unusable/battery_defect">
+					<label ref="jr:itext('ticket/broken_usable_and_unusable/battery_defect-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/ticket/broken_usable_and_unusable/screen_broken">
+					<label ref="jr:itext('ticket/broken_usable_and_unusable/screen_broken-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/ticket/broken_usable_and_unusable/power_button_broken">
+					<label ref="jr:itext('ticket/broken_usable_and_unusable/power_button_broken-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/ticket/broken_usable_and_unusable/internals_broken">
+					<label ref="jr:itext('ticket/broken_usable_and_unusable/internals_broken-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/ticket/android_locked">
+				<select1 ref="/data/ticket/android_locked/android_locked">
+					<label ref="jr:itext('ticket/android_locked/android_locked-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/ticket/accessory">
+				<select1 ref="/data/ticket/accessory/phone_case">
+					<label ref="jr:itext('ticket/accessory/phone_case-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/ticket/accessory/wall_charger">
+					<label ref="jr:itext('ticket/accessory/wall_charger-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/ticket/accessory/solar_charger">
+					<label ref="jr:itext('ticket/accessory/solar_charger-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/ticket/accessory/cable">
+					<label ref="jr:itext('ticket/accessory/cable-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+				<select1 ref="/data/ticket/accessory/powerbank">
+					<label ref="jr:itext('ticket/accessory/powerbank-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/ticket/commcare_locked">
+				<select1 ref="/data/ticket/commcare_locked/incorrect_login">
+					<label ref="jr:itext('ticket/commcare_locked/incorrect_login-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/ticket/telephone">
+				<select1 ref="/data/ticket/telephone/sim_or_apn">
+					<label ref="jr:itext('ticket/telephone/sim_or_apn-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/ticket/gps">
+				<select1 ref="/data/ticket/gps/gps_broken">
+					<label ref="jr:itext('ticket/gps/gps_broken-label')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/ticket/unsolved">
+				<select1 ref="/data/ticket/unsolved/unsolved">
+					<label ref="jr:itext('ticket/unsolved-label2')"/>
+					<item>
+						<label ref="jr:itext('solve/android_locked/remember-ok-label')"/>
+						<value>ok</value>
+					</item>
+				</select1>
+			</group>
+			<group ref="/data/ticket/open_ticket">
+				<input ref="/data/ticket/open_ticket/phone">
+					<label ref="jr:itext('ticket/phone-label')"/>
+				</input>
+				<trigger ref="/data/ticket/open_ticket/ticket_message" appearance="minimal">
+					<label ref="jr:itext('ticket/ticket-label')"/>
+				</trigger>
+			</group>
+		</group>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>

@@ -1,0 +1,209 @@
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum" vellum:ignore="richText">
+	<h:head>
+		<h:title>Update Health Post Settings</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/5d5053a19d8010c30b9a365648e74349589df536" uiVersion="1" version="463" name="Update Health Post Settings">
+					<ambulance_phone/>
+					<villages>
+						<load_village_names/>
+						<load_num_villages/>
+						<num_villages/>
+						<villages jr:template="">
+							<enforce_repeat_number>
+								<village_name/>
+								<name_no_spaces/>
+							</enforce_repeat_number>
+						</villages>
+						<village_names/>
+					</villages>
+					<indicator_targets>
+						<instructions/>
+						<target_anc_4_visits/>
+						<target_pnc1_0-48hrs/>
+						<target_protective_tt/>
+						<target_num_live_births_in_kebele/>
+						<target_num_live_births_weighed/>
+					</indicator_targets>
+					<locations>
+						<health_post_id/>
+						<health_post/>
+						<health_center_id/>
+						<health_center/>
+						<region_id/>
+						<region/>
+						<zone_id/>
+						<zone/>
+						<woreda_id/>
+						<woreda/>
+						<hp_facility_code/>
+						<test_or_real/>
+					</locations>
+					<end_of_form/>
+				<case_load_hp_supervision_0><case xmlns="http://commcarehq.org/case/transaction/v2" case_id="" date_modified="" user_id=""><update><ambulance_phone/><health_center/><health_center_id/><health_post/><health_post_id/><hp_facility_code/><region/><region_id/><target_anc_4_visits/><target_num_live_births_in_kebele/><target_num_live_births_weighed/><target_pnc1_0-48hrs/><target_protective_tt/><village_names/><woreda/><woreda_id/><zone/><zone_id/></update></case></case_load_hp_supervision_0><orx:meta xmlns:cc="http://commcarehq.org/xforms"><orx:deviceID/><orx:timeStart/><orx:timeEnd/><orx:username/><orx:userID/><orx:instanceID/><cc:appVersion/></orx:meta></data>
+			</instance><instance id="locations" src="jr://fixture/locations"/>
+			<instance src="jr://instance/casedb" id="casedb"/>
+			<instance src="jr://instance/session" id="commcaresession"/>
+			<bind nodeset="/data/ambulance_phone" type="xsd:string" constraint="regex(., '^0[0-9]{9}$')" jr:constraintMsg="jr:itext('ambulance_phone-constraintMsg')" required="true()"/>
+			<bind nodeset="/data/villages"/>
+			<bind nodeset="/data/villages/load_village_names"/>
+			<bind nodeset="/data/villages/load_num_villages" calculate="count-selected(/data/villages/load_village_names)"/>
+			<bind nodeset="/data/villages/num_villages" type="xsd:int" constraint=". &gt; 0 and . &lt;= 15" jr:constraintMsg="jr:itext('villages/num_villages-constraintMsg')" required="true()"/>
+			<bind nodeset="/data/villages/villages"/>
+			<bind nodeset="/data/villages/villages/enforce_repeat_number" relevant="position(current()/..) + 1 &lt;= /data/villages/num_villages"/>
+			<bind nodeset="/data/villages/villages/enforce_repeat_number/village_name" type="xsd:string" required="true()"/>
+			<bind nodeset="/data/villages/villages/enforce_repeat_number/name_no_spaces" calculate="replace(current()/../village_name, &quot; &quot;, &quot;_&quot;)"/>
+			<bind nodeset="/data/villages/village_names" calculate="join(&quot; &quot;, /data/villages/villages/enforce_repeat_number/name_no_spaces)"/>
+			<bind nodeset="/data/indicator_targets" relevant="false()"/>
+			<bind nodeset="/data/indicator_targets/instructions"/>
+			<bind nodeset="/data/indicator_targets/target_anc_4_visits" type="xsd:int" required="true()"/>
+			<bind nodeset="/data/indicator_targets/target_pnc1_0-48hrs" type="xsd:int" required="true()"/>
+			<bind nodeset="/data/indicator_targets/target_protective_tt" type="xsd:int" required="true()"/>
+			<bind nodeset="/data/indicator_targets/target_num_live_births_in_kebele" type="xsd:int" required="true()"/>
+			<bind nodeset="/data/indicator_targets/target_num_live_births_weighed" type="xsd:int" required="true()"/>
+			<bind nodeset="/data/locations"/>
+			<bind nodeset="/data/locations/health_post_id"/>
+			<bind nodeset="/data/locations/health_post" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/name"/>
+			<bind nodeset="/data/locations/health_center_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_post_id]/@health-center_id"/>
+			<bind nodeset="/data/locations/health_center" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/name"/>
+			<bind nodeset="/data/locations/region_id" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/@region_id"/>
+			<bind nodeset="/data/locations/region" calculate="instance('locations')/locations/location[@id = /data/locations/region_id]/name"/>
+			<bind nodeset="/data/locations/zone_id" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/@zone_id"/>
+			<bind nodeset="/data/locations/zone" calculate="instance('locations')/locations/location[@id = /data/locations/zone_id]/name"/>
+			<bind nodeset="/data/locations/woreda_id" calculate="instance('locations')/locations/location[@id = /data/locations/health_center_id]/@woreda_id"/>
+			<bind nodeset="/data/locations/woreda" calculate="instance('locations')/locations/location[@id = /data/locations/woreda_id]/name"/>
+			<bind nodeset="/data/locations/hp_facility_code"/>
+			<bind nodeset="/data/locations/test_or_real" calculate="if(count(instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real) &gt; 0, instance('locations')/locations/location[@id = /data/locations/health_post_id]/location_data/test_or_real, &quot;Unknown&quot;)"/>
+			<bind nodeset="/data/end_of_form"/>
+			<setvalue event="xforms-ready" ref="/data/villages/num_villages" value="count-selected(instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id_load_hp_supervision_0]/village_names)"/>
+			<setvalue event="jr-insert" ref="/data/villages/villages/enforce_repeat_number/village_name" value="if(position(current()/../..) + 1 &gt; count-selected(instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id_load_hp_supervision_0]/village_names), &quot;&quot;, replace(selected-at(instance('casedb')/casedb/case[@case_id = instance('commcaresession')/session/data/case_id_load_hp_supervision_0]/village_names, position(current()/../..)), &quot;_&quot;, &quot; &quot;))"/>
+			<itext>
+				<translation lang="en" default="">
+					<text id="ambulance_phone-label">
+						<value>What is the Ambulance Phone number?</value>
+					</text>
+					<text id="ambulance_phone-constraintMsg">
+						<value>The phone number must start with 0 and cannot be longer than 10 digits</value>
+					</text>
+					<text id="villages/num_villages-label">
+						<value>How many Villages are under this Health Post?</value>
+					</text>
+					<text id="villages/num_villages-constraintMsg">
+						<value>You must have between 1 and 15 villages.</value>
+					</text>
+					<text id="villages/villages/enforce_repeat_number/village_name-label">
+						<value>Name of Village <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="indicator_targets/instructions-label">
+						<value>Please enter the monthly targets for each of the following HMIS indicators.</value>
+					</text>
+					<text id="indicator_targets/target_anc_4_visits-label">
+						<value>Antenatal care coverage - four visits</value>
+					</text>
+					<text id="indicator_targets/target_pnc1_0-48hrs-label">
+						<value>Early first postnatal care attendances 0-48 hrs (0-2 days)</value>
+					</text>
+					<text id="indicator_targets/target_protective_tt-label">
+						<value>Number of Infants whose mothers had protective doses of TT against NNT (PAB)</value>
+					</text>
+					<text id="indicator_targets/target_num_live_births_in_kebele-label">
+						<value>Total number of live births in the kebele</value>
+					</text>
+					<text id="indicator_targets/target_num_live_births_weighed-label">
+						<value>Total number of live births weighed</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>Form complete.
+
+Select the green arrow in the top right corner to send the form.</value>
+					</text>
+				</translation>
+				<translation lang="amh">
+					<text id="ambulance_phone-label">
+						<value>$What is the Ambulance Phone number?</value>
+					</text>
+					<text id="ambulance_phone-constraintMsg">
+						<value>&#4661;&#4621;&#4781; &#4673;&#4901;&#4653; &#4776;0 &#4632;&#4864;&#4632;&#4653; &#4768;&#4616;&#4704;&#4725; &#4773;&#4755; &#4704;10   &#4614;&#4612; &#4632;&#4709;&#4616;&#4901; &#4840;&#4616;&#4704;&#4725;&#4637;&#4961;&#4961;</value>
+					</text>
+					<text id="villages/num_villages-label">
+						<value>$How many Villages are under this Health Post?</value>
+					</text>
+					<text id="villages/num_villages-constraintMsg">
+						<value>$You must have between 1 and 15 villages.</value>
+					</text>
+					<text id="villages/villages/enforce_repeat_number/village_name-label">
+						<value>$Name of Village <output value="position(current()/../..) + 1"/></value>
+					</text>
+					<text id="indicator_targets/instructions-label">
+						<value>$Please enter the monthly targets for each of the following HMIS indicators.</value>
+					</text>
+					<text id="indicator_targets/target_anc_4_visits-label">
+						<value>$Antenatal care coverage - four visits</value>
+					</text>
+					<text id="indicator_targets/target_pnc1_0-48hrs-label">
+						<value>$Early first postnatal care attendances 0-48 hrs (0-2 days)</value>
+					</text>
+					<text id="indicator_targets/target_protective_tt-label">
+						<value>$Number of Infants whose mothers had protective doses of TT against NNT (PAB)</value>
+					</text>
+					<text id="indicator_targets/target_num_live_births_in_kebele-label">
+						<value>$Total number of live births in the kebele</value>
+					</text>
+					<text id="indicator_targets/target_num_live_births_weighed-label">
+						<value>$Total number of live births weighed</value>
+					</text>
+					<text id="end_of_form-label">
+						<value>&#4942;&#4653;&#4633; &#4633;&#4617; &#4616;&#4633;&#4617; &#4720;&#4638;&#4621;&#4727;&#4621;&#4961;&#4961;
+
+&#4942;&#4653;&#4633;&#4757; &#4616;&#4632;&#4619;&#4781; &#4776;&#4619;&#4845; &#4704;&#4672;&#4765; &#4704;&#4777;&#4621; &#4843;&#4616;&#4813;&#4757; &#4768;&#4648;&#4757;&#4883;&#4852; &#4704;&#4720;&#4757; &#4632;&#4907;&#4757;&#4961;&#4961;</value>
+					</text>
+				</translation>
+			</itext>
+		<setvalue event="xforms-ready" ref="/data/indicator_targets/target_num_live_births_in_kebele" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_hp_supervision_0]/target_num_live_births_in_kebele"/><setvalue event="xforms-ready" ref="/data/villages/load_village_names" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_hp_supervision_0]/village_names"/><setvalue event="xforms-ready" ref="/data/ambulance_phone" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_hp_supervision_0]/ambulance_phone"/><setvalue event="xforms-ready" ref="/data/locations/health_post_id" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_hp_supervision_0]/health_post_id"/><setvalue event="xforms-ready" ref="/data/indicator_targets/target_pnc1_0-48hrs" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_hp_supervision_0]/target_pnc1_0-48hrs"/><setvalue event="xforms-ready" ref="/data/indicator_targets/target_num_live_births_weighed" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_hp_supervision_0]/target_num_live_births_weighed"/><setvalue event="xforms-ready" ref="/data/indicator_targets/target_anc_4_visits" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_hp_supervision_0]/target_anc_4_visits"/><setvalue event="xforms-ready" ref="/data/indicator_targets/target_protective_tt" value="instance('casedb')/casedb/case[@case_id=instance('commcaresession')/session/data/case_id_load_hp_supervision_0]/target_protective_tt"/><bind calculate="/data/meta/timeEnd" nodeset="/data/case_load_hp_supervision_0/case/@date_modified" type="xsd:dateTime"/><bind calculate="/data/meta/userID" nodeset="/data/case_load_hp_supervision_0/case/@user_id"/><bind calculate="instance('commcaresession')/session/data/case_id_load_hp_supervision_0" nodeset="/data/case_load_hp_supervision_0/case/@case_id"/><bind calculate="/data/ambulance_phone" nodeset="/data/case_load_hp_supervision_0/case/update/ambulance_phone" relevant="count(/data/ambulance_phone) &gt; 0"/><bind calculate="/data/locations/health_center" nodeset="/data/case_load_hp_supervision_0/case/update/health_center" relevant="count(/data/locations/health_center) &gt; 0"/><bind calculate="/data/locations/health_center_id" nodeset="/data/case_load_hp_supervision_0/case/update/health_center_id" relevant="count(/data/locations/health_center_id) &gt; 0"/><bind calculate="/data/locations/health_post" nodeset="/data/case_load_hp_supervision_0/case/update/health_post" relevant="count(/data/locations/health_post) &gt; 0"/><bind calculate="/data/locations/health_post_id" nodeset="/data/case_load_hp_supervision_0/case/update/health_post_id" relevant="count(/data/locations/health_post_id) &gt; 0"/><bind calculate="/data/locations/hp_facility_code" nodeset="/data/case_load_hp_supervision_0/case/update/hp_facility_code" relevant="count(/data/locations/hp_facility_code) &gt; 0"/><bind calculate="/data/locations/region" nodeset="/data/case_load_hp_supervision_0/case/update/region" relevant="count(/data/locations/region) &gt; 0"/><bind calculate="/data/locations/region_id" nodeset="/data/case_load_hp_supervision_0/case/update/region_id" relevant="count(/data/locations/region_id) &gt; 0"/><bind calculate="/data/indicator_targets/target_anc_4_visits" nodeset="/data/case_load_hp_supervision_0/case/update/target_anc_4_visits" relevant="count(/data/indicator_targets/target_anc_4_visits) &gt; 0"/><bind calculate="/data/indicator_targets/target_num_live_births_in_kebele" nodeset="/data/case_load_hp_supervision_0/case/update/target_num_live_births_in_kebele" relevant="count(/data/indicator_targets/target_num_live_births_in_kebele) &gt; 0"/><bind calculate="/data/indicator_targets/target_num_live_births_weighed" nodeset="/data/case_load_hp_supervision_0/case/update/target_num_live_births_weighed" relevant="count(/data/indicator_targets/target_num_live_births_weighed) &gt; 0"/><bind calculate="/data/indicator_targets/target_pnc1_0-48hrs" nodeset="/data/case_load_hp_supervision_0/case/update/target_pnc1_0-48hrs" relevant="count(/data/indicator_targets/target_pnc1_0-48hrs) &gt; 0"/><bind calculate="/data/indicator_targets/target_protective_tt" nodeset="/data/case_load_hp_supervision_0/case/update/target_protective_tt" relevant="count(/data/indicator_targets/target_protective_tt) &gt; 0"/><bind calculate="/data/villages/village_names" nodeset="/data/case_load_hp_supervision_0/case/update/village_names" relevant="count(/data/villages/village_names) &gt; 0"/><bind calculate="/data/locations/woreda" nodeset="/data/case_load_hp_supervision_0/case/update/woreda" relevant="count(/data/locations/woreda) &gt; 0"/><bind calculate="/data/locations/woreda_id" nodeset="/data/case_load_hp_supervision_0/case/update/woreda_id" relevant="count(/data/locations/woreda_id) &gt; 0"/><bind calculate="/data/locations/zone" nodeset="/data/case_load_hp_supervision_0/case/update/zone" relevant="count(/data/locations/zone) &gt; 0"/><bind calculate="/data/locations/zone_id" nodeset="/data/case_load_hp_supervision_0/case/update/zone_id" relevant="count(/data/locations/zone_id) &gt; 0"/><setvalue event="xforms-ready" ref="/data/meta/deviceID" value="instance('commcaresession')/session/context/deviceid"/><setvalue event="xforms-ready" ref="/data/meta/timeStart" value="now()"/><bind nodeset="/data/meta/timeStart" type="xsd:dateTime"/><setvalue event="xforms-revalidate" ref="/data/meta/timeEnd" value="now()"/><bind nodeset="/data/meta/timeEnd" type="xsd:dateTime"/><setvalue event="xforms-ready" ref="/data/meta/username" value="instance('commcaresession')/session/context/username"/><setvalue event="xforms-ready" ref="/data/meta/userID" value="instance('commcaresession')/session/context/userid"/><setvalue event="xforms-ready" ref="/data/meta/instanceID" value="uuid()"/><setvalue event="xforms-ready" ref="/data/meta/appVersion" value="instance('commcaresession')/session/context/appversion"/></model>
+	</h:head>
+	<h:body>
+		<input ref="/data/ambulance_phone" appearance="numeric">
+			<label ref="jr:itext('ambulance_phone-label')"/>
+			<alert ref="jr:itext('ambulance_phone-constraintMsg')"/>
+		</input>
+		<group ref="/data/villages">
+			<input ref="/data/villages/num_villages">
+				<label ref="jr:itext('villages/num_villages-label')"/>
+				<alert ref="jr:itext('villages/num_villages-constraintMsg')"/>
+			</input>
+			<group>
+				<repeat jr:count="/data/villages/num_villages" jr:noAddRemove="true()" nodeset="/data/villages/villages">
+					<group ref="/data/villages/villages/enforce_repeat_number">
+						<input ref="/data/villages/villages/enforce_repeat_number/village_name">
+							<label ref="jr:itext('villages/villages/enforce_repeat_number/village_name-label')"/>
+						</input>
+					</group>
+				</repeat>
+			</group>
+		</group>
+		<group ref="/data/indicator_targets">
+			<trigger ref="/data/indicator_targets/instructions" appearance="minimal">
+				<label ref="jr:itext('indicator_targets/instructions-label')"/>
+			</trigger>
+			<input ref="/data/indicator_targets/target_anc_4_visits">
+				<label ref="jr:itext('indicator_targets/target_anc_4_visits-label')"/>
+			</input>
+			<input ref="/data/indicator_targets/target_pnc1_0-48hrs">
+				<label ref="jr:itext('indicator_targets/target_pnc1_0-48hrs-label')"/>
+			</input>
+			<input ref="/data/indicator_targets/target_protective_tt">
+				<label ref="jr:itext('indicator_targets/target_protective_tt-label')"/>
+			</input>
+			<input ref="/data/indicator_targets/target_num_live_births_in_kebele">
+				<label ref="jr:itext('indicator_targets/target_num_live_births_in_kebele-label')"/>
+			</input>
+			<input ref="/data/indicator_targets/target_num_live_births_weighed">
+				<label ref="jr:itext('indicator_targets/target_num_live_births_weighed-label')"/>
+			</input>
+		</group>
+		<group ref="/data/locations"/>
+		<trigger ref="/data/end_of_form" appearance="minimal">
+			<label ref="jr:itext('end_of_form-label')"/>
+		</trigger>
+	</h:body>
+</h:html>
